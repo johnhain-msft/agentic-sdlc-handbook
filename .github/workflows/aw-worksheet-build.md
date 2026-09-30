@@ -8,6 +8,10 @@
 on:
   issues:
     types: [labeled]
+  push:
+    branches: ['**']
+    paths:
+      - 'worksheets/_build-request.txt'
   workflow_dispatch:
     inputs:
       ws_id:
@@ -15,19 +19,32 @@ on:
         required: true
         type: string
 
-# `issues` events always run the workflow file from the DEFAULT branch
-# (docs: GITHUB_REF = default branch). `workflow_dispatch` runs the file from
-# whichever ref received the dispatch, so this stage can be piloted on a
-# feature branch before anything is merged:
+# Three ways in, because GitHub scopes triggers differently:
 #
-#   gh workflow run aw-worksheet-build.lock.yml \
-#     --ref chore/stable-anchors -f ws_id=WS-06-team-readiness-scorecard
+#   issues: labeled    - the production path. Runs the workflow file from the
+#                        DEFAULT branch, so it only works once this is on main.
+#   workflow_dispatch  - also requires the workflow to exist on the default
+#                        branch before the API will accept a dispatch
+#                        (verified: HTTP 404 "not found on the default branch").
+#   push               - runs the workflow file from the PUSHED ref, so this is
+#                        the only trigger that works while the factory is still
+#                        on a feature branch.
 #
-# The later stages trigger on `pull_request`, which runs the file from the PR
-# merge ref, so they are branch-runnable already.
+# To build a worksheet from a feature branch, write its ws_id into
+# worksheets/_build-request.txt and push:
+#
+#   echo WS-06-team-readiness-scorecard > worksheets/_build-request.txt
+#   git commit -am "build: WS-06" && git push
+#
+# One ws_id per push. That is deliberate — one worksheet per run, one fresh
+# context window per stage, which is the whole point of the four-stage split.
+#
+# The later stages trigger on pull_request, which runs from the PR merge ref,
+# so they are branch-runnable already and need none of this.
 
 if: >-
   github.event_name == 'workflow_dispatch' ||
+  github.event_name == 'push' ||
   contains(github.event.issue.labels.*.name, 'stage:build')
 
 permissions:
@@ -64,10 +81,16 @@ safe-outputs:
 # Build a worksheet from its spec
 
 Identify the worksheet by its `ws_id` — an identifier of the form
-`WS-NN-some-slug`.
+`WS-NN-some-slug`. Where it comes from depends on how this run was triggered:
 
-- On `workflow_dispatch`, it is the `ws_id` input.
-- On an `issues` trigger, take it from the issue title or body.
+- **push** — read the single line in `worksheets/_build-request.txt`. That file
+  names exactly one worksheet. Ignore anything after the first non-empty,
+  non-comment line.
+- **workflow_dispatch** — the `ws_id` input.
+- **issues** — the issue title or body.
+
+If you cannot determine a single `ws_id`, stop and say so. Do not guess, and do
+not build more than one worksheet in this run.
 
 The toolchain (Quarto, Node, Chromium, the layout gate's dependencies) is
 already installed. Do not install it again.
