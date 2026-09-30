@@ -34,6 +34,12 @@ engine: copilot
 
 network: defaults
 
+# This stage works on an EXISTING pull request, so its head branch must be in
+# the workspace. gh-aw's checkout is shallow and credentials are stripped
+# afterwards, so gh pr checkout cannot fetch it at run time. This is the
+# documented pattern for the case.
+checkout:
+  - fetch: ["refs/pulls/open/*"]
 tools:
   bash:
     - "*"
@@ -124,7 +130,9 @@ request in the event context. Find the work yourself:
 ```bash
 gh pr list --state open --label worksheet --label stage:judge \
   --json number,labels --jq '.[0]'
-gh pr checkout <number>
+# Credentials are stripped after checkout, so `gh pr checkout` cannot fetch.
+# The PR head was fetched for you already — check it out from the local ref:
+git checkout -B "pr-<number>" "refs/remotes/origin/pull/<number>/head"
 git diff --name-only origin/main...HEAD
 ```
 
