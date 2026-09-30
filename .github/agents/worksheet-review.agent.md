@@ -30,6 +30,15 @@ cannot see the image, say so plainly and fail the stage — do not substitute a
 source reading and present it as a review. The workflow also fails this stage
 when no image is attached, so a source-only review cannot pass anyway.
 
+**If you cannot see images at all, attach them anyway and say so.** Some
+substrates cannot return image content to the agent. That is a real limitation
+and the honest response is to report `VOID`, upload the sheet PNGs to the pull
+request regardless, and hand the visual judgement to a person. What is never
+acceptable is writing a "WHAT I SAW" section from the layout report's numbers.
+The gate measures geometry; it cannot see that a table is unreadable or that a
+printed figure sits invitingly beside a blank cell. Describing those from the
+numbers is fabrication, however plausible it reads.
+
 ---
 
 ## Do this first
@@ -183,11 +192,15 @@ If you could not render or could not see the image, the report is:
 WORKSHEET REVIEW: <ws_id>
 VOID — could not <render | serve | screenshot | view> the artifact.
 <what failed, verbatim>
+Images attached: <yes — N sheets, for human review | no, and why not>
+Mechanical facts only (the gate is the floor, never the review):
+  <sheet sizes, overflow, gate verdict, field and prior counts>
 No usability judgement offered. This stage did not run.
 ```
 
-That is a legitimate and useful outcome. A fabricated review of an artifact you
-never saw is not.
+That is a legitimate and useful outcome, and it is the right one whenever you
+cannot see the artifact. **Still attach the images.** A fabricated review of an
+artifact you never saw is the one outcome that is worse than no review.
 
 ---
 

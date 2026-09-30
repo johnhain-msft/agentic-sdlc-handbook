@@ -146,10 +146,17 @@ Upload every sheet PNG with the `upload_asset` tool, then post ONE comment that
 embeds each uploaded image with markdown `![sheet N](<url>)` and carries your
 `WORKSHEET REVIEW:` report.
 
-**A review with no attached image is void.** A separate gate checks for an
-embedded image on this pull request before the judge runs, and sends the PR
-straight back here if there is none. Reviewing the `.qmd` source instead of the
-render does not satisfy this stage and cannot pass it.
+**Upload and embed the images even if you cannot see them yourself.** If the
+image viewer returns nothing you can read, that is a limitation of this
+substrate, not a reason to leave the pull request with no artifact on it. Attach
+them anyway, say plainly that you could not view them, and hand the visual
+judgement to a person. An unviewable image on the pull request is worth far more
+than no image at all.
+
+**A review with no attached image is void.** The judge workflow runs a
+deterministic check before its agent starts and refuses to judge a pull request
+that carries no embedded image, so a source-only review cannot pass. Reviewing
+the `.qmd` instead of the render does not satisfy this stage.
 
 If you genuinely cannot render, serve, or screenshot the worksheet, post the
 `VOID` form of the report saying exactly what failed, add `needs-human`, and do
