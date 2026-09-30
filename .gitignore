@@ -34,3 +34,6 @@ handbook/reviews/apm-audit-publishing.md
 # Local backups of redacted files
 .private-backup/
 .DS_Store
+
+# Local planning workspace (worksheet map, delivery drafts) - not for publication
+docs/
