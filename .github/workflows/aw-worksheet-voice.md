@@ -9,6 +9,26 @@ on:
   workflow_dispatch:
   pull_request:
     types: [labeled]
+  # gh-aw gates activation on the ACTOR's repository role, defaulting to
+  # [admin, maintainer, write]. When one stage wakes the next with
+  # dispatch_workflow the actor is github-actions[bot], whose repository
+  # permission level is `none`, so every hand-off was denied at pre_activation:
+  #
+  #   Required permissions: admin, maintainer, write
+  #   Repository permission level: none
+  #
+  # `bots:` does not solve this. The docs are explicit that the allowlist is
+  # verified through the repository collaborator API, that App identities are
+  # not collaborators, and that the check is only relaxed for
+  # repository_dispatch.
+  #
+  # `roles: all` is safe HERE because it is not what gates this workflow.
+  # Every trigger it has is already gated by GitHub itself: dispatching a
+  # workflow requires write access, and labelling a pull request requires at
+  # least triage. Removing gh-aw's additional actor check therefore does not
+  # widen who can start a run — it only stops the machine-to-machine chain
+  # being rejected.
+  roles: all
 
 # workflow_dispatch is the real entry point. A `pull_request` `labeled` event
 # raised by GITHUB_TOKEN does NOT create a workflow run (GitHub docs), so the
