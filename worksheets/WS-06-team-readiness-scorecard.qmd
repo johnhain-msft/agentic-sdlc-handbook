@@ -396,7 +396,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Team Readiness Scorecard &mdash; Eight Dimensions, Scored Honestly</h1>
-      <p class="ws-sub">A short register of practices the organisation cannot yet run unsupervised, with a named person or a named gap against each.</p>
+      <p class="ws-sub">A short register of practices the organization cannot yet run unsupervised, with a named person or a named gap against each.</p>
     </div>
     <div class="ws-meta">
       <b>WS-06-team-readiness-scorecard</b><br>
@@ -428,7 +428,7 @@ format:
   </div>
 
   <div class="ws-block">
-    <h2>Panel C &mdash; expertise dependency register <span class="ws-block-note">one row per practice the organisation intends to adopt</span></h2>
+    <h2>Panel C &mdash; expertise dependency register <span class="ws-block-note">one row per practice the organization intends to adopt</span></h2>
     <div class="prior" style="margin-bottom:1.6mm">Anchor for field 33: someone who can recognise when an agent is drifting, when to push and when to intervene, and what good output looks like in this domain. The author knows "when to push and when to intervene in ways not fully captured by the written method."<span class="prior-src">index L148</span></div>
     <table class="ws">
       <colgroup><col style="width:24%"><col style="width:14%"><col style="width:17%"><col style="width:17%"><col style="width:28%"></colgroup>
