@@ -9,10 +9,17 @@
 # that deterministically when this stage hands on to the judge.
 
 on:
+  workflow_dispatch:
   pull_request:
     types: [labeled]
 
-if: contains(github.event.pull_request.labels.*.name, 'stage:review')
+# workflow_dispatch is the real entry point — a `labeled` event raised by
+# GITHUB_TOKEN does not create a workflow run. The labeled trigger is kept so a
+# human can re-run this stage by hand.
+
+if: >-
+  github.event_name == 'workflow_dispatch' ||
+  contains(github.event.pull_request.labels.*.name, 'stage:review')
 
 permissions:
   # Copilot inference via the Actions token - no PAT, minted per run and
@@ -49,26 +56,41 @@ safe-outputs:
     allowed-exts: [.png]
     max-size: 10240
   add-comment:
-    target: triggering
+    target: "*"
     max: 1
   push-to-pull-request-branch:
-    target: triggering
+    target: "*"
     required-labels: [worksheet]
   add-labels:
-    target: triggering
+    target: "*"
     allowed: ["stage:judge", "needs-human"]
     max: 2
   remove-labels:
-    target: triggering
+    target: "*"
     allowed: ["stage:review"]
+    max: 1
+  dispatch-workflow:
+    workflows: [aw-worksheet-judge]
     max: 1
   missing-tool:
 ---
 
 # Review the rendered worksheet
 
-This pull request carries exactly one worksheet at `worksheets/<ws_id>.qmd`.
-Find it with `git diff --name-only origin/main...HEAD`.
+## Find your work
+
+This stage is woken by `dispatch_workflow`, so there may be no triggering pull
+request in the event context. Find the work yourself:
+
+```bash
+gh pr list --state open --label worksheet --label stage:review \
+  --json number --jq '.[0].number'
+gh pr checkout <number>
+git diff --name-only origin/main...HEAD
+```
+
+If there is no such pull request, call `noop` saying the queue is empty and
+stop. Pass the number you found as `pull_request_number` on every safe output.
 
 ## You must look at the artifact
 
@@ -114,8 +136,13 @@ every fix.
 Do not change a field, label, option, number, `.prior`, `.hedge-text` or any of
 the sheet's prose. Report those and let the judge route them.
 
-When the artifact is sound, push any fixes, add `stage:judge`, and remove
-`stage:review`.
+When the artifact is sound, push any fixes, add `stage:judge`, remove
+`stage:review`, and call `dispatch_workflow` for `aw-worksheet-judge`.
+
+The judge workflow runs a deterministic check **before** its agent starts: if
+no rendered image is embedded in a comment on this pull request, it fails and
+sends the pull request straight back here. You cannot pass this stage by
+reviewing source.
 
 ## Boundaries
 

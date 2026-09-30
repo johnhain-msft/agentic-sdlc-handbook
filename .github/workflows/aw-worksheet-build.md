@@ -88,6 +88,14 @@ safe-outputs:
     # Raising it — which is what the E003 error message suggests — would hide
     # the bug that produced the extra files rather than fix it.
     max-patch-files: 3
+  # The doorbell for stage 2. A label alone cannot wake the next stage:
+  # GitHub does not create a workflow run for a `pull_request` `labeled` event
+  # raised by GITHUB_TOKEN. workflow_dispatch is a documented exception that
+  # always creates a run, so the chain is driven by dispatch and the labels
+  # remain the visible work queue.
+  dispatch-workflow:
+    workflows: [aw-worksheet-voice]
+    max: 1
   add-comment:
     max: 1
   missing-tool:
@@ -130,6 +138,11 @@ already installed. Do not install it again.
 7. Create the pull request. Its body must carry your `BUILT:` report in full —
    the next three stages read it, and the judge reads it only to find what it
    omitted.
+8. Ring the doorbell for stage 2: call `dispatch_workflow` for
+   `aw-worksheet-voice`. Do this **after** `create_pull_request`, and only if
+   the pull request was created. The `stage:voice` label marks the work; the
+   dispatch is what actually wakes the next run, because GitHub does not raise
+   a workflow run for a label applied by `GITHUB_TOKEN`.
 
 ## Boundaries
 
