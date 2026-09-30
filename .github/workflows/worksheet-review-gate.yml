@@ -9,11 +9,17 @@
 #
 # This is a plain Actions workflow, not an agentic one, because the check is
 # deterministic and must not be subject to a model's judgement.
+#
+# `pull_request`, not `pull_request_target`: pull_request_target runs the
+# workflow file from the PR BASE branch, which would make this gate inert until
+# it was merged to main. pull_request runs it from the PR merge ref, so the
+# gate works on a feature branch. These pull requests are always same-repo
+# (opened by the build stage), so GITHUB_TOKEN still has write scope.
 
 name: Worksheet review gate
 
 on:
-  pull_request_target:
+  pull_request:
     types: [labeled]
 
 permissions:

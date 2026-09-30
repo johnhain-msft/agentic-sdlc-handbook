@@ -31,6 +31,7 @@ tools:
     toolsets: [default]
 
 imports:
+  - shared/worksheet-toolchain.md
   - .github/agents/worksheet-judge.agent.md
 
 safe-outputs:
@@ -72,7 +73,6 @@ findings with reproductions; you do not fix them.
 ## Run the gate yourself
 
 ```bash
-cd .github/skills/worksheet-build && npm install --no-audit --no-fund && cd -
 .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
 cat worksheets/_review/<ws_id>/layout-report.json
 ```

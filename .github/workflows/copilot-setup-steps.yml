@@ -39,14 +39,12 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Install worksheet layout-gate dependencies
+        # ubuntu-latest ships Node 20+, so no setup-node action is needed.
         working-directory: .github/skills/worksheet-build
-        run: npm install --no-audit --no-fund
+        run: |
+          node --version
+          npm install --no-audit --no-fund
 
       - name: Install Chromium for Playwright
         working-directory: .github/skills/worksheet-build

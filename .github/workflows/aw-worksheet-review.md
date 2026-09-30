@@ -37,6 +37,7 @@ tools:
     toolsets: [default]
 
 imports:
+  - shared/worksheet-toolchain.md
   - .github/agents/worksheet-review.agent.md
 
 safe-outputs:
@@ -69,7 +70,6 @@ Find it with `git diff --name-only origin/main...HEAD`.
 ## You must look at the artifact
 
 ```bash
-cd .github/skills/worksheet-build && npm install --no-audit --no-fund && cd -
 .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id> --serve --port 8977
 ```
 

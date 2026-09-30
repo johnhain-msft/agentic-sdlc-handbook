@@ -16,7 +16,6 @@ name: Worksheet isolation
 
 on:
   push:
-    branches: [main]
     paths:
       - '_quarto.yml'
       - 'worksheets/**'

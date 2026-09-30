@@ -8,8 +8,27 @@
 on:
   issues:
     types: [labeled]
+  workflow_dispatch:
+    inputs:
+      ws_id:
+        description: "Worksheet id, e.g. WS-06-team-readiness-scorecard"
+        required: true
+        type: string
 
-if: contains(github.event.issue.labels.*.name, 'stage:build')
+# `issues` events always run the workflow file from the DEFAULT branch
+# (docs: GITHUB_REF = default branch). `workflow_dispatch` runs the file from
+# whichever ref received the dispatch, so this stage can be piloted on a
+# feature branch before anything is merged:
+#
+#   gh workflow run aw-worksheet-build.lock.yml \
+#     --ref chore/stable-anchors -f ws_id=WS-06-team-readiness-scorecard
+#
+# The later stages trigger on `pull_request`, which runs the file from the PR
+# merge ref, so they are branch-runnable already.
+
+if: >-
+  github.event_name == 'workflow_dispatch' ||
+  contains(github.event.issue.labels.*.name, 'stage:build')
 
 permissions:
   contents: read
@@ -28,6 +47,7 @@ tools:
     toolsets: [default]
 
 imports:
+  - shared/worksheet-toolchain.md
   - .github/agents/worksheet-builder.agent.md
 
 safe-outputs:
@@ -43,8 +63,14 @@ safe-outputs:
 
 # Build a worksheet from its spec
 
-The triggering issue names one worksheet by its `ws_id` — an identifier of the
-form `WS-NN-some-slug`. Take it from the issue title or body.
+Identify the worksheet by its `ws_id` — an identifier of the form
+`WS-NN-some-slug`.
+
+- On `workflow_dispatch`, it is the `ws_id` input.
+- On an `issues` trigger, take it from the issue title or body.
+
+The toolchain (Quarto, Node, Chromium, the layout gate's dependencies) is
+already installed. Do not install it again.
 
 ## What to do
 
@@ -60,7 +86,6 @@ form `WS-NN-some-slug`. Take it from the issue title or body.
 6. Render and gate it until it passes:
 
    ```bash
-   cd .github/skills/worksheet-build && npm install --no-audit --no-fund && cd -
    .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
    ```
 
@@ -76,8 +101,7 @@ Never edit anything under `handbook/`, the book's root `.qmd` files, the root
 `_quarto.yml`, or any spec in `docs/worksheets/`.
 
 If the spec is unbuildable as written, do not guess. Create no pull request;
-instead comment on the issue explaining exactly which section and row you
-cannot satisfy, and why.
+instead report exactly which section and row you cannot satisfy, and why.
 
 ## If nothing is needed
 

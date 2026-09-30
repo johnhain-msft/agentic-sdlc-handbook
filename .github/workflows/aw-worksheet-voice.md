@@ -28,6 +28,7 @@ tools:
     toolsets: [default]
 
 imports:
+  - shared/worksheet-toolchain.md
   - .github/agents/worksheet-voice.agent.md
 
 safe-outputs:
@@ -62,7 +63,6 @@ Find it with `git diff --name-only origin/main...HEAD`.
 3. Record the gate's counts before you start:
 
    ```bash
-   cd .github/skills/worksheet-build && npm install --no-audit --no-fund && cd -
    .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
    ```
 
