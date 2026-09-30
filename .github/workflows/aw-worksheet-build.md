@@ -76,6 +76,16 @@ safe-outputs:
     title-prefix: "[worksheet] "
     labels: [worksheet, stage:voice, "cycles:0"]
     if-no-changes: error
+    # Target the branch this run happened on. Without this the patch is
+    # computed against the repository default branch, so a build running on a
+    # feature branch sweeps that branch's entire history into the pull request
+    # — the first pilot produced a 158-file patch and was refused.
+    base-branch: ${{ github.ref_name }}
+    # The builder changes exactly one file: worksheets/<ws_id>.qmd. This is set
+    # LOW on purpose. A runaway diff should fail loudly and immediately rather
+    # than open a pull request nobody can review; raising the limit would only
+    # hide the bug that produced the extra files.
+    max-patch-files: 3
   add-comment:
     max: 1
   missing-tool:
