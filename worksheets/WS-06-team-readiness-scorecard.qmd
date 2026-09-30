@@ -1,0 +1,448 @@
+---
+title: "Team Readiness Scorecard — Eight Dimensions, Scored Honestly"
+pagetitle: "WS-06-team-readiness-scorecard"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-06-team-readiness-scorecard</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  5 sheet(s): Panel A front, Panel A remediation and bands, Panel A posture strip, Panel B, Panel C. Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- SHEET 1 -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Team Readiness Scorecard &mdash; Eight Dimensions, Scored Honestly</h1>
+      <p class="ws-sub">A per-team scorecard: the 1-2 dimensions flagged as blockers before this team touches agent work, and a quarterly reassessment date.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-team-readiness-scorecard</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>3</b> &middot; type <b>assessment</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Team Assessment Worksheet</i> &middot;
+    <code>handbook/ch06-team-structures.qmd</code> L339-354 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-team-assessment">#sec-team-assessment</a>
+  </div>
+  <div class="ws-instruction">
+    <b>Panel A &mdash; one sheet per candidate team. Score alone, before anyone compares.</b>
+    Team lead: with a senior engineer who has actually reviewed agent-generated code, score each of the nine
+    dimensions 1-5 against the printed anchors. Write the evidence behind each mark; a score with no evidence is an opinion.
+    Tick <i>blocker</i> wherever you scored 1 or 2, then write a remediation action, a named owner and a target date.
+    Write the team's name in the foot line. The back of this sheet carries the bands and the adoption posture strip.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel A &mdash; per-team scorecard <span class="ws-block-note">nine fixed rows, one sheet per team &middot; no total, no average, no overall grade</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:8%"><col style="width:16%"><col style="width:10%"><col style="width:16%"><col style="width:6%"><col style="width:30%"><col style="width:7%"><col style="width:7%"></colgroup>
+      <thead><tr>
+        <th><span class="fno">1</span>Dimension</th><th><span class="fno">2</span>Question</th><th><span class="fno">3</span>Score</th><th><span class="fno">4</span>Anchor descriptors</th><th><span class="fno">5</span>Three-point equivalent<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">derived</span></th>
+        <th><span class="fno">6</span>Evidence<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">the evidence behind the mark</span></th><th><span class="fno">7</span>Blocker?<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">tick if score is 1 or 2</span></th><th><span class="fno">8</span>Unblocks everything else</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="prior"><b>Knowledge explicitness</b><span class="prior-src">ch06 L345-352</span></td>
+          <td class="prior">What percentage of your team's working knowledge is documented vs. tribal?<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="prior">1 = almost all tribal; 5 = comprehensive docs<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><span class="f-computed" data-formula="1-2 NR &middot; 3 PR &middot; 4-5 R"></span></td>
+          <td class="fill"><div class="prior" style="font-size:6.8pt;padding:.6mm 1mm;margin-bottom:.8mm">Is there a written architecture document a new hire could use? Are coding standards documented or only enforced in review? Can someone unfamiliar with the project run the build and tests from documentation alone?<span class="prior-src">ch08 L33</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocker</span></td>
+          <td class="prior">&#9745; pre-ticked: unblocks everything else<span class="prior-src">ch06 L358</span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Review capability</b><span class="prior-src">ch06 L345-352</span></td>
+          <td class="prior">Can your team review agent-generated code effectively &mdash; catching subtle architectural violations, not just syntax errors?<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="prior">1 = no experience; 5 = structured review process<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><span class="f-computed" data-formula="1-2 NR &middot; 3 PR &middot; 4-5 R"></span></td>
+          <td class="fill"><div class="prior" style="font-size:6.8pt;padding:.6mm 1mm;margin-bottom:.8mm">Can reviewers articulate <i>why</i> code is wrong, not just that it looks wrong?<span class="prior-src">ch08 L45</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocker</span></td>
+          <td class="prior">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Specification discipline</b><span class="prior-src">ch06 L345-352</span></td>
+          <td class="prior">Do your team's work items contain enough detail for an agent to produce useful output without extensive clarification?<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="prior">1 = vague tickets; 5 = clear, scoped specs<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><span class="f-computed" data-formula="1-2 NR &middot; 3 PR &middot; 4-5 R"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocker</span></td>
+          <td class="prior">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Senior presence</b><span class="prior-src">ch06 L345-352</span></td>
+          <td class="prior">Is there sufficient senior judgment to evaluate agent output on every critical path?<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="prior">1 = no senior coverage; 5 = senior review on all critical work<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><span class="f-computed" data-formula="1-2 NR &middot; 3 PR &middot; 4-5 R"></span></td>
+          <td class="fill"><div class="prior" style="font-size:6.8pt;padding:.6mm 1mm;margin-bottom:.8mm">What is the ratio of senior to junior developers?<span class="prior-src">ch08 L45</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocker</span></td>
+          <td class="prior">&#9745; pre-ticked: unblocks everything else<span class="prior-src">ch06 L358</span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Junior development</b><span class="prior-src">ch06 L345-352</span></td>
+          <td class="prior">Does your team have a structured path for juniors to build engineering skills in an agentic environment?<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="prior">1 = no plan; 5 = active apprenticeship models<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><span class="f-computed" data-formula="1-2 NR &middot; 3 PR &middot; 4-5 R"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocker</span></td>
+          <td class="prior">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Context ownership</b><span class="prior-src">ch06 L345-352</span></td>
+          <td class="prior">Is someone accountable for the quality of your team's context layer &mdash; the instructions, conventions, and agent configurations?<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="prior">1 = nobody; 5 = explicit ownership with maintenance<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><span class="f-computed" data-formula="1-2 NR &middot; 3 PR &middot; 4-5 R"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocker</span></td>
+          <td class="prior">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Feedback loops</b><span class="prior-src">ch06 L345-352</span></td>
+          <td class="prior">Does your team systematically capture agent failures and feed corrections back into the context layer?<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="prior">1 = no feedback loop; 5 = weekly context improvement cycle<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><span class="f-computed" data-formula="1-2 NR &middot; 3 PR &middot; 4-5 R"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocker</span></td>
+          <td class="prior">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Psychological safety</b><span class="prior-src">ch06 L345-352</span></td>
+          <td class="prior">Can team members admit when agent-assisted work fails without blame?<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="prior">1 = blame culture; 5 = learning culture<span class="prior-src">ch06 L345-352</span></td>
+          <td class="fill"><span class="f-computed" data-formula="1-2 NR &middot; 3 PR &middot; 4-5 R"></span></td>
+          <td class="fill"><div class="prior" style="font-size:6.8pt;padding:.6mm 1mm;margin-bottom:.8mm">How did the team respond to the last significant tooling change? Do developers experiment voluntarily, or only when mandated? Is there psychological safety around admitting that a tool-assisted approach failed?<span class="prior-src">ch08 L51</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocker</span></td>
+          <td class="prior">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Process readiness</b><span class="prior-src">ch08 L37-41</span></td>
+          <td class="prior">Does the team have structured workflows that can accommodate AI-generated code?<span class="prior-src">ch08 L37</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="prior">1 = ad hoc review, manual testing only; 3 = structured review exists, CI covers basics; 5 = automated quality gates, structured review, fast PR cycles<span class="prior-src">ch08 L62-66</span></td>
+          <td class="fill"><span class="f-computed" data-formula="1-2 NR &middot; 3 PR &middot; 4-5 R"></span></td>
+          <td class="fill"><div class="prior" style="font-size:6.8pt;padding:.6mm 1mm;margin-bottom:.8mm">Does the team have automated quality gates beyond compilation? Is code review structured or ad hoc? How long does a typical PR take from submission to merge?<span class="prior-src">ch08 L39</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocker</span></td>
+          <td class="prior">&mdash;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "Use this worksheet to evaluate your current team structure against the patterns described in this chapter. Score each dimension honestly. The purpose is to identify specific gaps that need attention, not to generate an overall grade." (ch06 L339)
+  </div>
+  <div class="ws-foot">
+    <div>WS-06-team-readiness-scorecard &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 4</div>
+    <div>Team <span style="display:inline-block;width:50mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- SHEET 2 -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Team Readiness Scorecard &mdash; Eight Dimensions, Scored Honestly</h1>
+      <p class="ws-sub">Panel A back page: the interpreting-results bands, the three-point key, and this team's adoption posture.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-team-readiness-scorecard</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>3</b> &middot; type <b>assessment</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Team Assessment Worksheet / Interpreting Results</i> &middot;
+    <code>handbook/ch06-team-structures.qmd</code> L356-366 &middot; ch10 L134-146 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-team-assessment">#sec-team-assessment</a>
+  </div>
+  <div class="ws-instruction">
+    Turn the front page over and read the bands before you score the posture strip. Then place this team between the two
+    failure poles, tick only the symptoms that are true today, and name the work this team commits to keep writing by hand.
+    Fill the reassessment date last.
+  </div>
+
+  <div class="ws-block">
+    <h2>Interpreting results <span class="ws-block-note">printed for reading, nothing to write &middot; field 5 key</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:16%"><col style="width:68%"><col style="width:16%"></colgroup>
+      <thead><tr><th>Score</th><th>What the chapter says</th><th>Three-point key</th></tr></thead>
+      <tbody>
+        <tr><td class="locked"><b>1&ndash;2 on any dimension</b></td>
+          <td class="prior">A gap that will actively undermine agentic adoption. Address these before expanding agent usage. Knowledge explicitness and senior presence are the two dimensions that unblock everything else &mdash; if these score low, start there.<span class="prior-src">ch06 L358</span></td>
+          <td class="locked">Not Ready</td></tr>
+        <tr><td class="locked"><b>3</b></td>
+          <td class="prior">Basic capability that will work for pilot-level adoption but will not scale. Plan to invest during the expansion phase described in Chapter 8.<span class="prior-src">ch06 L360</span></td>
+          <td class="locked">Partially Ready</td></tr>
+        <tr><td class="locked"><b>4&ndash;5</b></td>
+          <td class="prior">Readiness. These are the dimensions where your team can be a model for others.<span class="prior-src">ch06 L362</span></td>
+          <td class="locked">Ready</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.6pt;margin:1.6mm 0 0"><b>Reassess quarterly through the first year</b> (ch06 L366). The three-point key is derived from ch06 L358-362 and ch08 L57-66.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel A &mdash; remediation <span class="ws-block-note">one row per dimension &middot; fields 9-11 &middot; required wherever a dimension is ticked as a blocker</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:20%"><col style="width:48%"><col style="width:20%"><col style="width:12%"></colgroup>
+      <thead><tr><th>Dimension</th><th><span class="fno">9</span>Remediation action<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">required wherever field 7 is ticked</span></th><th><span class="fno">10</span>Remediation owner<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">a named individual</span></th><th><span class="fno">11</span>Target date</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked"><b>Knowledge explicitness</b></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Review capability</b></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Specification discipline</b></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Senior presence</b></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Junior development</b></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Context ownership</b></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Feedback loops</b></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Psychological safety</b></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Process readiness</b></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-06-team-readiness-scorecard &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 5</div>
+    <div>Team <span style="display:inline-block;width:50mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- SHEET 3 -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Team Readiness Scorecard &mdash; Eight Dimensions, Scored Honestly</h1>
+      <p class="ws-sub">Panel A back page: this team's adoption posture.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-team-readiness-scorecard</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>3</b> &middot; type <b>assessment</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Practitioner's Mindset</b>, <i>The Cost of Over-Reliance</i> &middot;
+    <code>handbook/ch10-the-practitioners-mindset.qmd</code> ch10 L134-146 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch10-the-practitioners-mindset.html#sec-mindset-over-reliance">#sec-mindset-over-reliance</a>
+  </div>
+  <div class="ws-instruction">
+    Place this team between the two failure poles, tick only the symptoms that are true today, and name the work this team commits to keep writing by hand. Fill the reassessment date last.
+  </div>
+
+
+  <div class="ws-block">
+    <h2>Panel A back page &mdash; adoption posture strip <span class="ws-block-note">one block per team, not per dimension</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:21%"><col style="width:40%"><col style="width:34%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">12</span></td><td><b>Position between the two failure poles</b></td>
+          <td class="prior">1 = autocomplete-only, "AI is just autocomplete". 5 = delegate-everything: sophistication measured by share of code produced by AI. 3 = neither pole.<span class="prior-src">ch10 L84, L136-138</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">13</span></td><td><b>Under-adoption symptoms</b></td>
+          <td class="prior">Still Tab-completing only &middot; no written specification before dispatch.<span class="prior-src">ch10 L136</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>still Tab-completing only</span><span class="f-checkline"><span class="f-check"></span>no written specification before dispatch</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">14</span></td><td><b>Over-delegation symptoms</b></td>
+          <td class="prior">"We are making non-trivial corrections to more than 20-30% of an agent's output" (the chapter's own stop-signal) &middot; no category of work reserved for manual implementation.<span class="prior-src">ch10 L140-146; stop-signal ch10 L146</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>we are making non-trivial corrections to more than 20-30% of an agent's output</span><span class="f-checkline"><span class="f-check"></span>no category of work reserved for manual implementation</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td><b>Work reserved for manual implementation</b></td>
+          <td class="prior">Prompt: the complex, the novel, the architecturally significant.<span class="prior-src">ch10 L138</span></td>
+          <td class="fill taller"><span class="f-box lg"></span><br><i style="font-size:6.8pt;color:#454f59">the named categories this team commits to keep writing by hand</i></td></tr>
+        <tr><td class="ws-num"><span class="fno">16</span></td><td><b>Posture remediation</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch10 L138-146</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">onboarding</span><span class="opt">reserved-manual-work policy</span><span class="opt">none needed</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">&ndash;</span></td><td><b>Reassessment date</b></td>
+          <td class="prior">Reassess quarterly through the first year.<span class="prior-src">ch06 L366</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-06-team-readiness-scorecard &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 5</div>
+    <div>Team <span style="display:inline-block;width:50mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- SHEET 4 -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Team Readiness Scorecard &mdash; Eight Dimensions, Scored Honestly</h1>
+      <p class="ws-sub">The cross-team rollup: which team pilots, which need targeted investment in a named dimension first, and which start last &mdash; with the specific gap written next to each deferred team.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-team-readiness-scorecard</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>3</b> &middot; type <b>assessment</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>Planning the Transition</b>, <i>Team Readiness Assessment; For Leaders, Additionally</i> &middot;
+    <code>handbook/ch08-planning-the-transition.qmd</code> ch08 L25-67 &middot; ch27 L193 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-readiness">#sec-transition-readiness</a>
+  </div>
+  <div class="ws-instruction">
+    <b>Panel B &mdash; filled together, after every team's Panel A is in.</b> Engineering leader: with every team lead in the room and the
+    future executive sponsor present, write one row per candidate team, carry the scores across from each team's Panel A, and decide the
+    sequencing verdict. The argument is in fields 23 and 28, not in the scores. Mark exactly one team as pilot. Panel A is the source for every computed cell.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel B &mdash; cross-team rollup and sequencing <span class="ws-block-note">one row per candidate team</span></h2>
+    <div class="prior" style="margin-bottom:1.6mm">Rule: teams "ready" across all dimensions are pilot candidates; "partially ready" in one or two need targeted investment first; "not ready" in codebase or skill readiness start last. "The assessment is not a gate; it is a sequencing tool."<span class="prior-src">ch08 L53</span></div>
+    <table class="ws">
+      <colgroup><col style="width:7%"><col style="width:13%"><col style="width:11%"><col style="width:8%"><col style="width:8%"><col style="width:11%"><col style="width:9%"><col style="width:14%"><col style="width:19%"></colgroup>
+      <thead><tr><th></th><th><span class="fno">17</span>Team</th><th><span class="fno">18</span>Team lead</th><th><span class="fno">19</span>Knowledge explicitness score<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">computed</span></th><th><span class="fno">20</span>Senior presence score<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">computed</span></th><th><span class="fno">21</span>Dimensions scoring 1-2<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">count, dimension names listed</span></th><th><span class="fno">22</span>Lowest-scoring dimension<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">computed</span></th><th><span class="fno">23</span>Sequencing verdict</th><th><span class="fno">24</span>The specific gap, if deferred<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">required if 23 is not pilot now</span></th></tr></thead>
+      <tbody>
+<tr><td class="locked"><b>Team 1</b></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="Panel A row 1 score"></span></td><td class="fill"><span class="f-computed" data-formula="Panel A row 4 score"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="lowest score's dimension"></span></td><td class="fill"><div class="f-select"><span class="opt">pilot now</span><span class="opt">targeted investment first</span><span class="opt">start last</span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="locked"><b>Team 2</b></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="Panel A row 1 score"></span></td><td class="fill"><span class="f-computed" data-formula="Panel A row 4 score"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="lowest score's dimension"></span></td><td class="fill"><div class="f-select"><span class="opt">pilot now</span><span class="opt">targeted investment first</span><span class="opt">start last</span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="locked"><b>Team 3</b></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="Panel A row 1 score"></span></td><td class="fill"><span class="f-computed" data-formula="Panel A row 4 score"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="lowest score's dimension"></span></td><td class="fill"><div class="f-select"><span class="opt">pilot now</span><span class="opt">targeted investment first</span><span class="opt">start last</span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="locked"><b>Team 4</b></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="Panel A row 1 score"></span></td><td class="fill"><span class="f-computed" data-formula="Panel A row 4 score"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="lowest score's dimension"></span></td><td class="fill"><div class="f-select"><span class="opt">pilot now</span><span class="opt">targeted investment first</span><span class="opt">start last</span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel B &mdash; pilot selection <span class="ws-block-note">the three criteria are mapped from Panel A, not re-scored</span></h2>
+    <div class="prior" style="margin-bottom:1.6mm">Mapping: codebase maturity = Knowledge explicitness (field 25); process discipline = Panel A row 9, process readiness (field 26); cultural openness = Psychological safety (field 27).<span class="prior-src">ch27 L193</span></div>
+    <table class="ws">
+      <colgroup><col style="width:7%"><col style="width:13%"><col style="width:13%"><col style="width:14%"><col style="width:13%"><col style="width:12%"><col style="width:14%"><col style="width:14%"></colgroup>
+      <thead><tr><th></th><th><span class="fno">25</span>Codebase maturity<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">computed from 19</span></th><th><span class="fno">26</span>Process discipline<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">computed from Panel A row 9</span></th><th><span class="fno">27</span>Cultural openness<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">computed from Psychological safety</span></th><th><span class="fno">28</span>Executive sponsor<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">required on the pilot row</span></th><th><span class="fno">29</span>Ring-fenced pilot budget<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">the funded amount</span></th><th><span class="fno">31</span>Wave</th><th></th></tr></thead>
+      <tbody>
+<tr><td class="locked"><b>Team 1</b></td><td class="fill"><span class="f-computed" data-formula="from field 19"></span></td><td class="fill"><span class="f-computed" data-formula="from Panel A row 9"></span></td><td class="fill"><span class="f-computed" data-formula="from Psychological safety"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-currency" data-symbol="&pound;"></span></td><td class="fill"><div class="f-select"><span class="opt">pilot</span><span class="opt">wave 2</span><span class="opt">later</span></div></td><td class="locked"></td></tr>
+<tr><td class="locked"><b>Team 2</b></td><td class="fill"><span class="f-computed" data-formula="from field 19"></span></td><td class="fill"><span class="f-computed" data-formula="from Panel A row 9"></span></td><td class="fill"><span class="f-computed" data-formula="from Psychological safety"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-currency" data-symbol="&pound;"></span></td><td class="fill"><div class="f-select"><span class="opt">pilot</span><span class="opt">wave 2</span><span class="opt">later</span></div></td><td class="locked"></td></tr>
+<tr><td class="locked"><b>Team 3</b></td><td class="fill"><span class="f-computed" data-formula="from field 19"></span></td><td class="fill"><span class="f-computed" data-formula="from Panel A row 9"></span></td><td class="fill"><span class="f-computed" data-formula="from Psychological safety"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-currency" data-symbol="&pound;"></span></td><td class="fill"><div class="f-select"><span class="opt">pilot</span><span class="opt">wave 2</span><span class="opt">later</span></div></td><td class="locked"></td></tr>
+<tr><td class="locked"><b>Team 4</b></td><td class="fill"><span class="f-computed" data-formula="from field 19"></span></td><td class="fill"><span class="f-computed" data-formula="from Panel A row 9"></span></td><td class="fill"><span class="f-computed" data-formula="from Psychological safety"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-currency" data-symbol="&pound;"></span></td><td class="fill"><div class="f-select"><span class="opt">pilot</span><span class="opt">wave 2</span><span class="opt">later</span></div></td><td class="locked"></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="ws-foot">
+    <div>WS-06-team-readiness-scorecard &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- SHEET 5 -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Team Readiness Scorecard &mdash; Eight Dimensions, Scored Honestly</h1>
+      <p class="ws-sub">A short register of practices the organisation cannot yet run unsupervised, with a named person or a named gap against each.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-team-readiness-scorecard</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>3</b> &middot; type <b>assessment</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>Preface</b>, <i>A Note on Methodology</i> &middot;
+    <code>index.qmd</code> L148 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/index.html#sec-preface-methodology">#sec-preface-methodology</a>
+  </div>
+  <div class="ws-instruction">
+    <b>Panel C &mdash; engineering leader with the architect, 15 minutes.</b> List each practice you intend to adopt from the book.
+    For each one, mark whether the team has the tacit expertise the case studies quietly assume, and name the person. Where the answer is not a clear yes,
+    record the gap as a hire, a coaching action or a deferral, with an owner and a date.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel B &mdash; context-infrastructure ring-fence <span class="ws-block-note">pilot team only &middot; the sponsor signs in the room</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:18%"><col style="width:45%"><col style="width:32%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody><tr><td class="ws-num"><span class="fno">30</span></td><td><b>Context-infrastructure ring-fence</b></td>
+        <td class="prior">The sponsor commits that the context-infrastructure line will not be cut ahead of other pilot spend: "it has the highest long-term return and the lowest short-term visibility, which means it is the one most likely to be cut."<span class="prior-src">ch27 L193</span></td>
+        <td class="fill tall"><span class="f-checkline"><span class="f-check"></span>committed</span><span class="f-sign"></span></td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel C &mdash; expertise dependency register <span class="ws-block-note">one row per practice the organisation intends to adopt</span></h2>
+    <div class="prior" style="margin-bottom:1.6mm">Anchor for field 33: someone who can recognise when an agent is drifting, when to push and when to intervene, and what good output looks like in this domain. The author knows "when to push and when to intervene in ways not fully captured by the written method."<span class="prior-src">index L148</span></div>
+    <table class="ws">
+      <colgroup><col style="width:24%"><col style="width:14%"><col style="width:17%"><col style="width:17%"><col style="width:28%"></colgroup>
+      <thead><tr><th><span class="fno">32</span>Practice to be adopted<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">drawn from the org's own adoption plan</span></th><th><span class="fno">33</span>Do we have the tacit expertise?</th><th><span class="fno">34</span>That person<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">a name, or blank if the answer is no</span></th><th><span class="fno">35</span>Gap action<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">required wherever 33 is not yes</span></th><th><span class="fno">36</span>Gap owner and date</th></tr></thead>
+      <tbody>
+<tr><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partly</span><span class="opt">no</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">coach</span><span class="opt">defer the practice</span></div></td><td class="fill"><span class="f-owner"></span><br><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr><tr><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partly</span><span class="opt">no</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">coach</span><span class="opt">defer the practice</span></div></td><td class="fill"><span class="f-owner"></span><br><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr><tr><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partly</span><span class="opt">no</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">coach</span><span class="opt">defer the practice</span></div></td><td class="fill"><span class="f-owner"></span><br><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr><tr><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partly</span><span class="opt">no</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">coach</span><span class="opt">defer the practice</span></div></td><td class="fill"><span class="f-owner"></span><br><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr><tr><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partly</span><span class="opt">no</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">coach</span><span class="opt">defer the practice</span></div></td><td class="fill"><span class="f-owner"></span><br><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr><tr><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partly</span><span class="opt">no</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">coach</span><span class="opt">defer the practice</span></div></td><td class="fill"><span class="f-owner"></span><br><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-team-readiness-scorecard &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
