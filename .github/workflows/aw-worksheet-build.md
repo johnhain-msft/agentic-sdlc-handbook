@@ -59,16 +59,6 @@ engine: copilot
 
 network: defaults
 
-# The safe-output job checks out the base branch shallow (depth 1) and, without
-# this, only the repository DEFAULT branch ref is available. A pull request
-# targeting a feature branch then fails with
-#   create_pull_request failed: "No remote refs available for merge-base calculation"
-# Declaring fetch refs here propagates them to that job so the base branch's
-# commits are present locally and the merge-base can be computed.
-checkout:
-  - fetch-depth: 0
-    fetch: ["*"]
-
 tools:
   bash:
     - "*"
@@ -86,15 +76,17 @@ safe-outputs:
     title-prefix: "[worksheet] "
     labels: [worksheet, stage:voice, "cycles:0"]
     if-no-changes: error
-    # Target the branch this run happened on. Without this the patch is
-    # computed against the repository default branch, so a build running on a
-    # feature branch sweeps that branch's entire history into the pull request
-    # — the first pilot produced a 158-file patch and was refused.
-    base-branch: ${{ github.ref_name }}
-    # The builder changes exactly one file: worksheets/<ws_id>.qmd. This is set
-    # LOW on purpose. A runaway diff should fail loudly and immediately rather
-    # than open a pull request nobody can review; raising the limit would only
-    # hide the bug that produced the extra files.
+    # Do NOT set base-branch here. Setting it triggers github/gh-aw#39404:
+    # the value is resolved through a GitHub API call that 404s, the failure is
+    # stringified into the ref name, and every create_pull_request then dies
+    # with "No remote refs available for merge-base calculation" — even when
+    # the value is simply the default branch. Left unset, gh-aw defaults to
+    # github.base_ref || github.ref_name, which is what we want anyway.
+    #
+    # The builder changes exactly one file: worksheets/<ws_id>.qmd. This limit
+    # is set LOW on purpose, so a runaway diff fails loudly and immediately.
+    # Raising it — which is what the E003 error message suggests — would hide
+    # the bug that produced the extra files rather than fix it.
     max-patch-files: 3
   add-comment:
     max: 1

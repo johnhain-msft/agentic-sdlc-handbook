@@ -10,7 +10,7 @@
 # worksheet still produces a diff, and therefore still fires the trigger.
 #
 #   ws_id:     WS-06-team-readiness-scorecard
-#   requested: 2026-09-30T18:25Z
+#   requested: 2026-09-30T18:51Z
 #
 # Once the factory is on the default branch, the queue workflow and the
 # `stage:build` issue label replace this file.
@@ -18,4 +18,4 @@
 # The leading underscore keeps Quarto from treating this as a renderable input.
 
 ws_id:     WS-06-team-readiness-scorecard
-requested: 2026-09-30T18:25Z
+requested: 2026-09-30T18:51Z
