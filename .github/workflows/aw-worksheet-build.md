@@ -59,6 +59,16 @@ engine: copilot
 
 network: defaults
 
+# The safe-output job checks out the base branch shallow (depth 1) and, without
+# this, only the repository DEFAULT branch ref is available. A pull request
+# targeting a feature branch then fails with
+#   create_pull_request failed: "No remote refs available for merge-base calculation"
+# Declaring fetch refs here propagates them to that job so the base branch's
+# commits are present locally and the merge-base can be computed.
+checkout:
+  - fetch-depth: 0
+    fetch: ["*"]
+
 tools:
   bash:
     - "*"
