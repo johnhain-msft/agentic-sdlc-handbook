@@ -35,5 +35,12 @@ handbook/reviews/apm-audit-publishing.md
 .private-backup/
 .DS_Store
 
-# Local planning workspace (worksheet map, delivery drafts) - not for publication
-docs/
+# Local planning workspace - scratch artifacts stay local.
+# Exceptions: the 72 worksheet build specs and the worksheet map are tracked,
+# because the cloud agents that build worksheets read them from the repo.
+# Everything else under docs/ (candidates*.json, clusters*.json, heading-index.*,
+# _section-*.md, *.tsv, generator scripts, __pycache__) remains ignored.
+docs/*
+!docs/worksheets/
+!docs/worksheet-map.md
+docs/worksheets/**/__pycache__/
