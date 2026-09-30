@@ -16,6 +16,9 @@ on:
 if: contains(github.event.pull_request.labels.*.name, 'stage:judge')
 
 permissions:
+  # Copilot inference via the Actions token - no PAT, minted per run and
+  # revoked automatically. Billing flows through the org Copilot plan.
+  copilot-requests: write
   contents: read
   pull-requests: read
   issues: read

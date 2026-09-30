@@ -48,6 +48,9 @@ if: >-
   contains(github.event.issue.labels.*.name, 'stage:build')
 
 permissions:
+  # Copilot inference via the Actions token - no PAT, minted per run and
+  # revoked automatically. Billing flows through the org Copilot plan.
+  copilot-requests: write
   contents: read
   issues: read
   pull-requests: read
@@ -83,9 +86,9 @@ safe-outputs:
 Identify the worksheet by its `ws_id` — an identifier of the form
 `WS-NN-some-slug`. Where it comes from depends on how this run was triggered:
 
-- **push** — read the single line in `worksheets/_build-request.txt`. That file
-  names exactly one worksheet. Ignore anything after the first non-empty,
-  non-comment line.
+- **push** — read `worksheets/_build-request.txt`. It carries a single
+  `ws_id:` line naming exactly one worksheet. Use that value and ignore the
+  `requested:` line, which exists only to make a re-request produce a diff.
 - **workflow_dispatch** — the `ws_id` input.
 - **issues** — the issue title or body.
 

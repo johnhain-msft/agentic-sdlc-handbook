@@ -1,17 +1,21 @@
 # Worksheet build request.
 #
-# One ws_id per line-that-matters. The build workflow reads the first non-empty,
-# non-comment line and builds exactly that worksheet.
+# The build workflow triggers on a push that changes this file, and builds the
+# single ws_id named below. One worksheet per push, on purpose: one run, one
+# worksheet, a fresh context window per stage, which is the reason the
+# pipeline is four workflows rather than one lead agent.
 #
-# To request a build while the factory lives on a feature branch:
+# To request a build while the factory lives on a feature branch, set both
+# lines and push. The "requested" line exists so that re-requesting the same
+# worksheet still produces a diff, and therefore still fires the trigger.
 #
-#   echo WS-06-team-readiness-scorecard > worksheets/_build-request.txt
-#   git commit -am "build: WS-06" && git push
+#   ws_id:     WS-06-team-readiness-scorecard
+#   requested: 2026-09-30T18:05Z
 #
-# One worksheet per push, on purpose: one run, one worksheet, a fresh context
-# window per stage. Once the factory is on the default branch, the queue
-# workflow and the `stage:build` issue label replace this file.
+# Once the factory is on the default branch, the queue workflow and the
+# `stage:build` issue label replace this file.
 #
 # The leading underscore keeps Quarto from treating this as a renderable input.
 
-WS-06-team-readiness-scorecard
+ws_id:     WS-06-team-readiness-scorecard
+requested: 2026-09-30T18:05Z
