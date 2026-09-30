@@ -23,7 +23,7 @@ You have a 15-chapter technical handbook in Markdown. You want readers to find i
 
 The author knew what the book should *feel* like. The agents knew how to make it *work*.
 
-## Publishing Strategy: Three Rounds of Deliberation
+## Publishing Strategy: Three Rounds of Deliberation {#sec-cs-publishing-strategy}
 
 The first wave wasn't code — it was research. The orchestrator's initial recommendation was an Open Core model: free web, paid PDF/EPUB. The author pushed back immediately: *"Why not Amazon ebooks? Why just PDF in a repo?"*
 
@@ -62,7 +62,7 @@ flowchart LR
     G --> I
 ```
 
-## The "Almost Done" Trap: PDF Rendering Cascade
+## The "Almost Done" Trap: PDF Rendering Cascade {#sec-cs-publishing-almost-done-trap}
 
 What happened next is a textbook instance of **Anti-Pattern #15: The "Almost Done" Trap** — each fix revealed the next issue, creating a cascade where "one more fix" repeated five times.
 
@@ -103,7 +103,7 @@ When each fix reveals the next issue (the "Almost Done" cascade), treat each fix
 This prevents speculative batching -- fixing three things at once when you don't yet know if fix #1 changes the landscape for fixes #2 and #3.
 :::
 
-## CI/CD: Four Iterations to Stability
+## CI/CD: Four Iterations to Stability {#sec-cs-publishing-cicd}
 
 The deployment pipeline went through its own iteration gauntlet:
 
@@ -152,7 +152,7 @@ The download experience went through seven rounds -- all driven by the human aut
 
 The middle four iterations were variations on the same theme: the human spotted a UX friction, the agent fixed it in under a minute. This is the collaboration pattern at its clearest: **the human refines intent; the agent refines implementation**.
 
-## Licensing: Expert Panel Deliberation
+## Licensing: Expert Panel Deliberation {#sec-cs-publishing-licensing}
 
 A three-expert panel (IP Attorney, Publishing Strategist, Growth Hacker) evaluated licensing options. The recommendation was unanimous: **CC BY-NC-ND 4.0**.
 

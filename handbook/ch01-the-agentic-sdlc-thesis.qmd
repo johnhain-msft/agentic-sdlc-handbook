@@ -6,7 +6,7 @@ Every AI coding tool demos beautifully on a blank project. The question this boo
 
 ---
 
-## The Vibe Coding Cliff
+## The Vibe Coding Cliff {#sec-thesis-vibe-coding-cliff}
 
 You've seen the demo. An engineer opens a fresh repository, types a few sentences of natural language, and watches an AI agent produce a working application in minutes. The audience is impressed. Leadership greenlights a pilot.
 
@@ -32,7 +32,7 @@ Most teams respond in one of two ways. Some retreat. They restrict AI tools to a
 
 Neither response addresses the root cause.
 
-## Why Tools Aren't the Answer
+## Why Tools Aren't the Answer {#sec-thesis-tools-not-the-answer}
 
 The natural instinct is to blame the tools and wait for better ones. Next quarter's model will have a larger context window. Next year's agent will be smarter. The reasoning is intuitive: if the AI isn't good enough, get a better AI.
 
@@ -48,7 +48,7 @@ Three properties of language models are structural. They hold regardless of mode
 
 These three properties are why better models don't solve the Vibe Coding Cliff. A more powerful model working with unstructured, incomplete, or noisy context doesn't necessarily produce better results. It can produce more confident wrong answers, faster. The failure mode of a weak model is obvious: it can't do the task. The failure mode of a strong model with poor context is insidious: it often produces plausible output that looks correct and can silently violate your system's invariants. Context windows have grown roughly 100–1,000× in five years, from GPT-3's 2,048 tokens in 2020 to the 200K–2M tokens available in current frontier models[^ch1-context], yet satisfaction with AI on complex engineering tasks has not kept pace[^ch1-satisfaction]. The bottleneck was never raw capacity. It was the structure of what fills that capacity.
 
-## PROSE: Architectural Constraints for Human-AI Collaboration
+## PROSE: Architectural Constraints for Human-AI Collaboration {#sec-thesis-prose-intro}
 
 In 2000, Roy Fielding didn't build a web framework. He published a dissertation that defined *constraints* — statelessness, uniform interface, layered system, and others — that, when followed together, produced systems with desirable properties: scalability, reliability, independent evolution. He called the style REST.
 
@@ -131,7 +131,7 @@ What distinguishes PROSE is the level of abstraction. Most alternatives operate 
 
 The appropriate claim is not "PROSE is the only way" but "PROSE articulates constraints that any reliable AI-native development approach will need to address, whether it uses this vocabulary or not." If your current approach already satisfies these constraints under different names, this book will still be useful — it gives you a shared language and a systematic methodology.
 
-### Scope and Limitations
+### Scope and Limitations {#sec-thesis-scope-limits}
 
 The primary evidence in this book is one large pull request on one codebase, executed by the methodology's creator. The PR is public and verifiable — you can read every commit, every agent dispatch, and every human intervention. But reproducibility across independent teams, diverse codebases, and competing tools does not yet exist. Where broader evidence supports a claim (industry surveys, academic studies, vendor data), it is cited. Where the evidence is the author's own execution, that is stated plainly. Chapter 22 catalogs the specific claims most likely to be wrong.
 
@@ -141,7 +141,7 @@ Where this book makes predictions or presents projected figures, these are expli
 
 The APM project that implements this methodology includes enterprise governance infrastructure — lock file audit trails, policy inheritance chains, 16 policy checks, and CI enforcement gates — validated against real organizational requirements. The concepts are not merely theoretical, but they are not yet proven at the scale of a large enterprise engineering organization. That proof requires independent adoption, which is the next phase, not a completed one.
 
-## The Dual Path
+## The Dual Path {#sec-thesis-dual-path}
 
 This book serves two audiences who need different things from the same shift.
 

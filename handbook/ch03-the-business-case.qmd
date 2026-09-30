@@ -31,7 +31,7 @@ The right-hand column is harder to measure. That's because it measures outcomes 
 
 ---
 
-## What It Actually Costs
+## What It Actually Costs {#sec-business-case-costs}
 
 Every vendor pitch includes the license fee. None of them include the other 70–80% of your actual investment. A business case that accounts only for subscription costs is like a construction budget that covers materials but omits labor.
 
@@ -126,7 +126,7 @@ If the cost side is underestimated, the value side is measured wrong. Most busin
 
 ---
 
-## The Adoption Timeline
+## The Adoption Timeline {#sec-business-case-adoption-timeline}
 
 Every adoption plan that shows a smooth upward curve is lying. Real adoption follows a pattern that technology change management research has documented repeatedly.[^ch3-jcurve] Agentic development is no different.
 
@@ -163,7 +163,7 @@ xychart-beta
 
 ---
 
-## Building Your Business Case
+## Building Your Business Case {#sec-business-case-building}
 
 The ROI calculation template below is designed for a CFO audience. It uses ranges, not point estimates. It requires you to state assumptions explicitly. It does not promise a specific outcome — it gives you a structured way to model scenarios for your organization.
 
@@ -180,7 +180,7 @@ Before adopting agentic development, measure these four metrics for at least one
 
 Use the TCO table above. Adjust ranges for your team size, compliance requirements, and codebase complexity. Be honest about context engineering — if your codebase has significant undocumented conventions, budget toward the higher end.
 
-### Step 3: Model your value — three scenarios
+### Step 3: Model your value — three scenarios {#sec-business-case-value-scenarios}
 
 ::: {tbl-colwidths="[30,23,23,24]"}
 
@@ -284,7 +284,7 @@ The 30–60% rework range (Chapter 1) directly affects the cycle time value. Hig
 
 The point is not the specific numbers — it is the shape. The business case holds across a wide range of rework assumptions. Even at the conservative end, the investment breaks even within a year. But the difference between 20% and 60% rework is a 2× spread in annual value. This is why context engineering — which directly reduces rework — is the highest-impact investment in the entire adoption plan.
 
-### Step 5: Define success criteria that aren't vanity metrics
+### Step 5: Define success criteria that aren't vanity metrics {#sec-business-case-success-criteria}
 
 Commit to specific, measurable outcomes before you start. Report against them honestly.
 
@@ -316,7 +316,7 @@ The methodology matters more than any specific number here. If you apply the mod
 
 ---
 
-## The Context Moat
+## The Context Moat {#sec-business-case-context-moat}
 
 Of the six investment categories above, one earns its own treatment because it is the asset whose returns, if the compounding hypothesis holds, the rest of the business case rests on. Tool licenses commoditize; context infrastructure does not. Two organizations adopting the same vendor on the same day, from the same starting point, will diverge in agent reliability over the following year by a factor that is mostly explained by what each invested in the layer the new reference architecture (Chapter 4) names **Context & Capabilities**: the markdown primitives, conventions, agent configurations, and grounded references the harness loads on every invocation. The license is the same. The model is the same. The context is what differs. We hypothesise that this differential compounds; the early signal from teams 12+ months in is consistent with the hypothesis, but it is not yet a closed case.
 
@@ -345,7 +345,7 @@ The business case above models the *benefit* side. Here's the cost side:
 *The pilot phase is designed to be reversible. If it doesn't work for your codebase, the only cost is a few weeks of reduced velocity. The instrumentation investment (Chapter 12) pays dividends even without agentic workflows.*
 :::
 
-## The Honest Version
+## The Honest Version {#sec-business-case-honest-version}
 
 Here is the business case stated plainly, without inflation.
 

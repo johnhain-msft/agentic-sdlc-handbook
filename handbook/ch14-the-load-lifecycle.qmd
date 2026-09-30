@@ -32,7 +32,7 @@ Phases one and two run once per install. Phases three and four run once per sess
 
 ---
 
-## Resolve
+## Resolve {#sec-load-resolve}
 
 The first phase is dependency resolution. When a project declares that it depends on an external primitive package — a shared logging skill, a security review agent, an organization's policy bundle — a package manager walks the declared graph, picks compatible versions, and records the result. APM's `apm install` performs this step for AGENTS.md-compatible projects: it reads the project's manifest, walks each declared dependency to its published source, recurses into that source's own manifest, and keeps recursing until the closure is built.[^ch12-apm] The resolved closure is written to a lockfile (`apm.lock` or equivalent) that pins every transitive dependency to a specific version or commit.
 
@@ -44,7 +44,7 @@ A primitive that is not declared as a dependency edge but is nonetheless require
 
 ---
 
-## Materialize
+## Materialize {#sec-load-materialize}
 
 The lockfile says *what*; materialization decides *where*. The harness is the compiler (@sec-runtime-machine), and every compiler has opinions about source layout. The install step's job is to put each resolved primitive at the path the local harness will parse — and only at that path. A skill the package manager downloaded from `acme/security-skill@1.4.2` becomes, on disk, `.github/skills/security/SKILL.md` for a Copilot project, `.claude/skills/security/SKILL.md` for a Claude Code project, or both for a project that targets multiple harnesses. The agentskills.io standard pinned the entrypoint name and the activation contract, which is why skills materialize cleanly across harnesses; scope-attached rules and persona files have not converged, which is why they do not.[^ch12-skills]
 
@@ -64,7 +64,7 @@ Materialization also surfaces the *bundle leakage* failure. When a published mod
 
 ---
 
-## Bind
+## Bind {#sec-load-bind}
 
 A file at the right path is not yet a load. Binding is the harness's classification step, run once at session start: for every materialized file the harness can see, decide *how* and *when* its body should reach the model. There are three binding modes, and they correspond to three points in the session timeline.
 
@@ -88,7 +88,7 @@ A primitive's binding mode is not a stylistic choice; it is set by the file name
 
 ---
 
-## Activate
+## Activate {#sec-load-activate}
 
 The first three phases are deterministic. The fourth is not. Once the harness has bound every materialized file to a load mode, the dispatcher runs at every decision point and selects which lazy primitives to actually pull into context. This is the phase the opening case's debugging time was burned in, and it is the phase developers most often confuse with the previous three.
 

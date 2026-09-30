@@ -8,7 +8,7 @@ Agentic development does not eliminate engineering roles. It restructures how te
 
 ---
 
-## What Shifts, What Stays
+## What Shifts, What Stays {#sec-team-shifts-and-stays}
 
 Before redrawing org charts, understand what actually changes about daily engineering work. Agent adoption shifts the *proportion* of time spent on different activities. It does not change which activities require human judgment.
 
@@ -115,7 +115,7 @@ Tech leads also become the primary feedback loop owners, tracking which context 
 
 ---
 
-## Ownership Across the Five-Layer Reference Architecture
+## Ownership Across the Five-Layer Reference Architecture {#sec-team-layer-ownership}
 
 Chapter 4 introduces the agentic SDLC as a five-layer stacked supply chain — `Platform`, `Context & Capabilities`, `Governance and Distribution`, `Agent Harness`, `SDLC phases`. The architectural picture answers *what supplies primitives to whom*. The organizational picture answers *who owns each layer*. This section maps the second onto the first; the rows below are the staffing decisions that follow from the architecture.
 
@@ -219,7 +219,7 @@ Neither role should be created by fiat. Both emerge from demonstrated need. If y
 
 ---
 
-## Team Topologies That Work — and Don't
+## Team Topologies That Work — and Don't {#sec-team-topologies}
 
 Team Topologies, the framework by Matthew Skelton and Manuel Pais, provides a useful lens for how agentic development changes team structures.
 
@@ -241,7 +241,7 @@ Team Topologies, the framework by Matthew Skelton and Manuel Pais, provides a us
 
 ---
 
-## The Junior Pipeline
+## The Junior Pipeline {#sec-team-junior-pipeline}
 
 If agents handle the tasks that traditionally built junior engineering skills, how do juniors develop? Three models show promise. Most organizations will use a combination.
 
@@ -257,7 +257,7 @@ No model is sufficient alone. Model A builds judgment. Model B builds critical e
 
 ---
 
-## Skill Matrix Evolution
+## Skill Matrix Evolution {#sec-team-skill-matrix}
 
 The skills that differentiate engineers are shifting. This has hiring, retention, and development implications.
 
@@ -297,7 +297,7 @@ Two retention risks emerge during the transition.
 
 ---
 
-## Staffing Models
+## Staffing Models {#sec-team-staffing-models}
 
 Team size and composition change under agentic development. The direction is consistent: smaller teams that are more senior in composition, with higher leverage per person.[^ch6-teams]
 
@@ -334,7 +334,7 @@ Most organizations will combine all three. The key is to be deliberate: track yo
 
 ---
 
-## Team Assessment Worksheet
+## Team Assessment Worksheet {#sec-team-assessment}
 
 Use this worksheet to evaluate your current team structure against the patterns described in this chapter. Score each dimension honestly. The purpose is to identify specific gaps that need attention, not to generate an overall grade.
 

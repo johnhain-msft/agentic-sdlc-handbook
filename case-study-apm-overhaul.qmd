@@ -12,7 +12,7 @@ These four case studies test the methodology under progressively different condi
 
 ---
 
-## Orchestrating a 75-File Architecture Change Across 25 Agents
+## Orchestrating a 75-File Architecture Change Across 25 Agents {#sec-cs-apm-overview}
 
 ::: {.callout-note}
 This case study documents a real Copilot CLI session against
@@ -68,7 +68,7 @@ Responsibility as the auth consolidation pattern. The CLI UX Expert found
 766 ad-hoc logging calls with no shared abstraction. All findings were
 synthesised into a single source-of-truth document.
 
-### Eight Plan Iterations
+### Eight Plan Iterations {#sec-cs-apm-plan-iterations}
 
 The plan went through eight iterations before approval. This is not a
 failure — it is the meta-process working as designed (Ch13 §Plan).
@@ -96,7 +96,7 @@ The plan targeted 47 primary source files. The final PR touched 75 — the addit
 
 ---
 
-## Wave Execution
+## Wave Execution {#sec-cs-apm-wave-execution}
 
 The plan decomposed into five phases. Each wave followed **checkpoint
 discipline** — full test suite after every wave, commit before the next.
@@ -118,7 +118,7 @@ logger wave — is Escalation #1 below.
 
 ---
 
-## Escalation Events
+## Escalation Events {#sec-cs-apm-escalations}
 
 Five escalations occurred. Each maps to a specific anti-pattern.
 
@@ -130,7 +130,7 @@ Escalation severity follows a three-tier model:
 | **L3** | Agent cannot complete | Orchestrator takes over the task manually |
 | **L4** | Plan scope changes | New todos added, potentially new wave |
 
-### 1. The install.py Agent (Anti-pattern #11: Context Window Exhaustion)
+### 1. The install.py Agent (Anti-pattern #11: Context Window Exhaustion) {#sec-cs-apm-context-exhaustion}
 
 The agent migrating `install.py` (58 `_rich_*` calls, the largest single
 file) ran for 45+ minutes and stopped producing coherent edits. The
@@ -178,7 +178,7 @@ This was an **L4 escalation** — scope expanded beyond the original plan.
 The orchestrator chose one validation strategy over a branching tree of
 token-type logic, avoiding complexity at the architecture level.
 
-### 5. Verbose Logging Silent NameError
+### 5. Verbose Logging Silent NameError {#sec-cs-apm-silent-error}
 
 `_rich_echo` was never imported in `install.py`. The `verbose_log` lambda
 triggered a `NameError` caught by an outer `try/except`. Verbose mode
@@ -225,7 +225,7 @@ Agent success messages are probabilistic output. The `diff` command is determini
 
 ---
 
-## Anti-Pattern Mapping
+## Anti-Pattern Mapping {#sec-cs-apm-antipattern-map}
 
 | Escalation | Anti-pattern | PROSE Constraint | Resolution |
 |------------|-------------|------------------|------------|
@@ -238,7 +238,7 @@ Agent success messages are probabilistic output. The `diff` command is determini
 
 ---
 
-## What Held True Regardless of the Model
+## What Held True Regardless of the Model {#sec-cs-apm-model-invariants}
 
 Ch15 defines five properties that hold regardless of model capability.
 This session tested three under production conditions.

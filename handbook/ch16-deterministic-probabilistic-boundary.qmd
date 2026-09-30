@@ -13,7 +13,7 @@ This chapter is about that seam. Where it sits, what crosses it, what it costs t
 
 ---
 
-## Two Computers, One Program
+## Two Computers, One Program {#sec-seam-two-computers}
 
 Every agentic system you will ever build is the composition of two computers running in lockstep.
 
@@ -40,7 +40,7 @@ The phrase "the agent is a junior engineer" from Chapter 10 was a mindset metaph
 
 ---
 
-## Consequential Side Effects Belong on the Deterministic Side
+## Consequential Side Effects Belong on the Deterministic Side {#sec-seam-consequential-effects}
 
 Once you see the seam, the rule that follows is short. **The model proposes; the gate disposes.** Every consequential side effect — the kind whose reversal costs more than its execution — must be performed by the deterministic side, against a declared shape, against an allowlist the agent did not write.
 
@@ -76,7 +76,7 @@ The taxonomy of failures that result from missing or misplaced gates is treated 
 
 ---
 
-## The Four Kinds of Quality Gate
+## The Four Kinds of Quality Gate {#sec-seam-quality-gates}
 
 If the seam is the spine of agentic architecture, gates are the vertebrae. But "gate" is not a single thing, and picking the wrong kind for the failure mode you face is a design mistake the team only discovers at incident time. The 2x2 below closes the gate-design space.[^ch14-gate-tradeoffs] Cut on two axes: **who** renders the verdict (the agent's own process, or something outside it), and **how** the verdict is rendered (a programmatic check, or a judgement call). Four cells. Each cell has one shape of failure mode it catches well, and three it catches badly.
 
@@ -121,7 +121,7 @@ The diagram shows the only flow this chapter contains. Everything else is catego
 
 ---
 
-## Strong-Form Supervised Execution
+## Strong-Form Supervised Execution {#sec-seam-supervision-forms}
 
 There are two ways to enforce the rule that the agent does not externalize. The first is a contract: the prompt tells the agent to plan, then call a tool, then verify, and the agent is asked to comply. This is **weak-form supervised execution**. It is adequate for inner-loop work on a developer's laptop, where the operator is the auditor and a misstep is recoverable by reverting the file. The agent holds the write capability throughout; the discipline is contractual.
 
@@ -133,7 +133,7 @@ Strong-form supervised execution unlocks something that compliance organizations
 
 ---
 
-## The Architect's Discipline
+## The Architect's Discipline {#sec-seam-architects-discipline}
 
 Three habits make the seam visible in everyday work. They are unglamorous and they pay off every week.
 

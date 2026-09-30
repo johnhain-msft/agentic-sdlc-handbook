@@ -17,7 +17,7 @@ Instrumentation is the practice of converting the second kind into structured fi
 
 ---
 
-## The Seven Primitive Types
+## The Seven Primitive Types {#sec-codebase-primitive-types}
 
 Seven categories cover the full range of knowledge an agent needs. Each addresses a distinct gap between what's in the code and what an agent needs to know. Not every project needs all seven on day one (the instrumentation audit later in this chapter helps you decide where to start) but understanding the complete set is necessary before making that decision.
 
@@ -73,7 +73,7 @@ description: "API layer conventions for endpoint implementation"
 
 **What distinguishes a good instruction file from a bad one:** length. If your instruction file exceeds 40-50 lines, it's trying to do too much. The reason is mechanical: every line of instruction competes for attention with the source code the agent needs to read. A 200-line instruction file doesn't give an agent more to work with. It gives it more to get lost in.
 
-### Agents
+### Agents {#sec-codebase-agents}
 
 **Load mode:** dispatcher-mediated. The persona file isn't preloaded; a parent thread (or the developer) routes a sub-thread to it through the harness's delegation tool. The selected agent's frontmatter then governs the new thread's model, tool set, and instructions. Chapter 17 builds on this seam.
 
@@ -223,7 +223,7 @@ For each finding: file, line, what's wrong, what to do instead.
 
 Prompts are the bridge between ad-hoc chat and systematic workflows. Without them, every time a developer wants an agent to perform a code review, they type a slightly different request and get slightly different quality. With a prompt file, the process is consistent: the same phases, the same checks, the same output format. Quality becomes reproducible.
 
-### Memory
+### Memory {#sec-codebase-memory}
 
 **Load mode:** eager preload, persistent. The harness reads the memory file (or the equivalent store) at every session start — the file is the only thing that survives the per-thread amnesia identified in Chapter 11. Memory is what makes a session that ends at 6pm useful to a session that starts at 9am tomorrow.
 
@@ -380,7 +380,7 @@ Three observations. **Context files live in `.github/`**, centralised so the kno
 
 ---
 
-## How Primitives Compose
+## How Primitives Compose {#sec-codebase-composition}
 
 Primitives are not independent. They form a layered system, and the agent's effective context for a task is the composition of every applicable file:
 
@@ -413,7 +413,7 @@ This composition is what Chapter 13's *Explicit Hierarchy* constraint makes conc
 
 ---
 
-## The Instrumentation Audit
+## The Instrumentation Audit {#sec-codebase-instrumentation-audit}
 
 Before you build any of this, you need to know what your codebase already has and what it's missing. The instrumentation audit is a systematic inventory, not of your code, but of the knowledge your code depends on.
 
@@ -552,7 +552,7 @@ What it produces:
 
 The difference is not the model. In the case documented in this book, the difference is 150 lines of markdown distributed across 8 files.
 
-### What the numbers look like
+### What the numbers look like {#sec-codebase-audit-numbers}
 
 In the author's experience across projects that have undergone this transformation, including the reference case documented throughout this book:
 
@@ -569,7 +569,7 @@ These numbers are directional, not guaranteed; they depend on the quality of you
 
 ---
 
-## The Feedback Loop
+## The Feedback Loop {#sec-codebase-feedback-loop}
 
 Instrumentation is not a one-time setup. It is a continuous practice, like testing.
 
@@ -712,7 +712,7 @@ This book was partly born from the patterns it describes. By Turn 79, the develo
 
 ---
 
-## Starting Points
+## Starting Points {#sec-codebase-starting-points}
 
 The seven primitives and the full directory structure represent a mature instrumented codebase. You don't need to build all of it at once. Start where the impact is highest.
 

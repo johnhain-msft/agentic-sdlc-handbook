@@ -12,7 +12,7 @@ pagetitle: "Genesis worked example: Panel re-architecture"
 
 The file is [`skills/genesis/examples/02-review-panel-architecture.md`](https://github.com/danielmeppiel/genesis/blob/main/skills/genesis/examples/02-review-panel-architecture.md). It opens with a panel that breaks, diagnoses why in three short truths, and ends with the version that works. The example is written for cold-load — the index at [`skills/genesis/examples/README.md`](https://github.com/danielmeppiel/genesis/blob/main/skills/genesis/examples/README.md) flags it as readable without prior Genesis context. Same author as the handbook; installable via `apm install` [`danielmeppiel/genesis`](https://github.com/danielmeppiel/genesis).
 
-## The anti-pattern — panel-in-one-thread
+## The anti-pattern — panel-in-one-thread {#sec-genesis-anti-pattern}
 
 The starting design runs five mandatory specialist lenses, one conditional specialist, and an arbiter — all inside one thread. The thread loads each persona file in turn, plays each lens, accumulates findings in working notes, then loads the arbiter persona and synthesizes a single output comment. It looks like a panel; it executes as a single loop.
 
@@ -44,7 +44,7 @@ The compliance summary at the bottom of the anti-pattern half puts these failure
 **Cross-link — Ch18.** The left column is the anti-pattern catalogue from @sec-anti-patterns rendered against one concrete module. The right column is what the recovery looks like once fan-out is reachable — the Old → New row pairs are the recovery path Ch18 leaves abstract.
 :::
 
-## The corrected design — fan-out with arbiter
+## The corrected design — fan-out with arbiter {#sec-genesis-corrected-design}
 
 The redesigned shape is fan-out plus a synthesizer realizing the panel pattern. Each lens gets its own thread with its own fresh context window. The orchestrator is the only writer to the output sink. The arbiter is a distinct persona that runs in its own thread, loaded with the arbiter persona file plus the lens findings as input — never the lens personas themselves.
 

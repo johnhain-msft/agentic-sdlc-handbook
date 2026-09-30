@@ -2,7 +2,7 @@
 pagetitle: "Reading paths"
 ---
 
-# Reading paths {.unnumbered}
+# Reading paths {#sec-reading-paths .unnumbered}
 
 The book has four parts. Each has a natural audience, but none are gated — read what's useful to you.
 

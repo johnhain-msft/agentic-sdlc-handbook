@@ -26,7 +26,7 @@ Three things are driving this:
 
 ---
 
-## From Autocomplete to Agents
+## From Autocomplete to Agents {#sec-landscape-autocomplete-to-agents}
 
 The market's evolution follows a clear progression, and understanding where you are on this curve determines what you should be evaluating.
 
@@ -70,7 +70,7 @@ Most organizations are evaluating Phase 1-2 tools while their developers are alr
 
 ---
 
-## Coding Tools vs. Software Delivery Platforms
+## Coding Tools vs. Software Delivery Platforms {#sec-landscape-tools-vs-platforms}
 
 The market has split into two categories that require different evaluation criteria, different procurement processes, and different governance models. Conflating them leads to purchasing decisions that satisfy neither developers nor leadership.
 
@@ -95,7 +95,7 @@ The mistake most organizations make: evaluating platform decisions with coding-t
 
 ---
 
-## The Landscape Today: Capabilities That Actually Matter
+## The Landscape Today: Capabilities That Actually Matter {#sec-landscape-capabilities}
 
 A feature comparison grid is the most natural thing to produce and the least useful thing to read. Every vendor has one. They all look favorable to the vendor that made them. The table below attempts something different: an honest snapshot of where each tool actually is, what it can't do by design, and, critically, which capabilities you should care about first.
 
@@ -145,7 +145,7 @@ Dollar figures go stale fast, so here's the underlying pattern. AI coding tools 
 
 ---
 
-## Two Buying Motions, One Problem
+## Two Buying Motions, One Problem {#sec-landscape-buying-motions}
 
 How AI development tools enter an organization determines how governable they are.
 
@@ -163,7 +163,7 @@ The answers will tell you whether you have a strategy or a gap.
 
 ---
 
-## The 8-Phase Evaluation Framework
+## The 8-Phase Evaluation Framework {#sec-landscape-phase-evaluation}
 
 Most AI tool evaluations focus on the coding phase. This is like evaluating a car by testing only the engine — you learn something, but you miss everything that determines whether the thing actually gets you where you're going. Software delivery spans eight phases. If you're only measuring AI's impact on one of them, you're not evaluating — you're guessing.
 
@@ -196,7 +196,7 @@ Fill in the checkboxes for your organization. The pattern of checks tells you wh
 
 ---
 
-## Inaction Is a Decision
+## Inaction Is a Decision {#sec-landscape-inaction}
 
 The most dangerous position in the current market is "wait and see." It feels like prudence. It is actually a decision — to let your developers self-select tools, to defer governance until a breach forces the conversation, and to fall behind organizations that are building the structured context that makes AI tools reliable. Here is what "wait and see" costs:
 

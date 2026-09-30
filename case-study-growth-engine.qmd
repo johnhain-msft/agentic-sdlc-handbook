@@ -53,7 +53,7 @@ gantt
     History scrub + remediation      :done, a2, 14, 15
 ```
 
-## The Kit Automation Escalation
+## The Kit Automation Escalation {#sec-cs-growth-automation-escalation}
 
 The most instructive failure sequence was the Kit email platform automation -- three distinct approaches, each hitting a different wall.
 
@@ -105,7 +105,7 @@ When multiple automated approaches hit platform limitations, produce a precise m
 Three automated approaches failed on React internals. The human completed this in 2 minutes. The discipline: recognize when the last 10% is a platform limitation, not an application logic problem.
 :::
 
-## The Persona Drift Correction
+## The Persona Drift Correction {#sec-cs-growth-persona-drift}
 
 During landing page work, the orchestrator's authority profile described the author as a "software engineer." The user corrected immediately: *"I am NOT a Software Engineer. I'm a Global Black Belt with 14+ years enterprise strategy."*
 
@@ -113,7 +113,7 @@ This is **Anti-Pattern #17 -- Persona Drift**. The agents had latched onto the m
 
 It also surfaced **Anti-Pattern #7 -- The Trust Fall**. The authority profile had been generated in an earlier wave and accepted without human verification. A single factual error -- job title -- cascaded into every downstream deliverable that referenced the author's credentials. The fix was cheap (find-and-replace across files), but only because it was caught early. Had the book shipped with "software engineer" in the bio, the credibility damage would have been real.
 
-## The PII Audit Pipeline
+## The PII Audit Pipeline {#sec-cs-growth-pii-audit}
 
 Four parallel agents scanned the repository for sensitive data. Three completed normally, finding findings across 25+ files. One agent refused to scan -- the career directory contained personal documents and the agent's safety guardrails triggered, declining to process content it classified as sensitive personal information. The guardrail was correct in principle (the files *were* sensitive), but the task was finding sensitive content to *remove* it -- an edge case where safety boundaries and task objectives were aligned but the agent couldn't distinguish audit-to-remove from audit-to-exploit. The orchestrator adapted with manual grep analysis.
 
@@ -138,7 +138,7 @@ flowchart LR
     G --> V[Clean history, originals preserved locally]
 ```
 
-## Constraint Discovery
+## Constraint Discovery {#sec-cs-growth-constraint-discovery}
 
 Two constraints emerged that no panel anticipated:
 

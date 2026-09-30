@@ -8,7 +8,7 @@ The business-case chapter answered *should we invest?* This chapter answers the 
 
 ---
 
-## The Same Task, an 8.5× Bill
+## The Same Task, an 8.5× Bill {#sec-bill-cost-variance}
 
 Take a single, ordinary task: refactor nineteen files to adopt a new error-handling convention. Hand it to an agent two ways. In the first, the agent loops file-by-file on a frontier model, re-reading context, re-planning, retrying on each failure. In the second, a *designed* workflow plans once, batches the edits, routes the mechanical work to a cheaper model, and verifies deterministically at the end. Same nineteen files. Same passing tests. In one illustrative run, the first path cost **\$41.01** and the second **\$4.81** — an **8.5× spread** on identical output.[^bill-variance]
 
@@ -40,7 +40,7 @@ This is why cost has become the strongest case yet for the argument this book ha
 
 ---
 
-## Three Variables You Already Control
+## Three Variables You Already Control {#sec-bill-three-variables}
 
 The bill decomposes into three variables, and you control all three:
 
@@ -89,11 +89,11 @@ flowchart TB
 
 Four moves make the factory work.
 
-### Tier the model access
+### Tier the model access {#sec-bill-model-tiering}
 
 Give everyone open, baseline access to the most cost-effective, versatile models on the market — the tier that delivers most of the value at a fraction of the frontier price.[^bill-skus] Gate the frontier tier to a small central AI team whose single mandate is to *code cost-effective loops for everyone else to reuse.* This sounds austere; it is the opposite. It is how you give a thousand developers the benefit of frontier-model engineering without handing a thousand developers a frontier-model invoice. The frontier model becomes a tool of production, used by the people who build the loops — not a default, billed to everyone who runs them. The one deliberate exception is a metered escape hatch: when the catalog has no loop for a task that genuinely needs frontier reasoning, a developer requests time-boxed, budget-capped frontier access rather than being blocked — and that gap becomes the next item on the central team's backlog. The gate is a queue, not a wall.
 
-### Pool the spend, gate the bets
+### Pool the spend, gate the bets {#sec-bill-spend-pooling}
 
 Split your token budget into intentional pockets and map them to user segments: a generous pocket for the central team's exploration, bounded pockets for stream-aligned teams, a metered pocket for self-service. Then gate the spend the way you already gate any other risk. The governance chapter's Decision Matrix is the right home for this: a **cost-vs-value approval gate** that asks, at install time and at run time, *does the expected outcome justify the inferencing bill?* Workflows that run locally on local models, or whose cost gradient is low and well-evaluated, get a free pass. Workflows that spend frontier tokens at scale earn an owner, an expected cost, a stop condition, and an off-switch before they ship. **Any spend beyond the baseline playbook is an intentional bet — and a bet is only sound once your monitoring can tell you whether it paid off.**
 
@@ -110,7 +110,7 @@ Split your token budget into intentional pockets and map them to user segments: 
 
 A loop nobody can find is a loop nobody reuses. The reference-architecture chapter's Governance and Distribution layer is where cost-effective workflows become discoverable, installable artifacts: released as Agent Plugins and Skills through the Agent Package Manager (APM)[^bill-apm] — the same pipeline, lockfile, integrity checks, version pinning, and drift protection you already apply to software dependencies (the primitives-as-code chapter, @sec-primitives-as-code, carries the mechanics). A catalog backed by an internal developer platform (IDP) adds discoverability; vendor harness-managed settings add mass rollout, so the right loop reaches the right segment without a migration project.[^bill-zava]
 
-### Staff the factory
+### Staff the factory {#sec-bill-staff-the-factory}
 
 The roles already exist in this book. The **Agentic Workflow Engineer** (@sec-agentic-workflow-engineer) researches and encodes the cost-effective loops; the **Agent Operations Specialist** (@sec-agent-operations-specialist) owns cost, traces, and eval drift once they run at scale. What the bill adds is a *mandate*: the central AI team's first deliverable is not a clever agent, it is a cheaper loop for a recurring, ROI-positive task. Your power users — the developers already pushing the frontier on their own — are the natural feeder into this function as it matures; this is a cost charter attached to a role this book already defined, not a new priesthood. Watch the one metric that keeps the team from becoming a bottleneck: its success is measured in **loops reused across the organization, not requests approved.** A central team that optimizes for gatekeeping has missed the point; a central team that optimizes for reuse compounds.
 
@@ -134,7 +134,7 @@ You do not need to read any of it to run this operating model. You need to know 
 
 ---
 
-## Local Inference: A CAPEX Lever Worth Watching
+## Local Inference: A CAPEX Lever Worth Watching {#sec-bill-local-inference}
 
 There is a second lever on the horizon, and it changes the shape of the bill rather than its size. Models in the ~120-billion-parameter class now run on-device, which trades a metered OPEX stream for a fixed CAPEX investment and far more predictable spend.[^bill-local] For a workflow you run ten thousand times a day on a model you own, local inference can take a line item to near zero at the margin.
 
@@ -170,7 +170,7 @@ Past a threshold, the catalog enables a class of workflow that is not economical
 
 ---
 
-## The Leader's Playbook
+## The Leader's Playbook {#sec-bill-leaders-playbook}
 
 ::: {.callout-tip title="The cost-effective operating model, in five moves"}
 1. **Build a team of Agentic Workflow Engineers** who research and implement cost-effective agentic workflows for recurring, ROI-positive use cases.

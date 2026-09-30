@@ -20,7 +20,7 @@ The Productivity Paradox (Chapter 3) means that traditional velocity and lines-o
 
 ---
 
-## Team Readiness Assessment
+## Team Readiness Assessment {#sec-transition-readiness}
 
 Not every team is equally ready for agentic development, and not every team should start at the same time. A readiness assessment prevents the common mistake of rolling out uniformly across an organization where conditions vary dramatically.
 
@@ -67,7 +67,7 @@ The assessment is not a gate; it is a sequencing tool. Teams scoring "ready" acr
 
 ---
 
-## Phased Adoption
+## Phased Adoption {#sec-transition-phases}
 
 The transition from pilot to full adoption follows three phases. Each phase has entry criteria, activities, expected duration, exit signals, and rollback criteria. Moving to the next phase before the exit signals are present is the single most common adoption mistake. Ignoring rollback signals is the second.
 
@@ -103,7 +103,7 @@ flowchart TB
 
 > *Each phase has explicit exit signals and rollback criteria. Moving forward without meeting exit signals is the single most common adoption mistake.*
 
-### Phase 1: Pilot (1–5 months)
+### Phase 1: Pilot (1–5 months) {#sec-transition-phase-1-pilot}
 
 *Typical duration: 1–3 months for orgs under 200 engineers; 3–5 months for 200–1,000; 4–6 months for 1,000+.*
 
@@ -183,7 +183,7 @@ The rollback process: teams that are not self-sufficient revert to their pre-ado
 
 ---
 
-## Skill Development Paths
+## Skill Development Paths {#sec-transition-skill-paths}
 
 Different roles need different skills. A one-size-fits-all training program wastes time for everyone.
 
@@ -199,7 +199,7 @@ Different roles need different skills. A one-size-fits-all training program wast
 
 ---
 
-## Metrics That Matter
+## Metrics That Matter {#sec-transition-metrics}
 
 Measure what predicts long-term value, not what flatters short-term adoption.
 
@@ -235,7 +235,7 @@ A metric you cannot measure is a vanity metric in disguise. Here is how to actua
 
 ---
 
-## Common Transition Pitfalls
+## Common Transition Pitfalls {#sec-transition-pitfalls}
 
 Six patterns that derail transitions. Each is predictable and preventable.
 
@@ -252,7 +252,7 @@ Six patterns that derail transitions. Each is predictable and preventable.
 
 ---
 
-## Transition Planning Template
+## Transition Planning Template {#sec-transition-planning-template}
 
 Use this template to plan your organization's transition. It is a starting point, not a specification. Adapt it to your context.
 

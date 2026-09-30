@@ -25,7 +25,7 @@ The point of this chapter is to give you the vocabulary. The runtime under your 
 
 ---
 
-## The four parts
+## The four parts {#sec-runtime-four-parts}
 
 Every agentic system you will ever touch is built from the same four parts. They are not branding labels; they are functional roles, and any working setup must fill all four.
 
@@ -58,7 +58,7 @@ flowchart TB
 These four parts are independent. The same primitives can run under Copilot or Claude Code; the same harness can drive any of several models; the same client can spawn either harness. When something behaves differently between two setups, the productive question is not "what is wrong with the AI?" but "which of the four parts changed?"
 
 ::: {.callout-note}
-## Where the layers run
+## Where the layers run {#sec-runtime-layer-locality}
 
 The four parts do not have to live on the same machine. Three canonical combinations cover most real deployments:
 
@@ -71,7 +71,7 @@ Layer-locality is a deployment decision, not an architectural one. The four-part
 
 ---
 
-## Markdown that steers an LLM is code
+## Markdown that steers an LLM is code {#sec-runtime-markdown-is-code}
 
 Look at one of Maya's instruction files. Thirty lines of markdown with a YAML frontmatter block declaring an `applyTo` glob. No braces, no semicolons, no compilation step a developer would recognize. It looks like documentation.
 
@@ -88,7 +88,7 @@ This is not metaphor. Chapter 21 will treat primitives as code in operational de
 
 ---
 
-## The harness is the compiler
+## The harness is the compiler {#sec-runtime-harness-compiler}
 
 The most useful single sentence in this chapter is: *the harness is the compiler*.
 
@@ -150,7 +150,7 @@ The compiler analogy has a second consequence worth stating. When you choose a h
 
 ---
 
-## Inference is per-thread; the filesystem is shared
+## Inference is per-thread; the filesystem is shared {#sec-runtime-thread-model}
 
 The single most consequential structural property of this whole machine is one sentence:
 

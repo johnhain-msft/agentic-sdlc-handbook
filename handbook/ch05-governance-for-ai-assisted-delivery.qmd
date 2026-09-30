@@ -26,7 +26,7 @@ None of this means agents are ungovernable. It means your existing governance fr
 
 ---
 
-## Governance Readiness Checklist
+## Governance Readiness Checklist {#sec-governance-readiness}
 
 Governance for AI-assisted delivery spans six areas. Each exists on a maturity spectrum. The checklist below is designed for self-assessment: locate your organization on each row, then prioritize the gaps that carry the most risk in your context.
 
@@ -70,7 +70,7 @@ flowchart TD
 
 > *The governance floor: no capability at "None" before expanding agent adoption. Start with audit trails and access controls — they unblock everything else.*
 
-### Compliance Framework Mapping
+### Compliance Framework Mapping {#sec-governance-compliance-mapping}
 
 A checklist without regulatory context is a conversation starter, not a decision tool. The matrix below maps each capability row to the compliance frameworks where it is critical. Use it to prioritize: find your regulatory scope in the columns, then focus on the rows marked as critical for that scope.
 
@@ -95,7 +95,7 @@ A checklist without regulatory context is a conversation starter, not a decision
 
 ---
 
-## Risk Taxonomy
+## Risk Taxonomy {#sec-governance-risk-taxonomy}
 
 Agent-introduced risk falls into six categories. Each has specific mechanisms, concrete manifestations, and identifiable owners. The taxonomy is not theoretical — these are risks that organizations adopting agentic development are encountering now.
 
@@ -126,7 +126,7 @@ The failure mode of a weak model is obvious: the code doesn't work. The failure 
 
 Agent-generated code introduces quality risks that are fundamentally different from human-written bugs. **Plausible incorrectness** means agents produce code that reads well and compiles cleanly but misunderstands the intent — a function that returns correct results for all test cases but uses O(n²) complexity where O(n) was required, or a database query that produces correct output but bypasses the caching layer. **Hallucinated dependencies** means agents reference APIs or methods that don't exist or have been deprecated; when the hallucination happens to compile, the failure is deferred to production. **Convention drift** means agents without access to your team's conventions produce code that works but doesn't belong — inconsistent error handling, non-standard logging, creative-but-wrong module structure. Each instance is minor. At scale, it degrades the codebase coherence that lets your team navigate and modify code confidently.
 
-### Knowledge atrophy: the aviation parallel
+### Knowledge atrophy: the aviation parallel {#sec-governance-knowledge-atrophy}
 
 This is the least discussed and most consequential long-term risk. When agents handle tasks that humans used to perform, humans get less practice at those tasks. Over months and years, the team's collective ability to perform those tasks without agent assistance erodes.
 
@@ -212,7 +212,7 @@ Model API calls transmit code to infrastructure operated by the model provider. 
 
 ---
 
-## Board Reporting Template
+## Board Reporting Template {#sec-governance-board-reporting}
 
 Leaders need to communicate AI agent adoption status to executive and board audiences. The template below provides a one-page format that covers the four areas boards ask about: what is happening, what it costs, what the risks are, and what decisions are needed.
 
@@ -258,7 +258,7 @@ The governance checklist in this chapter is not a ceiling. It is a floor. Build 
 
 ---
 
-## Chapter Checklist
+## Chapter Checklist {#sec-governance-chapter-checklist}
 
 Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.
 
@@ -290,7 +290,7 @@ The pattern generalizes: governance primitives that can be expressed as CI check
 
 ---
 
-## The Architecture Decision Matrix
+## The Architecture Decision Matrix {#sec-governance-decision-matrix}
 
 The checklist above tells you what governance capabilities to build. The matrix below tells you, for each material decision an agent might participate in, *who decides what, with which evidence, gated by which check.* It is the governance overlay that sits on top of the **Governance and Distribution** layer of the reference architecture (Chapter 4) — the layer that ships primitives and lockfiles between teams. The Decision Matrix is what turns those primitives and lockfiles into auditable governance gates.
 

@@ -31,7 +31,7 @@ This is the mental model that works: AI is a capable but amnesiac engineer that 
 
 ---
 
-## From Writing Code to Engineering Context
+## From Writing Code to Engineering Context {#sec-mindset-context-engineering}
 
 In traditional development, your primary output is code. You read requirements, you think through the design, you type the implementation. The artifact is source files. Your skill is measured by the quality of what you write.
 
@@ -57,7 +57,7 @@ None of this is new knowledge. You already have it. The shift is that you now ne
 
 ---
 
-## Your Three Roles
+## Your Three Roles {#sec-mindset-three-roles}
 
 When you work with AI agents, you occupy three roles simultaneously. Understanding which role you are in at any given moment is the difference between effective collaboration and expensive supervision.
 
@@ -81,7 +81,7 @@ The ratio between these roles shifts as you gain experience. Early on, you spend
 
 ---
 
-## When to Use Agents and When to Code Manually
+## When to Use Agents and When to Code Manually {#sec-mindset-delegation-boundary}
 
 Agents are not universally better than manual coding. They are better at specific categories of work and worse at others. Knowing the boundary is a core practitioner skill.
 
@@ -129,7 +129,7 @@ The boundary is not fixed. As your specifications improve — as you build up a 
 
 ---
 
-## The Cost of Over-Reliance
+## The Cost of Over-Reliance {#sec-mindset-over-reliance}
 
 There is a failure mode on the opposite end of the spectrum from "AI is just autocomplete." It is the belief that agents should do everything, that the measure of sophistication is the percentage of code produced by AI, that manually writing code is a sign of inefficiency.
 
@@ -145,7 +145,7 @@ The trap is invisible because each individual fix feels small. You invested time
 
 ---
 
-## First Day: A Task from Start to Finish
+## First Day: A Task from Start to Finish {#sec-mindset-first-day}
 
 The preceding sections describe the mindset in the abstract. This section walks through it concretely. You are a senior engineer. It is Monday morning. The ticket says: *Add rate limiting to the `/api/projects` endpoint — 100 requests per minute per API key, return 429 with a `Retry-After` header when exceeded.*
 

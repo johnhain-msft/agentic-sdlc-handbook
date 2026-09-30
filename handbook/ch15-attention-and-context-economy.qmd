@@ -27,7 +27,7 @@ This is also why the field's vocabulary has converged on a phrase — *context r
 
 ---
 
-## Symptoms of attention starvation
+## Symptoms of attention starvation {#sec-attention-starvation-symptoms}
 
 Before the levers, the symptoms. Attention starvation is a silent failure mode; you will not see a stack trace. You will see an agent behaving as if it had never been told something you can prove it was told. The diagnostic skill is in recognizing the family of symptoms early enough to treat the cause rather than the surface.
 
@@ -73,7 +73,7 @@ Two properties of this picture are load-bearing. The first is that *the trough i
 
 ---
 
-## Three levers of the attention economy
+## Three levers of the attention economy {#sec-attention-three-levers}
 
 There is a small, finite set of disciplines that keep the budget solvent. Treat them as the three control surfaces; almost every named pattern in agentic practice is one of these in a particular costume.
 
@@ -97,7 +97,7 @@ The pattern is mundane in form. The agent writes `plan.md` early — a short, st
 
 ---
 
-## A practitioner's budget
+## A practitioner's budget {#sec-attention-budget}
 
 The disciplines are easier to apply when you have a categorical sense of the cost-versus-benefit of common context loads. The table below is not a benchmark; it is a starting calibration drawn from the author's practice across Copilot CLI, Claude Code, and similar harnesses. Numbers will shift with model, harness, and task; the *order* is what the author has found stable.
 
@@ -119,7 +119,7 @@ Two heuristics fall out of the table. *Anything that is needed on every turn ear
 
 ---
 
-## Five access mechanisms for the Context layer
+## Five access mechanisms for the Context layer {#sec-attention-access-mechanisms}
 
 The attention budget above tells you what to spend; the next question is *how the agent reaches outside the prompt at all*. Chapter 4's reference architecture names the **Context & Capabilities** layer; what that layer is *built out of, mechanically*, is the small set of access mechanisms an Agent Harness uses to bring information into the model's window. There are five, and they exhaust the surface.
 

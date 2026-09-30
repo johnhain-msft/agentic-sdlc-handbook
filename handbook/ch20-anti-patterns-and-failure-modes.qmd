@@ -9,7 +9,7 @@ The uncomfortable truth: AI failures don't crash. They produce plausible wrong o
 
 ---
 
-## The Taxonomy
+## The Taxonomy {#sec-anti-taxonomy}
 
 Every anti-pattern maps to a PROSE constraint. This isn't a taxonomy imposed after the fact; it's why the constraints exist. Each constraint was articulated because a class of failures kept recurring, and ad-hoc fixes weren't enough.
 
@@ -293,7 +293,7 @@ Nine patterns that emerge at the session level, where context capacity, state ma
 :::
 
 ::: {.callout-warning}
-## File Presence Is Execution
+## File Presence Is Execution {#sec-anti-file-presence}
 
 In agent configuration, installing a package and executing it are the same event. When an agent reads a skill file or instruction set, it incorporates those directives immediately — there is no separate "install" step that a human reviews before "execution." This collapses the traditional install → review → execute pipeline into a single action, making supply chain security for agent primitives fundamentally different from traditional package management.
 :::
@@ -312,7 +312,7 @@ The failure modes above share a property that distinguishes them from traditiona
 
 Silent failures fall into three categories (convention violations, semantic drift, and architectural erosion), each requiring different detection methods at different points in the workflow.
 
-### Silent Failure Detection Checklist
+### Silent Failure Detection Checklist {#sec-anti-silent-failure-checklist}
 
 Paste this into your team's review process. Adjust tools to your stack; keep the checkpoints.
 
@@ -356,7 +356,7 @@ The common thread: silent failures are caught by *structure*, not by vigilance. 
 
 ---
 
-## Team-Level Anti-Patterns
+## Team-Level Anti-Patterns {#sec-anti-team-level}
 
 Technical anti-patterns happen in code. Organizational anti-patterns amplify every technical failure in this chapter.
 
@@ -376,7 +376,7 @@ Each organizational pattern amplifies a technical one. Over-trust amplifies the 
 
 ---
 
-## The Recovery Playbook
+## The Recovery Playbook {#sec-anti-recovery-playbook}
 
 When you've hit an anti-pattern and need to get back on track, six steps:
 
@@ -491,7 +491,7 @@ These risks aren't unique to AI-generated code — they're amplified by volume. 
 
 ---
 
-## What This Chapter Is Not
+## What This Chapter Is Not {#sec-anti-scope-limits}
 
 This is not exhaustive. New failure modes will emerge as agent capabilities evolve. What this chapter provides is a framework — the PROSE constraint mapping, symptom-first identification, and structural prevention approach — that applies to failures we haven't seen yet.
 

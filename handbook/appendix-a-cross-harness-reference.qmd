@@ -7,7 +7,7 @@ pagetitle: "The Cross-Harness Reference"
 This appendix is the dated reference for porting a primitive set across the five harnesses the handbook treats as load-bearing: GitHub Copilot, Anthropic Claude Code, Cursor, OpenAI Codex CLI, and OpenCode. It assumes the vocabulary of @sec-instrumented-codebase (the seven APM primitive types) and @sec-load-lifecycle (Resolve, Materialize, Bind, Activate). The body of the handbook describes the *what* and the *why*; this appendix is the *where* — the path conventions, file names, frontmatter shapes, and load-order rules each harness uses today.
 
 ::: {.callout-warning}
-## Verified-on date — 2026-04-26
+## Verified-on date — 2026-04-26 {#sec-harness-verified-on}
 
 All vendor conventions in this appendix were verified against the documents footnoted below on **2026-04-26**. Conventions evolve; harnesses ship breaking changes on quarterly cadences and sometimes faster. Before relying on any cell in any of these tables, open the vendor documentation footnote and confirm the convention is still current. The substrate vocabulary in @sec-runtime-machine is durable; the file names below are not.
 
@@ -16,7 +16,7 @@ Refresh cadence for this appendix: annually, or on a major release of any listed
 
 ---
 
-## At a glance — the substrate matrix
+## At a glance — the substrate matrix {#sec-harness-substrate-matrix}
 
 The first table is the one most readers come here for. Rows are the primitive concepts the handbook teaches; columns are the five harnesses; each cell is the path or file convention the harness uses to materialize that concept. Empty cells (`—`) are real: they mean the harness does not have a native binding for that primitive type, and the concept must be approximated through one of the cells that does exist (typically a project-wide rule file). The path conventions for the APM-side translations are taken from the APM CLI's `KNOWN_TARGETS` registry,[^appx-a-apm] which is the single source of truth for the `apm install --target` mappings.
 

@@ -82,7 +82,7 @@ Pre-release edition · Version {{< var version >}}\
 For Delphine, Gabriel, Laia, and Adrian — everything else is context.
 :::
 
-## Why This Book Exists
+## Why This Book Exists {#sec-preface-why}
 
 Every engineering organization is adopting AI coding agents. Almost none of them have a methodology for it.
 
@@ -143,7 +143,7 @@ Daniel Meppiel is a Global Black Belt at **Microsoft** and the creator of [APM (
 
 With 14+ years spanning pre-sales, post-sales, product strategy, and enterprise adoption, Daniel bridges the gap between technical architecture and business outcomes. His career arc runs from **CERN** (Product Lifecycle Management modernization for particle physics experiments), through **Avaloq** (legacy core-banking system migration) -- the same classes of system modernization and code migration that AI agents now accelerate in the SDLC -- to founding **WeGaw** as CTO for 4 years (building a complex AI-powered water intelligence platform from scratch, serving global energy companies), **Sonar** (code security), **GitHub** (developer tooling), and now **Microsoft**.
 
-## A Note on Methodology
+## A Note on Methodology {#sec-preface-methodology}
 
 This handbook was produced using the same methodology and tooling it describes. The case studies document real sessions executed by the author -- who also designed the PROSE methodology. This creates an inherent advantage: the author knows when to push and when to intervene in ways not fully captured by the written method. Where authorial expertise likely mattered beyond what the methodology prescribes, the case studies flag it. Treat the documented patterns as a starting point, not a ceiling.
 

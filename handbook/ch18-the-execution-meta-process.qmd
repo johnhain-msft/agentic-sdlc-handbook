@@ -9,7 +9,7 @@ The methodology is a five-phase meta-process. It works regardless of which AI co
 
 ---
 
-## The Five Phases
+## The Five Phases {#sec-meta-five-phases}
 
 Every large change follows these phases, in order:
 
@@ -48,7 +48,7 @@ Each phase has a specific purpose, a specific human decision, and a specific out
 
 **Output.** A set of prioritized findings with citations. This becomes the input to planning.
 
-### Phase 2: Plan
+### Phase 2: Plan {#sec-meta-phase-2-plan}
 
 **Purpose.** Transform audit findings into an executable specification: what changes, in what order, by which agents, with what constraints.
 
@@ -133,7 +133,7 @@ The wave structure produces a clean commit history (one commit per wave) and gua
 
 ---
 
-## Wave Decomposition
+## Wave Decomposition {#sec-meta-wave-decomposition}
 
 The wave structure is where planning becomes engineering. A poorly decomposed set of waves produces merge conflicts, stale context, and cascading failures. A well-decomposed set produces clean parallel execution with natural validation boundaries.
 
@@ -211,7 +211,7 @@ Three interventions, three roles, no overlap. These are the categories of human 
 
 ---
 
-## Checkpoint Discipline
+## Checkpoint Discipline {#sec-meta-checkpoints}
 
 A checkpoint is the pause between waves. It is the mechanism that makes the meta-process safe.
 
@@ -235,7 +235,7 @@ Each checkpoint has four components:
 
 **Plan review.** Optionally, the human reviews the remaining plan and adjusts if the current wave revealed something unexpected: a dependency that was missed, a task that should be split, a wave that should be reordered.
 
-### The ADAPT Loop
+### The ADAPT Loop {#sec-meta-adapt-loop}
 
 When a checkpoint fails (tests are red, an agent is stuck, a dependency was missed), the meta-process doesn't stop. It adapts.
 
@@ -269,7 +269,7 @@ Session discipline follows the principles established in Chapter 17. In the meta
 
 ---
 
-## Adapting the Meta-Process
+## Adapting the Meta-Process {#sec-meta-adapting}
 
 The PR #394 case (see [case study](../case-study-apm-overhaul.qmd) for full metrics) involved multiple waves including one recovery wave. Not every change is that large. The meta-process scales in both directions.
 
@@ -297,7 +297,7 @@ The scaling property to preserve: each wave remains independently verifiable. If
 
 ---
 
-## What the Meta-Process Produces
+## What the Meta-Process Produces {#sec-meta-outputs}
 
 When followed, the meta-process produces four things that manual development typically does not.
 

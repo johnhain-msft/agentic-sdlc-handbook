@@ -11,7 +11,7 @@ This chapter covers when to use multiple agent threads, how to specialize them, 
 
 ---
 
-## When One Agent Is Enough
+## When One Agent Is Enough {#sec-multi-agent-when-one-agent}
 
 Not every task requires multiple agents. The overhead of orchestration (partitioning work, managing sessions, resolving conflicts, validating independently) is real. If the task fits comfortably in a single agent's context, the single agent is the better choice.
 
@@ -45,7 +45,7 @@ When the decision is marginal, err toward a single agent. Coordination costs are
 
 ---
 
-## Agent Specialization Patterns
+## Agent Specialization Patterns {#sec-multi-agent-specialization}
 
 The key insight behind multi-agent orchestration is that specialization produces better results than generalization — for the same reason that a team of specialists outperforms a team of generalists on complex projects. A security expert and a logging expert, each working within their domain, produce more reliable output than a single agent told to "handle security and logging."
 
@@ -72,7 +72,7 @@ This pattern maps directly to the human workflow of author, reviewer, and QA —
 
 In practice, the reviewer agent receives the diff plus the original source, not the writer's full conversation history. This is deliberate. The reviewer should evaluate the output on its own merits, not be anchored by the writer's reasoning. If the writer had a good reason for a decision but the code doesn't reflect it, that is a signal, not an excuse.
 
-### Pattern 2: Domain Teams
+### Pattern 2: Domain Teams {#sec-multi-agent-domain-teams}
 
 For cross-cutting changes, organize agents by area of expertise rather than by workflow stage. Each team owns a concern and is responsible for all files related to that concern.
 
@@ -85,7 +85,7 @@ In the auth-logging overhaul ([PR #394](https://github.com/microsoft/apm/pull/39
 
 This pattern scales by adding teams. A security concern adds a security team. A documentation concern adds a documentation team. Each team brings its own specialized context, its own instruction files, and its own validation criteria. The coordination cost is between teams, not within them.[^ch15-genesis-panel]
 
-#### Concrete Dispatch: What It Actually Looks Like
+#### Concrete Dispatch: What It Actually Looks Like {#sec-multi-agent-dispatch-example}
 
 The Domain Teams pattern describes structure. Here is what a dispatch actually looks like in practice: the instruction files, the prompt, and the file list. This example uses a terminal-based agent, but the pattern applies regardless of tool.
 
@@ -268,7 +268,7 @@ This works when the review and test operations are read-only and the execution o
 
 ---
 
-## Conflict Resolution
+## Conflict Resolution {#sec-multi-agent-conflict-resolution}
 
 Despite careful partitioning, conflicts arise. They fall into three categories, each with a different resolution strategy.
 
@@ -321,7 +321,7 @@ The frequency of design conflicts is itself a metric. In the PR #394 execution (
 
 ---
 
-## The Human as Orchestrator
+## The Human as Orchestrator {#sec-multi-agent-human-orchestrator}
 
 In a multi-agent workflow, the human role shifts from producer to orchestrator. You do not write the code. You do not review every line. You make the decisions that agents cannot make for themselves: scope, priority, trade-offs, and when to stop.
 
@@ -335,7 +335,7 @@ This is not a passive role. It is a different kind of active.
 
 **After execution.** The orchestrator spot-checks critical changes, verifies test results, and decides whether the output meets the acceptance criteria. The level of detail in the review is proportional to the risk, not the volume. A 2,000-line diff where 1,800 lines are mechanical migration does not require reading all 2,000 lines. It requires verifying that the migration pattern is correct, that the 200 non-mechanical lines are sound, and that the test suite covers the behavior.
 
-### The Escalation Protocol
+### The Escalation Protocol {#sec-multi-agent-escalation}
 
 Not every problem requires human attention. A well-designed orchestration system handles most failures automatically. The four-level escalation protocol:
 
@@ -356,7 +356,7 @@ In the PR #394 execution ([case study](../case-study-apm-overhaul.qmd)), the dis
 
 ---
 
-## The Coordination Tax: Honest Numbers
+## The Coordination Tax: Honest Numbers {#sec-multi-agent-coordination-tax}
 
 Multi-agent orchestration saves time through parallelism and improves quality through focused context. It also costs time through planning, monitoring, and intervention. Here is the honest accounting, based on the PR #394 execution ([The APM Auth + Logging Overhaul](../case-study-apm-overhaul.qmd)).
 
@@ -381,7 +381,7 @@ This is not a tool for every change. It is a tool for changes that exceed what a
 
 ---
 
-## Session Management
+## Session Management {#sec-multi-agent-session-management}
 
 Every agent dispatch creates a session: a context window with its own conversation history, loaded instructions, and accumulated state. Managing these sessions is a practical concern that directly affects output quality.
 

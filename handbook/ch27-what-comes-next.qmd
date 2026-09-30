@@ -25,7 +25,7 @@ This chapter applies the three-tier honesty framework (available now, emerging, 
 
 ---
 
-## Long-Term: Possibilities Over Three to Five Years
+## Long-Term: Possibilities Over Three to Five Years {#sec-next-long-term}
 
 These predictions are directional. The author believes they describe where the field is heading. They are opinions, not forecasts.
 
@@ -89,7 +89,7 @@ flowchart LR
 
 ---
 
-## What Will Not Change
+## What Will Not Change {#sec-next-invariants}
 
 These are the things the author is most confident about, precisely because they are structural rather than technological.
 
@@ -107,7 +107,7 @@ These five properties map directly to the PROSE constraints from Chapter 13. The
 
 ---
 
-## Three-Tier Honesty Applied to This Chapter's Own Claims
+## Three-Tier Honesty Applied to This Chapter's Own Claims {#sec-next-three-tier-honesty}
 
 | Claim | Tier | Confidence |
 |---|---|---|
@@ -124,7 +124,7 @@ The reader should calibrate accordingly. Invest confidently in the "available no
 
 ---
 
-## When NOT to Use Agentic Workflows
+## When NOT to Use Agentic Workflows {#sec-next-when-not-to-use}
 
 Not every task benefits from agent orchestration. Applying the methodology where it does not fit wastes time and produces worse outcomes than working manually. Recognize these scenarios early:
 
@@ -142,7 +142,7 @@ The methodology's value is recognizing which category a task falls into before c
 
 ---
 
-## Your First Week: What to Do Starting Monday
+## Your First Week: What to Do Starting Monday {#sec-next-first-week}
 
 For leaders who read Parts I–II and practitioners who read Part III, here is the concrete version. Not principles. Actions.
 
@@ -188,13 +188,13 @@ I wrote the book first; then I built the tool I wished existed when I started. T
 
 This is not a dependency on the book's part — every chapter stands without it — and it is not the only such companion the field will produce. It is a worked example of what the practice looks like packaged as a primitive set, written by the same hand. If you choose to load it, when a chapter names a pattern (Wave, Panel, Supervised Execution), grep the skill for the same name. The agent will surface the operational form. Use whichever name lands first in the conversation.
 
-### For Leaders, Additionally
+### For Leaders, Additionally {#sec-next-first-week-leaders}
 
 If you lead the organization rather than the team, Day 1 is different. Start with the readiness assessment from Chapter 8. Identify one team with the right combination of codebase maturity, process discipline, and cultural openness. Fund a structured pilot — not "give everyone licenses and see what happens," but the phased adoption from the transition plan. Protect the investment in context infrastructure. It has the highest long-term return and the lowest short-term visibility, which means it is the one most likely to be cut.
 
 ---
 
-## What the Author Probably Got Wrong
+## What the Author Probably Got Wrong {#sec-next-author-caveats}
 
 Intellectual honesty requires identifying where this book's assumptions are most likely to age poorly.
 
@@ -210,7 +210,7 @@ Intellectual honesty requires identifying where this book's assumptions are most
 
 ---
 
-## The Starter Shape
+## The Starter Shape {#sec-next-starter-shape}
 
 Chapter 4 introduces the Starter Shape with a single hedged paragraph: a typical mid-sized engineering organization, twelve to eighteen months into agentic adoption, converges on a small, stable bundle of primitives whose composition is recognisably the same across teams. The deep treatment of that shape lives here, as the practical ramp Part IV can leave the reader with.
 

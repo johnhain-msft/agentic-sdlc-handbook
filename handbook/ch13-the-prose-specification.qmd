@@ -72,7 +72,7 @@ description: >
 
 The agent working on a database migration sees this description and skips it. The agent building a user registration form loads the full content.
 
-### Anti-pattern: Context dumping
+### Anti-pattern: Context dumping {#sec-prose-context-dumping}
 
 The most common violation of Progressive Disclosure is loading everything upfront. A single instruction file that inlines the full coding standards, the complete API reference, the authentication guide, and the error taxonomy, all in one document, wastes context capacity on material that is irrelevant to most tasks. The agent's attention spreads across thousands of tokens of guidance, most of which do not apply.
 
@@ -219,7 +219,7 @@ This works until it does not. When the agent produces incorrect output, which in
 
 ---
 
-## S — Safety Boundaries
+## S — Safety Boundaries {#sec-prose-safety-boundaries}
 
 **Definition.** Every agent operates within explicit boundaries: what tools are available (capability), what context is loaded (knowledge), and what requires human approval (authority).
 
@@ -290,7 +290,7 @@ This agent can modify production configuration, delete test fixtures, rewrite CI
 
 ---
 
-## E — Explicit Hierarchy
+## E — Explicit Hierarchy {#sec-prose-explicit-hierarchy}
 
 **Definition.** Instructions form a hierarchy from global to local. Local context inherits from and may override global context. Agents resolve context by walking from the most specific scope to the most general.
 
@@ -369,7 +369,7 @@ Every agent, regardless of what it is working on, loads all of this. The Python 
 
 ---
 
-## When Constraints Are Missing: Three Failure Stories
+## When Constraints Are Missing: Three Failure Stories {#sec-prose-failure-stories}
 
 The five constraints are defined independently but produce their strongest effects in combination. Theory says each pair closes a gap that neither constraint addresses alone. Practice is more memorable. Here are three teams that had one constraint in place and discovered the hard way what the missing partner cost them.
 
@@ -504,7 +504,7 @@ You implement backend authentication features in `src/auth/`.
 5. **STOP** — present a summary of changes for human review.
 ```
 
-### The task decomposition
+### The task decomposition {#sec-prose-task-decomposition}
 
 The work decomposes into five sessions. Each gets a fresh context window:
 
@@ -530,7 +530,7 @@ Without the boundary, the backend agent would have modified the API client using
 
 ---
 
-## Compliance Checklist
+## Compliance Checklist {#sec-prose-compliance-checklist}
 
 Use this checklist to evaluate whether your current setup satisfies PROSE constraints. Each question is specific enough to answer with a definitive yes or no.
 

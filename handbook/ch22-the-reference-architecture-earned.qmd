@@ -112,7 +112,7 @@ That is what lets a small primitive vocabulary scale to enterprise composition. 
 
 The architect's instinct to "treat it like the codebase" is right because the dependency graph *is* the codebase's shape. The operational disciplines you already have — semver, lockfiles, content hashing, codeowners, deprecation windows — port across without modification. Recursion is the architecture's only structural move; almost everything else this part has named is a consequence of it.
 
-## What makes the recursion governable
+## What makes the recursion governable {#sec-earned-recursion-governance}
 
 Recursion without a bound is a generator for unbounded compute and an unauditable trail. Two conventions, applied at every level, convert it from a hazard into an architectural property.
 

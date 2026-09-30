@@ -64,7 +64,7 @@ This structure is not a proposal. It is a description of what already exists in 
 
 ---
 
-## Mapping the Layers Across the Lifecycle
+## Mapping the Layers Across the Lifecycle {#sec-ref-arch-lifecycle-mapping}
 
 The three layers apply at every phase of software delivery. The table below maps what each layer does in each phase and, critically, which capabilities are available today versus emerging or directional.
 
@@ -98,7 +98,7 @@ Executives do not need to think in eight phases. They need three buckets that ma
 
 The practical implication: based on vendor maturity and published adoption patterns, most organizations appear to have concentrated investment in the Build bucket, with minimal coverage in Intent and almost none in Operate. This is not a failure. It reflects where the technology is mature. But it means the next high-value investments are in Plan, Test, and Review — where the work is expensive, the feedback loops are slow, and structured context makes the difference between useful automation and expensive noise.
 
-### Three-Tier Honesty
+### Three-Tier Honesty {#sec-ref-arch-three-tier-honesty}
 
 Vendor presentations tend to show the full architecture as if it were all available today. It is not. Presenting the vision as current reality is what vendor whitepapers do. This book tags every capability honestly.
 
@@ -121,7 +121,7 @@ The pattern is clear. Build-phase capabilities are mature. Intent-phase and Oper
 
 ---
 
-## The Five-Layer Landscape: the AI-capability supply chain
+## The Five-Layer Landscape: the AI-capability supply chain {#sec-ref-arch-five-layer}
 
 The previous section told you *who participates* in the agentic SDLC. This section tells you *what supply chain you architect across them* once your organisation runs more than one team using AI capabilities. The Three-Layer model is fine for one team and one tool; the moment a second team adopts a different runtime against the same source-control platform, against the same identity provider, with overlapping but non-identical knowledge bundles, you have a supply-chain problem.
 
@@ -158,7 +158,7 @@ This chapter draws the architecture; it does not yet draw the mechanics. How a c
 
 ---
 
-## What Changes About Roles
+## What Changes About Roles {#sec-ref-arch-roles}
 
 The three-layer model clarifies what happens to human roles when agents enter the lifecycle. The answer is not that roles disappear. The answer is that the *proportion* of activities within each role shifts.
 
@@ -182,7 +182,7 @@ Which leaves the talent question every leader asks at this point: **extend the p
 
 ---
 
-## The Architecture Decision Matrix
+## The Architecture Decision Matrix {#sec-ref-arch-decision-matrix}
 
 The reference architecture is an adoption map, not a prerequisite checklist. Any phase can run as a single agent-assisted loop — or expand into governed, multi-team workflows as maturity grows. The question for leaders is where to start and how to expand.
 
@@ -213,7 +213,7 @@ Three observations from the matrix:
 
 ---
 
-## Build, Buy, or Compose
+## Build, Buy, or Compose {#sec-ref-arch-build-buy-compose}
 
 For each context domain, leaders face a decision: build internal tooling, buy from a platform vendor, or compose solutions from multiple sources. The shape of the decision is the one every CIO recognises from cloud transformation a decade ago — compose buys you optionality at the cost of integration burden; buy gets you fast at the cost of long-term lock-in to one vendor's roadmap; build gets you fit at the cost of headcount. The novelty is not the decision; it is the layer at which it now has to be made.
 
@@ -233,7 +233,7 @@ The framing is the one cloud transformation taught the field. No single vendor c
 
 ---
 
-## Start Anywhere, Expand Deliberately
+## Start Anywhere, Expand Deliberately {#sec-ref-arch-start-anywhere}
 
 The architecture presented in this chapter is designed to be adopted incrementally. There is no prerequisite checklist that must be completed before you begin. The following thresholds are starting points based on patterns observed across early-adopter teams; calibrate them to your baseline. The most common — and most effective — starting point:
 

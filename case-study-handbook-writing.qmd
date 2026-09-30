@@ -28,7 +28,7 @@ This case study maps the execution to the handbook's own vocabulary (Chapter 15)
 
 ---
 
-## Team Topology: 11 Personas, Four Pods
+## Team Topology: 11 Personas, Four Pods {#sec-cs-handbook-topology}
 
 The orchestrator designed an 8-persona expert panel at project inception, then dynamically created 3 more as needs emerged during execution. The personas organized into four functional pods:
 
@@ -73,7 +73,7 @@ Each persona was a *primitive* — a composable instruction unit defined in a si
 
 ---
 
-## Execution Timeline: Four Waves Plus Integration
+## Execution Timeline: Four Waves Plus Integration {#sec-cs-handbook-timeline}
 
 The manuscript was produced in a phased pipeline: corpus audit → architecture → four writing waves → integration review → polish. Each wave followed checkpoint discipline: draft, review, revise, commit.
 
@@ -125,7 +125,7 @@ gantt
 
 ---
 
-## The Draft→Review→Revise Cycle
+## The Draft→Review→Revise Cycle {#sec-cs-handbook-review-cycle}
 
 Every chapter passed through an identical three-stage pipeline. This is the core quality loop the book describes in Chapter 14.
 
@@ -165,7 +165,7 @@ In later waves, the orchestrator batched reviews by persona rather than by chapt
 
 ---
 
-## Dynamic Persona Creation
+## Dynamic Persona Creation {#sec-cs-handbook-persona-creation}
 
 Three of the eleven personas did not exist at project inception. They were created in response to gaps the process itself surfaced.
 
@@ -245,7 +245,7 @@ This was not persona drift or agent failure — every agent was following its pe
 
 **What held true:** *Human judgment remains the bottleneck and the differentiator.* The scarce resource was not token generation but the ability to decide what the book should and should not say.
 
-### 4. Panel Disagreement on APM Prominence
+### 4. Panel Disagreement on APM Prominence {#sec-cs-handbook-panel-disagreement}
 
 **What happened:** After the "zero APM mentions in ~68,000 words" discovery, the Market Analyst wanted more visibility; the Thought Leadership Advisor wanted less. The panel genuinely disagreed.
 
@@ -261,7 +261,7 @@ A book about AI-native software development, written by APM's creator, using APM
 
 ---
 
-## The Authenticity Question
+## The Authenticity Question {#sec-cs-handbook-authenticity}
 
 A separate three-expert panel (HN Skeptic, Thought Leadership Strategist, Meta-Authenticity Analyst) evaluated the risk of openly documenting the AI-assisted pipeline. The consensus: **net positive**. The key test:
 
