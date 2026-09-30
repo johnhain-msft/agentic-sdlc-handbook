@@ -1,0 +1,85 @@
+# Worksheet factory queue.
+#
+# Caps work in flight at THREE open worksheet pull requests, so human review is
+# never swamped, and starts the next queued worksheet whenever a slot frees up.
+#
+# A worksheet issue enters the queue labelled `worksheet-queued`. This workflow
+# promotes the oldest queued issue to `stage:build`, which triggers
+# aw-worksheet-build.
+#
+# Plain Actions, not agentic: counting open pull requests and picking the oldest
+# issue is deterministic work that should not cost a model call.
+
+name: Worksheet queue
+
+on:
+  pull_request:
+    types: [closed]
+  issues:
+    types: [labeled]
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: read
+
+concurrency:
+  group: worksheet-queue
+  cancel-in-progress: false
+
+env:
+  MAX_IN_FLIGHT: 3
+
+jobs:
+  dispatch-next:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Promote queued worksheets up to the concurrency cap
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          in_flight="$(gh pr list --repo "$REPO" --state open --label worksheet \
+                        --json number --jq 'length')"
+          echo "open worksheet pull requests: $in_flight (cap $MAX_IN_FLIGHT)"
+
+          slots=$(( MAX_IN_FLIGHT - in_flight ))
+          if [ "$slots" -le 0 ]; then
+            echo "At capacity. Nothing promoted."
+            exit 0
+          fi
+
+          # Oldest first, so the pilot order in the milestone is respected.
+          mapfile -t queued < <(
+            gh issue list --repo "$REPO" --state open --label worksheet-queued \
+              --json number,createdAt --jq 'sort_by(.createdAt)[].number'
+          )
+
+          if [ "${#queued[@]}" -eq 0 ]; then
+            echo "Queue is empty. Nothing to promote."
+            exit 0
+          fi
+
+          promoted=0
+          for n in "${queued[@]}"; do
+            [ "$promoted" -ge "$slots" ] && break
+
+            # Never restart a worksheet that is already moving.
+            labels="$(gh issue view "$n" --repo "$REPO" --json labels --jq '.labels[].name')"
+            if printf '%s' "$labels" | grep -qE '^stage:'; then
+              echo "issue #$n already has a stage label — skipping"
+              continue
+            fi
+
+            echo "promoting issue #$n to stage:build"
+            gh issue edit "$n" --repo "$REPO" \
+              --remove-label worksheet-queued --add-label 'stage:build'
+            promoted=$(( promoted + 1 ))
+          done
+
+          echo "promoted $promoted worksheet(s); $(( slots - promoted )) slot(s) left idle"

@@ -1,0 +1,76 @@
+# Guards the one invariant the worksheet kit must never break:
+#
+#   The published book must never contain a worksheet.
+#
+# The kit stays out of the book because worksheets/ carries its own
+# _quarto.yml, and Quarto excludes a sub-directory that is its own project
+# from the parent project. That is a convention, not a lock — a stray
+# worksheet .qmd at the repo root, or a change to either _quarto.yml, would
+# silently start publishing internal worksheets to Daniel's handbook site.
+#
+# This runs on anything that could plausibly break it, and fails loudly.
+# It deliberately does NOT modify publish.yml, so the book's own publishing
+# path is untouched.
+
+name: Worksheet isolation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_quarto.yml'
+      - 'worksheets/**'
+      - '*.qmd'
+  pull_request:
+    paths:
+      - '_quarto.yml'
+      - 'worksheets/**'
+      - '*.qmd'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  isolation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: The book project must contain no worksheet inputs
+        run: |
+          set -euo pipefail
+
+          quarto inspect . > root-inspect.json
+
+          # jq, not a heredoc: an indented heredoc terminator does not close
+          # the heredoc, and the step fails in a way that looks like a Quarto
+          # problem rather than a shell one.
+          leaked="$(jq -r '.files.input[]' root-inspect.json \
+                      | tr '\\' '/' | grep -i '/worksheets/' || true)"
+
+          if [ -n "$leaked" ]; then
+            echo "::error::Worksheet files have leaked into the published book project:"
+            printf '%s\n' "$leaked"
+            echo ""
+            echo "worksheets/_quarto.yml should make Quarto treat worksheets/ as a"
+            echo "separate project. Check it still exists and that no worksheet .qmd"
+            echo "has been added at the repository root."
+            exit 1
+          fi
+
+          total="$(jq -r '.files.input | length' root-inspect.json)"
+          echo "OK: the book project has $total inputs, none of them a worksheet."
+
+      - name: The worksheet project must still render
+        run: |
+          set -euo pipefail
+          cd worksheets
+          quarto render specimen.qmd
+          test -f _output/specimen.html
+          echo "OK: the worksheet project renders independently."

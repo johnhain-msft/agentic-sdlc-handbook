@@ -1,0 +1,66 @@
+# Deterministic enforcement of the review stage's defining rule:
+#
+#   "A review that does not attach the rendered image to the pull request is void."
+#
+# The review agent is told this, but an instruction is not a control. This
+# workflow checks, before the judge ever runs, that stage 3 actually attached a
+# rendered image. If it did not, the pull request goes straight back to
+# `stage:review` and the judge is never invoked.
+#
+# This is a plain Actions workflow, not an agentic one, because the check is
+# deterministic and must not be subject to a model's judgement.
+
+name: Worksheet review gate
+
+on:
+  pull_request_target:
+    types: [labeled]
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  require-rendered-image:
+    if: github.event.label.name == 'stage:judge'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check that the review stage attached a rendered image
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          # Look for an embedded image in any PR comment. The review stage
+          # uploads sheet PNGs via upload-asset (which publishes to an
+          # assets/ branch with a predictable raw URL) and embeds them with
+          # markdown image syntax.
+          bodies="$(gh api "repos/$REPO/issues/$PR/comments" --paginate --jq '.[].body')"
+
+          if printf '%s' "$bodies" | grep -qiE '!\[[^]]*\]\([^)]+\.png[^)]*\)'; then
+            echo "OK: a rendered sheet image is attached to PR #$PR."
+            exit 0
+          fi
+
+          echo "::error::No rendered worksheet image is attached to PR #$PR."
+          echo "The review stage is VOID without one. Returning the PR to stage:review."
+
+          gh pr edit "$PR" --repo "$REPO" \
+            --remove-label 'stage:judge' --add-label 'stage:review'
+
+          gh pr comment "$PR" --repo "$REPO" --body \
+          "**Review stage returned — no rendered image attached.**
+
+          \`worksheet-review\` must render the worksheet, drive Playwright against it on
+          localhost, and attach the sheet PNGs to this pull request with markdown image
+          syntax. A review conducted by reading the \`.qmd\` source is not a review of a
+          printed artifact and cannot pass this stage.
+
+          This pull request has been relabelled \`stage:review\`. The judge was not run.
+
+          _Enforced by \`.github/workflows/worksheet-review-gate.yml\`._"
+
+          exit 1

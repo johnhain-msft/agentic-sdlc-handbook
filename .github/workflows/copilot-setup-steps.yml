@@ -1,0 +1,84 @@
+# Preinstalls the toolchain before a Copilot cloud agent session starts, so the
+# agent does not spend its session installing Quarto and a browser.
+#
+# Two hard constraints from the platform, both easy to break:
+#   * the single job MUST be named exactly `copilot-setup-steps`
+#   * this file MUST be on the DEFAULT BRANCH (main) to take effect at all.
+#     A copy on a feature branch does nothing.
+#
+# Only `steps`, `permissions`, `runs-on`, `services`, `snapshot` and
+# `timeout-minutes` (max 59) are honoured here. Anything else is ignored.
+#
+# The worksheet factory needs: Quarto (render), Node + Playwright Chromium
+# (the layout gate and the review stage's screenshots). TinyTeX is installed
+# so an agent asked to render the book's PDF does not fail on a missing
+# LaTeX toolchain.
+
+name: Copilot setup steps
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install worksheet layout-gate dependencies
+        working-directory: .github/skills/worksheet-build
+        run: npm install --no-audit --no-fund
+
+      - name: Install Chromium for Playwright
+        working-directory: .github/skills/worksheet-build
+        run: npx playwright install --with-deps chromium
+
+      - name: Install TinyTeX
+        run: quarto install tinytex --no-prompt
+
+      - name: Verify the toolchain
+        run: |
+          set -euo pipefail
+          echo "quarto : $(quarto --version)"
+          echo "node   : $(node --version)"
+          echo "python : $(python3 --version)"
+
+          # The worksheet project must stay isolated from the book project.
+          # If this ever regresses, worksheets leak into the published handbook.
+          # Check the computed INPUT SET, not the raw JSON — the raw file also
+          # contains config paths that legitimately mention the directory.
+          quarto inspect . > /tmp/root-inspect.json
+          leaked="$(jq -r '.files.input[]' /tmp/root-inspect.json \
+                      | tr '\\' '/' | grep -i '/worksheets/' || true)"
+          if [ -n "$leaked" ]; then
+            echo "FATAL: the root book project now includes worksheet files:" >&2
+            printf '%s\n' "$leaked" >&2
+            echo "worksheets/_quarto.yml should make Quarto treat it as a separate project." >&2
+            exit 1
+          fi
+          echo "isolation: root book project contains no worksheet inputs — OK"
+
+          # Prove the gate can actually launch a browser before an agent needs it.
+          cd worksheets && quarto render specimen.qmd && cd -
+          node .github/skills/worksheet-build/scripts/check-layout.mjs \
+            worksheets/_output/specimen.html /tmp/specimen-check
+          echo "layout gate: specimen renders and passes — OK"
