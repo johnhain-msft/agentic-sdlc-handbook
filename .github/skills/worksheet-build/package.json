@@ -1,0 +1,13 @@
+{
+  "name": "worksheet-build-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Layout gate for the Agentic SDLC Handbook worksheet kit. Shipped inside the worksheet-build skill so the cloud agent gets it automatically.",
+  "scripts": {
+    "check": "node scripts/check-layout.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}

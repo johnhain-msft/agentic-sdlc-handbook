@@ -7,6 +7,12 @@ _book/
 _freeze/
 .quarto/
 
+# Worksheet kit build artifacts (rendered sheets, review screenshots, tooling)
+worksheets/_output/
+worksheets/_review/
+.github/skills/worksheet-build/node_modules/
+.github/skills/worksheet-build/package-lock.json
+
 # Local build artifacts
 dist/
 handbook/*.html

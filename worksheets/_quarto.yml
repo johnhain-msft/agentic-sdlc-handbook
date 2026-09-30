@@ -1,0 +1,36 @@
+# Standalone Quarto project for the facilitated worksheet kit.
+#
+# This is deliberately NOT part of the book. The root _quarto.yml is a
+# `type: book` project with an explicit chapter list; Quarto excludes any
+# sub-directory that carries its own _quarto.yml from the parent project, so
+# worksheets never leak into the published handbook or into publish.yml CI.
+#
+# Verify that isolation after any change:
+#   quarto render --to html          (at repo root) -> _book/ must contain no worksheet
+#   quarto render                    (in worksheets/) -> _output/ contains the kit
+
+project:
+  type: default
+  output-dir: _output
+  render:
+    - "*.qmd"
+    - "!_templates/*.qmd"
+
+format:
+  html:
+    theme: none
+    css: styles/worksheet.css
+    embed-resources: true
+    toc: false
+    number-sections: false
+    anchor-sections: false
+    section-divs: false
+    link-external-icon: false
+    link-external-newwindow: true
+    html-math-method: plain
+
+# Worksheets are static print artifacts. Nothing executes.
+execute:
+  enabled: false
+  echo: false
+  warning: false

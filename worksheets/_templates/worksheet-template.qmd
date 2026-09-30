@@ -1,0 +1,148 @@
+---
+# =============================================================================
+# CANONICAL WORKSHEET TEMPLATE
+#
+# Copy to worksheets/<ws_id>.qmd and fill in from docs/worksheets/<ws_id>.md.
+# This template is excluded from the render list, so it is never published.
+#
+# Every placeholder is marked <<LIKE THIS>>. A render that still contains "<<"
+# anywhere FAILS the layout gate. That is deliberate.
+#
+# Three rules that this file exists to encode. All three were learned the hard
+# way; breaking any of them produces a page that looks fine in source and is
+# broken in the render:
+#
+#   1. The body is RAW HTML inside one ```{=html} block. Never Pandoc fenced
+#      divs (::: {.class}). A closing fence that follows a block-level HTML tag
+#      is absorbed into that tag and the page silently mis-nests.
+#
+#   2. Geometry uses the `html:root` selector, not `:root`. Quarto injects
+#      include-in-header BEFORE the project stylesheet, so a plain :root
+#      override has equal specificity and LOSES on source order — the sheet
+#      then renders at the stylesheet default and the print clips.
+#
+#   3. Every <col> width is a PERCENT and they sum to 100. Quarto's table
+#      filter drops mm/px col widths, sums the percentages it kept, and writes
+#      that onto the table as an inline width. Mixed units give a half-width
+#      table.
+# =============================================================================
+
+title: "<<Worksheet title — the spec's H1, verbatim>>"
+pagetitle: "<<ws_id>>"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            /* Copy the exact pair for your declared format from
+               .github/skills/worksheet-build/SKILL.md § Page geometry.
+               These two lines must agree or the print clips. */
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b><<ws_id>></b> &middot; review copy &middot; declared format <b><<A3 landscape>></b> &middot;
+  <<N>> sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1><<Worksheet title>></h1>
+      <p class="ws-sub"><<Spec §1 "Output artifact", one line — what this sheet produces>></p>
+    </div>
+    <div class="ws-meta">
+      <b><<ws_id>></b><br>
+      <<Pack X - name>><br>
+      fill order <b><<n>></b> &middot; type <b><<type>></b><br>
+      audience <b><<audience>></b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b><<Chapter title>></b>, <i><<Heading>></i> &middot;
+    <code><<handbook/chNN-slug.qmd>></code> <<L18-41>> &middot;
+    <a href="<<published URL from spec §2>>"><<#sec-stable-anchor>></a>
+  </div>
+
+  <div class="ws-instruction">
+    <<Spec §4 "What the user fills", rewritten as a direct instruction TO the
+    person holding the pen. Second person. No commentary about the book.>>
+  </div>
+
+  <div class="ws-block">
+    <h2><<Block name>>
+      <span class="ws-block-note"><<one per team / one row per component>></span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <!-- PERCENTAGES ONLY, SUMMING TO 100 -->
+        <col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b><<Field name, verbatim from spec §5 column "Field">></b></td>
+          <td class="prior"><<Spec §5 "Pre-filled from the book". Em dash if that column is "—".>>
+            <span class="prior-src"><<ch07 L98>></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b><<Field name>></b></td>
+          <td class="prior">—</td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt"><<option one>></span>
+              <span class="opt"><<option two>></span>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Only where spec §10 lists a hedged figure reachable from this range.
+       The figure and the book's own hedge are ONE unit: never split them,
+       never paraphrase the hedge, never print the figure in a column header
+       or beside a blank cell without this wrapper. -->
+  <div class="ws-block">
+    <h2><<Block name>></h2>
+
+    <div class="prior--hedged">
+      <span class="hedge-figure"><<The figure, exactly as the book states it>></span>
+      <span class="hedge-text"><<The book's hedge, VERBATIM from spec §10 — copy it, never rewrite it>></span>
+      <span class="hedge-src"><<handbook/chNN-....qmd LNN>></span>
+    </div>
+
+    <div class="ours-label"><<Our number — measured here, dated>></div>
+    <span class="f-text"></span>
+  </div>
+
+  <!-- Where the spec calls for the chapter's own sentence at the foot. -->
+  <div class="ws-foot-quote">
+    <<The book's sentence, verbatim, with its (chNN LNN) reference>>
+  </div>
+
+  <div class="ws-foot">
+    <div><<ws_id>> &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of <<N>></div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+```

@@ -1,0 +1,216 @@
+---
+title: "Worksheet kit — visual contract"
+pagetitle: "kit-specimen"
+
+# The kit's reference specimen. NOT one of the 72 worksheets.
+#
+# It exercises every input primitive and every house rule, so that a change to
+# styles/worksheet.css can be reviewed against a known-good page, and so the
+# builder agent has a worked example of the exact markup to emit.
+#
+# NOTE ON MARKUP: worksheet bodies are RAW HTML inside a ```{=html} block, not
+# Pandoc fenced divs. Mixing `::: {.class}` fences with block-level raw HTML
+# makes Pandoc absorb the closing fences into the HTML block and silently
+# mis-nest the page. Raw HTML throughout is unambiguous, and a worksheet is
+# structured layout, not prose.
+#
+# Render:  cd worksheets && quarto render specimen.qmd
+# Check:   node ../.github/skills/worksheet-build/scripts/check-layout.mjs \
+#            _output/specimen.html _review/specimen
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 297mm; --sheet-h: 420mm; --sheet-margin: 12mm; }
+            @page { size: A3 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>kit-specimen</b> &middot; reference specimen &middot; declared format <b>A3 portrait</b> &middot; 1 sheet.
+  The white page below is one physical sheet at true size. Anything spilling past its
+  edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Worksheet kit — visual contract</h1>
+      <p class="ws-sub">Every input primitive and every house rule on one page, so a CSS change can be reviewed against a known-good render.</p>
+    </div>
+    <div class="ws-meta">
+      <b>kit-specimen</b><br>
+      not one of the 72<br>
+      format <b>A3 portrait</b><br>
+      audience <b>kit maintainer</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>the kit itself</b> &middot; <code>worksheets/styles/worksheet.css</code> &middot;
+    this page is the contract that stylesheet must keep
+  </div>
+
+  <div class="ws-instruction">
+    Print this page. Hold it at arm's length. You should be able to tell, without reading a
+    word, which cells the book already filled in and which ones you are expected to fill.
+    If you cannot, house rule 1 is broken and the stylesheet is wrong.
+  </div>
+
+  <div class="ws-block">
+    <h2>Rule 1 — a printed prior never looks like a blank
+      <span class="ws-block-note">tinted + serif italic vs white + hairline</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>free text</b></td>
+          <td class="prior">A value the book supplies, set in serif italic on a tint with a dark left rule.<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>free text, long</b></td>
+          <td class="prior">—</td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>owner (named person)</b></td>
+          <td class="prior">The chapter requires an owner before it ships.<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>checkbox</b></td>
+          <td class="prior">Tick only if <b>both</b> tests are met.<span class="prior-src">ch07 L98</span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>runs on a local model</span>
+            <span class="f-checkline"><span class="f-check"></span>cost gradient is low <i>and</i> evaluated</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>select</b></td>
+          <td class="prior">—</td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">reversible</span>
+              <span class="opt">recoverable at cost</span>
+              <span class="opt">irreversible</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>1–5 scale</b></td>
+          <td class="prior">1 = almost all tribal; 5 = comprehensive docs<span class="prior-src">ch06 L345</span></td>
+          <td class="fill">
+            <div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>H / M / L</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>currency</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-currency" data-symbol="&pound;"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>date</b></td>
+          <td class="prior">—</td>
+          <td class="fill">
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>computed</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-computed" data-formula="field 8 &times; field 11"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>signature</b></td>
+          <td class="prior">—</td>
+          <td class="fill tall"><span class="f-sign"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>locked / read-only</b></td>
+          <td class="locked" colspan="2">Printed by the book, not editable by the room. Grey, smaller, no writing surface — so nobody writes in it.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Rule 2 — a hedged figure and its hedge are one unit
+      <span class="ws-block-note">never separable by a scissors cut</span></h2>
+
+    <div class="prior--hedged">
+      <span class="hedge-figure">Roughly 30–60% of agent-generated code on complex tasks requires significant rework.</span>
+      <span class="hedge-text">NOT an author figure. Sourced: "Cross-referencing the 2025 Stack Overflow survey and GitClear's code churn analysis suggests ... though no controlled study has established a definitive figure."</span>
+      <span class="hedge-src">handbook/ch01-the-agentic-sdlc-thesis.qmd L25</span>
+    </div>
+
+    <div class="ours-label">Our rework rate — measured here, on our code, dated</div>
+    <span class="f-text"></span>
+
+    <p style="font-size:7.4pt;color:#454f59;margin:2mm 0 0">The organisation's own number sits
+      <b>beside</b> the prior, never in place of it. The prior is a starting point that gets
+      overwritten with evidence; it is never a target and never an acceptance threshold.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Canvas primitives <span class="ws-block-note">large-format sheets</span></h2>
+
+    <div class="canvas" style="height:44mm">
+      <div class="canvas__half">
+        <h3>The deterministic computer — what you can audit</h3>
+        <div class="zone"></div>
+      </div>
+      <div class="canvas__seam"><span class="seam-label">the seam</span></div>
+      <div class="canvas__half">
+        <h3>The probabilistic computer — what you cannot</h3>
+        <div class="zone"></div>
+      </div>
+    </div>
+
+    <div class="channel"><span class="arrow">&rarr;</span><span><b>what crosses into the probabilistic side</b> — structured prompts, declared tool schemas, grounded file contents</span></div>
+    <div class="channel"><span class="arrow">&larr;</span><span><b>what crosses out of it</b> — <i>"Nothing direct: every probabilistic output passes through deterministic validation before it has consequences."</i></span></div>
+
+    <p style="font-size:8pt;margin:1.5mm 0 0"><span class="redcircle"></span> &nbsp;<span class="defect-note">Red circle</span>
+      — a consequential effect sitting on the probabilistic side. A design defect to be redrawn, not a note.</p>
+  </div>
+
+  <div class="ws-foot-quote">
+    "Any spend beyond the baseline playbook is an intentional bet — and a bet is only sound
+    once your monitoring can tell you whether it paid off." (ch07 L98)
+  </div>
+
+  <div class="ws-foot">
+    <div>kit-specimen &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
