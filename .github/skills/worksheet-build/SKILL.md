@@ -140,6 +140,7 @@ physically is. Read it literally:
 
 One `.sheet` = one physical page. If the content does not fit, **split it into
 another `.sheet`** — never shrink the type below 7pt and never let it spill.
+A split changes "sheet N of M" in every footer, so renumber them all.
 
 ---
 
@@ -286,6 +287,7 @@ falls back to a system Chrome or Edge.
 | `no-writable-fields` | it is a handout, not a worksheet |
 | `prior-not-distinct` | house rule 1 broken |
 | `hedge-stripped` | house rule 2 broken |
+| `sheet-numbering` | a footer has no "sheet N of M", or it is untrue: the wrong position, or the wrong number of sheets |
 | `figure-in-header` *(warn)* | a number in a column header with blanks beneath it |
 | `fill-order` *(warn)* | field badges do not ascend in document order |
 

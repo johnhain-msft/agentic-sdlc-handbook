@@ -28,6 +28,11 @@ const RENDERED = path.join(ROOT, 'worksheets', '_output', 'specimen.html');
  * Each mutation edits the RENDERED html (not the source), because the gate
  * measures the render. `expect` is the defect rule that must fire.
  */
+// Duplicates the first sheet in the browser, the way a builder or reviewer
+// copies a sheet's markup to make another one.
+const CLONE_FIRST_SHEET =
+  '<script>const s = document.querySelector(".sheet"); s.after(s.cloneNode(true));</script>';
+
 const MUTATIONS = [
   {
     name: 'unfilled template placeholder survives to the render',
@@ -84,6 +89,34 @@ const MUTATIONS = [
     name: 'a numeric figure sits in a column header above blank cells',
     expect: 'figure-in-header',
     apply: (h) => h.replace('>Your answer<', '>Target: 85%<'),
+  },
+  {
+    name: 'a footer misstates the worksheet\'s sheet count ("sheet 1 of 4" on a one-sheet worksheet)',
+    expect: 'sheet-numbering',
+    apply: (h) => h.replace('sheet 1 of 1<', 'sheet 1 of 4<'),
+  },
+  {
+    name: 'a sheet is copied to make another and its footer is never updated',
+    expect: 'sheet-numbering',
+    // The likeliest real failure: both copies still claim to be "sheet 1 of 1".
+    apply: (h) => h.replace('</body>', `${CLONE_FIRST_SHEET}</body>`),
+  },
+  {
+    name: 'a split sheet gets the right total but the wrong position ("sheet 1 of 2" twice)',
+    expect: 'sheet-numbering',
+    // Both totals are right, so only the position check can see this one.
+    apply: (h) => h.replace('sheet 1 of 1<', 'sheet 1 of 2<').replace('</body>', `${CLONE_FIRST_SHEET}</body>`),
+  },
+  {
+    name: 'a footer drops its sheet number entirely',
+    expect: 'sheet-numbering',
+    apply: (h) => h.replace(/ \u00B7 sheet 1 of 1</, '<'),
+  },
+  {
+    name: 'a sheet loses its footer altogether',
+    expect: 'sheet-numbering',
+    apply: (h) => h.replace('</body>',
+      '<script>document.querySelectorAll(".ws-foot").forEach((f) => f.remove());</script></body>'),
   },
 ];
 

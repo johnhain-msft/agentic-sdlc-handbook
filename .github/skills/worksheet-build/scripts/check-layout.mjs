@@ -165,6 +165,39 @@ const report = await page.evaluate((PX_PER_MM) => {
     };
   });
 
+  // ---- every sheet states its true place in the worksheet -----------------
+  // The template has the builder hand-type "sheet N of M" into every footer,
+  // and a builder or reviewer that adds or splits a sheet updates some footers
+  // and not others. A facilitator who reads "sheet 1 of 4" on a five-sheet
+  // worksheet concludes a sheet is missing. The page must not misstate itself.
+  // A footer carries exactly one such claim, so every claim found is checked.
+  const misnumbered = [];
+  sheets.forEach((sheet, i) => {
+    const feet = [...sheet.querySelectorAll('.ws-foot')].filter((f) => !f.closest('.screen-only'));
+    if (!feet.length) {
+      misnumbered.push(`sheet ${i + 1}: has no .ws-foot footer at all`);
+      return;
+    }
+    const claims = feet.flatMap((f) => [...(f.innerText || '').matchAll(/\bsheet\s+(\d+)\s+of\s+(\d+)\b/gi)]);
+    if (!claims.length) {
+      misnumbered.push(`sheet ${i + 1}: its .ws-foot does not say "sheet ${i + 1} of ${sheets.length}"`);
+      return;
+    }
+    for (const [text, n, of] of claims) {
+      if (+n !== i + 1 || +of !== sheets.length) {
+        misnumbered.push(`sheet ${i + 1}: footer says "${text}", but this is sheet ${i + 1} of ${sheets.length}`);
+      }
+    }
+  });
+  if (misnumbered.length) {
+    defects.push({
+      severity: 'fatal',
+      rule: 'sheet-numbering',
+      detail: `${misnumbered.length} sheet(s) misstate their place in the worksheet. Every sheet's .ws-foot must read "sheet N of M", where N is that sheet's position and M is the worksheet's total number of sheets. Splitting or merging a sheet changes M on every footer.`,
+      samples: misnumbered.slice(0, 8),
+    });
+  }
+
   // ---- the printed page must match the on-screen sheet -------------------
   // The commonest silent clipping failure is a worksheet whose screen sheet
   // says A3 portrait while its @page says A4. Catch it mechanically.
