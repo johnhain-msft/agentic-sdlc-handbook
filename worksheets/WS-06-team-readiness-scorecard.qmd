@@ -153,7 +153,7 @@ format:
     "Use this worksheet to evaluate your current team structure against the patterns described in this chapter. Score each dimension honestly. The purpose is to identify specific gaps that need attention, not to generate an overall grade." (ch06 L339)
   </div>
   <div class="ws-foot">
-    <div>WS-06-team-readiness-scorecard &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 4</div>
+    <div>WS-06-team-readiness-scorecard &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 5</div>
     <div>Team <span style="display:inline-block;width:50mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
       &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
   </div>

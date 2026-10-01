@@ -170,6 +170,9 @@ against the layout report:
   priors from the blank cells? That is house rule 1, and it is a visual test.
 - Does any printed figure sit beside a blank cell in a way that invites
   somebody to copy it across? The gate cannot see this. You can.
+- Does every reference the sheet makes to itself land where it says? Follow
+  each one to its target: "carry the scores across from Panel A", "fields 9-11",
+  "computed from field 19". The gate checks only the footer's sheet number.
 - Are the fields actually writable at printed size?
 
 You are not redoing the review stage's job in detail. You are checking that it
@@ -212,7 +215,7 @@ PROBE COVERAGE
   W3 integrity:        <hedges verbatim? invented numbers? — be specific>
   W4 absorbed members: <each §6 member -> the field carrying it>
   W5 §9 criteria:      <each criterion -> checkable / not checkable + why>
-  W6 usability:        <format match, clipping, priors, writability>
+  W6 usability:        <format match, clipping, priors, writability, self-references>
 
 WARNINGS ADJUDICATED  (each gate warning, individually, with a reason)
   - <rule>: <accepted because … | raised as a finding because …>
@@ -230,6 +233,14 @@ gate, or a review stage that attached no image. S2 should-fix = a real defect
 that is true but mis-scoped, mis-labelled, or inconsistent with a sibling
 worksheet. S3 nit = phrasing and polish.
 
+**A sheet must not misstate itself.** A number or reference that is false about
+the worksheet itself is an invented number, and S1: a wrong sheet count, a
+cross-reference to the wrong sheet, panel, block or field, or an instruction to
+carry a value to a field that does not hold it. "Sheet 1 of 4" on a five-sheet
+worksheet is S1, not a mis-label, because the facilitator will believe the page.
+The gate checks every footer's sheet number (`sheet-numbering`); every other
+self-reference is yours.
+
 **S3 findings never justify a return.** List them and pass.
 
 ---
@@ -240,7 +251,7 @@ worksheet. S3 nit = phrasing and polish.
 |---|---|
 | `build` | schema fidelity, a misquoted prior, an invented number, a stripped hedge, a lost absorbed detail, a §9 criterion the sheet structurally cannot satisfy. Anything about **what is on the sheet**. |
 | `voice` | the sheet's own prose misdescribes a field, launders a hedged figure in a caption, drifts from the book's vocabulary, or addresses the reader instead of the person with the pen. Anything about **how the sheet's own writing reads**. |
-| `review` | clipping, format mismatch, unwritable fields, illegible fill order, priors indistinguishable from blanks, or no image attached. Anything about **the artifact as a printed object**. |
+| `review` | clipping, format mismatch, unwritable fields, illegible fill order, priors indistinguishable from blanks, a wrong footer sheet number (`sheet-numbering`, usually left by a split), or no image attached. Anything about **the artifact as a printed object**. |
 
 Exactly one. If findings span stages, **return to the earliest one** — build
 before voice before review — because a fix there invalidates the later stages
