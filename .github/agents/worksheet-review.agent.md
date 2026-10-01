@@ -149,8 +149,13 @@ You **may** fix layout. That is the difference between you and the judge.
 Fix: sheet splits, column widths, field heights, block ordering, a too-small
 canvas zone, a wrapped option list, a page-geometry declaration.
 
+**A split or merge renumbers every footer.** Each sheet's `.ws-foot` reads
+"sheet N of M", and adding or removing a sheet changes M on all of them. Those
+footer numbers are page furniture, not content: update every one in the same
+fix. The gate fails a footer that is wrong (`sheet-numbering`).
+
 Do **not** fix: a field's presence, its label, its input type, its options, any
-number, any prior, any hedge, any of the sheet's prose. Those belong to the
+other number, any prior, any hedge, any of the sheet's prose. Those belong to the
 builder and the voice stage. If one of them is wrong, **report it and return the
 sheet** rather than reaching into another stage's territory.
 
@@ -214,5 +219,7 @@ artifact you never saw is the one outcome that is worse than no review.
 - Never pass a stage without attaching the rendered image.
 - Never describe an image you did not open.
 - Never change a field, label, option, number, prior, hedge or the sheet's prose.
+  The one exception is each footer's "sheet N of M", which you must renumber
+  whenever you split or merge a sheet.
 - Never touch `handbook/`, the root `.qmd` files, or `docs/worksheets/`.
 - Never "fix" a clipping defect by shrinking type below 7pt. Split the sheet.

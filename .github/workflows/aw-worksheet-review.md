@@ -222,11 +222,12 @@ full cycle and a human's attention for nothing.
 ## Then
 
 Fix layout defects — sheet splits, column widths, field heights, block order,
-canvas zone sizes, page geometry. Re-render, re-gate and **look again** after
-every fix.
+canvas zone sizes, page geometry. A split or merge changes "sheet N of M" on
+every footer, so renumber them all in the same fix. Re-render, re-gate and
+**look again** after every fix.
 
-Do not change a field, label, option, number, `.prior`, `.hedge-text` or any of
-the sheet's prose. Report those and let the judge route them.
+Do not change a field, label, option, any other number, `.prior`, `.hedge-text`
+or any of the sheet's prose. Report those and let the judge route them.
 
 When the artifact is sound, push any fixes, add `stage:judge`, remove
 `stage:review`, and call `dispatch_workflow` for `aw-worksheet-judge`.
