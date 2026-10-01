@@ -39,7 +39,7 @@ on:
 
 if: >-
   github.event_name == 'workflow_dispatch' ||
-  contains(github.event.pull_request.labels.*.name, 'stage:review')
+  github.event.label.name == 'stage:review'
 
 permissions:
   # Copilot inference via the Actions token - no PAT, minted per run and
@@ -163,6 +163,19 @@ cat /tmp/gh-aw/agent/worksheet-review/gate.log            # the gate's own outpu
 The pull request head is already checked out. Its number is in `capture.json`
 — pass it as `pull_request_number` on every safe output.
 
+**If `capture.json` shows `"previous_judge_verdict": true`, the judge has ruled
+on this pull request before.** Its verdict, posted by the judge workflow itself,
+is in `/tmp/gh-aw/agent/worksheet-review/judge-verdict.md`. If it is a FAIL that
+routes findings to review, the judge sent it back to you: fix every one of
+those findings before anything else, and name each in your report. Your usual
+pass comes second. If `capture.json` shows `"judge_verdict_unreadable": true`,
+the comments could not be read: say in your report that you could not tell
+whether the judge returned this pull request.
+
+**If `capture.json` lists `replaced_slots`**, those images could not be
+captured and were replaced with plain stand-ins. Do not read a plain slate
+rectangle as a blank sheet; say which slots you could not see.
+
 **If the attached images are red "WORKSHEET CAPTURE FAILED" cards**, the render
 did not happen. Report `VOID` with the reason from the card, add `needs-human`,
 and do not relabel to `stage:judge`.
@@ -230,7 +243,9 @@ Do not change a field, label, option, any other number, `.prior`, `.hedge-text`
 or any of the sheet's prose. Report those and let the judge route them.
 
 When the artifact is sound, push any fixes, add `stage:judge`, remove
-`stage:review`, and call `dispatch_workflow` for `aw-worksheet-judge`.
+`stage:review`, and call `dispatch_workflow` for `aw-worksheet-judge`. **Call it
+last**, after the push and the labels: safe outputs run in the order you call
+them, and a dispatch called earlier can wake the judge before your fix lands.
 
 The judge workflow runs a deterministic check **before** its agent starts: if
 no rendered image is embedded in a comment on this pull request, it fails and

@@ -38,7 +38,7 @@ on:
 
 if: >-
   github.event_name == 'workflow_dispatch' ||
-  contains(github.event.pull_request.labels.*.name, 'stage:voice')
+  github.event.label.name == 'stage:voice'
 
 permissions:
   # Copilot inference via the Actions token - no PAT, minted per run and
@@ -58,6 +58,23 @@ network: defaults
 # documented pattern for the case.
 checkout:
   - fetch: ["refs/pulls/open/*"]
+
+# If the judge sent a pull request back to voice, its findings are a comment on
+# it. Fetch them before the agent starts, one file per pull request waiting
+# here, so the agent reads what failed instead of re-running a generic pass.
+steps:
+  - name: Fetch the judge's verdict for each pull request waiting at voice
+    env:
+      GH_TOKEN: ${{ github.token }}
+    run: |
+      mkdir -p /tmp/gh-aw/agent/worksheet-voice
+      for pr in $(gh pr list --state open --label worksheet --label stage:voice \
+                    --json number --jq '.[].number'); do
+        bash .github/skills/worksheet-build/scripts/fetch-judge-verdict.sh \
+          "$pr" "/tmp/gh-aw/agent/worksheet-voice/judge-verdict-$pr.md" \
+          || : > "/tmp/gh-aw/agent/worksheet-voice/judge-verdict-$pr.unreadable"
+      done
+
 tools:
   bash:
     - "*"
@@ -99,13 +116,13 @@ request in the event context. Find the work yourself:
 
 ```bash
 gh pr list --state open --label worksheet --label stage:voice \
-  --json number,headRefName,files --jq '.[0]'
+  --json number,headRefName,files --jq 'sort_by(.number) | .[0]'
 ```
 
 - **No such pull request** — call `noop` with a message saying the queue is
   empty, and stop. Do not invent work.
-- **More than one** — take the lowest-numbered one. The queue is capped at
-  three, and the others will be picked up by their own dispatches.
+- **More than one** — the command above already takes the lowest-numbered one.
+  Work on that one only.
 
 Check that pull request out, and read the one worksheet it changes:
 
@@ -122,6 +139,24 @@ gh pr view <number> --json files --jq '.files[].path'
 
 Every safe output below takes an explicit `pull_request_number` — pass the
 number you found.
+
+## If the judge sent it back
+
+```bash
+cat /tmp/gh-aw/agent/worksheet-voice/judge-verdict-<number>.md
+```
+
+If that file has anything in it, the judge has ruled on this pull request
+before, and it was posted by the judge workflow itself, not by a commenter. If
+it is a FAIL that routes findings to voice, the judge sent it back to you: fix
+every one of those findings before anything else, and name each in your report.
+Your usual pass comes second.
+
+**Check for `judge-verdict-<number>.unreadable` first.** If it exists, the
+comments could not be read, and the empty `.md` beside it means nothing: say in
+your report that you could not tell whether the judge returned this pull
+request. Only when there is no `.unreadable` file does an empty `.md` mean this
+is a first pass.
 
 ## What to do
 
@@ -146,7 +181,9 @@ number you found.
 8. Post your `VOICE PASS:` report as a comment.
 9. Ring the doorbell for stage 3: call `dispatch_workflow` for
    `aw-worksheet-review`. The label marks the work; the dispatch is what wakes
-   the run.
+   the run. **Call it last**, after the push and the labels: safe outputs run in
+   the order you call them, and a dispatch called earlier can wake stage 3
+   before your commit lands.
 
 ## If nothing needs changing
 

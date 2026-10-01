@@ -22,6 +22,13 @@ adding a trigger driven directly by public input, changing the same-repository
 pull-request guard, or widening permissions or safe outputs. The factory
 workflows, agents, and skills are explicitly covered by `.github/CODEOWNERS`.
 
+Pull request comments are public input too. When the judge returns a pull
+request to voice or review, a pre-agent step hands that stage the judge's
+verdict from a comment. It accepts a comment only if `github-actions[bot]`
+posted it and its last gh-aw footer marker names this repository's
+`aw-worksheet-judge` workflow, so a commenter cannot forge instructions to a
+stage that can push to the branch (`fetch-judge-verdict.sh`, `verdict.test.sh`).
+
 Primary references for this section:
 
 - [Manually running a workflow](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)
@@ -38,7 +45,7 @@ Applied 2026-10-01:
 | Required approving reviews | 1 |
 | Require review from code owners | yes |
 | Dismiss stale reviews on new commits | yes |
-| Required status checks | none, for now - see below |
+| Required status checks | none - see below |
 | Enforce for administrators | no, the owner keeps a bypass |
 | Force pushes / deletions | blocked |
 
@@ -48,44 +55,43 @@ file an approving review. `github-actions[bot]` is not listed in CODEOWNERS, so
 such an approval cannot satisfy the code-owner requirement, and nothing the
 factory produces reaches `main` unread.
 
-## Why the isolation check is not yet required
+## Why the isolation check is not required
 
-Workflow runs on pull requests opened by `github-actions[bot]` currently land in
-`action_required` and wait for a human to approve them. That is the documented
-behaviour of **Require approval for first-time contributors**, the repository's
-current setting, which GitHub defines as applying to users "who have never had a
-commit or pull request merged into this repository". Both the pull request
-author and the triggering actor are checked, so this turns on the bot's identity
-and *not* on whether the pull request came from a fork - the observed runs were
-on a same-repository branch.
+Workflow runs on pull requests opened by `github-actions[bot]` land in
+`action_required` and wait for a human with write access to approve them.
 
-It is therefore expected to be a first-contribution condition rather than a
-standing one: GitHub states that "a user that has had any commit or pull request
-merged into the repository will not require approval". Once the first agentic
-pull request merges, later ones should start their checks unattended.
+**This is not the first-time-contributor rule, and merging does not clear it.**
+That was the working theory: the repository's policy, *Require approval for
+first-time contributors*, covers users "who have never had a commit or pull
+request merged into this repository". So after the first agentic pull request
+(#8) merged, later ones were expected to run unattended. They did not. With
+`github-actions[bot]` listed as a contributor, the next agentic pull request's
+`isolation` run (#13, run 36917525343) was still `action_required`. The gate
+follows the bot's identity, as GitHub's changelog describes - bot-created pull
+requests "are now able to run your CI/CD workflows with user approval" - and no
+setting was found that exempts them. Loosening the fork-approval policy would
+widen the public surface without removing it, so it stays as it is.
 
-That is unconfirmed for an App identity - the documentation says "users", and
-`github-actions[bot]` is an App. Until it is observed, requiring the `isolation`
-check would leave every agentic pull request blocked behind a manual approval.
+So `isolation` is **not** a required check: requiring it would hold every
+agentic pull request behind a manual "Approve and run". Nothing is lost that
+matters:
 
-The sequence to close this out:
+- It runs on every push to `main` that touches a worksheet, the book's
+  `_quarto.yml`, a root `.qmd` or the layout gate - its push trigger is
+  path-filtered to exactly those - so a merged worksheet that broke the
+  book-isolation invariant is caught immediately after the merge.
+- It runs, without approval, on every pull request a person opens. Those are
+  the ones that change the factory - workflows, agents, the gate and its tests -
+  and they are where its suites earn their keep.
+- An agentic pull request changes one file, `worksheets/<ws_id>.qmd`, and the
+  layout gate runs inside the build, review and judge stages themselves.
 
-1. Merge the first agentic pull request after a code-owner review.
-2. Run the next worksheet and observe whether `isolation` starts unattended.
-3. If it does, add `isolation` to the required checks.
-4. If it does not, fall back to **Require approval for first-time contributors
-   who are new to GitHub**, which the bot is not. Do not disable fork approval
-   wholesale on a public repository.
-
-The required check is named `isolation` - the job id, not the workflow name
-`Worksheet isolation`. Requiring the workflow name would never match and would
-block every pull request. Note also that `build-deploy` fails on every run
-because this fork has never published `gh-pages`; it must never be required.
-
-The `Worksheet isolation` workflow has no `pull_request` path filter so that it
-can be required later. GitHub's guidance on required checks is that a workflow
-skipped by path filtering leaves its check pending and blocks the merge, so
-"avoid requiring workflows that can be skipped".
+If GitHub later documents an exemption for workflow-created pull requests,
+revisit this. The required check would be named `isolation` - the job id, not
+the workflow name `Worksheet isolation`, which would never match. Never require
+`build-deploy`: it fails on every run because this fork has never published
+`gh-pages`. The workflow has no `pull_request` path filter, because GitHub
+leaves a path-skipped required check pending and blocks the merge.
 
 Primary references for this section:
 

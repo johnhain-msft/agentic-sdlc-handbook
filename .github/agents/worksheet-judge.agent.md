@@ -258,6 +258,13 @@ before voice before review — because a fix there invalidates the later stages
 anyway. State that you did so and list the downstream findings so they are not
 lost.
 
+**A return to `build` goes to a person, not to the build stage.** The build
+stage can only open a new pull request from scratch: dispatching it would
+strand this pull request, reset the cycle counter so the bound below never
+trips, and rebuild without ever reading your findings. So when the earliest
+owning stage is `build`, label `needs-human` instead, and write your findings
+so a person can act on them without re-deriving anything.
+
 ---
 
 ## The cycle bound

@@ -21,9 +21,9 @@ on:
       - 'worksheets/**'
       - '*.qmd'
       - '.github/skills/worksheet-build/**'
-  # This check is required on main. Required checks that are skipped by path
-  # filtering stay pending and block unrelated pull requests, so every pull
-  # request must report an isolation result.
+  # Runs on every pull request, unfiltered: a pull request that changes the
+  # factory itself must run the factory's own test suites below, whatever it
+  # touches. (It is not a required check - see WORKSHEET-FACTORY-SECURITY.md.)
   pull_request:
   workflow_dispatch:
 
@@ -94,3 +94,21 @@ jobs:
         # proves it follows the trigger that fired, accepts every real spec,
         # and refuses rather than guesses.
         run: bash .github/skills/worksheet-build/scripts/resolve-build-request.test.sh
+
+      - name: Every image a review or judge attaches must be one the model accepts
+        # One unusable attachment makes the model drop EVERY image in the
+        # request. A two-sheet worksheet's review went blind that way: its
+        # empty third slot held a corrupt 1x1 PNG, because the card renderer
+        # could not load playwright from the repository root.
+        run: bash .github/skills/worksheet-build/scripts/attachments.test.sh
+
+      - name: A returned stage must be handed the judge's real verdict
+        # The right API path, only the judge workflow's own comment, the latest
+        # one, and a loud failure rather than a silent "no verdict". The first
+        # version 404'd on every call and hid it; anyone could have forged one.
+        run: bash .github/skills/worksheet-build/scripts/verdict.test.sh
+
+      - name: The compiled workflows must be wired the way the fixes say
+        # Trigger filters, the judge's routing, the returned stages' verdict
+        # fetch, and that every test in the skill actually runs here.
+        run: bash .github/skills/worksheet-build/scripts/wiring.test.sh
