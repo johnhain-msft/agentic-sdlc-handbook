@@ -3,8 +3,10 @@
 #
 # Trigger: a pull request labelled `stage:judge`.
 # Output: PASS  -> mark ready for review, label `ready-for-human`
-#         FAIL  -> label exactly ONE of stage:build|stage:voice|stage:review
-#                  and bump cycles:N. At cycles:3 label `needs-human` and stop.
+#         FAIL  -> voice- or review-owned: label that stage and dispatch it;
+#                  build-owned: label `needs-human` (the build stage cannot
+#                  rework an open pull request). Every FAIL bumps cycles:N.
+#                  At cycles:3 label `needs-human` and stop.
 #
 # The agent runs READ-ONLY: it has no edit tool and no push safe-output, so it
 # structurally cannot fix what it reviewed.
@@ -40,7 +42,7 @@ on:
 
 if: >-
   github.event_name == 'workflow_dispatch' ||
-  contains(github.event.pull_request.labels.*.name, 'stage:judge')
+  github.event.label.name == 'stage:judge'
 
 permissions:
   # Copilot inference via the Actions token - no PAT, minted per run and
@@ -103,7 +105,7 @@ steps:
 
       pr="$(gh pr list --repo "$REPO" --state open \
               --label worksheet --label stage:judge \
-              --json number --jq '.[0].number // empty')"
+              --json number --jq 'sort_by(.number) | .[0].number // empty')"
 
       if [ -z "$pr" ]; then
         echo "No pull request is waiting at stage:judge. Nothing to gate."
@@ -136,8 +138,10 @@ safe-outputs:
     max: 1
   add-labels:
     target: "*"
+    # No stage:build. A build-owned FAIL goes to needs-human: the build stage
+    # can only open a fresh pull request, which would strand this one, reset
+    # the cycle counter, and never read the judge's findings.
     allowed:
-      - "stage:build"
       - "stage:voice"
       - "stage:review"
       - "ready-for-human"
@@ -157,7 +161,7 @@ safe-outputs:
   mark-pull-request-as-ready-for-review:
     target: "*"
   dispatch-workflow:
-    workflows: [aw-worksheet-build, aw-worksheet-voice, aw-worksheet-review]
+    workflows: [aw-worksheet-voice, aw-worksheet-review]
     max: 1
   missing-tool:
 ---
@@ -182,6 +186,15 @@ cat /tmp/gh-aw/agent/worksheet-judge/capture.json        # pull request number, 
 cat /tmp/gh-aw/agent/worksheet-judge/layout-report.json  # per-sheet geometry and every defect
 cat /tmp/gh-aw/agent/worksheet-judge/gate.log            # the gate's own output, run fresh for you
 ```
+
+If `capture.json` shows `"previous_judge_verdict": true`, this is a re-review:
+`/tmp/gh-aw/agent/worksheet-judge/judge-verdict.md` is your own last verdict on
+this pull request, as the judge workflow posted it. Check each of its findings
+is genuinely fixed, then judge the delta; say "re-review" in your verdict's
+round line. If it shows `"judge_verdict_unreadable": true`, your last verdict
+could not be read: judge from scratch, and say so. If `capture.json` lists
+`replaced_slots`, those images could not be captured: mark what you could not
+see as UNVERIFIED rather than reading a plain stand-in as a blank sheet.
 
 That gate output is **yours** — it was produced by this run, not pasted from a
 comment. Quote its final line verbatim in your verdict.
@@ -229,15 +242,21 @@ Post your `WORKSHEET JUDGE:` report as a comment, then:
 **On PASS** — add `ready-for-human`, remove `stage:judge`, and mark the pull
 request ready for review. Do not add a stage label.
 
-**On FAIL** — remove `stage:judge` and add **exactly one** of `stage:build`,
-`stage:voice` or `stage:review`, chosen by the routing table in your agent
-instructions. Where findings span stages, return to the earliest one and list
-the downstream findings so they are not lost. Then call `dispatch_workflow` for
-the matching workflow — `aw-worksheet-build`, `aw-worksheet-voice` or
-`aw-worksheet-review` — because a label alone will not wake it.
+**On FAIL** — remove `stage:judge`, then route by the owning stage from your
+agent instructions. Where findings span stages, the earliest one owns them; list
+the downstream findings so they are not lost.
 
-Then bump the cycle counter: read the current `cycles:N` label on this pull
-request, remove it, and add `cycles:N+1`.
+- **`voice` or `review`** — add `stage:voice` or `stage:review`, then call
+  `dispatch_workflow` for `aw-worksheet-voice` or `aw-worksheet-review`,
+  because a label alone will not wake it. That stage reads your verdict from
+  this pull request before it starts, so name exactly what it must fix.
+- **`build`** — add `needs-human`, add no stage label, and dispatch nothing.
+  The build stage cannot rework an open pull request; dispatching it would
+  open a duplicate built from scratch, reset the cycle counter and never see
+  your findings. Say plainly what has to be rebuilt.
+
+Then, on every FAIL, bump the cycle counter: read the current `cycles:N` label
+on this pull request, remove it, and add `cycles:N+1`.
 
 ## The cycle bound
 

@@ -71,7 +71,7 @@ on:
 if: >-
   github.event_name == 'workflow_dispatch' ||
   github.event_name == 'push' ||
-  contains(github.event.issue.labels.*.name, 'stage:build')
+  github.event.label.name == 'stage:build'
 
 permissions:
   # Copilot inference via the Actions token - no PAT, minted per run and
