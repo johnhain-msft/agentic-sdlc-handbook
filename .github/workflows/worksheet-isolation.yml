@@ -20,11 +20,13 @@ on:
       - '_quarto.yml'
       - 'worksheets/**'
       - '*.qmd'
+      - '.github/skills/worksheet-build/**'
   pull_request:
     paths:
       - '_quarto.yml'
       - 'worksheets/**'
       - '*.qmd'
+      - '.github/skills/worksheet-build/**'
   workflow_dispatch:
 
 permissions:
@@ -73,3 +75,16 @@ jobs:
           quarto render specimen.qmd
           test -f _output/specimen.html
           echo "OK: the worksheet project renders independently."
+
+      - name: Set up the layout gate
+        working-directory: .github/skills/worksheet-build
+        run: |
+          set -euo pipefail
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+
+      - name: The gate must still catch a deliberately broken worksheet
+        # A gate that passes everything is worse than no gate, because it
+        # manufactures confidence. This breaks one house rule at a time against
+        # the known-good specimen and fails if any defect goes undetected.
+        run: node .github/skills/worksheet-build/scripts/gate-mutation-test.mjs

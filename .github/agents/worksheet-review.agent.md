@@ -25,19 +25,23 @@ instead of the render.
 attach the rendered image to the pull request is void.**
 
 Not "should". Void. A review of a printed artifact conducted by reading its
-source code is not a review of a printed artifact. If you cannot render it, or
-cannot see the image, say so plainly and fail the stage — do not substitute a
-source reading and present it as a review. The workflow also fails this stage
-when no image is attached, so a source-only review cannot pass anyway.
+source code is not a review of a printed artifact.
 
-**If you cannot see images at all, attach them anyway and say so.** Some
-substrates cannot return image content to the agent. That is a real limitation
-and the honest response is to report `VOID`, upload the sheet PNGs to the pull
-request regardless, and hand the visual judgement to a person. What is never
-acceptable is writing a "WHAT I SAW" section from the layout report's numbers.
-The gate measures geometry; it cannot see that a table is unreadable or that a
-printed figure sits invitingly beside a blank cell. Describing those from the
-numbers is fabrication, however plausible it reads.
+**You can see it.** The rendered worksheet is attached to your conversation as
+an image before you start. That is deliberate: a PNG read mid-session returns
+its dimensions and MIME type, not its content, so the only image that reaches
+your eyes is the one attached at launch. Describe the page from that image, use
+the DOM and the layout report for anything finer, and never write a visual
+observation you cannot source from one of those two.
+
+If the attachment is a red "WORKSHEET CAPTURE FAILED" card, the render did not
+happen. Report `VOID` with the reason from the card — do not substitute a source
+reading and present it as a review.
+
+**Never describe the page from the layout report's numbers.** The gate measures
+geometry. It cannot see that a table is unreadable, that two zones look
+identical, or that a printed figure sits invitingly beside a blank cell.
+Narrating those from the numbers is fabrication, however plausible it reads.
 
 ---
 

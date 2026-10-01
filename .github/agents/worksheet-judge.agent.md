@@ -159,17 +159,28 @@ and guidance saying so — one short line labelled "off-switch" cannot satisfy i
 
 ### W6 — physical usability
 
-The review stage looked at the artifact. Confirm independently, from the
-rendered image and the layout report:
+**You can see the worksheet.** It is attached to your conversation as an image,
+re-rendered from this pull request's current head. Use your eyes, then confirm
+against the layout report:
 
 - Does the format match §8 "Room format"?
-- Does it print unclipped?
-- Are priors distinguishable from blanks?
-- Are fields writable?
+- Does it print unclipped — is anything spilling past a paper edge onto the
+  grey background?
+- At arm's length, with the words unreadable, can you still tell the printed
+  priors from the blank cells? That is house rule 1, and it is a visual test.
+- Does any printed figure sit beside a blank cell in a way that invites
+  somebody to copy it across? The gate cannot see this. You can.
+- Are the fields actually writable at printed size?
 
 You are not redoing the review stage's job in detail. You are checking that it
-was done at all, and that its claims match the artifact. **A review stage that
-attached no image did not run**, and that is S1 routed to `review`.
+was done at all, that its claims match the artifact in front of you, and that
+nothing it fixed broke something else. **A review stage that attached no image
+did not run**, and that is S1 routed to `review` — though a deterministic step
+should have stopped that before you were called.
+
+If the attached image is a red "WORKSHEET CAPTURE FAILED" card, you cannot run
+this probe. Say so, mark W6 UNVERIFIED, and do not infer usability from the
+layout report alone.
 
 ---
 

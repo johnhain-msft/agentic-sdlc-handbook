@@ -49,7 +49,17 @@ permissions:
   issues: read
   pull-requests: read
 
-engine: copilot
+engine:
+  id: copilot
+  # THE POINT OF THIS STAGE. Copilot's mid-session file read loads a PNG and
+  # reports its MIME type and dimensions but does NOT send the bytes to the
+  # model — measured: six screenshots would cost ~22,600 image tokens and the
+  # whole run's input was 8,857. `--attachment` DOES send the image, but it is
+  # applied at launch, so the capture pre-step below must produce the file
+  # first. Verified locally: a fresh Copilot CLI given only this attachment
+  # read the column headers, distinguished the tinted serif prior column from
+  # the hairline blank column, and read "† PRIOR — NOT A TARGET" off the page.
+  args: ["--attachment", "/tmp/gh-aw/agent/worksheet-review/full-page.png"]
 
 network: defaults
 
@@ -59,6 +69,20 @@ network: defaults
 # documented pattern for the case.
 checkout:
   - fetch: ["refs/pulls/open/*"]
+
+# Render the worksheet and put the screenshot where --attachment expects it,
+# BEFORE the agent launches. Deterministic work in a deterministic step; the
+# agent is left with the judgement. The script always leaves a readable PNG at
+# that path — a rendered failure card if anything goes wrong — so the agent
+# sees why rather than hitting a missing-file launch error.
+steps:
+  - name: Render the worksheet and capture it for the reviewer to SEE
+    env:
+      GH_TOKEN: ${{ github.token }}
+    run: |
+      .github/skills/worksheet-build/scripts/capture-for-review.sh \
+        "stage:review" /tmp/gh-aw/agent/worksheet-review
+
 tools:
   bash:
     - "*"
@@ -103,64 +127,71 @@ safe-outputs:
 
 # Review the rendered worksheet
 
-## Find your work
+## You are looking at the worksheet right now
 
-This stage is woken by `dispatch_workflow`, so there may be no triggering pull
-request in the event context. Find the work yourself:
+**The rendered worksheet is attached to this conversation as an image.** It was
+rendered, gated and screenshotted before you started. Look at it. Describe what
+you actually see before you judge anything.
+
+That image is `full-page.png` — every sheet at true size on the review
+background. Content spilling past a paper edge onto the grey is a layout
+defect, visible directly.
+
+Supporting facts, already produced for you:
 
 ```bash
-gh pr list --state open --label worksheet --label stage:review \
-  --json number --jq '.[0].number'
-# Credentials are stripped after checkout, so `gh pr checkout` cannot fetch.
-# The PR head was fetched for you already — check it out from the local ref:
-git checkout -B "pr-<number>" "refs/remotes/origin/pull/<number>/head"
-git diff --name-only origin/main...HEAD
+cat /tmp/gh-aw/agent/worksheet-review/capture.json        # pull request number, ws_id, gate result
+cat /tmp/gh-aw/agent/worksheet-review/layout-report.json  # per-sheet geometry and every defect
+cat /tmp/gh-aw/agent/worksheet-review/gate.log            # the gate's own output
 ```
 
-If there is no such pull request, call `noop` saying the queue is empty and
-stop. Pass the number you found as `pull_request_number` on every safe output.
+The pull request head is already checked out. Its number is in `capture.json`
+— pass it as `pull_request_number` on every safe output.
 
-## You must look at the artifact
+**If the attached image is a red "WORKSHEET CAPTURE FAILED" card**, the render
+did not happen. Report `VOID` with the reason from the card, add `needs-human`,
+and do not relabel to `stage:judge`.
+
+The mechanical gate is the **floor of your review, never the ceiling.** It
+measures geometry. It cannot see that a table is unreadable, that the fill order
+makes no sense to a human, that two zones look identical, or that a printed
+figure sits invitingly beside a blank cell. That is what you are for.
+
+## If you need a closer look
+
+The capture gave you the whole page at once. For detail on one sheet, the
+per-sheet PNGs are already on disk at
+`worksheets/_review/<ws_id>/sheet-NN.png`, and you can re-render or serve the
+worksheet yourself:
 
 ```bash
 .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id> --serve --port 8977
 ```
 
-That renders the sheet, runs the mechanical layout gate, writes one PNG per
-sheet to `worksheets/_review/<ws_id>/`, and serves the page at
-`http://localhost:8977/<ws_id>.html`.
+`playwright-cli` runs on the runner, so `http://localhost:8977/<ws_id>.html` is
+reachable directly — this workflow uses Playwright in CLI mode precisely so
+localhost works. Use it to measure, probe the DOM, or re-shoot after a fix.
 
-`playwright-cli` runs on the runner, so `http://localhost:8977` is reachable
-directly. Do not reach for MCP browser tools; this workflow uses Playwright in
-CLI mode precisely so localhost works.
+**Be honest about what a second look can and cannot give you.** Only the image
+attached at launch reached your eyes. A PNG you read mid-session returns its
+dimensions and MIME type, not its content. So: describe the page from the
+attached image, use the DOM and the layout report for anything finer, and never
+write a visual observation you cannot source from one of those two.
 
-Then drive a real browser against that localhost URL with `playwright-cli` in
-bash — emulate print media, screenshot each `.sheet` — and **open and look at
-every image**, both the ones the render script wrote and any you take yourself.
-Read `worksheets/_review/<ws_id>/layout-report.json` for the mechanical facts,
-and spec §8 "Room format" for the physical format this sheet claims to be.
-
-## Attaching the images is not optional
+## Attach the images to the pull request
 
 Upload every sheet PNG with the `upload_asset` tool, then post ONE comment that
 embeds each uploaded image with markdown `![sheet N](<url>)` and carries your
 `WORKSHEET REVIEW:` report.
 
-**Upload and embed the images even if you cannot see them yourself.** If the
-image viewer returns nothing you can read, that is a limitation of this
-substrate, not a reason to leave the pull request with no artifact on it. Attach
-them anyway, say plainly that you could not view them, and hand the visual
-judgement to a person. An unviewable image on the pull request is worth far more
-than no image at all.
+This is how a human sees the artifact, and it is also the judge's gate: a
+deterministic step refuses to judge a pull request that carries no embedded
+image, so a source-only review cannot pass. **Attach them even if a re-render
+failed and all you have is what you were shown at launch.**
 
-**A review with no attached image is void.** The judge workflow runs a
-deterministic check before its agent starts and refuses to judge a pull request
-that carries no embedded image, so a source-only review cannot pass. Reviewing
-the `.qmd` instead of the render does not satisfy this stage.
-
-If you genuinely cannot render, serve, or screenshot the worksheet, post the
-`VOID` form of the report saying exactly what failed, add `needs-human`, and do
-not relabel to `stage:judge`.
+If the attached capture was a failure card, post the `VOID` form of the report
+saying exactly what failed, add `needs-human`, and do not relabel to
+`stage:judge`.
 
 ## Then
 

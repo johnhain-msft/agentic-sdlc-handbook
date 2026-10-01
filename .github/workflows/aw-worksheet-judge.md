@@ -50,7 +50,14 @@ permissions:
   pull-requests: read
   issues: read
 
-engine: copilot
+engine:
+  id: copilot
+  # The judge sees the artifact too. Same mechanism as the review stage: a
+  # mid-session file read returns a PNG's dimensions, not its content, so the
+  # image must be attached at launch. The capture step below re-renders the
+  # worksheet from the pull request's CURRENT head, so the judge sees the
+  # POST-FIX state — not whatever the review stage looked at before it pushed.
+  args: ["--attachment", "/tmp/gh-aw/agent/worksheet-judge/full-page.png"]
 
 network: defaults
 
@@ -108,6 +115,13 @@ steps:
       echo "it on localhost, and attach the PNGs with markdown image syntax."
       exit 1
 
+  - name: Re-render the worksheet so the judge sees the current state
+    env:
+      GH_TOKEN: ${{ github.token }}
+    run: |
+      .github/skills/worksheet-build/scripts/capture-for-review.sh \
+        "stage:judge" /tmp/gh-aw/agent/worksheet-judge
+
 safe-outputs:
   add-comment:
     target: "*"
@@ -142,38 +156,51 @@ safe-outputs:
 
 # Judge the worksheet
 
-## Find your work
+## What you have been given
 
-This stage is woken by `dispatch_workflow`, so there may be no triggering pull
-request in the event context. Find the work yourself:
+**The rendered worksheet is attached to this conversation as an image.** It was
+re-rendered from this pull request's current head immediately before you
+started, so it is the state after every fix the earlier stages pushed — not
+whatever the review stage looked at.
+
+The pull request head is already checked out. Supporting facts:
 
 ```bash
-gh pr list --state open --label worksheet --label stage:judge \
-  --json number,labels --jq '.[0]'
-# Credentials are stripped after checkout, so `gh pr checkout` cannot fetch.
-# The PR head was fetched for you already — check it out from the local ref:
-git checkout -B "pr-<number>" "refs/remotes/origin/pull/<number>/head"
-git diff --name-only origin/main...HEAD
+cat /tmp/gh-aw/agent/worksheet-judge/capture.json        # pull request number, ws_id, gate result
+cat /tmp/gh-aw/agent/worksheet-judge/layout-report.json  # per-sheet geometry and every defect
+cat /tmp/gh-aw/agent/worksheet-judge/gate.log            # the gate's own output, run fresh for you
 ```
 
-If there is no such pull request, call `noop` saying the queue is empty and
-stop. Pass the number you found as `pull_request_number` on every safe output.
+That gate output is **yours** — it was produced by this run, not pasted from a
+comment. Quote its final line verbatim in your verdict.
 
-A deterministic step has already run before you and confirmed a rendered image
-is attached to this pull request. If it had not been, you would not be running.
+Pass the pull request number from `capture.json` as `pull_request_number` on
+every safe output.
+
+A deterministic step has already confirmed the review stage attached a rendered
+image to this pull request. If it had not, you would not be running.
 
 You have **no edit tool and no push output**. That is deliberate. Report
 findings with reproductions; you do not fix them.
 
 ## Run the gate yourself
 
+The capture step already ran it for you, fresh, on this pull request's current
+head. Read its output:
+
 ```bash
-.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
-cat worksheets/_review/<ws_id>/layout-report.json
+cat /tmp/gh-aw/agent/worksheet-judge/gate.log
+cat /tmp/gh-aw/agent/worksheet-judge/layout-report.json
 ```
 
-Quote its final line verbatim. "The gate passed" in someone else's comment is a
-claim, not evidence.
+Quote its final line verbatim. If you want to re-run it yourself, you may:
+
+```bash
+.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
+```
+
+What you must never do is quote "the gate passed" from someone else's comment.
+That is a claim, not evidence.
 
 ## Derive acceptance from the spec, not from the reports
 
