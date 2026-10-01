@@ -59,7 +59,15 @@ engine:
   # first. Verified locally: a fresh Copilot CLI given only this attachment
   # read the column headers, distinguished the tinted serif prior column from
   # the hairline blank column, and read "† PRIOR — NOT A TARGET" off the page.
-  args: ["--attachment", "/tmp/gh-aw/agent/worksheet-review/full-page.png"]
+  args:
+    - "--attachment"
+    - "/tmp/gh-aw/agent/worksheet-review/full-page.png"   # every sheet at once — overflow and overall shape
+    - "--attachment"
+    - "/tmp/gh-aw/agent/worksheet-review/sheet-01.png"    # full resolution — readable detail
+    - "--attachment"
+    - "/tmp/gh-aw/agent/worksheet-review/sheet-02.png"
+    - "--attachment"
+    - "/tmp/gh-aw/agent/worksheet-review/sheet-03.png"
 
 network: defaults
 
@@ -129,13 +137,20 @@ safe-outputs:
 
 ## You are looking at the worksheet right now
 
-**The rendered worksheet is attached to this conversation as an image.** It was
-rendered, gated and screenshotted before you started. Look at it. Describe what
-you actually see before you judge anything.
+**The rendered worksheet is attached to this conversation as four images.** They
+were rendered, gated and screenshotted before you started:
 
-That image is `full-page.png` — every sheet at true size on the review
-background. Content spilling past a paper edge onto the grey is a layout
-defect, visible directly.
+| Attachment | What it is | Use it for |
+|---|---|---|
+| `full-page.png` | every sheet at once, on the grey review background | overflow, overall shape, whether anything spills past a paper edge |
+| `sheet-01.png` … `sheet-03.png` | the first three sheets at full resolution | **detail** — prior vs blank at arm's length, field writability, option labels, type size |
+
+Look at them. Describe what you actually see before you judge anything.
+
+The full page is deliberately small — it is the overview. **Judge house rule 1
+from the per-sheet images, not from the full page**, and say which image a
+finding came from. If a card says a slot is unused, that worksheet simply has
+fewer than three sheets.
 
 Supporting facts, already produced for you:
 
@@ -148,7 +163,7 @@ cat /tmp/gh-aw/agent/worksheet-review/gate.log            # the gate's own outpu
 The pull request head is already checked out. Its number is in `capture.json`
 — pass it as `pull_request_number` on every safe output.
 
-**If the attached image is a red "WORKSHEET CAPTURE FAILED" card**, the render
+**If the attached images are red "WORKSHEET CAPTURE FAILED" cards**, the render
 did not happen. Report `VOID` with the reason from the card, add `needs-human`,
 and do not relabel to `stage:judge`.
 
@@ -189,9 +204,20 @@ deterministic step refuses to judge a pull request that carries no embedded
 image, so a source-only review cannot pass. **Attach them even if a re-render
 failed and all you have is what you were shown at launch.**
 
-If the attached capture was a failure card, post the `VOID` form of the report
-saying exactly what failed, add `needs-human`, and do not relabel to
-`stage:judge`.
+## When to advance, and when to stop
+
+**Advance in almost every case.** A finding that belongs to another stage is
+not a reason to stop the pipeline — it is a reason to write it down. Push any
+layout fixes, add `stage:judge`, remove `stage:review`, and call
+`dispatch_workflow` for `aw-worksheet-judge`. The judge reads your findings and
+routes them to the stage that owns them. That is its job, not yours.
+
+**Use `needs-human` only when you genuinely could not run**, meaning the
+attached capture was a failure card and there is no artifact to review. In that
+case post the `VOID` report, add `needs-human`, and do not relabel or dispatch.
+
+Stopping the pipeline on a finding you could have handed to the judge costs a
+full cycle and a human's attention for nothing.
 
 ## Then
 

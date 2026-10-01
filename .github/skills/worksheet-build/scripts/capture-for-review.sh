@@ -44,30 +44,39 @@ SHOT="$OUT_DIR/full-page.png"
 FACTS="$OUT_DIR/capture.json"
 
 # ---------------------------------------------------------------------------
+# A readable card, used both for hard failures and for unused sheet slots.
+# ---------------------------------------------------------------------------
+note_card() {
+  local msg="$1" out="$2" bg="${3:-#334155}"
+  node -e '
+    const { chromium } = require("playwright");
+    const [msg, out, bg] = process.argv.slice(1);
+    (async () => {
+      const b = await chromium.launch();
+      const p = await b.newPage({ viewportSize: { width: 1100, height: 320 } });
+      await p.setContent(`<body style="margin:0;font:22px/1.5 system-ui;background:${bg};color:#fff;padding:44px">
+        <div style="font-size:14px;letter-spacing:.2em;opacity:.8">WORKSHEET CAPTURE</div>
+        <div style="font-size:26px;margin-top:16px">${msg.replace(/[<>&]/g, "")}</div>
+      </body>`);
+      await p.screenshot({ path: out });
+      await b.close();
+    })();
+  ' "$msg" "$out" "$bg" 2>/dev/null || {
+    printf '\211PNG\r\n\032\n\0\0\0\rIHDR\0\0\0\1\0\0\0\1\10\6\0\0\0\37\25\304\211\0\0\0\nIDATx\234c\370\17\0\1\1\1\0\30\335\215\260\0\0\0\0IEND\256B`\202' > "$out"
+  }
+}
+
+# ---------------------------------------------------------------------------
 # A failure card the agent can actually read, rather than a missing file.
 # ---------------------------------------------------------------------------
 fail_card() {
   local reason="$1"
   echo "capture: $reason" >&2
-  node -e '
-    const { chromium } = require("playwright");
-    const reason = process.argv[1], out = process.argv[2];
-    (async () => {
-      const b = await chromium.launch();
-      const p = await b.newPage({ viewportSize: { width: 1100, height: 420 } });
-      await p.setContent(`<body style="margin:0;font:24px/1.5 system-ui;background:#b3261e;color:#fff;padding:48px">
-        <div style="font-size:15px;letter-spacing:.2em;opacity:.85">WORKSHEET CAPTURE FAILED</div>
-        <h1 style="font-size:40px;margin:12px 0 20px">No render to review</h1>
-        <div style="font-size:22px;background:rgba(0,0,0,.25);padding:18px;border-radius:8px">${reason.replace(/[<>&]/g, "")}</div>
-        <div style="margin-top:22px;font-size:17px;opacity:.9">Report VOID. Do not describe a worksheet you have not seen.</div>
-      </body>`);
-      await p.screenshot({ path: out });
-      await b.close();
-    })();
-  ' "$reason" "$SHOT" 2>/dev/null || {
-    # Even playwright failed. Emit a 1x1 PNG so --attachment still resolves.
-    printf '\211PNG\r\n\032\n\0\0\0\rIHDR\0\0\0\1\0\0\0\1\10\6\0\0\0\37\25\304\211\0\0\0\nIDATx\234c\370\17\0\1\1\1\0\30\335\215\260\0\0\0\0IEND\256B`\202' > "$SHOT"
-  }
+  note_card "NO RENDER TO REVIEW — ${reason}  ...  Report VOID. Do not describe a worksheet you have not seen." "$SHOT" "#b3261e"
+  # Every attachment slot must resolve or copilot fails to launch.
+  for n in 1 2 3; do
+    note_card "No render — see the main capture card." "$OUT_DIR/sheet-0$n.png" "#b3261e"
+  done
   printf '{"ok":false,"reason":%s}\n' "$(printf '%s' "$reason" | python3 -c 'import json,sys;print(json.dumps(sys.stdin.read()))')" > "$FACTS"
   exit 0   # never fail the job here — the agent reports VOID from the card
 }
@@ -105,6 +114,21 @@ SRC="worksheets/_review/$WS_ID/full-page.png"
 
 cp "$SRC" "$SHOT"
 cp -f "worksheets/_review/$WS_ID/layout-report.json" "$OUT_DIR/layout-report.json" 2>/dev/null || true
+
+# The full page shows every sheet at once, which is right for spotting overflow
+# and overall shape — but on a 5-sheet A3 worksheet the detail is too small to
+# judge house rule 1. Attach the first three sheets at full resolution as well.
+# The slot count is FIXED because --attachment is fixed at launch; unused slots
+# get a card saying so, which is clearer to the agent than a missing file.
+for n in 1 2 3; do
+  slot="$OUT_DIR/sheet-0$n.png"
+  src="worksheets/_review/$WS_ID/sheet-0$n.png"
+  if [ -f "$src" ]; then
+    cp "$src" "$slot"
+  else
+    note_card "This worksheet has fewer than $n sheets. Nothing to show in this slot." "$slot"
+  fi
+done
 
 python3 - "$PR" "$WS_ID" "$GATE" "$FACTS" <<'PY'
 import json, sys

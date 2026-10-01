@@ -57,7 +57,15 @@ engine:
   # image must be attached at launch. The capture step below re-renders the
   # worksheet from the pull request's CURRENT head, so the judge sees the
   # POST-FIX state — not whatever the review stage looked at before it pushed.
-  args: ["--attachment", "/tmp/gh-aw/agent/worksheet-judge/full-page.png"]
+  args:
+    - "--attachment"
+    - "/tmp/gh-aw/agent/worksheet-judge/full-page.png"   # every sheet at once — overflow and overall shape
+    - "--attachment"
+    - "/tmp/gh-aw/agent/worksheet-judge/sheet-01.png"    # full resolution — readable detail
+    - "--attachment"
+    - "/tmp/gh-aw/agent/worksheet-judge/sheet-02.png"
+    - "--attachment"
+    - "/tmp/gh-aw/agent/worksheet-judge/sheet-03.png"
 
 network: defaults
 
@@ -158,10 +166,14 @@ safe-outputs:
 
 ## What you have been given
 
-**The rendered worksheet is attached to this conversation as an image.** It was
-re-rendered from this pull request's current head immediately before you
-started, so it is the state after every fix the earlier stages pushed — not
-whatever the review stage looked at.
+**The rendered worksheet is attached to this conversation as four images** —
+`full-page.png` (every sheet at once) and `sheet-01..03.png` (the first three
+sheets at full resolution). They were re-rendered from this pull request's
+current head immediately before you started, so they are the state after every
+fix the earlier stages pushed — not whatever the review stage looked at.
+
+Judge detail from the per-sheet images; use the full page for overflow and
+overall shape.
 
 The pull request head is already checked out. Supporting facts:
 

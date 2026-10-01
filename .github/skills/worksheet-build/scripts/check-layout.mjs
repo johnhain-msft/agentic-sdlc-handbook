@@ -327,17 +327,36 @@ const report = await page.evaluate((PX_PER_MM) => {
   }
 
   // ---- fill order is legible --------------------------------------------
-  const badges = [...document.querySelectorAll('.fno')].map((b) => parseInt(b.innerText.trim(), 10));
-  const numbered = badges.filter((n) => Number.isFinite(n));
-  let sequenceOk = true;
-  for (let i = 1; i < numbered.length; i++) {
-    if (numbered[i] < numbered[i - 1]) { sequenceOk = false; break; }
+  // Badges are checked for ascending order WITHIN each table or block, not
+  // across the whole document. A multi-panel worksheet legitimately restarts
+  // numbering per panel — Panel A 1..9, Panel B 1..7 — and flagging that as a
+  // defect is a false positive that costs a review cycle.
+  const badgeGroups = [];
+  for (const g of document.querySelectorAll('table.ws, .ws-block')) {
+    if (g.closest('table.ws') && g.matches('.ws-block')) continue;
+    const ns = [...g.querySelectorAll('.fno')]
+      .map((b) => parseInt(b.innerText.trim(), 10))
+      .filter((n) => Number.isFinite(n));
+    if (ns.length > 1) badgeGroups.push(ns);
   }
-  if (numbered.length && !sequenceOk) {
+
+  const outOfOrder = [];
+  for (const ns of badgeGroups) {
+    for (let i = 1; i < ns.length; i++) {
+      if (ns[i] < ns[i - 1]) { outOfOrder.push(`${ns[i - 1]} then ${ns[i]}`); break; }
+    }
+  }
+
+  const numbered = [...document.querySelectorAll('.fno')]
+    .map((b) => parseInt(b.innerText.trim(), 10))
+    .filter((n) => Number.isFinite(n));
+
+  if (outOfOrder.length) {
     defects.push({
       severity: 'warn',
       rule: 'fill-order',
-      detail: 'Field-number badges do not run in ascending document order, so the fill order is not obvious from the page.',
+      detail: `Field-number badges run backwards inside ${outOfOrder.length} block(s), so the fill order is not obvious from the page. Numbering that restarts per panel is fine; numbering that goes backwards within one block is not.`,
+      samples: outOfOrder.slice(0, 5),
     });
   }
 
