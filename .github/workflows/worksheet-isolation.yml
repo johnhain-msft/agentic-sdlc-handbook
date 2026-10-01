@@ -21,12 +21,10 @@ on:
       - 'worksheets/**'
       - '*.qmd'
       - '.github/skills/worksheet-build/**'
+  # This check is required on main. Required checks that are skipped by path
+  # filtering stay pending and block unrelated pull requests, so every pull
+  # request must report an isolation result.
   pull_request:
-    paths:
-      - '_quarto.yml'
-      - 'worksheets/**'
-      - '*.qmd'
-      - '.github/skills/worksheet-build/**'
   workflow_dispatch:
 
 permissions:
