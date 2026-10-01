@@ -80,7 +80,7 @@ steps:
     env:
       GH_TOKEN: ${{ github.token }}
     run: |
-      .github/skills/worksheet-build/scripts/capture-for-review.sh \
+      bash .github/skills/worksheet-build/scripts/capture-for-review.sh \
         "stage:review" /tmp/gh-aw/agent/worksheet-review
 
 tools:
@@ -165,7 +165,7 @@ per-sheet PNGs are already on disk at
 worksheet yourself:
 
 ```bash
-.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id> --serve --port 8977
+bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id> --serve --port 8977
 ```
 
 `playwright-cli` runs on the runner, so `http://localhost:8977/<ws_id>.html` is

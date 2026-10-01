@@ -158,7 +158,7 @@ Two traps that have already caught one pass over this material:
 6. Render and gate it:
 
    ```bash
-   .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
+   bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
    ```
 
 7. **Fix every fatal defect and re-run until the gate passes.** Do not hand on a

@@ -43,5 +43,5 @@ ready before you start. You do not need to install them yourself.
 Render and gate a worksheet with:
 
 ```bash
-.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
+bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
 ```

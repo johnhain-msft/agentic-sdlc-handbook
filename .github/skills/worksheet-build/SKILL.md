@@ -27,7 +27,7 @@ and this skill disagree about content, the spec wins. Where they disagree about
 ```bash
 cp worksheets/_templates/worksheet-template.qmd worksheets/<ws_id>.qmd
 # ... fill it in from docs/worksheets/<ws_id>.md ...
-.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
+bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
 ```
 
 The render script renders, runs the layout gate, and writes one PNG per sheet
@@ -258,10 +258,10 @@ checks it a year later.
 
 ```bash
 # render + gate + screenshots
-.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
+bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
 
 # render + gate + leave a localhost server up for Playwright
-.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id> --serve --port 8977
+bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id> --serve --port 8977
 
 # gate only, against an already-rendered file or a localhost URL
 node .github/skills/worksheet-build/scripts/check-layout.mjs \

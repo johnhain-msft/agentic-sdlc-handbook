@@ -73,7 +73,7 @@ interest you exist to prevent.
 
 ```bash
 cd .github/skills/worksheet-build && npm install --no-audit --no-fund && cd -
-.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
+bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
 cat worksheets/_review/<ws_id>/layout-report.json
 ```
 

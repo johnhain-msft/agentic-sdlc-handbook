@@ -97,7 +97,7 @@ WS_ID="$(gh pr view "$PR" --json files --jq '.files[].path' 2>/dev/null \
 
 echo "capture: worksheet $WS_ID"
 
-.github/skills/worksheet-build/scripts/render-worksheet.sh "$WS_ID" > "$OUT_DIR/gate.log" 2>&1
+bash .github/skills/worksheet-build/scripts/render-worksheet.sh "$WS_ID" > "$OUT_DIR/gate.log" 2>&1
 GATE=$?
 
 SRC="worksheets/_review/$WS_ID/full-page.png"

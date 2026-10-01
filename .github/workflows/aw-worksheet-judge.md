@@ -119,7 +119,7 @@ steps:
     env:
       GH_TOKEN: ${{ github.token }}
     run: |
-      .github/skills/worksheet-build/scripts/capture-for-review.sh \
+      bash .github/skills/worksheet-build/scripts/capture-for-review.sh \
         "stage:judge" /tmp/gh-aw/agent/worksheet-judge
 
 safe-outputs:
@@ -196,7 +196,7 @@ cat /tmp/gh-aw/agent/worksheet-judge/layout-report.json
 Quote its final line verbatim. If you want to re-run it yourself, you may:
 
 ```bash
-.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
+bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
 ```
 
 What you must never do is quote "the gate passed" from someone else's comment.

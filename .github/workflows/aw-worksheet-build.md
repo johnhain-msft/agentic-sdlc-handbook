@@ -152,7 +152,7 @@ already installed. Do not install it again.
 6. Render and gate it until it passes:
 
    ```bash
-   .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
+   bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
    ```
 
 7. Create the pull request. Its body must carry your `BUILT:` report in full —

@@ -49,7 +49,7 @@ Narrating those from the numbers is fabrication, however plausible it reads.
 
 ```bash
 cd .github/skills/worksheet-build && npm install --no-audit --no-fund && cd -
-.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id> --serve --port 8977
+bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id> --serve --port 8977
 ```
 
 That renders the worksheet, runs the mechanical layout gate, writes one PNG per

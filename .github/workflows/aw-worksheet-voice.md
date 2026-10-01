@@ -132,7 +132,7 @@ number you found.
 3. Record the gate's counts before you start:
 
    ```bash
-   .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
+   bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
    ```
 
    Note `writable fields`, `printed priors` and `hedged figures`.
