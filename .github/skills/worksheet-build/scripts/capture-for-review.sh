@@ -85,9 +85,14 @@ echo "capture: pull request #$PR"
 git checkout -B "pr-$PR" "refs/remotes/origin/pull/$PR/head" 2>/dev/null \
   || fail_card "PR #${PR}'s head branch is not in the workspace. Is checkout.fetch configured?"
 
-WS_ID="$(git diff --name-only origin/main...HEAD -- 'worksheets/*.qmd' \
-          | head -n1 | xargs -r basename | sed 's/\.qmd$//')"
+WS_ID="$(gh pr view "$PR" --json files --jq '.files[].path' 2>/dev/null \
+          | grep -E '^worksheets/.+\.qmd$' | head -n1 \
+          | xargs -r basename | sed 's/\.qmd$//')"
 
+# Deliberately ask GitHub rather than diffing locally. The pull request head is
+# fetched shallow (--depth=1), so it shares no history with origin/main and a
+# three-dot `git diff origin/main...HEAD` finds nothing — which looked exactly
+# like "this PR changes no worksheet".
 [ -n "$WS_ID" ] || fail_card "PR #${PR} changes no worksheets/*.qmd file."
 
 echo "capture: worksheet $WS_ID"

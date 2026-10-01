@@ -113,7 +113,11 @@ Check that pull request out, and read the one worksheet it changes:
 # Credentials are stripped after checkout, so `gh pr checkout` cannot fetch.
 # The PR head was fetched for you already — check it out from the local ref:
 git checkout -B "pr-<number>" "refs/remotes/origin/pull/<number>/head"
-git diff --name-only origin/main...HEAD
+
+# Ask GitHub which file changed. Do NOT diff against origin/main: the PR head
+# is fetched shallow, so it shares no history with main and a three-dot diff
+# silently finds nothing.
+gh pr view <number> --json files --jq '.files[].path'
 ```
 
 Every safe output below takes an explicit `pull_request_number` — pass the
