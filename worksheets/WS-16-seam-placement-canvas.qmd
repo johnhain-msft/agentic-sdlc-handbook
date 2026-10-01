@@ -1,0 +1,143 @@
+---
+title: "Draw the Seam: Deterministic / Probabilistic Canvas"
+pagetitle: "WS-16-seam-placement-canvas"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 841mm; --sheet-h: 594mm; --sheet-margin: 20mm; }
+            @page { size: A1 landscape; margin: 20mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-16-seam-placement-canvas</b> &middot; review copy &middot; declared format <b>A1 landscape</b> &middot;
+  2 sheet(s). Sheet 1 is the wall canvas; sheet 2 is the register that travels with it.
+  Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Draw the Seam: Deterministic / Probabilistic Canvas</h1>
+      <p class="ws-sub">A marked-up architecture canvas with the seam explicitly drawn, plus a red-circle list of every consequential effect currently sitting on the wrong side.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-16-seam-placement-canvas</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>3</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Two Computers, One Program</i> &middot;
+    <code>handbook/ch16-deterministic-probabilistic-boundary.qmd</code> L18-41 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-two-computers">#sec-seam-two-computers</a>
+  </div>
+
+  <div class="ws-instruction">
+    Sketch your intended agentic system on this canvas. Write each box on a sticky and place it on the deterministic side or the probabilistic side of the heavy line &mdash; never on the line itself. Then draw and label each arrow that crosses the line in each direction: what goes in (prompts, tool schemas, grounded file contents) and what comes out (proposals, never direct writes). Anything consequential left on the probabilistic side gets a red dot: a design defect to be redrawn. Record every box and arrow on sheet 2.
+  </div>
+
+  <div class="ws-block" style="flex:1 1 auto;display:flex;flex-direction:column;min-height:0">
+    <h2>Canvas <span class="ws-block-note">one system per canvas &middot; stickies for boxes &middot; red dots for defects</span></h2>
+    <div style="display:flex;gap:4mm;flex:1 1 auto;min-height:0">
+      <div style="flex:0 0 17%;font-size:7.4pt">
+        <h2 style="font-size:9pt;margin:0 0 1.5mm">Block C &mdash; the two-computers legend <span class="ws-block-note">printed, read-only</span></h2>
+        <table class="ws"><colgroup><col style="width:20%"><col style="width:40%"><col style="width:40%"></colgroup><thead><tr><th>17 Legend row</th><th>18 Deterministic cell</th><th>19 Probabilistic cell</th></tr></thead><tbody><tr><td class="prior"><b>What it does</b><span class="prior-src">ch16 L28-35</span></td><td class="prior">File I/O, tool calls, schema validation, test execution, lockfile resolution, allowlist enforcement, audit emission<span class="prior-src">ch16 L30-35</span></td><td class="prior">Reads code, drafts prose, proposes diffs, summarizes intent, picks among options, generates plans<span class="prior-src">ch16 L30-35</span></td></tr><tr><td class="prior"><b>Failure mode</b><span class="prior-src">ch16 L28-35</span></td><td class="prior">Crash, exception, validation error — loud and traceable<span class="prior-src">ch16 L30-35</span></td><td class="prior">Confident plausible wrong — silent and unfalsifiable from inside the model<span class="prior-src">ch16 L30-35</span></td></tr><tr><td class="prior"><b>What you trust</b><span class="prior-src">ch16 L28-35</span></td><td class="prior">The exact output, byte for byte<span class="prior-src">ch16 L30-35</span></td><td class="prior">A distribution of outputs, conditioned on a prompt<span class="prior-src">ch16 L30-35</span></td></tr><tr><td class="prior"><b>What it costs</b><span class="prior-src">ch16 L28-35</span></td><td class="prior">Engineering hours per gate<span class="prior-src">ch16 L30-35</span></td><td class="prior">Tokens per call, plus the cost of every failure that crosses the seam unverified<span class="prior-src">ch16 L30-35</span></td></tr><tr><td class="prior"><b>What crosses → into it</b><span class="prior-src">ch16 L28-35</span></td><td class="prior">Structured prompts, declared tool schemas, file contents grounded by <code>compile</code>-time loaders<span class="prior-src">ch16 L30-35</span></td><td class="prior">Proposed actions (text), proposed writes (text), structured tool-call requests<span class="prior-src">ch16 L30-35</span></td></tr><tr><td class="prior"><b>What crosses ← out of it</b><span class="prior-src">ch16 L28-35</span></td><td class="prior">Parsed outputs validated against schema, writes filtered through an allowlist, flagged escalations to humans<span class="prior-src">ch16 L30-35</span></td><td class="prior">Nothing direct: every probabilistic output passes through deterministic validation before it has consequences<span class="prior-src">ch16 L30-35</span></td></tr></tbody></table>
+      </div>
+      <div class="canvas" style="position:relative">
+        <div class="canvas__half">
+          <h3>The deterministic computer &mdash; what you can audit</h3>
+          <div class="zone"></div>
+        </div>
+        <div class="canvas__seam"><span class="seam-label">the seam</span></div>
+        <div class="canvas__half">
+          <h3>The probabilistic computer &mdash; what you cannot</h3>
+          <div class="zone"></div>
+        </div>
+        <div style="position:absolute;left:12%;right:12%;top:30%;z-index:2">
+          <div class="channel"><span class="arrow">&rarr;</span><span><b>what crosses into the probabilistic side</b></span></div>
+        </div>
+        <div style="position:absolute;left:12%;right:12%;top:62%;z-index:2">
+          <div class="channel"><span class="arrow">&larr;</span><span><b>what crosses out of it</b> &mdash; <i>"Nothing direct: every probabilistic output passes through deterministic validation before it has consequences."</i> <span class="prior-src" style="display:inline">ch16 L35</span></span></div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:8pt;margin:1.5mm 0 0"><span class="redcircle"></span> &nbsp;<span class="defect-note">Red dot</span>
+      &mdash; a consequential effect sitting on the probabilistic side. A design defect to be redrawn, not a note.</p>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The probabilistic side is allowed to <i>propose</i> anything; it is allowed to <i>do</i> nothing." (ch16 L37)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-16-seam-placement-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Draw the Seam: Deterministic / Probabilistic Canvas</h1>
+      <p class="ws-sub">A marked-up architecture canvas with the seam explicitly drawn, plus a red-circle list of every consequential effect currently sitting on the wrong side.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-16-seam-placement-canvas</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>3</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Two Computers, One Program</i> &middot;
+    <code>handbook/ch16-deterministic-probabilistic-boundary.qmd</code> L18-41 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-two-computers">#sec-seam-two-computers</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A &mdash; box placement register <span class="ws-block-note">one row per sticky on the canvas &middot; box IDs must be stable and legible: two later sheets key off them</span></h2>
+    <table class="ws"><colgroup><col style="width:5%"><col style="width:10%"><col style="width:10%"><col style="width:13%"><col style="width:8%"><col style="width:8%"><col style="width:11%"><col style="width:11%"><col style="width:10%"><col style="width:14%"></colgroup><thead><tr><th><span class="fno">1</span> Box ID<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">Written on the sticky and on this row, so canvas and register read together.</span></th><th><span class="fno">2</span> Box name<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">The component as the team names it.</span></th><th><span class="fno">3</span> Side placed<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">One or the other. A box may not straddle the line.</span></th><th><span class="fno">4</span> What it does<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">This box's actual job, in one line.</span></th><th><span class="fno">5</span> Consequential side effect?<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">Tick where the effect "costs real money or real trust to undo".</span></th><th><span class="fno">6</span> Red circle<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">Required whenever column 5 is ticked <b>and</b> column 3 reads Probabilistic. Place a red dot on the sticky at the same time.</span></th><th><span class="fno">7</span> Redraw — where it must move to<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">The deterministic component that will execute the effect instead. The probabilistic box keeps only the proposal.</span></th><th><span class="fno">8</span> Who holds the write token for this effect today<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">The credential and the component that carries it. "The agent" is a valid and alarming answer.</span></th><th><span class="fno">9</span> Disposition<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">Redrawn / Accepted weak-form / Outstanding.</span></th><th><span class="fno">10</span> If accepted weak-form — why, and the compensating control<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">Mandatory whenever column 9 reads Accepted weak-form. The chapter allows the choice; it does not allow the choice to be implicit.</span></th></tr><tr><td class="prior">—<span class="prior-src">derived</span></td><td class="prior">—<span class="prior-src">org</span></td><td class="prior">—<span class="prior-src">ch16 L28-29</span></td><td class="prior">Legend reference, printed: <b>deterministic</b> — file I/O, tool calls, schema validation, test execution, lockfile resolution, allowlist enforcement, audit emission. <b>Probabilistic</b> — reads code, drafts prose, proposes diffs, summarises intent, picks among options, generates plans<span class="prior-src">ch16 L30</span></td><td class="prior">—<span class="prior-src">ch16 L37</span></td><td class="prior">—<span class="prior-src">ch16 L37</span></td><td class="prior">—<span class="prior-src">ch16 L37</span></td><td class="prior">—<span class="prior-src">ch16 L10, L145</span></td><td class="prior">—<span class="prior-src">ch16 L145</span></td><td class="prior">—<span class="prior-src">ch16 L145</span></td></tr></thead><tbody><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><div class="f-select"><span class="opt">Deterministic</span><span class="opt">Probabilistic</span></div></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>circled</span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">Redrawn</span><span class="opt">Accepted weak-form</span><span class="opt">Outstanding</span></div></td><td class="fill"><span class="f-text "></span><span class="f-text "></span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><div class="f-select"><span class="opt">Deterministic</span><span class="opt">Probabilistic</span></div></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>circled</span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">Redrawn</span><span class="opt">Accepted weak-form</span><span class="opt">Outstanding</span></div></td><td class="fill"><span class="f-text "></span><span class="f-text "></span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><div class="f-select"><span class="opt">Deterministic</span><span class="opt">Probabilistic</span></div></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>circled</span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">Redrawn</span><span class="opt">Accepted weak-form</span><span class="opt">Outstanding</span></div></td><td class="fill"><span class="f-text "></span><span class="f-text "></span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><div class="f-select"><span class="opt">Deterministic</span><span class="opt">Probabilistic</span></div></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>circled</span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">Redrawn</span><span class="opt">Accepted weak-form</span><span class="opt">Outstanding</span></div></td><td class="fill"><span class="f-text "></span><span class="f-text "></span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><div class="f-select"><span class="opt">Deterministic</span><span class="opt">Probabilistic</span></div></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>circled</span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">Redrawn</span><span class="opt">Accepted weak-form</span><span class="opt">Outstanding</span></div></td><td class="fill"><span class="f-text "></span><span class="f-text "></span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><div class="f-select"><span class="opt">Deterministic</span><span class="opt">Probabilistic</span></div></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>circled</span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">Redrawn</span><span class="opt">Accepted weak-form</span><span class="opt">Outstanding</span></div></td><td class="fill"><span class="f-text "></span><span class="f-text "></span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><div class="f-select"><span class="opt">Deterministic</span><span class="opt">Probabilistic</span></div></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>circled</span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">Redrawn</span><span class="opt">Accepted weak-form</span><span class="opt">Outstanding</span></div></td><td class="fill"><span class="f-text "></span><span class="f-text "></span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><div class="f-select"><span class="opt">Deterministic</span><span class="opt">Probabilistic</span></div></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>circled</span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">Redrawn</span><span class="opt">Accepted weak-form</span><span class="opt">Outstanding</span></div></td><td class="fill"><span class="f-text "></span><span class="f-text "></span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><div class="f-select"><span class="opt">Deterministic</span><span class="opt">Probabilistic</span></div></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>circled</span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">Redrawn</span><span class="opt">Accepted weak-form</span><span class="opt">Outstanding</span></div></td><td class="fill"><span class="f-text "></span><span class="f-text "></span></td></tr></tbody></table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; crossing-arrow register <span class="ws-block-note">one row per labelled arrow drawn across the seam</span></h2>
+    <table class="ws"><colgroup><col style="width:6%"><col style="width:15%"><col style="width:15%"><col style="width:20%"><col style="width:24%"><col style="width:20%"></colgroup><thead><tr><th><span class="fno">11</span> Arrow ID<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">Written on the canvas beside the arrow.</span></th><th><span class="fno">12</span> Direction<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">—</span></th><th><span class="fno">13</span> From box / to box<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">Box IDs from column 1.</span></th><th><span class="fno">14</span> What crosses<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">The actual payload on this arrow.</span></th><th><span class="fno">15</span> Deterministic validation applied (outbound only)<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">The named gate this payload passes through. Blank is a defect, not an omission.</span></th><th><span class="fno">16</span> Unvalidated crossing<span class="ws-block-note" style="display:block;font-weight:400;text-transform:none;letter-spacing:0">Ticked automatically when column 12 reads outbound and column 15 is blank. Mark the arrow on the canvas in red.</span></th></tr><tr><td class="prior">—<span class="prior-src">derived</span></td><td class="prior">—<span class="prior-src">ch16 L34-35</span></td><td class="prior">—<span class="prior-src">derived</span></td><td class="prior">Channel reference, printed: <b>inbound</b> — structured prompts, declared tool schemas, file contents grounded by <code>compile</code>-time loaders. <b>Outbound</b> — parsed outputs validated against schema, writes filtered through an allowlist, flagged escalations to humans<span class="prior-src">ch16 L34-35</span></td><td class="prior">—<span class="prior-src">ch16 L35</span></td><td class="prior">—<span class="prior-src">ch16 L35, L37</span></td></tr></thead><tbody><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">→ into the probabilistic side</span><span class="opt">← out of it</span></div></td><td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>unvalidated — red on the canvas</span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">→ into the probabilistic side</span><span class="opt">← out of it</span></div></td><td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>unvalidated — red on the canvas</span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">→ into the probabilistic side</span><span class="opt">← out of it</span></div></td><td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>unvalidated — red on the canvas</span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">→ into the probabilistic side</span><span class="opt">← out of it</span></div></td><td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>unvalidated — red on the canvas</span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">→ into the probabilistic side</span><span class="opt">← out of it</span></div></td><td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>unvalidated — red on the canvas</span></td></tr><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">→ into the probabilistic side</span><span class="opt">← out of it</span></div></td><td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-text "></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>unvalidated — red on the canvas</span></td></tr></tbody></table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block D &mdash; sheet footer <span class="ws-block-note">one per canvas</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:20%"><col style="width:50%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">20</span></td><td><b>System sketched</b><br>The agentic system this canvas is for. One system per canvas.</td><td class="prior">—<span class="prior-src">org</span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b>Sketched by / date</b></td><td class="prior">—<span class="prior-src">org</span></td><td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">22</span></td><td><b>Red circles raised / dispositioned / outstanding</b><br>Derived from columns 6 and 9. The outstanding count is the number that carries forward.</td><td class="prior">—<span class="prior-src">derived</span></td><td class="fill"><span class="f-computed" data-formula="raised: count of rows with column 6 ticked"></span><span class="f-computed" data-formula="dispositioned: column 9 reads Redrawn or Accepted weak-form"></span><span class="f-computed" data-formula="outstanding: raised &minus; dispositioned"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Design-review verdict</b><br>The place to find this out is the design review, not the post-mortem.</td><td class="prior">—<span class="prior-src">ch16 L147</span></td><td class="fill"><div class="f-select"><span class="opt">Redrawn clean</span><span class="opt">Accepted with compensating controls</span><span class="opt">Outstanding defects</span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The probabilistic side is allowed to <i>propose</i> anything; it is allowed to <i>do</i> nothing." (ch16 L37)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-16-seam-placement-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+```
