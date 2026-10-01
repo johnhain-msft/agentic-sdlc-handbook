@@ -50,10 +50,17 @@ fi
 if ! python3 - "$raw" "$repo" > "$OUT" <<'PY'
 import json, re, sys
 
+# gh-aw footers carry symbols such as U+2316; without this, Windows writes
+# redirected output as cp1252 and a real verdict fails to encode.
+sys.stdout.reconfigure(encoding="utf-8")
+
 comments = json.load(open(sys.argv[1], encoding="utf-8"))
 judge = f"{sys.argv[2]}/aw-worksheet-judge"
 verdict = ""
 for c in comments:  # oldest first, as the API returns them
+    # Safe outputs post as github-actions[bot] because GH_AW_GITHUB_TOKEN is
+    # not set. If that secret is ever added, comments come from its owner, and
+    # this check must change with it or every real verdict is dropped.
     if (c.get("user") or {}).get("login") != "github-actions[bot]":
         continue
     body = c.get("body") or ""

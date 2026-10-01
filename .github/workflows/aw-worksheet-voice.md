@@ -122,7 +122,7 @@ gh pr list --state open --label worksheet --label stage:voice \
 - **No such pull request** — call `noop` with a message saying the queue is
   empty, and stop. Do not invent work.
 - **More than one** — the command above already takes the lowest-numbered one.
-  The others will be picked up by their own dispatches.
+  Work on that one only.
 
 Check that pull request out, and read the one worksheet it changes:
 
@@ -150,9 +150,13 @@ If that file has anything in it, the judge has ruled on this pull request
 before, and it was posted by the judge workflow itself, not by a commenter. If
 it is a FAIL that routes findings to voice, the judge sent it back to you: fix
 every one of those findings before anything else, and name each in your report.
-Your usual pass comes second. If the file is empty, this is a first pass. If
-`judge-verdict-<number>.unreadable` exists instead, the comments could not be
-read: say in your report that you could not tell whether the judge returned it.
+Your usual pass comes second.
+
+**Check for `judge-verdict-<number>.unreadable` first.** If it exists, the
+comments could not be read, and the empty `.md` beside it means nothing: say in
+your report that you could not tell whether the judge returned this pull
+request. Only when there is no `.unreadable` file does an empty `.md` mean this
+is a first pass.
 
 ## What to do
 

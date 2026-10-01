@@ -114,8 +114,10 @@ fail_card() {
 }
 
 # ---------------------------------------------------------------------------
-# Oldest first, the policy every stage states: with several pull requests at
-# one stage, each dispatch takes the lowest-numbered and the rest wait theirs.
+# Oldest first, the policy every stage states. Only one pull request per stage
+# is reliable today: dispatched runs of a stage share one concurrency group and
+# cancel each other, so a second pull request waiting here is not guaranteed a
+# run of its own.
 PR="$(gh pr list --state open --label worksheet --label "$STAGE_LABEL" \
         --json number --jq 'sort_by(.number) | .[0].number // empty' 2>/dev/null)" || PR=""
 
