@@ -86,3 +86,11 @@ jobs:
         # manufactures confidence. This breaks one house rule at a time against
         # the known-good specimen and fails if any defect goes undetected.
         run: node .github/skills/worksheet-build/scripts/gate-mutation-test.mjs
+
+      - name: The build stage must be told the right worksheet for every trigger
+        # The build agent once read a stale request file instead of its own
+        # dispatch input, and spent a run on a worksheet that had already
+        # shipped. The ws_id is now resolved by a deterministic step; this
+        # proves it follows the trigger that fired, accepts every real spec,
+        # and refuses rather than guesses.
+        run: bash .github/skills/worksheet-build/scripts/resolve-build-request.test.sh

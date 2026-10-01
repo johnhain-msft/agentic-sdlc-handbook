@@ -1,7 +1,9 @@
 ---
 # Stage 1 of the worksheet factory: build one worksheet from its spec.
 #
-# Trigger: an issue labelled `stage:build`. The issue title carries the ws_id.
+# Trigger: an issue labelled `stage:build` (its `ws_id:` line, or its title,
+#          names the worksheet), a workflow_dispatch with a ws_id input, or a
+#          push of worksheets/_build-request.txt.
 # Output: a DRAFT pull request carrying worksheets/<ws_id>.qmd, labelled
 #         `stage:voice` so the next stage picks it up in a FRESH run.
 
@@ -50,14 +52,18 @@ on:
 #                        the only trigger that works while the factory is still
 #                        on a feature branch.
 #
-# To build a worksheet from a feature branch, write its ws_id into
+# To build a worksheet from a feature branch, set the ws_id line of
 # worksheets/_build-request.txt and push:
 #
-#   echo WS-06-team-readiness-scorecard > worksheets/_build-request.txt
+#   printf 'ws_id: WS-06-team-readiness-scorecard\nrequested: %s\n' \
+#     "$(date -u +%FT%RZ)" > worksheets/_build-request.txt
 #   git commit -am "build: WS-06" && git push
 #
 # One ws_id per push. That is deliberate — one worksheet per run, one fresh
 # context window per stage, which is the whole point of the four-stage split.
+#
+# Whichever way in, the resolve step below decides the ws_id from the trigger
+# that actually fired. The agent never works it out for itself.
 #
 # The later stages trigger on pull_request, which runs from the PR merge ref,
 # so they are branch-runnable already and need none of this.
@@ -78,6 +84,24 @@ permissions:
 engine: copilot
 
 network: defaults
+
+# Decide which worksheet this run builds BEFORE the agent starts, from the
+# trigger that actually fired. The agent cannot see a workflow_dispatch input:
+# left to work the ws_id out for itself, it read the push-path request file
+# instead, found a worksheet that had already shipped, and spent the run on a
+# no-op. This step fails the run, before any model call, unless it finds
+# exactly one ws_id with a build spec. Untrusted text reaches it only through
+# env, never through the script body.
+steps:
+  - name: Resolve which worksheet this run builds
+    env:
+      EVENT_NAME: ${{ github.event_name }}
+      INPUT_WS_ID: ${{ github.event.inputs.ws_id }}
+      ISSUE_TITLE: ${{ github.event.issue.title }}
+      ISSUE_BODY: ${{ github.event.issue.body }}
+    run: |
+      bash .github/skills/worksheet-build/scripts/resolve-build-request.sh \
+        /tmp/gh-aw/agent/worksheet-build
 
 tools:
   bash:
@@ -118,22 +142,35 @@ safe-outputs:
     max: 1
   add-comment:
     max: 1
+  # Disabled so that a build which produces nothing can never look like
+  # success. The no-op is how a build of the wrong worksheet once finished
+  # green with no trace: gh-aw reports an undeclared noop nowhere. Declaring
+  # `noop: {report-as-issue: true}` instead was tried and rejected, because in
+  # gh-aw v0.86.2 it also generates a daily agentics-maintenance workflow with
+  # write permissions and sets every failure issue to expire. With no noop, an
+  # unneeded build calls report_incomplete, which opens an issue.
+  noop: false
   missing-tool:
 ---
 
 # Build a worksheet from its spec
 
-Identify the worksheet by its `ws_id` — an identifier of the form
-`WS-NN-some-slug`. Where it comes from depends on how this run was triggered:
+## Your worksheet is already chosen
 
-- **push** — read `worksheets/_build-request.txt`. It carries a single
-  `ws_id:` line naming exactly one worksheet. Use that value and ignore the
-  `requested:` line, which exists only to make a re-request produce a diff.
-- **workflow_dispatch** — the `ws_id` input.
-- **issues** — the issue title or body.
+A deterministic step resolved it from this run's trigger before you started,
+and checked that its build spec exists:
 
-If you cannot determine a single `ws_id`, stop and say so. Do not guess, and do
-not build more than one worksheet in this run.
+```bash
+cat /tmp/gh-aw/agent/worksheet-build/ws_id          # the one worksheet to build
+cat /tmp/gh-aw/agent/worksheet-build/request.json   # its trigger and source
+```
+
+Build that worksheet and no other. **Never work the `ws_id` out for
+yourself** — not from `worksheets/_build-request.txt`, not from an issue, and
+not from what is already in `worksheets/`. Those go stale: a build that read
+the request file instead of its own dispatch input picked a worksheet that had
+already shipped and spent the run on a no-op. If the file is missing, call
+`missing_data` naming `/tmp/gh-aw/agent/worksheet-build/ws_id`, and stop.
 
 The toolchain (Quarto, Node, Chromium, the layout gate's dependencies) is
 already installed. Do not install it again.
@@ -176,5 +213,7 @@ instead report exactly which section and row you cannot satisfy, and why.
 
 ## If nothing is needed
 
-If the worksheet already exists and matches its spec, call the `noop` tool with
-a message saying so rather than opening an empty pull request.
+If the worksheet already exists and matches its spec, call `report_incomplete`
+saying so, rather than opening an empty pull request. Somebody asked for a
+build that was not needed, and they should see that. This workflow has no
+`noop` on purpose: a build that produces nothing must never look like success.
