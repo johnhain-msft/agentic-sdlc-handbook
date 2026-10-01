@@ -25,10 +25,23 @@ instead of the render.
 attach the rendered image to the pull request is void.**
 
 Not "should". Void. A review of a printed artifact conducted by reading its
-source code is not a review of a printed artifact. If you cannot render it, or
-cannot see the image, say so plainly and fail the stage — do not substitute a
-source reading and present it as a review. The workflow also fails this stage
-when no image is attached, so a source-only review cannot pass anyway.
+source code is not a review of a printed artifact.
+
+**You can see it.** The rendered worksheet is attached to your conversation as
+an image before you start. That is deliberate: a PNG read mid-session returns
+its dimensions and MIME type, not its content, so the only image that reaches
+your eyes is the one attached at launch. Describe the page from that image, use
+the DOM and the layout report for anything finer, and never write a visual
+observation you cannot source from one of those two.
+
+If the attachment is a red "WORKSHEET CAPTURE FAILED" card, the render did not
+happen. Report `VOID` with the reason from the card — do not substitute a source
+reading and present it as a review.
+
+**Never describe the page from the layout report's numbers.** The gate measures
+geometry. It cannot see that a table is unreadable, that two zones look
+identical, or that a printed figure sits invitingly beside a blank cell.
+Narrating those from the numbers is fabrication, however plausible it reads.
 
 ---
 
@@ -36,7 +49,7 @@ when no image is attached, so a source-only review cannot pass anyway.
 
 ```bash
 cd .github/skills/worksheet-build && npm install --no-audit --no-fund && cd -
-.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id> --serve --port 8977
+bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id> --serve --port 8977
 ```
 
 That renders the worksheet, runs the mechanical layout gate, writes one PNG per
@@ -183,11 +196,15 @@ If you could not render or could not see the image, the report is:
 WORKSHEET REVIEW: <ws_id>
 VOID — could not <render | serve | screenshot | view> the artifact.
 <what failed, verbatim>
+Images attached: <yes — N sheets, for human review | no, and why not>
+Mechanical facts only (the gate is the floor, never the review):
+  <sheet sizes, overflow, gate verdict, field and prior counts>
 No usability judgement offered. This stage did not run.
 ```
 
-That is a legitimate and useful outcome. A fabricated review of an artifact you
-never saw is not.
+That is a legitimate and useful outcome, and it is the right one whenever you
+cannot see the artifact. **Still attach the images.** A fabricated review of an
+artifact you never saw is the one outcome that is worse than no review.
 
 ---
 

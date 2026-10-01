@@ -18,6 +18,26 @@ on:
         description: "Worksheet id, e.g. WS-06-team-readiness-scorecard"
         required: true
         type: string
+  # gh-aw gates activation on the ACTOR's repository role, defaulting to
+  # [admin, maintainer, write]. When one stage wakes the next with
+  # dispatch_workflow the actor is github-actions[bot], whose repository
+  # permission level is `none`, so every hand-off was denied at pre_activation:
+  #
+  #   Required permissions: admin, maintainer, write
+  #   Repository permission level: none
+  #
+  # `bots:` does not solve this. The docs are explicit that the allowlist is
+  # verified through the repository collaborator API, that App identities are
+  # not collaborators, and that the check is only relaxed for
+  # repository_dispatch.
+  #
+  # `roles: all` is safe HERE because it is not what gates this workflow.
+  # Every trigger it has is already gated by GitHub itself: dispatching a
+  # workflow requires write access, and labelling a pull request requires at
+  # least triage. Removing gh-aw's additional actor check therefore does not
+  # widen who can start a run — it only stops the machine-to-machine chain
+  # being rejected.
+  roles: all
 
 # Three ways in, because GitHub scopes triggers differently:
 #
@@ -88,6 +108,14 @@ safe-outputs:
     # Raising it — which is what the E003 error message suggests — would hide
     # the bug that produced the extra files rather than fix it.
     max-patch-files: 3
+  # The doorbell for stage 2. A label alone cannot wake the next stage:
+  # GitHub does not create a workflow run for a `pull_request` `labeled` event
+  # raised by GITHUB_TOKEN. workflow_dispatch is a documented exception that
+  # always creates a run, so the chain is driven by dispatch and the labels
+  # remain the visible work queue.
+  dispatch-workflow:
+    workflows: [aw-worksheet-voice]
+    max: 1
   add-comment:
     max: 1
   missing-tool:
@@ -124,12 +152,17 @@ already installed. Do not install it again.
 6. Render and gate it until it passes:
 
    ```bash
-   .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
+   bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
    ```
 
 7. Create the pull request. Its body must carry your `BUILT:` report in full —
    the next three stages read it, and the judge reads it only to find what it
    omitted.
+8. Ring the doorbell for stage 2: call `dispatch_workflow` for
+   `aw-worksheet-voice`. Do this **after** `create_pull_request`, and only if
+   the pull request was created. The `stage:voice` label marks the work; the
+   dispatch is what actually wakes the next run, because GitHub does not raise
+   a workflow run for a label applied by `GITHUB_TOKEN`.
 
 ## Boundaries
 

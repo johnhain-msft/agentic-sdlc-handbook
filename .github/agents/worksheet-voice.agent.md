@@ -151,7 +151,7 @@ Four rules that matter more than the rest:
 After editing, re-render and re-run the gate:
 
 ```bash
-.github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
+bash .github/skills/worksheet-build/scripts/render-worksheet.sh <ws_id>
 ```
 
 Then diff your own change and read it:
