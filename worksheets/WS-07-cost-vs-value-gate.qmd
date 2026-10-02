@@ -207,7 +207,7 @@ format:
           <td class="ws-num"><span class="fno">19</span></td>
           <td><b>Register line</b></td>
           <td class="prior">—<span class="prior-src">derived</span></td>
-          <td class="fill"><span class="f-computed" data-formula="workflow / pool / owner / expected monthly cost / next re-check date"></span>Filed with the organisation&rsquo;s decision record.</td>
+          <td class="fill"><span class="f-computed" data-formula="workflow / pool / owner / expected monthly cost / next re-check date"></span>Filed with the organization&rsquo;s decision record.</td>
         </tr>
       </tbody>
     </table>
