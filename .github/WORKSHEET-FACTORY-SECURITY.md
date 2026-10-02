@@ -112,9 +112,11 @@ matters:
 If GitHub later documents an exemption for workflow-created pull requests,
 revisit this. The required check would be named `isolation` - the job id, not
 the workflow name `Worksheet isolation`, which would never match. Never require
-`build-deploy`: it fails on every run because this fork has never published
-`gh-pages`. The workflow has no `pull_request` path filter, because GitHub
-leaves a path-skipped required check pending and blocks the merge.
+`build-deploy`: it runs only on pushes to `main`, never on a pull request, so as
+a required check it would leave every pull request waiting. (It failed on every
+run until this fork's `gh-pages` branch was created on 2026-10-02.) The
+isolation workflow has no `pull_request` path filter, because GitHub leaves a
+path-skipped required check pending and blocks the merge.
 
 Primary references for this section:
 
