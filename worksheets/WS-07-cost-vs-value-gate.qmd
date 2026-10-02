@@ -1,0 +1,228 @@
+---
+title: "The Cost-vs-Value Gate — Approval Card for a Funded Workflow"
+pagetitle: "WS-07-cost-vs-value-gate"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+            .fnote { display:block; font-size:7.4pt; color:#454f59; margin-top:.8mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-07-cost-vs-value-gate</b> &middot; review copy &middot; declared format <b>A4 portrait</b> &middot;
+  2 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>The Cost-vs-Value Gate — Approval Card for a Funded Workflow</h1>
+      <p class="ws-sub">A standing approval card, one per workflow, that separates a governed spend from an ungoverned one and leaves an auditable record of each intentional bet.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-07-cost-vs-value-gate</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>11</b> &middot; type <b>checklist</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Agentic SDLC Bill</b>, <i>Pool the spend, gate the bets</i> &middot;
+    <code>handbook/ch07-the-agentic-sdlc-bill.qmd</code> L98 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch07-the-agentic-sdlc-bill.html#sec-bill-spend-pooling">#sec-bill-spend-pooling</a>
+  </div>
+
+  <div class="ws-instruction">
+    Fill one card for each proposed workflow. Complete it at install time, and complete it again at run
+    time. Work down the numbered fields: the named owner drafts it, and the approver in field 16 signs it.
+    Complete <code>WS-07-spend-pool-budget-model</code> first &mdash; field 3 picks from its four pools.
+    The pool owner named in field 3 is in the room when you approve.
+  </div>
+
+  <div class="ws-block">
+    <h2>Is it a bet, and is it justified? <span class="ws-block-note">fields 1&ndash;8</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:19%"><col style="width:26%"><col style="width:50%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Workflow name</b></td>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>Gate stage</b></td>
+          <td class="prior">The chapter gates at both install time and run time.<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">install time</span><span class="opt">run time</span></div><br>Tick the stage this completion covers.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Spend pool it draws on</b></td>
+          <td class="prior">Frontier R&amp;D / Per-workflow run / Everyday prompting / Local models<span class="prior-src">ch07 L102-105</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Frontier R&amp;D</span><span class="opt">Per-workflow run</span><span class="opt">Everyday prompting</span><span class="opt">Local models</span></div>Spell it exactly as on <code>WS-07-spend-pool-budget-model</code>.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>Fast path?</b></td>
+          <td class="prior">The chapter waves through workflows that run locally on local models, or whose cost gradient is low and well-evaluated.<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>fast path</span> Tick only if <b>both</b> tests are met: local or low-gradient, <b>and</b> evaluated.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>Evaluation evidence for the fast path</b></td>
+          <td class="prior">—<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><span class="f-text"></span>What &ldquo;well-evaluated&rdquo; means for this workflow, and where that evaluation lives.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>Expected outcome</b></td>
+          <td class="prior">—<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><span class="f-text"></span>What the workflow is for, in outcome terms, not activity terms.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Does the expected outcome justify the inferencing bill?</b></td>
+          <td class="prior"><b>&ldquo;does the expected outcome justify the inferencing bill?&rdquo;</b><span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet evidenced</span></div>Tick one.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Named owner</b></td>
+          <td class="prior">The chapter requires an owner before it ships.<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><span class="f-owner"></span>A named individual.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-07-cost-vs-value-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>The Cost-vs-Value Gate — Approval Card for a Funded Workflow</h1>
+      <p class="ws-sub">Reverse side: cost, stop condition, off-switch, approval and re-check.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-07-cost-vs-value-gate</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>11</b> &middot; type <b>checklist</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Cost, controls and approval <span class="ws-block-note">fields 9&ndash;19</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:19%"><col style="width:26%"><col style="width:50%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>Expected cost per run</b></td>
+          <td class="prior">—<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>Expected runs per month</b></td>
+          <td class="prior">—<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Expected cost per month</b></td>
+          <td class="prior">—<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><span class="f-computed" data-formula="field 9 &times; field 10"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Stop condition</b></td>
+          <td class="prior">The chapter requires one before it ships.<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><span class="f-text"></span>The specific, observable condition at which this workflow stops.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Off-switch</b></td>
+          <td class="prior">The chapter requires one before it ships.<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><span class="f-text"></span>The named mechanism, who can pull it, and how quickly it takes effect.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Monitoring that tells us whether the bet paid off</b></td>
+          <td class="prior">&ldquo;a bet is only sound once your monitoring can tell you whether it paid off&rdquo;<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><span class="f-text"></span>The specific dashboard, report or trace &mdash; one that exists.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>Reversibility</b></td>
+          <td class="prior">—<span class="prior-src"><code>WS-05-decision-rights-gate-matrix</code></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">reversible</span><span class="opt">recoverable at cost</span><span class="opt">irreversible</span></div>Use the vocabulary of <code>WS-05-decision-rights-gate-matrix</code> unchanged.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td>
+          <td><b>Approver</b></td>
+          <td class="prior">—<span class="prior-src">ch07 L98</span></td>
+          <td class="fill tall"><span class="f-owner"></span><span class="f-sign"></span>Who approved at install; re-signed at the run-time re-check.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td>
+          <td><b>Install-time approval date</b></td>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td>
+          <td><b>Next run-time re-check date</b></td>
+          <td class="prior">—<span class="prior-src">ch07 L98</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>Mandatory. A card with no re-check date is a one-time approval, not a gate.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td>
+          <td><b>Register line</b></td>
+          <td class="prior">—<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-computed" data-formula="workflow / pool / owner / expected monthly cost / next re-check date"></span>Filed with the organization&rsquo;s decision record.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "Any spend beyond the baseline playbook is an intentional bet — and a bet is only sound
+    once your monitoring can tell you whether it paid off." (ch07 L98)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-07-cost-vs-value-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
