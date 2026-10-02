@@ -126,6 +126,8 @@ The agent team is distributed as the [`handbook-agents`](https://github.com/dani
 
 The PDF and EPUB are served from the `gh-pages` branch via GitHub Pages. Kit.com email links point to stable URLs that always resolve to the latest version — no per-release URL updates needed.
 
+CI (`.github/workflows/publish.yml`) rebuilds the PDF and EPUB and publishes them on every push to `main` that changes the book. To build them on your own machine and tag a version instead:
+
 ```bash
 # 1. Build PDF/EPUB locally (requires Chromium for Mermaid diagrams)
 ./scripts/build-downloads.sh

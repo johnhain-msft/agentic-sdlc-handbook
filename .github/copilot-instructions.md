@@ -6,29 +6,26 @@ This is a Quarto book ("The Agentic SDLC Handbook") published to GitHub Pages at
 
 ## Build & deploy workflow
 
-### HTML (automated via CI)
+### CI builds all three formats
 
-Every push to `main` triggers `.github/workflows/publish.yml`:
-1. Renders HTML only (`quarto render --to html`)
-2. Restores PDF and EPUB from the previous `gh-pages` deploy
-3. Publishes everything to `gh-pages` branch
+`.github/workflows/publish.yml` runs on every push to `main` that can change the book. A push that only touches `worksheets/`, `docs/` or `.github/` does not trigger it, unless it changes `publish.yml` itself. It can also be run by hand from the Actions tab.
 
-CI does NOT render PDF or EPUB — Mermaid diagrams require local Chromium and are too slow in CI.
+Its jobs:
 
-### PDF & EPUB (local build, manual push)
+1. `build-deploy` renders HTML (`quarto render --to html`), carries the current PDF and EPUB across from `gh-pages`, and publishes. It takes about a minute.
+2. `downloads` runs alongside it. It renders the PDF and EPUB on the runner, with TinyTeX for LaTeX and Chrome Headless Shell for Mermaid→PNG, then strips the web-only download chapter with `scripts/strip-blank-page.py`.
+3. `deploy-downloads` commits the new PDF and EPUB to `gh-pages` once both jobs pass.
 
-```bash
-./scripts/build-downloads.sh
-```
+If `downloads` fails, the site still updates with the previous PDF and EPUB, and the run shows red. Only `main` deploys. A manual run with **deploy** unticked builds the PDF and EPUB and uploads them as an artifact without publishing anything.
 
-This renders PDF and EPUB locally using Quarto + TinyTeX + Chromium (for Mermaid→PNG). After building, push the files to `gh-pages`:
+### PDF & EPUB on your own machine (optional)
 
 ```bash
-git stash && git checkout gh-pages
-cp _book/*.pdf _book/*.epub .
-git add *.pdf *.epub && git commit -m 'chore: update PDF/EPUB' && git push
-git checkout main && git stash pop
+./scripts/build-downloads.sh   # needs Quarto, TinyTeX and Chrome
+./scripts/publish.sh           # pushes them to gh-pages and tags the version
 ```
+
+CI makes this unnecessary for routine changes. The scripts are for a release you want to tag by hand.
 
 ### Download URLs (stable, always latest)
 
@@ -40,11 +37,11 @@ git checkout main && git stash pop
 
 | File | Purpose |
 |------|---------|
-| `_quarto.yml` | Book config — chapters, formats, analytics, footer CTA |
+| `_quarto.yml` | Book config — chapters, formats, footer CTA |
 | `index.qmd` | Preface — "Why This Book Exists", author bio, download CTA |
 | `download.qmd` | Download page with email signup form |
-| `scripts/build-downloads.sh` | Local PDF/EPUB build script |
-| `.github/workflows/publish.yml` | CI — HTML render + deploy to gh-pages |
+| `scripts/build-downloads.sh` | Optional local PDF/EPUB build |
+| `.github/workflows/publish.yml` | CI — renders HTML, PDF and EPUB and deploys them to gh-pages |
 
 ## Content conventions
 

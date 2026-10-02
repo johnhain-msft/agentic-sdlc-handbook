@@ -2,7 +2,8 @@
 set -euo pipefail
 
 # Build PDF and EPUB locally, then push them to gh-pages.
-# Mermaid diagrams require local Chrome/Chromium — too slow for CI.
+# CI does this on every push to main that changes the book
+# (.github/workflows/publish.yml); this script is for a local build.
 #
 # Usage: ./scripts/build-downloads.sh
 
