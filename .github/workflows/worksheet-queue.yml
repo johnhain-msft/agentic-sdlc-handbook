@@ -14,10 +14,20 @@
 #
 # Every run does the whole job and reads nothing from its event, so it does
 # not matter which trigger fired, or that GitHub drops a pending run when a
-# newer one queues behind it. The push trigger is what makes a merge start the
-# next build: GitHub holds pull_request runs on the factory's own pull requests
-# (opened by github-actions[bot]) for approval, but the push of a person's
-# merge to main runs without one.
+# newer one queues behind it.
+#
+# Triggers:
+#   push to main under worksheets/   a worksheet merged: close its issue, start the next
+#   worksheet-queued label           a worksheet joins the queue
+#   closing a stage:build issue      a person dropped a worksheet: start the next
+#   schedule, every 6 hours          the backstop, e.g. a build that opened no pull request
+#   workflow_dispatch                by hand
+#
+# Deliberately no pull_request trigger. For a pull request closed without
+# merging, GitHub takes the workflow file from that pull request's merge ref,
+# which can lag main: #13's still carried the pre-reconcile queue after the
+# reconciling one merged. Every trigger above uses the copy on main, except a
+# dispatch, which uses the branch it is run on.
 #
 # ONE worksheet at a time. Dispatched runs of a stage share one concurrency
 # group and cancel each other, so two pull requests in the stages at once would
@@ -34,10 +44,8 @@ on:
     branches: [main]
     paths:
       - 'worksheets/**'
-  pull_request:
-    types: [closed]
   issues:
-    types: [labeled]
+    types: [labeled, closed]
   schedule:
     - cron: '17 */6 * * *'
   workflow_dispatch:
@@ -56,20 +64,19 @@ concurrency:
 
 jobs:
   dispatch-next:
-    # A fork's pull request gets a read-only token and could only fail here;
-    # a label other than worksheet-queued changes nothing in the queue.
+    # Of issue events, only a worksheet joining the queue or an issue that held
+    # a slot closing can change what the queue should do.
     if: >-
-      (github.event_name != 'pull_request' ||
-       github.event.pull_request.head.repo.full_name == github.repository) &&
-      (github.event_name != 'issues' || github.event.label.name == 'worksheet-queued')
+      github.event_name != 'issues' ||
+      (github.event.action == 'labeled' && github.event.label.name == 'worksheet-queued') ||
+      (github.event.action == 'closed' && contains(github.event.issue.labels.*.name, 'stage:build'))
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - name: Check out main
         uses: actions/checkout@v4
         with:
-          # Explicitly main: a closed pull request's merge ref may be gone,
-          # and "already built" means already on main.
+          # Explicitly main: "already built" means already on main.
           ref: ${{ github.event.repository.default_branch }}
           sparse-checkout: |
             .github/skills/worksheet-build/scripts

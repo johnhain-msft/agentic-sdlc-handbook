@@ -81,13 +81,19 @@ echo "the queue starts the next worksheet by itself, one at a time"
 queue="$WF/worksheet-queue.yml"
 q_ok=1
 for want in 'actions: write' 'MAX_IN_FLIGHT: 1' 'ref: ${{ github.event.repository.default_branch }}' \
-            'github.event.pull_request.head.repo.full_name == github.repository' \
             "github.event.label.name == 'worksheet-queued'" \
+            'types: [labeled, closed]' \
+            "github.event.action == 'closed' && contains(github.event.issue.labels.*.name, 'stage:build')" \
             'push:' 'branches: [main]' "- 'worksheets/**'" \
             'scripts/promote-queue.sh'; do
   if [ "$(count "$queue" "$want")" -lt 1 ]; then q_ok=0; bad "the queue workflow lacks: $want"; fi
 done
-[ "$q_ok" -eq 1 ] && ok "the queue dispatches builds one at a time, from main, on every merge's push to main, and ignores forks and other labels"
+[ "$q_ok" -eq 1 ] && ok "the queue dispatches builds one at a time, from main, when a merge reaches main or a slot-holding issue closes, and ignores other labels"
+if [ "$(count "$queue" 'pull_request')" -eq 0 ]; then
+  ok "the queue has no pull_request trigger, so a stale merge ref can never run an old copy of it"
+else
+  bad "the queue triggers on pull_request: a pull request closed unmerged would run the queue from its merge ref, which can lag main"
+fi
 
 echo "every test runs in CI"
 iso="$WF/worksheet-isolation.yml"
