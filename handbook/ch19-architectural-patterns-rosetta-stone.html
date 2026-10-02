@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>19&nbsp; Architectural Patterns: A Rosetta Stone – The Agentic SDLC Handbook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../handbook/ch20-anti-patterns-and-failure-modes.html" rel="next">
+<link href="../handbook/ch18-the-execution-meta-process.html" rel="prev">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-21d6fceeb25172fe2fb34cb0b56a437d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="../agentic-sdlc-handbook/favicon.svg">
+<link rel="apple-touch-icon" href="../agentic-sdlc-handbook/apple-touch-icon.png">
+<meta name="dc.rights" content="CC BY-NC-ND 4.0">
+<meta name="dc.rights.uri" content="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2DPKEV68VR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2DPKEV68VR');
+</script>
+<style>
+  /* Mermaid diagram readability — light mode */
+  :root {
+    --mermaid-node-bg-color: #f0f4f8 !important;
+    --mermaid-node-fg-color: #1a202c !important;
+    --mermaid-label-fg-color: #1a202c !important;
+    --mermaid-label-bg-color: #ffffff !important;
+    --mermaid-fg-color: #1a202c !important;
+    --mermaid-edge-color: #718096 !important;
+  }
+  /* Mermaid diagram readability — dark mode */
+  body.quarto-dark {
+    --mermaid-bg-color: transparent !important;
+    --mermaid-node-bg-color: #2d3748 !important;
+    --mermaid-node-fg-color: #e2e8f0 !important;
+    --mermaid-label-fg-color: #e2e8f0 !important;
+    --mermaid-label-bg-color: #1a202c !important;
+    --mermaid-fg-color: #e2e8f0 !important;
+    --mermaid-edge-color: #a0aec0 !important;
+  }
+  /* Mermaid lightbox — click to expand any mermaid figure */
+  figure.figure:has(svg.mermaid-js) { cursor: zoom-in; }
+  figure.figure:has(svg.mermaid-js):hover { outline: 1px dashed #888; outline-offset: 4px; }
+  #mermaid-lightbox-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+    z-index: 10000; display: none; align-items: center; justify-content: center;
+    padding: 2rem; cursor: zoom-out; flex-direction: column;
+  }
+  #mermaid-lightbox-overlay.open { display: flex; }
+  #mermaid-lightbox-overlay .ml-stage {
+    max-width: 95vw; max-height: 90vh;
+    background: #fff; padding: 1.5rem; border-radius: 8px;
+    overflow: auto; cursor: default;
+  }
+  body.quarto-dark #mermaid-lightbox-overlay .ml-stage { background: #1a202c; }
+  /* Render SVG at intrinsic viewBox dimensions; stage scrolls if larger than viewport */
+  #mermaid-lightbox-overlay .ml-stage svg {
+    display: block; width: auto; height: auto;
+    max-width: none; max-height: none;
+  }
+  #mermaid-lightbox-overlay .ml-caption {
+    color: #fff; max-width: 95vw; margin-top: 1rem;
+    font-size: 0.9rem; text-align: center;
+  }
+  #mermaid-lightbox-overlay .ml-close {
+    position: absolute; top: 1rem; right: 1.5rem;
+    background: none; border: none; color: #fff;
+    font-size: 2rem; cursor: pointer; line-height: 1;
+  }
+</style>
+<script>
+  // Mermaid lightbox: wraps mermaid SVGs in a click-to-expand overlay.
+  // Quarto's built-in lightbox only handles <img>; this shim covers <svg> mermaid output.
+  document.addEventListener('DOMContentLoaded', function () {
+    var overlay = document.createElement('div');
+    overlay.id = 'mermaid-lightbox-overlay';
+    overlay.innerHTML = '<button class="ml-close" aria-label="Close">&times;</button><div class="ml-stage"></div><div class="ml-caption"></div>';
+    document.body.appendChild(overlay);
+    var stage = overlay.querySelector('.ml-stage');
+    var cap = overlay.querySelector('.ml-caption');
+    function close() { overlay.classList.remove('open'); stage.innerHTML = ''; cap.textContent = ''; }
+    overlay.addEventListener('click', function (e) { if (e.target === overlay || e.target.classList.contains('ml-close')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('open')) close(); });
+    function wireFigures() {
+      document.querySelectorAll('svg.mermaid-js').forEach(function (svg) {
+        var fig = svg.closest('figure.figure');
+        if (!fig || fig.dataset.mlWired) return;
+        fig.dataset.mlWired = '1';
+        fig.title = 'Click to expand';
+        fig.addEventListener('click', function (ev) {
+          if (ev.target.closest('a')) return;
+          ev.preventDefault();
+          var clone = svg.cloneNode(true);
+          clone.removeAttribute('style');
+          clone.removeAttribute('width');
+          clone.removeAttribute('height');
+          // Use viewBox to derive intrinsic width; size the SVG generously for readability
+          var vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(parseFloat);
+          if (vb.length === 4 && vb[2] > 0 && vb[3] > 0) {
+            var ratio = vb[2] / vb[3];
+            var maxH = window.innerHeight * 0.85;
+            var maxW = window.innerWidth * 0.9;
+            // Prefer using the full available width unless that overflows height
+            var w = maxW;
+            var h = w / ratio;
+            if (h > maxH) { h = maxH; w = h * ratio; }
+            // Floor at a comfortable readable size; stage scrolls if it exceeds viewport
+            w = Math.max(w, Math.min(1400, vb[2]));
+            h = w / ratio;
+            clone.setAttribute('width', w);
+            clone.setAttribute('height', h);
+          }
+          stage.innerHTML = '';
+          stage.appendChild(clone);
+          var capEl = fig.querySelector('figcaption');
+          cap.textContent = capEl ? capEl.textContent.trim() : '';
+          overlay.classList.add('open');
+        });
+      });
+    }
+    wireFigures();
+    // Re-wire when mermaid finishes async rendering
+    new MutationObserver(wireFigures).observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+
+
+<link rel="stylesheet" href="../styles/handbook-cover.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../handbook/ch09-part-iii-preface.html">Part III: For Practitioners</a></li><li class="breadcrumb-item"><a href="../handbook/ch19-architectural-patterns-rosetta-stone.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Architectural Patterns: A Rosetta Stone</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">The Agentic SDLC Handbook</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/danielmeppiel/agentic-sdlc-handbook" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../download.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Download</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reading-paths.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading paths</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: The Foundation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch01-the-agentic-sdlc-thesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The Agentic SDLC Thesis</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: For Leaders</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch02-the-ai-native-landscape.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The AI-Native Landscape</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch03-the-business-case.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Business Case</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch04-the-reference-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agentic SDLC Reference Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch05-governance-for-ai-assisted-delivery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Governance for AI-Assisted Delivery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch06-team-structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Team Structures for AI-Augmented Delivery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch07-the-agentic-sdlc-bill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Agentic SDLC Bill</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch08-planning-the-transition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Planning the Transition</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: For Practitioners</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch09-part-iii-preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">A Map for Part III</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch10-the-practitioners-mindset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The Practitioner’s Mindset</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch11-the-runtime-machine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Agentic Runtime Machine</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch12-the-instrumented-codebase.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Instrumented Codebase</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch13-the-prose-specification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The PROSE Constraints</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch14-the-load-lifecycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The Load Lifecycle</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch15-attention-and-context-economy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Attention and Context Economy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch16-deterministic-probabilistic-boundary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">The Deterministic/Probabilistic Boundary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch17-multi-agent-orchestration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Multi-Agent Orchestration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch18-the-execution-meta-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The Execution Meta-Process</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch19-architectural-patterns-rosetta-stone.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Architectural Patterns: A Rosetta Stone</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch20-anti-patterns-and-failure-modes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Anti-Patterns and Failure Modes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch21-primitives-as-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Primitives as Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch22-the-reference-architecture-earned.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">The Reference Architecture, Earned</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: Case Studies</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-apm-overhaul.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">The APM Auth + Logging Overhaul</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-handbook-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Writing a ~68,000-Word Book with Agent Fleets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-publishing-pipeline.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">The Publishing Pipeline</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-growth-engine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Building a Growth Engine</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Closing</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch27-what-comes-next.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">What Comes Next</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/appendix-a-cross-harness-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">The Cross-Harness Reference</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/appendix-b-genesis-worked-example.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Genesis worked example: Panel re-architecture</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#thesis" id="toc-thesis" class="nav-link active" data-scroll-target="#thesis"><span class="header-section-number">19.1</span> Thesis</a></li>
+  <li><a href="#audience-and-how-to-read-this-chapter" id="toc-audience-and-how-to-read-this-chapter" class="nav-link" data-scroll-target="#audience-and-how-to-read-this-chapter"><span class="header-section-number">19.2</span> Audience and how to read this chapter</a></li>
+  <li><a href="#sec-layered-model" id="toc-sec-layered-model" class="nav-link" data-scroll-target="#sec-layered-model"><span class="header-section-number">19.3</span> 1. The layered model of an agentic runtime</a>
+  <ul class="collapse">
+  <li><a href="#sec-lens-reconciliation" id="toc-sec-lens-reconciliation" class="nav-link" data-scroll-target="#sec-lens-reconciliation"><span class="header-section-number">19.3.1</span> Lens reconciliation: 5-layer / 4-layer / 7-layer</a></li>
+  </ul></li>
+  <li><a href="#reading-the-rosetta-stone" id="toc-reading-the-rosetta-stone" class="nav-link" data-scroll-target="#reading-the-rosetta-stone"><span class="header-section-number">19.4</span> 2. Reading the Rosetta Stone</a></li>
+  <li><a href="#sec-composition-patterns" id="toc-sec-composition-patterns" class="nav-link" data-scroll-target="#sec-composition-patterns"><span class="header-section-number">19.5</span> 3. Composition layer</a></li>
+  <li><a href="#sec-assembly-patterns" id="toc-sec-assembly-patterns" class="nav-link" data-scroll-target="#sec-assembly-patterns"><span class="header-section-number">19.6</span> 3′. Assembly layer</a></li>
+  <li><a href="#sec-dispatch-patterns" id="toc-sec-dispatch-patterns" class="nav-link" data-scroll-target="#sec-dispatch-patterns"><span class="header-section-number">19.7</span> 4. Dispatch and orchestration layer</a></li>
+  <li><a href="#sec-boundary-patterns" id="toc-sec-boundary-patterns" class="nav-link" data-scroll-target="#sec-boundary-patterns"><span class="header-section-number">19.8</span> 5. Boundary layer</a></li>
+  <li><a href="#sec-recovery-patterns" id="toc-sec-recovery-patterns" class="nav-link" data-scroll-target="#sec-recovery-patterns"><span class="header-section-number">19.9</span> 6. Recovery and observability layer</a></li>
+  <li><a href="#sec-decision-matrix" id="toc-sec-decision-matrix" class="nav-link" data-scroll-target="#sec-decision-matrix"><span class="header-section-number">19.10</span> 7. Per-layer decision matrix</a></li>
+  <li><a href="#sec-out-of-scope" id="toc-sec-out-of-scope" class="nav-link" data-scroll-target="#sec-out-of-scope"><span class="header-section-number">19.11</span> 8. What this chapter intentionally does not catalogue</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/danielmeppiel/agentic-sdlc-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../handbook/ch09-part-iii-preface.html">Part III: For Practitioners</a></li><li class="breadcrumb-item"><a href="../handbook/ch19-architectural-patterns-rosetta-stone.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Architectural Patterns: A Rosetta Stone</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Architectural Patterns: A Rosetta Stone</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="thesis" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="thesis"><span class="header-section-number">19.1</span> Thesis</h2>
+<p>The agentic runtime is not pattern-free. The same structural problems recur — composition, dispatch, isolation, supervision, fan-out, recovery — and the field has converged on recognizable solutions. Many of these solutions have direct analogues in the classical Gang-of-Four (GoF) catalogue <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and in distributed-systems literature <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Naming them — and naming the analogue — gives architects a vocabulary to reason at the system level instead of at the file level.</p>
+<p>This chapter is a translation table. For each recurring agentic pattern, it gives a name, a classical analogue where the analogy holds, an intent, an applicability rule, the consequences you accept, and cross-references to the chapters that develop the pattern in depth. Where no clean classical analogue exists, the chapter says so and points to the closest distributed-systems shape.</p>
+</section>
+<section id="audience-and-how-to-read-this-chapter" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="audience-and-how-to-read-this-chapter"><span class="header-section-number">19.2</span> Audience and how to read this chapter</h2>
+<p>This chapter is written for software architects, technical leads, and senior engineers responsible for agentic-system design at scale. It assumes you have worked through the agentic runtime machine (Ch10), the load lifecycle (Ch13), the deterministic / probabilistic seam (Ch15), and multi-agent orchestration (Ch16). It is not a tutorial. It is a catalogue.</p>
+<p>Read the layered model in §1 first. After that, the per-layer catalogues (§3–§6, with a short Assembly-layer catalogue at §3′) are independently scannable. The decision matrix in §7 indexes the catalogue by problem; §8 names what this chapter deliberately leaves out.</p>
+</section>
+<section id="sec-layered-model" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="sec-layered-model"><span class="header-section-number">19.3</span> 1. The layered model of an agentic runtime</h2>
+<p>An agentic runtime decomposes into four layers. Each layer has its own pattern language; each layer’s patterns assume the layer below as substrate. Confusing layers — for instance, debating dispatch topology when the real problem is at the composition layer — is the most common architectural error in agentic design.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    subgraph EXEC["Execution layer"]
+        direction LR
+        TH[Threading] --- PER[Persistence] --- TRG[Triggers]
+    end
+    subgraph COMP["Composition layer"]
+        direction LR
+        PR[Primitives] --- SK[Skills] --- DEP[Dependencies]
+    end
+    subgraph ASM["Assembly layer"]
+        direction LR
+        FS[Agent source code] --- BIND[Binding modes]
+    end
+    subgraph FND["Foundation layer"]
+        direction LR
+        MOD[Model] --- HAR[Harness]
+    end
+    EXEC --&gt; COMP --&gt; ASM --&gt; FND
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>Foundation layer.</strong> The model and the harness that hosts it. The model is probabilistic; the harness is deterministic. The seam between them is non-negotiable (Ch15, <a href="ch16-deterministic-probabilistic-boundary.html" class="quarto-xref"><span>Chapter 16</span></a>). Patterns at this layer are mostly out of the architect’s control — they are vendor decisions — but the <em>boundary</em> the foundation layer offers (tool calls, file reads, capability tokens) is what every higher layer depends on.</p>
+<p><strong>Assembly layer.</strong> How content reaches the model. The agent source code convention (AGENTS.md, SKILL.md, instruction files) and the binding modes the harness applies (eager preload, lazy on-demand, dispatcher-mediated) determine <em>what arrives in the context window</em> before any reasoning starts. This is where the load lifecycle (Ch13, <a href="ch14-the-load-lifecycle.html" class="quarto-xref"><span>Chapter 14</span></a>) lives.</p>
+<p><strong>Composition layer.</strong> How content is structured for reuse. Primitives, skills, bundles, dependency edges, override mechanisms. This is where most of the architectural work happens — and where the GoF catalogue maps cleanest, because composition has been a solved problem in software since the 1990s. Composition patterns are detailed in Ch20 (<a href="ch21-primitives-as-code.html" class="quarto-xref"><span>Chapter 21</span></a>).</p>
+<p><strong>Execution layer.</strong> How work is dispatched, parallelized, persisted across boundaries, and re-entered on a trigger. Threading topology, plan persistence, client integration. Multi-agent orchestration (Ch16, <a href="ch17-multi-agent-orchestration.html" class="quarto-xref"><span>Chapter 17</span></a>) lives here. Most of the patterns architects argue about in public — Panel, Wave, Scatter-Gather — sit in this layer.</p>
+<p><strong>A cost overlay, not a fifth layer.</strong> Token economics does not add a layer; it is a property that cuts across three existing ones. The <em>model</em> selected at the Foundation layer is the cost function. The <em>prefix</em> laid out at the Assembly layer decides how much of each turn is cacheable. The <em>dispatch</em> chosen at the Execution layer governs how many calls happen and on which model class. The cost-aware patterns added below — Cache-Aware Prefix at Assembly (§3′), Model Router and Gradient Workflow at Dispatch (§4), Tool Subset at the boundary (§5) — are the catalogue’s answer to a single question: <em>where does the bill get decided?</em> The leaders-block economics chapter (<em>The Agentic SDLC Bill</em>) argues why an organization should engineer that bill centrally; this chapter names the patterns that do the engineering.</p>
+<section id="sec-lens-reconciliation" class="level3" data-number="19.3.1">
+<h3 data-number="19.3.1" class="anchored" data-anchor-id="sec-lens-reconciliation"><span class="header-section-number">19.3.1</span> Lens reconciliation: 5-layer / 4-layer / 7-layer</h3>
+<p>The handbook now uses three layered models in three different chapters, and a careful reader will reasonably ask whether they contradict. They do not. The lenses do not contradict each other; they project the same architecture onto different decision surfaces.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lens</th>
+<th>Where</th>
+<th>What it projects</th>
+<th>Decision surface it serves</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>5-layer landscape</strong></td>
+<td>Chapter 4</td>
+<td>The agentic SDLC as a stacked supply chain: <code>Platform</code> -&gt; <code>Context &amp; Capabilities</code> -&gt; <code>Governance and Distribution</code> -&gt; <code>Agent Harness</code> -&gt; <code>SDLC phases</code></td>
+<td>Strategic / executive: where to invest, what to staff, which layer is the moat</td>
+</tr>
+<tr class="even">
+<td><strong>4-layer substrate</strong></td>
+<td>this chapter (above)</td>
+<td>The substrate inside one harness invocation: Foundation -&gt; Assembly -&gt; Composition -&gt; Execution</td>
+<td>Architectural / engineering: where a given pattern lives, what it depends on, what trade-offs it inherits</td>
+</tr>
+<tr class="odd">
+<td><strong>7-layer Agentic Computing Stack</strong></td>
+<td>external reference (predates handbook 0.10)</td>
+<td>A finer-grained slicing of the same substrate, used in academic and vendor literature for protocol-level discussion</td>
+<td>Specification / interop: when arguing about how two systems must agree at a particular boundary</td>
+</tr>
+</tbody>
+</table>
+<p>Three relationships read across the three lenses.</p>
+<p><strong>Same architecture, different zoom.</strong> The 5-layer landscape collapses Foundation, Assembly, Composition, and Execution into the single phrase <strong>Agent Harness</strong>, and surfaces three layers below it (Platform, Context &amp; Capabilities, Governance and Distribution) that the 4-layer substrate treats as background. The 4-layer substrate is what you reach for when <em>you are inside the harness, choosing which pattern to apply</em>; the 5-layer landscape is what you reach for when <em>you are above the harness, choosing where to invest</em>. Both are correct.</p>
+<p><strong>The 7-layer model is finer-grained than the 4-layer.</strong> When an interop conversation requires distinguishing between, for example, the model-call boundary and the harness-tool boundary, the 7-layer slicing is the one that gives you separate names for both. The 4-layer substrate folds them into Foundation; this is appropriate for architecture decisions inside the harness and inappropriate for protocol decisions that span harness boundaries. Use the 7-layer model where the conversation is about a wire format or a cross-vendor contract.</p>
+<p><strong>No lens is load-bearing across all chapters.</strong> Each chapter chooses the lens that makes its own decisions cleanest. Chapter 4 cannot make the staffing argument with the 4-layer substrate; this chapter cannot place a Panel without the substrate; the 7-layer model is overkill for either. The lenses are tools, and the right one is the one whose decision surface matches the question on the table.</p>
+<p>When in doubt: if the question is <em>who owns this and where do we invest</em>, use Chapter 4’s 5-layer landscape. If the question is <em>which pattern applies and what is its substrate</em>, use this chapter’s 4-layer substrate. If the question is <em>how do these two systems agree at a boundary</em>, the 7-layer model is the one to reach for.</p>
+</section>
+</section>
+<section id="reading-the-rosetta-stone" class="level2" data-number="19.4">
+<h2 data-number="19.4" class="anchored" data-anchor-id="reading-the-rosetta-stone"><span class="header-section-number">19.4</span> 2. Reading the Rosetta Stone</h2>
+<p>Each catalogue entry has six fields:</p>
+<ul>
+<li><strong>Agentic name</strong> — the human-readable name used throughout this book.</li>
+<li><strong>Classical analogue</strong> — the closest GoF <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> or distributed-systems pattern, with a rigour rating: <strong>precise</strong> (the analogy is exact), <strong>partial</strong> (the analogy holds for most of the structure but a named part does not map), or <strong>weak / none</strong> (no clean classical analogue; the closest shape from distributed systems is given instead).</li>
+<li><strong>Intent</strong> — one sentence on what the pattern is for.</li>
+<li><strong>When to apply</strong> — the condition that makes this pattern the right call rather than its neighbours.</li>
+<li><strong>Consequences</strong> — the trade-off you accept by choosing this pattern.</li>
+<li><strong>Cross-references</strong> — chapters and adjacent patterns.</li>
+</ul>
+<p>Pattern names are drawn from this book’s prose and, where applicable, from Genesis’s agent-side codification of the same ideas.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<p>Two pieces of vocabulary recur in the cost-aware entries below and are worth fixing before you reach them. A <strong>cacheable prefix</strong> is the stable head of the context window — system preamble, tool definitions, scope-loaded rules, agent source — that a harness can bill at a fraction of full input on repeat turns. A <strong>cache invalidator</strong> is anything placed in that head which mutates per turn — a timestamp, an ephemeral ID, a mid-session tool addition, a model switch — and so re-prices the entire prefix at full input on the next turn. The attention-economy chapter (<a href="ch15-attention-and-context-economy.html" class="quarto-xref"><span>Chapter 15</span></a>) develops the same layout decision in its other currency; the cost entries here track the dollar ledger, that chapter tracks the attention one, and the two optima coincide.</p>
+</section>
+<section id="sec-composition-patterns" class="level2" data-number="19.5">
+<h2 data-number="19.5" class="anchored" data-anchor-id="sec-composition-patterns"><span class="header-section-number">19.5</span> 3. Composition layer</h2>
+<p>Composition is where the GoF mapping is strongest. The agentic runtime turned out to need almost the same structural patterns as 1990s object-oriented systems, for the same reason: both are systems of named units with dependency graphs and override semantics.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Agentic name</th>
+<th>Classical analogue (rigour)</th>
+<th>Intent</th>
+<th>When to apply</th>
+<th>Consequences</th>
+<th>Cross-refs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Skill</strong></td>
+<td>Module / Facade — <em>precise</em></td>
+<td>Bundle a capability under a single named entrypoint that hides assets, dependencies, and internal structure from callers.</td>
+<td>Whenever a capability is reusable, dispatchable by description, and ships with content beyond its instruction body.</td>
+<td>The skill is the stable unit of reuse. Its description is its API; rewording it is a breaking change.</td>
+<td>Ch20 (<a href="ch21-primitives-as-code.html" class="quarto-xref"><span>Chapter 21</span></a>); Bundle, Primitive</td>
+</tr>
+<tr class="even">
+<td><strong>Bundle</strong></td>
+<td>Composite — <em>precise</em></td>
+<td>Treat aggregates of primitives uniformly with leaf primitives, so a skill that depends on another skill works the same as a skill that depends on a single instruction.</td>
+<td>When a primitive itself contains other primitives (a skill depending on a sub-skill, an agent containing skills).</td>
+<td>Recursive distribution; transitive closure becomes the unit of cost.</td>
+<td>Skill, Dependency</td>
+</tr>
+<tr class="odd">
+<td><strong>Primitive</strong></td>
+<td>Strategy — <em>partial</em></td>
+<td>Make a unit of behaviour interchangeable: an agent, a skill, an instruction, a chatmode each implement the same dispatch contract.</td>
+<td>When the runtime must select among interchangeable units at load or dispatch time.</td>
+<td><em>Does not map:</em> Strategy is pure algorithm; primitives carry state and content. The behavioural-substitution part holds; the stateless part does not.</td>
+<td>Ch13 (<a href="ch14-the-load-lifecycle.html" class="quarto-xref"><span>Chapter 14</span></a>); Skill</td>
+</tr>
+<tr class="even">
+<td><strong>Dependency</strong></td>
+<td>Decorator — <em>partial</em> / Package Reference (Maven, npm) — <em>precise</em></td>
+<td>Compose capabilities by declaring a directed edge from one module to another, resolved by the package system.</td>
+<td>When the same content is needed by 3+ consumers, evolves on its own cadence, has a different owner, or is pinning-worthy.</td>
+<td>Crosses a distribution boundary: subject to versioning, transitive closure, and conflict resolution. <em>Does not map to Decorator:</em> a dependency is not a wrapper; the “extend behaviour at runtime” framing is wrong. The Maven/npm framing is the right one.</td>
+<td>Override; Ch20</td>
+</tr>
+<tr class="odd">
+<td><strong>Override</strong></td>
+<td>Template Method — <em>precise</em></td>
+<td>A base module defines an invariant skeleton; a consuming module replaces named slots without rewriting the skeleton.</td>
+<td>When a downstream user needs to specialize one section of an upstream primitive without forking it.</td>
+<td>The base module’s slot names become a public contract. Renaming a slot is a breaking change.</td>
+<td>Skill, Dependency</td>
+</tr>
+</tbody>
+</table>
+<p>The Skill / Bundle / Primitive triplet is the runtime’s analogue of the Module / Composite / Strategy triplet — a 30-year-old composition vocabulary applied to a new substrate. Architects who see Skill and reach for “what is this in GoF terms?” can answer in one breath: it is a Facade over a Composite of Strategies, distributed by the harness’s package system. Override is then Template Method. Dependency is package reference, not Decorator — the “Decorator” framing in older agentic literature is a near miss.</p>
+</section>
+<section id="sec-assembly-patterns" class="level2" data-number="19.6">
+<h2 data-number="19.6" class="anchored" data-anchor-id="sec-assembly-patterns"><span class="header-section-number">19.6</span> 3′. Assembly layer</h2>
+<p>The Assembly layer is named in §1 but, until the cost dimension forced the question, had no catalogue of its own: how content is laid out in the context window was treated as a load-lifecycle concern (Ch13, <a href="ch14-the-load-lifecycle.html" class="quarto-xref"><span>Chapter 14</span></a>) rather than a pattern with a trade-off. Prompt-prefix caching changes that. Once a harness bills a cached prefix at a fraction of full input, <em>where</em> you place each piece of content becomes an architectural decision with a dollar consequence — and it earns an entry.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Agentic name</th>
+<th>Classical analogue (rigour)</th>
+<th>Intent</th>
+<th>When to apply</th>
+<th>Consequences</th>
+<th>Cross-refs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Cache-Aware Prefix</strong></td>
+<td>Cache-Aside <a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> — <em>precise</em> / Append-Only Log — <em>partial</em></td>
+<td>Lay out the context window so stable content (system preamble, tool definitions, scope-loaded rules, agent source) sits at the prefix head and volatile content (current turn, in-flight diff, fresh tool results) at the suffix tail, making the prefix cacheable across turns at a fraction of full input.</td>
+<td>Whenever the harness exposes prompt-prefix caching as a billing unit (every major foundation today) and a session runs more than a turn or two against the same primitive set.</td>
+<td>Anything mutable placed in the head — timestamps, ephemeral IDs, the conversation’s own scrollback — is a cache invalidator that re-prices the whole prefix at full input. Layout becomes a load-bearing public contract, not a cosmetic choice.</td>
+<td>Ch13 (<a href="ch14-the-load-lifecycle.html" class="quarto-xref"><span>Chapter 14</span></a>); Ch14 (<a href="ch15-attention-and-context-economy.html" class="quarto-xref"><span>Chapter 15</span></a>); Lockfile (§6)</td>
+</tr>
+</tbody>
+</table>
+<p>Cache-Aware Prefix is the first pattern to demand an Assembly-layer catalogue, and likely not the last: as harnesses expose more of the assembly seam as billable surface, the layout of the context window will accrete patterns the way composition did. For now it carries a single entry, because that entry pays its rent (§8) and a speculative second would not.</p>
+</section>
+<section id="sec-dispatch-patterns" class="level2" data-number="19.7">
+<h2 data-number="19.7" class="anchored" data-anchor-id="sec-dispatch-patterns"><span class="header-section-number">19.7</span> 4. Dispatch and orchestration layer</h2>
+<p>Dispatch and orchestration is where the most public pattern arguments happen, and where GoF analogies are <em>partial</em> more often than <em>precise</em>. The reason is that GoF described patterns for one-process, one-thread, in-memory object graphs. Agentic dispatch involves multiple LLM threads, durable artifacts between them, and clients firing across sessions. The closer analogues live in distributed-systems literature <a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Agentic name</th>
+<th>Classical analogue (rigour)</th>
+<th>Intent</th>
+<th>When to apply</th>
+<th>Consequences</th>
+<th>Cross-refs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Panel</strong></td>
+<td>Mediator — <em>partial</em> / Scatter-Gather <a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> — <em>precise</em></td>
+<td>Run N specialized lenses in parallel against the same artifact, then synthesize their verdicts into a single decision.</td>
+<td>When a decision benefits from ≥3 independent lenses and the lenses do not share state during evaluation.</td>
+<td>The synthesis step <em>is</em> the decision; without it, the user reads N reports instead. <em>Does not map to Chain of Responsibility:</em> there is no chain; lenses run in parallel, not in sequence.</td>
+<td>Ch16 (<a href="ch17-multi-agent-orchestration.html" class="quarto-xref"><span>Chapter 17</span></a>); Scatter-Gather</td>
+</tr>
+<tr class="even">
+<td><strong>Wave</strong></td>
+<td>Pipes-and-Filters — <em>precise</em> / Pipeline (CI)</td>
+<td>Execute a topologically-sorted DAG of tasks one wave at a time, gating between waves.</td>
+<td>When the task DAG is non-trivial and drift between waves is expensive enough to want a localizable failure.</td>
+<td>Each wave’s output gates the next wave’s assumptions. A failed gate replans from the failed wave, not from the start.</td>
+<td>Ch16; Scatter-Gather, Plan-Write-Then-Reload</td>
+</tr>
+<tr class="odd">
+<td><strong>Scatter-Gather</strong></td>
+<td>Scatter-Gather <a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> — <em>precise</em> (origin term)</td>
+<td>Decompose a task into independent parallel sub-tasks; each runs in its own thread; results merge at the gather step.</td>
+<td>When sub-tasks are genuinely independent and merge cleanly.</td>
+<td>Concurrency cost; one writer per sink (parallel + shared state is almost always a smell).</td>
+<td>Ch16; Panel, Wave</td>
+</tr>
+<tr class="even">
+<td><strong>Threading</strong></td>
+<td>Command + Memento — <em>partial</em></td>
+<td>Dispatch a unit of work as a serializable invocation (Command) into a fresh context window whose state is captured by a durable plan artifact (Memento).</td>
+<td>When a sub-task needs cold context — independent attention budget, no inheritance of the parent’s reasoning trace.</td>
+<td>Cold context costs a re-load; serialization forces the architect to make the hand-off packet explicit. <em>Does not map cleanly to either GoF pattern alone:</em> Command captures the invocation, Memento captures the cross-thread state, neither covers attention isolation.</td>
+<td>Ch13; Plan-Write-Then-Reload</td>
+</tr>
+<tr class="odd">
+<td><strong>Subagent Spawn</strong></td>
+<td>Active Object <a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> — <em>precise</em></td>
+<td>Each invocation creates an independent thread of control with its own message queue and lifecycle.</td>
+<td>When the parent must continue while sub-work runs, or when the sub-work must be isolated from the parent’s context window.</td>
+<td>Spawn cost; cross-thread state must travel via durable artifacts, not shared memory.</td>
+<td>Ch16; Threading</td>
+</tr>
+<tr class="even">
+<td><strong>Model Router</strong></td>
+<td>Strategy <a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> — <em>partial</em> / Content-Based Router <a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a> — <em>precise</em></td>
+<td>Classify a task’s complexity in a cheap preliminary turn and dispatch the substantive work to a right-sized model rather than running every task on one class.</td>
+<td>When the workload mixes tasks of materially different complexity (deep planning vs.&nbsp;lint vs.&nbsp;classification) and the foundation layer exposes ≥2 model classes with a 5×+ cost spread.</td>
+<td>The classification turn is itself a cost and latency tax; routing must be cache-aware (a mid-trajectory model switch is a cache invalidator and pays full input on the prefix next turn); the routing rules are a public contract whose drift produces silent regressions.</td>
+<td>Ch10 (<a href="ch11-the-runtime-machine.html" class="quarto-xref"><span>Chapter 11</span></a>); Gradient Workflow; Cache-Aware Prefix (§3′)</td>
+</tr>
+<tr class="odd">
+<td><strong>Gradient Workflow</strong></td>
+<td>Tiered Architecture <a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a> — <em>partial</em> / Stratified Pipeline — <em>weak</em></td>
+<td>Compose a workflow whose stages run on differently sized model classes — a heavy planner, a mid-tier implementer in the fan-out, a lightweight reviewer or triage layer — rather than one class throughout.</td>
+<td>When a workflow has a small number of consequential decisions (heavy class), many mechanical edits (mid-tier), and high-volume filtering or classification (lightweight), and the foundation layer offers all three.</td>
+<td>Each tier boundary is a model switch and so a cache invalidator within a trajectory; the topology must place switches at thread or wave boundaries — where a new context starts anyway — to avoid paying full input on a warm prefix. Composes with Panel (mid-tier lenses, heavy synthesiser) and Wave (heavy planner stage, mid-tier execution); without that discipline it degrades into “use a cheaper model and hope”.</td>
+<td>Ch16 (<a href="ch17-multi-agent-orchestration.html" class="quarto-xref"><span>Chapter 17</span></a>); Model Router; Wave</td>
+</tr>
+</tbody>
+</table>
+<p>A note on Panel. A common mis-reading names Panel as “Chain of Responsibility”. That mapping is wrong. Chain of Responsibility passes a request along a sequence of handlers until one accepts it; Panel runs handlers in parallel and synthesizes. The right GoF reach is Mediator (the synthesizer mediates between lenses), and the right distributed-systems reach is Scatter-Gather. Architects should reject the Chain of Responsibility framing on sight: a Panel without a synthesizer is not a chain — it is the <strong>Panel-without-synthesis</strong> anti-pattern: parallel lenses with nothing to arbitrate dissent collapse to whichever lens speaks loudest.</p>
+<p>A note on Model Router vs Gradient Workflow. The two are easily conflated and they are not the same axis. A <strong>Model Router</strong> decides <em>per task, at dispatch time</em> — it classifies the work in front of it and picks a model. A <strong>Gradient Workflow</strong> decides <em>per stage, at design time</em> — the topology fixes which tier each stage runs on before any task arrives. Router answers “which model for this task?”; Gradient answers “which model for this stage?” They compose: a single stage of a Gradient Workflow can itself route.</p>
+<p>A note on Wave. Wave is Pipes-and-Filters <a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a> applied to LLM stages, with the addition that each filter’s output is <em>durable</em> (a plan artifact) and each gate is a <em>deterministic</em> check, not a model call. The “filter” metaphor undersells the durability requirement; in agentic contexts, Wave only works because each stage’s output can be re-read in a fresh thread. That same durability is what lets a <strong>Gradient Workflow</strong> (§4) switch model classes at a wave boundary without paying a cache penalty: the boundary is already a cold-context hand-off, so the model switch costs nothing the hand-off did not already cost.</p>
+<p>A note on the agent-side codification of this catalogue. The Rosetta Stone names exist because the field’s pattern shapes have stabilised; I packaged the same shapes as agent-loadable assets so a fresh agent context recognises them on a new task. The Genesis bundle Part III pointed at carries them in <a href="https://github.com/danielmeppiel/genesis/blob/613f2a64a4a193cacd45fd4439a093044ae3178d/skills/genesis/assets/architectural-patterns.md"><code>skills/genesis/assets/architectural-patterns.md</code></a>: <strong>A1 PANEL</strong> (the agent-side code for the corrected fan-out this chapter names a Panel), classical analog <em>Microservices + API Gateway</em>; and <strong>A2 PIPELINE</strong> (Genesis’s code for what this chapter names <strong>Wave</strong>), classical analog <em>Pipes-and-Filters</em>, whose canonical failure is STAGE COLLAPSE — the inherited anti-pattern — verbatim: <em>“I will plan as I go”. Planning and implementation in the same turn. The plan ends up post-hoc and un-falsifiable.</em> Restraint is part of the discipline, not a separate idea. The verdict-emit example in <a href="https://github.com/danielmeppiel/genesis/blob/613f2a64a4a193cacd45fd4439a093044ae3178d/skills/genesis/examples/05-pr-review-verdict.md"><code>skills/genesis/examples/05-pr-review-verdict.md</code></a> records <strong>A8 ALIGNMENT LOOP — CONSIDERED, REJECTED</strong> with the WHEN-clause cited in line: <em>“The first attempt is unlikely to satisfy the goal in one pass (creative work, positioning, complex synthesis). Goal drift is a real risk over several rounds.”</em> A binary PR verdict against a fixed rubric is one-shot per event; the bounded-iteration scaffolding A8 carries would be premature structure. Reaching for a pattern is one half of design; declining a near-miss with the WHEN-clause cited is the other.</p>
+</section>
+<section id="sec-boundary-patterns" class="level2" data-number="19.8">
+<h2 data-number="19.8" class="anchored" data-anchor-id="sec-boundary-patterns"><span class="header-section-number">19.8</span> 5. Boundary layer</h2>
+<p>The boundary layer is where probabilistic outputs meet deterministic substrate. It is the layer where the seam (Ch15, <a href="ch16-deterministic-probabilistic-boundary.html" class="quarto-xref"><span>Chapter 16</span></a>) is enforced. GoF analogues are partial here because GoF assumed in-process objects with trustworthy interfaces; agentic boundaries assume an <em>adversarial</em> interior — the model can produce well-formed nonsense.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Agentic name</th>
+<th>Classical analogue (rigour)</th>
+<th>Intent</th>
+<th>When to apply</th>
+<th>Consequences</th>
+<th>Cross-refs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Supervised Execution</strong></td>
+<td>Proxy + Guard — <em>partial</em> / Capability Security <a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a> — <em>precise</em> (strong form)</td>
+<td>Plan in the model; execute in the substrate; verify with another deterministic check. The model never holds the write capability for irreversible effects.</td>
+<td>When the work names a system of record (repo, db, cluster) and a consequential action against it.</td>
+<td>Strong form (substrate-enforced) requires a client that exposes capability-based security; weak form (prose-enforced) is a fallback. The strong form is <em>not</em> a Proxy — the model genuinely cannot externalize, not just mediated by one.</td>
+<td>Ch15; Audit Trail</td>
+</tr>
+<tr class="even">
+<td><strong>Schema-Checked Transformer</strong></td>
+<td>Adapter — <em>precise</em></td>
+<td>Convert the model’s freeform output into a structured form by gating it through a schema check at the boundary.</td>
+<td>At every model-to-substrate hand-off where the substrate expects typed input.</td>
+<td>Schema becomes a public contract of the boundary. A schema mismatch at the gate is recoverable; one past the gate is a runtime fault.</td>
+<td>Ch15; Supervised Execution</td>
+</tr>
+<tr class="odd">
+<td><strong>Plan-Write-Then-Reload</strong></td>
+<td>Memento — <em>weak</em> / Snapshot <a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a> — <em>closer</em></td>
+<td>Persist the plan as a durable artifact, then deliberately reload it in a fresh context to defeat attention drift on long sessions.</td>
+<td>When work is multi-step, multi-file, or spawn-bound and goal drift is a real risk.</td>
+<td>The plan artifact becomes the source of truth; the model’s in-context recall is treated as untrusted. <em>No clean GoF analogue:</em> Memento captures state for restore, but here the restore is <em>forced</em> on a thread that already has state, specifically to overwrite attention.</td>
+<td>Ch13; Threading, Audit Trail</td>
+</tr>
+<tr class="even">
+<td><strong>Bounded-Scope Grounding</strong></td>
+<td>Bounded Context <a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a> — <em>precise</em> (DDD origin, not GoF)</td>
+<td>Declare what an external corpus is authoritative <em>for</em> and refuse to import its framing into questions it does not own.</td>
+<td>Whenever an external grounding source (a spec, a vendor catalogue, a competitor’s docs) is loaded into a session.</td>
+<td>Authority overreach is the failure mode: the corpus’s vocabulary contaminates judgement on questions outside its scope. <em>No GoF analogue:</em> this is a domain-modelling idea, not an Object-Oriented Programming (OO) structural one.</td>
+<td>Ch15; Audit Trail</td>
+</tr>
+<tr class="odd">
+<td><strong>Tool Subset</strong></td>
+<td>Facade <a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a> — <em>partial</em> / Interface Segregation <a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a> — <em>precise</em></td>
+<td>Expose to the model only the subset of tools the current phase or sub-task actually needs, rather than the full catalogue; the substrate variant consolidates several narrow tools behind a single code-execution surface that composes them inline.</td>
+<td>When tool-definition tokens grow to dominate the prefix (a common threshold is ~20 tools loaded every turn), or when the same tools load identically across phases that need disjoint subsets.</td>
+<td>The subset becomes a phase-scoped public contract; mid-session catalogue mutation is a cache invalidator and must be avoided once a trajectory is warm. The code-execution variant trades per-tool schema rigour for prefix compression — Schema-Checked Transformer moves <em>inside</em> the tool rather than at the call seam. A deliberate trade-off, not a free lunch.</td>
+<td>Ch14 (<a href="ch15-attention-and-context-economy.html" class="quarto-xref"><span>Chapter 15</span></a>); Supervised Execution; Schema-Checked Transformer</td>
+</tr>
+</tbody>
+</table>
+<p>The boundary layer is the layer where weak-form discipline is most often dressed as strong-form architecture. Supervised Execution in particular has a <em>weak form</em> (the agent is asked to verify before declaring done) and a <em>strong form</em> (the substrate denies the write capability and the agent cannot externalize without going through a deterministic post-stage). Picking the weak form on a substrate that offers the strong form is leaving a substrate guarantee on the table. Ch19’s <em>Skipping Checkpoints</em> names the operational version of this drift; Ch15 develops the seam in depth.</p>
+</section>
+<section id="sec-recovery-patterns" class="level2" data-number="19.9">
+<h2 data-number="19.9" class="anchored" data-anchor-id="sec-recovery-patterns"><span class="header-section-number">19.9</span> 6. Recovery and observability layer</h2>
+<p>The recovery layer has the <em>fewest</em> GoF analogues of any layer. GoF described patterns for object graphs that lived and died inside one process. Agentic systems must explain themselves to operators <em>after</em> the session ends, often <em>after</em> the process that produced an artifact has exited and cannot be re-entered. The right reach for this layer is consistently distributed-systems literature.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Agentic name</th>
+<th>Classical analogue (rigour)</th>
+<th>Intent</th>
+<th>When to apply</th>
+<th>Consequences</th>
+<th>Cross-refs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Agent Stack Trace</strong></td>
+<td>Distributed Tracing <a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a> — <em>precise</em> / no GoF analogue</td>
+<td>Make the chain of dispatched skills, spawned threads, and tool calls reconstructible after the fact, the way a stack trace reconstructs a synchronous call.</td>
+<td>Whenever an agent run produces an artifact whose provenance an operator may need to audit or replay.</td>
+<td>Tracing has a cost: every dispatch and every spawn must emit a trace event. The cost is paid up-front; the alternative is undebuggable after the fact.</td>
+<td>Audit Trail</td>
+</tr>
+<tr class="even">
+<td><strong>Lockfile</strong></td>
+<td>Snapshot <a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a> — <em>precise</em> / Memento <a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a> — <em>partial</em></td>
+<td>Capture the resolved version of every transitive dependency at install time so the runtime closure is reproducible.</td>
+<td>Whenever a module declares external dependencies whose drift would silently change behaviour.</td>
+<td>The lockfile is a public artifact; conflicts between consumers’ lockfiles surface at install time, not at runtime. <em>Memento maps partially:</em> a lockfile is a memento of the dependency graph, but the “restore via the originator” mechanic does not apply — the package manager restores it.</td>
+<td>Ch20; Audit Trail</td>
+</tr>
+<tr class="odd">
+<td><strong>Audit Trail</strong></td>
+<td>Event Sourcing <a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a> — <em>precise</em></td>
+<td>Record every consequential decision the agent made and every consequential effect it produced as an immutable, append-only sequence.</td>
+<td>Whenever the work is consequential enough that an auditor — security, compliance, manager, or future maintainer — must reconstruct what fired, what ran, and what was written.</td>
+<td>Storage cost; query infrastructure for the trail; discipline to keep the trail truly append-only. The trail must be on a surface the agent cannot rewrite.</td>
+<td>Ch16; Supervised Execution, Agent Stack Trace</td>
+</tr>
+</tbody>
+</table>
+<p>These three patterns travel together. A runtime that has an Audit Trail without an Agent Stack Trace can tell you <em>what</em> happened but not <em>why</em>. A Lockfile without an Audit Trail can reproduce the dependency closure but not the decisions that produced the artifact under it. Operators of long-lived agentic systems should plan to install all three on day one; retrofitting them after the first incident is an order of magnitude more expensive.</p>
+</section>
+<section id="sec-decision-matrix" class="level2" data-number="19.10">
+<h2 data-number="19.10" class="anchored" data-anchor-id="sec-decision-matrix"><span class="header-section-number">19.10</span> 7. Per-layer decision matrix</h2>
+<p>The catalogue tells you what patterns exist. The decision matrix tells you which one to reach for given a problem and which trade-off you accept by reaching for it. This table is meant to be cross-referenced from design reviews; the trade-off column is the load-bearing field.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>When you have…</th>
+<th>Reach for</th>
+<th>Trade-off you accept</th>
+<th>Failure mode if you skip</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Composition</td>
+<td>Same content needed in 3+ consumers</td>
+<td><strong>Dependency</strong></td>
+<td>Distribution boundary; versioning; transitive closure</td>
+<td>Duplicated leaf; drift between copies</td>
+</tr>
+<tr class="even">
+<td>Composition</td>
+<td>One module needs to specialize one section of another</td>
+<td><strong>Override</strong> (Template Method)</td>
+<td>Slot names become a public contract</td>
+<td>Forking the upstream module</td>
+</tr>
+<tr class="odd">
+<td>Composition</td>
+<td>A capability ships with assets and a description</td>
+<td><strong>Skill</strong> (Module + Facade)</td>
+<td>Description is the API; rewording is breaking</td>
+<td>Asset leakage into the consumer’s context</td>
+</tr>
+<tr class="even">
+<td>Assembly</td>
+<td>A session that runs more than a turn or two against the same primitives</td>
+<td><strong>Cache-Aware Prefix</strong></td>
+<td>Prefix layout becomes a public contract; no timestamps or mutable IDs in the head</td>
+<td>Every turn pays full input on the entire prefix</td>
+</tr>
+<tr class="odd">
+<td>Dispatch</td>
+<td>A decision needs ≥3 independent lenses</td>
+<td><strong>Panel</strong></td>
+<td>Synthesis cost; one extra orchestration thread</td>
+<td>Single-lens bias; missed dissent</td>
+</tr>
+<tr class="even">
+<td>Dispatch</td>
+<td>Work decomposes into ordered, gateable stages</td>
+<td><strong>Wave</strong></td>
+<td>Each stage’s output must be durable; gates must be deterministic</td>
+<td>Stage collapse (planning and implementing in one turn)</td>
+</tr>
+<tr class="odd">
+<td>Dispatch</td>
+<td>Sub-tasks are independent and parallel-safe</td>
+<td><strong>Scatter-Gather</strong></td>
+<td>One writer per sink; concurrency budget</td>
+<td>Shared-state interlock; serialized fan-out</td>
+</tr>
+<tr class="even">
+<td>Dispatch</td>
+<td>A sub-task needs cold context</td>
+<td><strong>Threading</strong> + <strong>Subagent Spawn</strong></td>
+<td>Re-load cost; explicit hand-off packet</td>
+<td>Attention contamination from parent</td>
+</tr>
+<tr class="odd">
+<td>Dispatch</td>
+<td>Mixed-complexity workload with a 5×+ cost spread across model classes</td>
+<td><strong>Model Router</strong></td>
+<td>Classification-turn cost; routing rules are a public contract</td>
+<td>Single-class cost floor; overspend on trivial work or underpower hard work</td>
+</tr>
+<tr class="even">
+<td>Dispatch</td>
+<td>A workflow with stratifiable stages (planning / execution / triage)</td>
+<td><strong>Gradient Workflow</strong></td>
+<td>Tier switches must land at thread or wave boundaries to preserve cache</td>
+<td>Flat model assignment; heavy model on cheap work</td>
+</tr>
+<tr class="odd">
+<td>Boundary</td>
+<td>A consequential action against a system of record</td>
+<td><strong>Supervised Execution</strong> (strong form)</td>
+<td>Client lock-in; capability-based security wiring</td>
+<td>Plan-and-pray; LLM-asserted side effects</td>
+</tr>
+<tr class="even">
+<td>Boundary</td>
+<td>Freeform model output must enter typed substrate</td>
+<td><strong>Schema-Checked Transformer</strong></td>
+<td>Schema becomes a public contract</td>
+<td>Type errors past the gate; runtime faults</td>
+</tr>
+<tr class="odd">
+<td>Boundary</td>
+<td>Long-session goal drift</td>
+<td><strong>Plan-Write-Then-Reload</strong></td>
+<td>Plan artifact must be re-readable in a fresh thread</td>
+<td>Drift compounds invisibly across turns</td>
+</tr>
+<tr class="even">
+<td>Boundary</td>
+<td>External corpus loaded as grounding</td>
+<td><strong>Bounded-Scope Grounding</strong></td>
+<td>Must declare what the corpus owns</td>
+<td>Authority overreach; vocabulary contamination</td>
+</tr>
+<tr class="odd">
+<td>Boundary</td>
+<td>A tool catalogue large enough to dominate the prefix, with disjoint per-phase usage</td>
+<td><strong>Tool Subset</strong></td>
+<td>Subset is a phase-scoped contract; mid-session mutation is a cache invalidator</td>
+<td>Tool-definition tax compounds with turn count; prefix crowds out grounding</td>
+</tr>
+<tr class="even">
+<td>Recovery</td>
+<td>Multi-skill multi-thread runs whose provenance matters</td>
+<td><strong>Agent Stack Trace</strong></td>
+<td>Tracing emission cost on every dispatch</td>
+<td>Undebuggable after the fact</td>
+</tr>
+<tr class="odd">
+<td>Recovery</td>
+<td>External dependencies whose drift changes behaviour</td>
+<td><strong>Lockfile</strong></td>
+<td>Lockfile becomes a public artifact</td>
+<td>Non-reproducible runtime closure</td>
+</tr>
+<tr class="even">
+<td>Recovery</td>
+<td>Consequential effects an auditor must reconstruct</td>
+<td><strong>Audit Trail</strong></td>
+<td>Storage + query infrastructure; append-only discipline</td>
+<td>Implicit-trust outer loop; clandestine bot</td>
+</tr>
+</tbody>
+</table>
+<p>Reviewer rule: a design that names a pattern from column three without naming the trade-off in column four is structurally incomplete. The trade-off is what makes the choice deliberate rather than accidental.</p>
+</section>
+<section id="sec-out-of-scope" class="level2" data-number="19.11">
+<h2 data-number="19.11" class="anchored" data-anchor-id="sec-out-of-scope"><span class="header-section-number">19.11</span> 8. What this chapter intentionally does not catalogue</h2>
+<p>The catalogue in this chapter is a translation table for patterns that have <em>converged</em> — patterns that are stable enough to name and useful enough to reach for. Three categories are deliberately out of scope.</p>
+<p><strong>Harness-specific patterns.</strong> Patterns whose shape depends on a single vendor’s runtime — for instance, the exact MCP-gateway topology of Claude Code’s container model, or the precise <code>safe-outputs:</code> schema of GitHub Agentic Workflows. These belong in per-harness adapter documentation, not in a Rosetta Stone. Genesis’s <code>runtime-affordances/per-harness/</code> directory is the right home for them; this chapter cites the substrate concept and leaves the binding to the adapter.</p>
+<p><strong>Patterns whose useful lifetime is shorter than this book’s.</strong> Prompt-injection countermeasures of the day (delimiter tricks, instruction sandwiches, role-tag hardening); jailbreak-prompt taxonomies; vendor-specific tool-use schemas. These move quarter by quarter. Cataloguing them here would date the chapter within a release cycle. The seam (Ch15) names the <em>durable</em> version of these concerns — capability-based security, schema-checked transformers, bounded-scope grounding — without binding to today’s specific exploits.</p>
+<p><strong>Patterns the field has not yet converged on.</strong> Multi-agent negotiation protocols beyond simple Panel/Wave shapes; agent-to-agent message formats; cross-organization agent identity. There is real work happening in each of these areas, but no convergence yet on a name and shape worth standing behind. When convergence happens, a future revision of this chapter is the right place to add them. The premature path — naming a pattern before the field agrees on its shape — produces a catalogue of dead names readers must work around.</p>
+<p>The cost of leaving these out is that this chapter is shorter than a maximalist catalogue would be. The benefit is that every entry pays its rent: a name a reader can use in a design review next week and still recognize in five years. That is the bar for inclusion.</p>
+<hr>
+</section>
+<section id="references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<div id="refs" role="list" style="display: none">
+
+</div>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. <em>Design Patterns: Elements of Reusable Object-Oriented Software.</em> Addison-Wesley, 1994.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Gregor Hohpe and Bobby Woolf. <em>Enterprise Integration Patterns.</em> Addison-Wesley, 2003. Source for Scatter-Gather and the EIP family generally.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Martin Kleppmann. <em>Designing Data-Intensive Applications.</em> O’Reilly, 2017. Source for Snapshot semantics and the durability discussion behind Lockfile and Plan-Write-Then-Reload.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. <em>Design Patterns: Elements of Reusable Object-Oriented Software.</em> Addison-Wesley, 1994.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Where pattern names in this chapter overlap with Genesis’s agent-side codification (Tier-2 design patterns and Tier-3 architectural patterns in the <code>danielmeppiel/genesis</code> repository), the human-readable name appears in the table; Genesis’s internal codes (used by the agent’s dispatch logic) are not load-bearing in this chapter. Genesis is one source of pattern naming the author has drawn from; the analogies to GoF and to distributed-systems literature are this book’s contribution. The cost-economics entries added here — Cache-Aware Prefix (§3′), Model Router and Gradient Workflow (§4), and Tool Subset (§5) — carry the handbook-side names for shapes Genesis codifies as agent-loadable cost patterns in the same <a href="https://github.com/danielmeppiel/genesis/blob/613f2a64a4a193cacd45fd4439a093044ae3178d/skills/genesis/assets/architectural-patterns.md"><code>architectural-patterns.md</code></a> catalogue. Three further Genesis cost additions are deliberately <em>not</em> catalogued here: output-side prompt thrift (a coding discipline, codified in agent instructions), a per-harness effort governor (a vendor-specific configuration surface, not a portable pattern), and a cost-prune refactor (a refactor trigger). None is an architectural pattern in this chapter’s sense — they are coding disciplines and configuration surfaces, the genre an inclusion bar exists to turn away before §8’s three pattern-genres are even reached; recording why is half the point.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Martin Kleppmann. <em>Designing Data-Intensive Applications.</em> O’Reilly, 2017. Source for Snapshot semantics and the durability discussion behind Lockfile and Plan-Write-Then-Reload.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Gregor Hohpe and Bobby Woolf. <em>Enterprise Integration Patterns.</em> Addison-Wesley, 2003. Source for Scatter-Gather and the EIP family generally.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Gregor Hohpe and Bobby Woolf. <em>Enterprise Integration Patterns.</em> Addison-Wesley, 2003. Source for Scatter-Gather and the EIP family generally.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Gregor Hohpe and Bobby Woolf. <em>Enterprise Integration Patterns.</em> Addison-Wesley, 2003. Source for Scatter-Gather and the EIP family generally.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Frank Buschmann et al.&nbsp;<em>Pattern-Oriented Software Architecture, Vol. 1.</em> Wiley, 1996. Source for Active Object, used here for Subagent Spawn.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. <em>Design Patterns: Elements of Reusable Object-Oriented Software.</em> Addison-Wesley, 1994.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>Gregor Hohpe and Bobby Woolf. <em>Enterprise Integration Patterns.</em> Addison-Wesley, 2003. Source for Scatter-Gather and the EIP family generally.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>Frank Buschmann et al.&nbsp;<em>Pattern-Oriented Software Architecture, Vol. 1.</em> Wiley, 1996. Source for Active Object, used here for Subagent Spawn.<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>David L. Parnas. “On the Criteria to Be Used in Decomposing Systems into Modules.” <em>Communications of the ACM</em>, 15(12), 1972. The original Pipes-and-Filters decomposition argument; cited here as the durable ancestor of Wave.<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn15"><p>Mark S. Miller. <em>Robust Composition: Towards a Unified Approach to Access Control and Concurrency Control.</em> PhD thesis, Johns Hopkins, 2006. Capability security as the precise frame for strong-form Supervised Execution.<a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn16"><p>Martin Kleppmann. <em>Designing Data-Intensive Applications.</em> O’Reilly, 2017. Source for Snapshot semantics and the durability discussion behind Lockfile and Plan-Write-Then-Reload.<a href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn17"><p>Eric Evans. <em>Domain-Driven Design.</em> Addison-Wesley, 2003. Source for Bounded Context, the right frame for Bounded-Scope Grounding.<a href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn18"><p>Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. <em>Design Patterns: Elements of Reusable Object-Oriented Software.</em> Addison-Wesley, 1994.<a href="#fnref18" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn19"><p>Robert C. Martin. <em>Clean Architecture: A Craftsman’s Guide to Software Structure and Design.</em> Prentice Hall, 2017. Source for the Interface Segregation Principle, the precise frame for Tool Subset.<a href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn20"><p>Benjamin H. Sigelman et al.&nbsp;“Dapper, a Large-Scale Distributed Systems Tracing Infrastructure.” Google Technical Report, 2010. The canonical reference for distributed tracing; the right shape for Agent Stack Trace.<a href="#fnref20" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn21"><p>Martin Kleppmann. <em>Designing Data-Intensive Applications.</em> O’Reilly, 2017. Source for Snapshot semantics and the durability discussion behind Lockfile and Plan-Write-Then-Reload.<a href="#fnref21" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn22"><p>Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. <em>Design Patterns: Elements of Reusable Object-Oriented Software.</em> Addison-Wesley, 1994.<a href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn23"><p>Martin Fowler. “Event Sourcing.” martinfowler.com, 2005. The canonical write-up of the pattern that maps to Audit Trail.<a href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/danielmeppiel\.github\.io\/agentic-sdlc-handbook\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../handbook/ch18-the-execution-meta-process.html" class="pagination-link" aria-label="The Execution Meta-Process">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The Execution Meta-Process</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../handbook/ch20-anti-patterns-and-failure-modes.html" class="pagination-link" aria-label="Anti-Patterns and Failure Modes">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Anti-Patterns and Failure Modes</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/danielmeppiel/agentic-sdlc-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer><div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 2rem; margin-top: 3rem; border-radius: 8px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+  <p style="color: #e0e0e0; margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">📕 Get the PDF &amp; EPUB — free download</p>
+  <p style="color: #a0a0a0; margin: 0 0 1rem 0; font-size: 0.9rem;">Plus ~1 update/month max. No spam. Unsubscribe anytime.</p>
+  <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/download.html" onclick="if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){this.href='/download.html';}" style="display: inline-block; background: #0d6efd; color: white; padding: 0.5rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 500;">Download the Handbook</a>
+</div>
+<div style="text-align: center; margin-top: 1.5rem; padding: 0.75rem; font-size: 0.85rem; color: #888;">
+  <p style="margin: 0;">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjnz7UZMAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAdRQTFRFAAAAAAAA////////////8fHx7+/v4+Pj39/f1tXV09bS0tXS0tXR0dTR0dTQ0NTQ0NPPz9PPztLOztHNzdHNzdHMz8/PzdDMzNDMzNDLzM/Ly8/Ly8/Ky87Kys3Jyc3Jyc3IyMzIyMzHx8vHxsrGxsrFxcnFyMfHxcnExMnExMjDw8jDxMfDw8fCwsfCwcXAwMXAwMW/wMS/v8S+v8O+vsO+vsK9vcK9vcK8v7+/vMG8vMG7vMC8u8C7u8C6ur+6ur+5ub65ub64uL23t7y2urm5tru1tbq0tLqztLmzs7iysrixsrexsbewsLavsLWvr7Wur7SusLOvrrStrrOtr7KvrbOsrLKrr6+vq7GqrKurpqqmo6ijoqahn6OenqCdn5+fnp2dmpiZlpmWlZmUk5iTkZSRkZORkY+Pj4+PiYyJjIqLh4aHhIaEhIWEgoWChIGCf4F+gICAfX98fH98fnt8en15eXx5eHV2dnN0dXJzcHJvcHBwaGdoaGVmZmRkYGBgXV5dWldYUFFQUFBQQ0RDQEBAPj8+Pzs8NTY1MjMxMjExMDAwMS0uKioqKSopKSkpKCkoKCUmIx8gICAgHxscGxsbGRkZEBAQDg4ODQ4NDQwN1jMqSgAAAAR0Uk5T/wAKDnDBpeYAAAODSURBVHjatZaLe9JWGMbfbbGltMYonQMklsVlUyrLqtWV4bqWsnZW23Wr9uK13or3C14qiootxBtVMFgj/rN+JyFNzEMfHvHpCzyH8ybnl+Q75/tO8B3WRd8AGEkm4vuUblnqEoN+fzC0XZIjSm98MDkyOvbv5NTU9OyXCwZ3oG9PVA6HfALf7vW2bxR828JytKdvgJEnJqemmyQT97fIDtHHXy9UQaoWrvFbQtIu5XciHxqfODI1vVACqbRgj2voAEgQVwoIqRWsamVe8Id3Kn2DyYOHxyfPlwE1m1WB8gVz1IXGDoD4nojk55cA6Ll0LJbO6QCWdn8f3tUTTwyPjp38gLyHI3ny+GCMOtXYYeB90R0BxtXTLZypOUKXd/ulaG//0MjhEnLkAewAymxQ2XAuLrocku0AUGRRIG7Rw62qpQgsCSFZ6UsM30a+zQJzeSxQNPHqLHHff8y0Wg47xxI5Jrj7R1+KuHS7n5Pnt4Qje/uTb+C4ogel2dkS3mrPHyN9Fccsx3WOCZZD/Ar0rWQ5yTpW+G2y8kcCKuvnYD6sChqjPrivaVqmtc126I9myHBMsNR5HUhzLs0B13xSdP8AsqwLEmuzDEPOLxkAmTaHwz0yxJwauGtzAToFIpZX1bTZXKLDOgrCdopFXTCpNbOsaYt/W44lB1jkq8gREEzqDEisn0N1Y2hnz591QsGcDWe4No30fO1QBDsAusUiKp5YZa6IomemMmfEoj0oK/HX5sQA9uQxZ1FbXkbm2N13q84TQ47JC3iBGMeZcbYa4wm8/p+U+C3kOfdyI6f15vuPFzc4HNdyawweemMnSNaZDlcWXQ7JclyhaNlaSVMoWGOHYuh4UyltT15t1moNu3KVF2nyhv45UQKKuWzRLjmnyo0cc7ktQedWl9uMajRcBQWhK7L3r+TBsf/uNVU2pc4UcKl+gvy6f3B4dJxqfTOF/mcjpT1rpfTIoWbBVIRO1ytCKV+4u7efSv3EkemmwLgjCk+J7ChDHqNsijfwlXoY3OQs9C1pHXjBB+7gq3Xbv+mpa2vifzgHS2Z+gP1MWR3yP3foTBc5KJx2bqYpIWBzwdW+DozV59Zw7GjQ9p+ytv953ic642CVTYdT+7icOmC8PBrq3Mx3eL0dPL2w/P8MDtmBcDo2xuW49ezyATEYCATFA5cZdo07bhzjdde36/S2+QkOU7VYqRESOQAAAABJRU5ErkJggg==" alt="CC BY-NC-ND 4.0" style="height: 20px; vertical-align: middle;">
+    </a>
+    © 2025-2026 Daniel Meppiel · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #aaa;">CC BY-NC-ND 4.0</a>
+  </p>
+  <p style="margin: 0.25rem 0 0 0;">Free to read and share with attribution. <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #aaa;">License details</a></p>
+</div>
+
+
+
+
+</body></html>

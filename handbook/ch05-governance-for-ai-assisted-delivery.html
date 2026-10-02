@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Governance for AI-Assisted Delivery – The Agentic SDLC Handbook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../handbook/ch06-team-structures.html" rel="next">
+<link href="../handbook/ch04-the-reference-architecture.html" rel="prev">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-21d6fceeb25172fe2fb34cb0b56a437d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="../agentic-sdlc-handbook/favicon.svg">
+<link rel="apple-touch-icon" href="../agentic-sdlc-handbook/apple-touch-icon.png">
+<meta name="dc.rights" content="CC BY-NC-ND 4.0">
+<meta name="dc.rights.uri" content="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2DPKEV68VR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2DPKEV68VR');
+</script>
+<style>
+  /* Mermaid diagram readability — light mode */
+  :root {
+    --mermaid-node-bg-color: #f0f4f8 !important;
+    --mermaid-node-fg-color: #1a202c !important;
+    --mermaid-label-fg-color: #1a202c !important;
+    --mermaid-label-bg-color: #ffffff !important;
+    --mermaid-fg-color: #1a202c !important;
+    --mermaid-edge-color: #718096 !important;
+  }
+  /* Mermaid diagram readability — dark mode */
+  body.quarto-dark {
+    --mermaid-bg-color: transparent !important;
+    --mermaid-node-bg-color: #2d3748 !important;
+    --mermaid-node-fg-color: #e2e8f0 !important;
+    --mermaid-label-fg-color: #e2e8f0 !important;
+    --mermaid-label-bg-color: #1a202c !important;
+    --mermaid-fg-color: #e2e8f0 !important;
+    --mermaid-edge-color: #a0aec0 !important;
+  }
+  /* Mermaid lightbox — click to expand any mermaid figure */
+  figure.figure:has(svg.mermaid-js) { cursor: zoom-in; }
+  figure.figure:has(svg.mermaid-js):hover { outline: 1px dashed #888; outline-offset: 4px; }
+  #mermaid-lightbox-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+    z-index: 10000; display: none; align-items: center; justify-content: center;
+    padding: 2rem; cursor: zoom-out; flex-direction: column;
+  }
+  #mermaid-lightbox-overlay.open { display: flex; }
+  #mermaid-lightbox-overlay .ml-stage {
+    max-width: 95vw; max-height: 90vh;
+    background: #fff; padding: 1.5rem; border-radius: 8px;
+    overflow: auto; cursor: default;
+  }
+  body.quarto-dark #mermaid-lightbox-overlay .ml-stage { background: #1a202c; }
+  /* Render SVG at intrinsic viewBox dimensions; stage scrolls if larger than viewport */
+  #mermaid-lightbox-overlay .ml-stage svg {
+    display: block; width: auto; height: auto;
+    max-width: none; max-height: none;
+  }
+  #mermaid-lightbox-overlay .ml-caption {
+    color: #fff; max-width: 95vw; margin-top: 1rem;
+    font-size: 0.9rem; text-align: center;
+  }
+  #mermaid-lightbox-overlay .ml-close {
+    position: absolute; top: 1rem; right: 1.5rem;
+    background: none; border: none; color: #fff;
+    font-size: 2rem; cursor: pointer; line-height: 1;
+  }
+</style>
+<script>
+  // Mermaid lightbox: wraps mermaid SVGs in a click-to-expand overlay.
+  // Quarto's built-in lightbox only handles <img>; this shim covers <svg> mermaid output.
+  document.addEventListener('DOMContentLoaded', function () {
+    var overlay = document.createElement('div');
+    overlay.id = 'mermaid-lightbox-overlay';
+    overlay.innerHTML = '<button class="ml-close" aria-label="Close">&times;</button><div class="ml-stage"></div><div class="ml-caption"></div>';
+    document.body.appendChild(overlay);
+    var stage = overlay.querySelector('.ml-stage');
+    var cap = overlay.querySelector('.ml-caption');
+    function close() { overlay.classList.remove('open'); stage.innerHTML = ''; cap.textContent = ''; }
+    overlay.addEventListener('click', function (e) { if (e.target === overlay || e.target.classList.contains('ml-close')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('open')) close(); });
+    function wireFigures() {
+      document.querySelectorAll('svg.mermaid-js').forEach(function (svg) {
+        var fig = svg.closest('figure.figure');
+        if (!fig || fig.dataset.mlWired) return;
+        fig.dataset.mlWired = '1';
+        fig.title = 'Click to expand';
+        fig.addEventListener('click', function (ev) {
+          if (ev.target.closest('a')) return;
+          ev.preventDefault();
+          var clone = svg.cloneNode(true);
+          clone.removeAttribute('style');
+          clone.removeAttribute('width');
+          clone.removeAttribute('height');
+          // Use viewBox to derive intrinsic width; size the SVG generously for readability
+          var vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(parseFloat);
+          if (vb.length === 4 && vb[2] > 0 && vb[3] > 0) {
+            var ratio = vb[2] / vb[3];
+            var maxH = window.innerHeight * 0.85;
+            var maxW = window.innerWidth * 0.9;
+            // Prefer using the full available width unless that overflows height
+            var w = maxW;
+            var h = w / ratio;
+            if (h > maxH) { h = maxH; w = h * ratio; }
+            // Floor at a comfortable readable size; stage scrolls if it exceeds viewport
+            w = Math.max(w, Math.min(1400, vb[2]));
+            h = w / ratio;
+            clone.setAttribute('width', w);
+            clone.setAttribute('height', h);
+          }
+          stage.innerHTML = '';
+          stage.appendChild(clone);
+          var capEl = fig.querySelector('figcaption');
+          cap.textContent = capEl ? capEl.textContent.trim() : '';
+          overlay.classList.add('open');
+        });
+      });
+    }
+    wireFigures();
+    // Re-wire when mermaid finishes async rendering
+    new MutationObserver(wireFigures).observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+
+
+<link rel="stylesheet" href="../styles/handbook-cover.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../handbook/ch02-the-ai-native-landscape.html">Part II: For Leaders</a></li><li class="breadcrumb-item"><a href="../handbook/ch05-governance-for-ai-assisted-delivery.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Governance for AI-Assisted Delivery</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">The Agentic SDLC Handbook</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/danielmeppiel/agentic-sdlc-handbook" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../download.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Download</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reading-paths.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading paths</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: The Foundation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch01-the-agentic-sdlc-thesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The Agentic SDLC Thesis</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: For Leaders</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch02-the-ai-native-landscape.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The AI-Native Landscape</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch03-the-business-case.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Business Case</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch04-the-reference-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agentic SDLC Reference Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch05-governance-for-ai-assisted-delivery.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Governance for AI-Assisted Delivery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch06-team-structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Team Structures for AI-Augmented Delivery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch07-the-agentic-sdlc-bill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Agentic SDLC Bill</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch08-planning-the-transition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Planning the Transition</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: For Practitioners</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch09-part-iii-preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">A Map for Part III</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch10-the-practitioners-mindset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The Practitioner’s Mindset</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch11-the-runtime-machine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Agentic Runtime Machine</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch12-the-instrumented-codebase.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Instrumented Codebase</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch13-the-prose-specification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The PROSE Constraints</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch14-the-load-lifecycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The Load Lifecycle</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch15-attention-and-context-economy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Attention and Context Economy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch16-deterministic-probabilistic-boundary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">The Deterministic/Probabilistic Boundary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch17-multi-agent-orchestration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Multi-Agent Orchestration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch18-the-execution-meta-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The Execution Meta-Process</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch19-architectural-patterns-rosetta-stone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Architectural Patterns: A Rosetta Stone</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch20-anti-patterns-and-failure-modes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Anti-Patterns and Failure Modes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch21-primitives-as-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Primitives as Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch22-the-reference-architecture-earned.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">The Reference Architecture, Earned</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: Case Studies</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-apm-overhaul.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">The APM Auth + Logging Overhaul</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-handbook-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Writing a ~68,000-Word Book with Agent Fleets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-publishing-pipeline.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">The Publishing Pipeline</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-growth-engine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Building a Growth Engine</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Closing</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch27-what-comes-next.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">What Comes Next</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/appendix-a-cross-harness-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">The Cross-Harness Reference</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/appendix-b-genesis-worked-example.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Genesis worked example: Panel re-architecture</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-governance-gap" id="toc-the-governance-gap" class="nav-link active" data-scroll-target="#the-governance-gap"><span class="header-section-number">5.1</span> The Governance Gap</a></li>
+  <li><a href="#sec-governance-readiness" id="toc-sec-governance-readiness" class="nav-link" data-scroll-target="#sec-governance-readiness"><span class="header-section-number">5.2</span> Governance Readiness Checklist</a>
+  <ul class="collapse">
+  <li><a href="#sec-governance-compliance-mapping" id="toc-sec-governance-compliance-mapping" class="nav-link" data-scroll-target="#sec-governance-compliance-mapping"><span class="header-section-number">5.2.1</span> Compliance Framework Mapping</a></li>
+  </ul></li>
+  <li><a href="#sec-governance-risk-taxonomy" id="toc-sec-governance-risk-taxonomy" class="nav-link" data-scroll-target="#sec-governance-risk-taxonomy"><span class="header-section-number">5.3</span> Risk Taxonomy</a>
+  <ul class="collapse">
+  <li><a href="#quality-degradation-the-silent-failure-mode" id="toc-quality-degradation-the-silent-failure-mode" class="nav-link" data-scroll-target="#quality-degradation-the-silent-failure-mode"><span class="header-section-number">5.3.1</span> Quality degradation: the silent failure mode</a></li>
+  <li><a href="#sec-governance-knowledge-atrophy" id="toc-sec-governance-knowledge-atrophy" class="nav-link" data-scroll-target="#sec-governance-knowledge-atrophy"><span class="header-section-number">5.3.2</span> Knowledge atrophy: the aviation parallel</a></li>
+  <li><a href="#supply-chain-and-context-integrity-the-new-attack-surface" id="toc-supply-chain-and-context-integrity-the-new-attack-surface" class="nav-link" data-scroll-target="#supply-chain-and-context-integrity-the-new-attack-surface"><span class="header-section-number">5.3.3</span> Supply chain and context integrity: the new attack surface</a></li>
+  <li><a href="#sec-organizational-policy-gap" id="toc-sec-organizational-policy-gap" class="nav-link" data-scroll-target="#sec-organizational-policy-gap"><span class="header-section-number">5.3.4</span> The Organizational Knowledge Gap</a></li>
+  </ul></li>
+  <li><a href="#regulatory-landscape" id="toc-regulatory-landscape" class="nav-link" data-scroll-target="#regulatory-landscape"><span class="header-section-number">5.4</span> Regulatory Landscape</a>
+  <ul class="collapse">
+  <li><a href="#eu-ai-act" id="toc-eu-ai-act" class="nav-link" data-scroll-target="#eu-ai-act"><span class="header-section-number">5.4.1</span> EU AI Act</a></li>
+  <li><a href="#soc-2" id="toc-soc-2" class="nav-link" data-scroll-target="#soc-2"><span class="header-section-number">5.4.2</span> SOC 2</a></li>
+  <li><a href="#data-residency" id="toc-data-residency" class="nav-link" data-scroll-target="#data-residency"><span class="header-section-number">5.4.3</span> Data residency</a></li>
+  </ul></li>
+  <li><a href="#sec-governance-board-reporting" id="toc-sec-governance-board-reporting" class="nav-link" data-scroll-target="#sec-governance-board-reporting"><span class="header-section-number">5.5</span> Board Reporting Template</a></li>
+  <li><a href="#from-rules-to-runway" id="toc-from-rules-to-runway" class="nav-link" data-scroll-target="#from-rules-to-runway"><span class="header-section-number">5.6</span> From Rules to Runway</a></li>
+  <li><a href="#sec-governance-chapter-checklist" id="toc-sec-governance-chapter-checklist" class="nav-link" data-scroll-target="#sec-governance-chapter-checklist"><span class="header-section-number">5.7</span> Chapter Checklist</a></li>
+  <li><a href="#sec-governance-decision-matrix" id="toc-sec-governance-decision-matrix" class="nav-link" data-scroll-target="#sec-governance-decision-matrix"><span class="header-section-number">5.8</span> The Architecture Decision Matrix</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/danielmeppiel/agentic-sdlc-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../handbook/ch02-the-ai-native-landscape.html">Part II: For Leaders</a></li><li class="breadcrumb-item"><a href="../handbook/ch05-governance-for-ai-assisted-delivery.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Governance for AI-Assisted Delivery</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Governance for AI-Assisted Delivery</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>An AI agent on your team just merged a pull request that touches your payment processing code. Who approved it? What data did the agent access during generation? Can your auditor trace the decision chain from business requirement to deployed change? If you cannot answer these questions today, your governance framework has a gap exactly where your AI investment is growing fastest.</p>
+<hr>
+<section id="the-governance-gap" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="the-governance-gap"><span class="header-section-number">5.1</span> The Governance Gap</h2>
+<p>Software governance has always assumed human actors at every decision point. Code review policies name individuals. Access controls map to employee identities. Audit trails trace decisions to people who can explain their reasoning in a meeting. Compliance frameworks (SOC 2, ISO 27001:2013 and its 2022 revision, PCI DSS) require demonstrating that authorized individuals made deliberate choices about what code runs in production.</p>
+<p>AI agents break this assumption.</p>
+<p>An agent that writes code, opens a pull request, responds to review feedback, and triggers a deployment pipeline is a participant in your software delivery lifecycle. It is not a tool in the way a linter or compiler is a tool; those produce deterministic output from deterministic input. An agent interprets instructions, makes judgment calls about implementation, and produces different output from the same input on different runs. Your governance framework almost certainly has no category for that.</p>
+<p>The gap shows up in three places:</p>
+<p><strong>Audit trails end at the human-agent boundary.</strong> Your version control system records that a commit was authored by a developer. It does not record that the developer delegated the work to an agent, what instructions the agent received, what context it consumed, what alternative approaches it considered and rejected, or how much of the final code the developer actually reviewed versus rubber-stamped. The commit history tells a story that is technically accurate and functionally misleading.</p>
+<p><strong>Approval workflows assume reviewers understand the code.</strong> A human reviewer approving agent-generated code faces a fundamentally different task than reviewing human-written code. Human code reflects the author’s thought process; reviewers can follow the logic because it was produced by a mind that works like theirs. Agent code is the output of a statistical process that optimizes for statistically likely token sequences, which correlates with plausibility but does not guarantee correctness. It can be syntactically correct, pass all tests, and still contain subtle misunderstandings of intent that a human author would never produce. Review processes designed for human code are necessary but insufficient for agent code.</p>
+<p><strong>Security boundaries were designed for human threat models.</strong> Your data classification policies, network access rules, and secret management practices assume that the entity accessing sensitive systems is a human employee whose behavior is constrained by training, judgment, and legal accountability. An agent with access to your codebase, your CI/CD pipeline, and your cloud credentials operates under a different set of constraints: specifically, whatever constraints you explicitly configure. What you do not restrict, the agent will eventually touch.</p>
+<p>None of this means agents are ungovernable. It means your existing governance framework needs extension, not replacement. The sections that follow provide the structure for that extension.</p>
+<hr>
+</section>
+<section id="sec-governance-readiness" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-governance-readiness"><span class="header-section-number">5.2</span> Governance Readiness Checklist</h2>
+<p>Governance for AI-assisted delivery spans six areas. Each exists on a maturity spectrum. The checklist below is designed for self-assessment: locate your organization on each row, then prioritize the gaps that carry the most risk in your context.</p>
+<p>Two background terms make the rows below easier to read. Part III distinguishes <em>strong-form supervised execution</em> — every agent action that crosses the boundary into the deterministic system is auditable, reversible, and policy-checked at execution time — from <em>weak-form supervised execution</em> — a human reviews the agent’s output after the fact, but the action itself was not gated. Most organizations begin with weak-form supervision (PR review of agent-generated diffs) and move row-by-row toward strong-form supervision as the stakes rise. The checklist’s “Enterprise” column is, in effect, the strong-form bar for that row. The “Basic” column is the weak-form floor.</p>
+<div data-tbl-colwidths="[3,12,25,28,32]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 12%">
+<col style="width: 25%">
+<col style="width: 28%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Capability</th>
+<th>None</th>
+<th>Basic</th>
+<th>Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><strong>Audit trails</strong></td>
+<td>No record of which code was agent-generated. Commits attributed to the prompting developer with no distinction.</td>
+<td>Agent contributions tagged in commit metadata or PR labels. Prompt history retained for a defined period.</td>
+<td>Full provenance chain: instruction given, context consumed, output produced, human review decision, and rationale — all queryable and linked to compliance artifacts. <em>Part III implements this as the agent-stack-trace and lockfile patterns.</em></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><strong>Agent access controls</strong></td>
+<td>Agents run with the developer’s full credentials. No distinction between human and agent access scope.</td>
+<td>Agents operate under scoped tokens with reduced permissions. File system and network access restricted to declared boundaries.</td>
+<td>Least-privilege agent identities with per-task credential issuance, automatic expiration, and separate audit logging for agent actions. <em>Part III names the mechanism behind this row</em> capability-based security <em>— the runtime decides per-invocation which tools and contexts the agent can reach.</em></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><strong>Approval workflows</strong></td>
+<td>Standard code review applies identically to human and agent code. No additional scrutiny for agent output.</td>
+<td>Agent-generated PRs are flagged for enhanced review. Critical paths (auth, payments, data access) require human sign-off regardless of author.</td>
+<td>Risk-tiered review: agent output touching sensitive systems routed through security-aware reviewers with checklist-based verification. Approval latency tracked as a metric. <em>This is the strong-form supervision bar — the seam (the boundary where agent action meets the platform) is gated, not just observed.</em></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><strong>Data boundary enforcement</strong></td>
+<td>No controls on what data agents can access during code generation. Proprietary code, secrets, and customer data may enter agent context.</td>
+<td>Agents restricted from accessing production data and secrets. Code sent to external models reviewed against data classification policy.</td>
+<td>Data loss prevention integrated into agent workflows. Context filters prevent classified data from entering model prompts. Residency requirements enforced per jurisdiction. <em>Part III calls this discipline</em> bounded-scope grounding <em>— context is loaded with explicit provenance and an explicit boundary, not pulled in opportunistically.</em></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><strong>Cost controls</strong></td>
+<td>No visibility into agent-related compute or API spend. Costs absorbed into general cloud bills.</td>
+<td>Per-team or per-project token budgets. Alerts on unusual consumption. Monthly cost reporting.</td>
+<td>Real-time cost attribution per agent task. Automated circuit breakers on runaway sessions. Cost-per-feature tracking integrated into project planning.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><strong>Compliance reporting</strong></td>
+<td>Cannot demonstrate to an auditor how agent-generated code is governed. Compliance posture unknown.</td>
+<td>Periodic manual reports on agent usage, access scope, and review rates. Policies documented but enforcement is process-dependent.</td>
+<td>Automated compliance dashboards. Agent governance artifacts generated alongside code. Audit-ready evidence exportable on demand. Policy enforcement is systemic, not procedural.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Most organizations operating at Phase 3 (agentic coding, as described in Chapter 2) will find themselves in the “None” or “Basic” column for at least four of these six areas. That is expected. The purpose of the checklist is not to achieve “Enterprise” everywhere. It is to ensure you are not at “None” in any area that carries material risk for your business.</p>
+<p><strong>A note on the Enterprise column.</strong> The rightmost column describes a target state. Some of its requirements (full provenance chains, real-time cost attribution per agent task, automated compliance dashboards) exceed what current-generation tooling delivers out of the box. Treat the Enterprise column as directional, not immediate. When your compliance team asks “when do we get there,” the honest answer is: some capabilities are available now with custom integration; others depend on tooling maturity that, as of mid-2025, remains ahead of generally available products. Plan accordingly, and do not let the aspiration prevent progress on Basic.</p>
+<p><strong>Where to start.</strong> Audit trails and agent access controls are the two capabilities that unblock everything else. Without knowing what agents did and limiting what they can do, the other four capabilities have no foundation. If your assessment shows “None” in these areas, start here.</p>
+<div class="cell" data-fig-width="4.5" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-governance-assessment" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-governance-assessment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-governance-assessment">flowchart TD
+    START["Assess 6&lt;br/&gt;governance capabilities"] --&gt; Q1{"Any capability&lt;br/&gt;at 'None'?"}
+    Q1 --&gt;|Yes| FIX["Start here:&lt;br/&gt;Audit Trails +&lt;br/&gt;Access Controls"]
+    Q1 --&gt;|No| Q2{"All at&lt;br/&gt;'Basic' or above?"}
+    Q2 --&gt;|Yes| EXPAND["Safe to expand&lt;br/&gt;agent adoption"]
+    Q2 --&gt;|No| FIX
+    FIX --&gt; REASSESS["Reassess&lt;br/&gt;quarterly"]
+    EXPAND --&gt; MATURE["Invest toward&lt;br/&gt;'Enterprise' per&lt;br/&gt;regulatory scope"]
+    REASSESS --&gt; Q1
+
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-governance-assessment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: Governance capability quick-start assessment
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><em>The governance floor: no capability at “None” before expanding agent adoption. Start with audit trails and access controls — they unblock everything else.</em></p>
+</blockquote>
+<section id="sec-governance-compliance-mapping" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="sec-governance-compliance-mapping"><span class="header-section-number">5.2.1</span> Compliance Framework Mapping</h3>
+<p>A checklist without regulatory context is a conversation starter, not a decision tool. The matrix below maps each capability row to the compliance frameworks where it is critical. Use it to prioritize: find your regulatory scope in the columns, then focus on the rows marked as critical for that scope.</p>
+<div class="landscape">
+<div data-tbl-colwidths="[3,15,17,17,16,16,16]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 15%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Capability</th>
+<th>SOC 2</th>
+<th>ISO 27001</th>
+<th>PCI DSS</th>
+<th>HIPAA</th>
+<th>EU AI Act</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Audit trails</td>
+<td><strong>Critical</strong> — CC8.1 (change management), CC7.2 (monitoring)</td>
+<td><strong>Critical</strong> — A.12.4 (logging and monitoring)</td>
+<td><strong>Critical</strong> — Req. 10 (track and monitor access)</td>
+<td><strong>Critical</strong> — §164.312(b) (audit controls)</td>
+<td><strong>Critical</strong> — Art. 12 (record-keeping)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Agent access controls</td>
+<td><strong>Critical</strong> — CC6.1, CC6.3 (logical access, least privilege)</td>
+<td><strong>Critical</strong> — A.9.2, A.9.4 (access management, access control)</td>
+<td><strong>Critical</strong> — Req. 7, Req. 8 (restrict access, identify users)</td>
+<td><strong>Critical</strong> — §164.312(a) (access control)</td>
+<td>Relevant — Art. 14 (human oversight)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Approval workflows</td>
+<td><strong>Critical</strong> — CC8.1 (change management)</td>
+<td>Relevant — A.14.2 (secure development)</td>
+<td><strong>Critical</strong> — Req. 6 (secure systems)</td>
+<td>Relevant — §164.308(a)(5) (security awareness)</td>
+<td><strong>Critical</strong> — Art. 14 (human oversight of high-risk AI)</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Data boundary enforcement</td>
+<td><strong>Critical</strong> — CC6.7 (data transmission), C1.1 (confidentiality)</td>
+<td><strong>Critical</strong> — A.13.2 (information transfer)</td>
+<td><strong>Critical</strong> — Req. 3, Req. 4 (protect stored data, encrypt transmission)</td>
+<td><strong>Critical</strong> — §164.312(e) (transmission security)</td>
+<td>Relevant — Art. 10 (data governance)</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Cost controls</td>
+<td>Relevant — CC3.1 (risk assessment)</td>
+<td>Relevant — A.12.1 (operational planning)</td>
+<td>Not directly scoped</td>
+<td>Not directly scoped</td>
+<td>Not directly scoped</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Compliance reporting</td>
+<td><strong>Critical</strong> — CC4.1 (monitoring activities)</td>
+<td><strong>Critical</strong> — A.18.2 (compliance review)</td>
+<td><strong>Critical</strong> — Req. 12 (security policy)</td>
+<td><strong>Critical</strong> — §164.308(a)(8) (evaluation)</td>
+<td><strong>Critical</strong> — Art. 13 (transparency)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>How to read this.</strong> If you are SOC 2-scoped, rows 1, 2, 3, 4, and 6 are critical — you will face audit findings if any of these are at “None.” If you handle payment data under PCI DSS, rows 1, 2, 3, and 4 are your floor. If you ship to EU markets and your product touches high-risk categories, the EU AI Act makes rows 1, 3, and 6 non-negotiable. Start where your regulatory exposure intersects with your lowest maturity.</p>
+<hr>
+</section>
+</section>
+<section id="sec-governance-risk-taxonomy" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-governance-risk-taxonomy"><span class="header-section-number">5.3</span> Risk Taxonomy</h2>
+<p>Agent-introduced risk falls into six categories. Each has specific mechanisms, concrete manifestations, and identifiable owners. The taxonomy is not theoretical — these are risks that organizations adopting agentic development are encountering now.</p>
+<p>The consolidated table below captures all six risk categories with representative examples, mitigations, and owners. Three risks that introduce novel failure modes — quality degradation, knowledge atrophy, and supply chain integrity — are expanded in the sections that follow.</p>
+<div data-tbl-colwidths="[14,14,24,30,18]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 24%">
+<col style="width: 30%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Risk</th>
+<th>Example</th>
+<th>Mitigation</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>IP &amp; data exposure</strong></td>
+<td>Proprietary code sent to external model</td>
+<td>Agent context includes auth module source; developer uses cloud-hosted model without enterprise data agreement</td>
+<td>Enforce enterprise-tier agreements with training opt-out. Deploy context filters. Maintain data classification policy covering agent workflows.</td>
+<td>Security / Legal</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Training data reproduced in output</td>
+<td>Agent generates a near-exact copy of a GPL-licensed implementation, merged without review</td>
+<td>Integrate license-scanning tools into CI. Flag agent-generated code for IP review in sensitive components.</td>
+<td>Legal / Engineering</td>
+</tr>
+<tr class="odd">
+<td><strong>Quality degradation</strong></td>
+<td>Plausible incorrectness</td>
+<td>Agent implements a data pipeline that passes all tests but silently drops null values the business logic depends on</td>
+<td>Require property-based or invariant tests for agent-generated code in critical paths. Review output against ADRs.</td>
+<td>Engineering leads</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Convention drift</td>
+<td>Fifty agent-generated files use three different error-handling patterns; none match the team standard</td>
+<td>Encode conventions as structured context (instruction files, linters, architectural rules) that agents consume during generation.</td>
+<td>Tech leads / Architects</td>
+</tr>
+<tr class="odd">
+<td><strong>Dependency &amp; concentration</strong></td>
+<td>Model outage</td>
+<td>Primary model provider has a 4-hour outage during a release sprint; team cannot complete agent-assisted tasks</td>
+<td>Maintain fallback model configurations. Ensure critical workflows degrade gracefully to human-only execution. Test fallback quarterly.</td>
+<td>Platform / Engineering</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Vendor lock-in</td>
+<td>Organization has 2,000 tool-specific instruction files; switching tools requires rewriting all of them</td>
+<td>Use portable, vendor-neutral formats for context artifacts. Separate content from format.</td>
+<td>Architecture / Platform</td>
+</tr>
+<tr class="odd">
+<td><strong>Knowledge atrophy</strong></td>
+<td>Debugging skill loss</td>
+<td>Junior engineers cannot diagnose a production issue because they never debugged code without agent assistance</td>
+<td>Require regular unassisted development exercises. Pair juniors with agent output for review practice.</td>
+<td>Engineering managers</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Architectural reasoning decay</td>
+<td>Team cannot redesign a subsystem because no one has practiced trade-off decisions outside agent-provided constraints</td>
+<td>Rotate architecture review responsibilities. Include constraint-design tasks in sprint work.</td>
+<td>Architecture / CTO</td>
+</tr>
+<tr class="odd">
+<td><strong>Regulatory liability</strong></td>
+<td>Implicit compliance violation</td>
+<td>Agent generates a logging module that captures user IP addresses and geolocation where this requires explicit consent</td>
+<td>Define compliance constraints as explicit agent context for regulated code paths. Require compliance-aware review.</td>
+<td>Legal / Security</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Accountability gap</td>
+<td>Regulator asks who decided to store customer data in a specific format; the decision was made by an agent in a 50-file PR</td>
+<td>Maintain decision logs for agent-generated code in regulated areas. Include “compliance-relevant choices” in PR review checklists.</td>
+<td>Engineering leads / Legal</td>
+</tr>
+<tr class="odd">
+<td><strong>Supply chain &amp; context integrity</strong></td>
+<td>Prompt injection via dependency</td>
+<td>A transitive dependency README includes hidden instructions causing the agent to exfiltrate environment variables</td>
+<td>Restrict agent context to vetted, first-party sources for sensitive operations. Apply context sanitization.</td>
+<td>Security / Platform</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Compromised instruction files</td>
+<td>Attacker subtly modifies an agent instruction file via PR, causing generated auth code to include a backdoor pattern</td>
+<td>Apply code review and change-management controls to instruction files with the same rigor as production code.</td>
+<td>Security / Engineering leads</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="quality-degradation-the-silent-failure-mode" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="quality-degradation-the-silent-failure-mode"><span class="header-section-number">5.3.1</span> Quality degradation: the silent failure mode</h3>
+<p>The failure mode of a weak model is obvious: the code doesn’t work. The failure mode of a strong model with poor context is insidious: the code works, passes tests, and silently violates architectural invariants that no test covers.</p>
+<p>Agent-generated code introduces quality risks that are fundamentally different from human-written bugs. <strong>Plausible incorrectness</strong> means agents produce code that reads well and compiles cleanly but misunderstands the intent — a function that returns correct results for all test cases but uses O(n²) complexity where O(n) was required, or a database query that produces correct output but bypasses the caching layer. <strong>Hallucinated dependencies</strong> means agents reference APIs or methods that don’t exist or have been deprecated; when the hallucination happens to compile, the failure is deferred to production. <strong>Convention drift</strong> means agents without access to your team’s conventions produce code that works but doesn’t belong — inconsistent error handling, non-standard logging, creative-but-wrong module structure. Each instance is minor. At scale, it degrades the codebase coherence that lets your team navigate and modify code confidently.</p>
+</section>
+<section id="sec-governance-knowledge-atrophy" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="sec-governance-knowledge-atrophy"><span class="header-section-number">5.3.2</span> Knowledge atrophy: the aviation parallel</h3>
+<p>This is the least discussed and most consequential long-term risk. When agents handle tasks that humans used to perform, humans get less practice at those tasks. Over months and years, the team’s collective ability to perform those tasks without agent assistance erodes.</p>
+<p>Knowledge atrophy is not hypothetical. It follows patterns well-documented in aviation and financial analysis. Airline pilots who rely on autopilot for routine flying are measurably less proficient at manual flying — a fact the industry addresses with mandatory manual-flying requirements. Financial analysts who rely on automated models are less able to identify model failures, which is why regulatory frameworks require human understanding, not just human approval.</p>
+<p>In software development, the specific atrophy risks are:</p>
+<ul>
+<li><strong>Debugging skills.</strong> If agents write the code and agents fix the bugs, junior engineers never develop the debugging intuition that comes from struggling with code they wrote themselves.</li>
+<li><strong>Architectural reasoning.</strong> If agents make implementation decisions within provided constraints, engineers get less practice reasoning about trade-offs outside those constraints, the kind of reasoning required when the constraints themselves need to change.</li>
+<li><strong>Review depth.</strong> If reviewers habitually approve agent-generated code that passes tests, the skill of deep code review (reading for intent, not just correctness) atrophies.</li>
+</ul>
+<p>Knowledge atrophy does not produce failures in the short term. It produces an organization that cannot recover when agent assistance is unavailable, cannot evaluate whether agent output is correct in novel situations, and cannot train the next generation of engineers. The mitigation is not to avoid agents — it is to design deliberate practice into your development process, the way aviation designs manual-flying requirements into pilot training.</p>
+</section>
+<section id="supply-chain-and-context-integrity-the-new-attack-surface" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="supply-chain-and-context-integrity-the-new-attack-surface"><span class="header-section-number">5.3.3</span> Supply chain and context integrity: the new attack surface</h3>
+<p>Your agents consume context — instruction files, documentation, configuration, code from dependencies — and that context is an attack surface. Supply chain risk for AI-assisted development extends beyond traditional dependency vulnerabilities into a new category: context poisoning.</p>
+<p><strong>Prompt injection via context</strong> means an agent that reads repository files, fetches documentation, or consumes dependency metadata can be influenced by adversarial content planted in those sources. A malicious instruction in a dependency’s README or a carefully crafted comment in imported code can alter agent behavior. This is not speculative — prompt injection is an active area of security research and a documented attack vector against LLM-integrated systems.</p>
+<p><strong>Compromised instruction files</strong> are especially dangerous because your agent instruction files are code that governs code. If an attacker gains write access (through a compromised dependency, a supply chain attack, or a malicious contribution), they can influence every line of agent-generated code without modifying a single source file.</p>
+<p><strong>The defensive discipline: bounded-scope grounding.</strong> The technique Part III names for working against context-poisoning attacks is <em>bounded-scope grounding</em>: every piece of context that enters the agent’s working set arrives with an explicit source, an explicit scope (where it applies), and an explicit boundary (where it stops applying). The instruction file at the repository root applies everywhere; the instruction file under <code>payments/</code> applies only there; an external dependency’s documentation does not enter the agent’s context unless the operator explicitly grants it. The discipline is not new — it is the same provenance discipline applied to source code under the supply-chain practices of the last decade. Apply it to context, and prompt injection via context narrows from a routine risk to a deliberately bounded one. Part III operates the mechanism in detail; the governance point is that <em>context provenance</em> belongs in the same review process as <em>code provenance</em>, and the audit trail for both should converge.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Organizational Policy: The Permanent Governance Gap
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>One limitation of AI-assisted governance that no model improvement will resolve: organizational policy awareness lives nowhere in training data. An agent can enforce coding standards from a rules file. It can run 22 automated policy checks in CI. But it cannot know that your organization’s legal team requires review for any feature touching PII, or that a PR linking a personal asset from a corporate repository creates a compliance risk — unless that policy is explicitly encoded in the context layer. This is why governance primitives must include organizational policies, not just technical standards. Part III makes the underlying mechanism concrete: Chapter 12 explains how to instrument the codebase so policy gates fail loudly rather than silently, Chapter 16 explains how those gates sit at the seam where the agent’s action meets the deterministic system, and Chapter 21 explains how policy primitives are versioned and shared the way application code is. The <a href="../case-study-growth-engine.html">Growth Engine case study</a> documents this finding in detail: fifteen agent personas across seven expert panels missed a compliance constraint that a human caught in seconds.</p>
+</div>
+</div>
+</section>
+<section id="sec-organizational-policy-gap" class="level3" data-number="5.3.4">
+<h3 data-number="5.3.4" class="anchored" data-anchor-id="sec-organizational-policy-gap"><span class="header-section-number">5.3.4</span> The Organizational Knowledge Gap</h3>
+<p>The Growth Engine finding above is worth treating as the central governance fact this chapter sets up, not a footnote. It is the single result that most clearly separates “AI got better” from “governance got harder,” and it is the result every CTO should expect to see replicated in their own organization within the first year of agent adoption.</p>
+<p><strong>What happened.</strong> A multi-agent panel of fifteen specialist personas — staffed across seven expert panels covering market analysis, technical architecture, security review, compliance posture, and customer-impact assessment — reviewed a proposed product change end to end. The review produced a structured set of findings, prioritized recommendations, and an explicit go/no-go verdict. A single human reviewer, with thirty seconds and no specialist knowledge, identified a compliance constraint the entire panel had missed. The constraint was a Microsoft-internal policy about the cross-org use of a specific data classification. It is documented in the company’s own policy library. It has been in force for years. None of the fifteen specialist agents flagged it. The case study reports the finding verbatim: <em>“fifteen personas across seven panels missed it because organizational policy is not in the training data.”</em></p>
+<p><strong>Why this is permanent, not transient.</strong> The temptation is to read this as a defect of current models that will improve with scale. It will not. Organizational policy is, by construction, not in any training corpus: it is internal, it is privileged, it changes faster than training cycles, and it is often deliberately not written down outside privileged systems. Even if a future model were trained on every public document on the internet, it would still know nothing about your CELA review triggers, your data classification taxonomy, your cross-business-unit data-sharing rules, or your jurisdiction-specific approval thresholds. This gap is a property of <em>what training data is</em>, not a property of <em>how good the model is</em>. It is a permanent boundary of the methodology.</p>
+<p><strong>Why specialist agents do not close the gap.</strong> It is tempting to assume that a security-specialist agent or a compliance-specialist agent will know the policies a generalist agent does not. The Growth Engine result rules this out: the failed review <em>was</em> a panel of specialists, and the specialists confidently produced authoritative-sounding analysis precisely in the area where they were missing the constraint. A specialist agent without explicit access to your policy library is a generalist agent with a more confident voice, not a more knowledgeable one. The fluency of the output is what makes the gap dangerous: the panel did not say “we don’t know” — it said “we have considered everything and recommend proceeding.”</p>
+<p><strong>What the gap means for governance design.</strong> Three implications follow:</p>
+<ol type="1">
+<li><strong>Policies must be encoded as primitives, not assumed as background.</strong> Every organizational policy that the agent could plausibly need to apply must exist as a versioned, machine-readable artefact in the same context layer the agent already loads. Part III makes the encoding concrete; the governance point is that policies which exist only in PDFs, wikis, or institutional memory are, from the agent’s perspective, equivalent to not existing at all.</li>
+<li><strong>Policy gates belong at the seam, not in the review.</strong> The reflexive response to a policy gap is “we will add another review step.” That response is wrong: weak-form supervision (review-after-the-fact) is a poor fit for low-prevalence, high-stakes constraints, because reviewers quickly learn to skim. The strong-form alternative is to encode the policy as an executable check that runs at the seam where the agent’s action meets the platform — a CI check, a pre-commit gate, an automated approval rule. The gate either passes or it blocks; there is no “the reviewer was tired today” failure mode.</li>
+<li><strong>Human-in-the-loop is not a substitute for encoded policy — it is a fallback when the encoding is incomplete.</strong> Mature governance treats the human reviewer as the <em>escape valve</em> for the cases the encoded gates cannot anticipate, not as the primary enforcement mechanism. Inverting this — assuming a human will catch what the encoding misses — fails at any scale where review volume exceeds review attention.</li>
+</ol>
+<p>The Growth Engine result is not a story about a single bug; it is a story about the shape of every governance gap your organization will encounter in the next twenty-four months. Treat it as the binding evidence that the Enterprise column of the readiness checklist above is not aspirational ornament — it is the required engineering response to a permanent property of the methodology.</p>
+<hr>
+</section>
+</section>
+<section id="regulatory-landscape" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="regulatory-landscape"><span class="header-section-number">5.4</span> Regulatory Landscape</h2>
+<p>This section provides awareness of regulatory frameworks that intersect with AI-assisted software development. It is not legal advice. Specific requirements vary by jurisdiction, industry, and use case. Consult qualified legal counsel for your organization’s compliance obligations.</p>
+<p>That said, ignorance is not a viable compliance strategy. The frameworks below are the ones most likely to affect engineering organizations using AI agents in production.</p>
+<section id="eu-ai-act" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="eu-ai-act"><span class="header-section-number">5.4.1</span> EU AI Act</h3>
+<p>The EU AI Act, which entered into force in August 2024 with phased enforcement through 2027, classifies AI systems by risk tier. Code-generating agents are not, by default, classified as high-risk, but the software they produce may be. If your agents generate code for systems that the Act classifies as high-risk (medical devices, critical infrastructure, safety components), the governance requirements for those systems extend to your development process, including how the code was generated.</p>
+<p>Key requirements that affect AI-assisted development: transparency obligations (users must know when they are interacting with AI), record-keeping requirements (logs of AI system behavior), and human oversight provisions (meaningful human control over AI system outputs). Organizations shipping to EU markets should evaluate whether their agent-assisted development process can satisfy these requirements for the risk tier of their product.</p>
+</section>
+<section id="soc-2" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="soc-2"><span class="header-section-number">5.4.2</span> SOC 2</h3>
+<p>SOC 2 audits evaluate controls related to security, availability, processing integrity, confidentiality, and privacy. If your organization undergoes SOC 2 audits, the auditor will eventually ask how AI-generated code changes are governed. The question is when, not whether.</p>
+<p>The relevant controls span change management (how agent-generated changes are authorized and reviewed), access management (what systems and data agents can reach), and monitoring (how agent behavior is logged and reviewed). Organizations that cannot produce audit trails for agent-generated changes (who requested it, what the agent accessed, who approved the result) will face findings in their next audit cycle.</p>
+</section>
+<section id="data-residency" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="data-residency"><span class="header-section-number">5.4.3</span> Data residency</h3>
+<p>Model API calls transmit code to infrastructure operated by the model provider. For organizations subject to data residency requirements, whether from regulation (GDPR, sector-specific rules) or contractual obligation, the location where agent context is processed matters. Most major providers offer regional deployment options at enterprise tiers. Verify that your agent tooling configuration routes data through compliant infrastructure, and document the verification.</p>
+<div data-tbl-colwidths="[12,35,23,30]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 35%">
+<col style="width: 23%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Framework</th>
+<th>Relevance to agent-assisted development</th>
+<th>Key requirement</th>
+<th>Recommended posture</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EU AI Act</td>
+<td>Software built by agents may inherit risk classification of the deployed system.</td>
+<td>Transparency, record-keeping, human oversight for high-risk applications.</td>
+<td>Map your products to risk tiers. Evaluate whether your agent governance satisfies the tier’s requirements.</td>
+</tr>
+<tr class="even">
+<td>SOC 2</td>
+<td>Auditors will ask about change management for agent-generated code.</td>
+<td>Demonstrable controls for authorization, review, and monitoring of all code changes.</td>
+<td>Extend existing change management controls to cover agent-generated changes explicitly. Build audit trail capability.</td>
+</tr>
+<tr class="odd">
+<td>GDPR / Data residency</td>
+<td>Agent context may be transmitted to model provider infrastructure in different jurisdictions.</td>
+<td>Data processing must comply with residency and transfer requirements.</td>
+<td>Verify model API routing. Use enterprise agreements with data processing addenda. Document compliance.</td>
+</tr>
+<tr class="even">
+<td>PCI DSS</td>
+<td>Agents generating code that handles payment data must operate within PCI scope.</td>
+<td>Restrict agent access to cardholder data environments. Log all agent interactions with payment systems.</td>
+<td>Include agent access in your PCI scope assessment. Apply the same controls as human developer access.</td>
+</tr>
+<tr class="odd">
+<td>HIPAA</td>
+<td>Agents generating code for health data systems must comply with PHI protections.</td>
+<td>Agent context must not include protected health information unless compliant safeguards are in place.</td>
+<td>Exclude PHI from agent context. Use on-premises or BAA-covered model deployments for health data systems.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-governance-board-reporting" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="sec-governance-board-reporting"><span class="header-section-number">5.5</span> Board Reporting Template</h2>
+<p>Leaders need to communicate AI agent adoption status to executive and board audiences. The template below provides a one-page format that covers the four areas boards ask about: what is happening, what it costs, what the risks are, and what decisions are needed.</p>
+<p>A status snapshot is a status email. A governance artifact shows where you are, where you are going, and whether you are on track. The template includes targets and trends for every metric row — without them, the board cannot distinguish progress from noise.</p>
+<p><strong>AI-Assisted Development — Quarterly Status</strong></p>
+<div data-tbl-colwidths="[12,25,28,18,17]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 25%">
+<col style="width: 28%">
+<col style="width: 18%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Section</th>
+<th>Metric</th>
+<th>Current</th>
+<th>Target</th>
+<th>Trend</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Adoption</strong></td>
+<td>Developers using agent tools</td>
+<td><em>e.g., 120 of 400 (30%)</em></td>
+<td><em>80% by Q4</em></td>
+<td><em>↑ from 18% last quarter</em></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>PRs with agent-generated code</td>
+<td><em>e.g., 22%</em></td>
+<td><em>40% by Q4</em></td>
+<td><em>↑ from 12%</em></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Phase maturity</td>
+<td><em>e.g., Phase 2 (conversational)</em></td>
+<td><em>Phase 3 (agentic) by year-end</em></td>
+<td><em>Advanced from Phase 1 in Q1</em></td>
+</tr>
+<tr class="even">
+<td><strong>Value</strong></td>
+<td>Cycle time (agent-assisted vs.&nbsp;baseline)</td>
+<td><em>e.g., −18% on eligible tasks</em></td>
+<td><em>−25%</em></td>
+<td><em>↑ improving (was −11%)</em></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Deployment frequency</td>
+<td><em>e.g., 3.2/week</em></td>
+<td><em>4/week</em></td>
+<td><em>→ flat</em></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Developer satisfaction (survey)</td>
+<td><em>e.g., 7.4/10</em></td>
+<td><em>≥7.5</em></td>
+<td><em>↑ from 6.8</em></td>
+</tr>
+<tr class="odd">
+<td><strong>Cost</strong></td>
+<td>Tool licensing</td>
+<td><em>e.g., $42K/quarter</em></td>
+<td><em>≤$50K</em></td>
+<td><em>→ stable</em></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Model API / token spend</td>
+<td><em>e.g., $28K/quarter</em></td>
+<td><em>≤$35K</em></td>
+<td><em>↑ from $19K (adoption growth)</em></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Total cost of ownership</td>
+<td><em>e.g., $85K/quarter</em></td>
+<td><em>≤$100K</em></td>
+<td><em>↑ tracking to plan</em></td>
+</tr>
+<tr class="even">
+<td><strong>Risk</strong></td>
+<td>Governance readiness (lowest capability)</td>
+<td><em>e.g., Basic in 4/6 areas</em></td>
+<td><em>Basic in 6/6 by Q3</em></td>
+<td><em>↑ was None in 3/6</em></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Open audit findings (agent-related)</td>
+<td><em>e.g., 2 open</em></td>
+<td><em>0</em></td>
+<td><em>↓ from 5</em></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Agent-related incidents</td>
+<td><em>e.g., 1 this quarter</em></td>
+<td><em>0</em></td>
+<td><em>→ flat</em></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Data boundary compliance</td>
+<td><em>e.g., Compliant</em></td>
+<td><em>Maintain</em></td>
+<td><em>→ stable</em></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Insurance / liability coverage</td>
+<td><em>e.g., E&amp;O and cyber reviewed; agent clause pending</em></td>
+<td><em>Agent-specific coverage confirmed</em></td>
+<td><em>In progress</em></td>
+</tr>
+<tr class="odd">
+<td><strong>Decisions needed</strong></td>
+<td></td>
+<td><em>Budget approval for next quarter. Data classification policy update requiring board awareness. Vendor contract renewal. Risk acceptance for identified gaps.</em></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The template is deliberately brief. Board reporting should communicate status and surface decisions, not educate the audience on how agents work. The trend column is the most important: it tells the board whether the investment is producing directional progress or whether intervention is needed.</p>
+<hr>
+</section>
+<section id="from-rules-to-runway" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="from-rules-to-runway"><span class="header-section-number">5.6</span> From Rules to Runway</h2>
+<p>Governance has an image problem. Engineers associate it with bureaucracy: approval queues that slow delivery, compliance checklists that exist for auditors rather than developers. If you position AI governance as another layer of restriction, adoption will route around it.</p>
+<p>The reframe is straightforward: governance enables velocity by establishing the trust boundaries within which teams can move fast. Consider the parallel to automated testing. Before comprehensive test suites became standard practice, every deployment required extensive manual verification. The “governance” (testing) slowed individual changes. But organizations with strong test suites deploy more frequently, not less, because each deployment carries lower risk and requires less manual scrutiny.</p>
+<p>Agent governance works the same way. An organization with clear audit trails, scoped agent permissions, and risk-tiered review processes can give agents more autonomy in low-risk areas — because the controls exist to catch problems in high-risk ones. Without governance, every agent interaction carries ambiguous risk, which means cautious organizations restrict agent use broadly, and incautious organizations expose themselves to risks they cannot quantify.</p>
+<p>The governance checklist in this chapter is not a ceiling. It is a floor. Build it, and you create the conditions for your teams to adopt agents aggressively where the risk is managed, rather than timidly everywhere because the risk is unknown.</p>
+<hr>
+</section>
+<section id="sec-governance-chapter-checklist" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="sec-governance-chapter-checklist"><span class="header-section-number">5.7</span> Chapter Checklist</h2>
+<p>Use this as a starting point. Adapt the specifics to your organization’s risk profile, regulatory environment, and adoption stage.</p>
+<ol type="1">
+<li>Conduct a governance readiness self-assessment using the six areas. Use the compliance framework mapping to prioritize based on your regulatory scope.</li>
+<li>Prioritize audit trails and agent access controls if you are currently at “None” in either.</li>
+<li>Classify your agent-introduced risks across all six taxonomy categories. Assign owners.</li>
+<li>Map your products to relevant regulatory frameworks. Evaluate gaps specific to agent-assisted development.</li>
+<li>Review your agent instruction files and context sources for supply chain integrity. Apply change-management controls.</li>
+<li>Establish a board reporting cadence. Use the template — with targets and trends — or adapt it to your existing format.</li>
+<li>Review your code review process. Verify it accounts for the specific failure modes of agent-generated code, including implicit compliance decisions.</li>
+<li>Document your data boundary policy for agent workflows. Verify enforcement is systemic, not procedural.</li>
+<li>Design deliberate practice into your development process to mitigate knowledge atrophy.</li>
+<li>Test your fallback. Verify your team can sustain delivery if agent assistance is unavailable for 48 hours.</li>
+<li>Confirm your E&amp;O and cyber insurance policies address agent-generated code. Raise the question with your CFO before the board does.</li>
+<li>Schedule a quarterly governance review. Agent capabilities and regulatory requirements both move fast.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>These Governance Principles Have Concrete Implementations
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The governance framework above is not theoretical. The APM project implements each principle as CI-enforceable infrastructure:</p>
+<ul>
+<li><strong>Lock file audit trails</strong> pin every agent configuration to exact commit SHAs with full dependency provenance — producing SOC 2-ready evidence from standard <code>git log</code> queries.</li>
+<li><strong>Policy inheritance chains</strong> (Enterprise → Organization → Repository) ensure security baselines cascade automatically; child policies can only tighten constraints, never relax them.</li>
+<li><strong>CI enforcement gates</strong> run 22 automated checks (6 baseline + 16 organizational policy) and block deployments that violate policy — no human gatekeeper required.</li>
+<li><strong>Content scanning</strong> detects hidden Unicode attacks (bidirectional overrides, tag characters, variation selectors) before files reach agent-readable directories — addressing the prompt supply chain threat at the pre-deployment stage.</li>
+</ul>
+<p>The pattern generalizes: governance primitives that can be expressed as CI checks should be. The ones that cannot — organizational policy, legal review triggers, risk classification — must be encoded as explicit context for agents and humans alike.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="sec-governance-decision-matrix" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="sec-governance-decision-matrix"><span class="header-section-number">5.8</span> The Architecture Decision Matrix</h2>
+<p>The checklist above tells you what governance capabilities to build. The matrix below tells you, for each material decision an agent might participate in, <em>who decides what, with which evidence, gated by which check.</em> It is the governance overlay that sits on top of the <strong>Governance and Distribution</strong> layer of the reference architecture (Chapter 4) — the layer that ships primitives and lockfiles between teams. The Decision Matrix is what turns those primitives and lockfiles into auditable governance gates.</p>
+<p>The matrix has six columns. Each row is a class of decision. Use it as a starting template; adapt the rows to the decision classes that recur in your organization’s pull-request reviews and incident postmortems.</p>
+<div data-tbl-colwidths="[18,14,14,18,18,18]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Decision class</th>
+<th>Agent role</th>
+<th>Human role</th>
+<th>Evidence captured</th>
+<th>Gate</th>
+<th>Reversibility</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Code change in a low-risk module</strong> (internal tooling, dev docs, non-production scripts)</td>
+<td>Author the diff; run tests; open the PR</td>
+<td>Review and merge</td>
+<td>Diff, test output, agent stack trace</td>
+<td>PR review by one human reviewer</td>
+<td>Reversible: revert the commit</td>
+</tr>
+<tr class="even">
+<td><strong>Code change in a regulated path</strong> (auth, payments, data access, customer PII handlers)</td>
+<td>Draft the diff; cite the constraint</td>
+<td>Review with security-aware reviewer; sign off</td>
+<td>Diff, agent stack trace, the loaded scope-attached rules, the cited constraint</td>
+<td>Two human approvers; one must hold the relevant security or compliance label</td>
+<td>Reversible at code level; downstream effects (data writes) may not be</td>
+</tr>
+<tr class="odd">
+<td><strong>Architecture decision affecting two or more teams</strong> (API contract, shared module boundary, cross-cutting convention)</td>
+<td>Draft an Architecture Decision Record (ADR); enumerate alternatives</td>
+<td>Decide; sign the ADR</td>
+<td>Draft ADR, discussion thread, the prior ADRs the agent cited</td>
+<td>Architecture review forum; named decision owner signs</td>
+<td>Reversible only by another ADR; cost of reversal is the migration</td>
+</tr>
+<tr class="even">
+<td><strong>Production deploy</strong> (any change reaching customer-facing systems)</td>
+<td>Build artefact; produce deployment manifest; run pre-deploy checks</td>
+<td>Approve the rollout; monitor canary</td>
+<td>Artefact hash, lockfile, deployment manifest, pre-deploy check output</td>
+<td>CI gate (deterministic); deployment approval (human)</td>
+<td>Reversible by rollback within the deployment window; not reversible after data migrations land</td>
+</tr>
+<tr class="odd">
+<td><strong>External dependency adoption</strong> (new library, new agentic primitive bundle from outside the org)</td>
+<td>Identify the candidate; produce the lockfile diff and the supply-chain summary</td>
+<td>Review the supply chain; approve or reject</td>
+<td>Lockfile diff, signature verification output, license report, the agent’s supply-chain summary</td>
+<td>Security review; named library owner signs</td>
+<td>Reversible only by removing the dependency and refactoring consumers</td>
+</tr>
+<tr class="even">
+<td><strong>Installing or running a cost-bearing agentic workflow</strong> (frontier-model loops, high-volume automation)</td>
+<td>Declare the workflow’s model tier, expected per-run cost, and stop condition; emit cost telemetry</td>
+<td>Approve install and run against expected ROI; assign the budget pocket</td>
+<td>Cost gradient (model tier, eval results), expected per-run cost, budget-pocket assignment, run telemetry</td>
+<td>Cost-vs-value approval at install and at run; local and low-gradient workflows waved through</td>
+<td>Reversible: uninstall or revoke; spend already incurred is not recoverable</td>
+</tr>
+<tr class="odd">
+<td><strong>Production incident response</strong> (active outage, data exposure, security event)</td>
+<td>Surface diagnostic context; draft remediation candidates; never execute</td>
+<td>The on-call engineer decides and executes</td>
+<td>Incident timeline, the diagnostic queries the agent ran, the candidates it drafted, the chosen path</td>
+<td>Human-only execution; agent runs in advisory mode</td>
+<td>Decision-by-decision; the agent does not hold the write capability</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Three principles read across every row.</p>
+<p><strong>The agent never holds the write capability for an irreversible action.</strong> Code commits are reversible (you can revert). Production deploys are partly reversible (you can roll back within a window). Data migrations and external API calls with side effects are not. Wherever the row says the action is not reversible, the human is in the gate, not adjacent to it. This is the <em>strong-form supervised execution</em> bar from the readiness checklist above, applied row-by-row: the matrix is what makes the abstract bar concrete for the decision classes your organization actually encounters.</p>
+<p><strong>Evidence is captured as artefacts, not as memory.</strong> Every row’s “Evidence captured” column lists files: the diff, the lockfile, the ADR, the agent stack trace, the loaded scope-attached rules. None of these are “the agent’s reasoning” or “the reviewer’s recollection.” When an auditor or a postmortem asks <em>what was loaded into the agent at decision time</em>, the answer is the lockfile and the trace, not a story. Part III names this discipline; Chapter 21 (<a href="ch21-primitives-as-code.html" class="quarto-xref"><span>Chapter 21</span></a>) makes it operational at the package layer.</p>
+<p><strong>Gates are layered, not duplicated.</strong> A single decision often passes through more than one gate: a CI gate (deterministic checks), a code review gate (human judgement on the diff), a security review gate (human judgement on the supply-chain or constraint surface). The matrix names which gates apply to which decision class. Adding a gate slows the decision; removing a load-bearing one is how an agent-led pipeline produces a quietly non-compliant outcome that nobody notices until the audit. The matrix is how you keep that decision deliberate.</p>
+<p>The cost-vs-value row is the newest of the six, and it has a chapter of its own. The chapter on the agentic SDLC bill builds the operating model this gate enforces — model tiering, intentional budget pockets, and a central catalogue of cost-effective workflows — so that approving spend becomes a deliberate bet rather than a default.</p>
+<p>The matrix is the artefact your governance team should adapt and post next to the readiness checklist. The checklist tells you whether the <em>capability</em> exists; the matrix tells you whether each <em>decision</em> uses it. Together they are the governance layer your AI investment deserves.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/danielmeppiel\.github\.io\/agentic-sdlc-handbook\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../handbook/ch04-the-reference-architecture.html" class="pagination-link" aria-label="The Agentic SDLC Reference Architecture">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agentic SDLC Reference Architecture</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../handbook/ch06-team-structures.html" class="pagination-link" aria-label="Team Structures for AI-Augmented Delivery">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Team Structures for AI-Augmented Delivery</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/danielmeppiel/agentic-sdlc-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer><div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 2rem; margin-top: 3rem; border-radius: 8px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+  <p style="color: #e0e0e0; margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">📕 Get the PDF &amp; EPUB — free download</p>
+  <p style="color: #a0a0a0; margin: 0 0 1rem 0; font-size: 0.9rem;">Plus ~1 update/month max. No spam. Unsubscribe anytime.</p>
+  <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/download.html" onclick="if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){this.href='/download.html';}" style="display: inline-block; background: #0d6efd; color: white; padding: 0.5rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 500;">Download the Handbook</a>
+</div>
+<div style="text-align: center; margin-top: 1.5rem; padding: 0.75rem; font-size: 0.85rem; color: #888;">
+  <p style="margin: 0;">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjnz7UZMAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAdRQTFRFAAAAAAAA////////////8fHx7+/v4+Pj39/f1tXV09bS0tXS0tXR0dTR0dTQ0NTQ0NPPz9PPztLOztHNzdHNzdHMz8/PzdDMzNDMzNDLzM/Ly8/Ly8/Ky87Kys3Jyc3Jyc3IyMzIyMzHx8vHxsrGxsrFxcnFyMfHxcnExMnExMjDw8jDxMfDw8fCwsfCwcXAwMXAwMW/wMS/v8S+v8O+vsO+vsK9vcK9vcK8v7+/vMG8vMG7vMC8u8C7u8C6ur+6ur+5ub65ub64uL23t7y2urm5tru1tbq0tLqztLmzs7iysrixsrexsbewsLavsLWvr7Wur7SusLOvrrStrrOtr7KvrbOsrLKrr6+vq7GqrKurpqqmo6ijoqahn6OenqCdn5+fnp2dmpiZlpmWlZmUk5iTkZSRkZORkY+Pj4+PiYyJjIqLh4aHhIaEhIWEgoWChIGCf4F+gICAfX98fH98fnt8en15eXx5eHV2dnN0dXJzcHJvcHBwaGdoaGVmZmRkYGBgXV5dWldYUFFQUFBQQ0RDQEBAPj8+Pzs8NTY1MjMxMjExMDAwMS0uKioqKSopKSkpKCkoKCUmIx8gICAgHxscGxsbGRkZEBAQDg4ODQ4NDQwN1jMqSgAAAAR0Uk5T/wAKDnDBpeYAAAODSURBVHjatZaLe9JWGMbfbbGltMYonQMklsVlUyrLqtWV4bqWsnZW23Wr9uK13or3C14qiootxBtVMFgj/rN+JyFNzEMfHvHpCzyH8ybnl+Q75/tO8B3WRd8AGEkm4vuUblnqEoN+fzC0XZIjSm98MDkyOvbv5NTU9OyXCwZ3oG9PVA6HfALf7vW2bxR828JytKdvgJEnJqemmyQT97fIDtHHXy9UQaoWrvFbQtIu5XciHxqfODI1vVACqbRgj2voAEgQVwoIqRWsamVe8Id3Kn2DyYOHxyfPlwE1m1WB8gVz1IXGDoD4nojk55cA6Ll0LJbO6QCWdn8f3tUTTwyPjp38gLyHI3ny+GCMOtXYYeB90R0BxtXTLZypOUKXd/ulaG//0MjhEnLkAewAymxQ2XAuLrocku0AUGRRIG7Rw62qpQgsCSFZ6UsM30a+zQJzeSxQNPHqLHHff8y0Wg47xxI5Jrj7R1+KuHS7n5Pnt4Qje/uTb+C4ogel2dkS3mrPHyN9Fccsx3WOCZZD/Ar0rWQ5yTpW+G2y8kcCKuvnYD6sChqjPrivaVqmtc126I9myHBMsNR5HUhzLs0B13xSdP8AsqwLEmuzDEPOLxkAmTaHwz0yxJwauGtzAToFIpZX1bTZXKLDOgrCdopFXTCpNbOsaYt/W44lB1jkq8gREEzqDEisn0N1Y2hnz591QsGcDWe4No30fO1QBDsAusUiKp5YZa6IomemMmfEoj0oK/HX5sQA9uQxZ1FbXkbm2N13q84TQ47JC3iBGMeZcbYa4wm8/p+U+C3kOfdyI6f15vuPFzc4HNdyawweemMnSNaZDlcWXQ7JclyhaNlaSVMoWGOHYuh4UyltT15t1moNu3KVF2nyhv45UQKKuWzRLjmnyo0cc7ktQedWl9uMajRcBQWhK7L3r+TBsf/uNVU2pc4UcKl+gvy6f3B4dJxqfTOF/mcjpT1rpfTIoWbBVIRO1ytCKV+4u7efSv3EkemmwLgjCk+J7ChDHqNsijfwlXoY3OQs9C1pHXjBB+7gq3Xbv+mpa2vifzgHS2Z+gP1MWR3yP3foTBc5KJx2bqYpIWBzwdW+DozV59Zw7GjQ9p+ytv953ic642CVTYdT+7icOmC8PBrq3Mx3eL0dPL2w/P8MDtmBcDo2xuW49ezyATEYCATFA5cZdo07bhzjdde36/S2+QkOU7VYqRESOQAAAABJRU5ErkJggg==" alt="CC BY-NC-ND 4.0" style="height: 20px; vertical-align: middle;">
+    </a>
+    © 2025-2026 Daniel Meppiel · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #aaa;">CC BY-NC-ND 4.0</a>
+  </p>
+  <p style="margin: 0.25rem 0 0 0;">Free to read and share with attribution. <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #aaa;">License details</a></p>
+</div>
+
+
+
+
+</body></html>

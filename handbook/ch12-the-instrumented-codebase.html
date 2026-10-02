@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>12&nbsp; The Instrumented Codebase – The Agentic SDLC Handbook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../handbook/ch13-the-prose-specification.html" rel="next">
+<link href="../handbook/ch11-the-runtime-machine.html" rel="prev">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-21d6fceeb25172fe2fb34cb0b56a437d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="../agentic-sdlc-handbook/favicon.svg">
+<link rel="apple-touch-icon" href="../agentic-sdlc-handbook/apple-touch-icon.png">
+<meta name="dc.rights" content="CC BY-NC-ND 4.0">
+<meta name="dc.rights.uri" content="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2DPKEV68VR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2DPKEV68VR');
+</script>
+<style>
+  /* Mermaid diagram readability — light mode */
+  :root {
+    --mermaid-node-bg-color: #f0f4f8 !important;
+    --mermaid-node-fg-color: #1a202c !important;
+    --mermaid-label-fg-color: #1a202c !important;
+    --mermaid-label-bg-color: #ffffff !important;
+    --mermaid-fg-color: #1a202c !important;
+    --mermaid-edge-color: #718096 !important;
+  }
+  /* Mermaid diagram readability — dark mode */
+  body.quarto-dark {
+    --mermaid-bg-color: transparent !important;
+    --mermaid-node-bg-color: #2d3748 !important;
+    --mermaid-node-fg-color: #e2e8f0 !important;
+    --mermaid-label-fg-color: #e2e8f0 !important;
+    --mermaid-label-bg-color: #1a202c !important;
+    --mermaid-fg-color: #e2e8f0 !important;
+    --mermaid-edge-color: #a0aec0 !important;
+  }
+  /* Mermaid lightbox — click to expand any mermaid figure */
+  figure.figure:has(svg.mermaid-js) { cursor: zoom-in; }
+  figure.figure:has(svg.mermaid-js):hover { outline: 1px dashed #888; outline-offset: 4px; }
+  #mermaid-lightbox-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+    z-index: 10000; display: none; align-items: center; justify-content: center;
+    padding: 2rem; cursor: zoom-out; flex-direction: column;
+  }
+  #mermaid-lightbox-overlay.open { display: flex; }
+  #mermaid-lightbox-overlay .ml-stage {
+    max-width: 95vw; max-height: 90vh;
+    background: #fff; padding: 1.5rem; border-radius: 8px;
+    overflow: auto; cursor: default;
+  }
+  body.quarto-dark #mermaid-lightbox-overlay .ml-stage { background: #1a202c; }
+  /* Render SVG at intrinsic viewBox dimensions; stage scrolls if larger than viewport */
+  #mermaid-lightbox-overlay .ml-stage svg {
+    display: block; width: auto; height: auto;
+    max-width: none; max-height: none;
+  }
+  #mermaid-lightbox-overlay .ml-caption {
+    color: #fff; max-width: 95vw; margin-top: 1rem;
+    font-size: 0.9rem; text-align: center;
+  }
+  #mermaid-lightbox-overlay .ml-close {
+    position: absolute; top: 1rem; right: 1.5rem;
+    background: none; border: none; color: #fff;
+    font-size: 2rem; cursor: pointer; line-height: 1;
+  }
+</style>
+<script>
+  // Mermaid lightbox: wraps mermaid SVGs in a click-to-expand overlay.
+  // Quarto's built-in lightbox only handles <img>; this shim covers <svg> mermaid output.
+  document.addEventListener('DOMContentLoaded', function () {
+    var overlay = document.createElement('div');
+    overlay.id = 'mermaid-lightbox-overlay';
+    overlay.innerHTML = '<button class="ml-close" aria-label="Close">&times;</button><div class="ml-stage"></div><div class="ml-caption"></div>';
+    document.body.appendChild(overlay);
+    var stage = overlay.querySelector('.ml-stage');
+    var cap = overlay.querySelector('.ml-caption');
+    function close() { overlay.classList.remove('open'); stage.innerHTML = ''; cap.textContent = ''; }
+    overlay.addEventListener('click', function (e) { if (e.target === overlay || e.target.classList.contains('ml-close')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('open')) close(); });
+    function wireFigures() {
+      document.querySelectorAll('svg.mermaid-js').forEach(function (svg) {
+        var fig = svg.closest('figure.figure');
+        if (!fig || fig.dataset.mlWired) return;
+        fig.dataset.mlWired = '1';
+        fig.title = 'Click to expand';
+        fig.addEventListener('click', function (ev) {
+          if (ev.target.closest('a')) return;
+          ev.preventDefault();
+          var clone = svg.cloneNode(true);
+          clone.removeAttribute('style');
+          clone.removeAttribute('width');
+          clone.removeAttribute('height');
+          // Use viewBox to derive intrinsic width; size the SVG generously for readability
+          var vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(parseFloat);
+          if (vb.length === 4 && vb[2] > 0 && vb[3] > 0) {
+            var ratio = vb[2] / vb[3];
+            var maxH = window.innerHeight * 0.85;
+            var maxW = window.innerWidth * 0.9;
+            // Prefer using the full available width unless that overflows height
+            var w = maxW;
+            var h = w / ratio;
+            if (h > maxH) { h = maxH; w = h * ratio; }
+            // Floor at a comfortable readable size; stage scrolls if it exceeds viewport
+            w = Math.max(w, Math.min(1400, vb[2]));
+            h = w / ratio;
+            clone.setAttribute('width', w);
+            clone.setAttribute('height', h);
+          }
+          stage.innerHTML = '';
+          stage.appendChild(clone);
+          var capEl = fig.querySelector('figcaption');
+          cap.textContent = capEl ? capEl.textContent.trim() : '';
+          overlay.classList.add('open');
+        });
+      });
+    }
+    wireFigures();
+    // Re-wire when mermaid finishes async rendering
+    new MutationObserver(wireFigures).observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+
+
+<link rel="stylesheet" href="../styles/handbook-cover.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../handbook/ch09-part-iii-preface.html">Part III: For Practitioners</a></li><li class="breadcrumb-item"><a href="../handbook/ch12-the-instrumented-codebase.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Instrumented Codebase</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">The Agentic SDLC Handbook</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/danielmeppiel/agentic-sdlc-handbook" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../download.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Download</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reading-paths.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading paths</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: The Foundation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch01-the-agentic-sdlc-thesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The Agentic SDLC Thesis</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: For Leaders</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch02-the-ai-native-landscape.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The AI-Native Landscape</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch03-the-business-case.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Business Case</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch04-the-reference-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agentic SDLC Reference Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch05-governance-for-ai-assisted-delivery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Governance for AI-Assisted Delivery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch06-team-structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Team Structures for AI-Augmented Delivery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch07-the-agentic-sdlc-bill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Agentic SDLC Bill</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch08-planning-the-transition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Planning the Transition</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: For Practitioners</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch09-part-iii-preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">A Map for Part III</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch10-the-practitioners-mindset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The Practitioner’s Mindset</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch11-the-runtime-machine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Agentic Runtime Machine</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch12-the-instrumented-codebase.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Instrumented Codebase</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch13-the-prose-specification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The PROSE Constraints</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch14-the-load-lifecycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The Load Lifecycle</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch15-attention-and-context-economy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Attention and Context Economy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch16-deterministic-probabilistic-boundary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">The Deterministic/Probabilistic Boundary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch17-multi-agent-orchestration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Multi-Agent Orchestration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch18-the-execution-meta-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The Execution Meta-Process</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch19-architectural-patterns-rosetta-stone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Architectural Patterns: A Rosetta Stone</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch20-anti-patterns-and-failure-modes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Anti-Patterns and Failure Modes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch21-primitives-as-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Primitives as Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch22-the-reference-architecture-earned.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">The Reference Architecture, Earned</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: Case Studies</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-apm-overhaul.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">The APM Auth + Logging Overhaul</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-handbook-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Writing a ~68,000-Word Book with Agent Fleets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-publishing-pipeline.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">The Publishing Pipeline</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-growth-engine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Building a Growth Engine</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Closing</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch27-what-comes-next.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">What Comes Next</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/appendix-a-cross-harness-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">The Cross-Harness Reference</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/appendix-b-genesis-worked-example.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Genesis worked example: Panel re-architecture</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#two-kinds-of-knowledge" id="toc-two-kinds-of-knowledge" class="nav-link active" data-scroll-target="#two-kinds-of-knowledge"><span class="header-section-number">12.1</span> Two kinds of knowledge</a></li>
+  <li><a href="#sec-codebase-primitive-types" id="toc-sec-codebase-primitive-types" class="nav-link" data-scroll-target="#sec-codebase-primitive-types"><span class="header-section-number">12.2</span> The Seven Primitive Types</a>
+  <ul class="collapse">
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions"><span class="header-section-number">12.2.1</span> Instructions</a></li>
+  <li><a href="#sec-codebase-agents" id="toc-sec-codebase-agents" class="nav-link" data-scroll-target="#sec-codebase-agents"><span class="header-section-number">12.2.2</span> Agents</a></li>
+  <li><a href="#skills" id="toc-skills" class="nav-link" data-scroll-target="#skills"><span class="header-section-number">12.2.3</span> Skills</a></li>
+  <li><a href="#prompts" id="toc-prompts" class="nav-link" data-scroll-target="#prompts"><span class="header-section-number">12.2.4</span> Prompts</a></li>
+  <li><a href="#sec-codebase-memory" id="toc-sec-codebase-memory" class="nav-link" data-scroll-target="#sec-codebase-memory"><span class="header-section-number">12.2.5</span> Memory</a></li>
+  <li><a href="#orchestration" id="toc-orchestration" class="nav-link" data-scroll-target="#orchestration"><span class="header-section-number">12.2.6</span> Orchestration</a></li>
+  <li><a href="#hooks" id="toc-hooks" class="nav-link" data-scroll-target="#hooks"><span class="header-section-number">12.2.7</span> Hooks</a></li>
+  </ul></li>
+  <li><a href="#tool-support-in-brief" id="toc-tool-support-in-brief" class="nav-link" data-scroll-target="#tool-support-in-brief"><span class="header-section-number">12.3</span> Tool support, in brief</a></li>
+  <li><a href="#directory-structure" id="toc-directory-structure" class="nav-link" data-scroll-target="#directory-structure"><span class="header-section-number">12.4</span> Directory Structure</a></li>
+  <li><a href="#sec-codebase-composition" id="toc-sec-codebase-composition" class="nav-link" data-scroll-target="#sec-codebase-composition"><span class="header-section-number">12.5</span> How Primitives Compose</a></li>
+  <li><a href="#sec-codebase-instrumentation-audit" id="toc-sec-codebase-instrumentation-audit" class="nav-link" data-scroll-target="#sec-codebase-instrumentation-audit"><span class="header-section-number">12.6</span> The Instrumentation Audit</a></li>
+  <li><a href="#before-and-after" id="toc-before-and-after" class="nav-link" data-scroll-target="#before-and-after"><span class="header-section-number">12.7</span> Before and After</a>
+  <ul class="collapse">
+  <li><a href="#before-uninstrumented" id="toc-before-uninstrumented" class="nav-link" data-scroll-target="#before-uninstrumented"><span class="header-section-number">12.7.1</span> Before: uninstrumented</a></li>
+  <li><a href="#after-instrumented" id="toc-after-instrumented" class="nav-link" data-scroll-target="#after-instrumented"><span class="header-section-number">12.7.2</span> After: instrumented</a></li>
+  <li><a href="#sec-codebase-audit-numbers" id="toc-sec-codebase-audit-numbers" class="nav-link" data-scroll-target="#sec-codebase-audit-numbers"><span class="header-section-number">12.7.3</span> What the numbers look like</a></li>
+  </ul></li>
+  <li><a href="#sec-codebase-feedback-loop" id="toc-sec-codebase-feedback-loop" class="nav-link" data-scroll-target="#sec-codebase-feedback-loop"><span class="header-section-number">12.8</span> The Feedback Loop</a></li>
+  <li><a href="#what-it-looks-like-an-annotated-session" id="toc-what-it-looks-like-an-annotated-session" class="nav-link" data-scroll-target="#what-it-looks-like-an-annotated-session"><span class="header-section-number">12.9</span> What It Looks Like: An Annotated Session</a></li>
+  <li><a href="#sec-codebase-starting-points" id="toc-sec-codebase-starting-points" class="nav-link" data-scroll-target="#sec-codebase-starting-points"><span class="header-section-number">12.10</span> Starting Points</a></li>
+  <li><a href="#what-this-chapter-unlocks" id="toc-what-this-chapter-unlocks" class="nav-link" data-scroll-target="#what-this-chapter-unlocks"><span class="header-section-number">12.11</span> What this chapter unlocks</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/danielmeppiel/agentic-sdlc-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../handbook/ch09-part-iii-preface.html">Part III: For Practitioners</a></li><li class="breadcrumb-item"><a href="../handbook/ch12-the-instrumented-codebase.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Instrumented Codebase</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-instrumented-codebase" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Instrumented Codebase</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Chapter 11 named the four parts of the agentic runtime machine — Model, harness, agent source code, client — and identified the <em>agent source code</em> as the part the developer programs against. Maya’s port from Copilot to Claude Code failed at exactly that layer: same files, same model family, different compiler reading them. This chapter is the catalogue of files you put on disk for the compiler to read. Each entry names what the file does and <em>which load mode</em> it triggers — eager preload, lazy on-demand, dispatcher-mediated, user-invoked, event-driven — vocabulary Chapter 14 (<a href="ch14-the-load-lifecycle.html" class="quarto-xref"><span>Chapter 14</span></a>) develops in mechanical detail.</p>
+<p>A repository instrumented for agentic work is full of markdown that isn’t documentation. The files are parsed, linked, loaded, and executed — Chapter 11’s four properties of a code artifact. They version-control alongside the application code they steer, review in pull requests, and create a feedback loop: when an agent misbehaves, you fix the file that should have prevented the mistake, not the generated code. Seven primitive types cover the working set, each addressing a distinct gap between what is in the source and what the agent needs to know.</p>
+<p>The word <em>primitive</em> is deliberate. These artifacts are the atomic units of agentic behaviour. Like functions in code, they do one thing, they compose, and they’re testable in isolation. Unlike prompts typed into a chat window and forgotten, they persist, accumulate value, and improve through iteration. What makes a primitive <em>useful</em> — the prose discipline that fits inside it — is Chapter 13 (<a href="ch13-the-prose-specification.html" class="quarto-xref"><span>Chapter 13</span></a>). What makes a primitive <em>bind</em> — when the harness loads it and against which budget — is Chapter 14. What it <em>costs</em> once loaded is Chapter 15 (<a href="ch15-attention-and-context-economy.html" class="quarto-xref"><span>Chapter 15</span></a>). This chapter is the prior question: what, specifically, are you building?</p>
+<hr>
+<section id="two-kinds-of-knowledge" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="two-kinds-of-knowledge"><span class="header-section-number">12.1</span> Two kinds of knowledge</h2>
+<p>Every mature project carries two kinds of knowledge. The first lives in the code itself — types, function signatures, directory structure, test assertions. Any agent can read this. The second lives in the team’s heads: which authentication pattern is current and which is deprecated, why the logging module wraps the standard library, what “follows the BaseIntegrator pattern” means in practice, why one directory has different import rules than every other. An agent cannot read this. It will guess, and it will guess wrong.</p>
+<p>Instrumentation is the practice of converting the second kind into structured files the harness loads as context. The catalogue that follows is the working vocabulary for that practice.</p>
+<hr>
+</section>
+<section id="sec-codebase-primitive-types" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="sec-codebase-primitive-types"><span class="header-section-number">12.2</span> The Seven Primitive Types</h2>
+<p>Seven categories cover the full range of knowledge an agent needs. Each addresses a distinct gap between what’s in the code and what an agent needs to know. Not every project needs all seven on day one (the instrumentation audit later in this chapter helps you decide where to start) but understanding the complete set is necessary before making that decision.</p>
+<p>Each primitive carries an implicit <em>load mode</em> — the moment the harness decides to read it into the model’s context. There are five modes in play, and naming them up front lets the catalogue read as a typed system rather than a list of file extensions. Three modes are deterministic: <strong>eager preload</strong> (the harness reads the file at session start, scoped or unscoped); <strong>dispatcher-mediated</strong> (the harness routes a thread to a specialist via a delegation tool); <strong>event-driven</strong> (a client process — a workflow runner, a webhook receiver, a scheduler — invokes the harness against the file in response to an outside event). Two are agent- or user-mediated: <strong>lazy on-demand</strong> (the agent itself decides to load the file based on a description match); <strong>user-invoked</strong> (the developer runs the file as a workflow). Chapter 14 covers the mechanics of each — token budgets, transitive closure, when bindings silently fail. For now it is enough to know which mode each primitive triggers.</p>
+<div class="cell" data-fig-width="5" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-seven-primitives" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-seven-primitives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-seven-primitives">block-beta
+    columns 4
+    A["Instructions&lt;br/&gt;.instructions.md&lt;br/&gt;─&lt;br/&gt;Scoped conventions&lt;br/&gt;per file/directory"]:1
+    B["Agents&lt;br/&gt;.agent.md&lt;br/&gt;─&lt;br/&gt;Specialist personas&lt;br/&gt;with tool boundaries"]:1
+    C["Skills&lt;br/&gt;SKILL.md&lt;br/&gt;─&lt;br/&gt;Reusable decision&lt;br/&gt;frameworks"]:1
+    D["Prompts&lt;br/&gt;.prompt.md&lt;br/&gt;─&lt;br/&gt;Repeatable&lt;br/&gt;workflows"]:1
+    E["Memory&lt;br/&gt;.memory.md&lt;br/&gt;─&lt;br/&gt;Cross-session&lt;br/&gt;knowledge"]:1
+    F["Orchestration&lt;br/&gt;.spec.md&lt;br/&gt;─&lt;br/&gt;Execution-ready&lt;br/&gt;specifications"]:1
+    G["Hooks&lt;br/&gt;event-driven&lt;br/&gt;─&lt;br/&gt;Automated actions&lt;br/&gt;on dev events"]:1
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-seven-primitives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.1: The seven APM primitive types
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="instructions" class="level3" data-number="12.2.1">
+<h3 data-number="12.2.1" class="anchored" data-anchor-id="instructions"><span class="header-section-number">12.2.1</span> Instructions</h3>
+<p><strong>Load mode:</strong> eager preload, scoped by <code>applyTo</code> glob. The harness reads matching instruction files into context whenever a thread touches a path the glob covers — Maya’s <code>api.instructions.md</code> from Chapter 11 is the canonical example.</p>
+<p><strong>Purpose:</strong> Encode project conventions scoped to specific files, directories, or file types. Instructions are the most granular context artifact; they tell an agent “when you touch code in this scope, follow these rules.”</p>
+<p><strong>File format:</strong> <code>.instructions.md</code> with frontmatter specifying scope.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">applyTo:</span><span class="co"> "src/api/**"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "API layer conventions for endpoint implementation"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># API Development Rules</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Middleware Registration</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>All middleware decorators are registered in <span class="in">`middleware.py`</span>, never inline on routes.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Route files define endpoint logic only.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rate Limiting</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use <span class="in">`app.rate_limiter.RateLimiter`</span>, not third-party libraries.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  The internal implementation integrates with the metrics pipeline.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rate limit values come from environment variables, never hardcoded.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Error Responses</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>All error responses use <span class="in">`APIError.from_exception()`</span> for consistent format.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never return raw exception messages to clients.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Design test:</strong> Can you state the scope in one <code>applyTo</code> pattern? Does every rule in the file apply to that scope? If you’re writing rules that apply to two unrelated domains, split the file. If you can’t express the scope as a glob, the knowledge probably belongs in an agent configuration or a skill instead.</p>
+<p><strong>What distinguishes a good instruction file from a bad one:</strong> length. If your instruction file exceeds 40-50 lines, it’s trying to do too much. The reason is mechanical: every line of instruction competes for attention with the source code the agent needs to read. A 200-line instruction file doesn’t give an agent more to work with. It gives it more to get lost in.</p>
+</section>
+<section id="sec-codebase-agents" class="level3" data-number="12.2.2">
+<h3 data-number="12.2.2" class="anchored" data-anchor-id="sec-codebase-agents"><span class="header-section-number">12.2.2</span> Agents</h3>
+<p><strong>Load mode:</strong> dispatcher-mediated. The persona file isn’t preloaded; a parent thread (or the developer) routes a sub-thread to it through the harness’s delegation tool. The selected agent’s frontmatter then governs the new thread’s model, tool set, and instructions. Chapter 17 builds on this seam.</p>
+<p><strong>Purpose:</strong> Define specialist personas with domain expertise, calibrated judgment, and explicit behavioral boundaries. An agent configuration is the answer to “who should work on this?”, not in terms of a human team member, but in terms of what expertise, priorities, and constraints the task requires.</p>
+<p><strong>File format:</strong> <code>.agent.md</code> with frontmatter specifying the model, tools, and description.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"Backend architecture specialist for Python services"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tools</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"changes"</span><span class="kw">,</span><span class="at"> </span><span class="st">"codebase"</span><span class="kw">,</span><span class="at"> </span><span class="st">"editFiles"</span><span class="kw">,</span><span class="at"> </span><span class="st">"runCommands"</span><span class="kw">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="st">"search"</span><span class="kw">,</span><span class="at"> </span><span class="st">"problems"</span><span class="kw">,</span><span class="at"> </span><span class="st">"testFailure"</span><span class="kw">]</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span><span class="kw">:</span><span class="at"> claude-sonnet-4.5</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Python Architect</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>You are an expert Python architect specializing in CLI tool design</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>and modular service architecture.</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Design Philosophy</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Speed and simplicity over complexity</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Solid foundation that can be iterated on</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Operations proportional to affected files, not workspace size</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Patterns You Enforce</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>BaseIntegrator for all file-level integrators</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CommandLogger for all CLI output</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AuthResolver for all credential access</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## You Never</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add a new base class when an existing one can be extended</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Instantiate AuthResolver per-request (it is a singleton)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Import from integration/ in the CLI layer (use the public API)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Four elements make an agent configuration effective:</p>
+<ol type="1">
+<li><strong>Domain expertise.</strong> Specific enough to constrain the agent’s decisions. “You are an expert Python developer” is too broad to be useful. “You specialize in CLI tool design using the Click framework with Rich terminal output” constrains the solution space meaningfully.</li>
+<li><strong>Named patterns.</strong> When the agent knows patterns by name (“BaseIntegrator,” “CredentialChain,” “CommandLogger”) it can reference them in its reasoning and produce code that uses them correctly.</li>
+<li><strong>Anti-patterns.</strong> What the agent must never do. These encode institutional memory; each item represents a mistake that happened at least once and cost the team time to fix.</li>
+<li><strong>Tool boundaries.</strong> Which tools the agent can invoke. A documentation agent shouldn’t execute destructive commands. A frontend agent shouldn’t access backend databases. Tool boundaries are safety boundaries made concrete.</li>
+</ol>
+<p>Start with three to five agent configurations. An architect, a domain expert for your core business logic, and a documentation writer cover most tasks. Add configurations when you observe repeated corrections; that’s the signal that a new specialization has earned its place.</p>
+</section>
+<section id="skills" class="level3" data-number="12.2.3">
+<h3 data-number="12.2.3" class="anchored" data-anchor-id="skills"><span class="header-section-number">12.2.3</span> Skills</h3>
+<p><strong>Load mode:</strong> lazy on-demand, description-driven activation. The harness preloads only the skill’s <code>description</code> frontmatter; the body stays unread until the agent itself decides — based on the description matching the current task — to pull the rest into context. The contract is open: the <code>agentskills.io</code> registry standardises both the <code>SKILL.md</code> entrypoint and the activation predicate, and several harnesses now read substantially compatible skill bundles.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><strong>Purpose:</strong> Package reusable decision frameworks that activate based on code patterns. A skill is more than a set of rules; it teaches an agent how to think about a specific domain.</p>
+<p><strong>File format:</strong> A directory containing a <code>SKILL.md</code> file, optionally with examples and supporting context.</p>
+<pre><code>.github/skills/
+└── cli-logging-ux/
+    ├── SKILL.md
+    └── examples/
+        ├── good-warning.py
+        └── bad-warning.py</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> cli-logging-ux</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> &gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">  Activate whenever code touches console helpers, DiagnosticCollector,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">  STATUS_SYMBOLS, or any user-facing terminal output.</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu"># CLI Logging UX</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Decision Framework</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">### The "So What?" Test</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>Every warning must answer: what should the user do about this?</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>A warning without a suggested action is noise.</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Traffic Light Rule</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Color  <span class="pp">|</span> Helper           <span class="pp">|</span> Meaning            <span class="pp">|</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|--------|------------------|--------------------|</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Green  <span class="pp">|</span> _rich_success()  <span class="pp">|</span> Completed          <span class="pp">|</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Yellow <span class="pp">|</span> _rich_warning()  <span class="pp">|</span> User action needed <span class="pp">|</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Red    <span class="pp">|</span> _rich_error()    <span class="pp">|</span> Cannot continue    <span class="pp">|</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Blue   <span class="pp">|</span> _rich_info()     <span class="pp">|</span> Status update      <span class="pp">|</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Newspaper Test</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>Can a user scan the output like headlines?</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>If they have to read paragraphs to understand status, restructure.</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Anti-Patterns</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never use bare print() or click.echo() without styling</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never emit a warning without an actionable suggestion</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never mix Rich and colorama in the same output path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The design test for a skill is three criteria: Does this knowledge apply across multiple files? Does it require more than a few rules to express? Is it triggered by a detectable code pattern? If all three are yes, it’s a skill. If the knowledge applies to a single directory, it’s an instruction. If it’s a general disposition, it’s an agent configuration.</p>
+<p>Skills differ from instructions in an important way: they provide <em>decision frameworks</em>, not just rules. A rule says “use <code>_rich_warning()</code> for warnings.” A decision framework says “every warning must answer ‘what should the user do about this?’” The framework generalizes to situations the author didn’t anticipate. Rules cover known cases. Frameworks cover unknown ones.</p>
+<p>The design test this section just defined is the same test I had to apply to the design discipline itself before I packaged it; the result is the agent-side companion Part III pointed at.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</section>
+<section id="prompts" class="level3" data-number="12.2.4">
+<h3 data-number="12.2.4" class="anchored" data-anchor-id="prompts"><span class="header-section-number">12.2.4</span> Prompts</h3>
+<p><strong>Load mode:</strong> user-invoked. The developer runs the prompt as a workflow — typically through a slash-command surface or a CLI flag — and the harness reads the file as the opening turn. The prompt is parameterised, repeatable, and explicit; it is the agentic equivalent of a script or a makefile target.</p>
+<p><strong>Purpose:</strong> Define reusable, parameterized workflows that orchestrate multi-step tasks. A prompt is a repeatable process, the agentic equivalent of a script or a makefile target.</p>
+<p><strong>File format:</strong> <code>.prompt.md</code> with frontmatter specifying execution mode and tools.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">mode:</span><span class="co"> agent</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Code review workflow with security and architecture checks"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># Structured Code Review</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Context Loading</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Read the <span class="co">[</span><span class="ot">project architecture</span><span class="co">](../../docs/architecture.md)</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Review the diff to understand scope of changes</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Check <span class="co">[</span><span class="ot">security guidelines</span><span class="co">](../../docs/security.md)</span> for relevant patterns</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Review Phases</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="fu">### Phase 1: Correctness</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Does the code do what the PR description claims?</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Are edge cases handled?</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do tests cover the new behavior?</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="fu">### Phase 2: Architecture</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Does this change respect existing module boundaries?</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Are new dependencies justified and minimal?</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Would a senior engineer on this team approve the approach?</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="fu">### Phase 3: Security</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Is user input validated at the boundary?</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Are credentials handled through the standard resolver?</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Could this change introduce injection, traversal, or leakage?</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Output Format</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>Provide findings grouped by severity (Critical / High / Medium / Low).</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>For each finding: file, line, what's wrong, what to do instead.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Prompts are the bridge between ad-hoc chat and systematic workflows. Without them, every time a developer wants an agent to perform a code review, they type a slightly different request and get slightly different quality. With a prompt file, the process is consistent: the same phases, the same checks, the same output format. Quality becomes reproducible.</p>
+</section>
+<section id="sec-codebase-memory" class="level3" data-number="12.2.5">
+<h3 data-number="12.2.5" class="anchored" data-anchor-id="sec-codebase-memory"><span class="header-section-number">12.2.5</span> Memory</h3>
+<p><strong>Load mode:</strong> eager preload, persistent. The harness reads the memory file (or the equivalent store) at every session start — the file is the only thing that survives the per-thread amnesia identified in Chapter 11. Memory is what makes a session that ends at 6pm useful to a session that starts at 9am tomorrow.</p>
+<p><strong>Purpose:</strong> Preserve knowledge across sessions. Agents are stateless; every conversation starts from zero. Memory files give them access to accumulated decisions, resolved trade-offs, and project history that would otherwise vanish between sessions.</p>
+<p><strong>File format:</strong> <code>.memory.md</code>, structured by domain.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Project Decisions</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Authentication (last updated: 2025-06-15)</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Migrated from session-based to JWT auth in Q1 2025</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Token refresh uses exponential backoff, max 3 retries</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>EMU (Enterprise Managed User) tokens use <span class="in">`ghu_`</span> prefix ← INCORRECT, agent error</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CORRECTION: EMU tokens use standard PAT prefixes (<span class="in">`github_pat_`</span> / <span class="in">`ghp_`</span>). <span class="in">`ghu_`</span> is OAuth.</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`SessionAuth`</span> class is deprecated but not yet removed.</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  Do NOT use it for new code. Migration tracked in JIRA-4521.</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## API Versioning (last updated: 2025-05-20)</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>v1 endpoints frozen. No new features, security fixes only.</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>v2 is the active version. All new endpoints go here.</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Versioning is URL-based (/v1/, /v2/), not header-based.</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  This was debated and decided in ADR-017.</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Performance Decisions (last updated: 2025-07-01)</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Database connection pooling uses pgbouncer, not application-level pools.</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cache invalidation is event-driven (via message queue), not TTL-based.</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The /api/search endpoint has a 5-second timeout. This is intentional —</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  longer queries must use the async search endpoint.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Memory files capture the knowledge that doesn’t fit in instructions because it isn’t a rule; it’s context. The distinction matters: “use JWT for authentication” is a rule (instruction). “We migrated from sessions to JWT in Q1, and the old SessionAuth class is still in the code but deprecated” is context (memory). An agent that knows only the rule might accidentally use the deprecated class. An agent that also has the memory won’t.</p>
+<p>Memory files are the most likely primitive to drift from reality. Include dates. Review them quarterly. If a section hasn’t been updated in six months, verify that it’s still accurate or remove it.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Memory Storage Varies by Tool
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>While this chapter describes memory as markdown files for portability, some tools implement memory as structured databases. GitHub Copilot, for example, stores memory in a database system rather than flat files. The principles are the same (persistence, discoverability, and staleness management) regardless of the storage mechanism.</p>
+</div>
+</div>
+</section>
+<section id="orchestration" class="level3" data-number="12.2.6">
+<h3 data-number="12.2.6" class="anchored" data-anchor-id="orchestration"><span class="header-section-number">12.2.6</span> Orchestration</h3>
+<p><strong>Load mode:</strong> user-invoked workflow. A specification is loaded as the opening context for a planned implementation run — typically by a developer (or a parent thread) handing the file to a fresh session as the brief. The spec is read once, deterministically, and the rest of the run executes against it.</p>
+<p><strong>Purpose:</strong> Bridge planning and implementation by defining structured specifications that can be executed by humans or agents with the same precision. Orchestration files decompose large features into implementation-ready units.</p>
+<p><strong>File format:</strong> <code>.spec.md</code> for specifications, or workflow composition files that coordinate multiple context files.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Feature: Rate Limiting for Public API</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Problem Statement</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>Public API endpoints have no rate limiting. A single client can</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>exhaust server resources with sustained high-frequency requests.</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Approach</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>Implement per-client rate limiting using the internal RateLimiter</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>with Redis-backed sliding window counters.</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Implementation Requirements</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### Components</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Rate limiter middleware (<span class="in">`src/middleware/rate_limiter.py`</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Redis counter service (<span class="in">`src/services/rate_counter.py`</span>)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Configuration loader (<span class="in">`src/config/rate_limits.yaml`</span>)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="fu">### API Contracts</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>429 response with <span class="in">`Retry-After`</span> header when limit exceeded</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`X-RateLimit-Remaining`</span> header on every response</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Per-endpoint configuration via environment variables</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="fu">### Validation Criteria</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Handles concurrent requests without race conditions</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Sliding window accurate within 1-second granularity</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Unit tests &gt; 90% coverage on counter logic</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Load test: 10K requests/second without limiter degradation</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Specification files matter because they make the “Reduced Scope” constraint operational. Instead of telling an agent “implement rate limiting” and hoping it figures out the approach, the spec defines scope, components, contracts, and success criteria upfront. The agent implements against a specification, not a wish.</p>
+</section>
+<section id="hooks" class="level3" data-number="12.2.7">
+<h3 data-number="12.2.7" class="anchored" data-anchor-id="hooks"><span class="header-section-number">12.2.7</span> Hooks</h3>
+<p><strong>Load mode:</strong> event-driven, harness-mediated. The hook file is agent source code; what fires it is a <em>client process</em> — a cron daemon, a webhook receiver, a CI runner, a <code>gh-aw</code> workflow, an IDE save handler — that observes an outside event (a file save, a git commit, a pull-request webhook, a scheduled tick) and invokes the harness against the hook’s bootstrap context. Clients can be interactive (terminals, IDEs) or programmatic (workflows, schedulers, webhook receivers); the <em>Client</em> role from Chapter 11’s four-part vocabulary is the layer hooks live behind.</p>
+<p><strong>Purpose:</strong> Define automated actions triggered by development events. Hooks bridge the gap between passive context (instructions, memory) and active behavior, making the instrumented codebase reactive rather than waiting to be queried.</p>
+<p><strong>File format:</strong> Configured via tool-specific hook mechanisms (e.g., VS Code tasks, GitHub Actions triggers, copilot hooks configuration) rather than a single portable file format.</p>
+<p><strong>Examples of what hooks automate:</strong></p>
+<ul>
+<li>Auto-run linting on save to catch convention violations before commit</li>
+<li>Trigger test generation when a new source file is created</li>
+<li>Auto-update memory files after a successful PR merge</li>
+<li>Run a security-reviewer agent on every change to <code>src/auth/</code></li>
+</ul>
+<p>Hooks complete the instrumentation model. Without them, every instrumentation file is passive; it waits for an agent to be invoked and for the right context to load. With hooks, the context layer responds to events: a file save triggers a check, a new file triggers scaffolding, a merged PR triggers a memory update. The instrumented codebase stops being a library of reference material and starts behaving like an active participant in the development workflow.</p>
+<p>Start with one or two hooks: a linting check on save and a test prompt on new file creation cover the highest-impact triggers. Add more only when you observe a repeated manual step that a hook could eliminate.</p>
+<hr>
+</section>
+</section>
+<section id="tool-support-in-brief" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="tool-support-in-brief"><span class="header-section-number">12.3</span> Tool support, in brief</h2>
+<p>The seven types are conceptual categories, not file format specifications; how each maps to a concrete file depends on which harness reads it. Every major harness reads project-level markdown from predictable locations — the disagreement is about <em>where</em> the file lives and what frontmatter it accepts. Instructions and skills port most cleanly across vendors; agent activation and prompt invocation are the least portable surfaces. Appendix A holds the dated cross-harness reference matrix; consult it when you actually need to port a project. The practical division is two-tier: a <strong>portable tier</strong> of body prose (instructions, memory entries, specs, skill decision frameworks) that moves freely as markdown, and a <strong>harness-specific tier</strong> of wiring (scoping syntax, agent activation, prompt invocation, hook configuration) that you rewrite on a port. The knowledge is roughly 80% of the value; the wiring is the rest.</p>
+<hr>
+</section>
+<section id="directory-structure" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="directory-structure"><span class="header-section-number">12.4</span> Directory Structure</h2>
+<p>The seven primitive types organize into a predictable directory structure. The layout below follows GitHub Copilot conventions, the most complete native implementation of all seven types. Other harnesses use different file locations (Appendix A is the dated reference), but the organizational principle holds: centralize context files in a known location, separate by type, keep each type flat.</p>
+<pre><code>project/
+├── .github/
+│   ├── copilot-instructions.md          # Global project principles
+│   ├── instructions/
+│   │   ├── api.instructions.md          # applyTo: "src/api/**"
+│   │   ├── auth.instructions.md         # applyTo: "src/auth/**"
+│   │   ├── frontend.instructions.md     # applyTo: "src/ui/**/*.tsx"
+│   │   ├── testing.instructions.md      # applyTo: "**/test/**"
+│   │   └── database.instructions.md     # applyTo: "src/db/**"
+│   ├── agents/
+│   │   ├── architect.agent.md        # Structure, patterns, trade-offs
+│   │   ├── backend-dev.agent.md      # API implementation, business logic
+│   │   ├── security-reviewer.agent.md # Injection, traversal, credentials
+│   │   └── doc-writer.agent.md       # Documentation consistency
+│   ├── skills/
+│   │   ├── cli-logging-ux/
+│   │   │   ├── SKILL.md
+│   │   │   └── examples/
+│   │   ├── error-handling/
+│   │   │   └── SKILL.md
+│   │   └── api-middleware/
+│   │       └── SKILL.md
+│   ├── prompts/
+│   │   ├── code-review.prompt.md
+│   │   ├── feature-impl.prompt.md
+│   │   └── bug-investigation.prompt.md
+│   └── specs/
+│       ├── feature-template.spec.md
+│       └── api-endpoint.spec.md
+├── .memory.md                            # Project-level memory
+├── AGENTS.md                             # Root discovery file
+├── src/
+│   ├── api/
+│   │   └── AGENTS.md                    # API-specific context
+│   ├── auth/
+│   │   └── AGENTS.md                    # Auth-specific context
+│   └── ...
+└── ...</code></pre>
+<p>Three observations. <strong>Context files live in <code>.github/</code></strong>, centralised so the knowledge layer is findable in one place; the exceptions are <code>AGENTS.md</code> files, which live in the directories they describe because they participate in a discovery hierarchy Chapter 13 covers. <strong>Each primitive type has its own directory</strong> — instructions, agents, skills, prompts, specs, and hooks don’t mix; this makes auditing what you have straightforward. <strong>The structure is flat within each directory.</strong> Resist the urge to nest. A flat list of 15 descriptively-named files scans faster than a three-level tree, and most projects need 8-12 instruction files, not 50.</p>
+<hr>
+</section>
+<section id="sec-codebase-composition" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="sec-codebase-composition"><span class="header-section-number">12.5</span> How Primitives Compose</h2>
+<p>Primitives are not independent. They form a layered system, and the agent’s effective context for a task is the composition of every applicable file:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    G["&lt;b&gt;Global principles&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px'&gt;copilot-instructions.md&lt;/span&gt;"]
+    I["&lt;b&gt;Scoped instructions&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px'&gt;*.instructions.md, matched by applyTo&lt;/span&gt;"]
+    S["&lt;b&gt;Skills&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px'&gt;activated by code patterns&lt;/span&gt;"]
+    A["&lt;b&gt;Agent configuration&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px'&gt;persona, model, tool boundaries&lt;/span&gt;"]
+    P["&lt;b&gt;Prompt or spec&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px'&gt;the specific workflow being executed&lt;/span&gt;"]
+    M["&lt;b&gt;Memory&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px'&gt;accumulated project context&lt;/span&gt;"]
+    H["&lt;b&gt;Hooks&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px'&gt;event-driven triggers, cross-cutting&lt;/span&gt;"]
+    G --&gt; I --&gt; S --&gt; A --&gt; P --&gt; M
+    H -.-&gt;|cross-cutting| G
+    H -.-&gt; I
+    H -.-&gt; S
+    H -.-&gt; A
+    H -.-&gt; P
+    H -.-&gt; M
+    classDef layer fill:#f5f5f5,stroke:#333,stroke-width:1px,color:#000
+    classDef cross fill:#fff3e0,stroke:#e65100,stroke-width:1px,color:#000
+    class G,I,S,A,P,M layer
+    class H cross
+</pre>
+</div>
+<p></p><figcaption> Composition cascade. Each layer narrows scope and adds specificity; the agent’s effective context for a task is the union of every applicable layer. Hooks operate across all layers as event-driven triggers.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+<p>When an agent is asked to modify <code>src/api/users.py</code>, the effective context assembles from global principles, the <code>applyTo: "src/api/**"</code> instruction file (frontend instructions stay out), the API middleware skill (activated by route patterns), the backend-dev agent (persona, model, tools), and the memory file (versioning decisions, deprecated <code>SessionAuth</code>, rate limit timeouts). Each layer adds specificity; none contradicts the layer above. A conflict indicates a design error in the instrumentation, not a resolution the agent should attempt.</p>
+<p>This composition is what Chapter 13’s <em>Explicit Hierarchy</em> constraint makes concrete. Global rules provide consistency, scoped rules provide domain adaptation, skills provide decision frameworks, agent configurations provide expertise, prompts and specs provide task structure, memory provides history, hooks provide event-driven reactivity. Together, they give the agent the same information a tenured team member would bring to the task — without requiring that information to fit in anyone’s head.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<hr>
+</section>
+<section id="sec-codebase-instrumentation-audit" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="sec-codebase-instrumentation-audit"><span class="header-section-number">12.6</span> The Instrumentation Audit</h2>
+<p>Before you build any of this, you need to know what your codebase already has and what it’s missing. The instrumentation audit is a systematic inventory, not of your code, but of the knowledge your code depends on.</p>
+<p><strong>Step 1: List your conventions.</strong> Spend 30 minutes with your team. Write down every convention, pattern, and constraint that a new engineer would need to learn in their first two weeks. Don’t filter. Don’t organize.</p>
+<p>You’ll typically get 30-60 items. Examples:</p>
+<ul>
+<li>All error responses use the <code>APIError</code> class</li>
+<li>Token refresh has a 3-retry limit with exponential backoff</li>
+<li>The <code>SessionAuth</code> class is deprecated; use <code>JWTAuth</code></li>
+<li>Tests use factory functions, never inline object construction</li>
+<li>Frontend components use the project’s design system, never raw HTML elements</li>
+<li>Database migrations are reviewed by the DBA before merge</li>
+<li>The logging module wraps Rich; never call <code>print()</code> directly</li>
+</ul>
+<p><strong>Step 2: Classify each item.</strong> For every convention, mark where it lives today:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 25%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Location</th>
+<th>Meaning</th>
+<th>Agent visibility</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>In code</td>
+<td>Expressed in types, naming, structure</td>
+<td>Partially visible — if it’s in the context window</td>
+</tr>
+<tr class="even">
+<td>In docs</td>
+<td>Written in a README, wiki, ADR, style guide</td>
+<td>Invisible unless explicitly loaded</td>
+</tr>
+<tr class="odd">
+<td>In heads</td>
+<td>Known by team members, never written down</td>
+<td>Completely invisible</td>
+</tr>
+</tbody>
+</table>
+<p>The “in heads” column is your instrumentation debt. Every item there is a convention an agent will violate because it has no way to know about it.</p>
+<p><strong>Step 3: Rank by failure cost.</strong></p>
+<ul>
+<li><strong>Critical:</strong> Security vulnerabilities, data corruption, production outages</li>
+<li><strong>High:</strong> Architectural violations that accumulate as technical debt</li>
+<li><strong>Medium:</strong> Convention violations that require rework in code review</li>
+<li><strong>Low:</strong> Style preferences that don’t affect correctness</li>
+</ul>
+<p><strong>Step 4: Map each item to a primitive type.</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 55%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>If the knowledge…</th>
+<th>It belongs in…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Is a rule scoped to specific files/directories</td>
+<td>An instruction file</td>
+</tr>
+<tr class="even">
+<td>Requires specialist expertise or a specific model</td>
+<td>An agent configuration</td>
+</tr>
+<tr class="odd">
+<td>Applies across files and needs a decision framework</td>
+<td>A skill</td>
+</tr>
+<tr class="even">
+<td>Defines a repeatable multi-step process</td>
+<td>A prompt</td>
+</tr>
+<tr class="odd">
+<td>Records a decision, trade-off, or historical fact</td>
+<td>A memory file</td>
+</tr>
+<tr class="even">
+<td>Specifies a feature with components and success criteria</td>
+<td>A specification</td>
+</tr>
+<tr class="odd">
+<td>Defines an automated response to a development event</td>
+<td>A hook</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 5: Write your starter set.</strong> Begin with 3-5 context files covering your critical items. Don’t aim for completeness; the feedback loop will guide you to what’s actually needed faster than upfront planning will.</p>
+<hr>
+</section>
+<section id="before-and-after" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="before-and-after"><span class="header-section-number">12.7</span> Before and After</h2>
+<p>Consider a mid-size backend service: 80,000 lines of Python, a REST API, a message queue consumer, an authentication module with some technical debt, and a CLI for operations tasks. The team has five engineers who’ve been working on it for two years.</p>
+<section id="before-uninstrumented" class="level3" data-number="12.7.1">
+<h3 data-number="12.7.1" class="anchored" data-anchor-id="before-uninstrumented"><span class="header-section-number">12.7.1</span> Before: uninstrumented</h3>
+<pre><code>project/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── README.md
+├── src/
+│   ├── api/
+│   ├── auth/
+│   ├── workers/
+│   ├── cli/
+│   └── models/
+├── tests/
+├── docs/
+│   └── architecture.md
+└── pyproject.toml</code></pre>
+<p>What happens when an agent is asked to “add a health check endpoint”:</p>
+<ul>
+<li>It creates a new route in the API directory, using Flask patterns it learned from training data, but this project uses FastAPI</li>
+<li>It imports a database connection check, but uses a raw connection instead of the project’s <code>HealthChecker</code> service</li>
+<li>It returns a plain JSON response, ignoring the project’s standard response envelope (<code>{"status": ..., "data": ..., "meta": ...}</code>)</li>
+<li>It writes a test that passes, using inline object construction, violating the factory pattern the team uses everywhere else</li>
+<li>It doesn’t register the route in the middleware pipeline because it doesn’t know the pipeline exists</li>
+</ul>
+<p>Everything compiles. Tests pass. The PR gets three review comments, all of the form “we don’t do it that way here.” The reviewer rewrites 60% of the code. The agent saved time on a first draft and cost time on corrections.</p>
+</section>
+<section id="after-instrumented" class="level3" data-number="12.7.2">
+<h3 data-number="12.7.2" class="anchored" data-anchor-id="after-instrumented"><span class="header-section-number">12.7.2</span> After: instrumented</h3>
+<pre><code>project/
+├── .github/
+│   ├── copilot-instructions.md
+│   ├── instructions/
+│   │   ├── api.instructions.md
+│   │   ├── auth.instructions.md
+│   │   ├── testing.instructions.md
+│   │   └── cli.instructions.md
+│   ├── agents/
+│   │   ├── backend-dev.agent.md
+│   │   └── doc-writer.agent.md
+│   ├── skills/
+│   │   └── api-middleware/
+│   │       └── SKILL.md
+│   ├── prompts/
+│   │   └── new-endpoint.prompt.md
+│   └── workflows/
+│       └── ci.yml
+├── .memory.md
+├── AGENTS.md
+├── README.md
+├── src/
+│   ├── api/
+│   │   └── AGENTS.md
+│   ├── auth/
+│   │   └── AGENTS.md
+│   ├── workers/
+│   ├── cli/
+│   └── models/
+├── tests/
+├── docs/
+│   └── architecture.md
+└── pyproject.toml</code></pre>
+<p>Same task. The agent now loads:</p>
+<ol type="1">
+<li>Global instructions — error handling patterns, security rules, test requirements</li>
+<li>API instructions — FastAPI conventions, standard response envelope, route registration</li>
+<li>API middleware skill — the registration pipeline, middleware ordering</li>
+<li>Backend-dev agent — knows this is a FastAPI project, knows the service patterns</li>
+<li>New-endpoint prompt — step-by-step: check existing health patterns, register route, write factory-based test, update middleware</li>
+</ol>
+<p>What it produces:</p>
+<ul>
+<li>A FastAPI route using the project’s standard response envelope</li>
+<li>A health check that delegates to <code>HealthChecker</code>, which already knows how to verify database, cache, and queue connectivity</li>
+<li>Registration in the middleware pipeline via the standard pattern</li>
+<li>A test using the project’s factory functions, following the naming convention, respecting the fixture hierarchy</li>
+<li>No review comments about conventions, because the conventions were in the context</li>
+</ul>
+<p>The difference is not the model. In the case documented in this book, the difference is 150 lines of markdown distributed across 8 files.</p>
+</section>
+<section id="sec-codebase-audit-numbers" class="level3" data-number="12.7.3">
+<h3 data-number="12.7.3" class="anchored" data-anchor-id="sec-codebase-audit-numbers"><span class="header-section-number">12.7.3</span> What the numbers look like</h3>
+<p>In the author’s experience across projects that have undergone this transformation, including the reference case documented throughout this book:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 41%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Uninstrumented</th>
+<th>Instrumented</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Convention-violating outputs</td>
+<td>40-60% of generated code</td>
+<td>Under 10%</td>
+</tr>
+<tr class="even">
+<td>Review comments per agent PR</td>
+<td>4-8 (“we don’t do it that way”)</td>
+<td>0-2 (substantive, not stylistic)</td>
+</tr>
+<tr class="odd">
+<td>Agent-generated code requiring rewrite</td>
+<td>30-50%</td>
+<td>Under 15%</td>
+</tr>
+<tr class="even">
+<td>Time from agent output to merge</td>
+<td>Hours (review + rework)</td>
+<td>Minutes (spot-check)</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>These numbers are directional, not guaranteed; they depend on the quality of your context files and the complexity of your conventions. The direction is consistent.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></dt>
+<dd>
+<p>Based on the author’s experience across instrumented projects. Results will vary by codebase complexity, model, and instrumentation maturity.</p>
+</dd>
+</dl>
+<hr>
+</section>
+</section>
+<section id="sec-codebase-feedback-loop" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="sec-codebase-feedback-loop"><span class="header-section-number">12.8</span> The Feedback Loop</h2>
+<p>Instrumentation is not a one-time setup. It is a continuous practice, like testing.</p>
+<p>When an agent produces incorrect output, the diagnosis follows a consistent pattern:</p>
+<pre><code>Failure observed
+    |
+    v
+Root cause: which context file failed?
+    |
+    +-- Agent too generic?          --&gt; Add domain knowledge to agent config
+    +-- Skill rules incomplete?     --&gt; Add the missing case to the skill
+    +-- Instructions missing scope? --&gt; Add a scoped instruction file
+    +-- No decision framework?      --&gt; Extract a new skill
+    +-- Context gap?                --&gt; Update the memory file
+    +-- No repeatable process?      --&gt; Create a prompt</code></pre>
+<p>Four examples from a real project, where fixing the instrumentation file fixed the class of error permanently:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 31%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Failure</th>
+<th>Root cause</th>
+<th>Context fix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Agent used <code>_rich_info()</code> directly instead of <code>logger.progress()</code></td>
+<td>Skill didn’t explicitly ban direct calls</td>
+<td>Added “never call <code>_rich_*</code> directly in commands” to CLI skill</td>
+</tr>
+<tr class="even">
+<td>Agent invented a new collision detection pattern</td>
+<td>Instructions didn’t list all base-class methods</td>
+<td>Added “use, don’t reimplement” table to integrator instructions</td>
+</tr>
+<tr class="odd">
+<td>Agent produced inconsistent Unicode symbols in output</td>
+<td>No single source of truth for status symbols</td>
+<td>Created <code>STATUS_SYMBOLS</code> reference in skill, added to anti-patterns</td>
+</tr>
+<tr class="even">
+<td>Agent used deprecated <code>SessionAuth</code> in new code</td>
+<td>Memory file didn’t record the deprecation</td>
+<td>Added deprecation notice with migration tracking reference</td>
+</tr>
+</tbody>
+</table>
+<p>This feedback loop is how context file quality compounds over time. Every failure you diagnose and fix is a failure that never recurs. After 20-30 iterations, your instrumentation set covers the conventions that actually matter, not the ones you theorized about, but the ones agents actually violate. That practical grounding is what makes an instrumented codebase effective.</p>
+<hr>
+</section>
+<section id="what-it-looks-like-an-annotated-session" class="level2" data-number="12.9">
+<h2 data-number="12.9" class="anchored" data-anchor-id="what-it-looks-like-an-annotated-session"><span class="header-section-number">12.9</span> What It Looks Like: An Annotated Session</h2>
+<p>The following excerpts are from a real Copilot CLI session — not a reconstruction, not a sanitized demo. They are lightly trimmed for length but not edited for voice. The typos and urgency are part of the record.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Session <code>d89b3ccc</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Repository:</strong> microsoft/apm · <strong>Branch:</strong> <code>feat/auth-logging-architecture-393</code> <strong>Result:</strong> <a href="https://github.com/microsoft/apm/pull/394">PR #394</a> — 75 files changed · <strong>Duration:</strong> 207 turns across 2 sessions · <a href="../case-study-apm-overhaul.html">Full metrics</a></p>
+</div>
+</div>
+<p><strong>Turn 0 — The messy start.</strong> The session opens with the developer pasting raw terminal output of an authentication failure and role-casting the agent in a single breath. This is the Architect role from Chapter 10 — not writing a plan document, but framing the problem and the expertise needed to solve it:</p>
+<blockquote class="blockquote">
+<p>“So I try to install a package from a GitHub EMU organization (requires auth) and it goes as: <code>apm install mcaps-microsoft/mcaps-software-poya#v1.0.0</code> Validating 1 package(s)… ✗ mcaps-microsoft/mcaps-software-poya#v1.0.0 - not accessible or doesn’t exist […] Can you think as a world class UX expert and work with an APM logging mechanism implementation expert on what is going on here and how to fix the experience as a whole”</p>
+</blockquote>
+<p>No YAML plan. No schema. A bug report, a role assignment, and a quality bar — all in natural language.</p>
+<p><strong>Turn 3 — Fleet deployment in six words.</strong> Once the agent drafted a plan, the developer’s entire orchestration command was:</p>
+<blockquote class="blockquote">
+<p>“Fleet deployed: create an issue to track this Epic and then implement on a new branch”</p>
+</blockquote>
+<p>The agent responded with 17 of 25 planned tasks completed, a GitHub issue created, and a feature branch pushed. Contrast this with the fabricated <code>copilot-cli dispatch --scope</code> commands that populate synthetic demos. Real orchestration is natural language with clear intent, not CLI flags.</p>
+<p><strong>Turns 4–5 — The feedback loop catches a silent semantic failure.</strong> The agent’s initial plan assumed EMU (Enterprise Managed Users) meant <code>*.ghe.com</code> hosts — a reasonable inference from the documentation, and one no test would flag. The developer caught it:</p>
+<blockquote class="blockquote">
+<p>“Note that in the docs the doc writer seems to think EMU = *.ghe.com. But that’s not the only case. A github.com instance may be an EMU. *.ghe.com is for the Data Resident EMU offering. Hopefully this does not reflect faulty auth code and cases.”</p>
+</blockquote>
+<p>One turn later, the correction sharpened into an instrumentation fix — not just correcting the code, but ordering the context file updated:</p>
+<blockquote class="blockquote">
+<p>“Sorry but I do not think ‘ghu_’ is identifying EMUs. I have a ‘github_pat_’ starting token and it comes from an EMU, it’s fine grained. It’s rather ghp (classic PAT) and github_pat (fine grained pat) prefixes. ‘ghu_’ is for OAuth User Tokens. This is critical knowledge for the auth expert agent.md to be updated.”</p>
+</blockquote>
+<p>That last sentence is this chapter’s entire thesis in twelve words. The developer didn’t just fix the code — they fixed the context file so every future agent inherits the correction. This is the <em>Silent Semantic Failure</em> anti-pattern from Chapter 20 caught and resolved at the primitive layer.</p>
+<p><strong>Turn 23 — Multi-agent debugging with real output.</strong> After initial fixes, auth still failed. The developer invoked the agent team and pasted verbose terminal output showing the full authentication resolution chain:</p>
+<blockquote class="blockquote">
+<p>“It’s better but auth still does not work. Please work together with the agent team (auth expert, logging expert, doc expert) find the rca”</p>
+</blockquote>
+<p>The agent traced the failure through real debug logs: <code>Auth resolved → Trying unauthenticated → failed → retrying with token → 403 → trying credential fill → failed</code>. Root cause: the <code>x-access-token:{token}@host</code> URL format sends Basic auth, which GitHub rejects with a 403 for fine-grained PATs. The fix was to switch to <code>git -c http.extraHeader='Authorization: Bearer {token}'</code>. Verbose instrumentation made the failure chain legible. Without it, the 403 would have been a mystery.</p>
+<p><strong>Turn 50 — Escalation to named agents.</strong> When single-agent debugging hit diminishing returns, the developer restructured the working group:</p>
+<blockquote class="blockquote">
+<p>“considering the implementation you’ve already started, and realizing you’ve been hitting roadblocks, I want you now to work in plan mode with our custom .agent.md software architect and the logging expert with the related skill. These are 2 subagents that will work with you on the planning task.”</p>
+</blockquote>
+<p>This is instrumentation at the orchestration layer. The developer didn’t write more code or more tests — they changed which agents were in the room and how they coordinated. The custom <code>.agent.md</code> files (described below) gave each agent persistent domain knowledge that outlives the session.</p>
+<p><strong>Turn 71 — Granular review, then delegation.</strong> The developer shifted into the Reviewer role (Chapter 10) at its most specific, then handed off to specialists:</p>
+<blockquote class="blockquote">
+<p>“you are printing the hashes twice? […] And if we are in verbose mode, why aren’t you printing live in the logs the 22 files we skipped? […] I’ll let the logging expert and UX expert on world class logs plan and decide. This expert agent needs to look at each of these commands with a team of clone subagents working for him and assess whether this is really killer full verbose logs”</p>
+</blockquote>
+<p>The pattern: review at the level of individual log lines, then delegate the fix to an agent whose <code>.agent.md</code> defines the quality bar. The developer sets the standard; the agents implement it.</p>
+<p><strong>Turn 73 — The instrumentation payoff.</strong> This is the moment that distinguishes a good session from a lasting one:</p>
+<blockquote class="blockquote">
+<p>“you must ensure you update the logging skill so that such architectural concerns and patterns are enshrined — not as unmovable, but as current art and baseline”</p>
+</blockquote>
+<p>Not a code fix. A <em>primitive fix</em>. The developer updated the logging skill file so that every future agent working on logging — in this session, in next month’s session, by a different developer — inherits the patterns discovered here. One fix, permanent prevention. This is the feedback loop described earlier in this chapter, operating at production scale.</p>
+<p><strong>What the agent files look like.</strong> The <code>.agent.md</code> files referenced throughout this session are not abstractions. Here is the auth expert, created during the session and refined across turns 4–5:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> auth-expert</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">: </span><span class="ch">&gt;-</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  Expert on GitHub authentication, EMU, GHE, ADO, and APM's</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  AuthResolver architecture. Activate when reviewing or writing</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  code that touches token management, credential resolution,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  or remote host authentication.</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span><span class="kw">:</span><span class="at"> claude-opus-4.6</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Auth Expert</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>You are an expert on Git hosting authentication across</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>GitHub.com, GitHub Enterprise (*.ghe.com, GHES), Azure DevOps,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>and generic Git hosts.</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Core Knowledge</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Token prefixes**: Fine-grained PATs (<span class="in">`github_pat_`</span>),</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  classic PATs (<span class="in">`ghp_`</span>), OAuth user tokens (<span class="in">`ghu_`</span>)...</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**EMU**: Use standard PAT prefixes. No special prefix —</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  it's a property of the account, not the token.</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Host classification**: github.com (public), *.ghe.com</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  (no public repos), GHES, ADO</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This is what “update the auth expert agent.md” means in practice. The domain correction from Turn 5 — that EMU tokens use standard PAT prefixes, not a special <code>ghu_</code> prefix — lives here permanently. Every agent that activates this file inherits that knowledge without being told twice.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Turn 52 — The meta-moment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Midway through the session, the developer paused and recognized the pattern:</p>
+<blockquote class="blockquote">
+<p>“Look at the planning and agent teams orchestration pattern we used, with waves, with task dependencies, with checkpoints that include panel discussions […] with the specific skills and custom agent files used to instantiate the different flavor of specialized subagents […] This should become a handbook for AI Engineers to leverage.”</p>
+</blockquote>
+<p>This book was partly born from the patterns it describes. By Turn 79, the developer applied the same orchestration structure — specialized agents, panel review, escalation gates — to set up a documentation team for this handbook itself. The pattern is fractal: it works for code, for knowledge work, for any domain where quality requires multiple perspectives and persistent context.</p>
+</div>
+</div>
+<p><strong>Three things to notice.</strong></p>
+<p><strong>The developer’s value was domain knowledge, not keystrokes.</strong> Across 207 turns and 75 changed files, the developer wrote no application code. Their contributions were the problem frame (Turn 0), the domain corrections (Turns 4–5), the team composition decisions (Turns 50, 71), and the context file fixes (Turns 5, 73). This is the role shift Chapter 10 described: architect, reviewer, escalation handler — operating through instrumentation rather than implementation.</p>
+<p><strong>Every correction became a permanent artifact.</strong> A developer without instrumentation would have fixed the auth code and moved on. The same EMU confusion would recur next month, with a different agent, on a different task. Instead, the correction went into the <code>auth-expert.agent.md</code> (Turn 5) and the logging skill (Turn 73) — context files that prevent the <em>class</em> of error, not just the instance. This is the feedback loop that makes instrumentation compound over time.</p>
+<p><strong>The hardest bugs were semantic, not syntactic.</strong> The agent’s assumption that EMU means <code>*.ghe.com</code> was plausible, consistent with documentation, and wrong. No linter catches that. No test catches it unless the test author already knows the correct answer — in which case you don’t need the test. This is the <em>Silent Semantic Failure</em> anti-pattern Chapter 20 catalogues. The safety net was a human with domain expertise reviewing agent output with enough context (verbose logs, Turn 23) to see where the reasoning broke. Agent-augmented development does not eliminate the need for human judgment. It changes <em>where</em> that judgment is applied — and instrumentation determines whether it has lasting effect.</p>
+<hr>
+</section>
+<section id="sec-codebase-starting-points" class="level2" data-number="12.10">
+<h2 data-number="12.10" class="anchored" data-anchor-id="sec-codebase-starting-points"><span class="header-section-number">12.10</span> Starting Points</h2>
+<p>The seven primitives and the full directory structure represent a mature instrumented codebase. You don’t need to build all of it at once. Start where the impact is highest.</p>
+<p><strong>Week one.</strong> Three files: global instructions (10-15 lines of non-negotiable principles), one scoped instruction file for your most-edited module, one agent configuration for the task agents perform most often.</p>
+<p><strong>Week two.</strong> Use these files on real work. When the agent violates a convention not covered by your files, add it. When it does something right that surprised you, check whether your instrumentation contributed. Update the memory file with the decisions and trade-offs you resolved this week.</p>
+<p><strong>Week three.</strong> Extract the first skill — you’ll know it’s time when you’ve written the same guidance in two different instruction files. Package the shared knowledge as a skill with a decision framework. Create your first prompt file for a task you’ve now asked an agent to do three or more times.</p>
+<p><strong>Ongoing.</strong> Review context files monthly. Remove rules that never trigger. Tighten rules that trigger but don’t prevent the failure. Add new rules only in response to observed failures. Treat your instrumentation like a test suite: it should grow with the codebase, stay accurate, and never contain dead rules.</p>
+<p>The instrumented codebase is not a finished state. It is a practice — an ongoing investment in making machine-readable what your team already knows. The directory structure and primitive types here can be built by hand, and for a first project, doing so builds understanding. For subsequent projects, or for teams standardising across repositories, the mechanical work of scaffolding and sharing benefits from a distribution mechanism — the same pattern npm brought to JavaScript modules. This category of tooling is new. One open-source implementation is APM (Agent Package Manager), built by the author of this book; you can build everything in this chapter without it, but tooling reduces scaffolding from hours to seconds.</p>
+<blockquote class="blockquote">
+<p><strong>Shortcut: scaffolding with a package manager</strong></p>
+<p><code>apm init</code> generates <code>copilot-instructions.md</code>, one scoped instruction file, and one agent configuration — the Week One starter set from this chapter. <code>apm install</code> pulls shared context files from any Git repository into your project.</p>
+</blockquote>
+<hr>
+</section>
+<section id="what-this-chapter-unlocks" class="level2" data-number="12.11">
+<h2 data-number="12.11" class="anchored" data-anchor-id="what-this-chapter-unlocks"><span class="header-section-number">12.11</span> What this chapter unlocks</h2>
+<p>You now have the catalogue. Three chapters follow, each treating one face of the same artifact:</p>
+<p><strong>Chapter 13 — The PROSE Constraints (<a href="ch13-the-prose-specification.html" class="quarto-xref"><span>Chapter 13</span></a>).</strong> How to <em>write</em> the prose inside these files so it actually steers the model. Each PROSE constraint — Progressive Disclosure, Reduced Scope, Orchestrated Composition, Specification, Explicit Hierarchy — is a normative rule for the body of a primitive. Chapter 13 is the writing chapter; this one was the typing chapter.</p>
+<p><strong>Chapter 14 — The Load Lifecycle (<a href="ch14-the-load-lifecycle.html" class="quarto-xref"><span>Chapter 14</span></a>).</strong> How the harness <em>loads</em> these files. The five load modes named in this chapter — eager preload, lazy on-demand, dispatcher-mediated, user-invoked, event-driven — get their mechanics there: load order, transitive closure, the dispatcher’s binding window, why a correctly-placed skill stays silent when a parent instruction overflows the context budget. Chapter 14 is the chapter you reach for when a primitive does not bind.</p>
+<p><strong>Chapter 15 — Attention and Context Economy (<a href="ch15-attention-and-context-economy.html" class="quarto-xref"><span>Chapter 15</span></a>).</strong> What these files <em>cost</em> once loaded. Loading is deterministic; attention is not. A 40-line instruction file and a 400-line one bind identically and behave nothing alike. Chapter 15 is the physics — why context is a working set rather than a budget, why doubling input length more than halves output quality past a threshold, why progressive disclosure is the price of admission rather than polish.</p>
+<p>This chapter showed you what to build. Chapter 13 shows you how to write it. Chapter 14 shows you when it loads. Chapter 15 shows you what it costs.</p>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>agentskills.io is the open registry standard for the <code>SKILL.md</code> entrypoint with description-driven activation. The same standard has been adopted in substantially compatible form by GitHub Copilot (<code>.github/skills/&lt;name&gt;/SKILL.md</code>), Claude Code (<code>.claude/skills/&lt;name&gt;/SKILL.md</code>), and several others — skills port across harnesses more cleanly than scope-attached rules because the standard pinned both the file name and the activation contract.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Genesis’s <a href="https://github.com/danielmeppiel/genesis/blob/613f2a64a4a193cacd45fd4439a093044ae3178d/skills/genesis/SKILL.md"><code>skills/genesis/SKILL.md</code></a> is explicit about its scope under the “Hard rules” heading: <em>“The output of this skill is DESIGN ARTIFACTS, not finished modules. A separate coding step emits the natural-language modules from the artifacts.”</em> That is the design-test discipline applied to design itself — the activation contract this section teaches, drawn at the boundary I had to set before the skill could ship. <em>Agent-side reference; activation contract verbatim.</em><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The principle of scoped, hierarchical configuration mirrors established patterns in software engineering — from CSS specificity to Git’s nested .gitignore files. The key insight is that agents benefit from the same locality-of-reference that makes these patterns effective for humans.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Static analysis tools (ESLint, Pylint, Ruff) catch syntactic violations but not semantic ones — an agent can pass all linters while violating domain conventions. The instruction files complement, rather than replace, automated linting. See also the discussion of Silent Semantic Failure in Chapter 20.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/danielmeppiel\.github\.io\/agentic-sdlc-handbook\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../handbook/ch11-the-runtime-machine.html" class="pagination-link" aria-label="The Agentic Runtime Machine">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Agentic Runtime Machine</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../handbook/ch13-the-prose-specification.html" class="pagination-link" aria-label="The PROSE Constraints">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The PROSE Constraints</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/danielmeppiel/agentic-sdlc-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer><div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 2rem; margin-top: 3rem; border-radius: 8px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+  <p style="color: #e0e0e0; margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">📕 Get the PDF &amp; EPUB — free download</p>
+  <p style="color: #a0a0a0; margin: 0 0 1rem 0; font-size: 0.9rem;">Plus ~1 update/month max. No spam. Unsubscribe anytime.</p>
+  <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/download.html" onclick="if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){this.href='/download.html';}" style="display: inline-block; background: #0d6efd; color: white; padding: 0.5rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 500;">Download the Handbook</a>
+</div>
+<div style="text-align: center; margin-top: 1.5rem; padding: 0.75rem; font-size: 0.85rem; color: #888;">
+  <p style="margin: 0;">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjnz7UZMAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAdRQTFRFAAAAAAAA////////////8fHx7+/v4+Pj39/f1tXV09bS0tXS0tXR0dTR0dTQ0NTQ0NPPz9PPztLOztHNzdHNzdHMz8/PzdDMzNDMzNDLzM/Ly8/Ly8/Ky87Kys3Jyc3Jyc3IyMzIyMzHx8vHxsrGxsrFxcnFyMfHxcnExMnExMjDw8jDxMfDw8fCwsfCwcXAwMXAwMW/wMS/v8S+v8O+vsO+vsK9vcK9vcK8v7+/vMG8vMG7vMC8u8C7u8C6ur+6ur+5ub65ub64uL23t7y2urm5tru1tbq0tLqztLmzs7iysrixsrexsbewsLavsLWvr7Wur7SusLOvrrStrrOtr7KvrbOsrLKrr6+vq7GqrKurpqqmo6ijoqahn6OenqCdn5+fnp2dmpiZlpmWlZmUk5iTkZSRkZORkY+Pj4+PiYyJjIqLh4aHhIaEhIWEgoWChIGCf4F+gICAfX98fH98fnt8en15eXx5eHV2dnN0dXJzcHJvcHBwaGdoaGVmZmRkYGBgXV5dWldYUFFQUFBQQ0RDQEBAPj8+Pzs8NTY1MjMxMjExMDAwMS0uKioqKSopKSkpKCkoKCUmIx8gICAgHxscGxsbGRkZEBAQDg4ODQ4NDQwN1jMqSgAAAAR0Uk5T/wAKDnDBpeYAAAODSURBVHjatZaLe9JWGMbfbbGltMYonQMklsVlUyrLqtWV4bqWsnZW23Wr9uK13or3C14qiootxBtVMFgj/rN+JyFNzEMfHvHpCzyH8ybnl+Q75/tO8B3WRd8AGEkm4vuUblnqEoN+fzC0XZIjSm98MDkyOvbv5NTU9OyXCwZ3oG9PVA6HfALf7vW2bxR828JytKdvgJEnJqemmyQT97fIDtHHXy9UQaoWrvFbQtIu5XciHxqfODI1vVACqbRgj2voAEgQVwoIqRWsamVe8Id3Kn2DyYOHxyfPlwE1m1WB8gVz1IXGDoD4nojk55cA6Ll0LJbO6QCWdn8f3tUTTwyPjp38gLyHI3ny+GCMOtXYYeB90R0BxtXTLZypOUKXd/ulaG//0MjhEnLkAewAymxQ2XAuLrocku0AUGRRIG7Rw62qpQgsCSFZ6UsM30a+zQJzeSxQNPHqLHHff8y0Wg47xxI5Jrj7R1+KuHS7n5Pnt4Qje/uTb+C4ogel2dkS3mrPHyN9Fccsx3WOCZZD/Ar0rWQ5yTpW+G2y8kcCKuvnYD6sChqjPrivaVqmtc126I9myHBMsNR5HUhzLs0B13xSdP8AsqwLEmuzDEPOLxkAmTaHwz0yxJwauGtzAToFIpZX1bTZXKLDOgrCdopFXTCpNbOsaYt/W44lB1jkq8gREEzqDEisn0N1Y2hnz591QsGcDWe4No30fO1QBDsAusUiKp5YZa6IomemMmfEoj0oK/HX5sQA9uQxZ1FbXkbm2N13q84TQ47JC3iBGMeZcbYa4wm8/p+U+C3kOfdyI6f15vuPFzc4HNdyawweemMnSNaZDlcWXQ7JclyhaNlaSVMoWGOHYuh4UyltT15t1moNu3KVF2nyhv45UQKKuWzRLjmnyo0cc7ktQedWl9uMajRcBQWhK7L3r+TBsf/uNVU2pc4UcKl+gvy6f3B4dJxqfTOF/mcjpT1rpfTIoWbBVIRO1ytCKV+4u7efSv3EkemmwLgjCk+J7ChDHqNsijfwlXoY3OQs9C1pHXjBB+7gq3Xbv+mpa2vifzgHS2Z+gP1MWR3yP3foTBc5KJx2bqYpIWBzwdW+DozV59Zw7GjQ9p+ytv953ic642CVTYdT+7icOmC8PBrq3Mx3eL0dPL2w/P8MDtmBcDo2xuW49ezyATEYCATFA5cZdo07bhzjdde36/S2+QkOU7VYqRESOQAAAABJRU5ErkJggg==" alt="CC BY-NC-ND 4.0" style="height: 20px; vertical-align: middle;">
+    </a>
+    © 2025-2026 Daniel Meppiel · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #aaa;">CC BY-NC-ND 4.0</a>
+  </p>
+  <p style="margin: 0.25rem 0 0 0;">Free to read and share with attribution. <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #aaa;">License details</a></p>
+</div>
+
+
+
+
+</body></html>

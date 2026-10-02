@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; The Agentic SDLC Bill – The Agentic SDLC Handbook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../handbook/ch08-planning-the-transition.html" rel="next">
+<link href="../handbook/ch06-team-structures.html" rel="prev">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-21d6fceeb25172fe2fb34cb0b56a437d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="../agentic-sdlc-handbook/favicon.svg">
+<link rel="apple-touch-icon" href="../agentic-sdlc-handbook/apple-touch-icon.png">
+<meta name="dc.rights" content="CC BY-NC-ND 4.0">
+<meta name="dc.rights.uri" content="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2DPKEV68VR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2DPKEV68VR');
+</script>
+<style>
+  /* Mermaid diagram readability — light mode */
+  :root {
+    --mermaid-node-bg-color: #f0f4f8 !important;
+    --mermaid-node-fg-color: #1a202c !important;
+    --mermaid-label-fg-color: #1a202c !important;
+    --mermaid-label-bg-color: #ffffff !important;
+    --mermaid-fg-color: #1a202c !important;
+    --mermaid-edge-color: #718096 !important;
+  }
+  /* Mermaid diagram readability — dark mode */
+  body.quarto-dark {
+    --mermaid-bg-color: transparent !important;
+    --mermaid-node-bg-color: #2d3748 !important;
+    --mermaid-node-fg-color: #e2e8f0 !important;
+    --mermaid-label-fg-color: #e2e8f0 !important;
+    --mermaid-label-bg-color: #1a202c !important;
+    --mermaid-fg-color: #e2e8f0 !important;
+    --mermaid-edge-color: #a0aec0 !important;
+  }
+  /* Mermaid lightbox — click to expand any mermaid figure */
+  figure.figure:has(svg.mermaid-js) { cursor: zoom-in; }
+  figure.figure:has(svg.mermaid-js):hover { outline: 1px dashed #888; outline-offset: 4px; }
+  #mermaid-lightbox-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+    z-index: 10000; display: none; align-items: center; justify-content: center;
+    padding: 2rem; cursor: zoom-out; flex-direction: column;
+  }
+  #mermaid-lightbox-overlay.open { display: flex; }
+  #mermaid-lightbox-overlay .ml-stage {
+    max-width: 95vw; max-height: 90vh;
+    background: #fff; padding: 1.5rem; border-radius: 8px;
+    overflow: auto; cursor: default;
+  }
+  body.quarto-dark #mermaid-lightbox-overlay .ml-stage { background: #1a202c; }
+  /* Render SVG at intrinsic viewBox dimensions; stage scrolls if larger than viewport */
+  #mermaid-lightbox-overlay .ml-stage svg {
+    display: block; width: auto; height: auto;
+    max-width: none; max-height: none;
+  }
+  #mermaid-lightbox-overlay .ml-caption {
+    color: #fff; max-width: 95vw; margin-top: 1rem;
+    font-size: 0.9rem; text-align: center;
+  }
+  #mermaid-lightbox-overlay .ml-close {
+    position: absolute; top: 1rem; right: 1.5rem;
+    background: none; border: none; color: #fff;
+    font-size: 2rem; cursor: pointer; line-height: 1;
+  }
+</style>
+<script>
+  // Mermaid lightbox: wraps mermaid SVGs in a click-to-expand overlay.
+  // Quarto's built-in lightbox only handles <img>; this shim covers <svg> mermaid output.
+  document.addEventListener('DOMContentLoaded', function () {
+    var overlay = document.createElement('div');
+    overlay.id = 'mermaid-lightbox-overlay';
+    overlay.innerHTML = '<button class="ml-close" aria-label="Close">&times;</button><div class="ml-stage"></div><div class="ml-caption"></div>';
+    document.body.appendChild(overlay);
+    var stage = overlay.querySelector('.ml-stage');
+    var cap = overlay.querySelector('.ml-caption');
+    function close() { overlay.classList.remove('open'); stage.innerHTML = ''; cap.textContent = ''; }
+    overlay.addEventListener('click', function (e) { if (e.target === overlay || e.target.classList.contains('ml-close')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('open')) close(); });
+    function wireFigures() {
+      document.querySelectorAll('svg.mermaid-js').forEach(function (svg) {
+        var fig = svg.closest('figure.figure');
+        if (!fig || fig.dataset.mlWired) return;
+        fig.dataset.mlWired = '1';
+        fig.title = 'Click to expand';
+        fig.addEventListener('click', function (ev) {
+          if (ev.target.closest('a')) return;
+          ev.preventDefault();
+          var clone = svg.cloneNode(true);
+          clone.removeAttribute('style');
+          clone.removeAttribute('width');
+          clone.removeAttribute('height');
+          // Use viewBox to derive intrinsic width; size the SVG generously for readability
+          var vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(parseFloat);
+          if (vb.length === 4 && vb[2] > 0 && vb[3] > 0) {
+            var ratio = vb[2] / vb[3];
+            var maxH = window.innerHeight * 0.85;
+            var maxW = window.innerWidth * 0.9;
+            // Prefer using the full available width unless that overflows height
+            var w = maxW;
+            var h = w / ratio;
+            if (h > maxH) { h = maxH; w = h * ratio; }
+            // Floor at a comfortable readable size; stage scrolls if it exceeds viewport
+            w = Math.max(w, Math.min(1400, vb[2]));
+            h = w / ratio;
+            clone.setAttribute('width', w);
+            clone.setAttribute('height', h);
+          }
+          stage.innerHTML = '';
+          stage.appendChild(clone);
+          var capEl = fig.querySelector('figcaption');
+          cap.textContent = capEl ? capEl.textContent.trim() : '';
+          overlay.classList.add('open');
+        });
+      });
+    }
+    wireFigures();
+    // Re-wire when mermaid finishes async rendering
+    new MutationObserver(wireFigures).observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+
+
+<link rel="stylesheet" href="../styles/handbook-cover.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../handbook/ch02-the-ai-native-landscape.html">Part II: For Leaders</a></li><li class="breadcrumb-item"><a href="../handbook/ch07-the-agentic-sdlc-bill.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Agentic SDLC Bill</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">The Agentic SDLC Handbook</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/danielmeppiel/agentic-sdlc-handbook" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../download.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Download</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reading-paths.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading paths</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: The Foundation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch01-the-agentic-sdlc-thesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The Agentic SDLC Thesis</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: For Leaders</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch02-the-ai-native-landscape.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The AI-Native Landscape</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch03-the-business-case.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Business Case</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch04-the-reference-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agentic SDLC Reference Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch05-governance-for-ai-assisted-delivery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Governance for AI-Assisted Delivery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch06-team-structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Team Structures for AI-Augmented Delivery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch07-the-agentic-sdlc-bill.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Agentic SDLC Bill</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch08-planning-the-transition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Planning the Transition</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: For Practitioners</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch09-part-iii-preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">A Map for Part III</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch10-the-practitioners-mindset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The Practitioner’s Mindset</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch11-the-runtime-machine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Agentic Runtime Machine</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch12-the-instrumented-codebase.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Instrumented Codebase</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch13-the-prose-specification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The PROSE Constraints</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch14-the-load-lifecycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The Load Lifecycle</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch15-attention-and-context-economy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Attention and Context Economy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch16-deterministic-probabilistic-boundary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">The Deterministic/Probabilistic Boundary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch17-multi-agent-orchestration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Multi-Agent Orchestration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch18-the-execution-meta-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The Execution Meta-Process</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch19-architectural-patterns-rosetta-stone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Architectural Patterns: A Rosetta Stone</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch20-anti-patterns-and-failure-modes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Anti-Patterns and Failure Modes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch21-primitives-as-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Primitives as Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch22-the-reference-architecture-earned.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">The Reference Architecture, Earned</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: Case Studies</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-apm-overhaul.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">The APM Auth + Logging Overhaul</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-handbook-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Writing a ~68,000-Word Book with Agent Fleets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-publishing-pipeline.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">The Publishing Pipeline</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-growth-engine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Building a Growth Engine</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Closing</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch27-what-comes-next.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">What Comes Next</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/appendix-a-cross-harness-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">The Cross-Harness Reference</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/appendix-b-genesis-worked-example.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Genesis worked example: Panel re-architecture</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-bill-cost-variance" id="toc-sec-bill-cost-variance" class="nav-link active" data-scroll-target="#sec-bill-cost-variance"><span class="header-section-number">7.1</span> The Same Task, an 8.5× Bill</a></li>
+  <li><a href="#sec-bill-three-variables" id="toc-sec-bill-three-variables" class="nav-link" data-scroll-target="#sec-bill-three-variables"><span class="header-section-number">7.2</span> Three Variables You Already Control</a></li>
+  <li><a href="#why-this-cant-be-a-developers-job" id="toc-why-this-cant-be-a-developers-job" class="nav-link" data-scroll-target="#why-this-cant-be-a-developers-job"><span class="header-section-number">7.3</span> Why This Can’t Be a Developer’s Job</a></li>
+  <li><a href="#the-operating-model-a-cost-effective-loop-factory" id="toc-the-operating-model-a-cost-effective-loop-factory" class="nav-link" data-scroll-target="#the-operating-model-a-cost-effective-loop-factory"><span class="header-section-number">7.4</span> The Operating Model: A Cost-Effective-Loop Factory</a>
+  <ul class="collapse">
+  <li><a href="#sec-bill-model-tiering" id="toc-sec-bill-model-tiering" class="nav-link" data-scroll-target="#sec-bill-model-tiering"><span class="header-section-number">7.4.1</span> Tier the model access</a></li>
+  <li><a href="#sec-bill-spend-pooling" id="toc-sec-bill-spend-pooling" class="nav-link" data-scroll-target="#sec-bill-spend-pooling"><span class="header-section-number">7.4.2</span> Pool the spend, gate the bets</a></li>
+  <li><a href="#distribute-through-the-catalog" id="toc-distribute-through-the-catalog" class="nav-link" data-scroll-target="#distribute-through-the-catalog"><span class="header-section-number">7.4.3</span> Distribute through the catalog</a></li>
+  <li><a href="#sec-bill-staff-the-factory" id="toc-sec-bill-staff-the-factory" class="nav-link" data-scroll-target="#sec-bill-staff-the-factory"><span class="header-section-number">7.4.4</span> Staff the factory</a></li>
+  </ul></li>
+  <li><a href="#the-mechanics-live-in-part-iii" id="toc-the-mechanics-live-in-part-iii" class="nav-link" data-scroll-target="#the-mechanics-live-in-part-iii"><span class="header-section-number">7.5</span> The Mechanics Live in Part III</a></li>
+  <li><a href="#sec-bill-local-inference" id="toc-sec-bill-local-inference" class="nav-link" data-scroll-target="#sec-bill-local-inference"><span class="header-section-number">7.6</span> Local Inference: A CAPEX Lever Worth Watching</a></li>
+  <li><a href="#what-this-compounds-into" id="toc-what-this-compounds-into" class="nav-link" data-scroll-target="#what-this-compounds-into"><span class="header-section-number">7.7</span> What This Compounds Into</a></li>
+  <li><a href="#sec-bill-leaders-playbook" id="toc-sec-bill-leaders-playbook" class="nav-link" data-scroll-target="#sec-bill-leaders-playbook"><span class="header-section-number">7.8</span> The Leader’s Playbook</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/danielmeppiel/agentic-sdlc-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../handbook/ch02-the-ai-native-landscape.html">Part II: For Leaders</a></li><li class="breadcrumb-item"><a href="../handbook/ch07-the-agentic-sdlc-bill.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Agentic SDLC Bill</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Agentic SDLC Bill</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Engineering cost as a lever, not a line item.</p>
+<p>The business-case chapter answered <em>should we invest?</em> This chapter answers the question that arrives the quarter after you do: <em>what does this cost to run — and who decides?</em> With usage-based billing, the answer is no longer a line item your procurement team negotiates once a year. It is a variable your engineering organization produces every day, one agent run at a time. The good news is the part most leaders miss: that variable is something you engineer.</p>
+<hr>
+<section id="sec-bill-cost-variance" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="sec-bill-cost-variance"><span class="header-section-number">7.1</span> The Same Task, an 8.5× Bill</h2>
+<p>Take a single, ordinary task: refactor nineteen files to adopt a new error-handling convention. Hand it to an agent two ways. In the first, the agent loops file-by-file on a frontier model, re-reading context, re-planning, retrying on each failure. In the second, a <em>designed</em> workflow plans once, batches the edits, routes the mechanical work to a cheaper model, and verifies deterministically at the end. Same nineteen files. Same passing tests. In one illustrative run, the first path cost <strong>$41.01</strong> and the second <strong>$4.81</strong> — an <strong>8.5× spread</strong> on identical output.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="cell" data-fig-width="6.5" data-fig-height="3.4" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-bill-variance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bill-variance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-bill-variance">flowchart LR
+    T["&lt;b&gt;Refactor 19 files&lt;/b&gt;"]:::task
+    T --&gt; A["&lt;b&gt;UNDESIGNED&lt;/b&gt;&lt;br/&gt;file-by-file · frontier model&lt;br/&gt;re-read · re-plan · retry"]:::waste
+    T --&gt; B["&lt;b&gt;DESIGNED&lt;/b&gt;&lt;br/&gt;plan once · batch edits&lt;br/&gt;route to cheaper model · verify"]:::lean
+    A --&gt; AC["&lt;b&gt;$41.01&lt;/b&gt;"]:::wastecost
+    B --&gt; BC["&lt;b&gt;$4.81&lt;/b&gt;"]:::leancost
+    AC --&gt; O["&lt;b&gt;Identical output&lt;/b&gt;&lt;br/&gt;same files · same passing tests"]:::out
+    BC --&gt; O
+    classDef task fill:#26261f,stroke:#26261f,color:#f9f7f5,font-weight:bold
+    classDef waste fill:#f6e0d3,stroke:#c26b3f,color:#7c2d12,stroke-width:2px
+    classDef lean fill:#eef0e0,stroke:#6c7931,color:#33401a,stroke-width:2px
+    classDef wastecost fill:#c26b3f,stroke:#9a4f2a,color:#ffffff,font-weight:bold
+    classDef leancost fill:#6c7931,stroke:#55611f,color:#ffffff,font-weight:bold
+    classDef out fill:#f9f7f5,stroke:#26261f,color:#26261f,stroke-width:1.5px
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bill-variance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.1: The same task, two ways. Identical input and identical output; the cost diverges by 8.5× depending only on how the work is organized. The bill is a property of the design, not the task.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Hold onto that number, because it reframes the whole problem. Your agentic bill is not primarily a <em>price</em> problem — the per-token rate you negotiate. It is a <em>variance</em> problem — how widely the cost of the same outcome swings depending on how the work is organized. And variance is the thing finance teams already know how to think about: you do not manage a portfolio by its average return, you manage it by its tail risk. A <em>designed</em> workflow bounds your worst case to the worst <em>planned</em> step. An undesigned one bounds it to nothing.</p>
+<p>This is why cost has become the strongest case yet for the argument this book has made since its first page: <strong>engineer your agentic workflows centrally, deliberately, as artifacts you own.</strong> Every prior chapter argued it on the grounds of reliability and governance. Cost makes the same argument in the language a CFO signs off on.</p>
+<hr>
+</section>
+<section id="sec-bill-three-variables" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="sec-bill-three-variables"><span class="header-section-number">7.2</span> Three Variables You Already Control</h2>
+<p>The bill decomposes into three variables, and you control all three:</p>
+<ul>
+<li><strong>Model choice</strong> — the cost function. The spread between the cheapest capable model and the most expensive frontier model for the same step is, as of June 2026, large enough to dominate the other two cost inputs. Routing a mechanical edit to a frontier model is the single most common way teams overpay.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li><strong>Token use</strong> — how much context flows through that function on every call. Prompt bloat, redundant re-reads, oversized tool surfaces, and uncached prefixes all tax every invocation. The attention-economy chapter (<a href="ch15-attention-and-context-economy.html" class="quarto-xref"><span>Chapter 15</span></a>) shows why more context is not free and often not better; here the point is narrower — every wasted token is metered.</li>
+<li><strong>Harness choice</strong> — the system prompts and orchestration that decide how many calls happen, on which model, with which context. This is the lever with the most reach, because it governs the other two: the harness is where you encode <em>which</em> model runs each step and <em>how much</em> context flows through it. Model choice sets the magnitude; the harness decides when you pay it.</li>
+</ul>
+<p>None of these is a market condition you absorb. Each is a decision you can make once, encode, and reuse. That is the definition of an engineering problem.</p>
+<hr>
+</section>
+<section id="why-this-cant-be-a-developers-job" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="why-this-cant-be-a-developers-job"><span class="header-section-number">7.3</span> Why This Can’t Be a Developer’s Job</h2>
+<p>The naïve response is to ask every developer to optimize. Pick the cheap model when the task is mechanical. Trim the context. Cache the prefix. This fails for three reasons, and the failure is structural, not a matter of discipline:</p>
+<ul>
+<li><strong>A developer shouldn’t have to be a cost-optimization expert.</strong> Knowing which model is sufficient for which step, how to structure a cacheable prompt, and where the token cliffs are is a specialization. Spread across a thousand developers, it will be applied inconsistently — which is the same as not at all.</li>
+<li><strong>No one should re-derive the cheap path on every prompt.</strong> Even an expert will not re-optimize a routine task each time they run it. The optimization has to be <em>resident in the tool</em>, not in the operator’s working memory. That is what Agent Skills are for.</li>
+<li><strong>You can’t switch harness per task.</strong> Adoption, rollout, and training costs make the harness a slow-moving choice. Optimization that assumes you can swap runtimes per task is optimization you will not ship.</li>
+</ul>
+<p>So the optimization must be engineered <strong>once</strong>, <strong>centrally</strong>, and <strong>baked statically</strong> into reusable workflows. The model choice and the token discipline live in the artifact; the artifact is evaluated centrally, packaged, and distributed for everyone to reuse, portable across whichever harnesses your organization runs. The developer does not optimize. The developer <em>reuses an optimized loop.</em></p>
+<hr>
+</section>
+<section id="the-operating-model-a-cost-effective-loop-factory" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="the-operating-model-a-cost-effective-loop-factory"><span class="header-section-number">7.4</span> The Operating Model: A Cost-Effective-Loop Factory</h2>
+<p>What emerges is an operating model: a small central team does the expensive exploration; everyone else runs the cheap, governed result.</p>
+<div class="cell" data-fig-width="5.6" data-fig-height="5.4" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-loop-factory" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-loop-factory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-loop-factory">flowchart TB
+    E["&lt;b&gt;CENTRAL AI TEAM&lt;/b&gt; · frontier tier &lt;i&gt;(gated)&lt;/i&gt;&lt;br/&gt;Agentic Workflow Engineers research cost-effective loops&lt;br/&gt;hardcode model tier + token optimizations · evaluate centrally"]:::frontier
+    C["&lt;b&gt;CATALOG&lt;/b&gt; · Governance &amp;amp; Distribution&lt;br/&gt;Agent Plugins / Skills released via APM&lt;br/&gt;IDP discoverability + harness-managed rollout&lt;br/&gt;cost-vs-value gate at install + run"]:::catalog
+    R["&lt;b&gt;EVERYONE ELSE&lt;/b&gt; · baseline tier&lt;br/&gt;segmented users + budget pockets&lt;br/&gt;run loops via / slash command or intent match"]:::baseline
+    M["&lt;b&gt;MONITORING&lt;/b&gt; &amp;nbsp;·&amp;nbsp; cost · traces · ROI"]:::monitor
+    E --&gt; C --&gt; R --&gt; M
+    M -- "ROI signal +&lt;br/&gt;power-user demand" --&gt; E
+    classDef frontier fill:#26261f,stroke:#c26b3f,color:#f9f7f5,stroke-width:2.5px
+    classDef catalog fill:#eef0e0,stroke:#6c7931,color:#33401a,stroke-width:2px
+    classDef baseline fill:#e7f0d6,stroke:#6c7931,color:#33401a,stroke-width:2px
+    classDef monitor fill:#f9f7f5,stroke:#26261f,color:#26261f,stroke-width:1.5px
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-loop-factory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.2: The cost-effective-loop factory. A small central team turns gated frontier-model exploration into governed, reusable workflows that the whole organization runs on the baseline tier; monitoring closes the loop back to exploration.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Four moves make the factory work.</p>
+<section id="sec-bill-model-tiering" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="sec-bill-model-tiering"><span class="header-section-number">7.4.1</span> Tier the model access</h3>
+<p>Give everyone open, baseline access to the most cost-effective, versatile models on the market — the tier that delivers most of the value at a fraction of the frontier price.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Gate the frontier tier to a small central AI team whose single mandate is to <em>code cost-effective loops for everyone else to reuse.</em> This sounds austere; it is the opposite. It is how you give a thousand developers the benefit of frontier-model engineering without handing a thousand developers a frontier-model invoice. The frontier model becomes a tool of production, used by the people who build the loops — not a default, billed to everyone who runs them. The one deliberate exception is a metered escape hatch: when the catalog has no loop for a task that genuinely needs frontier reasoning, a developer requests time-boxed, budget-capped frontier access rather than being blocked — and that gap becomes the next item on the central team’s backlog. The gate is a queue, not a wall.</p>
+</section>
+<section id="sec-bill-spend-pooling" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="sec-bill-spend-pooling"><span class="header-section-number">7.4.2</span> Pool the spend, gate the bets</h3>
+<p>Split your token budget into intentional pockets and map them to user segments: a generous pocket for the central team’s exploration, bounded pockets for stream-aligned teams, a metered pocket for self-service. Then gate the spend the way you already gate any other risk. The governance chapter’s Decision Matrix is the right home for this: a <strong>cost-vs-value approval gate</strong> that asks, at install time and at run time, <em>does the expected outcome justify the inferencing bill?</em> Workflows that run locally on local models, or whose cost gradient is low and well-evaluated, get a free pass. Workflows that spend frontier tokens at scale earn an owner, an expected cost, a stop condition, and an off-switch before they ship. <strong>Any spend beyond the baseline playbook is an intentional bet — and a bet is only sound once your monitoring can tell you whether it paid off.</strong></p>
+<div id="tbl-spend-pools" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[20,30,28,22]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-spend-pools-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7.1: The four spend pools, each funded and metered by a different rule. The cheaper pools run open; only the deliberate bets — frontier exploration and metered at-scale runs — carry a gate.
+</figcaption>
+<div aria-describedby="tbl-spend-pools-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 30%">
+<col style="width: 28%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Spend pool</th>
+<th>Funding rule</th>
+<th>Who draws on it</th>
+<th>Metering</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Frontier R&amp;D</strong></td>
+<td>Capped envelope · best models</td>
+<td>Central AI / frontier team</td>
+<td>By budget — the deliberate bet</td>
+</tr>
+<tr class="even">
+<td><strong>Per-workflow run</strong></td>
+<td>Metered by outcome</td>
+<td>Approved, governed use cases</td>
+<td>Cost per outcome</td>
+</tr>
+<tr class="odd">
+<td><strong>Everyday prompting</strong></td>
+<td>Capped to cheaper models</td>
+<td>Everyone — the floor</td>
+<td>Open baseline access</td>
+</tr>
+<tr class="even">
+<td><strong>Local models</strong></td>
+<td>Unmetered · owned GPUs</td>
+<td>High-volume, low-risk loops</td>
+<td>Free at the margin</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="distribute-through-the-catalog" class="level3" data-number="7.4.3">
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="distribute-through-the-catalog"><span class="header-section-number">7.4.3</span> Distribute through the catalog</h3>
+<p>A loop nobody can find is a loop nobody reuses. The reference-architecture chapter’s Governance and Distribution layer is where cost-effective workflows become discoverable, installable artifacts: released as Agent Plugins and Skills through the Agent Package Manager (APM)<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> — the same pipeline, lockfile, integrity checks, version pinning, and drift protection you already apply to software dependencies (the primitives-as-code chapter, <a href="ch21-primitives-as-code.html" class="quarto-xref"><span>Chapter 21</span></a>, carries the mechanics). A catalog backed by an internal developer platform (IDP) adds discoverability; vendor harness-managed settings add mass rollout, so the right loop reaches the right segment without a migration project.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+</section>
+<section id="sec-bill-staff-the-factory" class="level3" data-number="7.4.4">
+<h3 data-number="7.4.4" class="anchored" data-anchor-id="sec-bill-staff-the-factory"><span class="header-section-number">7.4.4</span> Staff the factory</h3>
+<p>The roles already exist in this book. The <strong>Agentic Workflow Engineer</strong> (<a href="ch06-team-structures.html#sec-agentic-workflow-engineer" class="quarto-xref"><span>Section 6.4.2</span></a>) researches and encodes the cost-effective loops; the <strong>Agent Operations Specialist</strong> (<a href="ch06-team-structures.html#sec-agent-operations-specialist" class="quarto-xref"><span>Section 6.4.3</span></a>) owns cost, traces, and eval drift once they run at scale. What the bill adds is a <em>mandate</em>: the central AI team’s first deliverable is not a clever agent, it is a cheaper loop for a recurring, ROI-positive task. Your power users — the developers already pushing the frontier on their own — are the natural feeder into this function as it matures; this is a cost charter attached to a role this book already defined, not a new priesthood. Watch the one metric that keeps the team from becoming a bottleneck: its success is measured in <strong>loops reused across the organization, not requests approved.</strong> A central team that optimizes for gatekeeping has missed the point; a central team that optimizes for reuse compounds.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Three-Tier Honesty: what these numbers are, and are not">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Three-Tier Honesty: what these numbers are, and are not
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The figures in this chapter — the 8.5× spread, the $4.81 versus $41.01 run, the model-price ranges — are <strong>illustrative single runs and point-in-time prices</strong>, not benchmarks. They are real, and they are not universal: the magnitude depends on the task, the models available the week you read this, and the harness. Treat them as existence proofs of <em>variance you can engineer</em>, not as a guaranteed return. The durable claim is the mechanism — model choice, token use, and harness govern the bill, and all three are in your control. The specific multiples will move. The lever will not.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="the-mechanics-live-in-part-iii" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="the-mechanics-live-in-part-iii"><span class="header-section-number">7.5</span> The Mechanics Live in Part III</h2>
+<p>This chapter is the economics; it is deliberately not the how-to. A leader funds and governs the factory; a practitioner builds the loops. When you authorize a cost-effective workflow, what the central team actually ships is a handful of named patterns the practitioner block catalogues as a Rosetta Stone of agentic design:</p>
+<ul>
+<li>a <strong>Model Router</strong> that classifies each task and dispatches it to the cheapest sufficient model, and a <strong>Gradient Workflow</strong> that assigns each <em>stage</em> the smallest model class it needs — heavy planner, mid-tier executor, lightweight triage — both at <a href="ch19-architectural-patterns-rosetta-stone.html#sec-dispatch-patterns" class="quarto-xref"><span>Section 19.7</span></a>;</li>
+<li>a <strong>Cache-Aware Prefix</strong> (<a href="ch19-architectural-patterns-rosetta-stone.html#sec-assembly-patterns" class="quarto-xref"><span>Section 19.6</span></a>) that structures the prompt so its stable part bills at a fraction of full input on every repeat turn;</li>
+<li>a <strong>Tool Subset</strong> (<a href="ch19-architectural-patterns-rosetta-stone.html#sec-boundary-patterns" class="quarto-xref"><span>Section 19.8</span></a>) that exposes only the tools a step needs, cutting the token tax and the error surface at once.</li>
+</ul>
+<p>Around those four load-bearing patterns sit the everyday disciplines that operate them: trimming verbose model output, bounding reasoning effort and retries, and pruning spend the way a refactor removes dead code. Those are coding habits encoded in the workflow’s own instructions, not architectural patterns — which is why the catalogue names the four and leaves the habits to the agent’s instruction files and the <code>genesis</code> substrate it draws on.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>You do not need to read any of it to run this operating model. You need to know it exists, that it ships as version-pinned artifacts, and that the gap between an expensive loop and a cheap one is exactly the engineering it encodes.</p>
+<hr>
+</section>
+<section id="sec-bill-local-inference" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="sec-bill-local-inference"><span class="header-section-number">7.6</span> Local Inference: A CAPEX Lever Worth Watching</h2>
+<p>There is a second lever on the horizon, and it changes the shape of the bill rather than its size. Models in the ~120-billion-parameter class now run on-device, which trades a metered OPEX stream for a fixed CAPEX investment and far more predictable spend.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> For a workflow you run ten thousand times a day on a model you own, local inference can take a line item to near zero at the margin.</p>
+<p>The honest assessment is <em>watch and experiment, do not yet mass-rollout.</em> The maturity and the hardware are not there for enterprise-scale deployment, the upfront CAPEX is high, and hardware advances are compounding fast enough that today’s purchase ages quickly. But the direction is real, and the architecture already accommodates it: a workflow pinned to a local model is just another entry in the catalog, with the lowest cost gradient of all — which is why the cost-vs-value gate waves local execution straight through. Give it a pocket, run your highest-volume low-risk loops against it, and keep watching the space.</p>
+<hr>
+</section>
+<section id="what-this-compounds-into" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="what-this-compounds-into"><span class="header-section-number">7.7</span> What This Compounds Into</h2>
+<p>The payoff is not a one-time saving. Every cost-effective loop you build and govern accretes into a catalog, and that catalog <em>is</em> your agentic SDLC capability — the durable asset the closing chapter (<a href="ch27-what-comes-next.html" class="quarto-xref"><span>Chapter 27</span></a>) calls the next wave. The wins compound on every axis at once: <strong>cost</strong> falls and stabilizes, <strong>reliability</strong> rises because the loop is evaluated and pinned, <strong>outcomes</strong> improve because the loop encodes your best practice, and <strong>learnings</strong> accumulate because every run is monitored.</p>
+<div class="cell" data-fig-width="5.4" data-fig-height="5.2" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-workflow-lifecycle" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-workflow-lifecycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-workflow-lifecycle">flowchart TB
+    E["&lt;b&gt;1 · EXPLORE&lt;/b&gt; &amp;nbsp; &lt;i&gt;spend to learn&lt;/i&gt;&lt;br/&gt;frontier model · capped $"]:::learn
+    C["&lt;b&gt;2 · CODIFY&lt;/b&gt; &amp;nbsp; persist as a reusable skill"]:::pays
+    P["&lt;b&gt;3 · PUBLISH&lt;/b&gt; &amp;nbsp; portal skill · policy-gated"]:::pays
+    U["&lt;b&gt;4 · CONSUME&lt;/b&gt; &amp;nbsp; pull by manifest"]:::pays
+    R["&lt;b&gt;5 · RUN &amp;amp; MONITOR&lt;/b&gt; &amp;nbsp; cost per outcome"]:::pays
+    D["&lt;b&gt;6 · DISCOVER&lt;/b&gt; &amp;nbsp; usage reveals the next gap"]:::pays
+    E --&gt; C --&gt; P --&gt; U --&gt; R --&gt; D
+    D -- "next exploration" --&gt; E
+    classDef learn fill:#26261f,stroke:#c26b3f,color:#f9f7f5,stroke-width:2.5px,font-weight:bold
+    classDef pays fill:#eef0e0,stroke:#6c7931,color:#33401a,stroke-width:1.5px
+    linkStyle 5 stroke:#c26b3f,stroke-width:2.5px,color:#7c2d12
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-workflow-lifecycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.3: The agentic workflow lifecycle. One exploration is paid once, at frontier cost — the orange stage, spend to learn. The five stages that follow turn that exploration into a governed, reusable workflow whose every rerun pays the learning back (green). DISCOVER closes the loop: real usage reveals the next gap worth exploring. The bill is front-loaded once; the value compounds on every turn after.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Past a threshold, the catalog enables a class of workflow that is not economical to run any other way: <strong>Autopilots</strong> — composable, self-service loops that take a low-risk, high-value task end to end — and, at the limit, the <strong>Dark Software Factory</strong>, where agents do the building between human judgment and the final call, and trust comes from encoded judgment plus deterministic verification rather than from watching. These are the subject of the closing chapter; the reason they belong <em>here</em> is economic. They are only affordable, and only safe, on top of a factory of cost-engineered, governed loops. The bill is what makes the next wave a budget line instead of a moonshot.</p>
+<hr>
+</section>
+<section id="sec-bill-leaders-playbook" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="sec-bill-leaders-playbook"><span class="header-section-number">7.8</span> The Leader’s Playbook</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="The cost-effective operating model, in five moves">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The cost-effective operating model, in five moves
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Build a team of Agentic Workflow Engineers</strong> who research and implement cost-effective agentic workflows for recurring, ROI-positive use cases.</li>
+<li><strong>Mandate that each shipped workflow pins its model tier</strong> — and the tier of every subagent it spawns — to the cheapest sufficient class, with prompt compression and token discipline applied while output quality holds. Doing the pinning is the engineer’s job; requiring it is yours.</li>
+<li><strong>Release, distribute, and monitor the loops as software artifacts</strong> — Agent Plugins and Agent Skills, through the package manager and the catalog.</li>
+<li><strong>Gate usage with explicit cost-vs-value approvals</strong> so the expected outcome justifies the inferencing bill; wave through local and low-gradient workflows.</li>
+<li><strong>Give everyone open, baseline access</strong> to the most cost-effective, versatile models — and treat any spend beyond this baseline as an intentional bet, made once monitoring proves net-positive ROI.</li>
+</ol>
+<p>This runs across any harness and any model. The vendors change; the operating model does not.</p>
+</div>
+</div>
+<p>You now have the economic operating model. The next chapter turns it into a sequence — how to plan the transition from where your organization is today to the factory described here, without stalling in the valley.</p>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Illustrative single run on a nineteen-file refactor, comparing an undesigned file-by-file agent loop against a designed plan-batch-verify workflow. The absolute dollars and the 8.5× multiple vary by task, model, and harness; the figure demonstrates cost <em>variance</em> under fixed output, not a benchmarked saving.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The price spread across capable models for the same step is large and moves frequently; verify current rates before budgeting. The point is directional: model choice routinely dominates the other two variables, so misrouting a mechanical step to a frontier model is the most common overspend.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Specific model names date quickly. As of June 2026, broadly available cost-effective tiers (for example GPT-5.4 mini and MAI-Code-1-Flash) deliver strong value-per-dollar for routine work, while frontier tiers (for example Claude Opus, GPT-5.5) are reserved for the central team’s loop engineering. Read these as <em>tiers</em>, not endorsements; the policy is tier-the-access, whatever the SKUs are the week you deploy.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Disclosure: the author is the creator of APM (the Agent Package Manager) and a contributor to the reference implementations cited in this chapter. They are named as worked examples of the supply-chain mechanics this book argues for, not as product endorsements. The operating model is package-manager-, harness-, and model-agnostic: any tooling that gives you a lockfile, integrity checks, version pinning, and a discoverable catalog will serve.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>A working reference implementation of a central catalog, an IDP front end, and an APM-based release pipeline is the <code>zava-agent-config</code> project, <a href="https://github.com/DevExpGbb/zava-agent-config">https://github.com/DevExpGbb/zava-agent-config</a> (IDP site: <a href="https://devexpgbb.github.io/zava-agent-config/">https://devexpgbb.github.io/zava-agent-config/</a>; release pipeline: <a href="https://github.com/DevExpGbb/zava-agent-config/blob/main/.github/workflows/release.yml">release.yml</a>). It is a Microsoft-maintained reference implementation, offered as a reference point — not a turnkey product or a requirement.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p><code>genesis</code> is the author’s own agent-side pattern catalogue, cited as one source of the practitioner-block naming; the cost patterns named above are codified there as agent-loadable assets. Like the other implementations in this chapter, it is a reference, not a requirement — the operating model holds whatever substrate your central team writes its loops in.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>On-device inference for ~120B-parameter models is an emerging capability as of June 2026; treat the parameter scale and the CAPEX/OPEX tradeoff as directional and verify against current hardware. The claim is that local inference is worth experimenting with to tame OPEX unpredictability, not that it is ready for enterprise-scale mass rollout.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/danielmeppiel\.github\.io\/agentic-sdlc-handbook\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../handbook/ch06-team-structures.html" class="pagination-link" aria-label="Team Structures for AI-Augmented Delivery">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Team Structures for AI-Augmented Delivery</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../handbook/ch08-planning-the-transition.html" class="pagination-link" aria-label="Planning the Transition">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Planning the Transition</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/danielmeppiel/agentic-sdlc-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer><div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 2rem; margin-top: 3rem; border-radius: 8px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+  <p style="color: #e0e0e0; margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">📕 Get the PDF &amp; EPUB — free download</p>
+  <p style="color: #a0a0a0; margin: 0 0 1rem 0; font-size: 0.9rem;">Plus ~1 update/month max. No spam. Unsubscribe anytime.</p>
+  <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/download.html" onclick="if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){this.href='/download.html';}" style="display: inline-block; background: #0d6efd; color: white; padding: 0.5rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 500;">Download the Handbook</a>
+</div>
+<div style="text-align: center; margin-top: 1.5rem; padding: 0.75rem; font-size: 0.85rem; color: #888;">
+  <p style="margin: 0;">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjnz7UZMAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAdRQTFRFAAAAAAAA////////////8fHx7+/v4+Pj39/f1tXV09bS0tXS0tXR0dTR0dTQ0NTQ0NPPz9PPztLOztHNzdHNzdHMz8/PzdDMzNDMzNDLzM/Ly8/Ly8/Ky87Kys3Jyc3Jyc3IyMzIyMzHx8vHxsrGxsrFxcnFyMfHxcnExMnExMjDw8jDxMfDw8fCwsfCwcXAwMXAwMW/wMS/v8S+v8O+vsO+vsK9vcK9vcK8v7+/vMG8vMG7vMC8u8C7u8C6ur+6ur+5ub65ub64uL23t7y2urm5tru1tbq0tLqztLmzs7iysrixsrexsbewsLavsLWvr7Wur7SusLOvrrStrrOtr7KvrbOsrLKrr6+vq7GqrKurpqqmo6ijoqahn6OenqCdn5+fnp2dmpiZlpmWlZmUk5iTkZSRkZORkY+Pj4+PiYyJjIqLh4aHhIaEhIWEgoWChIGCf4F+gICAfX98fH98fnt8en15eXx5eHV2dnN0dXJzcHJvcHBwaGdoaGVmZmRkYGBgXV5dWldYUFFQUFBQQ0RDQEBAPj8+Pzs8NTY1MjMxMjExMDAwMS0uKioqKSopKSkpKCkoKCUmIx8gICAgHxscGxsbGRkZEBAQDg4ODQ4NDQwN1jMqSgAAAAR0Uk5T/wAKDnDBpeYAAAODSURBVHjatZaLe9JWGMbfbbGltMYonQMklsVlUyrLqtWV4bqWsnZW23Wr9uK13or3C14qiootxBtVMFgj/rN+JyFNzEMfHvHpCzyH8ybnl+Q75/tO8B3WRd8AGEkm4vuUblnqEoN+fzC0XZIjSm98MDkyOvbv5NTU9OyXCwZ3oG9PVA6HfALf7vW2bxR828JytKdvgJEnJqemmyQT97fIDtHHXy9UQaoWrvFbQtIu5XciHxqfODI1vVACqbRgj2voAEgQVwoIqRWsamVe8Id3Kn2DyYOHxyfPlwE1m1WB8gVz1IXGDoD4nojk55cA6Ll0LJbO6QCWdn8f3tUTTwyPjp38gLyHI3ny+GCMOtXYYeB90R0BxtXTLZypOUKXd/ulaG//0MjhEnLkAewAymxQ2XAuLrocku0AUGRRIG7Rw62qpQgsCSFZ6UsM30a+zQJzeSxQNPHqLHHff8y0Wg47xxI5Jrj7R1+KuHS7n5Pnt4Qje/uTb+C4ogel2dkS3mrPHyN9Fccsx3WOCZZD/Ar0rWQ5yTpW+G2y8kcCKuvnYD6sChqjPrivaVqmtc126I9myHBMsNR5HUhzLs0B13xSdP8AsqwLEmuzDEPOLxkAmTaHwz0yxJwauGtzAToFIpZX1bTZXKLDOgrCdopFXTCpNbOsaYt/W44lB1jkq8gREEzqDEisn0N1Y2hnz591QsGcDWe4No30fO1QBDsAusUiKp5YZa6IomemMmfEoj0oK/HX5sQA9uQxZ1FbXkbm2N13q84TQ47JC3iBGMeZcbYa4wm8/p+U+C3kOfdyI6f15vuPFzc4HNdyawweemMnSNaZDlcWXQ7JclyhaNlaSVMoWGOHYuh4UyltT15t1moNu3KVF2nyhv45UQKKuWzRLjmnyo0cc7ktQedWl9uMajRcBQWhK7L3r+TBsf/uNVU2pc4UcKl+gvy6f3B4dJxqfTOF/mcjpT1rpfTIoWbBVIRO1ytCKV+4u7efSv3EkemmwLgjCk+J7ChDHqNsijfwlXoY3OQs9C1pHXjBB+7gq3Xbv+mpa2vifzgHS2Z+gP1MWR3yP3foTBc5KJx2bqYpIWBzwdW+DozV59Zw7GjQ9p+ytv953ic642CVTYdT+7icOmC8PBrq3Mx3eL0dPL2w/P8MDtmBcDo2xuW49ezyATEYCATFA5cZdo07bhzjdde36/S2+QkOU7VYqRESOQAAAABJRU5ErkJggg==" alt="CC BY-NC-ND 4.0" style="height: 20px; vertical-align: middle;">
+    </a>
+    © 2025-2026 Daniel Meppiel · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #aaa;">CC BY-NC-ND 4.0</a>
+  </p>
+  <p style="margin: 0.25rem 0 0 0;">Free to read and share with attribution. <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #aaa;">License details</a></p>
+</div>
+
+
+
+
+</body></html>

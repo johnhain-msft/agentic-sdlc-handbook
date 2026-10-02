@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; The Business Case – The Agentic SDLC Handbook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../handbook/ch04-the-reference-architecture.html" rel="next">
+<link href="../handbook/ch02-the-ai-native-landscape.html" rel="prev">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-21d6fceeb25172fe2fb34cb0b56a437d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="../agentic-sdlc-handbook/favicon.svg">
+<link rel="apple-touch-icon" href="../agentic-sdlc-handbook/apple-touch-icon.png">
+<meta name="dc.rights" content="CC BY-NC-ND 4.0">
+<meta name="dc.rights.uri" content="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2DPKEV68VR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2DPKEV68VR');
+</script>
+<style>
+  /* Mermaid diagram readability — light mode */
+  :root {
+    --mermaid-node-bg-color: #f0f4f8 !important;
+    --mermaid-node-fg-color: #1a202c !important;
+    --mermaid-label-fg-color: #1a202c !important;
+    --mermaid-label-bg-color: #ffffff !important;
+    --mermaid-fg-color: #1a202c !important;
+    --mermaid-edge-color: #718096 !important;
+  }
+  /* Mermaid diagram readability — dark mode */
+  body.quarto-dark {
+    --mermaid-bg-color: transparent !important;
+    --mermaid-node-bg-color: #2d3748 !important;
+    --mermaid-node-fg-color: #e2e8f0 !important;
+    --mermaid-label-fg-color: #e2e8f0 !important;
+    --mermaid-label-bg-color: #1a202c !important;
+    --mermaid-fg-color: #e2e8f0 !important;
+    --mermaid-edge-color: #a0aec0 !important;
+  }
+  /* Mermaid lightbox — click to expand any mermaid figure */
+  figure.figure:has(svg.mermaid-js) { cursor: zoom-in; }
+  figure.figure:has(svg.mermaid-js):hover { outline: 1px dashed #888; outline-offset: 4px; }
+  #mermaid-lightbox-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+    z-index: 10000; display: none; align-items: center; justify-content: center;
+    padding: 2rem; cursor: zoom-out; flex-direction: column;
+  }
+  #mermaid-lightbox-overlay.open { display: flex; }
+  #mermaid-lightbox-overlay .ml-stage {
+    max-width: 95vw; max-height: 90vh;
+    background: #fff; padding: 1.5rem; border-radius: 8px;
+    overflow: auto; cursor: default;
+  }
+  body.quarto-dark #mermaid-lightbox-overlay .ml-stage { background: #1a202c; }
+  /* Render SVG at intrinsic viewBox dimensions; stage scrolls if larger than viewport */
+  #mermaid-lightbox-overlay .ml-stage svg {
+    display: block; width: auto; height: auto;
+    max-width: none; max-height: none;
+  }
+  #mermaid-lightbox-overlay .ml-caption {
+    color: #fff; max-width: 95vw; margin-top: 1rem;
+    font-size: 0.9rem; text-align: center;
+  }
+  #mermaid-lightbox-overlay .ml-close {
+    position: absolute; top: 1rem; right: 1.5rem;
+    background: none; border: none; color: #fff;
+    font-size: 2rem; cursor: pointer; line-height: 1;
+  }
+</style>
+<script>
+  // Mermaid lightbox: wraps mermaid SVGs in a click-to-expand overlay.
+  // Quarto's built-in lightbox only handles <img>; this shim covers <svg> mermaid output.
+  document.addEventListener('DOMContentLoaded', function () {
+    var overlay = document.createElement('div');
+    overlay.id = 'mermaid-lightbox-overlay';
+    overlay.innerHTML = '<button class="ml-close" aria-label="Close">&times;</button><div class="ml-stage"></div><div class="ml-caption"></div>';
+    document.body.appendChild(overlay);
+    var stage = overlay.querySelector('.ml-stage');
+    var cap = overlay.querySelector('.ml-caption');
+    function close() { overlay.classList.remove('open'); stage.innerHTML = ''; cap.textContent = ''; }
+    overlay.addEventListener('click', function (e) { if (e.target === overlay || e.target.classList.contains('ml-close')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('open')) close(); });
+    function wireFigures() {
+      document.querySelectorAll('svg.mermaid-js').forEach(function (svg) {
+        var fig = svg.closest('figure.figure');
+        if (!fig || fig.dataset.mlWired) return;
+        fig.dataset.mlWired = '1';
+        fig.title = 'Click to expand';
+        fig.addEventListener('click', function (ev) {
+          if (ev.target.closest('a')) return;
+          ev.preventDefault();
+          var clone = svg.cloneNode(true);
+          clone.removeAttribute('style');
+          clone.removeAttribute('width');
+          clone.removeAttribute('height');
+          // Use viewBox to derive intrinsic width; size the SVG generously for readability
+          var vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(parseFloat);
+          if (vb.length === 4 && vb[2] > 0 && vb[3] > 0) {
+            var ratio = vb[2] / vb[3];
+            var maxH = window.innerHeight * 0.85;
+            var maxW = window.innerWidth * 0.9;
+            // Prefer using the full available width unless that overflows height
+            var w = maxW;
+            var h = w / ratio;
+            if (h > maxH) { h = maxH; w = h * ratio; }
+            // Floor at a comfortable readable size; stage scrolls if it exceeds viewport
+            w = Math.max(w, Math.min(1400, vb[2]));
+            h = w / ratio;
+            clone.setAttribute('width', w);
+            clone.setAttribute('height', h);
+          }
+          stage.innerHTML = '';
+          stage.appendChild(clone);
+          var capEl = fig.querySelector('figcaption');
+          cap.textContent = capEl ? capEl.textContent.trim() : '';
+          overlay.classList.add('open');
+        });
+      });
+    }
+    wireFigures();
+    // Re-wire when mermaid finishes async rendering
+    new MutationObserver(wireFigures).observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+
+
+<link rel="stylesheet" href="../styles/handbook-cover.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../handbook/ch02-the-ai-native-landscape.html">Part II: For Leaders</a></li><li class="breadcrumb-item"><a href="../handbook/ch03-the-business-case.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Business Case</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">The Agentic SDLC Handbook</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/danielmeppiel/agentic-sdlc-handbook" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../download.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Download</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reading-paths.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading paths</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: The Foundation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch01-the-agentic-sdlc-thesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The Agentic SDLC Thesis</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: For Leaders</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch02-the-ai-native-landscape.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The AI-Native Landscape</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch03-the-business-case.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Business Case</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch04-the-reference-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agentic SDLC Reference Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch05-governance-for-ai-assisted-delivery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Governance for AI-Assisted Delivery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch06-team-structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Team Structures for AI-Augmented Delivery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch07-the-agentic-sdlc-bill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Agentic SDLC Bill</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch08-planning-the-transition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Planning the Transition</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: For Practitioners</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch09-part-iii-preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">A Map for Part III</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch10-the-practitioners-mindset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The Practitioner’s Mindset</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch11-the-runtime-machine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Agentic Runtime Machine</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch12-the-instrumented-codebase.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Instrumented Codebase</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch13-the-prose-specification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The PROSE Constraints</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch14-the-load-lifecycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The Load Lifecycle</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch15-attention-and-context-economy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Attention and Context Economy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch16-deterministic-probabilistic-boundary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">The Deterministic/Probabilistic Boundary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch17-multi-agent-orchestration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Multi-Agent Orchestration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch18-the-execution-meta-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The Execution Meta-Process</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch19-architectural-patterns-rosetta-stone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Architectural Patterns: A Rosetta Stone</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch20-anti-patterns-and-failure-modes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Anti-Patterns and Failure Modes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch21-primitives-as-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Primitives as Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch22-the-reference-architecture-earned.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">The Reference Architecture, Earned</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: Case Studies</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-apm-overhaul.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">The APM Auth + Logging Overhaul</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-handbook-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Writing a ~68,000-Word Book with Agent Fleets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-publishing-pipeline.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">The Publishing Pipeline</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-study-growth-engine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Building a Growth Engine</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Closing</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/ch27-what-comes-next.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">What Comes Next</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/appendix-a-cross-harness-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">The Cross-Harness Reference</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../handbook/appendix-b-genesis-worked-example.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Genesis worked example: Panel re-architecture</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-productivity-paradox" id="toc-the-productivity-paradox" class="nav-link active" data-scroll-target="#the-productivity-paradox"><span class="header-section-number">3.1</span> The Productivity Paradox</a></li>
+  <li><a href="#sec-business-case-costs" id="toc-sec-business-case-costs" class="nav-link" data-scroll-target="#sec-business-case-costs"><span class="header-section-number">3.2</span> What It Actually Costs</a>
+  <ul class="collapse">
+  <li><a href="#tool-licenses" id="toc-tool-licenses" class="nav-link" data-scroll-target="#tool-licenses"><span class="header-section-number">3.2.1</span> Tool licenses</a></li>
+  <li><a href="#context-engineering-investment" id="toc-context-engineering-investment" class="nav-link" data-scroll-target="#context-engineering-investment"><span class="header-section-number">3.2.2</span> Context engineering investment</a></li>
+  <li><a href="#token-and-compute-costs" id="toc-token-and-compute-costs" class="nav-link" data-scroll-target="#token-and-compute-costs"><span class="header-section-number">3.2.3</span> Token and compute costs</a></li>
+  <li><a href="#training-and-change-management" id="toc-training-and-change-management" class="nav-link" data-scroll-target="#training-and-change-management"><span class="header-section-number">3.2.4</span> Training and change management</a></li>
+  <li><a href="#governance-overhead" id="toc-governance-overhead" class="nav-link" data-scroll-target="#governance-overhead"><span class="header-section-number">3.2.5</span> Governance overhead</a></li>
+  <li><a href="#opportunity-cost-of-the-adoption-curve" id="toc-opportunity-cost-of-the-adoption-curve" class="nav-link" data-scroll-target="#opportunity-cost-of-the-adoption-curve"><span class="header-section-number">3.2.6</span> Opportunity cost of the adoption curve</a></li>
+  <li><a href="#the-honest-tco-picture" id="toc-the-honest-tco-picture" class="nav-link" data-scroll-target="#the-honest-tco-picture"><span class="header-section-number">3.2.7</span> The honest TCO picture</a></li>
+  </ul></li>
+  <li><a href="#where-value-actually-accrues" id="toc-where-value-actually-accrues" class="nav-link" data-scroll-target="#where-value-actually-accrues"><span class="header-section-number">3.3</span> Where Value Actually Accrues</a></li>
+  <li><a href="#sec-business-case-adoption-timeline" id="toc-sec-business-case-adoption-timeline" class="nav-link" data-scroll-target="#sec-business-case-adoption-timeline"><span class="header-section-number">3.4</span> The Adoption Timeline</a></li>
+  <li><a href="#sec-business-case-building" id="toc-sec-business-case-building" class="nav-link" data-scroll-target="#sec-business-case-building"><span class="header-section-number">3.5</span> Building Your Business Case</a>
+  <ul class="collapse">
+  <li><a href="#step-1-establish-your-baseline" id="toc-step-1-establish-your-baseline" class="nav-link" data-scroll-target="#step-1-establish-your-baseline"><span class="header-section-number">3.5.1</span> Step 1: Establish your baseline</a></li>
+  <li><a href="#step-2-model-your-costs" id="toc-step-2-model-your-costs" class="nav-link" data-scroll-target="#step-2-model-your-costs"><span class="header-section-number">3.5.2</span> Step 2: Model your costs</a></li>
+  <li><a href="#sec-business-case-value-scenarios" id="toc-sec-business-case-value-scenarios" class="nav-link" data-scroll-target="#sec-business-case-value-scenarios"><span class="header-section-number">3.5.3</span> Step 3: Model your value — three scenarios</a></li>
+  <li><a href="#step-4-calculate-the-break-even" id="toc-step-4-calculate-the-break-even" class="nav-link" data-scroll-target="#step-4-calculate-the-break-even"><span class="header-section-number">3.5.4</span> Step 4: Calculate the break-even</a></li>
+  <li><a href="#worked-example-a-50-person-team" id="toc-worked-example-a-50-person-team" class="nav-link" data-scroll-target="#worked-example-a-50-person-team"><span class="header-section-number">3.5.5</span> Worked example: a 50-person team</a></li>
+  <li><a href="#sensitivity-to-rework-rate" id="toc-sensitivity-to-rework-rate" class="nav-link" data-scroll-target="#sensitivity-to-rework-rate"><span class="header-section-number">3.5.6</span> Sensitivity to rework rate</a></li>
+  <li><a href="#sec-business-case-success-criteria" id="toc-sec-business-case-success-criteria" class="nav-link" data-scroll-target="#sec-business-case-success-criteria"><span class="header-section-number">3.5.7</span> Step 5: Define success criteria that aren’t vanity metrics</a></li>
+  </ul></li>
+  <li><a href="#the-cost-of-doing-nothing" id="toc-the-cost-of-doing-nothing" class="nav-link" data-scroll-target="#the-cost-of-doing-nothing"><span class="header-section-number">3.6</span> The Cost of Doing Nothing</a></li>
+  <li><a href="#sec-business-case-context-moat" id="toc-sec-business-case-context-moat" class="nav-link" data-scroll-target="#sec-business-case-context-moat"><span class="header-section-number">3.7</span> The Context Moat</a></li>
+  <li><a href="#sec-business-case-honest-version" id="toc-sec-business-case-honest-version" class="nav-link" data-scroll-target="#sec-business-case-honest-version"><span class="header-section-number">3.8</span> The Honest Version</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/danielmeppiel/agentic-sdlc-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../handbook/ch02-the-ai-native-landscape.html">Part II: For Leaders</a></li><li class="breadcrumb-item"><a href="../handbook/ch03-the-business-case.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Business Case</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Business Case</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>“Our AI coding tools delivered a 10× productivity improvement.” No, they didn’t. If your vendor is quoting that number — or your team is reporting it — someone is measuring the wrong thing. This chapter gives you the honest math.</p>
+<hr>
+<section id="the-productivity-paradox" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="the-productivity-paradox"><span class="header-section-number">3.1</span> The Productivity Paradox</h2>
+<p>The most common justification for AI coding tools goes like this: developers report writing code 55% faster, tool X generates 46% of accepted code, therefore we’re getting roughly twice the output. This math is wrong in three ways, and understanding why it’s wrong is the difference between a business case that survives scrutiny and one that collapses at the first board review.</p>
+<p><strong>The denominator problem.</strong> Productivity metrics for AI tools almost always measure the coding phase, writing and editing code in an editor. But coding is 20–35% of a developer’s working time.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The rest is reading code, reviewing pull requests, debugging, communicating, designing, and waiting for builds. A 50% improvement on 30% of work time is a 15% improvement on total work time. That’s still significant. It’s not 10×. Reporting it as 10× invites the CFO to ask why headcount hasn’t decreased by 90%, and when the answer is an awkward silence, the credibility of every subsequent AI investment is damaged.</p>
+<p><strong>The quality discount.</strong> Raw speed metrics count code produced. They don’t count code reworked, reverted, or debugged downstream. As established in Chapter 1, 30–60% of agent-generated code on complex tasks requires significant rework — a figure supported by Stack Overflow developer surveys and GitClear code quality analyses.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> This means architectural changes, convention fixes, and security remediation, not cosmetic edits. If an agent produces a function in 30 seconds that takes 20 minutes to correct, the net productivity may be negative. Measuring production without measuring rework is measuring revenue without measuring returns.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p><strong>The attribution problem.</strong> When a developer uses an AI tool, which parts of the resulting code are “AI-generated”? The developer writes a prompt, the agent produces code, the developer edits it, asks for revisions, edits again, and commits. Attributing the final result to the AI overstates its contribution. Attributing it to the developer understates the tool’s value. The honest answer, that the output is a collaboration whose proportions vary by task, doesn’t fit neatly into a productivity spreadsheet. This ambiguity is inherent, not a measurement failure.</p>
+<p>These three problems share a root cause: naive productivity metrics treat code as an output, when code is an intermediate artifact. The output of a software development organization is working software delivered to users. Code is a means to that end, and more code is not better code.</p>
+<p>Here is what honest measurement looks like:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>What vendors measure</th>
+<th>What it actually tells you</th>
+<th>What you should measure instead</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lines of code generated</td>
+<td>The agent is producing text</td>
+<td>Defect density in agent-assisted code vs.&nbsp;human-only code</td>
+</tr>
+<tr class="even">
+<td>Percentage of code from AI</td>
+<td>The tool is being used</td>
+<td>Review rejection rate — how often agent code is sent back</td>
+</tr>
+<tr class="odd">
+<td>Coding time reduction</td>
+<td>The editing phase is faster</td>
+<td>Cycle time — from issue opened to PR merged to production</td>
+</tr>
+<tr class="even">
+<td>Developer satisfaction surveys</td>
+<td>Developers like the tool</td>
+<td>Time-to-confident-merge — how long until a reviewer approves without reservations</td>
+</tr>
+</tbody>
+</table>
+<p>The right-hand column is harder to measure. That’s because it measures outcomes rather than activity. The business case must be built on outcomes.</p>
+<hr>
+</section>
+<section id="sec-business-case-costs" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-business-case-costs"><span class="header-section-number">3.2</span> What It Actually Costs</h2>
+<p>Every vendor pitch includes the license fee. None of them include the other 70–80% of your actual investment. A business case that accounts only for subscription costs is like a construction budget that covers materials but omits labor.</p>
+<p>The total cost of ownership for agentic development has six components. The first is the only one your vendor will mention.</p>
+<section id="tool-licenses" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="tool-licenses"><span class="header-section-number">3.2.1</span> Tool licenses</h3>
+<p>The visible cost — and the only one vendors emphasize. Pricing models vary across tools and are evolving rapidly, but as of early 2025, representative price points for the major agentic coding platforms illustrate the range<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Individual</th>
+<th>Team / Business</th>
+<th>Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GitHub Copilot</td>
+<td>Free / $10 Pro / $39 Pro+</td>
+<td>$19/user/mo</td>
+<td>$39/user/mo</td>
+</tr>
+<tr class="even">
+<td>Cursor</td>
+<td>Free / $20 Pro / $60 Pro+</td>
+<td>$40/user/mo</td>
+<td>Custom</td>
+</tr>
+<tr class="odd">
+<td>Claude (Anthropic)</td>
+<td>Free / $20 Pro / $100+ Max</td>
+<td>$25/seat/mo</td>
+<td>$20/seat + usage</td>
+</tr>
+</tbody>
+</table>
+<p>Enterprise tiers add SSO, audit logs, data residency, and admin controls. Note that most platforms are shifting toward <strong>usage-based pricing</strong> — GitHub Copilot Enterprise includes 1,000 premium requests per user per month (a single request to a frontier model like Claude Opus 4.6 consumes multiple premium requests), while others bill by token consumption. The actual license cost depends heavily on how aggressively your teams use agentic workflows with premium models. For a team of 10 on enterprise tiers, expect $2,400–5,000/year per developer in license costs alone — before token overages.</p>
+</section>
+<section id="context-engineering-investment" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="context-engineering-investment"><span class="header-section-number">3.2.2</span> Context engineering investment</h3>
+<p>The largest hidden cost, and the one that determines whether the tool investment pays off. Context engineering — the practice of structuring your team’s knowledge so AI agents can use it reliably — requires upfront work: documenting architectural decisions, writing machine-readable conventions, building instruction hierarchies, and curating the artifacts that make agents effective on your specific codebase.</p>
+<p>For a team of 10–15 developers, in our experience with teams adopting this methodology, expect 2–4 weeks of engineering time for initial context architecture. This is not optional overhead. Without it, you’ve purchased tools that will generate plausible code that violates your conventions and requires extensive rework. With it, agent output improves over time as context compounds. Chapter 4 covers this investment in detail.</p>
+</section>
+<section id="token-and-compute-costs" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="token-and-compute-costs"><span class="header-section-number">3.2.3</span> Token and compute costs</h3>
+<p>Usage-based pricing is increasingly common for agentic workflows. When an agent reads 50 files, plans an approach, generates code, runs tests, and iterates on failures, it consumes tokens at each step. For teams running frequent agentic sessions on premium models, token costs can reach $50–200 per developer per month — sometimes exceeding the tool subscription itself. This cost scales with usage, which means it scales with success. Budget for it to grow.</p>
+<p>That monthly range describes <em>average</em> spend. The number that decides whether agentic delivery stays affordable at scale is not the average but the <em>variance</em>: the same task can cost several times more or less depending on which model runs it, how much context it consumes, and how the workflow is orchestrated. That variance is itself engineerable — and engineering it is the difference between a predictable bill and a runaway one. The chapter on the agentic SDLC bill builds the operating model that turns run-cost from a line item into a lever.</p>
+</section>
+<section id="training-and-change-management" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="training-and-change-management"><span class="header-section-number">3.2.4</span> Training and change management</h3>
+<p>Developers don’t become effective with agentic tools by reading a getting-started guide. The shift from “AI suggests a line of code” to “AI executes a multi-step task” requires new skills: prompt decomposition, context management, output verification, and knowing when to delegate versus when to write code directly. Expect 1–2 weeks of reduced productivity per developer during the learning curve, plus ongoing investment in shared practices and internal documentation.</p>
+</section>
+<section id="governance-overhead" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="governance-overhead"><span class="header-section-number">3.2.5</span> Governance overhead</h3>
+<p>If your organization has compliance requirements — and most do — agent-generated code needs audit trails, review policies, and guardrails. Someone needs to define which agents can access which repositories, what approval workflow applies to agent-generated PRs, and how to handle data residency for code flowing through external APIs. This is a real cost in engineering and security team time, especially in the first quarter of adoption.</p>
+</section>
+<section id="opportunity-cost-of-the-adoption-curve" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="opportunity-cost-of-the-adoption-curve"><span class="header-section-number">3.2.6</span> Opportunity cost of the adoption curve</h3>
+<p>During the first 60–90 days, your team will be slower, not faster. Context hasn’t been built. Skills haven’t been developed. The tools are being configured. The team is learning which tasks to delegate and which to keep manual. This is normal. This is also a cost that must be accounted for, especially if leadership expects immediate returns and loses confidence during the valley.</p>
+</section>
+<section id="the-honest-tco-picture" class="level3" data-number="3.2.7">
+<h3 data-number="3.2.7" class="anchored" data-anchor-id="the-honest-tco-picture"><span class="header-section-number">3.2.7</span> The honest TCO picture</h3>
+<div data-tbl-colwidths="[25,35,40]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 35%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cost component</th>
+<th>Illustrative range (team of 10, year 1) †</th>
+<th>What’s often missed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tool licenses</td>
+<td>$24,000–50,000</td>
+<td>Enterprise tier + premium model usage overages</td>
+</tr>
+<tr class="even">
+<td>Context engineering</td>
+<td>$20,000–60,000 †</td>
+<td>Measured in engineering time, not invoices</td>
+</tr>
+<tr class="odd">
+<td>Token / compute</td>
+<td>$6,000–24,000 †</td>
+<td>Scales with adoption success</td>
+</tr>
+<tr class="even">
+<td>Training / change mgmt</td>
+<td>$15,000–40,000 †</td>
+<td>Productivity dip during learning curve</td>
+</tr>
+<tr class="odd">
+<td>Governance setup</td>
+<td>$10,000–25,000 †</td>
+<td>Security review, policy definition, audit configuration</td>
+</tr>
+<tr class="even">
+<td>Adoption curve opportunity cost</td>
+<td>$20,000–50,000 †</td>
+<td>60–90 days of reduced velocity</td>
+</tr>
+<tr class="odd">
+<td><strong>Year 1 total</strong></td>
+<td><strong>$95,000–249,000</strong> †</td>
+<td>Tool licenses are 20–25% of total</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>† Author estimates based on advisory work with early-adopter teams. Tool license costs reflect published pricing; all other ranges are projections that will vary by region, seniority, codebase complexity, and tooling maturity.</p>
+<p>These ranges are estimates. Your numbers will vary based on team size, codebase complexity, compliance requirements, and how much undocumented knowledge currently lives in your team’s heads. The point is not the specific figures; it’s the ratio. If your business case shows only the first row, it is incomplete.</p>
+<hr>
+</section>
+</section>
+<section id="where-value-actually-accrues" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="where-value-actually-accrues"><span class="header-section-number">3.3</span> Where Value Actually Accrues</h2>
+<p>If the cost side is underestimated, the value side is measured wrong. Most business cases for AI coding tools claim value in “developer productivity” — a term so vague it can mean anything and therefore means nothing. Here is where measurable value actually appears when agentic development works.</p>
+<p><strong>Cycle time compression.</strong> The most defensible metric. Time from issue opened to code merged and deployed. When agents handle implementation of well-specified tasks — generating code, writing tests, updating documentation — the human developer’s role shifts from author to reviewer. For tasks within the agent’s reliable capability range, this can compress task completion time by 25–55%<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> — though end-to-end cycle time improvement depends on non-coding bottlenecks such as code review and deployment processes. Note the qualifier: <em>within the agent’s reliable capability range.</em> Not all tasks. Not even most tasks, initially. The tasks where agents are reliable expands as your context engineering matures.</p>
+<p><strong>Defect reduction.</strong> Counterintuitive, because agents introduce defects too. But structured context — explicit conventions, required patterns, documented boundaries — catches errors that human developers miss through familiarity blindness. When the linter, the test suite, and the agent’s instructions all encode the same standards, violations surface earlier. Teams with mature context engineering report fewer convention-violation defects in code review, not because the agent is smarter than a human, but because the standards are enforced consistently rather than recalled from memory.</p>
+<p><strong>Knowledge retention.</strong> The most undervalued benefit, and the one with the longest payback period. Every instruction file, every documented convention, every machine-readable architecture decision is an organizational asset that survives employee turnover. When a senior engineer leaves, their knowledge of “how we do things here” typically walks out the door with them. When that knowledge is encoded in context artifacts, it persists — usable by both human developers and AI agents. This doesn’t show up in a quarterly report. It shows up when onboarding a new hire can take weeks instead of months because the codebase is self-documenting.</p>
+<p><strong>Attention reallocation.</strong> Not “developers do more work” but “developers do different work.” When routine implementation is delegated, developer attention shifts to design decisions, architecture, code review, and the complex problems that humans still do better than any model. The value is not more output — it is higher-quality attention on the problems that matter most. This is hard to quantify and easy to feel. Teams that adopt agentic development well report higher job satisfaction not because the work is easier, but because it is more interesting.</p>
+<div data-tbl-colwidths="[18,30,17,35]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 30%">
+<col style="width: 17%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Value driver</th>
+<th>How to measure</th>
+<th>When it appears</th>
+<th>What to expect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cycle time compression</td>
+<td>Median PR cycle time (DORA)</td>
+<td>Months 4–6 †</td>
+<td>20–40% reduction on agent-suitable tasks †</td>
+</tr>
+<tr class="even">
+<td>Defect reduction</td>
+<td>Review rejection rate, post-deploy defects</td>
+<td>Months 6–9 †</td>
+<td>15–30% reduction in convention violations<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> †</td>
+</tr>
+<tr class="odd">
+<td>Knowledge retention</td>
+<td>Onboarding time, bus factor metrics</td>
+<td>Months 9–12+ †</td>
+<td>Gradual; compounds over time</td>
+</tr>
+<tr class="even">
+<td>Attention reallocation</td>
+<td>Developer survey, task-type distribution</td>
+<td>Months 3–6 †</td>
+<td>Shift from implementation to design/review</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>† Timelines and expected ranges are author estimates based on early-adopter patterns, not controlled measurements.</p>
+<p><em>These timelines reflect patterns observed across early-adoption teams; your experience will vary.</em></p>
+<hr>
+</section>
+<section id="sec-business-case-adoption-timeline" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-business-case-adoption-timeline"><span class="header-section-number">3.4</span> The Adoption Timeline</h2>
+<p>Every adoption plan that shows a smooth upward curve is lying. Real adoption follows a pattern that technology change management research has documented repeatedly.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> Agentic development is no different.</p>
+<p><strong>Months 1–2: Setup investment.</strong> Tool procurement, governance configuration, initial context engineering. Developers begin experimenting. Enthusiasm is high because the demos are impressive. Actual productivity impact is near zero or slightly negative — the team is investing, not yet extracting value.</p>
+<p><strong>Months 2–4: The valley.</strong> Reality sets in. Agent output requires more rework than expected. The context isn’t rich enough yet. Developers hit the Vibe Coding Cliff on their specific codebase and wonder whether the tools actually work. Some revert to manual coding. Leadership, if unprepared, questions the investment. This valley is normal. It is the period where the team is learning which tasks to delegate, how to structure prompts, and — critically — where the context gaps are. Every context gap the team discovers and fills during this phase makes the tools permanently more effective.</p>
+<p><em>Organizational signals you’re in the valley:</em> developers complain that “the AI doesn’t understand our codebase.” Review rejection rates for agent-generated code spike. Someone suggests restricting tools to autocomplete only. These are symptoms of context debt, not tool failure.</p>
+<p><strong>Months 4–6: Inflection.</strong> Context has accumulated to a critical mass. Developers have internalized which tasks agents handle well. The team has established review patterns for agent-generated code. Cycle time begins to drop on measurable tasks. The improvement is modest, 15–25%, but it is real and it compounds.</p>
+<p><strong>Months 6–12: Compounding returns.</strong> Each new context artifact makes agents more effective. New team members onboard faster because the codebase is better documented. Review quality improves because conventions are explicit. The investment in context engineering begins paying back. Organizations that reach this phase with leadership patience and sustained context investment intact report the strongest satisfaction and the most honest productivity numbers.</p>
+<p>The timeline varies by organization. Teams with well-documented codebases enter the valley shallower and exit it faster. Teams with heavy undocumented tribal knowledge spend longer in the valley — but the context engineering they do during that period has value independent of AI tools.</p>
+<div class="cell" data-fig-width="4.5" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-adoption-curve" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-adoption-curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-adoption-curve">---
+config:
+    xyChart:
+        titleFontSize: 16
+---
+xychart-beta
+    title "Adoption J-Curve: Expect the Valley"
+    x-axis "Months" ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+    y-axis "Net Productivity Impact" -30 --&gt; 60
+    line [0, -10, -25, -20, -5, 10, 20, 28, 34, 39, 44, 48, 52]
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-adoption-curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Cost-benefit trajectory over a 12-month adoption period
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><em>Months 1–3 are an investment valley. Inflection begins around month 4 as context accumulates. Teams that abandon during the valley never reach the compounding phase.</em></p>
+</blockquote>
+<hr>
+</section>
+<section id="sec-business-case-building" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="sec-business-case-building"><span class="header-section-number">3.5</span> Building Your Business Case</h2>
+<p>The ROI calculation template below is designed for a CFO audience. It uses ranges, not point estimates. It requires you to state assumptions explicitly. It does not promise a specific outcome — it gives you a structured way to model scenarios for your organization.</p>
+<section id="step-1-establish-your-baseline" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="step-1-establish-your-baseline"><span class="header-section-number">3.5.1</span> Step 1: Establish your baseline</h3>
+<p>Before adopting agentic development, measure these four metrics for at least one quarter. Without a baseline, you have no way to evaluate impact.</p>
+<ul>
+<li><strong>Median PR cycle time</strong> — from issue assignment to code merged. Use your existing data from GitHub, GitLab, or your project management tool.</li>
+<li><strong>Review rejection rate</strong> — percentage of PRs that require changes after initial review.</li>
+<li><strong>Post-deploy defect rate</strong> — bugs traced to code changes, per release.</li>
+<li><strong>Developer time allocation</strong> — survey your team: what percentage of time is spent on implementation, review, debugging, design, and communication?</li>
+</ul>
+</section>
+<section id="step-2-model-your-costs" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="step-2-model-your-costs"><span class="header-section-number">3.5.2</span> Step 2: Model your costs</h3>
+<p>Use the TCO table above. Adjust ranges for your team size, compliance requirements, and codebase complexity. Be honest about context engineering — if your codebase has significant undocumented conventions, budget toward the higher end.</p>
+</section>
+<section id="sec-business-case-value-scenarios" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="sec-business-case-value-scenarios"><span class="header-section-number">3.5.3</span> Step 3: Model your value — three scenarios</h3>
+<div data-tbl-colwidths="[30,23,23,24]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Conservative</th>
+<th>Moderate</th>
+<th>Aggressive</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Cycle time improvement</strong></td>
+<td>10–15% †</td>
+<td>20–30% †</td>
+<td>35–50% †</td>
+</tr>
+<tr class="even">
+<td><strong>Defect reduction</strong></td>
+<td>5–10% †</td>
+<td>15–25% †</td>
+<td>25–35% †</td>
+</tr>
+<tr class="odd">
+<td><strong>Context engineering maturity</strong></td>
+<td>Basic conventions documented</td>
+<td>Full instruction hierarchy</td>
+<td>Comprehensive context architecture</td>
+</tr>
+<tr class="even">
+<td><strong>Adoption depth</strong></td>
+<td>Code phase only</td>
+<td>Code + Test + Review</td>
+<td>Multi-phase SDLC coverage</td>
+</tr>
+<tr class="odd">
+<td><strong>Time to positive ROI</strong></td>
+<td>9–12 months †</td>
+<td>6–9 months †</td>
+<td>4–6 months †</td>
+</tr>
+<tr class="even">
+<td><strong>Assumption</strong></td>
+<td>Minimal context investment, cautious delegation</td>
+<td>Sustained context engineering, skilled practitioners</td>
+<td>Significant upfront investment, mature practices</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>† Author projections based on early-adopter patterns and the author’s advisory work. Not derived from controlled studies. Your results will depend on codebase complexity, team seniority, and context engineering investment.</p>
+<p>The conservative scenario represents where most organizations land if they adopt tools without investing in context engineering. The moderate scenario requires the sustained effort this book teaches. The aggressive scenario requires everything in the moderate scenario plus organizational commitment to structured context as a strategic asset.</p>
+<p>Most organizations should plan for the conservative scenario and invest toward the moderate one. If your business case only works at the aggressive scenario, you don’t have a business case — you have a gamble.</p>
+</section>
+<section id="step-4-calculate-the-break-even" class="level3" data-number="3.5.4">
+<h3 data-number="3.5.4" class="anchored" data-anchor-id="step-4-calculate-the-break-even"><span class="header-section-number">3.5.4</span> Step 4: Calculate the break-even</h3>
+<pre><code>Annual developer cost (fully loaded)         = $___________
+× Team size                                  = $___________
+= Total annual developer investment (A)
+
+Cycle time improvement (%)                   = ___%
+  (Use the blended scenario values from the table above.
+   See clarification below the formula.)
+Cycle time improvement (%) × A               = Annual value of time savings (B)
+
+Defect reduction value:
+  Current defect remediation cost per year    = $___________
+  × Expected reduction (%)                   = Annual defect savings (C)
+
+Knowledge retention value:
+  Current onboarding cost per new hire        = $___________
+  × Expected reduction in onboarding time (%) = Annual retention savings (D)
+
+Total annual value (B + C + D)               = $___________
+Total year-1 cost (from TCO table)           = $___________
+
+Break-even: Year-1 cost ÷ Monthly value run-rate (at steady state, months 6+)</code></pre>
+<p>Two cautions, and a clarification on the multiplier.</p>
+<p><strong>On the cycle time multiplier.</strong> The value drivers section above reports 30–50% cycle time reduction on <em>individual agent-suitable tasks</em> — measured across the full PR lifecycle (issue opened to code merged), not just the coding phase. The scenario table’s lower percentages (10–50%) are the <em>team-wide blended average</em>: they already account for the fact that not all tasks are agent-suitable and that adoption depth varies by scenario. Use the scenario values directly. Applying a separate coding-phase multiplier on top would double-count the discount.</p>
+<p>Two cautions. First, the “time savings” line is not headcount reduction. Developers whose routine implementation time decreases do not become surplus — they shift attention to higher-value work: architecture, code review, complex problem-solving. The value manifests as increased throughput and quality, not reduced payroll. If your business case depends on reducing headcount, you will either be disappointed or you will lose the engineers whose judgment makes the tools effective.</p>
+<p>Second, knowledge retention savings are real but slow. Don’t lean on them for a first-year business case. They are the compounding return that justifies sustained investment — the reason year 2 looks dramatically better than year 1.</p>
+</section>
+<section id="worked-example-a-50-person-team" class="level3" data-number="3.5.5">
+<h3 data-number="3.5.5" class="anchored" data-anchor-id="worked-example-a-50-person-team"><span class="header-section-number">3.5.5</span> Worked example: a 50-person team</h3>
+<p>The formula above is a template. Here is what it looks like with numbers.</p>
+<p><strong>Assumptions</strong> (moderate scenario): - 50 engineers, fully loaded cost $200,000/year each (US market, senior engineers) - Cycle time improvement: 25% (midpoint of moderate range) - Current defect remediation: $500,000/year (rework, incident response, post-deploy fixes) - Expected defect reduction: 20% - Current onboarding cost: $15,000 per new hire; 10 hires/year; 30% reduction expected</p>
+<div data-tbl-colwidths="[40,35,25]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 35%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Line item</th>
+<th>Calculation</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Total annual developer investment (A)</td>
+<td>50 × $200,000</td>
+<td>$10,000,000</td>
+</tr>
+<tr class="even">
+<td>Cycle time value (B)</td>
+<td>25% × $10,000,000</td>
+<td>$2,500,000</td>
+</tr>
+<tr class="odd">
+<td>Defect reduction (C)</td>
+<td>$500,000 × 20%</td>
+<td>$100,000</td>
+</tr>
+<tr class="even">
+<td>Knowledge retention (D)</td>
+<td>$15,000 × 10 hires × 30%</td>
+<td>$45,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Total annual value (B+C+D)</strong></td>
+<td>—</td>
+<td><strong>$2,645,000</strong></td>
+</tr>
+<tr class="even">
+<td>Year-1 cost (scaled from TCO)</td>
+<td>~$77K–$229K × 5</td>
+<td>$350,000–$1,150,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Value-to-cost ratio</strong></td>
+<td>—</td>
+<td><strong>2.3–7.6×</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>But value does not accrue evenly — months 1–4 are ramp-up (see The Adoption Timeline above). Accounting for the ramp, expect break-even at month 6–10 from project start, depending on cost position and adoption speed.</p>
+<p>The time-savings value (B) dominates. This is typical — cycle time improvement is the largest and most defensible value driver. Note that the $2.5M does not mean the organization saves $2.5M in cash. It means the team delivers the equivalent of $2.5M more throughput at the same headcount. The value manifests as faster delivery, not smaller payroll.</p>
+<p>At the conservative scenario (12% cycle time improvement, same cost assumptions), the break-even pushes to month 10–14. At the aggressive scenario (40%), it pulls in to month 4–6. If your numbers only work at the aggressive end, reread the earlier warning: you have a gamble, not a business case.</p>
+</section>
+<section id="sensitivity-to-rework-rate" class="level3" data-number="3.5.6">
+<h3 data-number="3.5.6" class="anchored" data-anchor-id="sensitivity-to-rework-rate"><span class="header-section-number">3.5.6</span> Sensitivity to rework rate</h3>
+<p>The 30–60% rework range (Chapter 1) directly affects the cycle time value. Higher rework rates consume the time agents save — a developer who spends 20 minutes correcting a function the agent produced in 30 seconds has a negative net gain on that task. The table below shows how the worked example’s value changes when the rework rate varies, holding all other assumptions constant. The rework rate determines what fraction of agent-generated code requires non-trivial correction; a lower rate means more tasks deliver clean first-draft output that survives review.</p>
+<div data-tbl-colwidths="[20,30,25,25]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 30%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rework Rate</th>
+<th>Effective Cycle Time Improvement †</th>
+<th>Annual Team Value (50 devs) †</th>
+<th>Value-to-Cost Ratio †</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>20% (optimistic)</td>
+<td>35%</td>
+<td>$3,600,000</td>
+<td>3.1–10.3×</td>
+</tr>
+<tr class="even">
+<td>40% (moderate)</td>
+<td>25%</td>
+<td>$2,645,000</td>
+<td>2.3–7.6×</td>
+</tr>
+<tr class="odd">
+<td>60% (conservative)</td>
+<td>15%</td>
+<td>$1,600,000</td>
+<td>1.4–4.6×</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>† Author estimates. The effective cycle time improvement is modeled as a function of the base scenario (25% at 40% rework); lower rework allows more tasks to deliver full time savings, higher rework erodes them. All three scenarios remain ROI-positive, but at 60% rework the margin is thin and the break-even extends past month 12.</p>
+<p>The point is not the specific numbers — it is the shape. The business case holds across a wide range of rework assumptions. Even at the conservative end, the investment breaks even within a year. But the difference between 20% and 60% rework is a 2× spread in annual value. This is why context engineering — which directly reduces rework — is the highest-impact investment in the entire adoption plan.</p>
+</section>
+<section id="sec-business-case-success-criteria" class="level3" data-number="3.5.7">
+<h3 data-number="3.5.7" class="anchored" data-anchor-id="sec-business-case-success-criteria"><span class="header-section-number">3.5.7</span> Step 5: Define success criteria that aren’t vanity metrics</h3>
+<p>Commit to specific, measurable outcomes before you start. Report against them honestly.</p>
+<div data-tbl-colwidths="[20,20,20,20,20]">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Baseline (pre-adoption)</th>
+<th>6-month target</th>
+<th>12-month target</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Median PR cycle time</td>
+<td>___ hours</td>
+<td>–15%</td>
+<td>–25%</td>
+<td>Git analytics</td>
+</tr>
+<tr class="even">
+<td>Review rejection rate</td>
+<td>___%</td>
+<td>–10%</td>
+<td>–20%</td>
+<td>Code review platform</td>
+</tr>
+<tr class="odd">
+<td>Post-deploy defects per release</td>
+<td>___</td>
+<td>–10%</td>
+<td>–20%</td>
+<td>Issue tracker</td>
+</tr>
+<tr class="even">
+<td>Developer satisfaction (AI tools)</td>
+<td>N/A</td>
+<td>&gt;3.5/5</td>
+<td>&gt;4.0/5</td>
+<td>Quarterly survey</td>
+</tr>
+<tr class="odd">
+<td>Human intervention rate</td>
+<td>N/A</td>
+<td>Establish baseline</td>
+<td>–20% from baseline</td>
+<td>Agent session logs</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The human intervention rate — how often a developer must correct, override, or restart an agent — is the metric that best predicts long-term value. It directly reflects context quality. A declining intervention rate means your context engineering is working. A flat or rising one means the tools are generating work, not saving it.</p>
+<hr>
+</section>
+</section>
+<section id="the-cost-of-doing-nothing" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="the-cost-of-doing-nothing"><span class="header-section-number">3.6</span> The Cost of Doing Nothing</h2>
+<p>Every business case has an implicit comparison: the investment versus the status quo. Most business cases for agentic development model the investment side. Few price the alternative.</p>
+<p>Chapter 2 made the strategic argument: inaction is itself a decision, with consequences for talent, shadow IT, context accumulation, and competitive position. Here, we put a number on it.</p>
+<p><strong>The context gap compounds in reverse — the working hypothesis.</strong> The same flywheel that we hypothesise rewards early context investment penalizes delay. The early signal across teams running with mature context for more than a year is consistent: while your team debates whether AI tools are worth it, competitors who started six months earlier have accumulated six months of machine-readable conventions, structured architecture decisions, and documented patterns. Their agents improve with every sprint. Yours, when you eventually adopt, start from zero. The gap is not six months of calendar time — it is six months of context quality that, if the compounding hypothesis holds, you must build from scratch while the early adopter’s agents are already drawing on it.</p>
+<p>The methodology matters more than any specific number here. If you apply the moderate scenario modeled above in reverse — projecting what a 50-person team forgoes by delaying 12 months — the model yields a figure in the range of $1.5–2.5M in throughput improvement not realized. That figure is illustrative, not predictive: it compounds the model’s existing estimation error by running the assumptions backward, and it omits the unquantified but real costs of competitive position and hiring friction. The value of this exercise is not the dollar amount; it is the framing. “Wait and see” is itself a decision with a price. Your board will ask “what if we wait a year?” The answer is this methodology applied to your own numbers, not someone else’s estimate.</p>
+<hr>
+</section>
+<section id="sec-business-case-context-moat" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="sec-business-case-context-moat"><span class="header-section-number">3.7</span> The Context Moat</h2>
+<p>Of the six investment categories above, one earns its own treatment because it is the asset whose returns, if the compounding hypothesis holds, the rest of the business case rests on. Tool licenses commoditize; context infrastructure does not. Two organizations adopting the same vendor on the same day, from the same starting point, will diverge in agent reliability over the following year by a factor that is mostly explained by what each invested in the layer the new reference architecture (Chapter 4) names <strong>Context &amp; Capabilities</strong>: the markdown primitives, conventions, agent configurations, and grounded references the harness loads on every invocation. The license is the same. The model is the same. The context is what differs. We hypothesise that this differential compounds; the early signal from teams 12+ months in is consistent with the hypothesis, but it is not yet a closed case.</p>
+<p>The mechanism is mundane. Every agent invocation is a fresh actor with no memory of the codebase, the team, or last week’s review. What the agent sees on each turn is exactly the context the harness loads — instruction files, scope-attached rules, skill bodies, ground-truth references, the diff under review. A team whose context layer encodes its conventions, its architectural decisions, its rejected approaches, and its house style is briefing an unbriefed expert at the start of every session. A team without that layer is asking a stranger to guess. Output quality tracks that briefing quality. So does the rate at which agent-generated code is sent back at review.</p>
+<p>What we hypothesise compounds is not the volume of documentation; it is its operational quality. Each cycle through the team — a postmortem, a sharpened convention, a corrected agent failure — produces, when the discipline is in place, a small, durable improvement to a primitive that every subsequent agent invocation reads. The improvements layer on each other. The same convention does not need to be re-discovered; the same misunderstanding does not need to be re-corrected; the same violation does not recur. The early signal is that organizations with eighteen months of accumulated context on a given codebase report agent intervention rates a fraction of what they were at month three, while a peer organization adopting the same tools without the same discipline reports intervention rates that are flat — or, in some accounts, rising as agent usage spreads to more domains.</p>
+<p>The strategic implication is the second-order one. If the compounding hypothesis holds, the layers of the agentic stack that get cheaper over time are the foundations: model inference cost has fallen by orders of magnitude per token across each generation, and there is no reason to expect that trend to break. The layers that get more valuable over time are the ones that the team itself builds — the primitives, the context infrastructure, the distribution standards — because their value depends on accumulated, organization-specific judgement that no vendor can ship pre-loaded. The early signal from the field today is consistent with where <code>npm</code> was in 2012: package management and the framework layer above it are embryonic; the investment thesis is that the layers that compound are the ones to invest in, while the layers that commoditize do not need a budget line. Models get cheaper. Context, if the hypothesis holds, gets more valuable.</p>
+<p><strong>Technical debt gets a new cost.</strong> A poorly factored module that a human team learned to work around becomes, in an agentic team, a recurring source of agent failure: the agent has no tribal knowledge of the workaround and produces clean-looking code that compounds the underlying mess. The early signal from instrumented adoption is that the modules that were already painful for humans become disproportionately painful for agents, because every agent invocation re-discovers the same trap. Refactoring a load-bearing module is, in this view, not just a cleanup project; it is a context investment that pays back on every subsequent agent task touching that module. The corollary is uncomfortable: organizations carrying significant technical debt should expect the early productivity returns from agentic tools to be lower than peers with cleaner codebases — not because the tools are worse, but because the debt taxes every invocation.</p>
+<p>This is the asset class the next chapter is about. The reference architecture in Chapter 4 names where the moat lives (the <strong>Context &amp; Capabilities</strong> layer of the 5-layer landscape), what ships it between teams (<strong>Governance and Distribution</strong>), and what loads it at runtime (the <strong>Agent Harness</strong>). For the purposes of the business case, the load-bearing point is the one above: the context investment is not a cost line that reduces ROI — it is, on the working hypothesis the field is now testing, the asset whose returns make the ROI possible.</p>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Adoption Cost Framework">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Adoption Cost Framework
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The business case above models the <em>benefit</em> side. Here’s the cost side:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 29%">
+<col style="width: 32%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Phase</th>
+<th>Duration</th>
+<th>Investment</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Pilot</strong> (1 team, 1 sprint)</td>
+<td>2-4 weeks</td>
+<td>Tool licenses + 20% productivity dip</td>
+<td>Low — contained blast radius</td>
+</tr>
+<tr class="even">
+<td><strong>Instrumentation</strong> (context files, CI gates)</td>
+<td>2-4 weeks</td>
+<td>1-2 engineers full-time</td>
+<td>Low — improves codebase regardless</td>
+</tr>
+<tr class="odd">
+<td><strong>Expansion</strong> (3-5 teams)</td>
+<td>1-3 months</td>
+<td>Training + process adaptation</td>
+<td>Medium — coordination overhead</td>
+</tr>
+<tr class="even">
+<td><strong>Institutionalization</strong> (org-wide)</td>
+<td>3-6 months</td>
+<td>Governance framework + tooling</td>
+<td>Medium-high — cultural resistance</td>
+</tr>
+</tbody>
+</table>
+<p><em>The pilot phase is designed to be reversible. If it doesn’t work for your codebase, the only cost is a few weeks of reduced velocity. The instrumentation investment (Chapter 12) pays dividends even without agentic workflows.</em></p>
+</div>
+</div>
+</section>
+<section id="sec-business-case-honest-version" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="sec-business-case-honest-version"><span class="header-section-number">3.8</span> The Honest Version</h2>
+<p>Here is the business case stated plainly, without inflation.</p>
+<p>AI-assisted development tools produce measurable value when three conditions hold: the team invests in structured context so agents work with accurate information, the organization commits to a 4–6 month adoption curve before expecting returns, and success is measured in outcomes — cycle time, defect rates, knowledge retention — rather than in lines of code produced.</p>
+<p>The tools are not free. License costs are the smallest component of a total investment that includes context engineering, training, governance, and the opportunity cost of the learning curve. The value is not 10×. On well-scoped tasks with mature context, expect 20–40% improvements in cycle time and measurable reductions in convention-violation defects. Over 12+ months, the working hypothesis is that the effects of documented knowledge and institutional context compound — that returns accelerate rather than plateau. The early signal from teams 12+ months in is consistent with that hypothesis; the field does not yet have multi-year longitudinal evidence that would close the case. Build the business case on the measurable near-term returns and treat the compounding thesis as the upside, not the foundation.</p>
+<p>This is a real business case. It does not require inflated claims to justify the investment. It requires patience, honest measurement, and a willingness to invest in the infrastructure — context, governance, skills — that makes the tools effective.</p>
+<p>The next chapter introduces the reference architecture: a five-layer landscape (Platform, Context &amp; Capabilities, Governance and Distribution, Agent Harness, SDLC phases) that gives you a shared vocabulary for what that infrastructure looks like and where to start building it.</p>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Across multiple industry surveys — including Tidelift/New Stack (2019, n≈400, finding 32% on writing/improving code), Meyer et al.&nbsp;at Microsoft Research (2019, n=5,971), and Stripe’s Developer Coefficient (2018) — developers consistently report spending only 20–40% of their working time writing or improving code. See <a href="https://thenewstack.io/how-much-time-do-developers-spend-actually-writing-code/">thenewstack.io</a> and <a href="https://www.microsoft.com/en-us/research/publication/today-was-a-good-day-the-daily-life-of-software-developers/">Microsoft Research</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Multiple data points support this range. The 2025 Stack Overflow Developer Survey found 66% of developers report AI-generated solutions as “almost right, but not quite.” GitClear’s 2025 analysis of 211M lines of code showed refactored code plummeting from 25% to under 10% with AI adoption, while copy-pasted code rose from 8.3% to 12.3%. Their 2026 follow-up found heavy AI users produce 9× more code churn. See <a href="https://survey.stackoverflow.co/2025/ai">survey.stackoverflow.co/2025/ai</a> and <a href="https://www.gitclear.com/ai_assistant_code_quality_2025_research">gitclear.com</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The rework rate has a structural cause that Part III names directly: agents operate against a finite <em>attention economy</em> — the working set of tokens an LLM can hold in focus on any single invocation. When too much irrelevant context loads, the relevant context degrades, and the agent produces plausible-but-wrong output that has to be reworked downstream. Chapter 15 makes this mechanism explicit; Chapter 14 covers the load lifecycle that decides what enters the working set in the first place. The business-case point is that rework rates are not a tooling defect to be patched — they are a function of how disciplined the context architecture is.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Prices as of March 2025. See <a href="https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot">GitHub Copilot plans</a>, <a href="https://cursor.com/pricing">Cursor pricing</a>, <a href="https://anthropic.com/pricing">Anthropic pricing</a>. These change frequently; verify current rates before budgeting.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Peng et al.&nbsp;(2023, n=95) found Copilot users completed tasks 55.8% faster. Cui et al.&nbsp;(2024, n=4,867) found a 26% increase in completed tasks across three field experiments at Microsoft, Accenture, and a Fortune 100 company. However, the 2025 DORA report found that most lead time is waiting, not building (~21% flow efficiency), meaning coding-phase speedups have limited impact on end-to-end cycle time. See <a href="https://arxiv.org/abs/2302.06590">arxiv.org/abs/2302.06590</a>, <a href="https://www.microsoft.com/en-us/research/publication/the-effects-of-generative-ai-on-high-skilled-work-evidence-from-three-field-experiments-with-software-developers/">Microsoft Research</a>, and <a href="https://cloud.google.com/resources/content/2025-dora-ai-capabilities-model-report">DORA 2025</a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Based on the author’s observations across instrumented projects during early adoption. Chapter 12 reports a wider range (40–60% violation rate dropping to under 10%) for teams with mature instrumentation and comprehensive context architecture. The difference reflects adoption stage: this chapter’s 15–30% improvement represents early-adoption teams with basic context engineering; Chapter 12’s figures reflect fully instrumented codebases.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Brynjolfsson, Rock, and Syverson (2021) model this as the “Productivity J-Curve”: general-purpose technologies initially lower measured productivity while organizations invest in complementary intangibles, with a later rebound. They specifically note AI may be in the early part of this curve. See also Rogers (2003), <em>Diffusion of Innovations</em>, 5th ed., and Moore (2014), <em>Crossing the Chasm</em>, 3rd ed.&nbsp;Source: <a href="https://www.aeaweb.org/articles?id=10.1257/mac.20180386">American Economic Journal: Macroeconomics</a>.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/danielmeppiel\.github\.io\/agentic-sdlc-handbook\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../handbook/ch02-the-ai-native-landscape.html" class="pagination-link" aria-label="The AI-Native Landscape">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The AI-Native Landscape</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../handbook/ch04-the-reference-architecture.html" class="pagination-link" aria-label="The Agentic SDLC Reference Architecture">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agentic SDLC Reference Architecture</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/danielmeppiel/agentic-sdlc-handbook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer><div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 2rem; margin-top: 3rem; border-radius: 8px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+  <p style="color: #e0e0e0; margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">📕 Get the PDF &amp; EPUB — free download</p>
+  <p style="color: #a0a0a0; margin: 0 0 1rem 0; font-size: 0.9rem;">Plus ~1 update/month max. No spam. Unsubscribe anytime.</p>
+  <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/download.html" onclick="if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){this.href='/download.html';}" style="display: inline-block; background: #0d6efd; color: white; padding: 0.5rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 500;">Download the Handbook</a>
+</div>
+<div style="text-align: center; margin-top: 1.5rem; padding: 0.75rem; font-size: 0.85rem; color: #888;">
+  <p style="margin: 0;">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjnz7UZMAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAdRQTFRFAAAAAAAA////////////8fHx7+/v4+Pj39/f1tXV09bS0tXS0tXR0dTR0dTQ0NTQ0NPPz9PPztLOztHNzdHNzdHMz8/PzdDMzNDMzNDLzM/Ly8/Ly8/Ky87Kys3Jyc3Jyc3IyMzIyMzHx8vHxsrGxsrFxcnFyMfHxcnExMnExMjDw8jDxMfDw8fCwsfCwcXAwMXAwMW/wMS/v8S+v8O+vsO+vsK9vcK9vcK8v7+/vMG8vMG7vMC8u8C7u8C6ur+6ur+5ub65ub64uL23t7y2urm5tru1tbq0tLqztLmzs7iysrixsrexsbewsLavsLWvr7Wur7SusLOvrrStrrOtr7KvrbOsrLKrr6+vq7GqrKurpqqmo6ijoqahn6OenqCdn5+fnp2dmpiZlpmWlZmUk5iTkZSRkZORkY+Pj4+PiYyJjIqLh4aHhIaEhIWEgoWChIGCf4F+gICAfX98fH98fnt8en15eXx5eHV2dnN0dXJzcHJvcHBwaGdoaGVmZmRkYGBgXV5dWldYUFFQUFBQQ0RDQEBAPj8+Pzs8NTY1MjMxMjExMDAwMS0uKioqKSopKSkpKCkoKCUmIx8gICAgHxscGxsbGRkZEBAQDg4ODQ4NDQwN1jMqSgAAAAR0Uk5T/wAKDnDBpeYAAAODSURBVHjatZaLe9JWGMbfbbGltMYonQMklsVlUyrLqtWV4bqWsnZW23Wr9uK13or3C14qiootxBtVMFgj/rN+JyFNzEMfHvHpCzyH8ybnl+Q75/tO8B3WRd8AGEkm4vuUblnqEoN+fzC0XZIjSm98MDkyOvbv5NTU9OyXCwZ3oG9PVA6HfALf7vW2bxR828JytKdvgJEnJqemmyQT97fIDtHHXy9UQaoWrvFbQtIu5XciHxqfODI1vVACqbRgj2voAEgQVwoIqRWsamVe8Id3Kn2DyYOHxyfPlwE1m1WB8gVz1IXGDoD4nojk55cA6Ll0LJbO6QCWdn8f3tUTTwyPjp38gLyHI3ny+GCMOtXYYeB90R0BxtXTLZypOUKXd/ulaG//0MjhEnLkAewAymxQ2XAuLrocku0AUGRRIG7Rw62qpQgsCSFZ6UsM30a+zQJzeSxQNPHqLHHff8y0Wg47xxI5Jrj7R1+KuHS7n5Pnt4Qje/uTb+C4ogel2dkS3mrPHyN9Fccsx3WOCZZD/Ar0rWQ5yTpW+G2y8kcCKuvnYD6sChqjPrivaVqmtc126I9myHBMsNR5HUhzLs0B13xSdP8AsqwLEmuzDEPOLxkAmTaHwz0yxJwauGtzAToFIpZX1bTZXKLDOgrCdopFXTCpNbOsaYt/W44lB1jkq8gREEzqDEisn0N1Y2hnz591QsGcDWe4No30fO1QBDsAusUiKp5YZa6IomemMmfEoj0oK/HX5sQA9uQxZ1FbXkbm2N13q84TQ47JC3iBGMeZcbYa4wm8/p+U+C3kOfdyI6f15vuPFzc4HNdyawweemMnSNaZDlcWXQ7JclyhaNlaSVMoWGOHYuh4UyltT15t1moNu3KVF2nyhv45UQKKuWzRLjmnyo0cc7ktQedWl9uMajRcBQWhK7L3r+TBsf/uNVU2pc4UcKl+gvy6f3B4dJxqfTOF/mcjpT1rpfTIoWbBVIRO1ytCKV+4u7efSv3EkemmwLgjCk+J7ChDHqNsijfwlXoY3OQs9C1pHXjBB+7gq3Xbv+mpa2vifzgHS2Z+gP1MWR3yP3foTBc5KJx2bqYpIWBzwdW+DozV59Zw7GjQ9p+ytv953ic642CVTYdT+7icOmC8PBrq3Mx3eL0dPL2w/P8MDtmBcDo2xuW49ezyATEYCATFA5cZdo07bhzjdde36/S2+QkOU7VYqRESOQAAAABJRU5ErkJggg==" alt="CC BY-NC-ND 4.0" style="height: 20px; vertical-align: middle;">
+    </a>
+    © 2025-2026 Daniel Meppiel · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #aaa;">CC BY-NC-ND 4.0</a>
+  </p>
+  <p style="margin: 0.25rem 0 0 0;">Free to read and share with attribution. <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #aaa;">License details</a></p>
+</div>
+
+
+
+
+</body></html>
