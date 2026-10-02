@@ -5,9 +5,19 @@
 # next build. A 6-hourly sweep is the backstop.
 #
 # A worksheet issue enters the queue labelled `worksheet-queued`, with a
-# `ws_id:` line naming its build spec. promote-queue.sh relabels the oldest one
-# `stage:build` and dispatches aw-worksheet-build for it. It dispatches because
-# a label applied with GITHUB_TOKEN never starts a workflow run.
+# `ws_id:` line naming its build spec. promote-queue.sh first reconciles the
+# issues already in flight: it closes the ones whose worksheet is on main, and
+# flags needs-human any left with no pull request and no build running. Then
+# it relabels the oldest queued issue `stage:build` and dispatches
+# aw-worksheet-build for it. It dispatches because a label applied with
+# GITHUB_TOKEN never starts a workflow run.
+#
+# Every run does the whole job and reads nothing from its event, so it does
+# not matter which trigger fired, or that GitHub drops a pending run when a
+# newer one queues behind it. The push trigger is what makes a merge start the
+# next build: GitHub holds pull_request runs on the factory's own pull requests
+# (opened by github-actions[bot]) for approval, but the push of a person's
+# merge to main runs without one.
 #
 # ONE worksheet at a time. Dispatched runs of a stage share one concurrency
 # group and cancel each other, so two pull requests in the stages at once would
@@ -20,6 +30,10 @@
 name: Worksheet queue
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'worksheets/**'
   pull_request:
     types: [closed]
   issues:
@@ -69,6 +83,4 @@ jobs:
           MAX_IN_FLIGHT: 1
           # Absent on schedule events; the script then defaults to main.
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
-          CLOSED_PR: ${{ github.event.pull_request.number }}
-          CLOSED_PR_MERGED: ${{ github.event.pull_request.merged }}
         run: bash .github/skills/worksheet-build/scripts/promote-queue.sh

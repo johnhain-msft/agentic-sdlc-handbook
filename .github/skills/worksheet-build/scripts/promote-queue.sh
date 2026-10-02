@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #
-# promote-queue.sh — start the next queued worksheet, and tidy up after a merge.
+# promote-queue.sh — keep the worksheet queue honest, then start the next one.
 #
-#   REPO=owner/name [MAX_IN_FLIGHT=1] [DEFAULT_BRANCH=main] \
-#   [CLOSED_PR=<n> CLOSED_PR_MERGED=true|false] promote-queue.sh
+#   REPO=owner/name [MAX_IN_FLIGHT=1] [DEFAULT_BRANCH=main] [GRACE_MINUTES=15] \
+#   promote-queue.sh
 #
 # The queue used to relabel an issue stage:build and stop there. A label
 # applied with GITHUB_TOKEN never creates a workflow run, so no promotion it
@@ -11,29 +11,50 @@
 # this dispatches the build directly, with the ws_id resolved from the issue by
 # the same resolver the build itself uses.
 #
-# One worksheet at a time (MAX_IN_FLIGHT=1). Dispatched runs of a stage share
-# one concurrency group and cancel each other, so two pull requests moving
-# through the stages at once would strand one of them. A build that is still
-# running counts as in flight, so a just-dispatched build holds the slot before
-# its pull request exists. So does every open worksheet pull request, including
-# one waiting for a person: merging it is what frees the slot.
+# Every run does the whole job and reads nothing from the event that started
+# it. A pending run that GitHub cancels in favour of a newer one therefore
+# loses nothing: the newer run does the same work.
 #
-# The issue is relabelled BEFORE the build is dispatched, and put back if the
-# dispatch fails, so an issue is never dispatched twice and never left at
-# stage:build with nothing running. An issue for a worksheet already on main is
-# closed; one already in an open pull request is left queued; one that names no
-# single buildable worksheet leaves the queue as needs-human, with a comment.
+# 1. Reconcile. An open stage:build issue is a worksheet in flight, from the
+#    moment it is promoted until its worksheet is on main. Each one is
+#      - closed once worksheets/<ws_id>.qmd is on main: built and merged;
+#      - left alone while its pull request is open or any build is running;
+#      - otherwise flagged needs-human, once, after GRACE_MINUTES with no
+#        update: its build ended without a pull request, or its pull request
+#        was closed without merging. The grace covers a build GitHub has
+#        accepted but not listed yet.
+#    A flagged issue keeps its slot. A worksheet that failed stops the line
+#    until a person looks, rather than the queue spending a build on every
+#    worksheet behind it.
 #
-# When a worksheet pull request closes (CLOSED_PR), the issue it was built from
-# is closed if it merged, or flagged needs-human if it did not.
+# 2. Count. In flight = the worksheets with an open stage:build issue or an
+#    open worksheet pull request, plus every build run not yet completed.
+#    Runs are counted by status, so no number of newer runs can push a running
+#    build out of view. A running build is counted even when its issue is
+#    too: the count can overstate, never understate.
+#
+# 3. Promote, oldest first, while a slot is free. One worksheet at a time
+#    (MAX_IN_FLIGHT=1): dispatched runs of a stage share one concurrency group
+#    and cancel each other, so two pull requests in the stages at once would
+#    strand one of them. The issue is relabelled BEFORE the build is
+#    dispatched, and put back if the dispatch fails, so an issue is never
+#    dispatched twice. A worksheet already on main is closed; one already in
+#    flight is left queued; an issue that names no single buildable worksheet
+#    leaves the queue as needs-human, with a comment.
 
 set -euo pipefail
+# A gh call that fails inside $(...) must stop the run, not read as "nothing".
+shopt -s inherit_errexit
 
 : "${REPO:?set REPO to owner/name}"
 MAX_IN_FLIGHT="${MAX_IN_FLIGHT:-1}"
 DEFAULT_BRANCH="${DEFAULT_BRANCH:-main}"
+GRACE_MINUTES="${GRACE_MINUTES:-15}"
+BUILD=aw-worksheet-build.lock.yml
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(git -C "$HERE" rev-parse --show-toplevel)"
+# What is on main. The workflow checks main out; the test points this elsewhere.
+WORKSHEETS_DIR="${WORKSHEETS_DIR:-$ROOT/worksheets}"
 
 # The ws_id an issue names, via the build's own resolver; or "REFUSED:<why>".
 issue_ws_id() {
@@ -50,31 +71,74 @@ issue_ws_id() {
 }
 
 ws_of_files() { sed -n 's|^worksheets/\([^/]*\)\.qmd$|\1|p'; }
+on_main() { [ -f "$WORKSHEETS_DIR/$1.qmd" ]; }
+# has_line <line> <newline-separated lines>
+has_line() { [[ $'\n'"$2"$'\n' == *$'\n'"$1"$'\n'* ]]; }
 
-# ---- after a worksheet pull request closes ---------------------------------
-if [ -n "${CLOSED_PR:-}" ]; then
-  closed_ws="$(gh pr view "$CLOSED_PR" --repo "$REPO" --json files --jq '.files[].path' | ws_of_files | head -n 1)"
-  if [ -n "$closed_ws" ]; then
-    for n in $(gh issue list --repo "$REPO" --state open --label 'stage:build' --json number --jq '.[].number'); do
-      [ "$(issue_ws_id "$n")" = "$closed_ws" ] || continue
-      if [ "${CLOSED_PR_MERGED:-false}" = "true" ]; then
-        echo "issue #$n: $closed_ws merged in #$CLOSED_PR — closing it"
-        gh issue close "$n" --repo "$REPO" --comment "Built and merged in #$CLOSED_PR."
-      else
-        echo "issue #$n: #$CLOSED_PR closed without merging — flagging it"
-        gh issue edit "$n" --repo "$REPO" --add-label needs-human
-        gh issue comment "$n" --repo "$REPO" --body "Its pull request #$CLOSED_PR was closed without merging. To build it again, remove stage:build and needs-human and label it worksheet-queued."
-      fi
-    done
+# flag <issue> <what happened>: needs-human, and a comment saying what to do.
+flag() {
+  echo "issue #$1: flagged needs-human — $2"
+  gh issue edit "$1" --repo "$REPO" --add-label needs-human
+  gh issue comment "$1" --repo "$REPO" --body "$2 It keeps its slot in the worksheet queue until someone deals with it. To build it again, remove stage:build and needs-human and label it worksheet-queued. To drop it, close this issue; the queue moves on at its next run."
+}
+
+# ws_id, or a stand-in for an item that names none -> what holds that slot.
+declare -A flight=()
+# ws_id -> its open worksheet pull request.
+declare -A pr_for=()
+
+# ---- 1. reconcile -------------------------------------------------------------
+pr_rows="$(gh pr list --repo "$REPO" --state open --label worksheet --limit 100 --json number,files \
+             --jq '.[] | "\(.number) \([.files[].path | select(test("^worksheets/[^/]+[.]qmd$"))][0] // "")"')"
+while read -r num path; do
+  [ -n "$num" ] || continue
+  ws="$(printf '%s\n' "${path:-}" | ws_of_files)"
+  ws="${ws:-pull request #$num}"
+  pr_for["$ws"]="$num"
+  flight["$ws"]="pull request #$num"
+done <<< "$pr_rows"
+
+running=0
+for status in queued in_progress waiting requested pending; do
+  n_runs="$(gh run list --repo "$REPO" --workflow "$BUILD" --status "$status" --limit 100 \
+              --json databaseId --jq 'length')"
+  running=$(( running + n_runs ))
+done
+
+now="$(date -u +%s)"
+building="$(gh issue list --repo "$REPO" --state open --label 'stage:build' --limit 200 \
+              --json number --jq '.[].number')"
+for n in $building; do
+  ws="$(issue_ws_id "$n")"
+  labels="$(gh issue view "$n" --repo "$REPO" --json labels --jq '.labels[].name')"
+  if [[ "$ws" == REFUSED:* ]]; then
+    flight["issue #$n"]="issue #$n"
+    has_line needs-human "$labels" \
+      || flag "$n" "This issue is at stage:build but does not name exactly one worksheet with a build spec."
+    continue
   fi
-fi
+  if on_main "$ws"; then
+    echo "issue #$n: $ws is on $DEFAULT_BRANCH — closing it"
+    gh issue close "$n" --repo "$REPO" --comment "worksheets/$ws.qmd is on $DEFAULT_BRANCH: built and merged."
+    continue
+  fi
+  flight["$ws"]="${flight[$ws]:-issue #$n}"
+  if [ -n "${pr_for[$ws]:-}" ] || [ "$running" -gt 0 ] || has_line needs-human "$labels"; then
+    continue
+  fi
+  updated="$(gh issue view "$n" --repo "$REPO" --json updatedAt --jq '.updatedAt')"
+  updated_s="$(date -u -d "$updated" +%s)"
+  if [ $(( now - updated_s )) -lt $(( GRACE_MINUTES * 60 )) ]; then
+    echo "issue #$n: no pull request or running build for $ws yet, but it changed under $GRACE_MINUTES minutes ago"
+    continue
+  fi
+  flag "$n" "No pull request is open for $ws and no build is running: its build never opened one, or its pull request was closed without merging."
+done
 
-# ---- what is in flight ------------------------------------------------------
-open_prs="$(gh pr list --repo "$REPO" --state open --label worksheet --json number --jq 'length')"
-running="$(gh run list --repo "$REPO" --workflow aw-worksheet-build.lock.yml --limit 20 \
-             --json status --jq '[.[] | select(.status != "completed")] | length')"
-in_flight=$(( open_prs + running ))
-echo "in flight: $open_prs open worksheet pull request(s) + $running running build(s) (cap $MAX_IN_FLIGHT)"
+# ---- 2. count -----------------------------------------------------------------
+in_flight=$(( ${#flight[@]} + running ))
+echo "in flight: ${#flight[@]} worksheet(s) with an open issue or pull request + $running unfinished build run(s) (cap $MAX_IN_FLIGHT)"
+for k in "${!flight[@]}"; do echo "  $k (${flight[$k]})"; done
 
 slots=$(( MAX_IN_FLIGHT - in_flight ))
 if [ "$slots" -le 0 ]; then
@@ -82,26 +146,21 @@ if [ "$slots" -le 0 ]; then
   exit 0
 fi
 
-# Oldest first: issues are created in the order the queue should run.
-mapfile -t queued < <(
-  gh issue list --repo "$REPO" --state open --label worksheet-queued --limit 200 \
-    --json number,createdAt --jq 'sort_by(.createdAt)[].number'
-)
-if [ "${#queued[@]}" -eq 0 ]; then
+# ---- 3. promote, oldest first: issues are created in the order the queue runs --
+queued="$(gh issue list --repo "$REPO" --state open --label worksheet-queued --limit 200 \
+            --json number,createdAt --jq 'sort_by(.createdAt)[].number')"
+if [ -z "$queued" ]; then
   echo "Queue is empty. Nothing to promote."
   exit 0
 fi
 
-in_prs="$(gh pr list --repo "$REPO" --state open --label worksheet --json files --jq '.[].files[].path' | ws_of_files)"
-declare -A started=()
 promoted=0
-
-for n in "${queued[@]}"; do
+for n in $queued; do
   [ "$promoted" -ge "$slots" ] && break
 
   # Never restart a worksheet that is already moving.
   labels="$(gh issue view "$n" --repo "$REPO" --json labels --jq '.labels[].name')"
-  if printf '%s\n' "$labels" | grep -qE '^stage:'; then
+  if [[ $'\n'"$labels" == *$'\n'stage:* ]]; then
     echo "issue #$n already has a stage label — skipping"
     continue
   fi
@@ -116,28 +175,24 @@ for n in "${queued[@]}"; do
     continue
   fi
 
-  if [ -f "$ROOT/worksheets/$ws_id.qmd" ]; then
+  if on_main "$ws_id"; then
     echo "issue #$n: $ws_id is already on $DEFAULT_BRANCH — closing it"
     gh issue close "$n" --repo "$REPO" --comment "worksheets/$ws_id.qmd is already on $DEFAULT_BRANCH, so there is nothing to build."
     continue
   fi
-  if printf '%s\n' "$in_prs" | grep -qxF -- "$ws_id"; then
-    echo "issue #$n: $ws_id already has an open pull request — leaving it queued"
-    continue
-  fi
-  if [ -n "${started[$ws_id]:-}" ]; then
-    echo "issue #$n: $ws_id was started from issue #${started[$ws_id]} in this run — leaving it queued"
+  if [ -n "${flight[$ws_id]:-}" ]; then
+    echo "issue #$n: $ws_id is already in flight (${flight[$ws_id]}) — leaving it queued"
     continue
   fi
 
   echo "issue #$n: starting the build of $ws_id"
   gh issue edit "$n" --repo "$REPO" --remove-label worksheet-queued --add-label 'stage:build'
-  if ! gh workflow run aw-worksheet-build.lock.yml --repo "$REPO" --ref "$DEFAULT_BRANCH" -f "ws_id=$ws_id"; then
+  if ! gh workflow run "$BUILD" --repo "$REPO" --ref "$DEFAULT_BRANCH" -f "ws_id=$ws_id"; then
     gh issue edit "$n" --repo "$REPO" --remove-label 'stage:build' --add-label worksheet-queued || true
     echo "::error title=Build not started::could not dispatch the build of $ws_id for issue #$n; it is back in the queue" >&2
     exit 1
   fi
-  started[$ws_id]="$n"
+  flight["$ws_id"]="issue #$n"
   promoted=$(( promoted + 1 ))
 done
 
