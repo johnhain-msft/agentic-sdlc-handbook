@@ -79,7 +79,7 @@ has_line() { [[ $'\n'"$2"$'\n' == *$'\n'"$1"$'\n'* ]]; }
 flag() {
   echo "issue #$1: flagged needs-human — $2"
   gh issue edit "$1" --repo "$REPO" --add-label needs-human
-  gh issue comment "$1" --repo "$REPO" --body "$2 It keeps its slot in the worksheet queue until someone deals with it. To build it again, remove stage:build and needs-human and label it worksheet-queued. To drop it, close this issue; the queue moves on at its next run."
+  gh issue comment "$1" --repo "$REPO" --body "$2 It keeps its slot in the worksheet queue until someone deals with it. To build it again, remove stage:build and needs-human and label it worksheet-queued. To drop it, close this issue, and the queue moves on."
 }
 
 # ws_id, or a stand-in for an item that names none -> what holds that slot.
@@ -186,7 +186,11 @@ for n in $queued; do
   fi
 
   echo "issue #$n: starting the build of $ws_id"
-  gh issue edit "$n" --repo "$REPO" --remove-label worksheet-queued --add-label 'stage:build'
+  relabel=(--remove-label worksheet-queued --add-label 'stage:build')
+  # A needs-human left over from an earlier failure would make reconcile skip
+  # this issue if its new build fails too, so the line would stop silently.
+  if has_line needs-human "$labels"; then relabel+=(--remove-label needs-human); fi
+  gh issue edit "$n" --repo "$REPO" "${relabel[@]}"
   if ! gh workflow run "$BUILD" --repo "$REPO" --ref "$DEFAULT_BRANCH" -f "ws_id=$ws_id"; then
     gh issue edit "$n" --repo "$REPO" --remove-label 'stage:build' --add-label worksheet-queued || true
     echo "::error title=Build not started::could not dispatch the build of $ws_id for issue #$n; it is back in the queue" >&2

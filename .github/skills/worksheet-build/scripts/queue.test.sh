@@ -227,6 +227,17 @@ else
   bad "a flagged worksheet was flagged again" "$FAKE/calls"
 fi
 reset
+issue 20 $'worksheet-queued\nneeds-human' 'Build worksheet' "$(decl $WS07)"   # requeued with its old flag still on
+issue 21 worksheet-queued 'Build worksheet' "$(decl $WS16)"
+run; builds_end; time_passes   # and its new build also ended without a pull request
+run
+if grep -q 'issue edit 20 --repo o/r --remove-label worksheet-queued --add-label stage:build --remove-label needs-human' "$FAKE/calls" \
+   && grep -q 'issue comment 20 ' "$FAKE/calls" && ! grep -q "ws_id=$WS16" "$FAKE/calls"; then
+  ok "a requeued issue loses an old needs-human when it starts, so a second failure is flagged too"
+else
+  bad "a requeued issue's second failure went unflagged" "$WORK/run.log"
+fi
+reset
 issue 5 'stage:build' 'Something else entirely' 'No identifier in this one.'
 issue 20 worksheet-queued 'Build worksheet' "$(decl $WS07)"
 run
