@@ -1,0 +1,250 @@
+---
+title: "Shadow AI Usage Inventory"
+pagetitle: "WS-02-shadow-ai-usage-inventory"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+            .fnote { display:block; font-size:7.4pt; color:#454f59; margin-top:.8mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-02-shadow-ai-usage-inventory</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  3 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Shadow AI Usage Inventory</h1>
+      <p class="ws-sub">A governable register of actual AI tool usage and unmanaged data paths: the factual basis for the approved-tool list, the enterprise-tier business case, and the developer-preference evidence that stops a top-down mandate failing.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-02-shadow-ai-usage-inventory</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>1</b> &middot; type <b>inventory</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The AI-Native Landscape</b>, <i>Two Buying Motions, One Problem</i> &middot;
+    <code>handbook/ch02-the-ai-native-landscape.qmd</code> L150-164 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch02-the-ai-native-landscape.html#sec-landscape-buying-motions">#sec-landscape-buying-motions</a>
+    <br>&ldquo;How AI development tools enter an organization determines how governable they are.&rdquo; (ch02 L150)
+  </div>
+
+  <div class="ws-instruction">
+    This is pre-work. Nobody fills it in the workshop. Issue Panel A to every engineer in scope at least one week
+    before Pack A (two for a large organization), one response per tool you use. Panel A is a survey, not an audit:
+    field 2 is optional and a blank there is a valid return. The rollup owner is the only person who sees raw returns.
+    A platform or tooling engineer fills Panel B across every repository in scope (sheet 3). Record the engineering
+    headcount so the coverage denominator is real.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel A &mdash; usage census <span class="ws-block-note">one row per developer response &middot; fields 1&ndash;14 and coverage</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:20%"><col style="width:30%"><col style="width:46%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Team / squad</b></td>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-text"></span><span class="fnote">Choose from the organization&rsquo;s own team list.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>Respondent (optional)</b></td>
+          <td class="prior">Marked optional on the form.<span class="prior-src">derived: amnesty note</span></td>
+          <td class="fill"><span class="f-text"></span><span class="fnote">Name or pseudonym. Blank is a valid return. Nobody is being audited here.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>AI coding tool in use</b></td>
+          <td class="prior">Examples as prompts: Claude Code, Cursor, GitHub Copilot<span class="prior-src">ch02 L152, L160 Q1</span></td>
+          <td class="fill"><span class="f-text"></span><span class="fnote">Every tool you actually use, one row each.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>Account type</b></td>
+          <td class="prior">—<span class="prior-src">ch02 L160 Q2</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">personal</span><span class="opt">company-provided</span><span class="opt">free tier</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>Who pays</b></td>
+          <td class="prior">—<span class="prior-src">ch02 L152</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">individual expense</span><span class="opt">team budget</span><span class="opt">central IT</span><span class="opt">nobody</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>Monthly cost, if known</b></td>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span><span class="fnote">Per-seat cost; feeds the enterprise-tier business case.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Covered by a data processing agreement?</b></td>
+          <td class="prior">—<span class="prior-src">ch02 L152, L154</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">unknown</span></div><span class="fnote"><b>unknown</b> is a meaningful answer; blank is not.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Visible in security audit logs?</b></td>
+          <td class="prior">—<span class="prior-src">ch02 L152</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">unknown</span></div><span class="fnote"><b>unknown</b> is a meaningful answer; blank is not.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>What code flows through it</b></td>
+          <td class="prior">—<span class="prior-src">ch02 L154</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">production</span><span class="opt">test</span><span class="opt">prototypes only</span><span class="opt">none</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-02-shadow-ai-usage-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Shadow AI Usage Inventory</h1>
+      <p class="ws-sub">Panel A continued: preference evidence, exposure, disposition and coverage.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-02-shadow-ai-usage-inventory</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>1</b> &middot; type <b>inventory</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel A &mdash; usage census, continued <span class="ws-block-note">fields 10&ndash;14 and coverage</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:20%"><col style="width:30%"><col style="width:46%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>What would you lose if it were removed?</b></td>
+          <td class="prior">&ldquo;What would you lose if the tool were removed?&rdquo;<span class="prior-src">ch02 L160 Q3</span></td>
+          <td class="fill"><span class="f-box"></span><span class="fnote">The developer-preference evidence.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Why did you choose it?</b></td>
+          <td class="prior">—<span class="prior-src">ch02 L158</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Governance exposure</b></td>
+          <td class="prior"><b>H</b> &mdash; production code, no DPA or DPA unknown, not in audit logs.<br><b>M</b> &mdash; any one of those three resolved.<br><b>L</b> &mdash; company-provided, DPA in place, visible in audit logs.<span class="prior-src">derived from cols 7&ndash;9</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div><span class="fnote">Rolled up from fields 7&ndash;9 by the rollup owner. Not self-scored.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Disposition</b></td>
+          <td class="prior">—<span class="prior-src">ch02 L158, L215</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">approve</span><span class="opt">migrate</span><span class="opt">retire</span><span class="opt">investigate</span></div><span class="fnote">Set once per distinct tool at rollup, not per respondent.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Disposition owner</b></td>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="fnote">A named person per distinct tool.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num">&mdash;</td>
+          <td><b>Coverage</b></td>
+          <td class="prior">—<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-computed" data-formula="responses returned &divide; engineers in scope (print both numbers)"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="fnote"><b>Amnesty note.</b> Shadow adoption happens &ldquo;not maliciously but inadvertently&rdquo; (ch02 L154). Field 2 is optional by design. This is a census of what is in use, not a performance record.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-02-shadow-ai-usage-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Shadow AI Usage Inventory</h1>
+      <p class="ws-sub">Panel B, the agent source estate. Printed as a heat map; one row per repository in scope.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-02-shadow-ai-usage-inventory</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>1</b> &middot; type <b>inventory</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel B &mdash; agent source estate <span class="ws-block-note">one row per repository in scope &middot; fields 15&ndash;26</span></h2>
+    <p class="fnote" style="margin-bottom:2mm">For each of fields 18&ndash;24, write the count of files and tick one status.
+      <b>Absent</b> &mdash; no files of this type. <b>Ad hoc</b> &mdash; files exist, no named owner, no review on change.
+      <b>Governed</b> &mdash; files exist, a named owner, and a change to them goes through review like any other code.
+      Field 16 names an individual, not a team alias. Field 26: <b>mixed</b> and <b>unknown</b> are valid.</p>
+    <table class="ws">
+      <colgroup>
+        <col style="width:11%"><col style="width:9%"><col style="width:6%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:7%"><col style="width:7%">
+      </colgroup>
+      <thead>
+<tr><th><span class="fno">15</span><br>Repository</th><th><span class="fno">16</span><br>Repository owner</th><th><span class="fno">17</span><br>In pilot scope?</th><th style="text-align:left"><span class="fno">18</span><br>Instructions<br><code>.instructions.md</code></th><th style="text-align:left"><span class="fno">19</span><br>Agents<br><code>.agent.md</code></th><th style="text-align:left"><span class="fno">20</span><br>Skills<br><code>SKILL.md</code></th><th style="text-align:left"><span class="fno">21</span><br>Prompts<br><code>.prompt.md</code></th><th style="text-align:left"><span class="fno">22</span><br>Memory<br><code>.memory.md</code></th><th style="text-align:left"><span class="fno">23</span><br>Orchestration / specs<br><code>.spec.md</code></th><th style="text-align:left"><span class="fno">24</span><br>Hooks<br><code>event-driven</code></th><th><span class="fno">25</span><br>Last modified, any primitive</th><th><span class="fno">26</span><br>Harness convention targeted</th></tr>
+      </thead>
+      <tbody>
+<tr><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>in scope</span></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>in scope</span></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>in scope</span></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>in scope</span></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>in scope</span></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>in scope</span></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><span class="f-text sm"></span><div class="f-select"><span class="opt">Absent</span><span class="opt">Ad hoc</span><span class="opt">Governed</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td colspan="3" class="prior">Estate heat map (computed)<span class="prior-src">derived</span></td>
+          <td class="fill" colspan="9"><span class="f-computed" data-formula="per primitive type: count of repositories at Absent, at Ad hoc and at Governed"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-02-shadow-ai-usage-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
