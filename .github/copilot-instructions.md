@@ -13,7 +13,7 @@ This is a Quarto book ("The Agentic SDLC Handbook") published to GitHub Pages at
 Its jobs:
 
 1. `build-deploy` renders HTML (`quarto render --to html`), carries the current PDF and EPUB across from `gh-pages`, and publishes. It takes about a minute.
-2. `downloads` runs alongside it. It renders the PDF and EPUB on the runner, with TinyTeX for LaTeX and Chrome Headless Shell for Mermaid→PNG, then strips the web-only download chapter with `scripts/strip-blank-page.py`.
+2. `downloads` runs alongside it. It renders the PDF and EPUB on the runner, with TinyTeX for LaTeX and Chrome Headless Shell for Mermaid→PNG. It then runs `scripts/strip-blank-page.py` as a guard, in case the web-only download chapter ever appears in them.
 3. `deploy-downloads` commits the new PDF and EPUB to `gh-pages` once both jobs pass.
 
 If `downloads` fails, the site still updates with the previous PDF and EPUB, and the run shows red. Only `main` deploys. A manual run with **deploy** unticked builds the PDF and EPUB and uploads them as an artifact without publishing anything.

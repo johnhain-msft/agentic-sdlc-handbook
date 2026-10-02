@@ -128,8 +128,9 @@ jobs:
         with:
           python-version: '3.12'
 
-      # The download chapter is the web book's email form; it has no place in
-      # either file. This is the step a release used to run by hand.
+      # A guard, not a fix. The download chapter is the web book's email form,
+      # and Quarto already leaves it out of both files: the first CI build found
+      # nothing to strip. This removes it if it ever comes back.
       - name: Strip the download chapter
         run: |
           python -m pip install --quiet pymupdf
