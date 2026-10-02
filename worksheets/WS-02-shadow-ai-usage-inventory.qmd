@@ -43,7 +43,7 @@ format:
 
   <div class="ws-instruction">
     This is pre-work. Nobody fills it in the workshop. Issue Panel A to every engineer in scope at least one week
-    before Pack A (two for a large organisation), one response per tool you use. Panel A is a survey, not an audit:
+    before Pack A (two for a large organization), one response per tool you use. Panel A is a survey, not an audit:
     field 2 is optional and a blank there is a valid return. The rollup owner is the only person who sees raw returns.
     A platform or tooling engineer fills Panel B across every repository in scope (sheet 3). Record the engineering
     headcount so the coverage denominator is real.
@@ -63,7 +63,7 @@ format:
           <td class="ws-num"><span class="fno">1</span></td>
           <td><b>Team / squad</b></td>
           <td class="prior">—<span class="prior-src">org</span></td>
-          <td class="fill"><span class="f-text"></span><span class="fnote">Choose from the organisation&rsquo;s own team list.</span></td>
+          <td class="fill"><span class="f-text"></span><span class="fnote">Choose from the organization&rsquo;s own team list.</span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">2</span></td>
