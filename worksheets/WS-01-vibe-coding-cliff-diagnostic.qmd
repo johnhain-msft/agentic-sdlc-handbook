@@ -24,7 +24,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Vibe Coding Cliff Symptom Diagnostic</h1>
-      <p class="ws-sub">A named, evidence-backed list of where this organisation's own cliff is steepest &mdash; the input to deciding which repositories get context engineering first.</p>
+      <p class="ws-sub">A named, evidence-backed list of where this organization's own cliff is steepest &mdash; the input to deciding which repositories get context engineering first.</p>
     </div>
     <div class="ws-meta">
       <b>WS-01-vibe-coding-cliff-diagnostic</b><br>
