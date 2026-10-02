@@ -90,9 +90,14 @@ for want in 'actions: write' 'MAX_IN_FLIGHT: 1' 'ref: ${{ github.event.repositor
 done
 [ "$q_ok" -eq 1 ] && ok "the queue dispatches builds one at a time, from main, when a merge reaches main or a slot-holding issue closes, and ignores other labels"
 if [ "$(count "$queue" 'pull_request')" -eq 0 ]; then
-  ok "the queue has no pull_request trigger, so a stale merge ref can never run an old copy of it"
+  ok "the queue has no pull_request trigger, so no merge ref built from this copy can run it"
 else
   bad "the queue triggers on pull_request: a pull request closed unmerged would run the queue from its merge ref, which can lag main"
+fi
+if before "$queue" 'dispatch-next:' 'group: worksheet-queue'; then
+  ok "the queue's concurrency is on its job, so a run the job's if: skips never bumps a waiting one"
+else
+  bad "the queue's concurrency is set for the whole workflow, so skipped runs can replace a waiting real run"
 fi
 
 echo "every test runs in CI"

@@ -58,10 +58,6 @@ permissions:
   # To read the resolver, the build specs, and which worksheets are on main.
   contents: read
 
-concurrency:
-  group: worksheet-queue
-  cancel-in-progress: false
-
 jobs:
   dispatch-next:
     # Of issue events, only a worksheet joining the queue or an issue that held
@@ -70,6 +66,11 @@ jobs:
       github.event_name != 'issues' ||
       (github.event.action == 'labeled' && github.event.label.name == 'worksheet-queued') ||
       (github.event.action == 'closed' && contains(github.event.issue.labels.*.name, 'stage:build'))
+    # On the job, not the workflow: a run whose job the if: skips then never
+    # joins the group, so it cannot replace a real run waiting its turn.
+    concurrency:
+      group: worksheet-queue
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
