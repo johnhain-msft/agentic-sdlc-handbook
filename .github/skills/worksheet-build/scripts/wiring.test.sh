@@ -77,6 +77,19 @@ else
   bad "capture still runs a helper from the tree the checkout replaces"
 fi
 
+echo "the queue starts the next worksheet by itself, one at a time"
+queue="$WF/worksheet-queue.yml"
+q_ok=1
+for want in 'actions: write' 'MAX_IN_FLIGHT: 1' 'ref: ${{ github.event.repository.default_branch }}' \
+            'github.event.pull_request.head.repo.full_name == github.repository' \
+            "github.event.label.name == 'worksheet-queued'" \
+            'CLOSED_PR: ${{ github.event.pull_request.number }}' \
+            'CLOSED_PR_MERGED: ${{ github.event.pull_request.merged }}' \
+            'scripts/promote-queue.sh'; do
+  if [ "$(count "$queue" "$want")" -lt 1 ]; then q_ok=0; bad "the queue workflow lacks: $want"; fi
+done
+[ "$q_ok" -eq 1 ] && ok "the queue dispatches builds one at a time, from main, after each merge, and ignores forks and other labels"
+
 echo "every test runs in CI"
 iso="$WF/worksheet-isolation.yml"
 for t in "$HERE"/*.test.sh; do
