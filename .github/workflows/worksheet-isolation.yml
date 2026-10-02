@@ -108,6 +108,11 @@ jobs:
         # version 404'd on every call and hid it; anyone could have forged one.
         run: bash .github/skills/worksheet-build/scripts/verdict.test.sh
 
+      - name: The queue must start the next worksheet by itself, one at a time
+        # It used to relabel issues stage:build and stop; a label applied with
+        # GITHUB_TOKEN never creates a workflow run, so nothing ever started.
+        run: bash .github/skills/worksheet-build/scripts/queue.test.sh
+
       - name: The compiled workflows must be wired the way the fixes say
         # Trigger filters, the judge's routing, the returned stages' verdict
         # fetch, and that every test in the skill actually runs here.

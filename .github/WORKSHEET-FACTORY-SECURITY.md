@@ -29,6 +29,19 @@ posted it and its last gh-aw footer marker names this repository's
 `aw-worksheet-judge` workflow, so a commenter cannot forge instructions to a
 stage that can push to the branch (`fetch-judge-verdict.sh`, `verdict.test.sh`).
 
+The plain `Worksheet queue` workflow holds `actions: write`, so it can dispatch
+the build. Its triggers stay behind the same kind of boundary: a label needs
+triage, a push to `main` needs write access (or a merge, which needs
+code-owner review), a dispatch needs write, and its job skips a fork's pull
+request, whose token is read-only anyway. The label boundary holds only while
+no issue template applies `worksheet-queued`: a template's labels are applied
+whoever opens the issue. The queue takes nothing from the triggering event
+except the default branch's name; every run re-reads the repository's state.
+It only dispatches a ws_id that the build's own resolver has checked against an
+existing build spec, and only one worksheet at a time: an open `stage:build`
+issue, an open worksheet pull request, and every build run not yet completed
+each hold the slot. Runs are counted by status, so newer runs cannot hide one.
+
 Primary references for this section:
 
 - [Manually running a workflow](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)

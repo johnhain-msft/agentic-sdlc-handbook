@@ -1,18 +1,39 @@
 # Worksheet factory queue.
 #
-# Caps work in flight at THREE open worksheet pull requests, so human review is
-# never swamped, and starts the next queued worksheet whenever a slot frees up.
+# Starts the next queued worksheet whenever the factory is free, so a person
+# only has to review and merge: merging a worksheet pull request starts the
+# next build. A 6-hourly sweep is the backstop.
 #
-# A worksheet issue enters the queue labelled `worksheet-queued`. This workflow
-# promotes the oldest queued issue to `stage:build`, which triggers
-# aw-worksheet-build.
+# A worksheet issue enters the queue labelled `worksheet-queued`, with a
+# `ws_id:` line naming its build spec. promote-queue.sh first reconciles the
+# issues already in flight: it closes the ones whose worksheet is on main, and
+# flags needs-human any left with no pull request and no build running. Then
+# it relabels the oldest queued issue `stage:build` and dispatches
+# aw-worksheet-build for it. It dispatches because a label applied with
+# GITHUB_TOKEN never starts a workflow run.
 #
-# Plain Actions, not agentic: counting open pull requests and picking the oldest
+# Every run does the whole job and reads nothing from its event, so it does
+# not matter which trigger fired, or that GitHub drops a pending run when a
+# newer one queues behind it. The push trigger is what makes a merge start the
+# next build: GitHub holds pull_request runs on the factory's own pull requests
+# (opened by github-actions[bot]) for approval, but the push of a person's
+# merge to main runs without one.
+#
+# ONE worksheet at a time. Dispatched runs of a stage share one concurrency
+# group and cancel each other, so two pull requests in the stages at once would
+# strand one. Raise MAX_IN_FLIGHT only after giving each pull request its own
+# group.
+#
+# Plain Actions, not agentic: counting what is in flight and picking the oldest
 # issue is deterministic work that should not cost a model call.
 
 name: Worksheet queue
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'worksheets/**'
   pull_request:
     types: [closed]
   issues:
@@ -24,62 +45,42 @@ on:
 permissions:
   issues: write
   pull-requests: read
+  # To dispatch the build: a label alone never starts it. Also to read runs.
+  actions: write
+  # To read the resolver, the build specs, and which worksheets are on main.
+  contents: read
 
 concurrency:
   group: worksheet-queue
   cancel-in-progress: false
 
-env:
-  MAX_IN_FLIGHT: 3
-
 jobs:
   dispatch-next:
+    # A fork's pull request gets a read-only token and could only fail here;
+    # a label other than worksheet-queued changes nothing in the queue.
+    if: >-
+      (github.event_name != 'pull_request' ||
+       github.event.pull_request.head.repo.full_name == github.repository) &&
+      (github.event_name != 'issues' || github.event.label.name == 'worksheet-queued')
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
-      - name: Promote queued worksheets up to the concurrency cap
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          # Explicitly main: a closed pull request's merge ref may be gone,
+          # and "already built" means already on main.
+          ref: ${{ github.event.repository.default_branch }}
+          sparse-checkout: |
+            .github/skills/worksheet-build/scripts
+            docs/worksheets
+            worksheets
+
+      - name: Start the next queued worksheet
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
-        run: |
-          set -euo pipefail
-
-          in_flight="$(gh pr list --repo "$REPO" --state open --label worksheet \
-                        --json number --jq 'length')"
-          echo "open worksheet pull requests: $in_flight (cap $MAX_IN_FLIGHT)"
-
-          slots=$(( MAX_IN_FLIGHT - in_flight ))
-          if [ "$slots" -le 0 ]; then
-            echo "At capacity. Nothing promoted."
-            exit 0
-          fi
-
-          # Oldest first, so the pilot order in the milestone is respected.
-          mapfile -t queued < <(
-            gh issue list --repo "$REPO" --state open --label worksheet-queued \
-              --json number,createdAt --jq 'sort_by(.createdAt)[].number'
-          )
-
-          if [ "${#queued[@]}" -eq 0 ]; then
-            echo "Queue is empty. Nothing to promote."
-            exit 0
-          fi
-
-          promoted=0
-          for n in "${queued[@]}"; do
-            [ "$promoted" -ge "$slots" ] && break
-
-            # Never restart a worksheet that is already moving.
-            labels="$(gh issue view "$n" --repo "$REPO" --json labels --jq '.labels[].name')"
-            if printf '%s' "$labels" | grep -qE '^stage:'; then
-              echo "issue #$n already has a stage label — skipping"
-              continue
-            fi
-
-            echo "promoting issue #$n to stage:build"
-            gh issue edit "$n" --repo "$REPO" \
-              --remove-label worksheet-queued --add-label 'stage:build'
-            promoted=$(( promoted + 1 ))
-          done
-
-          echo "promoted $promoted worksheet(s); $(( slots - promoted )) slot(s) left idle"
+          MAX_IN_FLIGHT: 1
+          # Absent on schedule events; the script then defaults to main.
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: bash .github/skills/worksheet-build/scripts/promote-queue.sh
