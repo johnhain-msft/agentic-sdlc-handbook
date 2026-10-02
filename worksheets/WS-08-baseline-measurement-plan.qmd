@@ -1,0 +1,751 @@
+---
+title: "Baseline Measurement and Instrumentation Plan"
+pagetitle: "WS-08-baseline-measurement-plan"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+            table.ws.dense { font-size: 7.2pt; }
+            table.ws.dense td, table.ws.dense th { padding: 1mm 1.2mm; }
+            .f-date.dsm .d, .f-date.dsm .m { width: 4.5mm; }
+            .f-date.dsm .y { width: 8mm; }
+            table.ws td .prior--hedged { margin: 0; padding: 1.2mm 1.6mm; }
+            table.ws td.prior:has(.prior--hedged) { padding: 0; border-left: 0; }
+            table.ws td.fill .prior { margin: 0 0 1mm; padding: 1mm 1.6mm; }
+            .fsplit { display:block; font-size:6.6pt; color:#454f59; margin-top:.6mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-08-baseline-measurement-plan</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  6 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Baseline Measurement and Instrumentation Plan</h1>
+      <p class="ws-sub">A baseline metrics pack captured before the pilot starts, with named owners and an agreed instrumentation level.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-08-baseline-measurement-plan</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>4</b> &middot; type <b>inventory</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Planning the Transition</b>, <i>Metrics That Matter</i> &middot;
+    <code>handbook/ch08-planning-the-transition.qmd</code> L204-236 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-metrics">#sec-transition-metrics</a>
+  </div>
+
+  <div class="ws-instruction">
+    Fill this pack before the pilot starts, then sign and date it once on this sheet; that date is your before-picture. Panel A is the metric baseline register, one row per metric, split across two sheets. Name an owner on every row before the data is pulled. Enter the number you measured today in &ldquo;Ours, measured&rdquo;, or write <b>not measurable today</b> with an owner and a date. Read &ldquo;What it does NOT tell you&rdquo; aloud for every row. Write the method so someone who was not in the room can re-run it unchanged. Set your 6- and 12-month targets against your own measured number, never against the book's prior or the chapter's illustration. Leave every blank prior cell blank. Panel B then picks one instrumentation level, Panel C records where engineering hours go, and Panel D records the first initiative before it starts.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel A — metric baseline register
+      <span class="ws-block-note">rows A1&ndash;A9 of 18 &middot; sheet 1 of 3 &middot; the grey columns are the book's, never a target</span></h2>
+
+    <table class="ws dense">
+      <colgroup><col style="width:3%"><col style="width:8%"><col style="width:8%"><col style="width:9%"><col style="width:13%"><col style="width:7%"><col style="width:6%"><col style="width:7%"><col style="width:6%"><col style="width:8%"><col style="width:6%"><col style="width:5%"><col style="width:4%"><col style="width:4%"><col style="width:6%"></colgroup>
+      <thead><tr><th><span class="fno">1</span>Category</th><th><span class="fno">2</span>Metric</th><th><span class="fno">3</span>What it tells you</th><th><span class="fno">4</span>What it does NOT tell you</th><th><span class="fno">5</span>Book's stated prior — author-observed, not a target</th><th><span class="fno">6</span>Chapter's illustrative target — not ours</th><th><span class="fno">7</span>Ours, measured</th><th><span class="fno">8</span>Date measured</th><th><span class="fno">9</span>Source system</th><th><span class="fno">10</span>Measurement method</th><th><span class="fno">11</span>Owner</th><th><span class="fno">12</span>Reporting cadence</th><th><span class="fno">13</span>Our 6-month target</th><th><span class="fno">14</span>Our 12-month target</th><th><span class="fno">15</span>Re-measure date</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked">Quality</td>
+          <td class="locked"><b>A1</b> Review rejection rate for agent PRs</td>
+          <td class="locked">Whether agents are producing code your team trusts</td>
+          <td class="locked">Whether the accepted code has latent defects</td>
+          <td class="prior">—</td>
+          <td class="prior">6-mo &minus;10% &middot; 12-mo &minus;20%<span class="prior-src">ch03 L293-299</span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Code review platform<span class="prior-src">ch03 L293-299</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Quality</td>
+          <td class="locked"><b>A2</b> Human intervention rate per task</td>
+          <td class="locked">How often agents need correction mid-task</td>
+          <td class="locked">Why they need correction (context gap? tool limitation?)</td>
+          <td class="prior">—</td>
+          <td class="prior">6-mo: establish baseline &middot; 12-mo: &minus;20% from baseline<span class="prior-src">ch03 L293-299</span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Agent session logs<span class="prior-src">ch03 L293-299</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Efficiency</td>
+          <td class="locked"><b>A3</b> Time-to-confident-merge</td>
+          <td class="locked">End-to-end time from task start to merged, reviewed code</td>
+          <td class="locked">Whether faster merges translate to faster feature delivery</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Efficiency</td>
+          <td class="locked"><b>A4</b> Rework rate on agent code (30-day)</td>
+          <td class="locked">Whether agent output survives contact with production</td>
+          <td class="locked">What the rework costs (trivial fixes vs. architectural changes)</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Adoption</td>
+          <td class="locked"><b>A5</b> Context asset coverage</td>
+          <td class="locked">What percentage of your codebase has structured context</td>
+          <td class="locked">Whether that context is good (coverage without quality is noise)</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Adoption</td>
+          <td class="locked"><b>A6</b> Active usage rate vs licence count</td>
+          <td class="locked">Whether people who have the tools are using them</td>
+          <td class="locked">Whether they're using them well</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">DORA</td>
+          <td class="locked"><b>A7</b> Deployment frequency</td>
+          <td class="locked">Baseline delivery performance and trends</td>
+          <td class="locked">Causation — many factors affect DORA metrics simultaneously</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">DORA</td>
+          <td class="locked"><b>A8</b> Lead time</td>
+          <td class="locked">Baseline delivery performance and trends</td>
+          <td class="locked">Causation — many factors affect DORA metrics simultaneously</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">DORA</td>
+          <td class="locked"><b>A9</b> Change failure rate</td>
+          <td class="locked">Baseline delivery performance and trends</td>
+          <td class="locked">Causation — many factors affect DORA metrics simultaneously</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-08-baseline-measurement-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 6</div>
+    <div>Pack signed by <span style="display:inline-block;width:52mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Pack dated <span style="display:inline-block;width:28mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; <b>(one date for the whole pack: the before-picture)</b></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Baseline Measurement and Instrumentation Plan</h1>
+      <p class="ws-sub">A baseline metrics pack captured before the pilot starts, with named owners and an agreed instrumentation level.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-08-baseline-measurement-plan</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>4</b> &middot; type <b>inventory</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Planning the Transition</b>, <i>Metrics That Matter</i> &middot;
+    <code>handbook/ch08-planning-the-transition.qmd</code> L204-236 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-metrics">#sec-transition-metrics</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel A — metric baseline register
+      <span class="ws-block-note">rows A10&ndash;A14 of 18 &middot; sheet 2 of 3 &middot; the grey columns are the book's, never a target</span></h2>
+
+    <table class="ws dense">
+      <colgroup><col style="width:3%"><col style="width:8%"><col style="width:8%"><col style="width:9%"><col style="width:13%"><col style="width:7%"><col style="width:6%"><col style="width:7%"><col style="width:6%"><col style="width:8%"><col style="width:6%"><col style="width:5%"><col style="width:4%"><col style="width:4%"><col style="width:6%"></colgroup>
+      <thead><tr><th><span class="fno">1</span>Category</th><th><span class="fno">2</span>Metric</th><th><span class="fno">3</span>What it tells you</th><th><span class="fno">4</span>What it does NOT tell you</th><th><span class="fno">5</span>Book's stated prior — author-observed, not a target</th><th><span class="fno">6</span>Chapter's illustrative target — not ours</th><th><span class="fno">7</span>Ours, measured</th><th><span class="fno">8</span>Date measured</th><th><span class="fno">9</span>Source system</th><th><span class="fno">10</span>Measurement method</th><th><span class="fno">11</span>Owner</th><th><span class="fno">12</span>Reporting cadence</th><th><span class="fno">13</span>Our 6-month target</th><th><span class="fno">14</span>Our 12-month target</th><th><span class="fno">15</span>Re-measure date</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked">DORA</td>
+          <td class="locked"><b>A10</b> MTTR</td>
+          <td class="locked">Baseline delivery performance and trends</td>
+          <td class="locked">Causation — many factors affect DORA metrics simultaneously</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Efficiency</td>
+          <td class="locked"><b>A11</b> Median PR cycle time</td>
+          <td class="locked">—</td>
+          <td class="locked">—</td>
+          <td class="prior">—</td>
+          <td class="prior">6-mo &minus;15% &middot; 12-mo &minus;25%<span class="prior-src">ch03 L293-299</span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Git analytics<span class="prior-src">ch03 L293-299</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Quality</td>
+          <td class="locked"><b>A12</b> Post-deploy defects per release</td>
+          <td class="locked">—</td>
+          <td class="locked">—</td>
+          <td class="prior">—</td>
+          <td class="prior">6-mo &minus;10% &middot; 12-mo &minus;20%<span class="prior-src">ch03 L293-299</span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Issue tracker<span class="prior-src">ch03 L293-299</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Adoption</td>
+          <td class="locked"><b>A13</b> Developer satisfaction (AI tools)</td>
+          <td class="locked">—</td>
+          <td class="locked">—</td>
+          <td class="prior">—</td>
+          <td class="prior">6-mo &gt;3.5/5 &middot; 12-mo &gt;4.0/5<span class="prior-src">ch03 L293-299</span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Quarterly survey<span class="prior-src">ch03 L293-299</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Quality</td>
+          <td class="locked"><b>A14</b> Convention-violating outputs</td>
+          <td class="locked">—</td>
+          <td class="locked">—</td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">40-60% of generated code, uninstrumented</span><span class="hedge-text">Based on the author's experience across instrumented projects. These numbers are directional, not guaranteed.</span><span class="hedge-src">ch12 L560-568</span></div></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-08-baseline-measurement-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 6</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Baseline Measurement and Instrumentation Plan</h1>
+      <p class="ws-sub">A baseline metrics pack captured before the pilot starts, with named owners and an agreed instrumentation level.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-08-baseline-measurement-plan</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>4</b> &middot; type <b>inventory</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Planning the Transition</b>, <i>Metrics That Matter</i> &middot;
+    <code>handbook/ch08-planning-the-transition.qmd</code> L204-236 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-metrics">#sec-transition-metrics</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel A — metric baseline register
+      <span class="ws-block-note">rows A15&ndash;A18 of 18 &middot; sheet 3 of 3 &middot; the grey columns are the book's, never a target</span></h2>
+
+    <table class="ws dense">
+      <colgroup><col style="width:3%"><col style="width:8%"><col style="width:8%"><col style="width:9%"><col style="width:13%"><col style="width:7%"><col style="width:6%"><col style="width:7%"><col style="width:6%"><col style="width:8%"><col style="width:6%"><col style="width:5%"><col style="width:4%"><col style="width:4%"><col style="width:6%"></colgroup>
+      <thead><tr><th><span class="fno">1</span>Category</th><th><span class="fno">2</span>Metric</th><th><span class="fno">3</span>What it tells you</th><th><span class="fno">4</span>What it does NOT tell you</th><th><span class="fno">5</span>Book's stated prior — author-observed, not a target</th><th><span class="fno">6</span>Chapter's illustrative target — not ours</th><th><span class="fno">7</span>Ours, measured</th><th><span class="fno">8</span>Date measured</th><th><span class="fno">9</span>Source system</th><th><span class="fno">10</span>Measurement method</th><th><span class="fno">11</span>Owner</th><th><span class="fno">12</span>Reporting cadence</th><th><span class="fno">13</span>Our 6-month target</th><th><span class="fno">14</span>Our 12-month target</th><th><span class="fno">15</span>Re-measure date</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked">Quality</td>
+          <td class="locked"><b>A15</b> Review comments per agent PR</td>
+          <td class="locked">—</td>
+          <td class="locked">—</td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">4-8 (&ldquo;we don't do it that way&rdquo;)</span><span class="hedge-text">Based on the author's experience across instrumented projects. These numbers are directional, not guaranteed.</span><span class="hedge-src">ch12 L560-568</span></div></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Efficiency</td>
+          <td class="locked"><b>A16</b> Agent code requiring rewrite</td>
+          <td class="locked">—</td>
+          <td class="locked">—</td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">30-50% uninstrumented</span><span class="hedge-text">Based on the author's experience across instrumented projects. These numbers are directional, not guaranteed.</span><span class="hedge-src">ch12 L560-568</span></div></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Efficiency</td>
+          <td class="locked"><b>A17</b> Time from agent output to merge</td>
+          <td class="locked">—</td>
+          <td class="locked">—</td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">&ldquo;Hours&rdquo; (review + rework), uninstrumented</span><span class="hedge-text">Based on the author's experience across instrumented projects. These numbers are directional, not guaranteed.</span><span class="hedge-src">ch12 L560-568</span></div></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Instrumentation</td>
+          <td class="locked"><b>A18</b> Generation-to-review ratio</td>
+          <td class="locked">If that ratio is improving — less time reviewing per unit of generation — the tools are working. If it is flat or worsening, you have a context quality problem, a skill problem, or both.</td>
+          <td class="locked">—</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><span class="f-text lg"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-08-baseline-measurement-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 6</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+
+<!-- ============================ SHEET 4 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Baseline Measurement and Instrumentation Plan</h1>
+      <p class="ws-sub">A baseline metrics pack captured before the pilot starts, with named owners and an agreed instrumentation level.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-08-baseline-measurement-plan</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>4</b> &middot; type <b>inventory</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Planning the Transition</b>, <i>Metrics That Matter</i> &middot;
+    <code>handbook/ch08-planning-the-transition.qmd</code> L204-236 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-metrics">#sec-transition-metrics</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel B — generation-to-review ratio: instrumentation decision
+      <span class="ws-block-note">tick exactly one level &middot; the single most important metric most organisations do not track (ch08 L222)</span></h2>
+
+    <table class="ws">
+      <colgroup><col style="width:10%"><col style="width:17%"><col style="width:12%"><col style="width:19%"><col style="width:12%"><col style="width:8%"><col style="width:11%"><col style="width:11%"></colgroup>
+      <thead><tr><th><span class="fno">16</span>Level</th><th><span class="fno">17</span>How it measures</th><th><span class="fno">18</span>Effort and accuracy</th><th><span class="fno">19</span>Tools — the org's equivalents</th><th><span class="fno">20</span>Phase note</th><th><span class="fno">21</span>Chosen for the pilot</th><th><span class="fno">22</span>Owner</th><th><span class="fno">23</span>Start date</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked"><b>1 — PR metadata</b></td>
+          <td class="prior">Tagged PRs; creation and final-approval timestamps<span class="prior-src">ch08 L228</span></td>
+          <td class="prior">Low effort, moderate accuracy<span class="prior-src">ch08 L228</span></td>
+          <td class="fill"><div class="prior">GitHub labels plus a weekly PR-analytics query<span class="prior-src">ch08 L228</span></div><span class="f-text sm"></span><span class="f-text sm"></span></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>chosen</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>2 — Annotation tags in workflow</b></td>
+          <td class="prior">Developer-applied <code>[gen-start]</code> / <code>[gen-end]</code> / <code>[review-start]</code> / <code>[review-end]</code> tags<span class="prior-src">ch08 L230</span></td>
+          <td class="prior">Medium effort, good accuracy, roughly 30 seconds per task overhead<span class="prior-src">ch08 L230</span></td>
+          <td class="fill"><div class="prior">Task-tracker custom fields, or a shared spreadsheet during the pilot<span class="prior-src">ch08 L230</span></div><span class="f-text sm"></span><span class="f-text sm"></span></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>chosen</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>3 — Git hooks and editor telemetry</b></td>
+          <td class="prior">Pre-commit hooks detecting agent metadata, plus editor mode telemetry<span class="prior-src">ch08 L232</span></td>
+          <td class="prior">Higher effort, high accuracy<span class="prior-src">ch08 L232</span></td>
+          <td class="fill"><div class="prior">Custom git hooks, editor extension APIs, a lightweight telemetry pipeline<span class="prior-src">ch08 L232</span></div><span class="f-text sm"></span><span class="f-text sm"></span></td>
+          <td class="prior">Phase 3 investment — do not attempt it in the pilot.<span class="prior-src">ch08 L232</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>chosen</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Calibration anchors <span class="ws-block-note">printed, not editable &middot; not targets and not acceptance thresholds</span></h2>
+
+    <div class="prior--hedged">
+      <span class="hedge-figure"><b>24</b> &nbsp; About 1:1 early in adoption &middot; 3:1 or better as teams calibrate their delegation patterns &middot; below 1.5:1 after four weeks of active use suggests a context-quality problem &middot; above 5:1 warrants checking that review rigour has not declined</span>
+      <span class="hedge-text">These are starting benchmarks based on the author's observation of early adopter teams, not industry-validated thresholds. Calibrate against your own baseline.</span>
+      <span class="hedge-src">handbook/ch08-planning-the-transition.qmd L234</span>
+    </div>
+
+    <table class="ws">
+      <colgroup><col style="width:30%"><col style="width:40%"><col style="width:30%"></colgroup>
+      <thead><tr><th><span class="fno">25</span>Our measured ratio</th><th>Number</th><th>Date measured</th></tr></thead>
+      <tbody><tr>
+        <td class="locked">Blank until Level 1, 2 or 3 has run. Never fill it from the strip above.</td>
+        <td class="fill"><span class="f-text"></span></td>
+        <td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+      </tr></tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-08-baseline-measurement-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 6</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 4 ============================ -->
+
+<!-- ============================ SHEET 5 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Baseline Measurement and Instrumentation Plan</h1>
+      <p class="ws-sub">A baseline metrics pack captured before the pilot starts, with named owners and an agreed instrumentation level.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-08-baseline-measurement-plan</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>4</b> &middot; type <b>inventory</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Planning the Transition</b>, <i>Metrics That Matter</i> &middot;
+    <code>handbook/ch08-planning-the-transition.qmd</code> L204-236 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-metrics">#sec-transition-metrics</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel C — time allocation baseline
+      <span class="ws-block-note">one row per activity &middot; a team lead fills it &middot; an estimate with no derivation label reads as a measurement</span></h2>
+
+    <div class="prior" style="margin-bottom:2mm">The pre-agentic column is a composite drawn from multiple industry surveys (2019–2023); no single source produces this exact breakdown.<span class="prior-src">ch06 footnote ch6-time</span></div>
+
+    <table class="ws">
+      <colgroup><col style="width:15%"><col style="width:15%"><col style="width:21%"><col style="width:10%"><col style="width:13%"><col style="width:10%"><col style="width:16%"></colgroup>
+      <thead><tr><th><span class="fno">26</span>Activity</th><th><span class="fno">27</span>Book's pre-agentic composite — survey composite, not ours</th><th><span class="fno">28</span>Book's projected agentic range † — author observation, not survey data</th><th><span class="fno">29</span>Our estimated current %</th><th><span class="fno">30</span>How that estimate was derived</th><th><span class="fno">31</span>Our 12-month target %</th><th><span class="fno">32</span>Delta in FTE-equivalent hours</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked"><b>Writing new code</b><span class="prior-src">ch06 L22-30</span></td>
+          <td class="prior">30–35%<span class="prior-src">ch06 L22-30, note ch6-time</span></td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">10–15% †</span><span class="hedge-text">† Projected agentic-era figures are based on author observation and early adopter reports, not survey data.</span><span class="hedge-src">ch06 L33</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">timesheet</span><span class="opt">sampled survey</span><span class="opt">lead's estimate</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="(col 31 &minus; col 29) &times; headcount"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Reading and understanding code</b><span class="prior-src">ch06 L22-30</span></td>
+          <td class="prior">20–25%<span class="prior-src">ch06 L22-30, note ch6-time</span></td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">15–20% †</span><span class="hedge-text">† Projected agentic-era figures are based on author observation and early adopter reports, not survey data.</span><span class="hedge-src">ch06 L33</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">timesheet</span><span class="opt">sampled survey</span><span class="opt">lead's estimate</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="(col 31 &minus; col 29) &times; headcount"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Code review</b><span class="prior-src">ch06 L22-30</span></td>
+          <td class="prior">10–15%<span class="prior-src">ch06 L22-30, note ch6-time</span></td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">20–25% †</span><span class="hedge-text">† Projected agentic-era figures are based on author observation and early adopter reports, not survey data.</span><span class="hedge-src">ch06 L33</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">timesheet</span><span class="opt">sampled survey</span><span class="opt">lead's estimate</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="(col 31 &minus; col 29) &times; headcount"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Specification and design</b><span class="prior-src">ch06 L22-30</span></td>
+          <td class="prior">10–15%<span class="prior-src">ch06 L22-30, note ch6-time</span></td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">20–25% †</span><span class="hedge-text">† Projected agentic-era figures are based on author observation and early adopter reports, not survey data.</span><span class="hedge-src">ch06 L33</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">timesheet</span><span class="opt">sampled survey</span><span class="opt">lead's estimate</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="(col 31 &minus; col 29) &times; headcount"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Debugging and incident response</b><span class="prior-src">ch06 L22-30</span></td>
+          <td class="prior">15–20%<span class="prior-src">ch06 L22-30, note ch6-time</span></td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">10–15% †</span><span class="hedge-text">† Projected agentic-era figures are based on author observation and early adopter reports, not survey data.</span><span class="hedge-src">ch06 L33</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">timesheet</span><span class="opt">sampled survey</span><span class="opt">lead's estimate</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="(col 31 &minus; col 29) &times; headcount"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Context engineering</b><span class="prior-src">ch06 L22-30</span></td>
+          <td class="prior">0%<span class="prior-src">ch06 L22-30, note ch6-time</span></td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">10–15% †</span><span class="hedge-text">† Projected agentic-era figures are based on author observation and early adopter reports, not survey data.</span><span class="hedge-src">ch06 L33</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">timesheet</span><span class="opt">sampled survey</span><span class="opt">lead's estimate</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="(col 31 &minus; col 29) &times; headcount"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Meetings and coordination</b><span class="prior-src">ch06 L22-30</span></td>
+          <td class="prior">10–15%<span class="prior-src">ch06 L22-30, note ch6-time</span></td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">10–15%</span><span class="hedge-text">† Projected agentic-era figures are based on author observation and early adopter reports, not survey data.</span><span class="hedge-src">ch06 L33</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">timesheet</span><span class="opt">sampled survey</span><span class="opt">lead's estimate</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="(col 31 &minus; col 29) &times; headcount"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Context-engineering capacity ask</b><span class="prior-src">ch06 L28</span></td>
+          <td class="locked" colspan="5">Row note: this row is a net-new allocation that does not exist in the current model. Its figure is the FTE ask carried into the business case.</td>
+          <td class="fill"><span class="f-computed" data-formula="context-engineering delta, in FTE"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-08-baseline-measurement-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 6</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 5 ============================ -->
+
+<!-- ============================ SHEET 6 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Baseline Measurement and Instrumentation Plan</h1>
+      <p class="ws-sub">A baseline metrics pack captured before the pilot starts, with named owners and an agreed instrumentation level.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-08-baseline-measurement-plan</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>4</b> &middot; type <b>inventory</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Planning the Transition</b>, <i>Metrics That Matter</i> &middot;
+    <code>handbook/ch08-planning-the-transition.qmd</code> L204-236 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-metrics">#sec-transition-metrics</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel D — first-initiative canonical metrics
+      <span class="ws-block-note">filled once, for the first initiative, before it starts &middot; the person who will run it fills it</span></h2>
+
+    <div class="prior" style="margin-bottom:2mm">The middle column is the APM case's own record: a single documented execution (PR #394), shown as an exemplar only. It is not a benchmark and not a target.<span class="prior-src">case-study-apm-overhaul.qmd L264-287</span></div>
+
+    <table class="ws">
+      <colgroup><col style="width:24%"><col style="width:41%"><col style="width:35%"></colgroup>
+      <thead><tr><th><span class="fno">33</span>Metric</th><th><span class="fno">34</span>APM case exemplar — a single documented execution, not a benchmark</th><th><span class="fno">35</span>Ours, planned</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked"><b>Files in scope</b></td>
+          <td class="prior"><div class="prior">75 files<span class="prior-src">case study L268-287</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Tests before</b></td>
+          <td class="prior"><div class="prior">2,829 tests before<span class="prior-src">case study L268-287</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Cycle time for a comparable refactor today</b></td>
+          <td class="prior"><div class="prior">About 90 minutes wave execution; about 16 hours total wall-clock (2 sessions including planning, monitoring, breaks)<span class="prior-src">case study L268-287</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Planned human-time split across planning / monitoring / interventions / review</b></td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">About 30% planning / 20% monitoring / 25% interventions / 25% review</span><span class="hedge-text">Approximate, single execution. A single documented execution, not a benchmark.</span><span class="hedge-src">case-study-apm-overhaul.qmd L267-283</span></div></td>
+          <td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span><span class="f-text sm"></span><span class="f-text sm"></span><span class="fsplit">planning &middot; monitoring &middot; interventions &middot; review</span></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Comparable manual refactor duration</b></td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">3–5 days of focused engineering time, for similar-scope manual refactors (consolidating authentication patterns across 40+ files)</span><span class="hedge-text">In the author's experience... This estimate has not been formally benchmarked.</span><span class="hedge-src">case-study-apm-overhaul.qmd L285-287</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Record <span class="ws-block-note">the date must precede the initiative start</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:20%"><col style="width:30%"><col style="width:20%"><col style="width:30%"></colgroup>
+      <thead><tr><th><span class="fno">36</span>Date recorded</th><th></th><th><span class="fno">37</span>Owner</th><th></th></tr></thead>
+      <tbody><tr>
+        <td class="locked">Date recorded</td><td class="fill"><div class="f-date dsm"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        <td class="locked">Owner</td><td class="fill"><span class="f-owner"></span></td>
+      </tr></tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-08-baseline-measurement-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 6</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 6 ============================ -->
+
+```
