@@ -1,0 +1,364 @@
+---
+title: "Context Asset & Debt Inventory"
+pagetitle: "WS-03-context-moat-asset-inventory"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-03-context-moat-asset-inventory</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  3 sheet(s): Panel A, Panel B, Panel C. Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Context Asset &amp; Debt Inventory</h1>
+      <p class="ws-sub">A baseline of the asset the entire business case rests on, and a ranked context-engineering backlog with the debt register attached.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-context-moat-asset-inventory</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>2</b> &middot; type <b>inventory</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>The Context Moat</i> &middot;
+    <code>handbook/ch03-the-business-case.qmd</code> L321-333 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-context-moat">#sec-business-case-context-moat</a>
+    &middot; Panel B absorbs the instrumentation audit, <code>handbook/ch12-the-instrumented-codebase.qmd</code> L418-463
+  </div>
+
+  <div class="ws-instruction">
+    <b>Panel A is the leadership face and it is a roll-up of Panel B, not an independent opinion.</b>
+    Fill it last, projected, from the register in front of everyone. For each of the six asset types, mark
+    Present, Partial or Absent against the printed anchors, write the Panel B row numbers that evidence the mark
+    (a mark with no rows is an opinion), name one accountable person and give the date Partial or Absent becomes Present.
+    Then write the count of Panel B rows marked &ldquo;In heads&rdquo; in the instrumentation debt box. This sheet records
+    present state only: no projected returns, no improvement rates.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel A &mdash; context asset inventory <span class="ws-block-note">six fixed rows &middot; all six sit in the Context &amp; Capabilities layer (ch04 L147) because the harness loads them on every invocation (ch03 L323)</span></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2mm;margin-bottom:2mm">
+      <div class="prior" style="font-size:7.4pt;padding:1mm 2mm"><b>Present &mdash;</b> written down, current, and loaded by the harness.<span class="prior-src">derived from Panel B</span></div>
+      <div class="prior" style="font-size:7.4pt;padding:1mm 2mm"><b>Partial &mdash;</b> written down but stale, incomplete, or not loaded.<span class="prior-src">derived from Panel B</span></div>
+      <div class="prior" style="font-size:7.4pt;padding:1mm 2mm"><b>Absent &mdash;</b> lives only in heads.<span class="prior-src">derived from Panel B</span></div>
+    </div>
+    <table class="ws">
+      <colgroup><col style="width:14%"><col style="width:24%"><col style="width:18%"><col style="width:18%"><col style="width:14%"><col style="width:12%"></colgroup>
+      <thead><tr>
+        <th><span class="fno">1</span>Context asset type</th><th><span class="fno">2</span>What it would encode<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">edit only to use your own vocabulary</span></th><th><span class="fno">3</span>Present / Partial / Absent<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">the mark</span></th><th><span class="fno">4</span>Panel B rows evidencing this mark<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">register row numbers</span></th><th><span class="fno">5</span>Owner<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">a named individual accountable for this asset type</span></th><th><span class="fno">6</span>Target date<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">when Partial or Absent becomes Present</span></th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="prior"><b>Machine-readable conventions</b><span class="prior-src">ch03 L321, L323</span></td>
+          <td class="fill"><div class="prior" style="font-size:7pt;padding:.6mm 1mm;margin-bottom:.8mm">the conventions the team follows<span class="prior-src">ch03 L323</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Partial</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Architecture decisions</b><span class="prior-src">ch03 L323</span></td>
+          <td class="fill"><div class="prior" style="font-size:7pt;padding:.6mm 1mm;margin-bottom:.8mm">its architectural decisions<span class="prior-src">ch03 L323</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Partial</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Agent configurations</b><span class="prior-src">ch03 L321, L323</span></td>
+          <td class="fill"><div class="prior" style="font-size:7pt;padding:.6mm 1mm;margin-bottom:.8mm">the agent configurations the harness loads<span class="prior-src">ch03 L323</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Partial</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>House style</b><span class="prior-src">ch03 L323</span></td>
+          <td class="fill"><div class="prior" style="font-size:7pt;padding:.6mm 1mm;margin-bottom:.8mm">its house style<span class="prior-src">ch03 L323</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Partial</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Rejected approaches</b><span class="prior-src">ch03 L323</span></td>
+          <td class="fill"><div class="prior" style="font-size:7pt;padding:.6mm 1mm;margin-bottom:.8mm">the approaches the team tried and abandoned, and why<span class="prior-src">ch03 L323</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Partial</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Grounded references</b><span class="prior-src">ch03 L323</span></td>
+          <td class="fill"><div class="prior" style="font-size:7pt;padding:.6mm 1mm;margin-bottom:.8mm">the ground-truth references the harness loads<span class="prior-src">ch03 L323</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Partial</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="ws" style="margin-top:3mm">
+      <colgroup><col style="width:40%"><col style="width:60%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="prior"><b>Instrumentation debt figure</b><br>the count of Panel B rows marked &ldquo;In heads&rdquo; &mdash; a high count is the expected result<span class="prior-src">ch12 L436</span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of Panel B rows where column 8 = In heads"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-context-moat-asset-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Context Asset &amp; Debt Inventory &mdash; Panel B</h1>
+      <p class="ws-sub">A baseline of the asset the entire business case rests on, and a ranked context-engineering backlog with the debt register attached.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-context-moat-asset-inventory</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>2</b> &middot; type <b>inventory</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>The Context Moat</i> &middot;
+    <code>handbook/ch03-the-business-case.qmd</code> L321-333 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-context-moat">#sec-business-case-context-moat</a>
+    &middot; Panel B absorbs the instrumentation audit, <code>handbook/ch12-the-instrumented-codebase.qmd</code> L418-463
+  </div>
+
+  <div class="ws-instruction">
+    <b>Panel B &mdash; convention register. One row per convention.</b> Pass 1: spend 30 minutes, whole team in the room, writing
+    every convention, pattern and constraint a new engineer would need in their first two weeks. Do not filter. Do not organise
+    &mdash; use sticky notes, then transcribe here (ch12 L420). Pass 2: mark where each lives
+    today. Pass 3: mark failure cost. Pass 4: mark the target primitive type. Pass 5: tick three to five rows as the starter set, then
+    write each file path and a named owner. Number each row; Panel A cites the numbers. Use further copies of this sheet until the register is complete.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel B &mdash; convention register <span class="ws-block-note">one row per convention &middot; the five passes are the five fillable columns &middot; the three greyed rows are exemplars from the chapter</span></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2mm;margin-bottom:2mm">
+      <div class="prior" style="font-size:7.4pt;padding:1mm 2mm"><b>Agent visibility (field 9):</b> In code &rarr; <b>partially visible</b>, if it is in the context window. In docs &rarr; <b>invisible</b> unless explicitly loaded. In heads &rarr; <b>completely invisible</b>.<span class="prior-src">ch12 L435-437</span></div>
+      <div class="prior" style="font-size:7.4pt;padding:1mm 2mm"><b>Failure cost (field 10):</b> <b>Critical</b> &mdash; security, data corruption, outages. <b>High</b> &mdash; architectural violations that accumulate as debt. <b>Medium</b> &mdash; convention violations requiring rework at review. <b>Low</b> &mdash; style preferences that do not affect correctness.<span class="prior-src">ch12 L440-445</span></div>
+      <div class="prior" style="font-size:7.4pt;padding:1mm 2mm"><b>Primitive type (field 11) &mdash; if the knowledge&hellip;</b> is a rule scoped to files/directories &rarr; instruction file &middot; needs specialist expertise or a specific model &rarr; agent configuration &middot; applies across files and needs a decision framework &rarr; skill &middot; defines a repeatable multi-step process &rarr; prompt &middot; records a decision, trade-off or historical fact &rarr; memory file &middot; specifies a feature with components and success criteria &rarr; specification &middot; defines an automated response to a development event &rarr; hook<span class="prior-src">ch12 L447-457</span></div>
+    </div>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:12%"><col style="width:8%"><col style="width:9%"><col style="width:7%"><col style="width:19%"><col style="width:14%"><col style="width:5%"><col style="width:8%"><col style="width:7%"><col style="width:8%"></colgroup>
+      <thead><tr>
+        <th><span class="fno">7</span>Convention, pattern or constraint<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">unfiltered</span></th><th><span class="fno">8</span>Where it lives today</th><th><span class="fno">9</span>Agent visibility<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">derived from 8</span></th><th><span class="fno">10</span>Failure cost</th><th><span class="fno">11</span>Target primitive type</th><th><span class="fno">12</span>Maps to Panel A asset type</th><th><span class="fno">13</span>In the starter set?<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">three to five files only</span></th><th><span class="fno">14</span>Starter-set file path</th><th><span class="fno">15</span>Starter-set owner</th><th><span class="fno">16</span>Target date</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num" style="font-size:7pt">№<br><span class="f-text sm" style="min-width:0"></span></td>
+          <td class="prior">All error responses use the <code>APIError</code> class<span class="prior-src">ch12 L420-431</span><br><i>exemplar &mdash; do not count</i></td>
+          <td class="fill"><div class="f-select"><span class="opt">In code</span><span class="opt">In docs</span><span class="opt">In heads</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="from field 8: code &rarr; partial &middot; docs &rarr; invisible &middot; heads &rarr; completely invisible"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">agent configuration</span><span class="opt">skill</span><span class="opt">prompt</span><span class="opt">memory file</span><span class="opt">specification</span><span class="opt">hook</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Conventions</span><span class="opt">Arch. decisions</span><span class="opt">Agent configs</span><span class="opt">House style</span><span class="opt">Rejected</span><span class="opt">Grounded refs</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num" style="font-size:7pt">№<br><span class="f-text sm" style="min-width:0"></span></td>
+          <td class="prior">The <code>SessionAuth</code> class is deprecated; use <code>JWTAuth</code><span class="prior-src">ch12 L420-431</span><br><i>exemplar &mdash; do not count</i></td>
+          <td class="fill"><div class="f-select"><span class="opt">In code</span><span class="opt">In docs</span><span class="opt">In heads</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="from field 8: code &rarr; partial &middot; docs &rarr; invisible &middot; heads &rarr; completely invisible"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">agent configuration</span><span class="opt">skill</span><span class="opt">prompt</span><span class="opt">memory file</span><span class="opt">specification</span><span class="opt">hook</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Conventions</span><span class="opt">Arch. decisions</span><span class="opt">Agent configs</span><span class="opt">House style</span><span class="opt">Rejected</span><span class="opt">Grounded refs</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num" style="font-size:7pt">№<br><span class="f-text sm" style="min-width:0"></span></td>
+          <td class="prior">The logging module wraps Rich; never call <code>print()</code> directly<span class="prior-src">ch12 L420-431</span><br><i>exemplar &mdash; do not count</i></td>
+          <td class="fill"><div class="f-select"><span class="opt">In code</span><span class="opt">In docs</span><span class="opt">In heads</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="from field 8: code &rarr; partial &middot; docs &rarr; invisible &middot; heads &rarr; completely invisible"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">agent configuration</span><span class="opt">skill</span><span class="opt">prompt</span><span class="opt">memory file</span><span class="opt">specification</span><span class="opt">hook</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Conventions</span><span class="opt">Arch. decisions</span><span class="opt">Agent configs</span><span class="opt">House style</span><span class="opt">Rejected</span><span class="opt">Grounded refs</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num" style="font-size:7pt">№<br><span class="f-text sm" style="min-width:0"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">In code</span><span class="opt">In docs</span><span class="opt">In heads</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="from field 8: code &rarr; partial &middot; docs &rarr; invisible &middot; heads &rarr; completely invisible"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">agent configuration</span><span class="opt">skill</span><span class="opt">prompt</span><span class="opt">memory file</span><span class="opt">specification</span><span class="opt">hook</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Conventions</span><span class="opt">Arch. decisions</span><span class="opt">Agent configs</span><span class="opt">House style</span><span class="opt">Rejected</span><span class="opt">Grounded refs</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num" style="font-size:7pt">№<br><span class="f-text sm" style="min-width:0"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">In code</span><span class="opt">In docs</span><span class="opt">In heads</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="from field 8: code &rarr; partial &middot; docs &rarr; invisible &middot; heads &rarr; completely invisible"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">agent configuration</span><span class="opt">skill</span><span class="opt">prompt</span><span class="opt">memory file</span><span class="opt">specification</span><span class="opt">hook</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Conventions</span><span class="opt">Arch. decisions</span><span class="opt">Agent configs</span><span class="opt">House style</span><span class="opt">Rejected</span><span class="opt">Grounded refs</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-context-moat-asset-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Context Asset &amp; Debt Inventory &mdash; Panel C</h1>
+      <p class="ws-sub">A baseline of the asset the entire business case rests on, and a ranked context-engineering backlog with the debt register attached.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-context-moat-asset-inventory</b><br>
+      Pack A - Groundwork (pre-work)<br>
+      fill order <b>2</b> &middot; type <b>inventory</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>The Context Moat</i> &middot;
+    <code>handbook/ch03-the-business-case.qmd</code> L321-333 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-context-moat">#sec-business-case-context-moat</a>
+    &middot; Panel B absorbs the instrumentation audit, <code>handbook/ch12-the-instrumented-codebase.qmd</code> L418-463
+  </div>
+
+  <div class="ws-instruction">
+    <b>Panel C &mdash; technical debt register. Complete and date it before any scenario is chosen.</b> The two or three engineers who have
+    been on the codebase longest list the load-bearing modules, one per row; a tech lead with commit history settles which are genuinely
+    load-bearing. Write the workaround humans learned in prose (field 20) &mdash; that cell <i>is</i> the context investment, and
+    &ldquo;see the team&rdquo; is not an answer. In field 21 write concrete agent failures, or <i>none observed yet</i>. If no module is load-bearing, write <i>none</i> and the reason.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel C &mdash; technical debt register <span class="ws-block-note">one row per load-bearing module &middot; an organisation carrying significant debt should expect lower early returns than a peer with a cleaner codebase (ch03 L329)</span></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2mm;margin-bottom:2mm">
+      <div class="prior" style="font-size:7.4pt;padding:1mm 2mm"><b>Already painful for humans (field 19):</b> <b>H</b> &mdash; engineers route around it and warn newcomers. <b>M</b> &mdash; it slows work but is understood. <b>L</b> &mdash; it is simply old.<span class="prior-src">ch03 L329</span></div>
+      <div class="prior" style="font-size:7.4pt;padding:1mm 2mm"><b>The workaround humans learned (field 20):</b> the agent has no tribal knowledge of this.<span class="prior-src">ch03 L329</span></div>
+      <div class="prior" style="font-size:7.4pt;padding:1mm 2mm"><b>Expected agent tax (field 22):</b> <b>H</b> &mdash; every invocation touching it re-discovers the trap. <b>M</b> &mdash; some invocations. <b>L</b> &mdash; the debt is invisible to an agent.<span class="prior-src">ch03 L329</span></div>
+    </div>
+    <table class="ws">
+      <colgroup><col style="width:11%"><col style="width:11%"><col style="width:8%"><col style="width:22%"><col style="width:11%"><col style="width:8%"><col style="width:13%"><col style="width:8%"><col style="width:8%"></colgroup>
+      <thead><tr>
+        <th><span class="fno">17</span>Module / package path</th><th><span class="fno">18</span>What makes it load-bearing<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">how much of the estate touches it</span></th><th><span class="fno">19</span>Already painful for humans?</th><th><span class="fno">20</span>The workaround humans learned<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">written down</span></th><th><span class="fno">21</span>Agent failures observed here<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">or none observed yet</span></th><th><span class="fno">22</span>Expected agent tax</th><th><span class="fno">23</span>Disposition</th><th><span class="fno">24</span>Owner</th><th><span class="fno">25</span>Target date</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">refactor first</span><span class="opt">instrument the workaround</span><span class="opt">accept and exclude from pilot scope</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">refactor first</span><span class="opt">instrument the workaround</span><span class="opt">accept and exclude from pilot scope</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">refactor first</span><span class="opt">instrument the workaround</span><span class="opt">accept and exclude from pilot scope</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">refactor first</span><span class="opt">instrument the workaround</span><span class="opt">accept and exclude from pilot scope</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">refactor first</span><span class="opt">instrument the workaround</span><span class="opt">accept and exclude from pilot scope</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-context-moat-asset-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
