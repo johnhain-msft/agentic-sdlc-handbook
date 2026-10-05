@@ -263,7 +263,7 @@ format:
     <h2>Panel B &mdash; portfolio fit <span class="ws-block-note">four fixed rows &middot; one page</span></h2>
     <table class="ws">
       <colgroup>
-        <col style="width:26%"><col style="width:17%"><col style="width:17%"><col style="width:17%"><col style="width:17%"><col style="width:6%">
+        <col style="width:22%"><col style="width:16%"><col style="width:16%"><col style="width:16%"><col style="width:16%"><col style="width:14%">
       </colgroup>
       <thead>
         <tr>
