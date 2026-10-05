@@ -25,7 +25,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Organisational Readiness: Which Failure Amplifiers Do We Already Have?</h1>
-      <p class="ws-sub">An organisational risk baseline ranking the five amplifiers, each with evidence and a named remediation owner.</p>
+      <p class="ws-sub">An organizational risk baseline ranking the five amplifiers, each with evidence and a named remediation owner.</p>
     </div>
     <div class="ws-meta">
       <b>WS-20-org-failure-amplifier-assessment</b><br>
@@ -45,9 +45,9 @@ format:
 
   <div class="ws-instruction">
     Fill this page alone and in silence, before you see anyone else's. You need no data, no repository
-    and no telemetry &mdash; only honesty. For each of the five organisational anti-patterns, mark it
+    and no telemetry &mdash; only honesty. For each of the five organizational anti-patterns, mark it
     Present, Emerging or Absent using the key below, cite the occurrence that justifies the mark, name
-    the technical anti-pattern it amplifies, then write the organisational action and the person who
+    the technical anti-pattern it amplifies, then write the organizational action and the person who
     owns it. Sign the page. Only then turn it face up and compare; where you and a colleague marked the
     same row differently, record both marks at the foot. Do not average and do not fill as a group.
   </div>
