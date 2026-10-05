@@ -48,8 +48,8 @@ format:
     and no telemetry &mdash; only honesty. For each of the five organizational anti-patterns, mark it
     Present, Emerging or Absent using the key below, cite the occurrence that justifies the mark, name
     the technical anti-pattern it amplifies, then write the organizational action and the person who
-    owns it. Sign the page. Only then turn it face up and compare; where you and a colleague marked the
-    same row differently, record both marks at the foot. Do not average and do not fill as a group.
+    owns it. Sign the Scored-by block on the back (sheet 2). Only then turn it face up and compare; where you and a colleague marked the
+    same row differently, record both marks in the divergence record on the back. Do not average and do not fill as a group.
   </div>
 
   <div class="ws-block">
@@ -108,7 +108,7 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Cargo-culting complexity</b><span class="prior-src">ch20 L369</span></td>
-          <td class="prior">Full multi-agent orchestration where the overhead exceeds the benefit; the disciplines scale <i>down</i>. Complete the counter-check strip below before you mark this row.<span class="prior-src">ch20 L369</span></td>
+          <td class="prior">Full multi-agent orchestration where the overhead exceeds the benefit; the disciplines scale <i>down</i>. Complete the counter-check strip on the back (sheet 2) before you mark this row.<span class="prior-src">ch20 L369</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Emerging</span><span class="opt">Absent</span></div></td>
           <td class="fill"><span class="f-box"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">incident</span><span class="opt">review record</span><span class="opt">cost record</span><span class="opt">recollection</span></div></td>
