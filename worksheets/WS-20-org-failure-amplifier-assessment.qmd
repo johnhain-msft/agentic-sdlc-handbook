@@ -1,0 +1,304 @@
+---
+title: "Organisational Readiness: Which Failure Amplifiers Do We Already Have?"
+pagetitle: "WS-20-org-failure-amplifier-assessment"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 297mm; --sheet-h: 420mm; --sheet-margin: 12mm; }
+            @page { size: A3 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-20-org-failure-amplifier-assessment</b> &middot; review copy &middot; declared format <b>one page, portrait (A3 portrait, front and back)</b> &middot;
+  2 sheets. The white page below is one physical sheet at true size.
+  Anything spilling past the page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Organisational Readiness: Which Failure Amplifiers Do We Already Have?</h1>
+      <p class="ws-sub">An organisational risk baseline ranking the five amplifiers, each with evidence and a named remediation owner.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-20-org-failure-amplifier-assessment</b><br>
+      Pack B - Where we actually are<br>
+      fill order <b>3</b> &middot; type <b>assessment</b><br>
+      audience <b>exec</b> &middot; one copy per executive<br>
+      sits facing <b>WS-20-nineteen-failure-mode-premortem</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Anti-Patterns and Failure Modes</b>, <i>Team-Level Anti-Patterns</i> &middot;
+    <code>handbook/ch20-anti-patterns-and-failure-modes.qmd</code> L361-373 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch20-anti-patterns-and-failure-modes.html#sec-anti-team-level">#sec-anti-team-level</a>
+    &middot; &ldquo;Technical anti-patterns happen in code. Organizational anti-patterns amplify every technical failure&rdquo;
+  </div>
+
+  <div class="ws-instruction">
+    Fill this page alone and in silence, before you see anyone else's. You need no data, no repository
+    and no telemetry &mdash; only honesty. For each of the five organisational anti-patterns, mark it
+    Present, Emerging or Absent using the key below, cite the occurrence that justifies the mark, name
+    the technical anti-pattern it amplifies, then write the organisational action and the person who
+    owns it. Sign the page. Only then turn it face up and compare; where you and a colleague marked the
+    same row differently, record both marks at the foot. Do not average and do not fill as a group.
+  </div>
+
+  <div class="ws-block">
+    <h2>Rubric key <span class="ws-block-note">authored for this sheet &mdash; the chapter supplies no scale</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:14%"><col style="width:86%"></colgroup>
+      <tbody>
+        <tr><td class="prior"><b>Present</b></td>
+          <td class="prior">We can name at least one occurrence in the last quarter, and no control exists that would stop it recurring.<span class="prior-src">derived &mdash; authored for this sheet</span></td></tr>
+        <tr><td class="prior"><b>Emerging</b></td>
+          <td class="prior">We can name an occurrence, but a control exists or is being built.<span class="prior-src">derived &mdash; authored for this sheet</span></td></tr>
+        <tr><td class="prior"><b>Absent</b></td>
+          <td class="prior">We cannot name an occurrence, and a control exists that would have caught one.<span class="prior-src">derived &mdash; authored for this sheet</span></td></tr>
+        <tr><td class="locked" colspan="2">Note: &ldquo;we cannot name an occurrence&rdquo; with no control in place is <b>Present</b>, not Absent &mdash; an unobserved failure in an unmonitored area is the definition of this chapter's subject. A row you cannot place against the key is Present. &ldquo;Partly&rdquo;, &ldquo;improving&rdquo; and &ldquo;n/a&rdquo; are not marks.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A &mdash; Score each amplifier
+      <span class="ws-block-note">one row per amplifier &middot; five fixed rows &middot; no total, no index</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:13%"><col style="width:27%"><col style="width:15%"><col style="width:30%"><col style="width:15%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span>Organisational amplifier</th>
+          <th><span class="fno">2</span>What it looks like</th>
+          <th><span class="fno">3</span>Present / Emerging / Absent</th>
+          <th><span class="fno">4</span>Evidence<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">what, when, which team &mdash; required for Present and Emerging</span></th>
+          <th><span class="fno">5</span>Evidence type<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">recollection is allowed, and is itself a signal</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior"><b>Over-trust</b><span class="prior-src">ch20 L363</span></td>
+          <td class="prior">Ships agent-generated code with minimal review, and agent code fails differently &mdash; locally correct, globally inconsistent.<span class="prior-src">ch20 L363</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Emerging</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">incident</span><span class="opt">review record</span><span class="opt">cost record</span><span class="opt">recollection</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Under-specification</b><span class="prior-src">ch20 L365</span></td>
+          <td class="prior">No primitives; each developer prompts ad hoc. Output quality varies by context, not skill, and the team blames the tool.<span class="prior-src">ch20 L365</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Emerging</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">incident</span><span class="opt">review record</span><span class="opt">cost record</span><span class="opt">recollection</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>No feedback loop</b><span class="prior-src">ch20 L367</span></td>
+          <td class="prior">Failures get fixed manually and no one updates the primitives, so the same mistake recurs weekly.<span class="prior-src">ch20 L367</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Emerging</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">incident</span><span class="opt">review record</span><span class="opt">cost record</span><span class="opt">recollection</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Cargo-culting complexity</b><span class="prior-src">ch20 L369</span></td>
+          <td class="prior">Full multi-agent orchestration where the overhead exceeds the benefit; the disciplines scale <i>down</i>. Complete the counter-check strip below before you mark this row.<span class="prior-src">ch20 L369</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Emerging</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">incident</span><span class="opt">review record</span><span class="opt">cost record</span><span class="opt">recollection</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Abandoned governance</b><span class="prior-src">ch20 L371</span></td>
+          <td class="prior">Nobody audits what agents modify outside stated scope; nobody tracks token cost against value.<span class="prior-src">ch20 L371</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Present</span><span class="opt">Emerging</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">incident</span><span class="opt">review record</span><span class="opt">cost record</span><span class="opt">recollection</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; Pair, act, own
+      <span class="ws-block-note">same five rows &middot; columns 6 and 7 are read across to the facing page</span></h2>
+
+    <table class="ws">
+      <colgroup><col style="width:30%"><col style="width:70%"></colgroup>
+      <tbody>
+        <tr><td class="prior"><b>Column 7 anchors</b></td>
+          <td class="prior"><b>H</b> &mdash; amplifier Present <i>and</i> the paired pattern already observed &middot; <b>M</b> &mdash; amplifier Present or Emerging, paired pattern plausible but not yet seen &middot; <b>L</b> &mdash; amplifier Absent<span class="prior-src">derived from WS-20 facing page</span></td></tr>
+        <tr><td class="prior"><b>Column 8 prompts</b></td>
+          <td class="prior">Team agreements &middot; review processes &middot; treating primitives as shared infrastructure<span class="prior-src">ch20 L373</span></td></tr>
+        <tr><td class="locked" colspan="2">Rows 4 and 5 of column 6 are blank on purpose. The chapter pairs only three; you write the other two against the facing page's list, or write &ldquo;no paired pattern identified&rdquo;. Use the facing page's pattern names exactly.</td></tr>
+      </tbody>
+    </table>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:12%"><col style="width:20%"><col style="width:12%"><col style="width:26%"><col style="width:16%"><col style="width:14%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Amplifier</th>
+          <th><span class="fno">6</span>Technical anti-pattern it amplifies</th>
+          <th><span class="fno">7</span>Likelihood uplift on the paired pattern</th>
+          <th><span class="fno">8</span>Organisational action</th>
+          <th><span class="fno">9</span>Action owner<br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:6.6pt">a named person &mdash; required wherever column 3 is Present or Emerging</span></th>
+          <th><span class="fno">10</span>Review date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked"><b>Over-trust</b></td>
+          <td class="prior"><b>The Trust Fall</b><span class="prior-src">ch20 L373</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Under-specification</b></td>
+          <td class="prior"><b>Context Dumping</b><span class="prior-src">ch20 L373</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>No feedback loop</b></td>
+          <td class="prior"><b>Not Fixing the Primitives</b><span class="prior-src">ch20 L373</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Cargo-culting complexity</b></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>Abandoned governance</b></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-20-org-failure-amplifier-assessment &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Counter-check and sign-off</h1>
+      <p class="ws-sub">Continues WS-20-org-failure-amplifier-assessment: the cargo-culting counter-check, your signature, and the divergence record.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-20-org-failure-amplifier-assessment</b><br>
+      back of the sheet &middot; one copy per executive
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Counter-check strip &mdash; cargo-culting complexity
+      <span class="ws-block-note">this amplifier cuts the other way: do not mark it Absent by reflex</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:24%"><col style="width:30%"><col style="width:40%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>The smallest change we have run a full wave plan against</b></td>
+          <td class="prior">The shape of the problem, not a threshold: &ldquo;full multi-agent orchestration for a 10-file repository with two developers&rdquo;<span class="prior-src">ch20 L369</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Repository size and team size on that change</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Wave plan used? Parallel review agents used?</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch20 L369</span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>wave plan used</span>
+            <span class="f-checkline"><span class="f-check"></span>parallel review agents used</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Was the overhead justified?</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch20 L369</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">unclear</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>Reason</b><br><span style="font-size:7pt">required whichever way field 14 falls</span></td>
+          <td class="prior">&mdash;<span class="prior-src">ch20 L369</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Sign-off and divergence <span class="ws-block-note">one copy per executive &middot; compare only after signing</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:24%"><col style="width:70%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">&ndash;</span></td>
+          <td><b>Scored by</b><br><span style="font-size:7pt">the individual executive, and the date</span></td>
+          <td class="fill tall"><span class="f-text"></span><span class="f-sign"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">&ndash;</span></td>
+          <td><b>Divergence record</b><br><span style="font-size:7pt">where two executives marked the same row differently: both marks and both pieces of evidence, side by side</span></td>
+          <td class="fill taller"><span class="f-box lg"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    &ldquo;Each organizational pattern amplifies a technical one. Over-trust amplifies the Trust Fall. Under-specification causes Context Dumping. No feedback loop perpetuates Not Fixing the Primitives. The fix is organizational: team agreements, review processes, and treating primitives as shared infrastructure.&rdquo; (ch20 L373)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-20-org-failure-amplifier-assessment &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+```
