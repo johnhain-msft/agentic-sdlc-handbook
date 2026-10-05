@@ -237,7 +237,7 @@ format:
 
   <div class="ws-instruction">
     The executive who holds the leadership view must be in the room. Each of you writes a phase number on a sticky note
-    <b>before either speaks</b>, then place both at once and copy the numbers into the table. Mark the developers' row only from the returns of
+    <b>before either speaks</b>, then place both notes at once and copy the numbers into the table. Mark the developers' row only from the returns of
     <b>WS-02-shadow-ai-usage-inventory</b>. Write the evidence for each mark, complete the gap sentence, name what is ungoverned because of the difference,
     and give it an owner and a date. Last, count the Panel A ticks into the rollup.
   </div>
