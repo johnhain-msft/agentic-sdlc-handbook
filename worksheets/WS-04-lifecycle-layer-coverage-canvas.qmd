@@ -1,0 +1,332 @@
+---
+title: "Lifecycle Layer Coverage Canvas: Who, Which Agent, Which Platform, Per Phase"
+pagetitle: "WS-04-lifecycle-layer-coverage-canvas"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-04-lifecycle-layer-coverage-canvas</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  2 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Lifecycle Layer Coverage Canvas: Who, Which Agent, Which Platform, Per Phase</h1>
+      <p class="ws-sub">A one-page baseline map of our current agentic SDLC coverage across all eight phases, with named owners and evidenced gaps.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-04-lifecycle-layer-coverage-canvas</b><br>
+      Pack B - Where we actually are<br>
+      fill order <b>2</b> &middot; type <b>canvas</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Agentic SDLC Reference Architecture</b>, <i>Mapping the Layers Across the Lifecycle</i> &middot;
+    <code>handbook/ch04-the-reference-architecture.qmd</code> L69-89 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch04-the-reference-architecture.html#sec-ref-arch-lifecycle-mapping">#sec-ref-arch-lifecycle-mapping</a>
+    &middot; &ldquo;The three layers apply at every phase of software delivery&rdquo;
+  </div>
+
+  <div class="ws-instruction">
+    For each of the eight lifecycle phases, name the human who is accountable, mark the agent capability you actually use today
+    (none, pilot or production), name the platform systems behind it, tick where you are now (Automated, Assisted or Manual),
+    and write the gap in one line. Where nobody owns a phase, write <b>unowned</b> &mdash; that is the finding. Any tick above
+    Manual needs the tool, pipeline or workflow that justifies it in column 10. Then set your 6- and 12-month targets.
+    The grey columns are the book's; compare yours against them, and do not write in them.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel A &mdash; Lifecycle coverage canvas
+      <span class="ws-block-note">one row per phase, eight fixed rows &middot; fill the columns in number order, row by row</span></h2>
+    <div style="display:flex;gap:2mm;margin-bottom:2mm;align-items:stretch">
+<div class="prior" style="flex:1;padding:2mm;text-align:center"><b>HUMAN LAYER</b><br><span style="font-size:7.5pt">Roles: Product, Architecture, Engineering, QA, Operations<br>Functions: Decisions, Governance, Accountability</span></div>
+<div style="flex:0 0 38mm;text-align:center;font-size:7pt;align-self:center">&rarr; sets constraints, delegates tasks<br>&larr; escalations, approvals, results</div>
+<div class="prior" style="flex:1;padding:2mm;text-align:center"><b>AGENT LAYER</b><br><span style="font-size:7.5pt">Capabilities: Generate, Analyze, Test, Review<br>Boundaries: Scoped authority, context-dependent, auditable</span></div>
+<div style="flex:0 0 38mm;text-align:center;font-size:7pt;align-self:center">&rarr; invokes tools, reads context<br>&larr; build results, test output, telemetry</div>
+<div class="prior" style="flex:1;padding:2mm;text-align:center"><b>PLATFORM LAYER</b><br><span style="font-size:7.5pt">Infrastructure: SCM, CI/CD, Auth, Observability<br>Integrations: APIs, Webhooks, Context Sources, Artifacts</span></div>
+</div>
+<div class="prior-src" style="margin:0 0 2mm">The three-layer reference architecture, reproduced from ch04 L31-65 &middot; Human = columns 3&ndash;4, Agent = columns 5&ndash;6, Platform = columns 7&ndash;8</div>
+    <table class="ws">
+      <colgroup><col style="width:4.78%"><col style="width:5.26%"><col style="width:7.66%"><col style="width:7.66%"><col style="width:7.66%"><col style="width:6.70%"><col style="width:7.66%"><col style="width:8.13%"><col style="width:7.18%"><col style="width:9.09%"><col style="width:5.74%"><col style="width:8.13%"><col style="width:7.18%"><col style="width:7.18%"></colgroup>
+      <thead><tr><th><span class="fno">1</span> Phase</th><th><span class="fno">2</span> Bucket</th><th><span class="fno">3</span> Human role, per the book</th><th><span class="fno">4</span> <b>Our accountable human</b></th><th><span class="fno">5</span> Agent capability, per the book</th><th><span class="fno">6</span> <b>Our agent capability today</b></th><th><span class="fno">7</span> Platform systems, per the book</th><th><span class="fno">8</span> <b>Our platform systems</b></th><th><span class="fno">9</span> <b>Our current state</b></th><th><span class="fno">10</span> Evidence for the tick</th><th><span class="fno">11</span> Book's vendor maturity tag</th><th><span class="fno">12</span> Gap note</th><th><span class="fno">13</span> Target state at 6 months</th><th><span class="fno">14</span> Target state at 12 months</th></tr></thead>
+      <tbody>
+<tr>
+<td class="prior"><b>Ideate</b><span class="prior-src">ch04 L79</span></td>
+<td class="prior">INTENT<span class="prior-src">ch04 L81</span></td>
+<td class="prior">Set objectives and scope<span class="prior-src">ch04 L82</span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="prior">Research prior art, surface conflicts<span class="prior-src">ch04 L83</span></td>
+<td class="fill"><div class="f-select"><span class="opt">none</span><span class="opt">pilot</span><span class="opt">production</span></div></td>
+<td class="prior">Knowledge bases, collaboration tools<span class="prior-src">ch04 L84</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">Emerging<span class="prior-src">ch04 L85</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+</tr>
+<tr>
+<td class="prior"><b>Plan</b><span class="prior-src">ch04 L79</span></td>
+<td class="prior">INTENT<span class="prior-src">ch04 L81</span></td>
+<td class="prior">Make architecture choices<span class="prior-src">ch04 L82</span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="prior">Draft ADRs, decompose tasks<span class="prior-src">ch04 L83</span></td>
+<td class="fill"><div class="f-select"><span class="opt">none</span><span class="opt">pilot</span><span class="opt">production</span></div></td>
+<td class="prior">Issue trackers, project management<span class="prior-src">ch04 L84</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">Emerging<span class="prior-src">ch04 L85</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+</tr>
+<tr>
+<td class="prior"><b>Code</b><span class="prior-src">ch04 L79</span></td>
+<td class="prior">BUILD<span class="prior-src">ch04 L81</span></td>
+<td class="prior">Review agent output<span class="prior-src">ch04 L82</span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="prior">Multi-file code generation<span class="prior-src">ch04 L83</span></td>
+<td class="fill"><div class="f-select"><span class="opt">none</span><span class="opt">pilot</span><span class="opt">production</span></div></td>
+<td class="prior">IDE, SCM, context APIs<span class="prior-src">ch04 L84</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">Now<span class="prior-src">ch04 L85</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+</tr>
+<tr>
+<td class="prior"><b>Build</b><span class="prior-src">ch04 L79</span></td>
+<td class="prior">BUILD<span class="prior-src">ch04 L81</span></td>
+<td class="prior">Own build config<span class="prior-src">ch04 L82</span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="prior">Diagnose build failures<span class="prior-src">ch04 L83</span></td>
+<td class="fill"><div class="f-select"><span class="opt">none</span><span class="opt">pilot</span><span class="opt">production</span></div></td>
+<td class="prior">CI/CD pipelines, dependency management<span class="prior-src">ch04 L84</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">Now<span class="prior-src">ch04 L85</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+</tr>
+<tr>
+<td class="prior"><b>Test</b><span class="prior-src">ch04 L79</span></td>
+<td class="prior">BUILD<span class="prior-src">ch04 L81</span></td>
+<td class="prior">Define test policy<span class="prior-src">ch04 L82</span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="prior">Generate tests, find coverage gaps<span class="prior-src">ch04 L83</span></td>
+<td class="fill"><div class="f-select"><span class="opt">none</span><span class="opt">pilot</span><span class="opt">production</span></div></td>
+<td class="prior">Test frameworks, infrastructure<span class="prior-src">ch04 L84</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">Emerging<span class="prior-src">ch04 L85</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+</tr>
+<tr>
+<td class="prior"><b>Review</b><span class="prior-src">ch04 L79</span></td>
+<td class="prior">BUILD<span class="prior-src">ch04 L81</span></td>
+<td class="prior">Final code sign-off<span class="prior-src">ch04 L82</span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="prior">Automated review, catch defects<span class="prior-src">ch04 L83</span></td>
+<td class="fill"><div class="f-select"><span class="opt">none</span><span class="opt">pilot</span><span class="opt">production</span></div></td>
+<td class="prior">Pull request APIs, policy engines<span class="prior-src">ch04 L84</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">Now<span class="prior-src">ch04 L85</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+</tr>
+<tr>
+<td class="prior"><b>Release</b><span class="prior-src">ch04 L79</span></td>
+<td class="prior">OPERATE<span class="prior-src">ch04 L81</span></td>
+<td class="prior">Go/no-go decision<span class="prior-src">ch04 L82</span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="prior">Draft changelogs, flag breaking changes<span class="prior-src">ch04 L83</span></td>
+<td class="fill"><div class="f-select"><span class="opt">none</span><span class="opt">pilot</span><span class="opt">production</span></div></td>
+<td class="prior">Deployment pipelines, gates<span class="prior-src">ch04 L84</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">Emerging<span class="prior-src">ch04 L85</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+</tr>
+<tr>
+<td class="prior"><b>Operate</b><span class="prior-src">ch04 L79</span></td>
+<td class="prior">OPERATE<span class="prior-src">ch04 L81</span></td>
+<td class="prior">Own incident response<span class="prior-src">ch04 L82</span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="prior">Correlate alerts, suggest actions<span class="prior-src">ch04 L83</span></td>
+<td class="fill"><div class="f-select"><span class="opt">none</span><span class="opt">pilot</span><span class="opt">production</span></div></td>
+<td class="prior">Monitoring, alerting, log systems<span class="prior-src">ch04 L84</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">Directional<span class="prior-src">ch04 L85</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+<td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Assisted</span><span class="opt">Manual</span></div></td>
+</tr>
+      </tbody>
+    </table>
+    <div class="prior" style="margin-top:2mm;font-size:7.5pt">
+      <b>Key to column 11 &mdash; maturity tiers.</b>
+      <b>Now</b> = available across two or more vendors. <b>Emerging</b> = available in one or two tools, or in limited preview.
+      <b>Directional</b> = announced, demonstrated or on public roadmaps but not production-ready.
+      These are statements about what vendors can deliver, not a maturity target. A phase tagged Directional where you are Manual is not a gap &mdash; it is the market.
+      <span class="prior-src">ch04 L71, L85</span>
+    </div>
+  </div>
+
+<div class="ws-foot">
+<div>WS-04-lifecycle-layer-coverage-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
+<div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+&nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+</div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Panel B &mdash; Leadership versus reality: where we operate</h1>
+      <p class="ws-sub">Two marks on the same four-phase scale, made independently, then the gap between them and who owns it. Filled after Panel A.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-04-lifecycle-layer-coverage-canvas</b><br>
+      Pack B - Where we actually are<br>
+      fill order <b>2</b> &middot; type <b>canvas</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The AI-Native Landscape</b>, <i>From Autocomplete to Agents</i> &middot;
+    <code>handbook/ch02-the-ai-native-landscape.qmd</code> L31-71 &middot; Panel A bucket rollup draws on
+    <i>The 8-Phase Evaluation Framework</i>, L168-197
+  </div>
+
+  <div class="ws-instruction">
+    The executive who holds the leadership view must be in the room. Each of you writes a phase number on a sticky note
+    <b>before either speaks</b>, then place both at once and copy the numbers into the table. Mark the developers' row only from the returns of
+    <b>WS-02-shadow-ai-usage-inventory</b>. Write the evidence for each mark, complete the gap sentence, name what is ungoverned because of the difference,
+    and give it an owner and a date. Last, count the Panel A ticks into the rollup.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel B &mdash; Leadership-versus-reality placement gap
+      <span class="ws-block-note">two fixed rows &middot; neither party sees the other's mark before both are written</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:12%"><col style="width:17%"><col style="width:5%"><col style="width:15%"><col style="width:14%"><col style="width:11%"><col style="width:16%"></colgroup>
+      <thead><tr><th><span class="fno">15</span> Mark</th><th><span class="fno">16</span> Four-phase scale, per the book</th><th><span class="fno">16</span> <b>Phase</b></th><th><span class="fno">17</span> <b>Evidence for this mark</b></th><th><span class="fno">18</span> Source of the mark</th><th><span class="fno">18</span> <b>Named source</b></th><th><span class="fno">19</span> Key risk at the developers' actual phase</th></tr></thead>
+      <tbody>
+<tr>
+<td class="prior"><b>Where leadership believes we operate</b><span class="prior-src">ch02 L66-68</span></td>
+<td class="prior" style="font-size:7.5pt"><b>Phase 1</b> Code completion (2021-2023), passive suggestion<br><b>Phase 2</b> Conversational assistance (2023-2024), active Q&amp;A<br><b>Phase 3</b> Agentic coding (2024-2025), goal-directed execution<br><b>Phase 4</b> Orchestrated SDLC (emerging), autonomous lifecycle participation<span class="prior-src">ch02 L33-39, L57-64</span></td>
+<td class="fill"><div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span></div></td>
+<td class="fill"><span class="f-box"></span></td>
+<td class="prior">Supplied by the executive present.<span class="prior-src">ch02 L160; WS-02-shadow-ai-usage-inventory</span><br><br><span style="font-style:normal">Named source:</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior" style="font-size:7.5pt"><b>Phase 1</b> Low &mdash; easy to reject<br><b>Phase 2</b> Medium &mdash; harder to verify<br><b>Phase 3</b> High &mdash; confident errors at scale<br><b>Phase 4</b> Very high &mdash; governance gap<span class="prior-src">ch02 L59-64</span></td>
+</tr>
+<tr>
+<td class="prior"><b>Where our developers actually operate</b><span class="prior-src">ch02 L66-68</span></td>
+<td class="prior" style="font-size:7.5pt"><b>Phase 1</b> Code completion (2021-2023), passive suggestion<br><b>Phase 2</b> Conversational assistance (2023-2024), active Q&amp;A<br><b>Phase 3</b> Agentic coding (2024-2025), goal-directed execution<br><b>Phase 4</b> Orchestrated SDLC (emerging), autonomous lifecycle participation<span class="prior-src">ch02 L33-39, L57-64</span></td>
+<td class="fill"><div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span></div></td>
+<td class="fill"><span class="f-box"></span></td>
+<td class="prior">Must be sourced from <b>WS-02-shadow-ai-usage-inventory</b> returns, not from anyone&rsquo;s impression of what developers are doing.<span class="prior-src">ch02 L160; WS-02-shadow-ai-usage-inventory</span><br><br><span style="font-style:normal">Named source:</span></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior" style="font-size:7.5pt"><b>Phase 1</b> Low &mdash; easy to reject<br><b>Phase 2</b> Medium &mdash; harder to verify<br><b>Phase 3</b> High &mdash; confident errors at scale<br><b>Phase 4</b> Very high &mdash; governance gap<span class="prior-src">ch02 L59-64</span></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>The gap <span class="ws-block-note">one sentence, then what it exposes</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:20%"><col style="width:30%"><col style="width:50%"></colgroup>
+      <thead><tr><th><span class="fno">20</span> Gap statement</th><th>Template, per the book</th><th>The completed sentence, in one line</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="fill"><span class="f-computed" data-formula="field 16, leadership row &rarr; first blank; field 16, developers row &rarr; second blank"></span></td>
+          <td class="prior">We are evaluating Phase __ while our teams run Phase __.<span class="prior-src">ch02 L66-68</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ws" style="margin-top:2mm">
+      <colgroup><col style="width:5%"><col style="width:20%"><col style="width:45%"><col style="width:30%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What is ungoverned because of the difference</th><th>Owner and date closed or accepted</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">21</span></td>
+          <td><b>Governance exposure sitting in the gap</b><span class="prior-src">ch02 L68</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="fno">22</span> <span class="f-owner"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Bucket coverage rollup <span class="ws-block-note">three counts per bucket, not a score &middot; count the column 9 ticks from Panel A &middot; ask which bucket is empty</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:20%"><col style="width:25%"><col style="width:16.7%"><col style="width:16.7%"><col style="width:16.6%"></colgroup>
+      <thead><tr><th></th><th>Bucket</th><th>Phases, per the book</th><th>Manual</th><th>Assisted</th><th>Automated</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td class="prior"><b>INTENT</b><span class="prior-src">ch04 L81; ch02 L189-191</span></td><td class="prior">Ideate, Plan</td>
+          <td class="fill"><span class="f-computed" data-formula="count of Manual in column 9, Ideate + Plan"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of Assisted in column 9, Ideate + Plan"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of Automated in column 9, Ideate + Plan"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">24</span></td><td class="prior"><b>BUILD</b><span class="prior-src">ch04 L81; ch02 L189-191</span></td><td class="prior">Code, Build, Test, Review</td>
+          <td class="fill"><span class="f-computed" data-formula="count of Manual in column 9, Code + Build + Test + Review"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of Assisted in column 9, Code + Build + Test + Review"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of Automated in column 9, Code + Build + Test + Review"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td class="prior"><b>OPERATE</b><span class="prior-src">ch04 L81; ch02 L189-191</span></td><td class="prior">Release, Operate</td>
+          <td class="fill"><span class="f-computed" data-formula="count of Manual in column 9, Release + Operate"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of Assisted in column 9, Release + Operate"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of Automated in column 9, Release + Operate"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+<div class="ws-foot">
+<div>WS-04-lifecycle-layer-coverage-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+<div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+&nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+</div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+```
