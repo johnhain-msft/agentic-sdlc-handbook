@@ -1,0 +1,123 @@
+---
+title: "Tooling Assumption Audit: What a Better Model Will Not Fix"
+pagetitle: "WS-01-model-upgrade-assumption-audit"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-01-model-upgrade-assumption-audit</b> &middot; review copy &middot; declared format <b>A4 portrait</b> &middot;
+  2 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Tooling Assumption Audit: What a Better Model Will Not Fix</h1>
+      <p class="ws-sub">A one-page assumption register that pre-empts the &ldquo;let&rsquo;s wait for the next model&rdquo; objection before it reaches the steering committee.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-01-model-upgrade-assumption-audit</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>1</b> &middot; type <b>assessment</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Agentic SDLC Thesis</b>, <i>Why Tools Aren&rsquo;t the Answer</i> &middot;
+    <code>handbook/ch01-the-agentic-sdlc-thesis.qmd</code> L37-49 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch01-the-agentic-sdlc-thesis.html#sec-thesis-tools-not-the-answer">#sec-thesis-tools-not-the-answer</a>
+  </div>
+
+  <div class="ws-instruction">
+    For each of the three structural properties, write where your current plan, budget or timeline
+    silently assumes a future model release will solve the problem, and what you will do instead.
+    Name the evidence so someone else can find it, name one person who owns the action, and set the
+    date the row is re-read. The three rows are fixed; do not add a fourth.
+  </div>
+
+  <div class="ws-block">
+    <h2>Assumption register <span class="ws-block-note">three fixed properties &mdash; no fourth</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:20%"><col style="width:25%"><col style="width:25%"><col style="width:26%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>Property A</th><th>Property B</th><th>Property C</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">1</span></td><td><b>Structural property</b></td><td class="prior">Context is finite and fragile<span class="prior-src">ch01 L43-47</span></td><td class="prior">Context must be explicit<span class="prior-src">ch01 L43-47</span></td><td class="prior">Output is probabilistic<span class="prior-src">ch01 L43-47</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">2</span></td><td><b>What holds regardless of model</b></td><td class="prior">&ldquo;Context is a scarce resource that degrades under load&rdquo;<span class="prior-src">ch01 L43-47</span></td><td class="prior">&ldquo;What isn't in the context window doesn't exist for the agent&rdquo;<span class="prior-src">ch01 L43-47</span></td><td class="prior">&ldquo;Determinism comes from constraints, structure, and grounding, not from the model itself&rdquo;<span class="prior-src">ch01 L43-47</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">3</span></td><td><b>Why a bigger or better model does not fix it</b></td><td class="prior">Doubling the window and doubling the input leaves you in the same place, or worse<span class="prior-src">ch01 L43-47</span></td><td class="prior">Models are stateless; undocumented knowledge is invisible to them<span class="prior-src">ch01 L43-47</span></td><td class="prior">A language model always produces something, which makes quality failures silent<span class="prior-src">ch01 L43-47</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">4</span></td><td><b>Where our plan, budget or timeline assumes a future release fixes this</b><span style="display:block;font-size:7pt;color:#454f59">The specific assumption, in one sentence.</span></td><td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">5</span></td><td><b>Evidence the assumption is being made</b><span style="display:block;font-size:7pt;color:#454f59">The document, slide, budget line or sentence it lives in &mdash; locatable by someone else.</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">6</span></td><td><b>Confidence a model release would actually fix it</b><span style="display:block;font-size:7pt;color:#454f59">Argued in the room, not scored by formula.</span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">7</span></td><td><b>What we will do instead</b><span style="display:block;font-size:7pt;color:#454f59">An action: a thing to build, document, decide or measure (ch01 L49 intent).</span></td><td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">8</span></td><td><b>Owner</b><span style="display:block;font-size:7pt;color:#454f59">A named individual, never a function or a team.</span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">9</span></td><td><b>First review date</b><span style="display:block;font-size:7pt;color:#454f59">When the row is re-read, not when the work finishes.</span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-01-model-upgrade-assumption-audit &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Tooling Assumption Audit: What a Better Model Will Not Fix</h1>
+      <p class="ws-sub">Acknowledge the asymmetry, then sign the register.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-01-model-upgrade-assumption-audit</b><br>
+      Pack C - The case and the money<br>
+      continued &middot; type <b>assessment</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Failure-mode asymmetry <span class="ws-block-note">ch01 L49</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:38%"><col style="width:32%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">10</span></td><td><b>Failure-mode asymmetry acknowledged</b></td>
+          <td class="prior">The failure mode of a weak model is obvious: it can&rsquo;t do the task. The failure mode of a strong model with poor context is insidious: it often produces plausible output that looks correct and can silently violate your system&rsquo;s invariants.<span class="prior-src">ch01 L49</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>The room has read this aloud</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">11</span></td><td><b>Sponsor signature + date</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill tall"><span class="f-sign"></span><span style="display:block;font-size:7pt;color:#454f59">The executive who will be asked &ldquo;why aren&rsquo;t we waiting?&rdquo;</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    Context windows have grown roughly 100&ndash;1,000&times; in five years, from GPT-3&rsquo;s 2,048 tokens in 2020 to the
+    200K&ndash;2M tokens available in current frontier models<sup>1</sup>, yet satisfaction with AI on complex engineering
+    tasks has not kept pace<sup>2</sup>. (ch01 L49)<br>
+    <span style="font-size:6.8pt"><sup>1</sup> GPT-3 supported 2,048 tokens (Brown et al., 2020). GPT-4 Turbo expanded to 128K tokens (OpenAI DevDay, November 2023). Gemini 1.5 Pro reached 1M tokens (Google, February 2024). Claude 3 launched with 200K tokens (Anthropic, March 2024).
+    <sup>2</sup> In the 2024 Stack Overflow Developer Survey, 45% of professional developers rated AI tools as &ldquo;bad&rdquo; or &ldquo;very bad&rdquo; at handling complex tasks, even as overall AI adoption reached 76%. See survey.stackoverflow.co/2024/ai. (ch01 footnotes)</span>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-01-model-upgrade-assumption-audit &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
