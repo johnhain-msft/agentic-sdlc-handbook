@@ -1,0 +1,361 @@
+---
+title: "Workload Triage Screen: Does This Work Belong in the Agentic Path?"
+pagetitle: "WS-27-workload-triage"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-27-workload-triage</b> &middot; review copy &middot; declared format <b>A4 portrait</b> &middot;
+  3 sheet(s): Panel A front and back (print one card per backlog item, double-sided), then Panel B.
+  Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Workload Triage Screen: Does This Work Belong in the Agentic Path?</h1>
+      <p class="ws-sub">Panel A, front of card. A triage screen that keeps the pilot backlog free of work the methodology will handle worse than a human would.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-27-workload-triage</b><br>
+      Pack B - Where we actually are<br>
+      fill order <b>4</b> &middot; type <b>decision</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>What Comes Next</b>, <i>When NOT to Use Agentic Workflows</i> &middot;
+    <code>handbook/ch27-what-comes-next.qmd</code> L129-143 &middot; ch10 L88-120 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-when-not-to-use">#sec-next-when-not-to-use</a>
+  </div>
+
+  <div class="ws-instruction">
+    <b>One card per backlog item. Print the deck from fifteen to twenty real items.</b>
+    Write the item, then run it past the five exclusions. Tick an exclusion only if it applies to this item.
+    Turn the card over for the three gates and the routing, then drop it on the matching pile.
+    The tech lead who owns the backlog holds the pen, with a senior engineer who will run the agents.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel A &mdash; the triage screen <span class="ws-block-note">one row per candidate work item &middot; exclusions 1-5</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:20%"><col style="width:46%"><col style="width:28%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Column</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Work item ID and title</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>Selected how</b></td>
+          <td class="prior">Recorded once for the sample, printed on the tally sheet.<span class="prior-src">derived</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">random</span><span class="opt">stratified</span><span class="opt">hand-picked</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Exclusion 1 &mdash; fewer than 50 lines of change?</b></td>
+          <td class="prior">If you can hold the full scope in your head, the overhead of persona design, wave planning and checkpoint discipline is not worth it. Just write the code.<span class="prior-src">ch27 L131</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>applies</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>Exclusion 2 &mdash; domain knowledge entirely implicit?</b></td>
+          <td class="prior">Conventions, constraints and trade-offs that cannot be externalised into instruction files, because they depend on political context, unwritten relationships or organisational history. <b>Routes to instrumentation, not rejection.</b><span class="prior-src">ch27 L133</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>applies</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>Exclusion 3 &mdash; failure cost low and iteration cheap?</b></td>
+          <td class="prior">Throwaway scripts, prototyping, exploratory work: a single agent prompt with no orchestration is faster and sufficient.<span class="prior-src">ch27 L135</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>applies</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>Exclusion 4 &mdash; inherently sequential and judgment-dense?</b></td>
+          <td class="prior">Naming things, choosing abstractions, defining API contracts. "Use agents as sounding boards, not as orchestrated fleets."<span class="prior-src">ch27 L137</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>applies</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Exclusion 5 &mdash; the platform fights automation?</b></td>
+          <td class="prior">The platform's internals are undocumented and hostile to external manipulation. Escalate to a human with a precise checklist rather than attempting a fourth approach.<span class="prior-src">ch27 L139</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>applies</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-27-workload-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Card no. <span style="display:inline-block;width:14mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Workload Triage Screen: Does This Work Belong in the Agentic Path?</h1>
+      <p class="ws-sub">Panel A, back of card. The delegation gates, the routing, and the pile this item goes on.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-27-workload-triage</b><br>
+      Pack B - Where we actually are<br>
+      fill order <b>4</b> &middot; type <b>decision</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>What Comes Next</b> <code>handbook/ch27-what-comes-next.qmd</code> L131-141 &middot;
+    <b>The Practitioner's Mindset</b>, <i>When to Use Agents and When to Code Manually</i>
+    <code>handbook/ch10-the-practitioners-mindset.qmd</code> L88-120 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-when-not-to-use">#sec-next-when-not-to-use</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel A &mdash; gates, routing, reason <span class="ws-block-note">columns 8-15 &middot; routing rules printed below</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:20%"><col style="width:40%"><col style="width:34%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Column</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Gate A &mdash; can you specify it clearly in under two minutes?</b></td>
+          <td class="prior">Could you explain it to a new team member in two minutes, and would they complete it with the right files and a style guide?<span class="prior-src">ch10 L88-120</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>Gate B &mdash; is the spec shorter than the code?</b></td>
+          <td class="prior">200 words of instruction for 20 lines of judgment-dense code means you are faster writing it.<span class="prior-src">ch10 L88-120</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>Gate C &mdash; is the scope bounded?</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Routing</b></td>
+          <td class="prior"><b>Agentic now</b> &middot; <b>Split</b> &middot; <b>Instrument first</b> &middot; <b>Keep manual</b>.
+            Any of exclusions 1, 3, 4 or 5 &rarr; Keep manual. Exclusion 2 &rarr; Instrument first.
+            Gate A <i>no</i> with splittable parts &rarr; Split. Gate B or C <i>no</i> &rarr; Keep manual. All clear &rarr; Agentic now.<span class="prior-src">ch27 L131-139; ch10 L88-120</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Agentic now</span><span class="opt">Split</span><span class="opt">Instrument first</span><span class="opt">Keep manual</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Governing reason</b></td>
+          <td class="prior">Exactly one. An item routed out for two reasons records the one that decided it first.<span class="prior-src">ch27 L141</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Excl. 1 &mdash; under 50 lines</span><span class="opt">Excl. 2 &mdash; implicit domain knowledge</span><span class="opt">Excl. 3 &mdash; low failure cost</span><span class="opt">Excl. 4 &mdash; sequential, judgment-dense</span><span class="opt">Excl. 5 &mdash; platform fights automation</span><span class="opt">Gate A &mdash; specifiable in two minutes</span><span class="opt">Gate B &mdash; spec shorter than code</span><span class="opt">Gate C &mdash; scope bounded</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>If Instrument first &mdash; the primitive to write</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch27 L133; ch12</span></td>
+          <td class="fill"><span class="f-box sm"></span><span class="prior-src" style="display:block">Which instruction file, memory file or skill, and the WS-03 register row it becomes.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>If Split &mdash; the judgment part reserved for a human</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch10 L88-120</span></td>
+          <td class="fill"><span class="f-box sm"></span><span class="prior-src" style="display:block">Named explicitly, not "the tricky bits".</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>Screened by, and date</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Tally <span class="ws-block-note">once per deck, on the last card &middot; written up from the piles</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:20%"><col style="width:40%"><col style="width:34%">
+      </colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">&mdash;</span></td>
+          <td><b>Delegable share of this sample</b></td>
+          <td class="prior"><b>Measured from this sample of N items &mdash; not a target, not a capacity claim, not a projection.</b>
+            Count routed Agentic now or Split, divided by N, with N printed.<span class="prior-src">derived</span></td>
+          <td class="fill">
+            <span class="f-text sm"></span><span class="prior-src" style="display:block">N =</span>
+            <span class="f-computed" data-formula="(count Agentic now + count Split) &divide; N"></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-27-workload-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Card no. <span style="display:inline-block;width:14mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Workload Triage Screen: Does This Work Belong in the Agentic Path?</h1>
+      <p class="ws-sub">Panel B. A portfolio-fit rubric used once, to choose the pilot domain.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-27-workload-triage</b><br>
+      Pack B - Where we actually are<br>
+      fill order <b>4</b> &middot; type <b>decision</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Orchestrating a 75-File Architecture Change Across 25 Agents</b>
+    <code>case-study-apm-overhaul.qmd</code> L10 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/case-study-apm-overhaul.html#sec-cs-apm-overview">#sec-cs-apm-overview</a>
+  </div>
+
+  <div class="ws-instruction">
+    Tech lead and senior engineer, with the executive sponsor for this page only: score each of the four work types
+    0-3 on each question, using the anchors below. Add the row. Name the orchestrator on the top row, then record the verdict.
+  </div>
+
+  <div class="ws-block">
+    <h2>Panel B &mdash; portfolio fit <span class="ws-block-note">four fixed rows &middot; one page</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:22%"><col style="width:16%"><col style="width:16%"><col style="width:16%"><col style="width:16%"><col style="width:14%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">16</span>Work type</th>
+          <th><span class="fno">17</span>Do we have this at volume?</th>
+          <th><span class="fno">18</span>Do we have a verification harness for it?</th>
+          <th><span class="fno">19</span>Do we have a named human orchestrator?</th>
+          <th><span class="fno">20</span>Is failure recoverable?</th>
+          <th><span class="fno">21</span>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">Production codebase refactor<span class="prior-src">case study L10</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="17 + 18 + 19 + 20"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">Editorial / composition work<span class="prior-src">case study L10</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="17 + 18 + 19 + 20"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">Infrastructure automation<span class="prior-src">case study L10</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="17 + 18 + 19 + 20"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">Non-engineering work<span class="prior-src">case study L10</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">0</span><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="17 + 18 + 19 + 20"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Scoring anchors <span class="ws-block-note">printed so two people scoring separately mean the same thing</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:22%"><col style="width:78%"></colgroup>
+      <tbody>
+        <tr><td class="locked"><b>17 At volume</b></td>
+          <td class="prior"><b>0</b> none &middot; <b>1</b> occasional &middot; <b>2</b> a steady stream &middot; <b>3</b> a backlog we cannot clear<span class="prior-src">derived</span></td></tr>
+        <tr><td class="locked"><b>18 Verification harness</b></td>
+          <td class="prior"><b>0</b> none &middot; <b>1</b> manual spot-check &middot; <b>2</b> partial automated coverage &middot; <b>3</b> automated gates we trust to block a bad change<span class="prior-src">derived</span></td></tr>
+        <tr><td class="locked"><b>19 Named orchestrator</b></td>
+          <td class="prior"><b>0</b> nobody &middot; <b>1</b> someone willing but unallocated &middot; <b>2</b> named, partial time &middot; <b>3</b> named, with protected time<span class="prior-src">derived</span></td></tr>
+        <tr><td class="locked"><b>20 Failure recoverable</b></td>
+          <td class="prior"><b>0</b> production-irreversible &middot; <b>1</b> recoverable via incident &middot; <b>2</b> recoverable within a release cycle &middot; <b>3</b> revert is trivial<span class="prior-src">derived</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Pilot domain <span class="ws-block-note">on the highest-scoring row</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:20%"><col style="width:36%"><col style="width:38%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">22</span></td>
+          <td><b>Named orchestrator</b></td>
+          <td class="prior">Required on the highest-scoring row.<span class="prior-src">case study L10</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">23</span></td>
+          <td><b>Verdict</b></td>
+          <td class="prior">The highest-scoring row becomes the pilot domain; the runner-up is recorded as wave two.<span class="prior-src">case study L10</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pilot domain</span><span class="opt">wave two</span><span class="opt">not now</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-27-workload-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:28mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+```
