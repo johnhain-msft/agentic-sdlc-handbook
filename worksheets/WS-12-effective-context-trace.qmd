@@ -69,7 +69,7 @@ format:
   <div class="ws-block">
     <h2>The trace <span class="ws-block-note">each layer adds specificity; none contradicts the layer above (ch12 L410). Owner and date required for every finding other than clean.</span></h2>
     <table class="ws">
-      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:4%"><col style="width:6%"><col style="width:7%"><col style="width:10%"><col style="width:17%"><col style="width:18%"></colgroup>
+      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:7%"><col style="width:6%"><col style="width:9%"><col style="width:10%"><col style="width:16%"><col style="width:14%"></colgroup>
       <thead><tr><th><span class="fno">1</span> Layer</th><th><span class="fno">2</span> Anything at this layer</th><th><span class="fno">3</span> File(s) that load</th><th><span class="fno">4</span> Why it loads &mdash; the predicate (default printed)</th><th><span class="fno">5</span> What it contributes to <i>this</i> task</th><th><span class="fno">6</span> Adds specificity</th><th><span class="fno">7</span> Contradicts a layer above</th><th><span class="fno">8</span> Contradiction detail: quote both sides</th><th><span class="fno">9</span> Finding</th><th><span class="fno">10</span> Action</th><th><span class="fno">11</span> Owner and date</th></tr></thead>
       <tbody>
         <tr>
@@ -228,7 +228,7 @@ format:
   <div class="ws-block">
     <h2>The trace <span class="ws-block-note">each layer adds specificity; none contradicts the layer above (ch12 L410). Owner and date required for every finding other than clean.</span></h2>
     <table class="ws">
-      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:4%"><col style="width:6%"><col style="width:7%"><col style="width:10%"><col style="width:17%"><col style="width:18%"></colgroup>
+      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:7%"><col style="width:6%"><col style="width:9%"><col style="width:10%"><col style="width:16%"><col style="width:14%"></colgroup>
       <thead><tr><th><span class="fno">1</span> Layer</th><th><span class="fno">2</span> Anything at this layer</th><th><span class="fno">3</span> File(s) that load</th><th><span class="fno">4</span> Why it loads &mdash; the predicate (default printed)</th><th><span class="fno">5</span> What it contributes to <i>this</i> task</th><th><span class="fno">6</span> Adds specificity</th><th><span class="fno">7</span> Contradicts a layer above</th><th><span class="fno">8</span> Contradiction detail: quote both sides</th><th><span class="fno">9</span> Finding</th><th><span class="fno">10</span> Action</th><th><span class="fno">11</span> Owner and date</th></tr></thead>
       <tbody>
         <tr>
@@ -387,7 +387,7 @@ format:
   <div class="ws-block">
     <h2>The trace <span class="ws-block-note">each layer adds specificity; none contradicts the layer above (ch12 L410). Owner and date required for every finding other than clean.</span></h2>
     <table class="ws">
-      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:4%"><col style="width:6%"><col style="width:7%"><col style="width:10%"><col style="width:17%"><col style="width:18%"></colgroup>
+      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:7%"><col style="width:6%"><col style="width:9%"><col style="width:10%"><col style="width:16%"><col style="width:14%"></colgroup>
       <thead><tr><th><span class="fno">1</span> Layer</th><th><span class="fno">2</span> Anything at this layer</th><th><span class="fno">3</span> File(s) that load</th><th><span class="fno">4</span> Why it loads &mdash; the predicate (default printed)</th><th><span class="fno">5</span> What it contributes to <i>this</i> task</th><th><span class="fno">6</span> Adds specificity</th><th><span class="fno">7</span> Contradicts a layer above</th><th><span class="fno">8</span> Contradiction detail: quote both sides</th><th><span class="fno">9</span> Finding</th><th><span class="fno">10</span> Action</th><th><span class="fno">11</span> Owner and date</th></tr></thead>
       <tbody>
         <tr>
