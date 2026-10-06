@@ -22,7 +22,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Central AI Team Charter — Mandate, First Loop, and the Reuse Metric</h1>
-      <p class="ws-sub">A signed central AI team charter with a named first loop and a reuse-based success metric — the staffing decision the chapter calls among the highest-leverage in the programme.</p>
+      <p class="ws-sub">A signed central AI team charter with a named first loop and a reuse-based success metric — the staffing decision the chapter calls among the highest-leverage in the program.</p>
     </div>
     <div class="ws-meta">
       <b>WS-07-central-team-charter</b><br>
@@ -40,7 +40,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Complete the left page first: record which working patterns you have and which anti-patterns you refuse, with evidence and mechanisms. Then charter the team, its first recurring ROI-positive loop, its distribution path and its mandatory reuse metric; set the escape hatch and assign all six lifecycle stages. In the centre gutter, answer whether this charter is the anti-pattern and write three mechanism-backed commitments. Have the accountable executive and the person who would become the bottleneck sign.
+    Complete the left page first: record which working patterns you have and which anti-patterns you refuse, with evidence and mechanisms. Then charter the team, its first recurring ROI-positive loop, its distribution path and its mandatory reuse metric; set the escape hatch and assign all six lifecycle stages. In the center gutter, answer whether this charter is the anti-pattern and write three mechanism-backed commitments. Have the accountable executive and the person who would become the bottleneck sign.
   </div>
 
   <div class="spread-layout" style="display:grid;grid-template-columns:minmax(0,1fr) 100mm minmax(0,1fr);grid-template-rows:auto auto;grid-template-areas:'left gutter right' 'left gutter lifecycle';gap:3mm 5mm;align-items:start;">
