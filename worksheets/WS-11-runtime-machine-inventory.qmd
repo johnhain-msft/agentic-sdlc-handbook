@@ -1,0 +1,336 @@
+---
+title: "Four-Part Runtime Inventory"
+pagetitle: "WS-11-runtime-machine-inventory"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-11-runtime-machine-inventory</b> &middot; declared format <b>A3 landscape</b> &middot; 3 sheets (one per block).
+  Anything spilling past a white page onto the grey background is a layout defect.
+</div>
+
+<!-- ================= SHEET 1 : BLOCK A ================= -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Four-Part Runtime Inventory</h1>
+      <p class="ws-sub">A current-state inventory that turns "the AI behaves differently for us" into a named part that differs.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-11-runtime-machine-inventory</b><br>
+      Pack D &middot; fill order 4 &middot; inventory<br>
+      format <b>A3 landscape</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>ch11 The Agentic Runtime Machine</b> &middot; heading &ldquo;The four parts&rdquo; &middot;
+    <code>handbook/ch11-the-runtime-machine.qmd</code> L30-57 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch11-the-runtime-machine.html#sec-runtime-four-parts">#sec-runtime-four-parts</a>
+    &middot; fill after <code>WS-04-five-layer-supply-chain-canvas</code> (its Agent Harness band is your harness row at a coarser resolution)
+  </div>
+
+  <div class="ws-instruction">
+    Write one line per part: the product and version in use today, the team that owns it, one named person, whether it is
+    standardised or left to developer choice, and the differences you actually see between teams. Where teams differ, use one copy of this
+    sheet per team and write the differences down before anyone merges them &mdash; the variation is the finding, not noise.
+    Count the client row from CI workflow files and endpoint data, not from memory: a CI runner invoking the harness on every pull request is a client.
+    Chapter note: the diagram draws a fifth node, Tools, that the prose does not count as a part; it is recorded under the harness at field 12.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A &mdash; the four-part runtime inventory
+      <span class="ws-block-note">fields 1&ndash;10: one row per part, in the chapter's order</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:7%"><col style="width:17%"><col style="width:10%"><col style="width:10%"><col style="width:7%">
+        <col style="width:8%"><col style="width:8%"><col style="width:10%"><col style="width:12%"><col style="width:11%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span> Part</th>
+          <th><span class="fno">2</span> What it is</th>
+          <th><span class="fno">3</span> Edge to the harness</th>
+          <th><span class="fno">4</span> Product and version in use today (more than one entry is expected)</th>
+          <th><span class="fno">5</span> Owning team</th>
+          <th><span class="fno">6</span> Named accountable individual (a person, not a function)</th>
+          <th><span class="fno">7</span> Standardised or left to choice (Unknown is a legitimate, useful entry)</th>
+          <th><span class="fno">8</span> Known variation between teams (the actual differences, named)</th>
+          <th><span class="fno">9</span> Who can inject or rewrite context at this layer (people, teams, systems)</th>
+          <th><span class="fno">10</span> Trust boundary inventoried?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior"><b>Model</b><span class="prior-src">ch11 L30, L50</span></td>
+          <td class="prior">The inference engine; text in, text out; by itself no tools, no memory of yesterday, no awareness of your codebase.<span class="prior-src">ch11 L50</span></td>
+          <td class="prior">Model &harr; harness: inference I/O.<span class="prior-src">ch11 L47</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Standardised</span><span class="opt">Recommended</span><span class="opt">Developer choice</span><span class="opt">Unknown</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Harness</b><span class="prior-src">ch11 L30, L52</span></td>
+          <td class="prior">The program that drives the model; manages the conversation, calls tools on its behalf, decides which files to load and when.<span class="prior-src">ch11 L52</span></td>
+          <td class="prior">The hub; no edge of its own.<span class="prior-src">ch11 L44-47</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Standardised</span><span class="opt">Recommended</span><span class="opt">Developer choice</span><span class="opt">Unknown</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Agent source code</b><span class="prior-src">ch11 L30, L54</span></td>
+          <td class="prior">The directory layout the harness consults; <i>executable configuration</i>, not passive documentation.<span class="prior-src">ch11 L54</span></td>
+          <td class="prior">Agent source code &harr; harness: load.<span class="prior-src">ch11 L46</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Standardised</span><span class="opt">Recommended</span><span class="opt">Developer choice</span><span class="opt">Unknown</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Client</b><span class="prior-src">ch11 L30, L56</span></td>
+          <td class="prior">The process that decides when a session runs and what bootstrap context it carries.<span class="prior-src">ch11 L56</span></td>
+          <td class="prior">Client &harr; harness: prompt / output.<span class="prior-src">ch11 L44</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Standardised</span><span class="opt">Recommended</span><span class="opt">Developer choice</span><span class="opt">Unknown</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="ws" style="margin-top:3mm">
+      <colgroup><col style="width:100%"></colgroup>
+      <tbody>
+        <tr><td class="prior"><b>Reference for field 9, printed:</b> the client is the first layer that can rewrite what lower layers see &mdash; a system prompt injected at the client level reaches the harness before any agent source code does, and the harness may reshape it further before the model sees a single token. Each layer mutates the input for the layer below it.<span class="prior-src">ch11 L56</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A, client and harness rows only
+      <span class="ws-block-note">fields 11&ndash;12</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:17%"><col style="width:38%"><col style="width:40%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Client row only &mdash; programmatic clients enumerated</b><br>The org's actual list; each entry is a separate trust boundary and gets its own line.</td>
+          <td class="prior">Interactive &mdash; a developer typing in a terminal, an IDE plugin forwarding a selection. Programmatic &mdash; agentic workflows running over CI, a cron daemon, a webhook receiver, a CI runner invoking the harness on every pull request.<span class="prior-src">ch11 L56</span></td>
+          <td class="fill taller"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Harness row only &mdash; tools the harness may orchestrate</b><br>The org's actual tool and MCP-server list.</td>
+          <td class="prior">The figure draws a fifth node the prose does not count as a part: <b>Tools</b>, &ldquo;classical CPU code orchestrated by the harness&rdquo;, on an invoke/result edge.<span class="prior-src">ch11 L39, L45</span></td>
+          <td class="fill taller"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-11-runtime-machine-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ================= SHEET 2 : BLOCK B ================= -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Four-Part Runtime Inventory &mdash; substrate layers</h1>
+      <p class="ws-sub">A second lens on the same runtime, not a second inventory.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-11-runtime-machine-inventory</b><br>
+      Pack D &middot; fill order 4 &middot; inventory<br>
+      format <b>A3 landscape</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>ch19 Architectural Patterns, the Rosetta Stone</b> &middot; heading &ldquo;The layered model of an agentic runtime&rdquo; &middot;
+    <code>handbook/ch19-architectural-patterns-rosetta-stone.qmd</code> L19-49 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch19-architectural-patterns-rosetta-stone.html#sec-layered-model">#sec-layered-model</a>
+  </div>
+
+  <div class="ws-instruction">
+    For each of the four layers, write what you run today, who owns it, whether the decision is yours or the vendor's, and what is still undecided.
+    The chapter says Foundation-layer patterns are &ldquo;mostly out of the architect's control &mdash; they are vendor decisions&rdquo;, so field 17 is the one that matters most.
+    Confirm or override the pre-marked Foundation row in writing, and fill the other three.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; substrate layers <span class="ws-block-note">fields 13&ndash;19</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:7%"><col style="width:20%"><col style="width:10%"><col style="width:7%"><col style="width:13%"><col style="width:13%"><col style="width:30%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">13</span> Layer</th>
+          <th><span class="fno">14</span> What the layer covers</th>
+          <th><span class="fno">15</span> What we run today</th>
+          <th><span class="fno">16</span> Who owns it</th>
+          <th><span class="fno">17</span> Our decision or the vendor's? (Foundation pre-marked; confirm or override)</th>
+          <th><span class="fno">18</span> What is still undecided (open questions, named)</th>
+          <th><span class="fno">19</span> Where the bill gets decided here (our answer, or n/a for Composition)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior"><b>Foundation</b><span class="prior-src">ch19 L42</span></td>
+          <td class="locked">The model and the harness that hosts it.<span class="prior-src">ch19 L42-48</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Ours</span><span class="opt prior-mark">Vendor's (pre-marked)</span><span class="opt">Shared</span></div>
+            <span class="prior-src">Chapter: &ldquo;mostly out of the architect's control &mdash; they are vendor decisions&rdquo; (ch19 L42)</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill taller"><span class="f-box"></span>
+            <span class="prior-src">Printed: the model selected at Foundation is the cost function (ch19 L50)</span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Assembly</b><span class="prior-src">ch19 L42</span></td>
+          <td class="locked">The agent source code convention and the binding modes the harness applies (eager preload, lazy on-demand, dispatcher-mediated).<span class="prior-src">ch19 L42-48</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Ours</span><span class="opt">Vendor's</span><span class="opt">Shared</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill taller"><span class="f-box"></span>
+            <span class="prior-src">Printed: the prefix laid out at Assembly decides how much of each turn is cacheable (ch19 L50)</span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Composition</b><span class="prior-src">ch19 L42</span></td>
+          <td class="locked">Primitives, skills, bundles, dependency edges, override mechanisms.<span class="prior-src">ch19 L42-48</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Ours</span><span class="opt">Vendor's</span><span class="opt">Shared</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill taller"><span class="f-box"></span>
+            <span class="prior-src">Printed: carries no direct cost lever &mdash; write n/a (ch19 L50)</span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Execution</b><span class="prior-src">ch19 L42</span></td>
+          <td class="locked">Threading topology, plan persistence, client integration, triggers.<span class="prior-src">ch19 L42-48</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Ours</span><span class="opt">Vendor's</span><span class="opt">Shared</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill taller"><span class="f-box"></span>
+            <span class="prior-src">Printed: the dispatch chosen at Execution governs how many calls happen and on which model class (ch19 L50)</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-11-runtime-machine-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ================= SHEET 3 : BLOCK C ================= -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Four-Part Runtime Inventory &mdash; diagnostic footer</h1>
+      <p class="ws-sub">Run one live complaint through the four parts and name the one that changed.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-11-runtime-machine-inventory</b><br>
+      Pack D &middot; fill order 4 &middot; inventory<br>
+      format <b>A3 landscape</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>ch11 The Agentic Runtime Machine</b> &middot; <code>handbook/ch11-the-runtime-machine.qmd</code> L50-56 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch11-the-runtime-machine.html#sec-runtime-four-parts">#sec-runtime-four-parts</a>
+  </div>
+
+  <div class="ws-instruction">
+    Take one complaint in the team's own words. Do not ask what is wrong with the AI; ask which of the four parts changed, and write down the evidence.
+    Naming a part, not a vendor and not &ldquo;Unknown&rdquo;, is what this sheet is for. Then date the inventory and say who re-inventories it and when.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block C &mdash; the diagnostic footer <span class="ws-block-note">fields 20&ndash;23</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:22%"><col style="width:30%"><col style="width:43%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">20</span></td>
+          <td><b>The complaint being diagnosed</b><br>The actual words the team used, e.g. &ldquo;the AI got worse this week&rdquo;.</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">21</span></td>
+          <td><b>Which of the four parts changed?</b><br>Not what is wrong with the AI, but which of the four parts changed.</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><div class="f-select"><span class="opt">Model</span><span class="opt">Harness</span><span class="opt">Agent source code</span><span class="opt">Client</span><span class="opt">Unknown</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">22</span></td>
+          <td><b>Evidence for that answer</b><br>A version bump, a moved file, a changed frontmatter, a new CI invocation.</td>
+          <td class="prior">Move the file, rename it, change its frontmatter, and the behavior changes &mdash; even though the model and the harness are unchanged.<span class="prior-src">ch11 L54</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">23</span></td>
+          <td><b>Inventory taken on / re-inventory by</b><br>Harnesses and clients change faster than the architecture does.</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill">
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    &ldquo;Most failures attributed to the model are not the model's fault.&rdquo; (ch11 L50)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-11-runtime-machine-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
