@@ -238,7 +238,7 @@ format:
           <td class="ws-num"><span class="fno">14</span></td>
           <td><b>Authority-matrix row</b></td>
           <td class="prior">If field 8 and the capability column of WS-13-agent-authority-matrix differ, the canvas is right and the matrix is stale.<span class="prior-src">derived</span></td>
-          <td class="fill"><span class="f-computed" data-formula="row on WS-13-agent-authority-matrix carrying this persona's field 8"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="row on WS-13-agent-authority-matrix carrying this persona's field 8"></span><span class="f-text sm"></span><span class="ours-label">If the lists differ: matrix defect, date logged and owner</span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">15</span></td>
@@ -325,10 +325,10 @@ format:
       <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
       <tbody>
         <tr>
-          <td class="ws-num"><span class="fno">6</span></td>
+          <td class="ws-num"><span class="fno">&ndash;</span></td>
           <td><b>Roster size</b></td>
           <td class="prior">Start with three to five agent configurations. Add configurations when you observe repeated corrections.<span class="prior-src">ch12 L122</span></td>
-          <td class="fill"><span class="f-computed" data-formula="count of filled roster rows"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of filled roster rows"></span><span class="f-text sm"></span><span class="ours-label">If the count is not three to five, why; and if an editorial persona (such as a chief editor) was carried over, the reason it stays</span></td>
         </tr>
       </tbody>
     </table>
