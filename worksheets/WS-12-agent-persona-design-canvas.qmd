@@ -1,0 +1,349 @@
+---
+title: "Specialist Agent Roster and Persona Canvas"
+pagetitle: "WS-12-agent-persona-design-canvas"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-12-agent-persona-design-canvas</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  4 sheets: persona canvas (sheets 1-3, print one set per proposed persona) and the roster table (sheet 4).
+  Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Specialist Agent Roster and Persona Canvas</h1>
+      <p class="ws-sub">Canvas, one per proposed specialist: identity, domain, patterns, anti-patterns. Sheets 1-3 are the canvas; sheet 4 is the roster.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-12-agent-persona-design-canvas</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Instrumented Codebase</b>, <i>Agents</i> &middot;
+    <code>handbook/ch12-the-instrumented-codebase.qmd</code> L115-122 (worked example L84-111) &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch12-the-instrumented-codebase.html#sec-codebase-agents">#sec-codebase-agents</a>
+  </div>
+
+  <div class="ws-instruction">
+    Fill one canvas for each specialist you propose, against the chapter's four elements: the domain expertise stated narrowly enough to constrain the solution space, the patterns it enforces by name, the anti-patterns it must never produce (each one a mistake that actually cost your team time), and its explicit tool whitelist. Blocks run in the order of the book's worked Python Architect example. When every canvas is done, name your starting three to five personas on the roster, sheet 4.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A &mdash; Identity
+      <span class="ws-block-note">one canvas per persona</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:17%"><col style="width:37%"><col style="width:42%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Persona name and file path</b></td>
+          <td class="prior">The starting three: an architect, a domain expert for core business logic, a documentation writer.<span class="prior-src">ch12 L122</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>Pod</b></td>
+          <td class="prior">The four pod names: editorial/coherence, domain expert, reviewer proxy, audit.<span class="prior-src">case-study-handbook-writing.qmd L33-74</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">editorial/coherence</span><span class="opt">domain expert</span><span class="opt">reviewer proxy</span><span class="opt">audit</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Whose judgement it proxies</b></td>
+          <td class="prior">—<span class="prior-src">case-study-handbook-writing.qmd L33-74</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="ours-label">A living colleague, never a job title</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; Domain expertise / Design Philosophy
+      <span class="ws-block-note">one sentence</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:17%"><col style="width:37%"><col style="width:42%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>Domain expertise, one sentence</b></td>
+          <td class="prior">Too broad: "You are an expert Python developer". Constrains the solution space: "You specialize in CLI tool design using the Click framework with Rich terminal output".<span class="prior-src">ch12 L117</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block C &mdash; Patterns You Enforce
+      <span class="ws-block-note">by name</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:17%"><col style="width:37%"><col style="width:42%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>Named patterns it enforces</b></td>
+          <td class="prior">Shape, not content: the worked example names three &mdash; BaseIntegrator, CommandLogger, AuthResolver.<span class="prior-src">ch12 L104-107, L118</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-12-agent-persona-design-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Persona canvas, continued</h1>
+      <p class="ws-sub">Anti-patterns with their incidents, the tool whitelist, boundaries and gates.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-12-agent-persona-design-canvas</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block D &mdash; You Never
+      <span class="ws-block-note">each line needs an incident</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:17%"><col style="width:37%"><col style="width:42%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>You Never (anti-patterns)</b></td>
+          <td class="prior">The worked example's three: add a new base class when an existing one can be extended; instantiate AuthResolver per-request (it is a singleton); import from integration/ in the CLI layer (use the public API). Each item is "a mistake that happened at least once and cost the team time to fix."<span class="prior-src">ch12 L109-111, L119</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>The incident behind each anti-pattern</b></td>
+          <td class="prior">—<span class="prior-src">ch12 L119</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span><span class="ours-label">Date, ticket or postmortem for every line in field 6</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block E &mdash; Tools, boundaries and gates
+      <span class="ws-block-note">the canvas is the source of truth for the tool list</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:17%"><col style="width:37%"><col style="width:42%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Tool whitelist (capability)</b></td>
+          <td class="prior">Example <code>tools:</code> frontmatter: "changes", "codebase", "editFiles", "runCommands", "search", "problems", "testFailure" (ch12 L87-88). Starting shapes: code writer, reviewer, test runner, deployer (ch13 L234-239).<span class="prior-src">ch12 L87-88, L120; ch13 L234-239</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="ours-label">Explicit list, no wildcards</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>Model</b></td>
+          <td class="prior">Examples of what the field holds, not recommendations: claude-sonnet-4.5; claude-opus-4.6.<span class="prior-src">ch12 L89, L672</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>File-path boundary</b></td>
+          <td class="prior">—<span class="prior-src">ch13 L549</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="ours-label">Explicit list of directories this persona may modify</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>STOP gates</b></td>
+          <td class="prior">Gate classes: auth logic, database schemas, production config. Gate block: 1. present the proposed changes with rationale; 2. STOP and wait for explicit human approval; 3. do not proceed until approval is received.<span class="prior-src">ch13 L260-266, L548</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-12-agent-persona-design-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Persona canvas, continued</h1>
+      <p class="ws-sub">Output format, binding mode, authority-matrix cross-reference, and the persona's standing.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-12-agent-persona-design-canvas</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block F &mdash; Output, binding and standing
+      <span class="ws-block-note">how this persona is run and earns its place</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:17%"><col style="width:37%"><col style="width:42%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Required output format</b></td>
+          <td class="prior">—<span class="prior-src">case-study-handbook-writing.qmd L33-74</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">plan</span><span class="opt">commentary</span><span class="opt">diff</span><span class="opt">verdict</span><span class="opt">other</span></div><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Binding mode</b></td>
+          <td class="prior">Pre-set: dispatcher-mediated.<span class="prior-src">ch12 L78; ch14 L83</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>dispatcher-mediated, confirmed</span><span class="f-checkline"><span class="f-check"></span>exception &mdash; record it and why:</span><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Authority-matrix row</b></td>
+          <td class="prior">If field 8 and the capability column of WS-13-agent-authority-matrix differ, the canvas is right and the matrix is stale.<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-computed" data-formula="row on WS-13-agent-authority-matrix carrying this persona's field 8"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>Earned its place</b></td>
+          <td class="prior">Add configurations when you observe repeated corrections; that is the signal a new specialization has earned its place.<span class="prior-src">ch12 L122</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">starting roster</span><span class="opt">added on observed repeated correction</span></div><span class="f-text"></span><span class="ours-label">Evidence: which corrections, how often, where recorded</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td>
+          <td><b>Owner</b></td>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="ours-label">Who maintains this .agent.md</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td>
+          <td><b>Drafted / last reviewed</b></td>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-12-agent-persona-design-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Roster table</h1>
+      <p class="ws-sub">One row per persona, side by side, so overlap between two personas is visible at a glance. Numbers in headings are canvas field numbers.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-12-agent-persona-design-canvas</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-instruction">
+    Copy each canvas into one row below. Read down the tool and path columns: two rows that look alike mean one persona too many. Standing note: the pod structure ports, the personas do not &mdash; the book's own eleven editorial personas are the roster for writing a book, not a template for an engineering org. Matched pair: if these tool lists and the capability column of WS-13-agent-authority-matrix differ, the canvas is right and the matrix is stale; log the difference against the matrix, never harmonise it silently.
+  </div>
+
+  <div class="ws-block">
+    <h2>Roster
+      <span class="ws-block-note">start with three to five (ch12 L122)</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:13%"><col style="width:9%"><col style="width:11%"><col style="width:17%"><col style="width:15%"><col style="width:11%"><col style="width:10%"><col style="width:11%"></colgroup>
+      <thead><tr><th></th><th>1 Persona name and file path</th><th>2 Pod</th><th>3 Proxies whose judgement</th><th>4 Domain expertise</th><th>8 Tool whitelist</th><th>10 File-path boundary</th><th>14 Matrix row</th><th>15 Earned / 16 Owner</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">1</span></td>
+          <td class="prior">an architect<span class="prior-src">ch12 L122</span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">2</span></td>
+          <td class="prior">a domain expert for core business logic<span class="prior-src">ch12 L122</span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">3</span></td>
+          <td class="prior">a documentation writer<span class="prior-src">ch12 L122</span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">4</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">5</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Roster size
+      <span class="ws-block-note">and the rule for adding a specialisation</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:17%"><col style="width:37%"><col style="width:42%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>Roster size</b></td>
+          <td class="prior">Start with three to five agent configurations. Add configurations when you observe repeated corrections.<span class="prior-src">ch12 L122</span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of filled roster rows"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "Start with three to five agent configurations. An architect, a domain expert for your core business logic, and a documentation writer cover most tasks. Add configurations when you observe repeated corrections; that's the signal that a new specialization has earned its place." (ch12 L122)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-12-agent-persona-design-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+```
