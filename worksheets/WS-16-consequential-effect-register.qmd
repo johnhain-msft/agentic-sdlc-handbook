@@ -40,7 +40,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a>
   </div>
   <div class="ws-instruction">
-    Map what each agent mechanism can reach and do in your estate. Name bounded, authoritative sources; record the controls and accountable people you can verify. Complete this before issuing any write token. Use the reverse for each consequential effect and each environment's signed supervision decision.
+    Map what each agent mechanism can reach and do in your estate. Name bounded, authoritative sources; record the controls and accountable people you can verify. Complete this before issuing any write token. Then use the later sheets: one per consequential effect, and one signed supervision decision per environment.
   </div>
   <div class="ws-block">
     <h2>Block A — inbound: the five access mechanisms
