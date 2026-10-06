@@ -1,0 +1,166 @@
+---
+title: "The Four Spend Pools — Allocating and Metering the Agentic Budget"
+pagetitle: "WS-07-spend-pool-budget-model"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-07-spend-pool-budget-model</b> &middot; review copy &middot; declared format
+  <b>A3 landscape</b> &middot; 1 sheet. The white page below is one physical sheet
+  at true size. Anything spilling past its edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>The Four Spend Pools — Allocating and Metering the Agentic Budget</h1>
+      <p class="ws-sub">A funded, owned, metered agentic budget broken into four pools — the artifact a CFO signs and an engineering leader operates against.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-07-spend-pool-budget-model</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>8</b> &middot; type <b>calculator</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Agentic SDLC Bill</b>, <i>Pool the spend, gate the bets</i> &middot;
+    <code>handbook/ch07-the-agentic-sdlc-bill.qmd</code> L100-107 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch07-the-agentic-sdlc-bill.html#sec-bill-spend-pooling">#sec-bill-spend-pooling</a>
+  </div>
+
+  <div class="ws-instruction">
+    Start with <b>WS-07-cost-variance-baseline</b>. For each pool, enter the funded amount
+    and covered period, name one individual as budget owner, and record your actual user
+    segments, metering tool or report, read-out location, cadence and reopen trigger. Enter
+    each period's start date first and end date second. Confirm or override the chapter's
+    gate choices. Reconcile the total to the agentic line in
+    <b>WS-03-tco-calculator</b>, then have the budget-holding executive sign and date.
+  </div>
+
+  <div class="ws-block">
+    <h2>Pool allocations
+      <span class="ws-block-note">one row per pool &middot; preserve the chapter's four pool names</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:12%"><col style="width:9%"><col style="width:8%"><col style="width:8%">
+        <col style="width:9%"><col style="width:9%"><col style="width:9%"><col style="width:10%">
+        <col style="width:8%"><col style="width:10%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span> Spend pool</th>
+          <th><span class="fno">2</span> Funding rule</th>
+          <th><span class="fno">3</span> Funded amount, this period</th>
+          <th><span class="fno">4</span> Period covered</th>
+          <th><span class="fno">5</span> Budget owner</th>
+          <th><span class="fno">6</span> Who draws on it</th>
+          <th><span class="fno">7</span> Metering mechanism</th>
+          <th><span class="fno">8</span> Where the number is read</th>
+          <th><span class="fno">9</span> Read cadence</th>
+          <th><span class="fno">10</span> Reopen trigger</th>
+          <th><span class="fno">11</span> Gate?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">Frontier R&amp;D<span class="prior-src">ch07 L102</span></td>
+          <td><div class="prior">Capped envelope &middot; best models<span class="prior-src">ch07 L102</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-currency" data-symbol=""></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">Central AI / frontier team<span class="prior-src">ch07 L102</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">By budget &mdash; the deliberate bet<span class="prior-src">ch07 L102</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check">&#10003;</span>Gate applies</span></td>
+        </tr>
+        <tr>
+          <td class="prior">Per-workflow run<span class="prior-src">ch07 L103</span></td>
+          <td><div class="prior">Metered by outcome<span class="prior-src">ch07 L103</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-currency" data-symbol=""></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">Approved, governed use cases<span class="prior-src">ch07 L103</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">Cost per outcome<span class="prior-src">ch07 L103</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check">&#10003;</span>Gate applies</span></td>
+        </tr>
+        <tr>
+          <td class="prior">Everyday prompting<span class="prior-src">ch07 L104</span></td>
+          <td><div class="prior">Capped to cheaper models<span class="prior-src">ch07 L104</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-currency" data-symbol=""></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">Everyone &mdash; the floor<span class="prior-src">ch07 L104</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">Open baseline access<span class="prior-src">ch07 L104</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Gate applies</span></td>
+        </tr>
+        <tr>
+          <td class="prior">Local models<span class="prior-src">ch07 L105</span></td>
+          <td><div class="prior">Unmetered &middot; owned GPUs<span class="prior-src">ch07 L105</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-currency" data-symbol=""></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">High-volume, low-risk loops<span class="prior-src">ch07 L105</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">Free at the margin<span class="prior-src">ch07 L105</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></div></td>
+          <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Gate applies</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="ws-block">
+    <h2>Reconcile and authorize</h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Total allocated</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-currency" data-symbol=""></span>
+            <span class="f-computed" data-formula="sum of Funded amount, this period (field 3) across all four spend pools"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Sponsor signature + date</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill tall"><span class="f-sign"></span> &nbsp; Date
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note">The total must reconcile to the agentic line in WS-03-tco-calculator. Keep <b>Gate?</b> and <b>Reopen trigger</b> unchanged when carrying gate choices to WS-07-cost-vs-value-gate and allocation levers to WS-19-where-the-bill-gets-decided.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-07-spend-pool-budget-model &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
