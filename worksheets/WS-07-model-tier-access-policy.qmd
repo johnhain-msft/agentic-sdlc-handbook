@@ -25,7 +25,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Model Tier Access Policy — Who Gets the Frontier, and How</h1>
-      <p class="ws-sub">A written model-tier access policy with an escape-hatch process — the artifact that lets a leader give a thousand developers frontier-engineered loops without handing a thousand developers a frontier invoice.</p>
+      <p class="ws-sub">Set baseline access, gated frontier use, and a working escape hatch.</p>
     </div>
     <div class="ws-meta">
       <b>WS-07-model-tier-access-policy</b><br>
@@ -42,7 +42,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Define both tiers by capability, not vendor SKU. Set baseline models, eligible user segments and any open-access ceiling. Name the central AI team members, write their reuse charter and set the frontier cap. Then make the escape hatch usable: name its approver and deputy, request route, decision SLA, grant time box and cap, expiry behavior, backlog destination and triage SLA, and the helpful route offered after a denial. Set the tier re-review cadence and owner, and choose a health measure based on loops reused rather than requests approved. Complete <b>WS-07-three-variables-audit</b> first; use its tier-in-use evidence for Blocks A and B. Use the funded pool from <b>WS-07-spend-pool-budget-model</b> for the caps.
+    Define both tiers by capability, not vendor SKU. Set baseline models, eligible user segments and any open-access ceiling. Name the central AI team members, write their reuse charter and set the frontier cap. Then make the escape hatch usable: name its approver and deputy, request channel, decision SLA, grant time box and cap, expiry behavior, backlog destination and triage SLA, and denial route. Set the tier re-review cadence and owner, and choose a health measure based on loops reused rather than requests approved. Complete <b>WS-07-three-variables-audit</b> first; use its tier-in-use evidence for Blocks A and B. Use the funded pool from <b>WS-07-spend-pool-budget-model</b> for the caps.
   </div>
 
   <div style="display:grid;grid-template-columns:.88fr 1.05fr 1.3fr;gap:5mm;align-items:start;flex:1 1 auto;min-height:0">
