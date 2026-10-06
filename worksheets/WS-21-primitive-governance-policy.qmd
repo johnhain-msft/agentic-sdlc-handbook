@@ -1,0 +1,296 @@
+---
+title: "Primitive Supply Chain: Registry, Pinning, Versioning and Ownership Decisions"
+pagetitle: "WS-21-primitive-governance-policy"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-21-primitive-governance-policy</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  3 sheet(s). Parts A, C and D are filled live on paper; Part B is the paper form of a register that is normally projected from a spreadsheet.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Primitive Supply Chain: Registry, Pinning, Versioning and Ownership Decisions</h1>
+      <p class="ws-sub">&ldquo;The decisions worth making this week are about your registry and your CODEOWNERS, not your agent vendor.&rdquo; (ch22 L192) Output: a governance policy the platform team can implement, ending with the audit question.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-21-primitive-governance-policy</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>3</b> &middot; type <b>decision</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Primitives as Code</b>, <i>The lockfile and what it pins</i> &middot;
+    <code>handbook/ch21-primitives-as-code.qmd</code> L103-120 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch21-primitives-as-code.html#sec-primitives-lockfile">#sec-primitives-lockfile</a>
+  </div>
+
+  <div class="ws-instruction">
+    Write your organisation's position on each governance decision below: where the registry lives, whether a manifest and lockfile are mandatory or advisory, who owns each shared primitive, the semver rule, the publish-pipeline gates you run, the override-versus-fork threshold, and the deprecation window. Name one owner per decision and where it is checked; a position with no enforcement point is a preference.
+  </div>
+
+  <div class="ws-block">
+    <h2>Header box <span class="ws-block-note">two org-set entries &mdash; the book publishes no number for either</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:24%"><col style="width:41%"><col style="width:35%"></colgroup>
+      <thead><tr><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>Our eager-size line</b> (token count)</td>
+          <td class="prior">&mdash; The size at which an eager primitive needs justifying. <b>Org-set: the book publishes no number.</b> Part B column B7 is ticked against this line, not against any printed benchmark.<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td><b>Policy version and date</b></td>
+          <td class="prior">&mdash;<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-text sm"></span> <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Part A &mdash; the decision policy <span class="ws-block-note">twelve decisions, pre-printed &middot; 90 minutes</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:33%"><col style="width:21%"><col style="width:10%"><col style="width:12%"><col style="width:8%"><col style="width:13%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>A1 Decision</th><th>A2 Our position</th><th>A3 Mandatory or advisory</th><th>A4 Owner</th><th>A5 Effective date</th><th>A6 Enforcement point</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">1</span></td><td class="prior">Where does the registry live?<span class="prior-src">ch21 L105-111</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">2</span></td><td class="prior">Is a manifest (<code>apm.yml</code>) required?<span class="prior-src">ch21 L105-111</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">3</span></td><td class="prior">Is a lockfile (<code>apm.lock.yaml</code>) required, and reviewed in PRs?<span class="prior-src">ch21 L105-111</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">4</span></td><td class="prior">Who may publish internal primitives?<span class="prior-src">ch14 L43, L63</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">5</span></td><td class="prior">Are external primitive packages allowed, and under what review?<span class="prior-src">ch14 L43, L63</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">6</span></td><td class="prior">Is <code>--dry-run</code> closure review mandatory before a manifest change merges?<span class="prior-src">ch14 L43, L63</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">7</span></td><td class="prior">The phantom-dependency rule: inline / local sibling / declared external edge.<span class="prior-src">ch14 L43, L63</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">8</span></td><td class="prior">The published distribution boundary, against bundle leakage.<span class="prior-src">ch14 L43, L63</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">9</span></td><td class="prior">Adopt or amend the five semver rules as printed (Part B, beside column B15).<span class="prior-src">ch21 L143-149</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">10</span></td><td class="prior">Slot stability: overrideable section names are public contract.<span class="prior-src">ch21 L129</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">11</span></td><td class="prior">The reasoning, not a rule: a consumer overriding &ldquo;three slots, then four, then six, has crossed the threshold where forking the dependency is more honest.&rdquo; Your number is <b>org-set</b>.<span class="prior-src">ch21 L131</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">12</span></td><td class="prior">The deprecation window.<span class="prior-src">ch21 L143-149</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">mandatory</span><span class="opt">advisory</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-21-primitive-governance-policy &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Parts C and D &mdash; agent source code controls, and the audit test</h1>
+      <p class="ws-sub">Part C closes the policy half of the transformation plan; Part D is run live, last, against a real primitive and a real merged PR.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-21-primitive-governance-policy</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>3</b> &middot; type <b>decision</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Primitives as Code</b>, <i>The lockfile and what it pins</i> &middot;
+    <code>handbook/ch21-primitives-as-code.qmd</code> L103-120 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch21-primitives-as-code.html#sec-primitives-lockfile">#sec-primitives-lockfile</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Part C &mdash; the agent-source-code control checklist <span class="ws-block-note">seven controls &middot; 30 minutes in the same sitting</span></h2>
+    <p class="ws-block-note" style="margin:0 0 1.5mm">A <b>present</b> with no evidence in C3 is downgraded to <b>partial</b> before the sheet closes. Give a target date for anything not present.</p>
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:33%"><col style="width:13%"><col style="width:22%"><col style="width:12%"><col style="width:17%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>C1 Control</th><th>C2 State</th><th>C3 Evidence</th><th>C4 Owner</th><th>C5 Target date</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">13</span></td><td class="prior">Agent files are version-controlled alongside the code they steer.<span class="prior-src">ch11 L82-88</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">14</span></td><td class="prior">Agent files have a CODEOWNERS entry.<span class="prior-src">ch11 L82-88</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td class="prior">Agent files are reviewed in pull requests.<span class="prior-src">ch11 L82-88</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">16</span></td><td class="prior">Agent files are linted.<span class="prior-src">ch11 L82-88</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">17</span></td><td class="prior">Agent files are tested: does the agent behave correctly with this rule loaded?<span class="prior-src">ch11 L82-88</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">18</span></td><td class="prior">A regression in a primitive is treated as a defect.<span class="prior-src">ch11 L82-88</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td class="prior">The dependency closure of the primitive is known.<span class="prior-src">ch11 L82-88</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Part D &mdash; the audit test <span class="ws-block-note">one box, run once, in front of everyone, last &middot; five minutes</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:22%"><col style="width:37%"><col style="width:37%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">20</span></td><td><b>D1 The audit question</b></td>
+          <td class="prior">&ldquo;Which version of &lt;primitive&gt; was loaded into the agent that approved &lt;PR&gt;?&rdquo; Name the specific primitive and the specific merged PR.<span class="prior-src">ch21 L165</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b>D2 Our answer</b></td>
+          <td class="prior">&mdash; The version, or the reason there isn't one.<span class="prior-src">ch21 L165-167</span></td>
+          <td class="fill"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">22</span></td><td><b>D3 Answered from a lockfile lookup alone</b></td>
+          <td class="prior">&mdash; Tick only if the answer came from one lookup against the commit the PR was approved on.<span class="prior-src">ch21 L165</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>answered from one lockfile lookup</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>D4 Attempted by, and when</b></td>
+          <td class="prior">&mdash;<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-owner"></span> <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">24</span></td><td><b>D5 If not answerable &mdash; the gap</b></td>
+          <td class="prior">A team running primitives without a manifest and a lockfile &ldquo;cannot answer step 7 honestly.&rdquo; Say what is missing, and which Part A decision closes it.<span class="prior-src">ch21 L167</span></td>
+          <td class="fill"><span class="f-box"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    &ldquo;A team that runs primitives without a manifest and a lockfile cannot answer step 7 honestly.&rdquo; (ch21 L167)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-21-primitive-governance-policy &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Part B &mdash; the primitive register</h1>
+      <p class="ws-sub">One row per instruction file, skill, persona or prompt across the estate. Past about thirty primitives this is a spreadsheet, not paper; this page is its form and its printed reference.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-21-primitive-governance-policy</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>3</b> &middot; type <b>decision</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Primitives as Code</b>, <i>The lockfile and what it pins</i> &middot;
+    <code>handbook/ch21-primitives-as-code.qmd</code> L103-120 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch21-primitives-as-code.html#sec-primitives-lockfile">#sec-primitives-lockfile</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Printed beside the columns <span class="ws-block-note">what the book supplies &mdash; reference only, nothing to write here</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:34%"><col style="width:33%"><col style="width:33%"></colgroup>
+      <thead><tr><th>B3, B4, B6 &mdash; binding mode, trigger, cost cadence</th><th>B15 &mdash; semver class</th><th>B2, B11 &mdash; type and overlap</th></tr></thead>
+      <tbody><tr>
+        <td class="prior" style="font-size:7.4pt">Eager preload: every session &mdash; paid every session, unconditionally.<br>Eager (conditioned): thread touches a matching path &mdash; paid on every session matching the scope.<br>Lazy on-demand: description matches the task &mdash; description eager and small, body on activation.<br>Dispatcher-mediated: parent spawns and names it &mdash; paid only inside the child's context.<span class="prior-src">ch14 L79-85</span></td>
+        <td class="prior" style="font-size:7.4pt">Body edit: Patch. New slot or asset: Minor. Reworded activation criteria: Major. Renamed or removed slot: Major. A changed transitive closure is recorded in the lockfile, not the package version.<span class="prior-src">ch21 L143-149</span></td>
+        <td class="prior" style="font-size:7.4pt">Seven types: instruction file; agent configuration; skill; prompt; memory file; specification; hook (routed by the table at ch12 L451-459). COINCIDENTAL overlap is fine and needs no action; ESSENTIAL overlap is a missing dependency edge.<span class="prior-src">ch12 L451-459; ch21 L37-39</span></td>
+      </tr></tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Part B &mdash; register <span class="ws-block-note">one row per primitive &middot; B7 is ticked against the header-box line on sheet 1, not against any benchmark</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:9%"><col style="width:9%"><col style="width:9%"><col style="width:7%"><col style="width:5%"><col style="width:5%"><col style="width:7%"><col style="width:5%"><col style="width:5%"><col style="width:7%"><col style="width:7%"><col style="width:6%"><col style="width:5%"><col style="width:5%"><col style="width:6%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>B1 Path</th><th>B2 Primitive type</th><th>B3 Binding mode (confirm default or record exception)</th><th>B4 Trigger that loads it (actual glob, description or call)</th><th>B5 Measured size (tokens, measured)</th><th>B6 Cost cadence</th><th>B7 Eager and over our size line</th><th>B8 Owner and CODEOWNERS line</th><th>B9 Last edited</th><th>B10 Consuming teams</th><th>B11 Overlap</th><th>B12 If ESSENTIAL: extraction target and ticket</th><th>B13 In a manifest</th><th>B14 In a lockfile</th><th>B15 Last change and semver class</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">25</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">instruction</span><span class="opt">agent config</span><span class="opt">skill</span><span class="opt">prompt</span><span class="opt">memory</span><span class="opt">spec</span><span class="opt">hook</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">eager preload</span><span class="opt">eager (cond.)</span><span class="opt">lazy on-demand</span><span class="opt">dispatcher</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="from B3"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">none</span><span class="opt">COINCIDENTAL</span><span class="opt">ESSENTIAL</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">26</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">instruction</span><span class="opt">agent config</span><span class="opt">skill</span><span class="opt">prompt</span><span class="opt">memory</span><span class="opt">spec</span><span class="opt">hook</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">eager preload</span><span class="opt">eager (cond.)</span><span class="opt">lazy on-demand</span><span class="opt">dispatcher</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="from B3"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">none</span><span class="opt">COINCIDENTAL</span><span class="opt">ESSENTIAL</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">27</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">instruction</span><span class="opt">agent config</span><span class="opt">skill</span><span class="opt">prompt</span><span class="opt">memory</span><span class="opt">spec</span><span class="opt">hook</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">eager preload</span><span class="opt">eager (cond.)</span><span class="opt">lazy on-demand</span><span class="opt">dispatcher</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="from B3"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">none</span><span class="opt">COINCIDENTAL</span><span class="opt">ESSENTIAL</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-21-primitive-governance-policy &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+```
