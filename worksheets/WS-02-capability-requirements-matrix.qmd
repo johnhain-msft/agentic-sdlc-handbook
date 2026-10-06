@@ -40,7 +40,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    For each capability, write what it must do for your organisation without naming a product, choose Must-have, Nice-to-have, or Not applicable, and give the reason. State what evidence you will demand and how you implement it today. Complete and sign this durable, vendor-neutral requirements side before writing any vendor name on the dated scorecard.
+    For each capability, write what it must do for your organization without naming a product, choose Must-have, Nice-to-have, or Not applicable, and give the reason. State what evidence you will demand and how you implement it today. Complete and sign this durable, vendor-neutral requirements side before writing any vendor name on the dated scorecard.
   </div>
 
   <div class="ws-block">
