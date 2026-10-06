@@ -1,0 +1,269 @@
+---
+title: "The Coordination Tax Calculator: When Does Orchestration Pay?"
+pagetitle: "WS-17-coordination-tax-calculator"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-17-coordination-tax-calculator</b> &middot; review copy &middot;
+  declared format <b>A4 portrait</b> &middot; 7 sheets.
+  Each white page below is one physical sheet at true size.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>The Coordination Tax Calculator: When Does Orchestration Pay?</h1>
+      <p class="ws-sub">A defensible cost model and a go/no-go threshold for multi-agent orchestration on this codebase — plus an honest statement of what the investment buys: quality and reduced context degradation, not elapsed time.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-coordination-tax-calculator</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>7</b> &middot; type <b>calculator</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>The Coordination Tax: Honest Numbers</i> &middot;
+    <code>handbook\ch17-multi-agent-orchestration.qmd</code> L361-382 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-coordination-tax">#sec-multi-agent-coordination-tax</a><br>
+    Locator: "Multi-agent orchestration saves time through parallelism and improves quality through focused context"
+  </div>
+
+  <div class="ws-instruction">
+    Start with the completed <b>WS-17-orchestration-topology-selector</b>. Measure one real change, not an average; enter the time the orchestrator actually spent, and state which activities your organisation counts as coordination before calculating overhead. Use the grey italic column only as a single-case prior, not a target. If you are forecasting because no execution exists yet, mark the basis as Forecast and schedule the re-run against actuals. Complete the evidence for each sweet-spot condition, then state what orchestration actually bought you and set a dated, owned threshold for your codebase.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A — the change being measured
+      <span class="ws-block-note">book's prior — single case, partly estimated / our measured value</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:27%"><col style="width:43%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>The book's prior — single case, partly estimated</th><th>Our measured value</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">1</span></td><td><b>Change measured</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span><small>One real change. Not a category, not an average.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">2</span></td><td><b>Date executed</b></td><td class="prior">—</td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">3</span></td><td><b>Files touched</b></td><td class="prior">—<span class="prior-src">ch17 L373</span></td><td class="fill"><span class="f-text sm"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">4</span></td><td><b>Number of distinct concerns</b></td><td class="prior">—<span class="prior-src">ch17 L373</span></td><td class="fill"><span class="f-text sm"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">5</span></td><td><b>Which execution is this on this codebase?</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">First</span><span class="opt">Second</span><span class="opt">Third or later</span></div><small>Drives Block G.</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-coordination-tax-calculator &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>The Coordination Tax Calculator: When Does Orchestration Pay?</h1><p class="ws-sub">Record human time by activity; the book's percentages are one-case priors, not targets.</p></div>
+    <div class="ws-meta"><b>WS-17-coordination-tax-calculator</b><br>Pack D - Architecture and ownership<br>fill order <b>7</b> &middot; type <b>calculator</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">Source: <b>Multi-Agent Orchestration</b>, <i>The Coordination Tax: Honest Numbers</i> &middot; <code>handbook\ch17-multi-agent-orchestration.qmd</code> L361-382 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-coordination-tax">#sec-multi-agent-coordination-tax</a><br>Locator: "Multi-agent orchestration saves time through parallelism and improves quality through focused context"</div>
+  <div class="ws-block">
+    <h2>Block B — human time by activity
+      <span class="ws-block-note">four fixed activities; enter actual minutes for each</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:21%"><col style="width:21%"><col style="width:18%"><col style="width:20%"><col style="width:20%"></colgroup>
+      <thead><tr>
+        <th><span class="fno">6</span> Activity</th>
+        <th class="prior"><span class="fno">7</span> <i>Prior — share of human time</i></th>
+        <th><span class="fno">8</span> Our measured minutes</th>
+        <th><span class="fno">9</span> Our share of human time</th>
+        <th><span class="fno">10</span> Variance from the prior</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="locked">Planning and partitioning</td><td class="prior">~30%<br><small>Single case, PR #394.</small><span class="prior-src">ch17 L363</span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-computed" data-formula="field 8 planning minutes / field 11 total human minutes &times; 100"></span></td><td class="fill"><span class="f-computed" data-formula="field 9 planning share - field 7 planning prior"></span></td></tr>
+        <tr><td class="locked">Monitoring execution</td><td class="prior">~20%<br><small>Single case, PR #394.</small><span class="prior-src">ch17 L363</span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-computed" data-formula="field 8 monitoring minutes / field 11 total human minutes &times; 100"></span></td><td class="fill"><span class="f-computed" data-formula="field 9 monitoring share - field 7 monitoring prior"></span></td></tr>
+        <tr><td class="locked">Handling interventions</td><td class="prior">~25%<br><small>Single case, PR #394.</small><span class="prior-src">ch17 L363</span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-computed" data-formula="field 8 intervention minutes / field 11 total human minutes &times; 100"></span></td><td class="fill"><span class="f-computed" data-formula="field 9 intervention share - field 7 intervention prior"></span></td></tr>
+        <tr><td class="locked">Post-execution review</td><td class="prior">~25%<br><small>Single case, PR #394; several figures in this source range are explicitly estimated rather than measured.</small><span class="prior-src">ch17 L363</span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-computed" data-formula="field 8 review minutes / field 11 total human minutes &times; 100"></span></td><td class="fill"><span class="f-computed" data-formula="field 9 review share - field 7 review prior"></span></td></tr>
+      </tbody>
+    </table>
+    <small>Record minutes during or immediately after the execution. The prior is read-only; variances are for information only, not targets or defects.</small>
+  </div>
+  <div class="ws-foot">
+    <div>WS-17-coordination-tax-calculator &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>The Coordination Tax Calculator: When Does Orchestration Pay?</h1><p class="ws-sub">A defensible cost model; priors are single-case references, not benchmarks.</p></div>
+    <div class="ws-meta"><b>WS-17-coordination-tax-calculator</b><br>Pack D - Architecture and ownership<br>fill order <b>7</b> &middot; type <b>calculator</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">Source: <b>Multi-Agent Orchestration</b>, <i>The Coordination Tax: Honest Numbers</i> &middot; <code>handbook\ch17-multi-agent-orchestration.qmd</code> L361-382 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-coordination-tax">#sec-multi-agent-coordination-tax</a><br>Locator: "Multi-agent orchestration saves time through parallelism and improves quality through focused context"</div>
+  <div class="ws-instruction">Use the measured total from field 8 for Block C. Keep the single-agent case explicitly counterfactual; state the basis for your own estimate. All computed outputs use your measured values, never the grey prior column.</div>
+
+  <div class="ws-block">
+    <h2>Block C — totals
+      <span class="ws-block-note">book's prior — single case, partly estimated / our measured value</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:27%"><col style="width:43%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>The book's prior — single case, partly estimated</th><th>Our measured value</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">11</span></td><td><b>Total human minutes</b></td><td class="prior">Roughly 45 minutes. Single case (PR #394).<span class="prior-src">ch17 L363</span></td><td class="fill"><span class="f-computed" data-formula="sum of the four field 8 activity-minute entries"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">12</span></td><td><b>Agent computation minutes</b></td><td class="prior">Roughly 24 minutes. Single case (PR #394).<span class="prior-src">ch17 L363</span></td><td class="fill"><span class="f-text sm"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">13</span></td><td><b>Total wave elapsed minutes</b></td><td class="prior">Roughly 90 minutes, because human work overlaps with agent execution. Single case (PR #394).<span class="prior-src">ch17 L363</span></td><td class="fill"><span class="f-text sm"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block D — the single-agent counterfactual
+      <span class="ws-block-note">book's prior — single case, partly estimated / our measured value</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:27%"><col style="width:43%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>The book's prior — single case, partly estimated</th><th>Our measured value</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">14</span></td><td><b>Estimated single-agent agent-time</b></td><td class="prior">An estimated 60-75 minutes for the same change. Single-agent counterfactual.<span class="prior-src">ch17 L365</span></td><td class="fill"><span class="f-text sm"></span><small>Our estimate, with the basis stated.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td><b>Rework cycles expected from context degradation</b></td><td class="prior">2-3 additional cycles, "based on similar single-agent attempts at this scale."<span class="prior-src">ch17 L365</span></td><td class="fill"><span class="f-text sm"></span><small>Our estimate.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">16</span></td><td><b>Minutes added by rework</b></td><td class="prior">30-45 minutes. Single-agent counterfactual.<span class="prior-src">ch17 L365</span></td><td class="fill"><span class="f-text sm"></span><small>Our estimate.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">17</span></td><td><b>Total single-agent elapsed</b></td><td class="prior">Roughly 90-120 minutes, with lower output quality. Single-agent counterfactual.<span class="prior-src">ch17 L365</span></td><td class="fill"><span class="f-computed" data-formula="field 14 estimated agent-time + field 16 minutes added by rework"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">18</span></td><td><b>Elapsed delta, multi-agent vs single</b></td><td class="prior">—</td><td class="fill"><span class="f-computed" data-formula="field 13 total wave elapsed minutes - field 17 total single-agent elapsed"></span><small>Expect this to be small, zero or negative. Read Block H before interpreting it.</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-coordination-tax-calculator &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+
+<!-- ============================ SHEET 4 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>The Coordination Tax Calculator: When Does Orchestration Pay?</h1><p class="ws-sub">Set your coordination denominator before calculating; reference bands are estimates, not targets.</p></div>
+    <div class="ws-meta"><b>WS-17-coordination-tax-calculator</b><br>Pack D - Architecture and ownership<br>fill order <b>7</b> &middot; type <b>calculator</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">Source: <b>Multi-Agent Orchestration</b>, <i>The Coordination Tax: Honest Numbers</i> &middot; <code>handbook\ch17-multi-agent-orchestration.qmd</code> L361-382 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-coordination-tax">#sec-multi-agent-coordination-tax</a><br>Locator: "Multi-agent orchestration saves time through parallelism and improves quality through focused context"</div>
+  <div class="ws-block">
+    <h2>Block E — coordination overhead and reference bands
+      <span class="ws-block-note">book's prior — single case, partly estimated / our measured value</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:27%"><col style="width:43%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>The book's prior — single case, partly estimated</th><th>Our measured value</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td><b>Coordination overhead</b></td><td class="prior">—</td><td class="fill"><span class="f-computed" data-formula="sum of field 8 minutes counted as coordination in field 20 / field 11 total human minutes &times; 100"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">20</span></td><td><b>Our definition of "coordination"</b></td><td class="prior">The book's phrasing: human time spent "on coordination rather than direct value work."<span class="prior-src">ch17 L378</span></td><td class="fill"><span class="f-box"></span><small>State which of the four Block B activities your organisation counts. Decide before computing field 19.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b><i>Prior band — well-planned</i></b></td><td class="prior"><div class="prior--hedged"><span class="hedge-figure">Roughly 40-60% of total human time.</span><span class="hedge-text">'based on the contrast between our reference execution and less-structured attempts, we estimate'</span><span class="hedge-src">handbook\ch17-multi-agent-orchestration.qmd L378</span></div><small>Single case (PR #394); several figures in this source range are explicitly estimated rather than measured.</small></td><td class="locked">Printed grey prior; no organisation entry.</td></tr>
+        <tr><td class="ws-num"><span class="fno">22</span></td><td><b><i>Prior band — poorly planned</i></b></td><td class="prior"><div class="prior--hedged"><span class="hedge-figure">Estimated at 70-80% or higher.</span><span class="hedge-text">'based on the contrast between our reference execution and less-structured attempts, we estimate'.</span><span class="hedge-src">handbook\ch17-multi-agent-orchestration.qmd L378</span></div><small>At which point a single agent with good context would have been faster. Single case (PR #394), estimated rather than measured.</small></td><td class="locked">Printed grey prior; no organisation entry.</td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Our own bands</b></td><td class="prior">—</td><td class="fill"><div class="ours-label">Our own bands — replace reference bands only after three executions</div><span class="f-text"></span><small>Until then, write <b>insufficient data</b>. Then use these bands in place of fields 21 and 22.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">24</span></td><td><b>Basis of this sheet</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">Measured execution</span><span class="opt">Forecast against the book's priors</span></div><small>A forecast is legitimate and must be re-run against actuals.</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-coordination-tax-calculator &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 4 ============================ -->
+
+<!-- ============================ SHEET 5 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>The Coordination Tax Calculator: When Does Orchestration Pay?</h1><p class="ws-sub">Test all four conditions; support each answer with evidence.</p></div>
+    <div class="ws-meta"><b>WS-17-coordination-tax-calculator</b><br>Pack D - Architecture and ownership<br>fill order <b>7</b> &middot; type <b>calculator</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">Source: <b>Multi-Agent Orchestration</b>, <i>The Coordination Tax: Honest Numbers</i> &middot; <code>handbook\ch17-multi-agent-orchestration.qmd</code> L361-382 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-coordination-tax">#sec-multi-agent-coordination-tax</a><br>Locator: "Multi-agent orchestration saves time through parallelism and improves quality through focused context"</div>
+  <div class="ws-instruction">For each fixed condition, mark Yes, Partial or No and record your evidence. For "Concerns partition cleanly," use the file list rather than impression; evidence is mandatory.</div>
+  <div class="ws-block">
+    <h2>Block F — the sweet-spot conditions
+      <span class="ws-block-note">four fixed conditions; evidence is required for each</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:27%"><col style="width:43%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>The book's prior — single case, partly estimated</th><th>Our measured value</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Condition</b></td><td class="prior">File count exceeds 20 across 2+ concerns<br>Concerns partition cleanly<br>Context degradation is the real bottleneck<br>You will do this more than once<span class="prior-src">ch17 L373-376</span></td><td class="locked">Fixed conditions; assess each separately.</td></tr>
+        <tr><td class="ws-num"><span class="fno">26</span></td><td><b>Met?</b></td><td class="prior">—</td><td class="fill">File count <div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>Concerns partition <div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>Context bottleneck <div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>Repeat use <div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td><b>Evidence</b></td><td class="prior">—<span class="prior-src">ch17 L374</span></td><td class="fill">File count <span class="f-text sm"></span><br>Clean partition <span class="f-text sm"></span><br>Context bottleneck <span class="f-text sm"></span><br>Repeat use <span class="f-text sm"></span><small>Give a reason for each. For "Concerns partition cleanly," use the file list, not impression; evidence is mandatory.</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-17-coordination-tax-calculator &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 5 ============================ -->
+
+<!-- ============================ SHEET 6 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>The Coordination Tax Calculator: When Does Orchestration Pay?</h1><p class="ws-sub">State what orchestration bought, then set an organisation-specific, owned and reviewable threshold.</p></div>
+    <div class="ws-meta"><b>WS-17-coordination-tax-calculator</b><br>Pack D - Architecture and ownership<br>fill order <b>7</b> &middot; type <b>calculator</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">Source: <b>Multi-Agent Orchestration</b>, <i>The Coordination Tax: Honest Numbers</i> &middot; <code>handbook\ch17-multi-agent-orchestration.qmd</code> L361-382 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-coordination-tax">#sec-multi-agent-coordination-tax</a><br>Locator: "Multi-agent orchestration saves time through parallelism and improves quality through focused context"</div>
+  <div class="ws-instruction">Use the execution count in field 5 to assess the first-run investment. In Block H, name the benefit you can support with evidence; do not tick reduced elapsed time unless field 18 is negative. Your go/no-go threshold must use your organisation's units and carry a named owner and review dates. Carry field 33 into the WS-17-single-vs-multi-agent-decision-matrix.</div>
+
+  <div class="ws-block">
+    <h2>Block G — first-run multiplier
+      <span class="ws-block-note">book's prior — reference execution / our measured value</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:27%"><col style="width:43%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>The book's prior — single case, partly estimated</th><th>Our measured value</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">28</span></td><td><b>First-run multiplier applied?</b></td><td class="prior"><div class="prior--hedged"><span class="hedge-figure">Roughly 3×.</span><span class="hedge-text">"Your first time through will take roughly 3×."</span><span class="hedge-src">handbook\ch18-the-execution-meta-process.qmd L188</span></div><small>The reference timing reflects an experienced practitioner with battle-tested instruction files, established personas and conventions already externalised into the codebase.</small></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>Applied when field 5 reads First</span><div class="ours-label">Our own multiplier, once available</div><span class="f-text sm"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">29</span></td><td><b>What the first run buys</b></td><td class="prior">Reference: the first run is an investment in infrastructure — instruction files, partition boundaries, wave-sizing intuition — that makes every subsequent run faster.<span class="prior-src">ch18 L188</span></td><td class="fill"><span class="f-box"></span><small>Our answer.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">30</span></td><td><b>Planning-time trend across runs</b></td><td class="prior">Reference: the second run takes half the planning time; by the third the dispatch prompts are templates.<span class="prior-src">ch17 L376</span></td><td class="fill"><span class="f-box"></span><small>Our observed trend.</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-coordination-tax-calculator &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 6 ============================ -->
+
+<!-- ============================ SHEET 7 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>The Coordination Tax Calculator: When Does Orchestration Pay?</h1><p class="ws-sub">State what the execution bought and set the organisation's own go/no-go threshold.</p></div>
+    <div class="ws-meta"><b>WS-17-coordination-tax-calculator</b><br>Pack D - Architecture and ownership<br>fill order <b>7</b> &middot; type <b>calculator</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">Source: <b>Multi-Agent Orchestration</b>, <i>The Coordination Tax: Honest Numbers</i> &middot; <code>handbook\ch17-multi-agent-orchestration.qmd</code> L361-382 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-coordination-tax">#sec-multi-agent-coordination-tax</a><br>Locator: "Multi-agent orchestration saves time through parallelism and improves quality through focused context"</div>
+  <div class="ws-instruction">Name the benefit supported by evidence. Do not tick reduced elapsed time unless field 18 is negative. Express the go/no-go threshold in your own units and give it a named owner and review dates.</div>
+  <div class="ws-block">
+    <h2>Block H — what the investment actually bought
+      <span class="ws-block-note">the sheet's real output</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:27%"><col style="width:43%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>The book's prior — single case, partly estimated</th><th>Our measured value</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">31</span></td><td><b>What did orchestration actually buy us?</b></td><td class="prior">The chapter's answer for its own case: it did not save total elapsed time. It traded human planning time for agent quality.<span class="prior-src">ch17 L367</span></td><td class="fill"><div class="f-checkline"><span class="f-check"></span>Reduced elapsed time</div><div class="f-checkline"><span class="f-check"></span>Improved output quality</div><div class="f-checkline"><span class="f-check"></span>Reduced context degradation</div><div class="f-checkline"><span class="f-check"></span>Reduced rework</div><div class="f-checkline"><span class="f-check"></span>Nothing measurable</div><span class="f-text"></span><small>Multi-select; give your honest answer.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">32</span></td><td><b>Evidence for that claim</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>"Reduced elapsed time" may not be ticked unless field 18 is negative.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">33</span></td><td><b>Our go/no-go threshold going forward</b></td><td class="prior">—<span class="prior-src">ch17 L380</span></td><td class="fill"><span class="f-box"></span><small>Express in this organisation's own units — file count, concern count, overhead percentage — and date it. This is not a book target.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">34</span></td><td><b>Threshold set by / on / review by</b></td><td class="prior">—<span class="prior-src">ch17 L380</span></td><td class="fill"><span class="f-owner"></span><small>Owner</small><br>Set on <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><br>Review by <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>A threshold with no owner and review date is a rule of thumb.</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-17-coordination-tax-calculator &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 7 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 7 ============================ -->
+```
