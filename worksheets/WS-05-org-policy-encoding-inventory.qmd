@@ -229,7 +229,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Organisational Policy Encoding Inventory: What Your Agents Cannot Know</h1>
-      <p class="ws-sub">Block A — continued. Add the policies your organisation's seed list does not name.</p>
+      <p class="ws-sub">Block A — continued. Add the policies your organization's seed list does not name.</p>
     </div>
     <div class="ws-meta">
       <b>WS-05-org-policy-encoding-inventory</b><br>
@@ -256,7 +256,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Continue the policy backlog. Use these rows for the remaining seed policies and add any more your organisation names; the seeds are prompts, not the scope. Record each actual policy name and document identifier. Use another copy of this sheet for additional policies. Complete both owners independently and connect every human escape valve to a named person and reachable route.
+    Continue the policy backlog. Use these rows for the remaining seed policies and add any more your organization names; the seeds are prompts, not the scope. Record each actual policy name and document identifier. Use another copy of this sheet for additional policies. Complete both owners independently and connect every human escape valve to a named person and reachable route.
   </div>
 
   <div class="ws-block">
@@ -421,7 +421,7 @@ format:
   </div>
 
   <div class="ws-block-note">
-    Record the actual policy name and document identifier in column 1. Keep owner of record and waiver authority separate. Where column 3 is institutional memory only or nowhere, do not leave the gap without an encode-by date or an owned decision to accept it. No specialist agent is a control.
+    Record the actual policy name and document identifier in column 1. Keep the owner of record and the person who can waive it separate. Where column 3 is institutional memory only or nowhere, do not leave the gap without an encode-by date or an owned decision to accept it. No specialist agent is a control.
   </div>
 
   <div class="ws-foot">
@@ -462,7 +462,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    For each fact, write the value exactly as it must appear, cite its system of record (never another generated artefact), name its owner and review date, and have a person verify it before any downstream worksheet or agent primitive uses it. Tick and date column 20 only after human verification. Add other fact classes in the open rows.
+    For each fact, write the value exactly as it must appear, cite its system of record (never another generated artifact), name its owner and review date, and have a person verify it before any downstream worksheet or agent primitive uses it. Tick and date column 20 only after human verification. Add other fact classes in the open rows.
   </div>
 
   <div class="ws-block">
@@ -483,7 +483,7 @@ format:
         <tr>
           <td><div class="prior">Role and job titles<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
-          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artifact.</small></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
@@ -491,7 +491,7 @@ format:
         <tr>
           <td><div class="prior">Team names<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
-          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artifact.</small></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
@@ -499,7 +499,7 @@ format:
         <tr>
           <td><div class="prior">Product names<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
-          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artifact.</small></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
@@ -507,7 +507,7 @@ format:
         <tr>
           <td><div class="prior">Customer names<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
-          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artifact.</small></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
@@ -515,7 +515,7 @@ format:
         <tr>
           <td><div class="prior">Compliance claims<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
-          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artifact.</small></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
@@ -523,7 +523,7 @@ format:
         <tr>
           <td><div class="prior">Metrics<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
-          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artifact.</small></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
@@ -531,7 +531,7 @@ format:
         <tr>
           <td><div class="prior">Additional fact class<span class="prior-src">organisation adds</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
-          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artifact.</small></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
@@ -539,7 +539,7 @@ format:
         <tr>
           <td><div class="prior">Additional fact class<span class="prior-src">organisation adds</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
-          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artifact.</small></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
