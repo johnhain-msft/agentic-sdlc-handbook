@@ -40,7 +40,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    For each risk, decide whether it applies to you; name the system and your concrete manifestation; mark likelihood and impact; record your control, its status and the artefact that proves it; name an individual with a surname; and set the next review within one quarter of the tabling date. Complete the five organisation-specific rows to the same standard. For the two knowledge-atrophy risks, point to <b>WS-05-capability-retention-plan</b>, not a control invented here; if that plan is not complete, record the dependency and its closure date in the evidence field.
+    For each risk, decide whether it applies to you; name the system and your concrete manifestation; mark likelihood and impact; record your control, its status and the artifact that proves it; name an individual with a surname; and set the next review within one quarter of the tabling date. Complete the five organization-specific rows to the same standard. For the two knowledge-atrophy risks, point to <b>WS-05-capability-retention-plan</b>, not a control invented here; if that plan is not complete, record the dependency and its closure date in the evidence field.
   </div>
 
   <div class="ws-block">
@@ -158,7 +158,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-risk-taxonomy">#sec-governance-risk-taxonomy</a>
   </div>
   <div class="ws-instruction">
-    For each risk, decide whether it applies to you; name the system and your concrete manifestation; mark likelihood and impact; record your control, its status and the artefact that proves it; name an individual with a surname; and set the next review within one quarter of the tabling date. For the two knowledge-atrophy risks, point to <b>WS-05-capability-retention-plan</b>, not a control invented here; if that plan is not complete, record the dependency and its closure date in the evidence field.
+    For each risk, decide whether it applies to you; name the system and your concrete manifestation; mark likelihood and impact; record your control, its status and the artifact that proves it; name an individual with a surname; and set the next review within one quarter of the tabling date. For the two knowledge-atrophy risks, point to <b>WS-05-capability-retention-plan</b>, not a control invented here; if that plan is not complete, record the dependency and its closure date in the evidence field.
   </div>
   <div class="ws-block">
     <h2>Agent risk register <span class="ws-block-note">Named risks — 2 of 3</span></h2>
@@ -274,7 +274,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-risk-taxonomy">#sec-governance-risk-taxonomy</a>
   </div>
   <div class="ws-instruction">
-    For each risk, decide whether it applies to you; name the system and your concrete manifestation; mark likelihood and impact; record your control, its status and the artefact that proves it; name an individual with a surname; and set the next review within one quarter of the tabling date. For the two knowledge-atrophy risks, point to <b>WS-05-capability-retention-plan</b>, not a control invented here; if that plan is not complete, record the dependency and its closure date in the evidence field.
+    For each risk, decide whether it applies to you; name the system and your concrete manifestation; mark likelihood and impact; record your control, its status and the artifact that proves it; name an individual with a surname; and set the next review within one quarter of the tabling date. For the two knowledge-atrophy risks, point to <b>WS-05-capability-retention-plan</b>, not a control invented here; if that plan is not complete, record the dependency and its closure date in the evidence field.
   </div>
   <div class="ws-block">
     <h2>Agent risk register <span class="ws-block-note">Named risks — 3 of 3</span></h2>
@@ -390,7 +390,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-risk-taxonomy">#sec-governance-risk-taxonomy</a>
   </div>
   <div class="ws-instruction">
-    Add each organisation-specific risk and complete every field to the same standard as the printed risks. Tabled at is the committee and date; the register owner signs below, distinct from the individuals named for each risk.
+    Add each organization-specific risk and complete every field to the same standard as the printed risks. Tabled at is the committee and date; the register owner signs below, distinct from the individuals named for each risk.
   </div>
   <div class="ws-block">
     <h2>Organisation-specific risks <span class="ws-block-note">Rows 1–3 of 5; complete each to the same standard</span></h2>
@@ -482,7 +482,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-risk-taxonomy">#sec-governance-risk-taxonomy</a>
   </div>
   <div class="ws-instruction">
-    Complete the final two organisation-specific risks to the same standard as the printed risks. Tabled at is the committee and date; the register owner signs below, distinct from the individuals named for each risk.
+    Complete the final two organization-specific risks to the same standard as the printed risks. Tabled at is the committee and date; the register owner signs below, distinct from the individuals named for each risk.
   </div>
   <div class="ws-block">
     <h2>Organisation-specific risks <span class="ws-block-note">Rows 4–5 of 5</span></h2>
