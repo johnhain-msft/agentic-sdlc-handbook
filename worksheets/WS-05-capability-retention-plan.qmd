@@ -54,7 +54,7 @@ format:
   </div>
 
   <div class="ws-block">
-    <h2>Block A &mdash; atrophy risks and the practice programme
+    <h2>Block A &mdash; atrophy risks and the practice program
       <span class="ws-block-note">three rows pre-printed, row 4 for any additional mode; the mitigation is not to avoid agents but to design deliberate practice into the development process (ch05 L141)</span></h2>
 
     <table class="ws">
@@ -152,7 +152,7 @@ format:
     <p style="font-size:7.4pt;color:#454f59;margin:2mm 0 0">
       <b>Column 3:</b> name juniors, a named team, or everyone &mdash; named, not categorised.
       <b>Column 4:</b> the signal and where it would surface; "we would not" is a legitimate entry.
-      <b>Column 5:</b> "we would not" triggers a detection action with an owner and a date in column 9.
+      <b>Column 5:</b> "we would not" triggers a detection action: write the action and the date it starts in column 4; its owner is the person named in column 9.
       <b>Column 6:</b> our concrete instantiation: what the exercise is, on what code, run by whom.
       <b>Column 7:</b> a recurring commitment with a period; "periodically" and "when we can" fail this column.
       <b>Column 8:</b> the sprint capacity, budget line or rota slot this consumes.
@@ -314,7 +314,7 @@ format:
           <td class="prior">&mdash;</td>
           <td class="fill tall"><span class="f-sign"></span>
             <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
-            <span class="f-sign"></span>
+            <span class="f-sign" style="margin-top:3mm"></span>
             <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
         </tr>
       </tbody>
