@@ -1,0 +1,335 @@
+---
+title: "Capability Retention and Fallback Plan"
+pagetitle: "WS-05-capability-retention-plan"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-05-capability-retention-plan</b> &middot; declared format <b>A3 landscape, two-sided</b>   &middot; 3 sheets.
+    Sheet 1 is the front (block A); sheets 2-3 are the back (block B plan, then findings). Anything spilling past the white page is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Capability Retention and Fallback Plan</h1>
+      <p class="ws-sub">A named deliberate-practice programme and a dated 48-hour agent-unavailability drill, with owners and a cadence: the mitigation the chapter says must be designed in rather than avoided.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-capability-retention-plan</b><br>
+      Pack F &middot; People and operating model &middot; fill order 2<br>
+      type <b>diagnostic</b> &middot; format <b>A3 landscape, two-sided</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>ch05 Governance for AI-Assisted Delivery</b> &middot; Knowledge atrophy: the aviation parallel &middot;
+    <code>handbook/ch05-governance-for-ai-assisted-delivery.qmd</code> L131-141 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-knowledge-atrophy">#sec-governance-knowledge-atrophy</a>
+    &middot; "This is the least discussed and most consequential long-term risk"
+  </div>
+
+  <div class="ws-instruction">
+    Fill block A first, one row per atrophy risk, then turn the sheet over for block B. Use the
+    line managers who control sprint capacity: column 8 is the one that decides whether any of
+    this happens. Name people, give every cadence a period, and book the first session. If the honest
+    answer to column 4 is "we would not detect it", write that. Complete
+    <b>WS-05-agent-risk-register</b> first: column 12 joins back to its rows. Print the findings half of block B blank
+    and let the drill owner complete it after the drill.
+  </div>
+
+  <div class="ws-foot-quote" style="margin-top:0;margin-bottom:2mm">
+    "Airline pilots who rely on autopilot for routine flying are measurably less proficient at manual flying &mdash; a fact the industry addresses with mandatory manual-flying requirements." (ch05 L133)
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A &mdash; atrophy risks and the practice programme
+      <span class="ws-block-note">three rows pre-printed, row 4 for any additional mode; the mitigation is not to avoid agents but to design deliberate practice into the development process (ch05 L141)</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:8%"><col style="width:10%"><col style="width:7%"><col style="width:9%"><col style="width:8%"><col style="width:18%"><col style="width:6%"><col style="width:9%"><col style="width:7%"><col style="width:6%"><col style="width:5%"><col style="width:7%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span> Atrophy risk</th>
+          <th><span class="fno">2</span> The chapter's mechanism</th>
+          <th><span class="fno">3</span> Cohorts exposed</th>
+          <th><span class="fno">4</span> How we would detect the erosion today</th>
+          <th><span class="fno">5</span> Detection status</th>
+          <th><span class="fno">6</span> Deliberate practice mechanism</th>
+          <th><span class="fno">7</span> Cadence</th>
+          <th><span class="fno">8</span> Protected time and where the hours come from</th>
+          <th><span class="fno">9</span> Owner</th>
+          <th><span class="fno">10</span> Competency signal we will watch</th>
+          <th><span class="fno">11</span> First session date</th>
+          <th><span class="fno">12</span> Risk-register row this closes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">Debugging skills<span class="prior-src">ch05 L137</span></td>
+          <td class="locked">Agents write the code and agents fix the bugs, so junior engineers never develop debugging intuition. (ch05 L137)</td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">we would detect it</span><span class="opt">we would not</span><span class="opt">not sure</span></div></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">regular unassisted development exercises</span><span class="opt">pair juniors with agent output for review practice</span><span class="opt">rotate architecture review responsibilities</span><span class="opt">constraint-design tasks in sprint work</span></div>
+            <span class="f-box sm"></span>
+          </td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">Architectural reasoning<span class="prior-src">ch05 L138</span></td>
+          <td class="locked">Agents make implementation decisions within provided constraints, so engineers get less practice reasoning outside them. (ch05 L138)</td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">we would detect it</span><span class="opt">we would not</span><span class="opt">not sure</span></div></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">regular unassisted development exercises</span><span class="opt">pair juniors with agent output for review practice</span><span class="opt">rotate architecture review responsibilities</span><span class="opt">constraint-design tasks in sprint work</span></div>
+            <span class="f-box sm"></span>
+          </td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">Review depth<span class="prior-src">ch05 L139</span></td>
+          <td class="locked">Reviewers habitually approve agent-generated code that passes tests, so deep review atrophies. (ch05 L139)</td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">we would detect it</span><span class="opt">we would not</span><span class="opt">not sure</span></div></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">regular unassisted development exercises</span><span class="opt">pair juniors with agent output for review practice</span><span class="opt">rotate architecture review responsibilities</span><span class="opt">constraint-design tasks in sprint work</span></div>
+            <span class="f-box sm"></span>
+          </td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">we would detect it</span><span class="opt">we would not</span><span class="opt">not sure</span></div></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">regular unassisted development exercises</span><span class="opt">pair juniors with agent output for review practice</span><span class="opt">rotate architecture review responsibilities</span><span class="opt">constraint-design tasks in sprint work</span></div>
+            <span class="f-box sm"></span>
+          </td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:7.4pt;color:#454f59;margin:2mm 0 0">
+      <b>Column 3:</b> name juniors, a named team, or everyone &mdash; named, not categorised.
+      <b>Column 4:</b> the signal and where it would surface; "we would not" is a legitimate entry.
+      <b>Column 5:</b> "we would not" triggers a detection action with an owner and a date in column 9.
+      <b>Column 6:</b> our concrete instantiation: what the exercise is, on what code, run by whom.
+      <b>Column 7:</b> a recurring commitment with a period; "periodically" and "when we can" fail this column.
+      <b>Column 8:</b> the sprint capacity, budget line or rota slot this consumes.
+      <b>Column 10:</b> qualitative: what we would observe if the practice were working. Not a score, and never attached to an individual.
+      <b>Column 11:</b> booked, not intended.
+      <b>Column 12:</b> the corresponding row of WS-05-agent-risk-register.
+    </p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-capability-retention-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Capability Retention and Fallback Plan &mdash; the 48-hour drill</h1>
+      <p class="ws-sub">Block B: plan the drill above the fold in the session; fill the findings after it has actually happened.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-capability-retention-plan</b><br>
+      Pack F &middot; fill order 2<br>
+      format <b>A3 landscape, two-sided</b> &middot; back
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; the 48-hour agent-unavailability drill
+      <span class="ws-block-note">the plan (fields 13-21) is filled in the session; the findings (22-25) are printed blank and completed after the drill</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:20%"><col style="width:30%"><col style="width:46%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Drill date</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div> booked against the release calendar, not left as a quarter</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Scope</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span> which teams and which services are in the drill</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>What is withdrawn, precisely</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span> the named tools disabled (IDE completion, CLI agents, cloud coding agents) and the mechanism used to disable each</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td>
+          <td><b>What stays available</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span> the explicit list; a drill with no boundary stops being a drill</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td>
+          <td><b>Success criteria</b></td>
+          <td class="prior">Verify your team can sustain delivery if agent assistance is unavailable for 48 hours.<span class="prior-src">ch05 L274</span></td>
+          <td class="fill"><span class="f-text"></span> written <b>before</b> the drill, in terms of sustaining delivery</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td>
+          <td><b>Fallback model configurations tested in the same window</b></td>
+          <td class="prior">Maintain fallback model configurations. Ensure critical workflows degrade gracefully to human-only execution. Test fallback quarterly.<span class="prior-src">ch05 L112</span></td>
+          <td class="fill"><span class="f-text"></span> which configurations we test, and the result</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td>
+          <td><b>Safety valve</b> (mandatory)</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span> who can call the drill off, and on what condition <span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">20</span></td>
+          <td><b>Comms plan</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span> what on-call, stakeholders and any affected customers are told, and when</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">21</span></td>
+          <td><b>Drill owner</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-capability-retention-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Capability Retention and Fallback Plan &mdash; drill findings</h1>
+      <p class="ws-sub">Block B, findings half: printed blank, completed after the drill has actually happened, by the drill owner. A visibly unfinished sheet on the wall is what keeps a booked drill from slipping.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-capability-retention-plan</b><br>
+      Pack F &middot; fill order 2<br>
+      back, continued
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; findings and sign-off
+      <span class="ws-block-note">fields 22-25, filled after the drill</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:20%"><col style="width:30%"><col style="width:46%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">22</span></td>
+          <td><b>Findings</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-box"></span> what broke, what held, what surprised us</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">23</span></td>
+          <td><b>Actions arising</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span> one line per action <span class="f-owner"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">24</span></td>
+          <td><b>Next drill date</b></td>
+          <td class="prior">Test fallback quarterly.<span class="prior-src">ch05 L112</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">25</span></td>
+          <td><b>Signed</b> (plan before the drill; findings after)</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill tall"><span class="f-sign"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+            <span class="f-sign"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "Knowledge atrophy does not produce failures in the short term. It produces an organization that cannot recover when agent assistance is unavailable, cannot evaluate whether agent output is correct in novel situations, and cannot train the next generation of engineers." (ch05 L141)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-capability-retention-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
