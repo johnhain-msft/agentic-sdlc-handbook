@@ -9,6 +9,9 @@ format:
           <style>
             html:root { --sheet-w: 297mm; --sheet-h: 420mm; --sheet-margin: 12mm; }
             @page { size: A3 portrait; margin: 12mm; }
+            .fno, .prior-src, .prior .prior-src { font-size: 7.2pt; }
+            .f-select .opt { font-size: 8pt; }
+            .f-hml .pt { font-size: 7.4pt; }
           </style>
 ---
 
@@ -132,7 +135,7 @@ format:
   <div class="ws-block">
     <h2>Organization-specific rows 7–8 <span class="ws-block-note">name risks specific to this organization</span></h2>
     <table class="ws"><colgroup><col style="width:5%"><col style="width:13%"><col style="width:20%"><col style="width:21%"><col style="width:20%"><col style="width:21%"></colgroup><thead><tr><th></th><th>Field</th><th>Risk 7 — book / rule</th><th>Your record</th><th>Risk 8 — book / rule</th><th>Your record</th></tr></thead><tbody>
-      <tr><td class="ws-num"><span class="fno">43</span></td><td><b>Pitfall number</b></td><td class="prior"><span class="f-computed" data-formula="pitfall row sequence after six printed pitfalls">7</span><span class="prior-src">ch08 L242-251</span></td><td class="locked">—</td><td class="prior"><span class="f-computed" data-formula="pitfall row sequence after six printed pitfalls">8</span><span class="prior-src">ch08 L242-251</span></td><td class="locked">—</td></tr>
+      <tr><td class="ws-num"><span class="fno">43</span></td><td><b>Pitfall number</b></td><td class="prior"><span class="f-computed" data-formula="pitfall row sequence after six printed pitfalls">7</span><span class="prior-src">local row number (book names 1-6)</span></td><td class="locked">—</td><td class="prior"><span class="f-computed" data-formula="pitfall row sequence after six printed pitfalls">8</span><span class="prior-src">local row number (book names 1-6)</span></td><td class="locked">—</td></tr>
       <tr><td class="ws-num"><span class="fno">44</span></td><td><b>Pitfall</b></td><td class="prior">—<span class="prior-src">ch08 L242-251</span></td><td class="fill"><span class="f-text"></span></td><td class="prior">—<span class="prior-src">ch08 L242-251</span></td><td class="fill"><span class="f-text"></span></td></tr>
       <tr><td class="ws-num"><span class="fno">45</span></td><td><b>What it looks like</b></td><td class="prior">—<span class="prior-src">ch08 L242-251</span></td><td class="locked">—</td><td class="prior">—<span class="prior-src">ch08 L242-251</span></td><td class="locked">—</td></tr>
       <tr><td class="ws-num"><span class="fno">46</span></td><td><b>Likelihood here</b></td><td class="prior">—<span class="prior-src">derived (scale above)</span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="prior">—<span class="prior-src">derived (scale above)</span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td></tr>
@@ -160,7 +163,7 @@ format:
   <div class="ws-block">
     <h2>Organization-specific rows 9–10 <span class="ws-block-note">name risks specific to this organization</span></h2>
     <table class="ws"><colgroup><col style="width:5%"><col style="width:13%"><col style="width:20%"><col style="width:21%"><col style="width:20%"><col style="width:21%"></colgroup><thead><tr><th></th><th>Field</th><th>Risk 9 — book / rule</th><th>Your record</th><th>Risk 10 — book / rule</th><th>Your record</th></tr></thead><tbody>
-      <tr><td class="ws-num"><span class="fno">57</span></td><td><b>Pitfall number</b></td><td class="prior"><span class="f-computed" data-formula="pitfall row sequence after six printed pitfalls">9</span><span class="prior-src">ch08 L242-251</span></td><td class="locked">—</td><td class="prior"><span class="f-computed" data-formula="pitfall row sequence after six printed pitfalls">10</span><span class="prior-src">ch08 L242-251</span></td><td class="locked">—</td></tr>
+      <tr><td class="ws-num"><span class="fno">57</span></td><td><b>Pitfall number</b></td><td class="prior"><span class="f-computed" data-formula="pitfall row sequence after six printed pitfalls">9</span><span class="prior-src">local row number (book names 1-6)</span></td><td class="locked">—</td><td class="prior"><span class="f-computed" data-formula="pitfall row sequence after six printed pitfalls">10</span><span class="prior-src">local row number (book names 1-6)</span></td><td class="locked">—</td></tr>
       <tr><td class="ws-num"><span class="fno">58</span></td><td><b>Pitfall</b></td><td class="prior">—<span class="prior-src">ch08 L242-251</span></td><td class="fill"><span class="f-text"></span></td><td class="prior">—<span class="prior-src">ch08 L242-251</span></td><td class="fill"><span class="f-text"></span></td></tr>
       <tr><td class="ws-num"><span class="fno">59</span></td><td><b>What it looks like</b></td><td class="prior">—<span class="prior-src">ch08 L242-251</span></td><td class="locked">—</td><td class="prior">—<span class="prior-src">ch08 L242-251</span></td><td class="locked">—</td></tr>
       <tr><td class="ws-num"><span class="fno">60</span></td><td><b>Likelihood here</b></td><td class="prior">—<span class="prior-src">derived (scale above)</span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="prior">—<span class="prior-src">derived (scale above)</span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td></tr>
