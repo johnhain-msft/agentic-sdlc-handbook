@@ -323,21 +323,21 @@ format:
       <thead><tr><th></th><th><span class="fno">33</span> Phase</th><th><span class="fno">34</span> What the orchestrator decides</th><th>Notes for this charter</th></tr></thead>
       <tbody>
         <tr><td class="ws-num"></td><td class="fill"><div class="f-select"><span class="opt">Before execution</span></div></td>
-          <td class="prior">The plan: which concerns to address, which to defer, how to partition work across agents and waves, and what principles govern trade-offs.<span class="prior-src">ch17 L334-338</span></td><td class="locked">—</td></tr>
+          <td class="prior">The plan: which concerns to address, which to defer, how to partition work across agents and waves, and what principles govern trade-offs.<span class="prior-src">ch17 L332</span></td><td class="locked">—</td></tr>
         <tr><td class="ws-num"></td><td class="fill"><div class="f-select"><span class="opt">During execution</span></div></td>
-          <td class="prior">Monitors progress and handles escalations; diagnoses whether a stall is a prompt, scope, or tooling problem; resolves conflicting output by the plan's principles or an explicit design decision.<span class="prior-src">ch17 L334-338</span></td><td class="locked">—</td></tr>
+          <td class="prior">Monitors progress and handles escalations; diagnoses whether a stall is a prompt, scope, or tooling problem; resolves conflicting output by the plan's principles or an explicit design decision.<span class="prior-src">ch17 L334</span></td><td class="locked">—</td></tr>
         <tr><td class="ws-num"></td><td class="fill"><div class="f-select"><span class="opt">After execution</span></div></td>
-          <td class="prior">Spot-checks critical changes, verifies test results, and decides whether output meets the acceptance criteria.<span class="prior-src">ch17 L334-338</span></td><td class="locked">—</td></tr>
+          <td class="prior">Spot-checks critical changes, verifies test results, and decides whether output meets the acceptance criteria.<span class="prior-src">ch17 L336</span></td><td class="locked">—</td></tr>
       </tbody>
     </table>
     <table class="ws">
       <colgroup><col style="width:5%"><col style="width:23%"><col style="width:34%"><col style="width:38%"></colgroup>
       <thead><tr><th></th><th>Charter field</th><th>What the book says</th><th>Your answer</th></tr></thead>
       <tbody>
-        <tr><td class="ws-num"><span class="fno">35</span></td><td><b>Who holds it here</b></td><td class="prior">Name the holder, or name the level where it is a whole cohort.<span class="prior-src">ch17 L328</span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">35</span></td><td><b>Who holds it here</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span><div style="font-size:7pt">Name the holder, or name the level where it is a whole cohort.</div></td></tr>
         <tr><td class="ws-num"><span class="fno">36</span></td><td><b>What they stop doing to make room</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span></td></tr>
         <tr><td class="ws-num"><span class="fno">37</span></td><td><b>Skills they need and do not have today</b></td><td class="prior">Resolves into the gap map of WS-06-skill-gap-and-hiring-bar rather than being re-derived here.<span class="prior-src">derived</span></td><td class="fill"><span class="f-box"></span></td></tr>
-        <tr><td class="ws-num"><span class="fno">38</span></td><td><b>Review depth proportional to risk, not diff volume</b></td><td class="prior">A 2,000-line diff of which 1,800 lines are mechanical migration does not require reading 2,000 lines — it requires verifying the migration pattern, the 200 non-mechanical lines, and the test coverage.<span class="prior-src">ch17 L338</span></td><td class="fill"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">38</span></td><td><b>Review depth proportional to risk, not diff volume</b></td><td class="prior">A 2,000-line diff of which 1,800 lines are mechanical migration does not require reading 2,000 lines — it requires verifying the migration pattern, the 200 non-mechanical lines, and the test coverage.<span class="prior-src">ch17 L336</span></td><td class="fill"><span class="f-box"></span></td></tr>
       </tbody>
     </table>
   </div>
