@@ -195,7 +195,7 @@ format:
           <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
         </tr>
         <tr>
-          <td><div class="prior">Procurement and vendor rules<span class="prior-src">ch05 L156; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">Procurement and vendor rules<span class="prior-src">constraint class named in spec §6, not in a book line</span></div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
           <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
@@ -289,7 +289,7 @@ format:
       </thead>
       <tbody>
         <tr>
-          <td><div class="prior">Data residency<span class="prior-src">ch05 L156; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">Data residency<span class="prior-src">ch05 L199, L207</span></div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
           <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
@@ -305,7 +305,7 @@ format:
           <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
         </tr>
         <tr>
-          <td><div class="prior">Open-source contribution policy<span class="prior-src">ch05 L156; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">Open-source contribution policy<span class="prior-src">constraint class named in spec §6; case study L145 (microsoft/ org repo PR)</span></div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
           <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
@@ -421,8 +421,10 @@ format:
   </div>
 
   <div class="ws-block-note">
-    Record the actual policy name and document identifier in column 1. Keep the owner of record and the person who can waive it separate. Where column 3 is institutional memory only or nowhere, do not leave the gap without an encode-by date or an owned decision to accept it. No specialist agent is a control.
-  </div>
+    Record the actual policy name and document identifier in column 1. Keep the owner of record and the person who can waive it separate.     Where column 3 is institutional memory only or nowhere, do not leave the gap without an encode-by date in column 13 or a written decision to accept it: record the decision and who owns it below, citing the row. No specialist agent is a control.
+        <div style="margin-top:3mm">Gap accepted, written decision and its owner (row, decision, name, date):<span class="f-text" style="display:block;min-height:14mm"></span></div>
+        <div style="margin-top:3mm">If no row is ranked encode first, write down why the room concludes it has no low-prevalence, high-stakes policy:<span class="f-text" style="display:block;min-height:14mm"></span></div>
+      </div>
 
   <div class="ws-foot">
     <div>WS-05-org-policy-encoding-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
@@ -529,7 +531,7 @@ format:
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
         </tr>
         <tr>
-          <td><div class="prior">Additional fact class<span class="prior-src">organisation adds</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
+          <td><div class="prior">Additional fact class<span class="prior-src">organisation adds</span></div><div class="fill"><span class="f-text"></span><small>Write the new class.</small></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artifact.</small></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
@@ -537,7 +539,7 @@ format:
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
         </tr>
         <tr>
-          <td><div class="prior">Additional fact class<span class="prior-src">organisation adds</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
+          <td><div class="prior">Additional fact class<span class="prior-src">organisation adds</span></div><div class="fill"><span class="f-text"></span><small>Write the new class.</small></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artifact.</small></div></td>
           <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
