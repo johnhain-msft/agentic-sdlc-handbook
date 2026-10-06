@@ -15,7 +15,7 @@ format:
 ```{=html}
 <div class="screen-only">
   <b>WS-19-where-the-bill-gets-decided</b> &middot; review copy &middot;
-  declared format <b>A3 landscape</b> &middot; 2 sheets.
+  declared format <b>A3 landscape</b> &middot; 1 sheet.
   The white page below is one physical sheet at true size. Anything spilling past its
   edge onto this grey background is a layout defect.
 </div>
@@ -46,7 +46,7 @@ format:
     For each printed cost lever, record who sets it today and what it is set to. Choose who
     should set it, then write the target state and date, the guardrail, the named accountable
     owner, and how a change will be detected and who receives the signal. Tick Gap where
-    today's setter and intended setter differ. Map each lever to one spend pool using the
+    today's setter and intended setter differ. Tick "In the room or notified" once the named owner has been told. Map each lever to one spend pool using the
     pool names on the facing WS-07 spend-pool budget model. Have the architecture or platform
     owner sign and date the sheet.
   </div>
@@ -106,9 +106,9 @@ format:
         <tr>
           <td class="ws-num"><span class="fno">5</span></td>
           <td><b>What it is set to today</b><br><small>Actual current state, in one sentence.</small></td>
-          <td class="fill"><span class="f-box"></span></td>
-          <td class="fill"><span class="f-box"></span></td>
-          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">6</span></td>
@@ -123,68 +123,6 @@ format:
             <div class="f-select"><span class="opt">central platform</span><span class="opt">each team</span><span class="opt">individual developer</span></div>
           </td>
         </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="ws-foot">
-    <div>WS-19-where-the-bill-gets-decided &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
-    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
-      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
-  </div>
-
-</div>
-
-<!-- ============================ SHEET 2 ============================== -->
-<div class="sheet">
-
-  <div class="ws-head">
-    <div>
-      <h1>Where Does the Bill Get Decided? Cost-Lever Ownership Map</h1>
-      <p class="ws-sub">A cost-lever ownership map that says explicitly which spend decisions are engineered centrally and which are left to teams.</p>
-    </div>
-    <div class="ws-meta">
-      <b>WS-19-where-the-bill-gets-decided</b><br>
-      Pack C - The case and the money<br>
-      fill order <b>5</b> &middot; type <b>decision</b><br>
-      audience <b>exec</b>
-    </div>
-  </div>
-
-  <div class="ws-source">
-    Source: <b>Architectural Patterns: A Rosetta Stone</b>,
-    <i>1. The layered model of an agentic runtime</i> &middot;
-    <code>handbook\ch19-architectural-patterns-rosetta-stone.qmd</code> L50-50 &middot;
-    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch19-architectural-patterns-rosetta-stone.html#sec-layered-model">#sec-layered-model</a>
-  </div>
-
-  <div class="ws-instruction">
-    For each printed cost lever, record who sets it today and what it is set to. Choose who
-    should set it, then write the target state and date, the guardrail, the named accountable
-    owner, and how a change will be detected and who receives the signal. Tick Gap where
-    today's setter and intended setter differ. Map each lever to one spend pool using the
-    pool names on the facing WS-07 spend-pool budget model. Have the architecture or platform
-    owner sign and date the sheet.
-  </div>
-
-  <div class="ws-block">
-    <h2>Cost-lever ownership (continued)
-      <span class="ws-block-note">One column per lever &middot; printed priors are shaded; complete the blank cells</span></h2>
-
-    <table class="ws">
-      <colgroup>
-        <col style="width:6%"><col style="width:18%">
-        <col style="width:25.33%"><col style="width:25.33%"><col style="width:25.34%">
-      </colgroup>
-      <thead>
-        <tr>
-          <th></th><th>Field</th>
-          <th>Foundation &middot; model</th>
-          <th>Assembly &middot; prefix</th>
-          <th>Execution &middot; dispatch</th>
-        </tr>
-      </thead>
-      <tbody>
         <tr>
           <td class="ws-num"><span class="fno">7</span></td>
           <td><b>Target state, and by when</b><br><small>What it should be set to, with a date.</small></td>
@@ -195,30 +133,30 @@ format:
         <tr>
           <td class="ws-num"><span class="fno">8</span></td>
           <td><b>Guardrail</b><br><small>The boundary a team may not cross without approval.</small></td>
-          <td class="fill"><span class="f-box"></span></td>
-          <td class="fill"><span class="f-box"></span></td>
-          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">9</span></td>
           <td><b>Accountable owner</b><br><small>A named individual, never a function.</small></td>
-          <td class="fill"><span class="f-owner"></span></td>
-          <td class="fill"><span class="f-owner"></span></td>
-          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-checkline"><span class="f-check"></span>In the room or notified</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-checkline"><span class="f-check"></span>In the room or notified</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-checkline"><span class="f-check"></span>In the room or notified</span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">10</span></td>
           <td><b>How a change to this lever is detected</b><br><small>Alert, report or review that tells us it moved, and who receives it.</small></td>
-          <td class="fill"><span class="f-box"></span></td>
-          <td class="fill"><span class="f-box"></span></td>
-          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">11</span></td>
           <td><b>Gap?</b></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tick if columns 4 and 6 differ</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tick if columns 4 and 6 differ</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tick if columns 4 and 6 differ</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tick if rows 4 and 6 differ</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tick if rows 4 and 6 differ</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tick if rows 4 and 6 differ</span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">12</span></td>
@@ -250,7 +188,7 @@ format:
   </div>
 
   <div class="ws-foot">
-    <div>WS-19-where-the-bill-gets-decided &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>WS-19-where-the-bill-gets-decided &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
     <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
       &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
   </div>
