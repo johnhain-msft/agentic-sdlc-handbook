@@ -22,7 +22,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Effective Context Trace</h1>
-      <p class="ws-sub">Trace 1 of 3. One file per sheet. One file per sheet; seven fixed rows, empty layers included.</p>
+      <p class="ws-sub">Trace 1 of 3. One file per sheet; seven fixed rows, empty layers included.</p>
     </div>
     <div class="ws-meta">
       <b>WS-12-effective-context-trace</b><br>
@@ -181,7 +181,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Effective Context Trace</h1>
-      <p class="ws-sub">Trace 2 of 3. One file per sheet. One file per sheet; seven fixed rows, empty layers included.</p>
+      <p class="ws-sub">Trace 2 of 3. One file per sheet; seven fixed rows, empty layers included.</p>
     </div>
     <div class="ws-meta">
       <b>WS-12-effective-context-trace</b><br>
@@ -340,7 +340,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Effective Context Trace</h1>
-      <p class="ws-sub">Trace 3 of 3. One file per sheet. One file per sheet; seven fixed rows, empty layers included.</p>
+      <p class="ws-sub">Trace 3 of 3. One file per sheet; seven fixed rows, empty layers included.</p>
     </div>
     <div class="ws-meta">
       <b>WS-12-effective-context-trace</b><br>
