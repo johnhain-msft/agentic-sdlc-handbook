@@ -91,7 +91,7 @@ format:
           <td class="fill"><span class="f-box sm"></span></td></tr>
       </tbody>
     </table>
-    <p style="font-size:7pt;margin:1mm 0 0">Evidence is the literal line of output or log text, quoted. A <b>pass</b> with an empty evidence cell is <b>not run</b>.</p>
+    <p style="font-size:7pt;margin:1mm 0 0">Evidence is the literal line of output or log text, quoted. A <b>pass</b> with an empty evidence cell is <b>not run</b>. A Resolve <b>not run</b> is never left blank: write in the Evidence cell why it could not run (for example, no manifest or lockfile). That is a finding against WS-21-primitive-governance-policy, not a pass.</p>
   </div>
 
   <div class="ws-foot">
@@ -163,7 +163,7 @@ format:
 
   <div class="ws-head">
     <div>
-      <h1>The Silent Primitive &mdash; side B: did the model attend to it?</h1>
+      <h1>The Silent Primitive &mdash; side B: did the model attend?</h1>
       <p class="ws-sub">Only if all four phases on side A passed. Three numbers settle almost every case.</p>
     </div>
     <div class="ws-meta">
@@ -253,6 +253,12 @@ format:
           <td class="fill"><span class="f-computed" data-formula="failing phase (side A, row 12) or prime suspect (side B, row 24)"></span></td></tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Reading the tally <span class="ws-block-note">the card's second output</span></h2>
+    <p style="font-size:8pt;margin:0 0 2mm">Row 27 is only useful if somebody counts. Once a month, transcribe the row 27 entry from every card on the pad onto one tally, and have one named person read it. The count shows whether the team's failures are budget-pressure or description-grammar problems. A pad of cards that nobody counts produces individual fixes and no institutional knowledge.</p>
+    <p style="font-size:8pt;margin:0">Tally kept by <span style="display:inline-block;width:45mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Read every <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span></p>
   </div>
 
   <div class="ws-block">
