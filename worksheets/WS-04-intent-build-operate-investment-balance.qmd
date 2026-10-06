@@ -43,7 +43,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Fill all three buckets with your current annual spend, allocated people and active teams, accountable executive, planning cadence and forum, and budget line. Use the same reporting currency across all three spend entries. Compute each current share from the total, then write your own argued target share for the next twelve months and the specific re-balancing ask wherever it differs. Complete columns 6 and 7 from the prerequisite <b>WS-04-lifecycle-layer-coverage-canvas</b>. Reconcile the total to the tooling and model-consumption lines of <b>WS-03-tco-calculator</b>.
+    Fill each bucket: annual spend (one reporting currency), people, teams, executive, cadence and forum, budget line. Compute each current share from the total, then write your own argued target share for the next twelve months and the specific re-balancing ask wherever it differs. Complete columns 6 and 7 from the prerequisite <b>WS-04-lifecycle-layer-coverage-canvas</b>. Reconcile the total to the tooling and model-consumption lines of <b>WS-03-tco-calculator</b>. Write 0, not blank, for none. Each column 8 executive must be present or notified before close; the sponsor signs to confirm.
   </div>
 
   <div class="ws-block">
@@ -52,8 +52,8 @@ format:
 
     <table class="ws">
       <colgroup>
-        <col style="width:7%"><col style="width:9%"><col style="width:10%"><col style="width:18%">
-        <col style="width:7%"><col style="width:5%"><col style="width:5%"><col style="width:7%">
+        <col style="width:7%"><col style="width:9%"><col style="width:10%"><col style="width:15%">
+        <col style="width:7%"><col style="width:6%"><col style="width:5%"><col style="width:7%">
         <col style="width:7%"><col style="width:7%"><col style="width:5%"><col style="width:5%">
         <col style="width:8%">
       </colgroup>
@@ -64,7 +64,7 @@ format:
           <th><span class="fno">3</span> Question it answers</th>
           <th><span class="fno">4</span> Agent maturity, per the chapter</th>
           <th><span class="fno">5</span> Current annual spend — tools and model consumption</th>
-          <th><span class="fno">6</span> FTE or headcount allocated</th>
+          <th style="font-size:6.5pt"><span class="fno">6</span> FTE or headcount allocated</th>
           <th><span class="fno">7</span> Teams active in this bucket</th>
           <th><span class="fno">8</span> Accountable executive</th>
           <th><span class="fno">9</span> Planning cadence it sits on</th>
@@ -89,10 +89,10 @@ format:
               <span class="opt">annual</span><span class="opt">quarterly</span><span class="opt">monthly</span>
               <span class="opt">sprint</span><span class="opt">none</span>
             </div>
-            <small>Name the forum:</small><span class="f-text sm"></span>
+            <small>Forum:</small><span class="f-text sm"></span>
           </td>
           <td class="fill">
-            <div class="f-select"><span class="opt">To be determined (no money)</span></div>
+            <div class="f-select"><span class="opt" style="white-space:normal;display:block;max-width:100%">To be determined (no money)</span></div>
             <small>Actual cost centre or budget line:</small><span class="f-text sm"></span>
           </td>
           <td class="fill"><span class="f-computed" data-formula="column 5 &divide; footer total"></span></td>
@@ -113,10 +113,10 @@ format:
               <span class="opt">annual</span><span class="opt">quarterly</span><span class="opt">monthly</span>
               <span class="opt">sprint</span><span class="opt">none</span>
             </div>
-            <small>Name the forum:</small><span class="f-text sm"></span>
+            <small>Forum:</small><span class="f-text sm"></span>
           </td>
           <td class="fill">
-            <div class="f-select"><span class="opt">To be determined (no money)</span></div>
+            <div class="f-select"><span class="opt" style="white-space:normal;display:block;max-width:100%">To be determined (no money)</span></div>
             <small>Actual cost centre or budget line:</small><span class="f-text sm"></span>
           </td>
           <td class="fill"><span class="f-computed" data-formula="column 5 &divide; footer total"></span></td>
@@ -137,10 +137,10 @@ format:
               <span class="opt">annual</span><span class="opt">quarterly</span><span class="opt">monthly</span>
               <span class="opt">sprint</span><span class="opt">none</span>
             </div>
-            <small>Name the forum:</small><span class="f-text sm"></span>
+            <small>Forum:</small><span class="f-text sm"></span>
           </td>
           <td class="fill">
-            <div class="f-select"><span class="opt">To be determined (no money)</span></div>
+            <div class="f-select"><span class="opt" style="white-space:normal;display:block;max-width:100%">To be determined (no money)</span></div>
             <small>Actual cost centre or budget line:</small><span class="f-text sm"></span>
           </td>
           <td class="fill"><span class="f-computed" data-formula="column 5 &divide; footer total"></span></td>
@@ -189,9 +189,9 @@ format:
             </tr>
             <tr>
               <td class="ws-num"><span class="fno">17</span></td>
-              <td><b>Sponsor signature + date</b></td>
+              <td><b>Sponsor signature + date</b><br><small>Signing confirms each column 8 executive attended or was notified.</small></td>
               <td class="prior">—</td>
-              <td class="fill tall">
+              <td class="fill">
                 <span class="f-sign"></span>
                 <small>Date:</small>
                 <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
