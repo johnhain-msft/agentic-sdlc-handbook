@@ -1,0 +1,448 @@
+---
+title: "Single Agent or Many? Scoping Decision Matrix"
+pagetitle: "WS-17-single-vs-multi-agent-decision-matrix"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-17-single-vs-multi-agent-decision-matrix</b> &middot; declared format <b>A4 portrait</b> &middot; 5 sheets
+  (sheets 1-3 are the per-change side; sheets 4-5 are the team's running sheet, blocks D and E).
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Single Agent or Many? Scoping Decision Matrix</h1>
+      <p class="ws-sub">A one-page scoping verdict with the reasoning recorded, and over time a locally calibrated file-count threshold replacing the book's 10-15 default.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-single-vs-multi-agent-decision-matrix</b><br>
+      Pack D &middot; fill order 9<br>
+      type <b>decision</b> &middot; audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b> &middot; &ldquo;When One Agent Is Enough&rdquo; &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L16-45 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-when-one-agent">#sec-multi-agent-when-one-agent</a>
+    &middot; fill after <b>WS-17-coordination-tax-calculator</b>
+  </div>
+
+  <div class="ws-instruction">
+    Fill this in <b>before any agent is dispatched</b>; a verdict written afterwards is a justification, not a decision.
+    For the change in front of you, write the actual value for each of the six dimensions, say which way it points, and say how sure you are of it.
+    Then tick the seven criteria, record the verdict and the reason. The grey italic columns are the book's starting values; once block D (sheet 4) is set, score against column 4 instead.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A &mdash; the six-dimension matrix <span class="ws-block-note">columns 1-7</span></h2>
+
+    <div class="prior--hedged">
+      <span class="hedge-figure">Single agent: fewer than 10 files. Multiple agents: more than 15 files. (Elsewhere in the chapter: 15-20 files, L28.)</span>
+      <span class="hedge-text">"The boundary at 10-15 files is approximate and experience-derived, though not precisely measured."</span>
+      <span class="hedge-src">handbook/ch17-multi-agent-orchestration.qmd L42</span>
+    </div>
+    <div class="ours-label">Our own boundary &mdash; column 4 carries it from block D</div>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:13%"><col style="width:12%"><col style="width:13%"><col style="width:15%"><col style="width:17%"><col style="width:18%"><col style="width:12%">
+      </colgroup>
+      <thead>
+        <tr><th>1 Dimension</th><th>2 Prior &mdash; single</th><th>3 Prior &mdash; multiple</th><th>4 Our boundary in force</th><th>5 This change</th><th>6 Points to</th><th>7 Confidence</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked">Files changed</td>
+          <td class="prior">&lt; 10<span class="prior-src">ch17 L35</span></td>
+          <td class="prior">&gt; 15<span class="prior-src">ch17 L35</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Concerns</td>
+          <td class="prior">1<span class="prior-src">ch17 L36</span></td>
+          <td class="prior">2+<span class="prior-src">ch17 L36</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">File dependencies</td>
+          <td class="prior">Linear<span class="prior-src">ch17 L37</span></td>
+          <td class="prior">Graph (can parallelise)<span class="prior-src">ch17 L37</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Required expertise</td>
+          <td class="prior">One domain<span class="prior-src">ch17 L38</span></td>
+          <td class="prior">Multiple domains<span class="prior-src">ch17 L38</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Time pressure</td>
+          <td class="prior">Low<span class="prior-src">ch17 L39</span></td>
+          <td class="prior">Moderate to high<span class="prior-src">ch17 L39</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Risk of context overload</td>
+          <td class="prior">Low<span class="prior-src">ch17 L40</span></td>
+          <td class="prior">High<span class="prior-src">ch17 L40</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.2pt;margin:1mm 0 0">Column 4 reads <i>using the book's prior</i> until block D is set. Column 6 is scored against column 4 where filled, otherwise columns 2-3 (L33).
+      Confidence: <b>H</b> counted from the actual diff or file list; <b>M</b> estimated from a similar recent change; <b>L</b> a guess.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-single-vs-multi-agent-decision-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Single Agent or Many? &mdash; criteria and verdict</h1>
+      <p class="ws-sub">Blocks B and C. Keep this sheet with the change's plan.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-single-vs-multi-agent-decision-matrix</b><br>
+      Pack D &middot; fill order 9
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; sufficiency and breakdown criteria <span class="ws-block-note">columns 8-11 &middot; seven fixed rows</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:17%"><col style="width:45%"><col style="width:15%"><col style="width:23%">
+      </colgroup>
+      <thead>
+        <tr><th>8 Criterion</th><th>9 What the book says</th><th>10 Met?</th><th>11 Note (one line if Partial)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked"><i>Sufficient when:</i> Scope is narrow</td>
+          <td class="prior">Fewer than 10 files in a single module.<span class="prior-src">ch17 L20</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><i>Sufficient when:</i> Concern is singular</td>
+          <td class="prior">One type of change, not three interleaved concerns.<span class="prior-src">ch17 L21</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><i>Sufficient when:</i> Dependencies are linear</td>
+          <td class="prior">Each file change follows naturally from the previous one, with no need for parallel work.<span class="prior-src">ch17 L22</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><i>Sufficient when:</i> Context budget is adequate</td>
+          <td class="prior">The agent can hold all relevant source files, instructions and conversation history without exceeding roughly 60% of its window capacity, leaving room for reasoning.<span class="prior-src">ch17 L23</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><i>Breaks down when:</i> Multiple concerns intersect</td>
+          <td class="prior">Architectural knowledge and domain expertise and security awareness at once; one agent cannot hold three specialisation contexts without dilution.<span class="prior-src">ch17 L27</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><i>Breaks down when:</i> File count exceeds context capacity</td>
+          <td class="prior">More than 15-20 files and the agent cannot see all the code it needs to modify.<span class="prior-src">ch17 L28</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><i>Breaks down when:</i> Parallelism would reduce wall-clock time significantly</td>
+          <td class="prior">Five independent file groups that could be modified simultaneously instead take five times as long sequentially.<span class="prior-src">ch17 L29</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-single-vs-multi-agent-decision-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Single Agent or Many? &mdash; verdict</h1>
+      <p class="ws-sub">Block C. Keep this sheet with the change's plan.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-single-vs-multi-agent-decision-matrix</b><br>
+      Pack D &middot; fill order 9
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block C &mdash; verdict <span class="ws-block-note">columns 12-17</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:20%"><col style="width:30%"><col style="width:50%">
+      </colgroup>
+      <thead>
+        <tr><th>Column</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>12 Verdict</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch17 L16</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single agent</span><span class="opt">Multiple agents</span></div></td>
+        </tr>
+        <tr>
+          <td><b>13 Reason, in one line</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><div style="font-size:7pt">The reasoning is the point of recording the verdict. If you override the tie-break, write the override and who authorised it here.</div></td>
+        </tr>
+        <tr>
+          <td><b>14 Was the decision marginal?</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch17 L44</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Yes &mdash; column 6 returned Marginal on two or more dimensions</span></td>
+        </tr>
+        <tr>
+          <td><b>15 Tie-break</b></td>
+          <td class="prior">Printed rule: see the foot of this sheet.<span class="prior-src">ch17 L44</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tie-break applied</span><span class="f-checkline"><span class="f-check"></span>Overridden &mdash; written at column 13, with who authorised it</span></td>
+        </tr>
+        <tr>
+          <td><b>16 If multiple &mdash; topology chosen</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span><div style="font-size:7pt">Choose from <b>WS-17-orchestration-topology-selector</b>. Must be a sanctioned topology.</div></td>
+        </tr>
+        <tr>
+          <td><b>17 Decided by / date</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-owner"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "When the decision is marginal, err toward a single agent. Coordination costs are real. Multi-agent orchestration is a tool for tasks that exceed single-agent capacity, not a default mode of operation." (ch17 L44)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-single-vs-multi-agent-decision-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Single Agent or Many? &mdash; local calibration</h1>
+      <p class="ws-sub">Block D, on the team's running sheet. Set and reviewed by whoever owns the team's orchestration practice.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-single-vs-multi-agent-decision-matrix</b><br>
+      Pack D &middot; fill order 9
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block D &mdash; local calibration record <span class="ws-block-note">columns 18-24 &middot; set by the team's orchestration owner &middot; fill this first</span></h2>
+
+    <div class="prior--hedged">
+      <span class="hedge-figure">Priors: fewer than 10 files / more than 15 files; roughly 60% of window capacity for context budget.</span>
+      <span class="hedge-text">"The boundary at 10-15 files is approximate and experience-derived, though not precisely measured." &hellip; "Your mileage will vary by model, task complexity, and instruction file size."</span>
+      <span class="hedge-src">handbook/ch17-multi-agent-orchestration.qmd L42 (60% rule of thumb: L23)</span>
+    </div>
+    <div class="ours-label">Our own values &mdash; written beside the priors, never in place of them</div>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:20%"><col style="width:32%"><col style="width:48%">
+      </colgroup>
+      <thead>
+        <tr><th>Column</th><th>What the book says</th><th>Ours</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>18 Our boundary &mdash; single agent below</b></td>
+          <td class="prior">Prior: fewer than 10 files<span class="prior-src">ch17 L35, L42</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td><b>19 Our boundary &mdash; multiple agents above</b></td>
+          <td class="prior">Prior: more than 15 files<span class="prior-src">ch17 L35, L42</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td><b>20 Basis for our boundary</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch17 L42</span></td>
+          <td class="fill"><span class="f-text sm"></span><div style="font-size:7pt">How many logged outcomes it rests on, and which. Reads <i>insufficient data</i> until block E has entries.</div></td>
+        </tr>
+        <tr>
+          <td><b>21 Conditions this boundary applies to</b></td>
+          <td class="prior">"Your mileage will vary by model, task complexity, and instruction file size." A boundary is valid only for the conditions it was observed under.<span class="prior-src">ch17 L42</span></td>
+          <td class="fill"><span class="f-text sm"></span><div style="font-size:7pt">Our model, our task type, our instruction-file size.</div></td>
+        </tr>
+        <tr>
+          <td><b>22 Our context-budget headroom rule</b></td>
+          <td class="prior">Prior: roughly 60% of window capacity, leaving room for reasoning &mdash; a rule of thumb the book states without measuring.<span class="prior-src">ch17 L23</span></td>
+          <td class="fill"><span class="f-text sm"></span><div style="font-size:7pt">Our own, once the harness reports usable numbers.</div></td>
+        </tr>
+        <tr>
+          <td><b>23 Threshold inherited from the coordination-tax calculator</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text sm"></span><div style="font-size:7pt">Recorded at WS-17-coordination-tax-calculator column 33. Must not contradict columns 18-19.</div></td>
+        </tr>
+        <tr>
+          <td><b>24 Calibration set by / on / review by</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch17 L42</span></td>
+          <td class="fill"><span class="f-owner"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+            <div style="font-size:7pt">A boundary with no review date will outlive the model it was measured against.</div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "When the decision is marginal, err toward a single agent. Coordination costs are real. Multi-agent orchestration is a tool for tasks that exceed single-agent capacity, not a default mode of operation." (ch17 L44)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-single-vs-multi-agent-decision-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Single Agent or Many? &mdash; outcome log</h1>
+      <p class="ws-sub">The back of the team's single running sheet. One row per change, filled after it ships; calibration needs a series.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-single-vs-multi-agent-decision-matrix</b><br>
+      Pack D &middot; fill order 9
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block E &mdash; outcome log <span class="ws-block-note">columns 25-30 &middot; filled after the change ships</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:16%"><col style="width:15%"><col style="width:10%"><col style="width:20%"><col style="width:26%"><col style="width:13%">
+      </colgroup>
+      <thead>
+        <tr><th>25 Change</th><th>26 Verdict taken</th><th>27 Files actually touched</th><th>28 Did the verdict hold?</th><th>29 What told us</th><th>30 Boundary adjustment indicated?</th></tr>
+      </thead>
+      <tbody>
+        <tr class="locked-row"><td class="prior" colspan="6">27: the counted figure, not the estimate from column 5. 29: context degradation observed, rework cycles needed, file-ownership conflicts hit, or none of these. 30: feeds block D at the next review date.<span class="prior-src">ch17 L42</span></td></tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Held</span><span class="opt">Should have been single</span><span class="opt">Should have been multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Yes</span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Held</span><span class="opt">Should have been single</span><span class="opt">Should have been multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Yes</span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Held</span><span class="opt">Should have been single</span><span class="opt">Should have been multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Yes</span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Held</span><span class="opt">Should have been single</span><span class="opt">Should have been multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Yes</span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Held</span><span class="opt">Should have been single</span><span class="opt">Should have been multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Yes</span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Held</span><span class="opt">Should have been single</span><span class="opt">Should have been multiple</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Yes</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "When the decision is marginal, err toward a single agent. Coordination costs are real. Multi-agent orchestration is a tool for tasks that exceed single-agent capacity, not a default mode of operation." (ch17 L44)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-single-vs-multi-agent-decision-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
