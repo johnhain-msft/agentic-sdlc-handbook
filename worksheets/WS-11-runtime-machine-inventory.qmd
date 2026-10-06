@@ -9,6 +9,8 @@ format:
           <style>
             html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
             @page { size: A3 landscape; margin: 12mm; }
+            .f-select .opt.prior-mark { background: #e4e8ec; font-style: italic; padding: 0 1mm; }
+            .f-select .opt.prior-mark::before { background: #5b6772; box-shadow: inset 0 0 0 .7mm #fff; }
           </style>
 ---
 
@@ -124,35 +126,26 @@ format:
       </tbody>
     </table>
 
-    <table class="ws" style="margin-top:3mm">
-      <colgroup><col style="width:100%"></colgroup>
-      <tbody>
-        <tr><td class="prior"><b>Reference for field 9, printed:</b> the client is the first layer that can rewrite what lower layers see &mdash; a system prompt injected at the client level reaches the harness before any agent source code does, and the harness may reshape it further before the model sees a single token. Each layer mutates the input for the layer below it.<span class="prior-src">ch11 L56</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="ws-block">
-    <h2>Block A, client and harness rows only
-      <span class="ws-block-note">fields 11&ndash;12</span></h2>
-    <table class="ws">
-      <colgroup><col style="width:5%"><col style="width:17%"><col style="width:38%"><col style="width:40%"></colgroup>
-      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
-      <tbody>
-        <tr>
-          <td class="ws-num"><span class="fno">11</span></td>
-          <td><b>Client row only &mdash; programmatic clients enumerated</b><br>The org's actual list; each entry is a separate trust boundary and gets its own line.</td>
-          <td class="prior">Interactive &mdash; a developer typing in a terminal, an IDE plugin forwarding a selection. Programmatic &mdash; agentic workflows running over CI, a cron daemon, a webhook receiver, a CI runner invoking the harness on every pull request.<span class="prior-src">ch11 L56</span></td>
-          <td class="fill taller"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
-        </tr>
-        <tr>
-          <td class="ws-num"><span class="fno">12</span></td>
-          <td><b>Harness row only &mdash; tools the harness may orchestrate</b><br>The org's actual tool and MCP-server list.</td>
-          <td class="prior">The figure draws a fifth node the prose does not count as a part: <b>Tools</b>, &ldquo;classical CPU code orchestrated by the harness&rdquo;, on an invoke/result edge.<span class="prior-src">ch11 L39, L45</span></td>
-          <td class="fill taller"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div style="display:flex;gap:4mm;margin-top:3mm;align-items:stretch">
+    <div class="prior" style="flex:0 0 105mm;padding:1.5mm;border:.25mm solid #93a0ad">
+    <svg viewBox="0 0 300 140" width="100%" role="img" aria-label="Client above Harness; Tools left and Agent Source Code right of Harness; Model below. Arrows: prompt/output, invoke/result, load, inference I/O.">
+      <g font-family="sans-serif" font-size="9" text-anchor="middle" fill="#222" stroke="#444" stroke-width="1">
+        <rect x="110" y="4" width="80" height="26" fill="#fff"/><text x="150" y="15" stroke="none">Client</text><text x="150" y="25" font-size="6.5" stroke="none">terminal, IDE, workflow</text>
+        <rect x="110" y="54" width="80" height="26" fill="#fff"/><text x="150" y="65" stroke="none">Harness</text><text x="150" y="75" font-size="6.5" stroke="none">drives inference</text>
+        <rect x="4" y="54" width="72" height="26" fill="#fff" stroke-dasharray="3 2"/><text x="40" y="65" stroke="none">Tools</text><text x="40" y="75" font-size="6.5" stroke="none">CPU code, via harness</text>
+        <rect x="224" y="54" width="72" height="26" fill="#fff"/><text x="260" y="65" font-size="7.5" stroke="none">Agent Source Code</text><text x="260" y="75" font-size="6.5" stroke="none">loaded at session start</text>
+        <rect x="110" y="104" width="80" height="26" fill="#fff"/><text x="150" y="115" stroke="none">Model</text><text x="150" y="125" font-size="6.5" stroke="none">inference engine</text>
+        <path d="M150 30V54M76 67H110M190 67H224M150 80V104" fill="none"/>
+        <text x="190" y="45" font-size="6.5" stroke="none">prompt / output</text>
+        <text x="93" y="63" font-size="6.5" stroke="none">invoke</text>
+        <text x="207" y="63" font-size="6.5" stroke="none">load</text>
+        <text x="185" y="96" font-size="6.5" stroke="none">inference I/O</text>
+      </g>
+    </svg>
+    <span class="prior-src">@fig-runtime-machine, ch11 L34-48 (Tools is the fifth node, dashed)</span>
+    </div>
+    <div class="prior" style="flex:1;padding:1.5mm"><b>Reference for field 9, printed:</b> the client is the first layer that can rewrite what lower layers see &mdash; a system prompt injected at the client level reaches the harness before any agent source code does, and the harness may reshape it further before the model sees a single token. Each layer mutates the input for the layer below it.<span class="prior-src">ch11 L56</span></div>
+    </div>
   </div>
 
   <div class="ws-foot">
@@ -191,7 +184,30 @@ format:
   </div>
 
   <div class="ws-block">
-    <h2>Block B &mdash; substrate layers <span class="ws-block-note">fields 13&ndash;19</span></h2>
+    <h2>Block A, client and harness rows only
+      <span class="ws-block-note">fields 11&ndash;12 (continued from sheet 1)</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:17%"><col style="width:38%"><col style="width:40%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Client row only &mdash; programmatic clients enumerated</b><br>The org's actual list; each entry is a separate trust boundary and gets its own line.</td>
+          <td class="prior">Interactive &mdash; a developer typing in a terminal, an IDE plugin forwarding a selection. Programmatic &mdash; agentic workflows running over CI, a cron daemon, a webhook receiver, a CI runner invoking the harness on every pull request.<span class="prior-src">ch11 L56</span></td>
+          <td class="fill taller"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Harness row only &mdash; tools the harness may orchestrate</b><br>The org's actual tool and MCP-server list.</td>
+          <td class="prior">The figure draws a fifth node the prose does not count as a part: <b>Tools</b>, &ldquo;classical CPU code orchestrated by the harness&rdquo;, on an invoke/result edge.<span class="prior-src">ch11 L39, L45</span></td>
+          <td class="fill taller"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; substrate layers  <span class="ws-block-note">fields 13&ndash;19</span></h2>
     <table class="ws">
       <colgroup>
         <col style="width:7%"><col style="width:20%"><col style="width:10%"><col style="width:7%"><col style="width:13%"><col style="width:13%"><col style="width:30%">
@@ -334,3 +350,4 @@ format:
   </div>
 </div>
 ```
+
