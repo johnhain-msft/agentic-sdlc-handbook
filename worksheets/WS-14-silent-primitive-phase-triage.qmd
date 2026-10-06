@@ -15,10 +15,27 @@ format:
 ```{=html}
 <div class="screen-only">
   <b>WS-14-silent-primitive-phase-triage</b> &middot; review copy &middot; declared format <b>A4 portrait, two-sided</b> &middot;
-  4 sheet(s): side A (2 pages), then side B (2 pages). Each white page below is one physical sheet at true size.
+  2 sheet(s): side A, then side B. Each white page below is one physical sheet at true size.
   Anything spilling past a page edge onto this grey background is a layout defect.
 </div>
 
+<style>
+  .sheet table.ws th, .sheet table.ws td { padding: .6mm 1.2mm; }
+  .sheet .prior, .sheet td.prior { font-size: 7pt; line-height: 1.15; }
+  .sheet .prior-src { margin-top: .2mm; }
+  .sheet .f-text { height: 8mm; } .sheet .f-text.sm { height: 6mm; }
+  .sheet .f-owner { height: 8mm; } .sheet .f-date .seg { height: 8mm; }
+  .sheet .f-box.sm { height: 8mm; background: none; }
+  .sheet .f-computed { height: 8mm; }
+  .sheet .f-select { gap: .3mm 2.5mm; } .sheet .f-select .opt { font-size: 7pt; }
+  .sheet .f-checkline { font-size: 7pt; margin-bottom: 0; }
+  .sheet .ws-block { margin: 0 0 1.8mm; }
+  .sheet .ws-block > h2 { font-size: 8.4pt; margin-bottom: .8mm; }
+  .sheet .ws-head { margin-bottom: 1.5mm; padding-bottom: 1mm; }
+  .sheet .ws-source, .sheet .ws-instruction { margin-bottom: 1.5mm; padding: .8mm 2mm; font-size: 7.4pt; }
+  .sheet .ws-foot-quote { font-size: 7.4pt; margin: 1mm 0; }
+  .sheet table.ws thead th { padding: .5mm 1.2mm; }
+</style>
 <!-- ============================ SIDE A ============================== -->
 <div class="sheet">
 
@@ -41,7 +58,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    A primitive stayed silent. Turn on the harness's verbose mode first. Fill the five lines, then work the four phases <b>in order</b>. Run each one-minute test, record the result and quote the output. Name the one phase that failed and the fix.
+    A primitive stayed silent. Turn on verbose mode, fill rows 1-5, then run the four phases <b>in order</b>: record each result and quote the output. Name the one failing phase and the fix.
   </div>
 
   <div class="ws-block">
@@ -50,13 +67,13 @@ format:
       <colgroup><col style="width:5%"><col style="width:25%"><col style="width:32%"><col style="width:38%"></colgroup>
       <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
       <tbody>
-        <tr><td class="ws-num"><span class="fno">1</span></td><td><b>Primitive path</b></td><td class="prior">&mdash;</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">1</span></td><td><b>Primitive path</b></td><td class="prior">The file that stayed silent.<span class="prior-src">org supplies</span></td><td class="fill"><span class="f-text"></span></td></tr>
         <tr><td class="ws-num"><span class="fno">2</span></td><td><b>Primitive type and expected binding mode</b></td>
           <td class="prior">Project-wide rules: eager preload. Scope-attached rules: eager (conditioned). Skill: lazy on-demand. Persona / sub-agent: dispatcher-mediated.<span class="prior-src">ch14 L79-85</span></td>
           <td class="fill"><div class="f-select"><span class="opt">eager preload</span><span class="opt">eager (conditioned)</span><span class="opt">lazy on-demand</span><span class="opt">dispatcher-mediated</span></div></td></tr>
-        <tr><td class="ws-num"><span class="fno">3</span></td><td><b>The task that should have activated it</b></td><td class="prior">&mdash;</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">3</span></td><td><b>The task that should have activated it</b></td><td class="prior">One sentence.<span class="prior-src">org supplies</span></td><td class="fill"><span class="f-text"></span></td></tr>
         <tr><td class="ws-num"><span class="fno">4</span></td><td><b>Harness, and verbose mode on?</b></td><td class="prior">Verbose log is where the activation tests are read.<span class="prior-src">ch14 L103</span></td>
-          <td class="fill"><span class="f-text sm"></span><span class="f-checkline"><span class="f-check"></span>verbose mode on, log actually read</span></td></tr>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>verbose on, log read; harness: ____________</span></td></tr>
         <tr><td class="ws-num"><span class="fno">5</span></td><td><b>Practitioner / date</b></td><td class="prior">&mdash;</td>
           <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
       </tbody>
@@ -91,28 +108,7 @@ format:
           <td class="fill"><span class="f-box sm"></span></td></tr>
       </tbody>
     </table>
-    <p style="font-size:7pt;margin:1mm 0 0">Evidence is the literal line of output or log text, quoted. A <b>pass</b> with an empty evidence cell is <b>not run</b>. A Resolve <b>not run</b> is never left blank: write in the Evidence cell why it could not run (for example, no manifest or lockfile). That is a finding against WS-21-primitive-governance-policy, not a pass.</p>
-  </div>
-
-  <div class="ws-foot">
-    <div>WS-14-silent-primitive-phase-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 4</div>
-    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
-      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
-  </div>
-
-</div>
-
-<div class="sheet">
-
-  <div class="ws-head">
-    <div>
-      <h1>Side A, continued: which phase failed?</h1>
-      <p class="ws-sub">Rows 10-14. Fill row 10 and 11 only if row 9 failed.</p>
-    </div>
-    <div class="ws-meta">
-      <b>WS-14-silent-primitive-phase-triage</b><br>
-      Pack Z &middot; fill order <b>8</b>
-    </div>
+    <p style="font-size:7pt;margin:1mm 0 0">Evidence is the literal output or log line, quoted. A <b>pass</b> with an empty evidence cell is <b>not run</b>. A Resolve <b>not run</b> is never blank: write why (e.g. no manifest or lockfile) &mdash; a finding against WS-21-primitive-governance-policy, not a pass.</p>
   </div>
 
   <div class="ws-block">
@@ -150,7 +146,7 @@ format:
   </div>
 
   <div class="ws-foot">
-    <div>WS-14-silent-primitive-phase-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 4</div>
+    <div>WS-14-silent-primitive-phase-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
     <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
       &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
   </div>
@@ -217,27 +213,6 @@ format:
     </table>
   </div>
 
-  <div class="ws-foot">
-    <div>WS-14-silent-primitive-phase-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 4</div>
-    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
-      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
-  </div>
-
-</div>
-
-<div class="sheet">
-
-  <div class="ws-head">
-    <div>
-      <h1>Side B, continued: diagnosis and tally</h1>
-      <p class="ws-sub">Rows 24-27, and the book's worked example.</p>
-    </div>
-    <div class="ws-meta">
-      <b>WS-14-silent-primitive-phase-triage</b><br>
-      Pack Z &middot; fill order <b>8</b>
-    </div>
-  </div>
-
   <div class="ws-block">
     <h2>Diagnosis and tally</h2>
     <table class="ws">
@@ -257,19 +232,19 @@ format:
 
   <div class="ws-block">
     <h2>Reading the tally <span class="ws-block-note">the card's second output</span></h2>
-    <p style="font-size:8pt;margin:0 0 2mm">Row 27 is only useful if somebody counts. Once a month, transcribe the row 27 entry from every card on the pad onto one tally, and have one named person read it. The count shows whether the team's failures are budget-pressure or description-grammar problems. A pad of cards that nobody counts produces individual fixes and no institutional knowledge.</p>
-    <p style="font-size:8pt;margin:0">Tally kept by <span style="display:inline-block;width:45mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Read every <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span></p>
+    <p style="font-size:7pt;margin:0 0 1mm">Once a month, transcribe the row 27 entry from every card on the pad onto one tally; one named person reads it. The count shows whether failures are budget-pressure or description-grammar problems. A pad nobody counts yields individual fixes and no institutional knowledge.</p>
+    <p style="font-size:7pt;margin:0">Tally kept by <span style="display:inline-block;width:45mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Read every <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span></p>
   </div>
 
   <div class="ws-block">
     <h2>Worked example <span class="ws-block-note">the book's opening case</span></h2>
-    <div class="prior" style="padding:1.5mm 2mm">
-      A correct skill, a sharp description, the right directory, no binding. The verbose log showed the skill registered, but a parent file with <code>applyTo: "**/*.py"</code> pulled in 6,200 tokens of Python guidance first. "The skill is not silent because of its description. It is silent because of someone else's <code>applyTo</code> glob." That is row 10, <i>budget pressure</i>. This is what happened to one engineer, not a threshold.<span class="prior-src">ch14 L4-10</span>
+    <div class="prior" style="padding:1mm 2mm;font-size:7pt">
+      Correct skill, sharp description, right directory, no binding. The log showed it registered, but a parent file with <code>applyTo: "**/*.py"</code> pulled in 6,200 tokens of Python guidance first: row 10, <i>budget pressure</i>. One engineer's case, not a threshold.<span class="prior-src">ch14 L4-10</span>
     </div>
   </div>
 
   <div class="ws-foot">
-    <div>WS-14-silent-primitive-phase-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 4</div>
+    <div>WS-14-silent-primitive-phase-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
     <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
       &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
   </div>
