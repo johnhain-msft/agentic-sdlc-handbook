@@ -1,0 +1,300 @@
+---
+title: "Definition of Done for a Shipped Skill Bundle"
+pagetitle: "WS-21-skill-bundle-definition-of-done"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-21-skill-bundle-definition-of-done</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  2 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Definition of Done for a Shipped Skill Bundle</h1>
+      <p class="ws-sub">A merge-gate checklist the platform team enforces in CI on any new or changed Skill bundle.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-21-skill-bundle-definition-of-done</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>11</b> &middot; type <b>checklist</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Primitives as Code</b>, <i>Modules over monoliths</i> &middot;
+    <code>handbook\ch21-primitives-as-code.qmd</code> L58-72 (checks 11-12: <code>ch22-the-reference-architecture-earned.qmd</code> L119-121) &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch21-primitives-as-code.html#sec-primitives-modules">#sec-primitives-modules</a>
+  </div>
+
+  <div class="ws-instruction">
+    Fill one gate per bundle, per version, before merge. Give every one of the twelve checks a verdict, and for every <b>pass</b> write evidence a reviewer can open: a path, a CI job name or a run link. An assertion is not evidence. Say whether a machine or a person enforces each check, and name the CI job wherever you write <b>CI (automated)</b>. A <b>not applicable</b> needs its reason written in the evidence column. Waive a <b>fail</b> only with a reason and an expiry date; otherwise it blocks. Check 2 is answered by the reason-to-change question, never by counting lines.
+  </div>
+
+  <div class="ws-block">
+    <h2>Header block <span class="ws-block-note">one per merge request</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:13%"><col style="width:18%"><col style="width:3%"><col style="width:13%"><col style="width:18%"><col style="width:3%"><col style="width:13%"><col style="width:16%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td><td><b>Bundle name</b></td><td class="fill"><span class="f-text"></span></td>
+          <td class="ws-num"><span class="fno">2</span></td><td><b>Version being published</b></td><td class="fill"><span class="f-text sm"></span></td>
+          <td class="ws-num"><span class="fno">3</span></td><td><b>Bundle author</b></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td><td><b>Merge request reference</b></td><td class="fill"><span class="f-text"></span></td>
+          <td class="ws-num"><span class="fno">5</span></td><td><b>Reviewer</b></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="ws-num"><span class="fno">6</span></td><td><b>Date</b></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>The twelve checks
+      <span class="ws-block-note">one row per check &middot; the book places checks 7-10 inside the CI gate: "Internal to the package; CI gate." (ch21 L66). Column "Enforced by" is decided once for the gate, not per bundle. Checks 11 and 12 are not manifest fields today &mdash; name a reviewer.</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:12%"><col style="width:21%"><col style="width:8%"><col style="width:8%"><col style="width:11%"><col style="width:8%"><col style="width:6%"><col style="width:8%"><col style="width:7%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr><th>#</th><th>Check</th><th>What "done" looks like</th><th>Verdict</th><th>Enforced by</th><th>Evidence</th><th>CI job or check name</th><th>Waived?</th><th>Waiver reason</th><th>Waiver expiry</th><th>Reviewer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><b>1</b></td>
+          <td class="prior"><b>Entrypoint present</b></td>
+          <td class="prior">Description-driven activation contract; the body the agent reads when the skill binds. <i>SKILL.md (entrypoint)</i><span class="prior-src">ch21 L62</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><b>2</b></td>
+          <td class="prior"><b>Entrypoint is a module, not a monolith</b></td>
+          <td class="prior">The entrypoint is <i>small</i>. Test: does this section have its own reason to change? If yes, it wants to be its own primitive. Score it by this question only; evidence in column 5 is the answer, not a line count.<span class="prior-src">ch21 L58, L68</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><b>3</b></td>
+          <td class="prior"><b><code>description</code> is written as the activation contract</b></td>
+          <td class="prior">The <code>description</code> is the API.<span class="prior-src">ch21 L62</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><b>4</b></td>
+          <td class="prior"><b>Assets extracted, not inlined</b></td>
+          <td class="prior">Reference material the body cites: example diffs, decision tables, checklists too long to inline. Loaded transitively when the body links them.<span class="prior-src">ch21 L63, L68</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><b>5</b></td>
+          <td class="prior"><b>Sub-skills declared and their visibility decided</b></td>
+          <td class="prior">A child <code>SKILL.md</code> under the same bundle directory. Public if the parent re-exports; private otherwise.<span class="prior-src">ch21 L64</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><b>6</b></td>
+          <td class="prior"><b>Imported content is named, not pasted</b></td>
+          <td class="prior">A decision rule reused by three skills wants to live in a fourth skill on which the other three depend.<span class="prior-src">ch21 L70</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot-quote">
+    "does this section have its own reason to change?" (ch21 L58)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-21-skill-bundle-definition-of-done &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+  <div class="ws-head"><div><h1>Definition of Done for a Shipped Skill Bundle</h1>
+    <p class="ws-sub">Checks 7-12, gate verdict and signature.</p></div>
+    <div class="ws-meta"><b>WS-21-skill-bundle-definition-of-done</b><br>continued<br>bundle <span style="display:inline-block;width:50mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+
+  <div class="ws-block">
+    <h2>The twelve checks, continued <span class="ws-block-note">checks 7-10 are the book's CI gate (ch21 L66); 11 and 12 are not manifest fields today &mdash; name a reviewer</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:12%"><col style="width:21%"><col style="width:8%"><col style="width:8%"><col style="width:11%"><col style="width:8%"><col style="width:6%"><col style="width:8%"><col style="width:7%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr><th>#</th><th>Check</th><th>What "done" looks like</th><th>Verdict</th><th>Enforced by</th><th>Evidence</th><th>CI job or check name</th><th>Waived?</th><th>Waiver reason</th><th>Waiver expiry</th><th>Reviewer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><b>7</b></td>
+          <td class="prior"><b>Manifest declares dependencies, version, licence and ownership</b></td>
+          <td class="prior"><code>apm.yml</code> (or equivalent): declared dependencies, version, license, ownership. Public. Drives the lockfile.<span class="prior-src">ch21 L65</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><b>8</b></td>
+          <td class="prior"><b>Activation test</b></td>
+          <td class="prior">Tests: activation tests. Internal to the package; CI gate.<span class="prior-src">ch21 L66</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><b>9</b></td>
+          <td class="prior"><b>Link-integrity check</b></td>
+          <td class="prior">Tests: link-integrity checks. Internal to the package; CI gate.<span class="prior-src">ch21 L66</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><b>10</b></td>
+          <td class="prior"><b>Schema validation against the manifest</b></td>
+          <td class="prior">Tests: schema validation against the manifest. Internal to the package; CI gate.<span class="prior-src">ch21 L66</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><b>11</b></td>
+          <td class="prior"><b>The bundle carries an eval</b></td>
+          <td class="prior">A Skill that cannot say what its output looks like and how to tell whether it is correct is not a Skill; it is a prompt that has been mistaken for one. The eval lives alongside the bundle today, not yet as a manifest field.<span class="prior-src">ch22 L119</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><b>12</b></td>
+          <td class="prior"><b>Every dispatch persists its plan</b></td>
+          <td class="prior">The subagent thread writes its working plan to a file the parent can read.<span class="prior-src">ch22 L121</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>waived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Gate verdict <span class="ws-block-note">BLOCK when any check is fail and unwaived</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:22%"><col style="width:35%"><col style="width:40%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Gate verdict</b></td>
+          <td class="prior">BLOCK when any check is fail and unwaived.<span class="prior-src">derived</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">MERGE</span><span class="opt">BLOCK</span></div><span class="f-computed" data-formula="BLOCK if any verdict = fail and waived is not ticked"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Reviewer signature + date</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill tall"><span class="f-sign"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "does this section have its own reason to change?" (ch21 L58)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-21-skill-bundle-definition-of-done &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
