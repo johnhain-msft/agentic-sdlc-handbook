@@ -52,8 +52,8 @@ format:
     sign and date it with the first review gate date.
   </div>
 
-<div class="grid1p" style="display:grid;grid-template-columns:1.3fr 1.4fr 1fr;column-gap:3mm;row-gap:1mm;align-items:start">
-  <div class="ws-block" style="grid-column:2;grid-row:1">
+<div class="grid1p" style="display:grid;grid-template-columns:1.4fr 1.3fr 1fr;column-gap:3mm;row-gap:1mm;align-items:start">
+  <div class="ws-block" style="grid-column:1;grid-row:1">
     <h2>A. Conditions
       <span class="ws-block-note">one answer and evidence record per condition; book prior — on fields 1 and 6</span></h2>
     <table class="ws" style="font-size:7.1pt;line-height:1.05">
@@ -94,14 +94,14 @@ format:
         </tr>
         <tr>
           <td class="locked"><b>6</b> Condition 2 reconciliation<span class="prior-src">ch03 L352; ch08 L108, L134, L161</span></td>
-          <td class="prior" colspan="2">The book states a 4–6 month adoption curve. Use your calibrated curve from the org-size band on WS-08-transition-roadmap. For a 1,000+ engineer organisation, ch08 L108 puts Phase 1 alone at 4–6 months; 4–6 months to returns is not universal.</td>
+          <td class="prior" colspan="2"><b>Mandatory.</b> The book states a 4–6 month adoption curve. Use your calibrated curve from the org-size band on WS-08-transition-roadmap. For a 1,000+ engineer organisation, ch08 L108 puts Phase 1 alone at 4–6 months; 4–6 months to returns is not universal.</td>
           <td class="fill" colspan="2"><span class="f-text"></span></td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <div class="ws-block" style="grid-column:1;grid-row:1 / span 2">
+  <div class="ws-block" style="grid-column:2;grid-row:1 / span 2">
     <h2>B. Governance gate
       <span class="ws-block-note">for each of the 12 book-prior items, record status, owner, due date and evidence; sign any waiver</span></h2>
     <table class="ws" style="font-size:7pt;line-height:1.02">
@@ -133,7 +133,7 @@ format:
     </table>
   </div>
 
-  <div class="ws-block" style="grid-column:2;grid-row:2">
+  <div class="ws-block" style="grid-column:1;grid-row:2">
     <h2>C. Five moves
       <span class="ws-block-note">ch07 L178: pinning a model tier is the engineer's job; requiring it is the leader's. Field 15 is the accountable executive</span></h2>
     <table class="ws" style="font-size:7pt;line-height:1.02">
@@ -190,13 +190,13 @@ format:
 
   <div class="ws-block" style="font-size:7.1pt">
     <h2>Decision and sign-off <span class="ws-block-note">book prior — for the decision, attached conditions, signature and review date</span></h2>
-    <div style="display:grid;grid-template-columns:1fr 2fr 1fr;gap:2mm;align-items:end">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2mm;align-items:end">
       <div><b>Decision</b><div class="f-select"><span class="opt">GO</span><span class="opt">GO WITH CONDITIONS</span><span class="opt">NO-GO</span></div></div>
-      <div><b>Conditions attached</b><span class="f-box"></span><span class="prior-src">Populate from every “If not” entry and every ticked waiver</span></div>
       <div><b>First review gate date — match Gate 1 on WS-08-phase-gate-exit-rollback</b><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div>
     </div>
+    <div style="margin-top:0"><b>Conditions attached</b><span class="f-box" style="display:block;height:9mm;min-height:0;width:auto;box-sizing:border-box"></span><span class="prior-src">Populate from every “If not” entry and every ticked waiver</span></div>
     <div style="display:grid;grid-template-columns:2fr 1fr;gap:2mm;margin-top:1mm;align-items:end">
-      <div><b>Accountable executive signature</b><span class="f-sign"></span><span class="prior-src">ch05 L263</span></div>
+      <div><b>Accountable executive signature</b><span class="f-sign"></span><span class="prior-src">ch05 L263</span><b>Printed name of decision-maker</b><span class="f-owner"></span><span class="prior-src">Same person as the decision-maker on Gate 1, WS-08-phase-gate-exit-rollback</span></div>
       <div><b>Date</b><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div>
     </div>
   </div>
