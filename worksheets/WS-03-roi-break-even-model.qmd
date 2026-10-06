@@ -10,8 +10,8 @@ format:
             html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
             @page { size: A4 portrait; margin: 12mm; }
             .ws-block p { margin-top: 1mm; margin-bottom: 1mm; }
-            .f-computed { height: auto; min-height: 8mm; }
-            .f-computed::after { position: static; display: block; font-size: 7pt; line-height: 1.15; padding: .6mm 1mm; text-align: left; }
+            td.fill .f-computed { height: auto; min-height: 8mm; }
+            td.fill .f-computed::after { position: static; display: block; font-size: 7pt; line-height: 1.15; padding: .6mm 1mm; text-align: left; }
           </style>
 ---
 
