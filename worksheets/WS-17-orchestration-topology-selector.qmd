@@ -24,7 +24,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Orchestration Topology Selector: Which Patterns Do We Sanction?</h1>
-      <p class="ws-sub">A sanctioned-topology table: work class, topology, recursion depth, max fan-out, and enforcing harness — the reference architecture for how your organisation runs agents.</p>
+      <p class="ws-sub">A sanctioned-topology table: work class, topology, recursion depth, max fan-out, and enforcing harness — the reference architecture for how your organization runs agents.</p>
     </div>
     <div class="ws-meta">
       <b>WS-17-orchestration-topology-selector</b><br>
@@ -41,7 +41,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Use one copy of Block A for each class of work your organisation does. Select its sanctioned topology, declare recursion depth and maximum fan-out, mark whether both bounds are declared at the dispatch site, and name the harness that enforces them. Use one copy of Block C for each intended agent workflow. Complete Block D only when a sanctioned topology uses Panel. Fill the topology-specific instantiation page for each topology you sanction.
+    Use one copy of Block A for each class of work your organization does. Select its sanctioned topology, declare recursion depth and maximum fan-out, mark whether both bounds are declared at the dispatch site, and name the harness that enforces them. Use one copy of Block C for each intended agent workflow. Complete Block D only when a sanctioned topology uses Panel. Fill the topology-specific instantiation page for each topology you sanction.
   </div>
 
   <div class="ws-block">
@@ -170,7 +170,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Topology reference</h1>
-      <p class="ws-sub">Block B — topology reference, read-only. Point to the stages and hand-offs the organisation is choosing.</p>
+      <p class="ws-sub">Block B — topology reference, read-only. Point to the stages and hand-offs the organization is choosing.</p>
     </div>
     <div class="ws-meta">
       <b>WS-17-orchestration-topology-selector</b><br>
@@ -187,7 +187,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Read the reference. Use the topology pages later in this packet to record your organisation's instantiation for each topology you sanction.
+    Read the reference. Use the topology pages later in this packet to record your organization's instantiation for each topology you sanction.
   </div>
 
   <div class="ws-block">
@@ -323,7 +323,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Our topology instantiation — Single agent</h1>
-      <p class="ws-sub">Block B, column 14 — fill only if your organisation sanctions this topology.</p>
+      <p class="ws-sub">Block B, column 14 — fill only if your organization sanctions this topology.</p>
     </div>
     <div class="ws-meta">
       <b>WS-17-orchestration-topology-selector</b><br>
@@ -362,7 +362,7 @@ format:
         </tr>
       </tbody>
     </table>
-    <div class="ws-block-note">For each topology your organisation sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
+    <div class="ws-block-note">For each topology your organization sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
   </div>
 
   <div class="ws-foot">
@@ -378,7 +378,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Our topology instantiation — Writer-Reviewer-Tester</h1>
-      <p class="ws-sub">Block B, column 14 — fill only if your organisation sanctions this topology.</p>
+      <p class="ws-sub">Block B, column 14 — fill only if your organization sanctions this topology.</p>
     </div>
     <div class="ws-meta">
       <b>WS-17-orchestration-topology-selector</b><br>
@@ -417,7 +417,7 @@ format:
         </tr>
       </tbody>
     </table>
-    <div class="ws-block-note">For each topology your organisation sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
+    <div class="ws-block-note">For each topology your organization sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
   </div>
 
   <div class="ws-foot">
@@ -433,7 +433,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Our topology instantiation — Domain Teams</h1>
-      <p class="ws-sub">Block B, column 14 — fill only if your organisation sanctions this topology.</p>
+      <p class="ws-sub">Block B, column 14 — fill only if your organization sanctions this topology.</p>
     </div>
     <div class="ws-meta">
       <b>WS-17-orchestration-topology-selector</b><br>
@@ -472,7 +472,7 @@ format:
         </tr>
       </tbody>
     </table>
-    <div class="ws-block-note">For each topology your organisation sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
+    <div class="ws-block-note">For each topology your organization sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
   </div>
 
   <div class="ws-foot">
@@ -488,7 +488,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Our topology instantiation — Audit-Execute-Validate</h1>
-      <p class="ws-sub">Block B, column 14 — fill only if your organisation sanctions this topology.</p>
+      <p class="ws-sub">Block B, column 14 — fill only if your organization sanctions this topology.</p>
     </div>
     <div class="ws-meta">
       <b>WS-17-orchestration-topology-selector</b><br>
@@ -527,7 +527,7 @@ format:
         </tr>
       </tbody>
     </table>
-    <div class="ws-block-note">For each topology your organisation sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
+    <div class="ws-block-note">For each topology your organization sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
   </div>
 
   <div class="ws-foot">
@@ -654,7 +654,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    If a sanctioned topology uses Panel, write one control against each printed anti-pattern and name the human synthesiser or arbiter agent that reconciles the findings into one decision. Otherwise leave this conditional block blank.
+    If a sanctioned topology uses Panel, write one control against each printed anti-pattern and name the human synthesizer or arbiter agent that reconciles the findings into one decision. Otherwise leave this conditional block blank.
   </div>
 
   <div class="ws-block">
