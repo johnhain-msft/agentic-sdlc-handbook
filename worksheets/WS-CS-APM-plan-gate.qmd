@@ -1,0 +1,279 @@
+---
+title: "Plan Gate and Scope-Change Protocol"
+pagetitle: "WS-CS-APM-plan-gate"
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-CS-APM-plan-gate</b> &middot; declared format <b>A3 landscape</b> &middot; 3 sheets
+  (Part A policy; Part B iteration log; calibration reverse).
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Plan Gate and Scope-Change Protocol</h1>
+      <p class="ws-sub">Part A: the written plan-gate policy, filled once, signed and pinned. Output: a policy with a named approval authority and a hard scope-change rule.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-CS-APM-plan-gate</b><br>
+      Pack Z &middot; fill order 17<br>
+      type <b>decision</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The APM Auth + Logging Overhaul</b> &middot; Eight Plan Iterations &middot;
+    <code>case-study-apm-overhaul.qmd</code> L73-97 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/case-study-apm-overhaul.html#sec-cs-apm-plan-iterations">#sec-cs-apm-plan-iterations</a><br>
+    Prerequisite: <b>WS-17-escalation-autonomy-ladder</b> (supplies the L1-L4 holders used by A5 and B5).
+    Feeds <b>WS-18-wave-decomposition-plan</b>: only an approved plan gets waved.
+  </div>
+
+  <div class="ws-instruction">
+    Fill this in the room, with the person who will actually be interrupted present. Name two
+    individuals who can approve a plan version, say what evidence you will accept for a scope
+    expansion, and say where mid-wave discoveries go. Row A4 is not yours to reword: read it aloud,
+    then countersign it. Write in pen.
+  </div>
+
+  <div class="ws-block">
+    <h2>Part A &mdash; Policy <span class="ws-block-note">filled once per organisation</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:19%"><col style="width:32%"><col style="width:44%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Plan gate approval authority</b><br><small>A1 &middot; the individual who approves a plan version</small></td>
+          <td class="prior">&mdash;<span class="prior-src">derived from cs-apm L85 "Approved"</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>Deputy when A1 is unavailable</b><br><small>A2 &middot; a gate with one name is a gate that closes on holiday</small></td>
+          <td class="prior">&mdash;<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Evidence required for a scope expansion</b><br><small>A3 &middot; the evidence classes this org will accept</small></td>
+          <td class="prior">Worked instances: expert panel findings (v3), architecture expert review (v4), an audit by dispatched explore agents (v7)<span class="prior-src">cs-apm L80-81, L89-90</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>The hard rule</b><br><small>A4 &middot; countersign only; not editable</small></td>
+          <td class="prior">"The scope expanded <i>before</i> execution began, through the plan gate, not mid-wave."<span class="prior-src">cs-apm L92-93</span></td>
+          <td class="fill tall"><span class="f-sign"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>What happens when scope changes are discovered mid-wave</b><br><small>A5 &middot; who receives it, and where it waits</small></td>
+          <td class="prior">The ladder's L4 response: a follow-up task, raised for the next gate<span class="prior-src">ch17 L349 via WS-17-escalation-autonomy-ladder</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>In-plan file classes</b><br><small>A6 &middot; which classes count as planned scope</small></td>
+          <td class="prior">Primary source files (the case planned 47)<span class="prior-src">cs-apm L95</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Incidental file classes &mdash; discovery does not re-open the gate</b><br><small>A7 &middot; anything not listed here re-opens the gate</small></td>
+          <td class="prior">Test files, configuration updates, documentation changes (the case's additional 28)<span class="prior-src">cs-apm L95</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Policy sponsor signature + date</b><br><small>A8 &middot; the engineering leader who owns delivery</small></td>
+          <td class="prior">&mdash;<span class="prior-src">org</span></td>
+          <td class="fill tall"><span class="f-sign"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The scope expanded <i>before</i> execution began, through the plan gate, not mid-wave." (cs-apm L92-93)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-CS-APM-plan-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Plan Gate and Scope-Change Protocol &mdash; Part B</h1>
+      <p class="ws-sub">The iteration log: one row per plan version, filled once per initiative. Reusable template.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-CS-APM-plan-gate</b><br>
+      Pack Z &middot; fill order 17<br>
+      type <b>decision</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Eight Plan Iterations</b> &middot; <code>case-study-apm-overhaul.qmd</code> L78-85, L92-93 &middot;
+    escalation levels from <code>ch17</code> L344-349
+  </div>
+
+  <div class="ws-instruction">
+    Keep this log as a live file in the pilot repository (a spreadsheet or a markdown table under
+    version control), not on paper: it gains rows over weeks. This page is the template to copy its
+    columns from. Every row needs a trigger and a named raiser. A tick in B8 means the hard rule (A4)
+    has been breached and the change routes to A5 instead.
+  </div>
+
+  <div class="ws-block">
+    <h2>Part B &mdash; Version log <span class="ws-block-note">one row per version; B4 may be extended with triggers the case did not meet</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:6%"><col style="width:13%"><col style="width:15%"><col style="width:10%"><col style="width:10%"><col style="width:10%"><col style="width:9%"><col style="width:8%"><col style="width:9%"><col style="width:5%">
+      </colgroup>
+      <thead>
+        <tr><th>B1 Version</th><th>B2 Date raised</th><th>B3 Scope, one line</th><th>B4 Trigger</th><th>B5 Level, if any</th><th>B6 Evidence attached (must satisfy A3)</th><th>B7 Raised by</th><th>B8 Execution already begun?</th><th>B9 Gate decision</th><th>B10 Approver (A1 or A2)</th><th>B11 Decided</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">initial triage</span><span class="opt">user correction</span><span class="opt">expert panel findings</span><span class="opt">architecture expert</span><span class="opt">orchestrator restructure</span><span class="opt">instrumented-codebase need</span><span class="opt">user escalation</span><span class="opt">approved</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">L1</span><span class="opt">L2</span><span class="opt">L3</span><span class="opt">L4</span><span class="opt">none</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">approved</span><span class="opt">revise</span><span class="opt">rejected</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">initial triage</span><span class="opt">user correction</span><span class="opt">expert panel findings</span><span class="opt">architecture expert</span><span class="opt">orchestrator restructure</span><span class="opt">instrumented-codebase need</span><span class="opt">user escalation</span><span class="opt">approved</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">L1</span><span class="opt">L2</span><span class="opt">L3</span><span class="opt">L4</span><span class="opt">none</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">approved</span><span class="opt">revise</span><span class="opt">rejected</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ws" style="margin-top:3mm">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:70%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Approved version in force</b></td>
+          <td class="fill"><span class="f-computed" data-formula="the single row where B9 is approved; this is the version WS-18-wave-decomposition-plan waves"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The plan went through eight iterations before approval. This is not a failure &mdash; it is the meta-process working as designed (Ch13 &sect;Plan)." (cs-apm L73-74)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-CS-APM-plan-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Plan Gate &mdash; calibration (reverse)</h1>
+      <p class="ws-sub">The case's own v1-v8 progression and the escalation ladder, printed for reference when filling Part B. Not to be written in.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-CS-APM-plan-gate</b><br>
+      Pack Z &middot; fill order 17<br>
+      type <b>decision</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Eight Plan Iterations</b> &middot; <code>case-study-apm-overhaul.qmd</code> L76-85 &middot; <code>ch17</code> L344-349
+  </div>
+
+  <div class="ws-instruction">
+    This is one initiative's shape, not a tolerance. The book calls eight iterations the meta-process
+    working as designed. Do not read it as a target number of versions, and do not use it to judge
+    your own log.
+  </div>
+
+  <div class="ws-block">
+    <h2>B3 / B4 calibration <span class="ws-block-note">the case's worked instances, cs-apm L78-85</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:10%"><col style="width:45%"><col style="width:45%"></colgroup>
+      <thead><tr><th>Version</th><th>Scope</th><th>Trigger</th></tr></thead>
+      <tbody>
+        <tr><td class="prior">v1</td><td class="prior">10 UX message fixes</td><td class="prior">Initial triage</td></tr>
+        <tr><td class="prior">v2</td><td class="prior">Removed v0.8.2-only bug</td><td class="prior">User correction</td></tr>
+        <tr><td class="prior">v3</td><td class="prior">Added auth gap as root cause</td><td class="prior">Expert panel findings</td></tr>
+        <tr><td class="prior">v4</td><td class="prior">Unauth-first &rarr; auth-fallback</td><td class="prior">Architecture expert</td></tr>
+        <tr><td class="prior">v5</td><td class="prior">Architecture-first, 4 phases</td><td class="prior">Orchestrator restructure</td></tr>
+        <tr><td class="prior">v6</td><td class="prior">Added agent/skill primitives</td><td class="prior">Instrumented codebase needs</td></tr>
+        <tr><td class="prior">v7</td><td class="prior">ALL commands covered</td><td class="prior"><b>User escalation (L4)</b></td></tr>
+        <tr><td class="prior">v8 &#10003;</td><td class="prior">25 todos, 47 files, 5 phases</td><td class="prior">Approved</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>B5 definitions <span class="ws-block-note">the escalation ladder, ch17 L344-349; the case's v7 is an L4</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:14%"><col style="width:30%"><col style="width:28%"><col style="width:28%"></colgroup>
+      <thead><tr><th>Level</th><th>Trigger</th><th>Response</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td class="prior">L1: Self-heal</td><td class="prior">Agent hits a test failure it can debug</td><td class="prior">Agent fixes and continues</td><td class="prior">Type error in generated code</td></tr>
+        <tr><td class="prior">L2: Retry</td><td class="prior">Agent produces incomplete output</td><td class="prior">Re-dispatch with refined prompt</td><td class="prior">Agent missed 3 of 12 files in scope</td></tr>
+        <tr><td class="prior">L3: Human decides</td><td class="prior">Trade-off between competing principles</td><td class="prior">Human makes design call</td><td class="prior">UX convention vs. architectural purity</td></tr>
+        <tr><td class="prior">L4: Scope change</td><td class="prior">Finding requires work outside the current plan</td><td class="prior">Human creates follow-up task</td><td class="prior">Discovery of a pre-existing bug unrelated to the change</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The scope expanded <i>before</i> execution began, through the plan gate, not mid-wave." (cs-apm L92-93)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-CS-APM-plan-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
