@@ -40,7 +40,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Use the completed WS-05-governance-readiness-assessment and WS-06-role-map-and-staffing-triggers. Start with the seven book rows and add decision classes that recur in your pull-request reviews or incident postmortems. Name what your agent and people actually do, the individual approver, each evidence artefact and its storage location, and the gate as configured today. Reconcile approver names with the role map. Check columns 12 and 16 against the live configuration. Where a gate is not fully in place, name its owner and build-by date. Record the specific irreversible step and whether the agent can write past it.
+    Use the completed WS-05-governance-readiness-assessment and WS-06-role-map-and-staffing-triggers. Start with the seven book rows and add decision classes that recur in your pull-request reviews or incident postmortems. Name what your agent and people actually do, the individual approver, each evidence artifact and its storage location, and the gate as configured today. Reconcile approver names with the role map. Check columns 12 and 16 against the live configuration. Where a gate is not fully in place, name its owner and build-by date. Record the specific irreversible step and whether the agent can write past it.
   </div>
 
   <div class="ws-block">
@@ -217,7 +217,7 @@ format:
         </tr>
       </tbody>
     </table>
-    <p style="font-size:7.4pt;margin:1.2mm 0 0;color:#454f59">For column 9, write one storage location for each artefact named in column 8; use “nowhere” when that is the honest answer. Column 13 is mandatory wherever column 12 is not yes. Add rows as needed.</p>
+    <p style="font-size:7.4pt;margin:1.2mm 0 0;color:#454f59">For column 9, write one storage location for each artifact named in column 8; use “nowhere” when that is the honest answer. Column 13 is mandatory wherever column 12 is not yes. Add rows as needed.</p>
   </div>
 
   <div class="ws-foot">
