@@ -7,15 +7,16 @@ format:
     include-in-header:
       - text: |
           <style>
-            html:root { --sheet-w: 841mm; --sheet-h: 594mm; --sheet-margin: 20mm; }
-            @page { size: A1 landscape; margin: 20mm; }
+            html:root { --sheet-w: 594mm; --sheet-h: 841mm; --sheet-margin: 20mm; }
+            @page { size: A1 portrait; margin: 20mm; }
+            .prior .prior-src, .prior-src, .prior--hedged .hedge-src, .f-date, .f-owner::after { font-size: 7pt !important; }
           </style>
 ---
 
 ```{=html}
 <div class="screen-only">
   <b>WS-02-cost-of-delay-case</b> &middot; review copy &middot; declared format
-  <b>A1 landscape</b> &middot; 1 sheet. Each white page below is one physical
+  <b>A1 portrait</b> &middot; 1 sheet. Each white page below is one physical
   sheet at true size. Anything spilling past a page edge is a layout defect.
 </div>
 
@@ -180,7 +181,8 @@ format:
         <span class="hedge-src">handbook/ch03-the-business-case.qmd L315</span>
       </div>
       <div class="ours-label">Annual value not realised, our figure — from the signed WS-03-roi-break-even-model for our own delay period</div>
-      <div class="fill" style="min-height:8mm"><span class="fno">31</span> <span class="f-computed" data-formula="signed WS-03-roi-break-even-model value for the committed scenario and our own delay period"></span></div>
+      <div class="fill" style="min-height:10mm"><span class="fno">31</span> <span class="f-text"></span></div>
+      <p style="font-size:7.5pt;margin:.5mm 0 0">Write the value carried from the signed WS-03-roi-break-even-model for the committed scenario and our own delay period.</p>
 
       <table class="ws" style="margin-top:1.5mm">
         <colgroup><col style="width:7%"><col style="width:39%"><col style="width:54%"></colgroup>
