@@ -1,0 +1,480 @@
+---
+title: "Consequential Side-Effect Register: What Can Our Agents Actually Do To Us?"
+pagetitle: "WS-16-consequential-effect-register"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-16-consequential-effect-register</b> &middot; review copy &middot;
+  declared format <b>A3 landscape, two-sided</b> &middot; 12 sheets.
+  Each white page below is one physical sheet at true size.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Consequential Side-Effect Register: What Can Our Agents Actually Do To Us?</h1>
+      <p class="ws-sub">A signed register of every consequential agent-reachable side effect, its reversal cost and current enforcement point — the org's agent blast-radius baseline.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-16-consequential-effect-register</b><br>
+      Pack E - Guardrails: authority, risk and proof<br>
+      fill order <b>5</b> &middot; type <b>inventory</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Deterministic/Probabilistic Boundary</b>,
+    <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot;
+    <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a>
+  </div>
+  <div class="ws-instruction">
+    Map what each agent mechanism can reach and do in your estate. Name bounded, authoritative sources; record the controls and accountable people you can verify. Complete this before issuing any write token. Use the reverse for each consequential effect and each environment's signed supervision decision.
+  </div>
+  <div class="ws-block">
+    <h2>Block A — inbound: the five access mechanisms
+      <span class="ws-block-note">one row per mechanism; fixed five</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:9%"><col style="width:15%"><col style="width:16%">
+        <col style="width:12%"><col style="width:16%"><col style="width:12%">
+        <col style="width:10%"><col style="width:10%">
+      </colgroup>
+      <thead><tr>
+        <th><span class="fno">1</span> Access mechanism</th><th><span class="fno">2</span> Data sources in scope</th>
+        <th><span class="fno">3</span> What each source is authoritative for</th><th><span class="fno">4</span> Verdict</th>
+        <th><span class="fno">5</span> Enforcing control</th><th><span class="fno">6</span> Owner</th>
+        <th><span class="fno">7</span> MCP server allowlist</th><th><span class="fno">8</span> Web-fetch egress rule</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="prior">Files<span class="prior-src">ch15 L124-142</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">approved</span><span class="opt">approved with controls</span><span class="opt">prohibited</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="locked">—</td><td class="locked">—</td>
+        </tr>
+        <tr>
+          <td class="prior">CLI<span class="prior-src">ch15 L124-142</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">approved</span><span class="opt">approved with controls</span><span class="opt">prohibited</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="locked">—</td><td class="locked">—</td>
+        </tr>
+        <tr>
+          <td class="prior">Web fetch<span class="prior-src">ch15 L124-142</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">approved</span><span class="opt">approved with controls</span><span class="opt">prohibited</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="locked">—</td>
+          <td class="fill"><span class="f-box"></span><small>What may be fetched, from where, and what must be dropped afterwards.</small></td>
+        </tr>
+        <tr>
+          <td class="prior">APIs and MCP<span class="prior-src">ch15 L124-142</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">approved</span><span class="opt">approved with controls</span><span class="opt">prohibited</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-box"></span><small>Explicit approved servers; anything absent is denied.</small></td>
+          <td class="locked">—</td>
+        </tr>
+        <tr>
+          <td class="prior">Multi-modal<span class="prior-src">ch15 L124-142</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">approved</span><span class="opt">approved with controls</span><span class="opt">prohibited</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="locked">—</td><td class="locked">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 12</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Agent Data Boundaries</h1>
+      <p class="ws-sub">List each repository, directory or data store an agent may touch; continue this table on another copy if needed.</p></div>
+    <div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Pack E - Guardrails: authority, risk and proof<br>Block B &middot; inbound data boundaries</div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot;
+    <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a>
+  </div>
+  <div class="ws-block">
+    <h2>Block B — data classes and boundaries
+      <span class="ws-block-note">one row per named repository, directory or data store</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:22%"><col style="width:16%"><col style="width:13%"><col style="width:13%"><col style="width:20%"><col style="width:16%"></colgroup>
+      <thead><tr>
+        <th><span class="fno">9</span> Repository, directory or data store</th><th><span class="fno">10</span> Sensitivity class</th>
+        <th><span class="fno">11</span> Agents may read</th><th><span class="fno">12</span> Agents may write</th>
+        <th><span class="fno">13</span> A safety guardrail is expected to refuse here</th><th><span class="fno">14</span> Named human fallback when it refuses</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt"><span class="f-text sm"></span></span></div><small>Write the selected tier from our classification policy.</small></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">with controls</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">with controls</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Likely refusal despite our authorisation</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Named person and manual route; required if refusal is ticked.</small></td>
+        </tr>
+        <tr><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt"><span class="f-text sm"></span></span></div><small>Write the selected tier from our classification policy.</small></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">with controls</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">with controls</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Likely refusal despite our authorisation</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Named person and manual route; required if refusal is ticked.</small></td>
+        </tr>
+        <tr><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt"><span class="f-text sm"></span></span></div><small>Write the selected tier from our classification policy.</small></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">with controls</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">with controls</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Likely refusal despite our authorisation</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Named person and manual route; required if refusal is ticked.</small></td>
+        </tr>
+        <tr><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt"><span class="f-text sm"></span></span></div><small>Write the selected tier from our classification policy.</small></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">with controls</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">with controls</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Likely refusal despite our authorisation</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Named person and manual route; required if refusal is ticked.</small></td>
+        </tr>
+        <tr><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt"><span class="f-text sm"></span></span></div><small>Write the selected tier from our classification policy.</small></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">with controls</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">with controls</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Likely refusal despite our authorisation</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Named person and manual route; required if refusal is ticked.</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 12</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Consequential Effect Register</h1>
+      <p class="ws-sub">For every consequential effect: test reversal cost against execution cost, name who pays, and record the actual gate and its owner. Use one sheet per seeded effect.</p></div>
+    <div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Pack E - Guardrails: authority, risk and proof<br>Block C &middot; outbound effects</div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot;
+    <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a>
+  </div>
+  <div class="ws-block">
+    <h2>Block C — outbound: the consequential effect register
+      <span class="ws-block-note">gate selection follows the failure mode, not convenience</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td><td><b>Side effect</b></td>
+          <td class="prior">Create an issue<span class="prior-src">ch16 L47</span></td>
+          <td class="locked">Seeded effect; use your own wording on the additional-effect sheet.</td>
+          <td class="ws-num"><span class="fno">16</span></td><td><b>System of record touched</b></td>
+          <td class="prior">—</td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td><td><b>Consequential?</b></td>
+          <td class="prior">Yes where reversal costs more than execution.<span class="prior-src">ch16 L45</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="ws-num"><span class="fno">18</span></td><td><b>Reversal cost</b></td>
+          <td class="prior">—</td><td class="fill"><span class="f-text"></span><small>Minutes / hours / money / trust; state the unit.</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td><td><b>Who pays to undo it</b></td>
+          <td class="prior">—</td><td class="fill"><span class="f-owner"></span></td>
+          <td class="ws-num"><span class="fno">20</span></td><td><b>Where it executes today</b></td>
+          <td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">the agent holds the token</span><span class="opt">a deterministic post-stage holds it</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">21</span></td><td><b>Substrate realisation</b></td>
+          <td class="prior">Declared outputs; CI Lambda with separate IAM role; job-level secret held by second gated job; workflow suspend node; schema-checked activity.<span class="prior-src">ch16 L47, L53-56</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">declared safe-outputs block with typed schema</span><span class="opt">CI job whose post-stage runs under a separate IAM role</span><span class="opt">job-level secret held by a second, gated job</span><span class="opt">workflow suspend node requiring manual approval</span><span class="opt">separately registered schema-checked activity</span><span class="opt">none yet</span></div></td>
+          <td class="ws-num"><span class="fno">22</span></td><td><b>Declared schema</b></td>
+          <td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Typed shape validated before the post-stage acts.</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">23</span></td><td><b>Allowlist</b></td>
+          <td class="prior">Written by us, not by the agent.<span class="prior-src">ch16 L45, L47</span></td>
+          <td class="fill"><span class="f-box"></span><small>Labels, target repositories, assignees or destinations. If unbuilt, write “none yet”; never leave blank.</small></td>
+          <td class="ws-num"><span class="fno">24</span></td><td><b>Failure mode we fear</b></td>
+          <td class="prior">The five named failure modes<span class="prior-src">ch16 L81-95</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">goal drift</span><span class="opt">schema violation</span><span class="opt">hallucinated external fact</span><span class="opt">typo at volume</span><span class="opt">scope creep</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">25</span></td><td><b>Gate cell</b></td>
+          <td class="prior">Programmatic-internal: schema, lint, tests, type checks. Judgement-internal: goal-steward reviews plan against goal. Programmatic-external: cold reader applies deterministic rubric. Judgement-external: human checkpoint.<span class="prior-src">ch16 L81-95</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div><small>Mark exactly one. Choose the cell matching the failure mode.</small></td>
+          <td class="ws-num"><span class="fno">26</span></td><td><b>Concrete gate implementation</b></td>
+          <td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Name the validator, rubric or reviewer role.</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">27</span></td><td><b>Gate exists today</b></td>
+          <td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>“No” joins the gates-we-must-build list.</small></td>
+          <td class="ws-num"><span class="fno">28</span></td><td><b>Gate owner</b></td>
+          <td class="prior">—</td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">29</span></td><td><b>Grounding lookup for any external fact this effect asserts</b></td>
+          <td class="prior">Grounding reduces hallucinations; verification catches them before externalisation.<span class="prior-src">ch16 L68-73</span></td>
+          <td class="fill"><span class="f-box"></span><small>Name the system-of-record query.</small></td>
+          <td class="ws-num"><span class="fno">30</span></td><td><b>Supervision form for this effect</b></td>
+          <td class="prior">Strong: agent never holds the write capability.<span class="prior-src">ch16 L49</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.2pt;margin:1mm 0 0"><b>Mismatch checks from the chapter:</b>
+      Goal drift + programmatic-internal misses intent; schema violation + judgement-internal misses byte-level conformance;
+      hallucinated external fact + programmatic-external structural rubric misses truth; typo at volume + judgement-external invites a rubber-stamp review.</p>
+  </div>
+  <div class="ws-foot">
+    <div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 12</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+
+<!-- ============================ SHEET 4 ============================== -->
+<div class="sheet">
+  <div class="ws-head"><div><h1>Consequential Effect Register</h1><p class="ws-sub">One row per side effect. Complete all fields; test reversal cost against execution cost.</p></div><div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Block C &middot; outbound effects</div></div>
+  <div class="ws-source">Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot; <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a></div>
+  <div class="ws-block"><h2>Block C — outbound: the consequential effect register <span class="ws-block-note">seed: add an issue comment</span></h2>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead><tbody>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td><b>Side effect</b></td><td class="prior">Add an issue comment<span class="prior-src">ch16 L47</span></td><td class="locked">Seeded effect; use your own wording on the additional-effect sheet.</td><td class="ws-num"><span class="fno">16</span></td><td><b>System of record touched</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">17</span></td><td><b>Consequential?</b></td><td class="prior">Yes where reversal costs more than execution.<span class="prior-src">ch16 L45</span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td><td class="ws-num"><span class="fno">18</span></td><td><b>Reversal cost</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span><small>Minutes / hours / money / trust; state the unit.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td><b>Who pays to undo it</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td><td class="ws-num"><span class="fno">20</span></td><td><b>Where it executes today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">the agent holds the token</span><span class="opt">a deterministic post-stage holds it</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b>Substrate realisation</b></td><td class="prior">The declared-outputs shape and chapter's four realisations<span class="prior-src">ch16 L47, L53-56</span></td><td class="fill"><div class="f-select"><span class="opt">declared safe-outputs block with typed schema</span><span class="opt">CI job whose post-stage runs under a separate IAM role</span><span class="opt">job-level secret held by a second, gated job</span><span class="opt">workflow suspend node requiring manual approval</span><span class="opt">separately registered schema-checked activity</span><span class="opt">none yet</span></div></td><td class="ws-num"><span class="fno">22</span></td><td><b>Declared schema</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Typed shape validated before the post-stage acts.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Allowlist</b></td><td class="prior">Written by us, not by the agent.<span class="prior-src">ch16 L45, L47</span></td><td class="fill"><span class="f-box"></span><small>Labels, target repositories, assignees or destinations. If unbuilt, write “none yet”; never leave blank.</small></td><td class="ws-num"><span class="fno">24</span></td><td><b>Failure mode we fear</b></td><td class="prior">Five named failure modes<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">goal drift</span><span class="opt">schema violation</span><span class="opt">hallucinated external fact</span><span class="opt">typo at volume</span><span class="opt">scope creep</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Gate cell</b></td><td class="prior">Programmatic-internal: schema, lint, tests, type checks. Judgement-internal: goal-steward reviews plan against goal. Programmatic-external: cold reader applies deterministic rubric. Judgement-external: human checkpoint.<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div><small>Mark exactly one.</small></td><td class="ws-num"><span class="fno">26</span></td><td><b>Concrete gate implementation</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Name the validator, rubric or reviewer role.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td><b>Gate exists today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>“No” joins the gates-we-must-build list.</small></td><td class="ws-num"><span class="fno">28</span></td><td><b>Gate owner</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">29</span></td><td><b>Grounding lookup for any external fact this effect asserts</b></td><td class="prior">Grounding reduces hallucinations; verification catches them before externalisation.<span class="prior-src">ch16 L68-73</span></td><td class="fill"><span class="f-box"></span><small>Name the system-of-record query.</small></td><td class="ws-num"><span class="fno">30</span></td><td><b>Supervision form for this effect</b></td><td class="prior">Strong: agent never holds the write capability.<span class="prior-src">ch16 L49</span></td><td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div></td></tr>
+      </tbody></table>
+  </div>
+  <div class="ws-foot"><div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 12</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+<!-- ========================== END SHEET 4 ============================ -->
+
+<!-- ============================ SHEET 5 ============================== -->
+<div class="sheet">
+  <div class="ws-head"><div><h1>Consequential Effect Register</h1><p class="ws-sub">One row per side effect. Complete all fields; test reversal cost against execution cost.</p></div><div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Block C &middot; outbound effects</div></div>
+  <div class="ws-source">Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot; <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a></div>
+  <div class="ws-block"><h2>Block C — outbound: the consequential effect register <span class="ws-block-note">seed: create a pull request</span></h2>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead><tbody>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td><b>Side effect</b></td><td class="prior">Create a pull request<span class="prior-src">ch16 L47</span></td><td class="locked">Seeded effect; use your own wording on the additional-effect sheet.</td><td class="ws-num"><span class="fno">16</span></td><td><b>System of record touched</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">17</span></td><td><b>Consequential?</b></td><td class="prior">Yes where reversal costs more than execution.<span class="prior-src">ch16 L45</span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td><td class="ws-num"><span class="fno">18</span></td><td><b>Reversal cost</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span><small>Minutes / hours / money / trust; state the unit.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td><b>Who pays to undo it</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td><td class="ws-num"><span class="fno">20</span></td><td><b>Where it executes today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">the agent holds the token</span><span class="opt">a deterministic post-stage holds it</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b>Substrate realisation</b></td><td class="prior">The declared-outputs shape and chapter's four realisations<span class="prior-src">ch16 L47, L53-56</span></td><td class="fill"><div class="f-select"><span class="opt">declared safe-outputs block with typed schema</span><span class="opt">CI job whose post-stage runs under a separate IAM role</span><span class="opt">job-level secret held by a second, gated job</span><span class="opt">workflow suspend node requiring manual approval</span><span class="opt">separately registered schema-checked activity</span><span class="opt">none yet</span></div></td><td class="ws-num"><span class="fno">22</span></td><td><b>Declared schema</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Typed shape validated before the post-stage acts.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Allowlist</b></td><td class="prior">Written by us, not by the agent.<span class="prior-src">ch16 L45, L47</span></td><td class="fill"><span class="f-box"></span><small>Labels, target repositories, assignees or destinations. If unbuilt, write “none yet”; never leave blank.</small></td><td class="ws-num"><span class="fno">24</span></td><td><b>Failure mode we fear</b></td><td class="prior">Five named failure modes<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">goal drift</span><span class="opt">schema violation</span><span class="opt">hallucinated external fact</span><span class="opt">typo at volume</span><span class="opt">scope creep</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Gate cell</b></td><td class="prior">Programmatic-internal: schema, lint, tests, type checks. Judgement-internal: goal-steward reviews plan against goal. Programmatic-external: cold reader applies deterministic rubric. Judgement-external: human checkpoint.<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div><small>Mark exactly one.</small></td><td class="ws-num"><span class="fno">26</span></td><td><b>Concrete gate implementation</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Name the validator, rubric or reviewer role.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td><b>Gate exists today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>“No” joins the gates-we-must-build list.</small></td><td class="ws-num"><span class="fno">28</span></td><td><b>Gate owner</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">29</span></td><td><b>Grounding lookup for any external fact this effect asserts</b></td><td class="prior">Grounding reduces hallucinations; verification catches them before externalisation.<span class="prior-src">ch16 L68-73</span></td><td class="fill"><span class="f-box"></span><small>Name the system-of-record query.</small></td><td class="ws-num"><span class="fno">30</span></td><td><b>Supervision form for this effect</b></td><td class="prior">Strong: agent never holds the write capability.<span class="prior-src">ch16 L49</span></td><td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div></td></tr>
+      </tbody></table>
+  </div>
+  <div class="ws-foot"><div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 12</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+<!-- ========================== END SHEET 5 ============================ -->
+
+<!-- ============================ SHEET 6 ============================== -->
+<div class="sheet">
+  <div class="ws-head"><div><h1>Consequential Effect Register</h1><p class="ws-sub">One row per side effect. Complete all fields; test reversal cost against execution cost.</p></div><div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Block C &middot; outbound effects</div></div>
+  <div class="ws-source">Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot; <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a></div>
+  <div class="ws-block"><h2>Block C — outbound: the consequential effect register <span class="ws-block-note">seed: merge</span></h2>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead><tbody>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td><b>Side effect</b></td><td class="prior">Merge<span class="prior-src">ch16 L45, L47</span></td><td class="locked">Seeded effect; use your own wording on the additional-effect sheet.</td><td class="ws-num"><span class="fno">16</span></td><td><b>System of record touched</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">17</span></td><td><b>Consequential?</b></td><td class="prior">Yes where reversal costs more than execution.<span class="prior-src">ch16 L45</span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td><td class="ws-num"><span class="fno">18</span></td><td><b>Reversal cost</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span><small>Minutes / hours / money / trust; state the unit.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td><b>Who pays to undo it</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td><td class="ws-num"><span class="fno">20</span></td><td><b>Where it executes today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">the agent holds the token</span><span class="opt">a deterministic post-stage holds it</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b>Substrate realisation</b></td><td class="prior">The declared-outputs shape and chapter's four realisations<span class="prior-src">ch16 L47, L53-56</span></td><td class="fill"><div class="f-select"><span class="opt">declared safe-outputs block with typed schema</span><span class="opt">CI job whose post-stage runs under a separate IAM role</span><span class="opt">job-level secret held by a second, gated job</span><span class="opt">workflow suspend node requiring manual approval</span><span class="opt">separately registered schema-checked activity</span><span class="opt">none yet</span></div></td><td class="ws-num"><span class="fno">22</span></td><td><b>Declared schema</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Typed shape validated before the post-stage acts.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Allowlist</b></td><td class="prior">Written by us, not by the agent.<span class="prior-src">ch16 L45, L47</span></td><td class="fill"><span class="f-box"></span><small>Labels, target repositories, assignees or destinations. If unbuilt, write “none yet”; never leave blank.</small></td><td class="ws-num"><span class="fno">24</span></td><td><b>Failure mode we fear</b></td><td class="prior">Five named failure modes<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">goal drift</span><span class="opt">schema violation</span><span class="opt">hallucinated external fact</span><span class="opt">typo at volume</span><span class="opt">scope creep</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Gate cell</b></td><td class="prior">Programmatic-internal: schema, lint, tests, type checks. Judgement-internal: goal-steward reviews plan against goal. Programmatic-external: cold reader applies deterministic rubric. Judgement-external: human checkpoint.<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div><small>Mark exactly one.</small></td><td class="ws-num"><span class="fno">26</span></td><td><b>Concrete gate implementation</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Name the validator, rubric or reviewer role.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td><b>Gate exists today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>“No” joins the gates-we-must-build list.</small></td><td class="ws-num"><span class="fno">28</span></td><td><b>Gate owner</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">29</span></td><td><b>Grounding lookup for any external fact this effect asserts</b></td><td class="prior">Grounding reduces hallucinations; verification catches them before externalisation.<span class="prior-src">ch16 L68-73</span></td><td class="fill"><span class="f-box"></span><small>Name the system-of-record query.</small></td><td class="ws-num"><span class="fno">30</span></td><td><b>Supervision form for this effect</b></td><td class="prior">Strong: agent never holds the write capability.<span class="prior-src">ch16 L49</span></td><td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div></td></tr>
+      </tbody></table>
+  </div>
+  <div class="ws-foot"><div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 12</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+<!-- ========================== END SHEET 6 ============================ -->
+
+<!-- ============================ SHEET 7 ============================== -->
+<div class="sheet">
+  <div class="ws-head"><div><h1>Consequential Effect Register</h1><p class="ws-sub">One row per side effect. Complete all fields; test reversal cost against execution cost.</p></div><div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Block C &middot; outbound effects</div></div>
+  <div class="ws-source">Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot; <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a></div>
+  <div class="ws-block"><h2>Block C — outbound: the consequential effect register <span class="ws-block-note">seed: deploy or apply a manifest</span></h2>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead><tbody>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td><b>Side effect</b></td><td class="prior">Deploy or apply a manifest<span class="prior-src">ch16 L53-56</span></td><td class="locked">Seeded effect; use your own wording on the additional-effect sheet.</td><td class="ws-num"><span class="fno">16</span></td><td><b>System of record touched</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">17</span></td><td><b>Consequential?</b></td><td class="prior">Yes where reversal costs more than execution.<span class="prior-src">ch16 L45</span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td><td class="ws-num"><span class="fno">18</span></td><td><b>Reversal cost</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span><small>Minutes / hours / money / trust; state the unit.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td><b>Who pays to undo it</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td><td class="ws-num"><span class="fno">20</span></td><td><b>Where it executes today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">the agent holds the token</span><span class="opt">a deterministic post-stage holds it</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b>Substrate realisation</b></td><td class="prior">The declared-outputs shape and chapter's four realisations<span class="prior-src">ch16 L47, L53-56</span></td><td class="fill"><div class="f-select"><span class="opt">declared safe-outputs block with typed schema</span><span class="opt">CI job whose post-stage runs under a separate IAM role</span><span class="opt">job-level secret held by a second, gated job</span><span class="opt">workflow suspend node requiring manual approval</span><span class="opt">separately registered schema-checked activity</span><span class="opt">none yet</span></div></td><td class="ws-num"><span class="fno">22</span></td><td><b>Declared schema</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Typed shape validated before the post-stage acts.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Allowlist</b></td><td class="prior">Written by us, not by the agent.<span class="prior-src">ch16 L45, L47</span></td><td class="fill"><span class="f-box"></span><small>Labels, target repositories, assignees or destinations. If unbuilt, write “none yet”; never leave blank.</small></td><td class="ws-num"><span class="fno">24</span></td><td><b>Failure mode we fear</b></td><td class="prior">Five named failure modes<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">goal drift</span><span class="opt">schema violation</span><span class="opt">hallucinated external fact</span><span class="opt">typo at volume</span><span class="opt">scope creep</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Gate cell</b></td><td class="prior">Programmatic-internal: schema, lint, tests, type checks. Judgement-internal: goal-steward reviews plan against goal. Programmatic-external: cold reader applies deterministic rubric. Judgement-external: human checkpoint.<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div><small>Mark exactly one.</small></td><td class="ws-num"><span class="fno">26</span></td><td><b>Concrete gate implementation</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Name the validator, rubric or reviewer role.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td><b>Gate exists today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>“No” joins the gates-we-must-build list.</small></td><td class="ws-num"><span class="fno">28</span></td><td><b>Gate owner</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">29</span></td><td><b>Grounding lookup for any external fact this effect asserts</b></td><td class="prior">Grounding reduces hallucinations; verification catches them before externalisation.<span class="prior-src">ch16 L68-73</span></td><td class="fill"><span class="f-box"></span><small>Name the system-of-record query.</small></td><td class="ws-num"><span class="fno">30</span></td><td><b>Supervision form for this effect</b></td><td class="prior">Strong: agent never holds the write capability.<span class="prior-src">ch16 L49</span></td><td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div></td></tr>
+      </tbody></table>
+  </div>
+  <div class="ws-foot"><div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 7 of 12</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+<!-- ========================== END SHEET 7 ============================ -->
+
+<!-- ============================ SHEET 8 ============================== -->
+<div class="sheet">
+  <div class="ws-head"><div><h1>Consequential Effect Register</h1><p class="ws-sub">One row per side effect. Complete all fields; test reversal cost against execution cost.</p></div><div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Block C &middot; outbound effects</div></div>
+  <div class="ws-source">Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot; <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a></div>
+  <div class="ws-block"><h2>Block C — outbound: the consequential effect register <span class="ws-block-note">seed: write to a system of record</span></h2>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead><tbody>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td><b>Side effect</b></td><td class="prior">Write to a system of record<span class="prior-src">ch16 L45</span></td><td class="locked">Seeded effect; use your own wording on the additional-effect sheet.</td><td class="ws-num"><span class="fno">16</span></td><td><b>System of record touched</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">17</span></td><td><b>Consequential?</b></td><td class="prior">Yes where reversal costs more than execution.<span class="prior-src">ch16 L45</span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td><td class="ws-num"><span class="fno">18</span></td><td><b>Reversal cost</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span><small>Minutes / hours / money / trust; state the unit.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td><b>Who pays to undo it</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td><td class="ws-num"><span class="fno">20</span></td><td><b>Where it executes today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">the agent holds the token</span><span class="opt">a deterministic post-stage holds it</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b>Substrate realisation</b></td><td class="prior">The declared-outputs shape and chapter's four realisations<span class="prior-src">ch16 L47, L53-56</span></td><td class="fill"><div class="f-select"><span class="opt">declared safe-outputs block with typed schema</span><span class="opt">CI job whose post-stage runs under a separate IAM role</span><span class="opt">job-level secret held by a second, gated job</span><span class="opt">workflow suspend node requiring manual approval</span><span class="opt">separately registered schema-checked activity</span><span class="opt">none yet</span></div></td><td class="ws-num"><span class="fno">22</span></td><td><b>Declared schema</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Typed shape validated before the post-stage acts.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Allowlist</b></td><td class="prior">Written by us, not by the agent.<span class="prior-src">ch16 L45, L47</span></td><td class="fill"><span class="f-box"></span><small>Labels, target repositories, assignees or destinations. If unbuilt, write “none yet”; never leave blank.</small></td><td class="ws-num"><span class="fno">24</span></td><td><b>Failure mode we fear</b></td><td class="prior">Five named failure modes<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">goal drift</span><span class="opt">schema violation</span><span class="opt">hallucinated external fact</span><span class="opt">typo at volume</span><span class="opt">scope creep</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Gate cell</b></td><td class="prior">Programmatic-internal: schema, lint, tests, type checks. Judgement-internal: goal-steward reviews plan against goal. Programmatic-external: cold reader applies deterministic rubric. Judgement-external: human checkpoint.<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div><small>Mark exactly one.</small></td><td class="ws-num"><span class="fno">26</span></td><td><b>Concrete gate implementation</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Name the validator, rubric or reviewer role.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td><b>Gate exists today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>“No” joins the gates-we-must-build list.</small></td><td class="ws-num"><span class="fno">28</span></td><td><b>Gate owner</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">29</span></td><td><b>Grounding lookup for any external fact this effect asserts</b></td><td class="prior">Grounding reduces hallucinations; verification catches them before externalisation.<span class="prior-src">ch16 L68-73</span></td><td class="fill"><span class="f-box"></span><small>Name the system-of-record query.</small></td><td class="ws-num"><span class="fno">30</span></td><td><b>Supervision form for this effect</b></td><td class="prior">Strong: agent never holds the write capability.<span class="prior-src">ch16 L49</span></td><td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div></td></tr>
+      </tbody></table>
+  </div>
+  <div class="ws-foot"><div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 8 of 12</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+<!-- ========================== END SHEET 8 ============================ -->
+
+<!-- ============================ SHEET 9 ============================== -->
+<div class="sheet">
+  <div class="ws-head"><div><h1>Consequential Effect Register</h1><p class="ws-sub">One row per side effect. Complete all fields; test reversal cost against execution cost.</p></div><div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Block C &middot; outbound effects</div></div>
+  <div class="ws-source">Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot; <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a></div>
+  <div class="ws-block"><h2>Block C — outbound: the consequential effect register <span class="ws-block-note">seed: call an external API with side effects</span></h2>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead><tbody>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td><b>Side effect</b></td><td class="prior">Call an external API with side effects<span class="prior-src">ch16 L47</span></td><td class="locked">Seeded effect; use your own wording on the additional-effect sheet.</td><td class="ws-num"><span class="fno">16</span></td><td><b>System of record touched</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">17</span></td><td><b>Consequential?</b></td><td class="prior">Yes where reversal costs more than execution.<span class="prior-src">ch16 L45</span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td><td class="ws-num"><span class="fno">18</span></td><td><b>Reversal cost</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span><small>Minutes / hours / money / trust; state the unit.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td><b>Who pays to undo it</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td><td class="ws-num"><span class="fno">20</span></td><td><b>Where it executes today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">the agent holds the token</span><span class="opt">a deterministic post-stage holds it</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b>Substrate realisation</b></td><td class="prior">The declared-outputs shape and chapter's four realisations<span class="prior-src">ch16 L47, L53-56</span></td><td class="fill"><div class="f-select"><span class="opt">declared safe-outputs block with typed schema</span><span class="opt">CI job whose post-stage runs under a separate IAM role</span><span class="opt">job-level secret held by a second, gated job</span><span class="opt">workflow suspend node requiring manual approval</span><span class="opt">separately registered schema-checked activity</span><span class="opt">none yet</span></div></td><td class="ws-num"><span class="fno">22</span></td><td><b>Declared schema</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Typed shape validated before the post-stage acts.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Allowlist</b></td><td class="prior">Written by us, not by the agent.<span class="prior-src">ch16 L45, L47</span></td><td class="fill"><span class="f-box"></span><small>Labels, target repositories, assignees or destinations. If unbuilt, write “none yet”; never leave blank.</small></td><td class="ws-num"><span class="fno">24</span></td><td><b>Failure mode we fear</b></td><td class="prior">Five named failure modes<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">goal drift</span><span class="opt">schema violation</span><span class="opt">hallucinated external fact</span><span class="opt">typo at volume</span><span class="opt">scope creep</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Gate cell</b></td><td class="prior">Programmatic-internal: schema, lint, tests, type checks. Judgement-internal: goal-steward reviews plan against goal. Programmatic-external: cold reader applies deterministic rubric. Judgement-external: human checkpoint.<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div><small>Mark exactly one.</small></td><td class="ws-num"><span class="fno">26</span></td><td><b>Concrete gate implementation</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Name the validator, rubric or reviewer role.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td><b>Gate exists today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>“No” joins the gates-we-must-build list.</small></td><td class="ws-num"><span class="fno">28</span></td><td><b>Gate owner</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">29</span></td><td><b>Grounding lookup for any external fact this effect asserts</b></td><td class="prior">Grounding reduces hallucinations; verification catches them before externalisation.<span class="prior-src">ch16 L68-73</span></td><td class="fill"><span class="f-box"></span><small>Name the system-of-record query.</small></td><td class="ws-num"><span class="fno">30</span></td><td><b>Supervision form for this effect</b></td><td class="prior">Strong: agent never holds the write capability.<span class="prior-src">ch16 L49</span></td><td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div></td></tr>
+      </tbody></table>
+  </div>
+  <div class="ws-foot"><div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 9 of 12</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+<!-- ========================== END SHEET 9 ============================ -->
+
+<!-- ============================ SHEET 10 ============================== -->
+<div class="sheet">
+  <div class="ws-head"><div><h1>Consequential Effect Register</h1><p class="ws-sub">One row per side effect. Complete all fields; test reversal cost against execution cost.</p></div><div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Block C &middot; outbound effects</div></div>
+  <div class="ws-source">Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot; <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a></div>
+  <div class="ws-block"><h2>Block C — outbound: the consequential effect register <span class="ws-block-note">seed: spend money</span></h2>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead><tbody>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td><b>Side effect</b></td><td class="prior">Spend money<span class="prior-src">ch16 L45</span></td><td class="locked">Seeded effect; use your own wording on the additional-effect sheet.</td><td class="ws-num"><span class="fno">16</span></td><td><b>System of record touched</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">17</span></td><td><b>Consequential?</b></td><td class="prior">Yes where reversal costs more than execution.<span class="prior-src">ch16 L45</span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td><td class="ws-num"><span class="fno">18</span></td><td><b>Reversal cost</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span><small>Minutes / hours / money / trust; state the unit.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td><b>Who pays to undo it</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td><td class="ws-num"><span class="fno">20</span></td><td><b>Where it executes today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">the agent holds the token</span><span class="opt">a deterministic post-stage holds it</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b>Substrate realisation</b></td><td class="prior">The declared-outputs shape and chapter's four realisations<span class="prior-src">ch16 L47, L53-56</span></td><td class="fill"><div class="f-select"><span class="opt">declared safe-outputs block with typed schema</span><span class="opt">CI job whose post-stage runs under a separate IAM role</span><span class="opt">job-level secret held by a second, gated job</span><span class="opt">workflow suspend node requiring manual approval</span><span class="opt">separately registered schema-checked activity</span><span class="opt">none yet</span></div></td><td class="ws-num"><span class="fno">22</span></td><td><b>Declared schema</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Typed shape validated before the post-stage acts.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Allowlist</b></td><td class="prior">Written by us, not by the agent.<span class="prior-src">ch16 L45, L47</span></td><td class="fill"><span class="f-box"></span><small>Labels, target repositories, assignees or destinations. If unbuilt, write “none yet”; never leave blank.</small></td><td class="ws-num"><span class="fno">24</span></td><td><b>Failure mode we fear</b></td><td class="prior">Five named failure modes<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">goal drift</span><span class="opt">schema violation</span><span class="opt">hallucinated external fact</span><span class="opt">typo at volume</span><span class="opt">scope creep</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Gate cell</b></td><td class="prior">Programmatic-internal: schema, lint, tests, type checks. Judgement-internal: goal-steward reviews plan against goal. Programmatic-external: cold reader applies deterministic rubric. Judgement-external: human checkpoint.<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div><small>Mark exactly one.</small></td><td class="ws-num"><span class="fno">26</span></td><td><b>Concrete gate implementation</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Name the validator, rubric or reviewer role.</small></td></tr>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td><b>Gate exists today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>“No” joins the gates-we-must-build list.</small></td><td class="ws-num"><span class="fno">28</span></td><td><b>Gate owner</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">29</span></td><td><b>Grounding lookup for any external fact this effect asserts</b></td><td class="prior">Grounding reduces hallucinations; verification catches them before externalisation.<span class="prior-src">ch16 L68-73</span></td><td class="fill"><span class="f-box"></span><small>Name the system-of-record query.</small></td><td class="ws-num"><span class="fno">30</span></td><td><b>Supervision form for this effect</b></td><td class="prior">Strong: agent never holds the write capability.<span class="prior-src">ch16 L49</span></td><td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div></td></tr>
+      </tbody></table>
+  </div>
+  <div class="ws-foot"><div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 10 of 12</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+<!-- ========================== END SHEET 10 ============================ -->
+
+<!-- ============================ SHEET 11 ============================== -->
+<div class="sheet">
+  <div class="ws-head"><div><h1>Additional Consequential Effects</h1><p class="ws-sub">Use these repeated records for effects in your own vocabulary; copy this page when your register has more entries.</p></div><div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Block C &middot; additional effects</div></div>
+  <div class="ws-source">Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot; <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a></div>
+  <div class="ws-block"><h2>Block C — outbound: the consequential effect register <span class="ws-block-note">write-in effect</span></h2>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead><tbody>
+        <tr><td class="ws-num"></td><td><b>Side effect</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td><td class="ws-num"></td><td><b>System of record touched</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"></td><td><b>Consequential?</b></td><td class="prior">Yes where reversal costs more than execution.<span class="prior-src">ch16 L45</span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td><td class="ws-num"></td><td><b>Reversal cost</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span><small>Minutes / hours / money / trust; state the unit.</small></td></tr>
+        <tr><td class="ws-num"></td><td><b>Who pays to undo it</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td><td class="ws-num"></td><td><b>Where it executes today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">the agent holds the token</span><span class="opt">a deterministic post-stage holds it</span></div></td></tr>
+        <tr><td class="ws-num"></td><td><b>Substrate realisation</b></td><td class="prior">The declared-outputs shape and chapter's four realisations<span class="prior-src">ch16 L47, L53-56</span></td><td class="fill"><div class="f-select"><span class="opt">declared safe-outputs block with typed schema</span><span class="opt">CI job whose post-stage runs under a separate IAM role</span><span class="opt">job-level secret held by a second, gated job</span><span class="opt">workflow suspend node requiring manual approval</span><span class="opt">separately registered schema-checked activity</span><span class="opt">none yet</span></div></td><td class="ws-num"></td><td><b>Declared schema</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Typed shape validated before the post-stage acts.</small></td></tr>
+        <tr><td class="ws-num"></td><td><b>Allowlist</b></td><td class="prior">Written by us, not by the agent.<span class="prior-src">ch16 L45, L47</span></td><td class="fill"><span class="f-box"></span><small>If unbuilt, write “none yet”; never leave blank.</small></td><td class="ws-num"></td><td><b>Failure mode we fear</b></td><td class="prior">The five named failure modes<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">goal drift</span><span class="opt">schema violation</span><span class="opt">hallucinated external fact</span><span class="opt">typo at volume</span><span class="opt">scope creep</span></div></td></tr>
+        <tr><td class="ws-num"></td><td><b>Gate cell</b></td><td class="prior">Programmatic-internal: schema, lint, tests, type checks. Judgement-internal: goal-steward reviews plan against goal. Programmatic-external: cold reader applies deterministic rubric. Judgement-external: human checkpoint.<span class="prior-src">ch16 L81-95</span></td><td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div><small>Mark exactly one.</small></td><td class="ws-num"></td><td><b>Concrete gate implementation</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><small>Name the validator, rubric or reviewer role.</small></td></tr>
+        <tr><td class="ws-num"></td><td><b>Gate exists today</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td><td class="ws-num"></td><td><b>Gate owner</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"></td><td><b>Grounding lookup for any external fact this effect asserts</b></td><td class="prior">Grounding reduces hallucinations; verification catches them before externalisation.<span class="prior-src">ch16 L68-73</span></td><td class="fill"><span class="f-box"></span><small>Name the system-of-record query.</small></td><td class="ws-num"></td><td><b>Supervision form for this effect</b></td><td class="prior">Strong: agent never holds the write capability.<span class="prior-src">ch16 L49</span></td><td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div></td></tr>
+      </tbody></table>
+  </div>
+  <div class="ws-foot"><div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 11 of 12</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+<!-- ========================== END SHEET 11 ============================ -->
+
+<!-- ============================ SHEET 12 ============================== -->
+<div class="sheet">
+  <div class="ws-head"><div><h1>Supervision Form by Environment</h1><p class="ws-sub">Choose strong-form when the client offers it. Record every exception with its reason and compensating control, signed and dated.</p></div><div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Block D &middot; signed decision</div></div>
+  <div class="ws-source">Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Strong-Form Supervised Execution</i> &middot; <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L126-134 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-supervision-forms">#sec-seam-supervision-forms</a></div>
+  <div class="ws-block"><h2>Block D — supervision form per environment <span class="ws-block-note">three environments; sign in the room</span></h2>
+    <table class="ws"><colgroup><col style="width:5%"><col style="width:12%"><col style="width:14%"><col style="width:12%"><col style="width:34%"><col style="width:23%"></colgroup>
+      <thead><tr><th></th><th><span class="fno">31</span> Environment</th><th><span class="fno">32</span> Does this client offer strong-form capability-based enforcement</th><th><span class="fno">33</span> Chosen form</th><th><span class="fno">34</span> If weak was chosen on a strong-form-capable client</th><th><span class="fno">35</span> The compliance claim we intend to make about agent-driven change</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"></td><td class="prior">Developer laptop<span class="prior-src">ch16 L126-134</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div><small>When client offers strong-form, use it.</small></td>
+          <td class="fill"><span class="f-box"></span><span class="f-sign"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Mandatory when column 32 is yes and column 33 is weak: reason, compensating control, signature and date.</small></td>
+          <td class="fill"><span class="f-box"></span><small>What may be proposed; what substrate enforces; what audit trail records.</small></td>
+        </tr>
+        <tr><td class="ws-num"></td><td class="prior">CI<span class="prior-src">ch16 L126-134</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div><small>When client offers strong-form, use it.</small></td>
+          <td class="fill"><span class="f-box"></span><span class="f-sign"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Mandatory when column 32 is yes and column 33 is weak: reason, compensating control, signature and date.</small></td>
+          <td class="fill"><span class="f-box"></span><small>What may be proposed; what substrate enforces; what audit trail records.</small></td>
+        </tr>
+        <tr><td class="ws-num"></td><td class="prior">Production automation<span class="prior-src">ch16 L126-134</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">strong</span><span class="opt">weak</span></div><small>When client offers strong-form, use it.</small></td>
+          <td class="fill"><span class="f-box"></span><span class="f-sign"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Mandatory when column 32 is yes and column 33 is weak: reason, compensating control, signature and date.</small></td>
+          <td class="fill"><span class="f-box"></span><small>What may be proposed; what substrate enforces; what audit trail records.</small></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ws"><colgroup><col style="width:7%"><col style="width:21%"><col style="width:36%"><col style="width:36%"></colgroup><tbody>
+      <tr><td class="ws-num"></td><td><b>Register signed by</b></td><td class="fill tall"><b>Engineer / architect</b><span class="f-sign"></span><b>Security countersignature</b><span class="f-sign"></span></td><td class="fill"><b>Engineer / architect date</b><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><b>Security date</b><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+    </tbody></table>
+  </div>
+  <div class="ws-foot"><div>WS-16-consequential-effect-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 12 of 12</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+<!-- ========================== END SHEET 12 ============================ -->
+```
