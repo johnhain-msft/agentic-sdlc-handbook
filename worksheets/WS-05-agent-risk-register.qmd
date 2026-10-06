@@ -20,7 +20,7 @@ format:
             .sheet:nth-of-type(n+5) table.ws col:nth-child(9){width:7% !important}
             .sheet:nth-of-type(n+5) table.ws col:nth-child(11){width:6% !important}
             .sheet:nth-of-type(n+5) table.ws col:nth-child(14){width:8% !important}
-            table.ws td.fill > span.prior{display:block;position:static;width:auto;height:auto;overflow:visible;word-break:break-all;font-size:6pt;margin-bottom:1mm}
+            table.ws td.fill > span.prior{display:block;position:static;width:auto;height:auto;overflow:visible;word-break:normal;overflow-wrap:break-word;font-size:7pt;margin-bottom:1mm}
             table.ws td:nth-child(5) .f-text{display:block;height:13mm}
           </style>
 ---
