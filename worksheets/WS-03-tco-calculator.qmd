@@ -46,7 +46,7 @@ format:
   <div class="ws-instruction">
     Work with finance and procurement. Price each component for your actual team,
     write the assumption a CFO will test beside it, and name the person who can
-    defend it. Use current dated quotes and finance-authorised internal rates;
+    defend it. Use current dated quotes and finance-authorized internal rates;
     treat every book estimate as a prior, never a default. Complete every line,
     then carry the signed year-1 total to WS-03-roi-break-even-model.
   </div>
@@ -316,7 +316,7 @@ format:
 
   <div class="ws-block">
     <h2>Year-1 total and licence share
-      <span class="ws-block-note">record the organisation's figures, not the book's estimates</span></h2>
+      <span class="ws-block-note">record the organization's figures, not the book's estimates</span></h2>
     <table class="ws">
       <colgroup><col style="width:6%"><col style="width:25%"><col style="width:34%"><col style="width:35%"></colgroup>
       <thead><tr><th></th><th>Field</th><th>Book prior</th><th>Your answer</th></tr></thead>
