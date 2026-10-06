@@ -181,7 +181,7 @@ format:
           <span class="ws-block-note">complete WS-06-role-map-and-staffing-triggers first</span></h2>
         <table class="ws">
           <colgroup>
-            <col style="width:6%"><col style="width:21%"><col style="width:25%"><col style="width:48%">
+            <col style="width:6%"><col style="width:26%"><col style="width:22%"><col style="width:46%">
           </colgroup>
           <thead>
             <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
