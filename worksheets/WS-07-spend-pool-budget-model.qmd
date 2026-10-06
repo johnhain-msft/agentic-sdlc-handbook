@@ -153,7 +153,7 @@ format:
         </tr>
       </tbody>
     </table>
-    <p class="ws-block-note">The total must reconcile to the agentic line in WS-03-tco-calculator. Keep <b>Gate?</b> and <b>Reopen trigger</b> unchanged when carrying gate choices to WS-07-cost-vs-value-gate and allocation levers to WS-19-where-the-bill-gets-decided.</p>
+    <p class="ws-block-note">The total must reconcile to the agentic line in WS-03-tco-calculator. Use the same vocabulary for <b>Gate?</b> in WS-07-cost-vs-value-gate and <b>Reopen trigger</b> in WS-19-where-the-bill-gets-decided.</p>
   </div>
 
   <div class="ws-foot">
