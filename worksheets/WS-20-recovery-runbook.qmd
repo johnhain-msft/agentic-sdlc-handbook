@@ -1,0 +1,370 @@
+---
+title: "When It Goes Wrong: Our Six-Step Recovery Runbook"
+pagetitle: "WS-20-recovery-runbook"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-20-recovery-runbook</b> &middot; declared format <b>A4 portrait</b> &middot; 3 sheets.
+  Each white page below is one physical sheet at true size.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>When It Goes Wrong: Our Six-Step Recovery Runbook</h1>
+      <p class="ws-sub">A team recovery runbook pinned in the repo, with the failure-mode decision tree as its front door.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-20-recovery-runbook</b><br>
+      Pack Z &middot; fill order 10<br>
+      type <b>checklist</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: ch20 <b>Anti-Patterns and Failure Modes</b> &middot; &sect; The Recovery Playbook &middot;
+    <code>handbook/ch20-anti-patterns-and-failure-modes.qmd</code> L381-395 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch20-anti-patterns-and-failure-modes.html#sec-anti-recovery-playbook">#sec-anti-recovery-playbook</a>
+    &middot; follows <code>WS-20-nineteen-failure-mode-premortem</code>
+  </div>
+
+  <div class="ws-instruction">
+    Fill Region A first, with the person who holds delivery accountability in the room. A named
+    individual goes in A1 &mdash; not "the team", not "whoever is driving". If you cannot name one,
+    stop and reschedule. Then walk the diagnosis block and fill the step grid with the commands you
+    actually use. Pin the finished runbook in the repository before you leave.
+  </div>
+
+  <div class="ws-block">
+    <h2>Region A &mdash; the authority block
+      <span class="ws-block-note">mandatory; the sheet is decoration without it</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:20%"><col style="width:32%"><col style="width:42%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>A1 &middot; Who is authorised to call the stop</b></td>
+          <td class="prior">&mdash; Must be a named individual. "The team", "whoever is driving" and "we'd discuss it" are not answers.<span class="prior-src">spec wording, not the book's; context: ch20 L395 &mdash; "The playbook works only if you're willing to stop"</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>A2 &middot; Deputy stop authority</b></td>
+          <td class="prior">&mdash; The named person who can call it when A1 is unavailable.<span class="prior-src">derived from A1</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>A3 &middot; May anyone else call a stop?</b></td>
+          <td class="prior">&mdash; If "any engineer", A1 becomes the person who may <b>not</b> overrule it without writing a reason.<span class="prior-src">derived</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">any engineer may call it</span><span class="opt">only A1 or A2</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>A4 &middot; If the stop is contested, who decides</b></td>
+          <td class="prior">&mdash; The delivery-accountable person. Usually not A1.<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>A5 &middot; Where this runbook is pinned</b></td>
+          <td class="prior">&mdash; The repository path. A runbook nobody can find mid-session is not a runbook.<span class="prior-src">spec wording, not the book's; context: ch20 L381</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>A6 &middot; Runbook owner</b></td>
+          <td class="prior">&mdash; Who keeps it current.<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>A7 &middot; Last rehearsed</b></td>
+          <td class="prior">&mdash; Against the worked example or a real recovery.<span class="prior-src">derived from ch20 L399-447</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The hardest part is step 1 &mdash; not because identifying anti-patterns is difficult, but because it
+    requires admitting the current approach isn't working. The sunk cost of a long session creates pressure
+    to push forward. The playbook works only if you're willing to stop." (ch20 L395)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-20-recovery-runbook &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Recovery Runbook &mdash; the diagnosis block</h1>
+      <p class="ws-sub">The front door to step 1, from the chapter's failure-mode decision tree.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-20-recovery-runbook</b><br>
+      Pack Z &middot; fill order 10
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Diagnosis block &mdash; the front door to step 1
+      <span class="ws-block-note">tick your way through during a live recovery</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:16%"><col style="width:40%"><col style="width:38%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>D1 &middot; Which anti-pattern from the taxonomy</b></td>
+          <td class="prior" style="font-size:6.6pt;line-height:1.25">
+            1 Monolithic Prompt &mdash; all instructions in one block; small changes cascade.
+            2 Context Dumping &mdash; everything loaded upfront.
+            3 Unbounded Agent &mdash; no limits on tools or authority.
+            4 Flat Instructions &mdash; same rules everywhere.
+            5 Scope Creep &mdash; task grows mid-execution.
+            6 The Solo Hero &mdash; one massive agent, no decomposition or review.
+            7 The Trust Fall &mdash; output accepted without verification.
+            8 Same-File Parallel Edits &mdash; second agent's changes fail silently.
+            9 Skipping Checkpoints &mdash; waves committed without validation.
+            10 Not Fixing the Primitives &mdash; symptoms corrected by hand.
+            11 Context Window Exhaustion &mdash; earlier instructions silently dropped.
+            12 Hallucinated Edits &mdash; success reported on changes not persisted.
+            13 Stale Context Between Waves &mdash; wave N works against wave N-2 state.
+            14 Cost Runaway &mdash; unbounded retries burn tokens.
+            15 The "Almost Done" Trap &mdash; last 10% takes longer than starting over.
+            16 Session State Loss &mdash; no checkpoint, unrecoverable work.
+            17 Persona Drift &mdash; role shifts mid-session.
+            18 Cross-Wave Merge Conflicts &mdash; pass individually, break together.
+            19 Prompt Injection via Dependencies &mdash; external content hijacks the agent.
+            <span class="prior-src">ch20 L20-38</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span><span class="opt">6</span><span class="opt">7</span><span class="opt">8</span><span class="opt">9</span><span class="opt">10</span></div>
+            <div class="f-select"><span class="opt">11</span><span class="opt">12</span><span class="opt">13</span><span class="opt">14</span><span class="opt">15</span><span class="opt">16</span><span class="opt">17</span><span class="opt">18</span><span class="opt">19</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>D2 &middot; Syntax error?</b></td>
+          <td class="prior">Yes routes to: model issue &mdash; upgrade or do it manually.<span class="prior-src">ch20 fig-failure-decision-tree</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>D3 &middot; Tests fail &mdash; agent's code or pre-existing?</b></td>
+          <td class="prior">"Agent's" routes to: context issue, narrow scope. "Pre-existing" routes to: separate issue, skip.<span class="prior-src">ch20 fig-failure-decision-tree</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">agent's</span><span class="opt">pre-existing</span><span class="opt">tests pass</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>D4 &middot; Follows conventions?</b></td>
+          <td class="prior">No routes to: primitive gap &mdash; add a rule.<span class="prior-src">ch20 fig-failure-decision-tree</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes, it follows conventions</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>D5 &middot; Integrates correctly?</b></td>
+          <td class="prior">No routes to: architecture issue &mdash; fix boundaries. Yes routes to: probably fine &mdash; check edges.<span class="prior-src">ch20 fig-failure-decision-tree</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes, it integrates</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>D6 &middot; Terminal reached</b></td>
+          <td class="prior">Tick only when the tree has resolved: "follow it until you reach a diagnosis, not a guess".<span class="prior-src">ch20 L383</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">model issue: upgrade / manual</span><span class="opt">context issue: narrow scope</span><span class="opt">separate issue: skip</span></div>
+            <div class="f-select"><span class="opt">primitive gap: add rule</span><span class="opt">architecture issue: fix boundaries</span><span class="opt">probably fine: check edges</span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Reconciliation with the pre-mortem
+      <span class="ws-block-note">WS-20-nineteen-failure-mode-premortem</span></h2>
+    <p style="font-size:7.6pt;margin:0 0 1.5mm">For each failure mode the pre-mortem flagged, trace it through D1&ndash;D6 to a terminal. Any mode that reaches no terminal, or only "probably fine: check edges", is a gap in the front door. Record each gap here: the mode number, and what the tree is missing.</p>
+    <div class="f-box" style="min-height:22mm"></div>
+  </div>
+
+  <p style="font-size:7.4pt;color:#454f59;margin:1mm 0">Hand-off: record the primitive edit from row 18 (sheet 3) as a row in <code>WS-12-failure-triage-log</code>, with the same file path and vocabulary as this sheet.</p>
+
+  <div class="ws-foot">
+    <div>WS-20-recovery-runbook &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Recovery Runbook &mdash; Region B: the step grid</h1>
+      <p class="ws-sub">One row per step. The six steps are fixed and ordered; the commands are ours.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-20-recovery-runbook</b><br>
+      Pack Z &middot; fill order 10<br>
+      step 1 defaults to <b>A1</b>
+    </div>
+  </div>
+
+  <div class="ws-instruction">
+    Column 3 is a command, a tool or a named convention &mdash; something an engineer who has never
+    read the chapter could run. Restating the step name is not an answer. Tick "Done" in order during
+    a live recovery, and leave the evidence in column 6.
+  </div>
+
+  <div class="ws-block">
+    <h2>Region B &mdash; the step grid
+      <span class="ws-block-note">ch20 L383-393</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:11%"><col style="width:17%"><col style="width:22%"><col style="width:16%"><col style="width:8%"><col style="width:16%"><col style="width:6%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>1 &middot; Step</th><th>2 &middot; What the step is for</th><th>3 &middot; Our concrete action</th><th>4 &middot; Worked example</th><th>5 &middot; Who does it</th><th>6 &middot; Evidence it happened</th><th style="font-size:6pt;padding-left:1mm;padding-right:1mm">7 &middot; Done</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td class="locked">Stop and assess</td>
+          <td class="locked">Identify which anti-pattern; follow the decision tree to a diagnosis, not a guess.</td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="prior" style="font-size:6.6pt">Symptom matches #15, The "Almost Done" Trap; a context problem, not a prompt problem.<span class="prior-src">ch20 L399-447</span></td>
+          <td class="prior" style="font-size:7pt">A1</td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-check"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td class="locked">Snapshot what works</td>
+          <td class="locked">Commit all passing code; code in an agent session is ephemeral.</td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="prior" style="font-size:6.6pt">Commit of the four passing auth files: <code>git add</code> then <code>git commit</code>.<span class="prior-src">ch20 L399-447</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-check"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td>
+          <td class="locked">Revert what doesn't</td>
+          <td class="locked">Revert contaminated files to last known-good; don't salvage sprawling changes.</td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="prior" style="font-size:6.6pt"><code>git checkout --<br>src/auth/<wbr>token_refresh.py<br>src/auth/<wbr>compat.py</code><span class="prior-src">ch20 L399-447</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-check"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td>
+          <td class="locked">Decompose</td>
+          <td class="locked">Break the task down; write sub-tasks explicitly; assign scope boundaries.</td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="prior" style="font-size:6.6pt">Three separately-contexted tasks: (a) token refresh, (b) clock-skew expiry, (c) v1 compatibility.<span class="prior-src">ch20 L399-447</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-check"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td>
+          <td class="locked">Fix the primitive</td>
+          <td class="locked">Add the missing instruction, converting a one-time recovery into a permanent improvement. Detail below.</td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="prior" style="font-size:6.6pt">An "Auth Module Constraints" primitive in the auth domain's scoped instructions.<span class="prior-src">ch20 L399-447</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-check"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td>
+          <td class="locked">Re-execute with constraints</td>
+          <td class="locked">Fresh session, clean context, updated primitives, explicit scope boundaries.</td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="prior" style="font-size:6.6pt">Single-task re-dispatch: task (a) only, in a fresh session.<span class="prior-src">ch20 L399-447</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-check"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;color:#454f59;margin:1.5mm 0 0">Column 5: the others are the engineer in the session unless named otherwise. Column 6: a commit SHA, branch name, primitive diff or ticket reference &mdash; a step with no artefact cannot be shown to have run.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Step 5 detail &mdash; the step that changes the economics
+      <span class="ws-block-note">row 18 carries three extra blanks</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:26%"><col style="width:30%"><col style="width:38%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">20</span></td>
+          <td><b>Where the fixed primitive lands</b></td>
+          <td class="prior">&mdash; The file path, and the level in the hierarchy it is scoped to.<span class="prior-src">ch20 L391</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">21</span></td>
+          <td><b>Who reviews the primitive edit</b></td>
+          <td class="prior">&mdash;<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">22</span></td>
+          <td><b>Which rule, if it had existed, would have prevented this failure?</b></td>
+          <td class="prior">"Ask: which rule, if it had existed, would have prevented this failure? Write that rule." A corrected file rather than a corrected rule has not run.<span class="prior-src">quoted sentence: ch20 L391; the sentence after it is spec wording, not the book's</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-20-recovery-runbook &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```

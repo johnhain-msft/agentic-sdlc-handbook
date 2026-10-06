@@ -1,0 +1,241 @@
+---
+title: "Our Own Cost Spread — Measuring the Variance Before We Budget"
+pagetitle: "WS-07-cost-variance-baseline"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-07-cost-variance-baseline</b> &middot; review copy &middot; declared format
+  <b>A3 landscape</b> &middot; 1 sheet. The white page below is one physical sheet
+  at true size. Anything beyond its edge is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Our Own Cost Spread — Measuring the Variance Before We Budget</h1>
+      <p class="ws-sub">A one-page variance exhibit in our own numbers — the CFO-facing artifact that reframes the agentic bill from a price negotiation into an engineering-design decision.</p>
+      <p style="font-size:12pt;font-weight:700;margin:1mm 0 0">Model choice, token use and harness govern the bill, and all three are in our control.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-07-cost-variance-baseline</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>4</b> &middot; type <b>calculator</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Agentic SDLC Bill</b>, <i>The Same Task, an 8.5× Bill</i>
+    &middot; <code>handbook/ch07-the-agentic-sdlc-bill.qmd</code> L13-41
+    &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch07-the-agentic-sdlc-bill.html#sec-bill-cost-variance">#sec-bill-cost-variance</a>
+  </div>
+
+  <div class="ws-instruction">
+    Choose two or three recurring, high-frequency engineering tasks. For each task, record your own run count, describe both loops, enter your own costs, and mark each cost basis separately. Record whether outputs are identical, calculate the spread and exposure, and name the individual who would own the design of this path. Mark the measurement window. Use only your organization's figures; do not copy the illustrative run. If every cost basis is estimated, mark the sheet PROSPECTIVE. Circle the highest-spread task and carry it into WS-07-three-variables-audit; carry total annualized exposure into WS-07-spend-pool-budget-model.
+  </div>
+
+  <div style="display:grid;grid-template-columns:72% 26%;gap:2%;align-items:start">
+    <div class="ws-block">
+      <h2>Task-by-task cost variance
+        <span class="ws-block-note">one task per column; leave unused task columns blank</span></h2>
+
+      <table class="ws">
+        <colgroup>
+          <col style="width:4%"><col style="width:20%"><col style="width:25%">
+          <col style="width:17%"><col style="width:17%"><col style="width:17%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th></th><th>Field</th><th>What the book says</th>
+            <th>Task 1</th><th>Task 2</th><th>Task 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ws-num"><span class="fno">1</span></td>
+            <td><b>Task</b></td>
+            <td class="prior">—</td>
+            <td class="fill"><span class="f-text"></span></td>
+            <td class="fill"><span class="f-text"></span></td>
+            <td class="fill"><span class="f-text"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">2</span></td>
+            <td><b>Why this task</b></td>
+            <td class="prior">—</td>
+            <td class="fill"><div class="f-select"><span class="opt">high frequency</span><span class="opt">high unit cost</span><span class="opt">both</span></div></td>
+            <td class="fill"><div class="f-select"><span class="opt">high frequency</span><span class="opt">high unit cost</span><span class="opt">both</span></div></td>
+            <td class="fill"><div class="f-select"><span class="opt">high frequency</span><span class="opt">high unit cost</span><span class="opt">both</span></div></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">3</span></td>
+            <td><b>Runs per month</b></td>
+            <td class="prior">—</td>
+            <td class="fill"><span class="f-text sm"></span></td>
+            <td class="fill"><span class="f-text sm"></span></td>
+            <td class="fill"><span class="f-text sm"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">4</span></td>
+            <td><b>Undesigned path — what it does today</b></td>
+            <td class="prior">The chapter's example: file-by-file on a frontier model, re-reading context, re-planning, retrying on each failure<span class="prior-src">ch07 L13</span></td>
+            <td class="fill taller"><span class="f-box"></span></td>
+            <td class="fill taller"><span class="f-box"></span></td>
+            <td class="fill taller"><span class="f-box"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">5</span></td>
+            <td><b>Undesigned cost per run</b></td>
+            <td class="prior">—</td>
+            <td class="fill"><span class="f-currency" data-symbol="¤"></span></td>
+            <td class="fill"><span class="f-currency" data-symbol="¤"></span></td>
+            <td class="fill"><span class="f-currency" data-symbol="¤"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">6</span></td>
+            <td><b>Designed path — what it would do</b></td>
+            <td class="prior">The chapter's example: plan once, batch the edits, route the mechanical work to a cheaper model, verify deterministically at the end<span class="prior-src">ch07 L13</span></td>
+            <td class="fill taller"><span class="f-box"></span></td>
+            <td class="fill taller"><span class="f-box"></span></td>
+            <td class="fill taller"><span class="f-box"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">7</span></td>
+            <td><b>Designed cost per run</b></td>
+            <td class="prior">—</td>
+            <td class="fill"><span class="f-currency" data-symbol="¤"></span></td>
+            <td class="fill"><span class="f-currency" data-symbol="¤"></span></td>
+            <td class="fill"><span class="f-currency" data-symbol="¤"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">8</span></td>
+            <td><b>Basis, column 5</b></td>
+            <td class="prior">—</td>
+            <td class="fill"><div class="f-select"><span class="opt">metered from invoices</span><span class="opt">instrumented run</span><span class="opt">estimated</span></div></td>
+            <td class="fill"><div class="f-select"><span class="opt">metered from invoices</span><span class="opt">instrumented run</span><span class="opt">estimated</span></div></td>
+            <td class="fill"><div class="f-select"><span class="opt">metered from invoices</span><span class="opt">instrumented run</span><span class="opt">estimated</span></div></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">9</span></td>
+            <td><b>Basis, column 7</b></td>
+            <td class="prior">—</td>
+            <td class="fill"><div class="f-select"><span class="opt">metered from invoices</span><span class="opt">instrumented run</span><span class="opt">estimated</span></div></td>
+            <td class="fill"><div class="f-select"><span class="opt">metered from invoices</span><span class="opt">instrumented run</span><span class="opt">estimated</span></div></td>
+            <td class="fill"><div class="f-select"><span class="opt">metered from invoices</span><span class="opt">instrumented run</span><span class="opt">estimated</span></div></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">10</span></td>
+            <td><b>Output identical?</b></td>
+            <td class="prior">Same nineteen files. Same passing tests.<span class="prior-src">ch07 L13</span></td>
+            <td class="fill"><span class="f-checkline"><span class="f-check"></span>same verified output</span><span class="f-text sm"></span></td>
+            <td class="fill"><span class="f-checkline"><span class="f-check"></span>same verified output</span><span class="f-text sm"></span></td>
+            <td class="fill"><span class="f-checkline"><span class="f-check"></span>same verified output</span><span class="f-text sm"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">11</span></td>
+            <td><b>Our spread multiple</b></td>
+            <td class="prior">—</td>
+            <td class="fill"><span class="f-computed" data-formula="column 5 &divide; column 7"></span></td>
+            <td class="fill"><span class="f-computed" data-formula="column 5 &divide; column 7"></span></td>
+            <td class="fill"><span class="f-computed" data-formula="column 5 &divide; column 7"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">12</span></td>
+            <td><b>Monthly exposure</b></td>
+            <td class="prior">—</td>
+            <td class="fill"><span class="f-computed" data-formula="(column 5 &minus; column 7) &times; column 3"></span></td>
+            <td class="fill"><span class="f-computed" data-formula="(column 5 &minus; column 7) &times; column 3"></span></td>
+            <td class="fill"><span class="f-computed" data-formula="(column 5 &minus; column 7) &times; column 3"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">13</span></td>
+            <td><b>Annualised exposure</b></td>
+            <td class="prior">—</td>
+            <td class="fill"><span class="f-computed" data-formula="column 12 &times; 12"></span></td>
+            <td class="fill"><span class="f-computed" data-formula="column 12 &times; 12"></span></td>
+            <td class="fill"><span class="f-computed" data-formula="column 12 &times; 12"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">14</span></td>
+            <td><b>Who would own designing the designed path</b></td>
+            <td class="prior">—</td>
+            <td class="fill"><span class="f-owner"></span></td>
+            <td class="fill"><span class="f-owner"></span></td>
+            <td class="fill"><span class="f-owner"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+  <div class="ws-block">
+    <h2>Book's illustrative run
+      <span class="ws-block-note">reference only; not an organization figure</span></h2>
+    <div class="prior--hedged">
+      <span class="hedge-figure">One illustrative run on a nineteen-file refactor cost $41.01 undesigned and $4.81 designed — an 8.5× spread on identical output.</span>
+      <span class="hedge-text">The figures in this chapter -- the 8.5x spread, the $4.81 versus $41.01 run, the model-price ranges -- are <b>illustrative single runs and point-in-time prices</b>, not benchmarks. They are real, and they are not universal: the magnitude depends on the task, the models available the week you read this, and the harness. Treat them as existence proofs of <i>variance you can engineer</i>, not as a guaranteed return. The durable claim is the mechanism — model choice, token use, and harness govern the bill, and all three are in your control. The specific multiples will move. The lever will not.</span>
+      <span class="hedge-src">handbook/ch07-the-agentic-sdlc-bill.qmd L13, L118</span>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Exhibit-level figures
+      <span class="ws-block-note">computed from the task columns at left</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:23%"><col style="width:25%">
+        <col style="width:47%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>Total annualised exposure</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-computed" data-formula="sum of column 13"></span> &middot; sizes the pools on WS-07-spend-pool-budget-model</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td>
+          <td><b>Highest-spread task</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-computed" data-formula="task column with largest column 11"></span> &middot; circle its task column and carry into WS-07-three-variables-audit</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td>
+          <td><b>Measurement window</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><div class="f-date" style="margin-top:1mm">to&nbsp;<span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td>
+          <td><b>Sheet mode</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><div class="f-select"><span class="opt">MEASURED</span><span class="opt">PROSPECTIVE</span></div> PROSPECTIVE if every basis in columns 8 and 9 is estimated; mark it across the header</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    </div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-07-cost-variance-baseline &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```

@@ -1,0 +1,329 @@
+---
+title: "Five-Layer Supply Chain Instantiation Canvas"
+pagetitle: "WS-04-five-layer-supply-chain-canvas"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 1189mm; --sheet-h: 841mm; --sheet-margin: 24mm; }
+            @page { size: A0 landscape; margin: 24mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-04-five-layer-supply-chain-canvas</b> &middot; review copy &middot; declared format
+  <b>A0 landscape</b> &middot; 1 sheet. The white page is one physical wall canvas at true size.
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Five-Layer Supply Chain Instantiation Canvas</h1>
+      <p class="ws-sub">A marked-up five-layer diagram of the organization's actual capability supply chain, showing owned layers, gap layers, and the named owner of each.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-04-five-layer-supply-chain-canvas</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>2</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Agentic SDLC Reference Architecture</b>,
+    <i>The Five-Layer Landscape: the AI-capability supply chain</i> &middot;
+    <code>handbook/ch04-the-reference-architecture.qmd</code> L126-158 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch04-the-reference-architecture.html#sec-ref-arch-five-layer">#sec-ref-arch-five-layer</a>
+  </div>
+
+  <div class="ws-instruction">
+    Fill the glossary strip first. Then start at the bottom with Platform and work upward; fill the two cross-cutting bands and audit panel, then close the audit probe as Pass or Fail. For each layer, name the actual repo, path, registry or system of record that proves it exists (not a description); record its state and real owning team, including unsanctioned systems. A Partial state in field 6 requires field 12. Name a person, not a role; if nobody owns a layer, write UNOWNED in field 8 and fill its gap owner and decision date. An Absent layer still needs the artifact that would prove it exists. Every harness named in the Agent Harness band must appear in WS-11-runtime-machine-inventory, and every owning team in field 7 in WS-06-role-map-and-staffing-triggers; carry any name missing there to those sheets. In field 11, an override of the pre-ticked bands 2 and 3 needs the reason and the approver written beside it. If all five states read Exists, write the justification in the clean-sweep box in the audit panel.
+  </div>
+
+  <div class="ws-block" style="margin:0 0 2mm">
+    <h2>[22-27] Glossary strip &middot; complete before the canvas
+      <span class="ws-block-note">[23] Glossary strip — the book's definition prints under each term; map it to [24] your name, [25] state, [26] owning team and [27] artifact</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:1.5mm">
+      <div style="border:0.3mm solid #9aa5ae;padding:1.2mm;font-size:7pt"><b>[22] Glossary strip — term: primitive</b><div class="prior" style="padding:1mm;font-size:7pt">The unit at the Context &amp; Capabilities layer: a Skill, a Persona, or a Context bundle. Markdown on disk.<span class="prior-src">ch09 L12-23</span></div><div>[24] Glossary strip — our name for it today<span class="f-text" style="height:8mm"></span>[25] Glossary strip — do we have one?<div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>[26] Glossary strip — owning team<span class="f-text" style="height:8mm"></span>[27] Glossary strip — where it lives<span class="f-text" style="height:8mm"></span></div></div>
+      <div style="border:0.3mm solid #9aa5ae;padding:1.2mm;font-size:7pt"><b>[22] Glossary strip — term: manifest</b><div class="prior" style="padding:1mm;font-size:7pt">apm.yml. Declares which primitives this repository depends on, by name and version range.<span class="prior-src">ch09 L12-23</span></div><div>[24] Glossary strip — our name for it today<span class="f-text" style="height:8mm"></span>[25] Glossary strip — do we have one?<div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>[26] Glossary strip — owning team<span class="f-text" style="height:8mm"></span>[27] Glossary strip — where it lives<span class="f-text" style="height:8mm"></span></div></div>
+      <div style="border:0.3mm solid #9aa5ae;padding:1.2mm;font-size:7pt"><b>[22] Glossary strip — term: lockfile</b><div class="prior" style="padding:1mm;font-size:7pt">apm.lock.yaml. Pins the resolved transitive graph by content hash. The artefact the audit reads.<span class="prior-src">ch09 L12-23</span></div><div>[24] Glossary strip — our name for it today<span class="f-text" style="height:8mm"></span>[25] Glossary strip — do we have one?<div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>[26] Glossary strip — owning team<span class="f-text" style="height:8mm"></span>[27] Glossary strip — where it lives<span class="f-text" style="height:8mm"></span></div></div>
+      <div style="border:0.3mm solid #9aa5ae;padding:1.2mm;font-size:7pt"><b>[22] Glossary strip — term: CODEOWNERS</b><div class="prior" style="padding:1mm;font-size:7pt">The GitHub-native file that says who is allowed to merge a change to a primitive. The policy gate Chapter 4 called "ownership rules".<span class="prior-src">ch09 L12-23</span></div><div>[24] Glossary strip — our name for it today<span class="f-text" style="height:8mm"></span>[25] Glossary strip — do we have one?<div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>[26] Glossary strip — owning team<span class="f-text" style="height:8mm"></span>[27] Glossary strip — where it lives<span class="f-text" style="height:8mm"></span></div></div>
+      <div style="border:0.3mm solid #9aa5ae;padding:1.2mm;font-size:7pt"><b>[22] Glossary strip — term: harness</b><div class="prior" style="padding:1mm;font-size:7pt">The runtime application Chapter 4 called "agent runtime". Codex CLI, Claude Code, Copilot, Cursor, OpenCode. Chapter 11 (@sec-runtime-machine) is the canonical practitioner treatment.<span class="prior-src">ch09 L12-23</span></div><div>[24] Glossary strip — our name for it today<span class="f-text" style="height:8mm"></span>[25] Glossary strip — do we have one?<div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>[26] Glossary strip — owning team<span class="f-text" style="height:8mm"></span>[27] Glossary strip — where it lives<span class="f-text" style="height:8mm"></span></div></div>
+      <div style="border:0.3mm solid #9aa5ae;padding:1.2mm;font-size:7pt"><b>[22] Glossary strip — term: subagent</b><div class="prior" style="padding:1mm;font-size:7pt">A thread the harness spawns with its own context budget.<span class="prior-src">ch09 L12-23</span></div><div>[24] Glossary strip — our name for it today<span class="f-text" style="height:8mm"></span>[25] Glossary strip — do we have one?<div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>[26] Glossary strip — owning team<span class="f-text" style="height:8mm"></span>[27] Glossary strip — where it lives<span class="f-text" style="height:8mm"></span></div></div>
+      <div style="border:0.3mm solid #9aa5ae;padding:1.2mm;font-size:7pt"><b>[22] Glossary strip — term: recursion bound</b><div class="prior" style="padding:1mm;font-size:7pt">The operational limit (context budget plus panel-orchestration policy) that keeps the dispatch tree from running away.<span class="prior-src">ch09 L12-23</span></div><div>[24] Glossary strip — our name for it today<span class="f-text" style="height:8mm"></span>[25] Glossary strip — do we have one?<div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>[26] Glossary strip — owning team<span class="f-text" style="height:8mm"></span>[27] Glossary strip — where it lives<span class="f-text" style="height:8mm"></span></div></div>
+      <div style="border:0.3mm solid #9aa5ae;padding:1.2mm;font-size:7pt"><b>[22] Glossary strip — term: MCP</b><div class="prior" style="padding:1mm;font-size:7pt">The Model Context Protocol, an open standard now stewarded by LF Projects (Linux Foundation). One of the access mechanisms a Persona uses to reach a live system; not the architecture.<span class="prior-src">ch09 L12-23</span></div><div>[24] Glossary strip — our name for it today<span class="f-text" style="height:8mm"></span>[25] Glossary strip — do we have one?<div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>[26] Glossary strip — owning team<span class="f-text" style="height:8mm"></span>[27] Glossary strip — where it lives<span class="f-text" style="height:8mm"></span></div></div>
+    </div>
+  </div>
+
+  <div class="ws-block" style="margin-bottom:2mm">
+    <h2>Five layers &middot; bottom to top
+      <span class="ws-block-note">one band per layer &middot; field 6 Partial requires field 12 &middot; use one sticky color per team</span></h2>
+
+    <div class="canvas" style="height:492mm;display:grid;grid-template-columns:minmax(0,1fr) 200mm 190mm;grid-template-rows:84mm 84mm 140mm 84mm 84mm;gap:4mm;border:0">
+      <div style="grid-column:1;grid-row:1 / span 5;display:flex;flex-direction:column;gap:4mm;height:492mm">
+      <div style="flex:0 0 84mm;border:0.4mm solid #6b7785;padding:2mm 3mm;background:#edf3f7;display:flex;flex-direction:column;gap:1mm;min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h3 style="margin:0;text-align:left">[1] SDLC phases</h3>
+          <span style="font-size:7.4pt"><b>[2] Edge to the layer above:</b> none (top layer) <span class="prior-src">ch04 L135-144</span></span>
+        </div>
+        <div style="display:flex;gap:2mm;align-items:center;min-height:0">
+          <div class="prior" style="flex:1;padding:1mm 2mm;font-size:7.4pt">SDLC phases is the top of the stack: the application output. Plan, Spec, Build, Review, Test, Deploy, Operate.<span class="prior-src">ch09 L27-59</span></div>
+          <div style="width:230mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organization rejects the definition
+            <span class="f-text" style="height:8mm"></span>
+          </div>
+          </div>
+        <div style="display:grid;grid-template-columns:1fr 1.2fr .9fr 1fr 1fr;gap:2mm;min-height:0">
+          <div style="font-size:7pt">[4] Artefact on disk that proves it exists<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[5] Systems we already run that satisfy it<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[6] Current state
+            <div class="f-select"><span class="opt">Exists</span><span class="opt">Partial</span><span class="opt">Absent</span></div>
+          </div>
+          <div style="font-size:7pt">[7] Owning team today
+            <div class="prior" style="padding:1mm;font-size:7pt">stream-aligned teams<span class="prior-src">ch06 L120-152</span></div>
+            <span class="f-text" style="height:8mm"></span>
+          </div>
+          <div style="font-size:7pt">[8] Named accountable individual<span class="f-owner"></span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:.9fr 1fr 1fr 1.2fr 1fr 1fr;gap:2mm;min-height:0">
+          <div style="font-size:7pt">[9] Bought / Built / Composed / Absent
+            <div class="f-select"><span class="opt">Bought</span><span class="opt">Built</span><span class="opt">Composed</span><span class="opt">Absent</span></div>
+          </div>
+          <div style="font-size:7pt">[10] Covered by the platform-governance plane we already bought?
+            <span class="f-checkline" style="min-height:8mm"><span class="f-check"></span> confirm / override</span>
+          </div>
+          <div style="font-size:7pt">[11] Net-new investment?
+            <span class="f-checkline" style="min-height:8mm"><span class="f-check"></span> confirm / override</span><span style="font-size:6.5pt">If you override the default tick: why, and who signed off</span><span class="f-text" style="height:8mm"></span>
+          </div>
+          <div style="font-size:7pt">[12] The gap, named<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[13] What the gap costs us<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[14] Gap owner<span class="f-owner"></span></div>
+          <div style="font-size:7pt">[15] Decision needed by
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:4mm;flex:0 0 4mm;display:flex;align-items:center;justify-content:center;font-size:7.4pt;font-weight:700">
+        <span class="arrow">&uarr;</span>&nbsp;[2] executes as&nbsp;<span class="prior-src">ch04 L141-144</span>
+      </div>
+
+      <div style="flex:0 0 84mm;border:0.4mm solid #6b7785;padding:2mm 3mm;background:#edf3f7;display:flex;flex-direction:column;gap:1mm;min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h3 style="margin:0;text-align:left">[1] Agent Harness</h3>
+          <span style="font-size:7.4pt">The runtime your developers and business users actually run</span>
+        </div>
+        <div style="display:flex;gap:2mm;align-items:center;min-height:0">
+          <div class="prior" style="flex:1;padding:1mm 2mm;font-size:7.4pt">Agent Harness (an &quot;agent runtime&quot;) is the runtime application your developers — and increasingly your business users — actually run. Different vendors, same load contract.<span class="prior-src">ch04 L147</span></div>
+          <div style="width:230mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organization rejects the definition<span class="f-text" style="height:8mm"></span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1.2fr .9fr 1fr 1fr;gap:2mm;min-height:0">
+          <div style="font-size:7pt">[4] Artefact on disk that proves it exists<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[5] Systems we already run that satisfy it<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[6] Current state
+            <div class="f-select"><span class="opt">Exists</span><span class="opt">Partial</span><span class="opt">Absent</span></div>
+          </div>
+          <div style="font-size:7pt">[7] Owning team today
+            <div class="prior" style="padding:1mm;font-size:7pt">Platform team<span class="prior-src">ch06 L120-152</span></div>
+            <span class="f-text" style="height:8mm"></span>
+          </div>
+          <div style="font-size:7pt">[8] Named accountable individual<span class="f-owner"></span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:.9fr 1fr 1fr 1.2fr 1fr 1fr;gap:2mm;min-height:0">
+          <div style="font-size:7pt">[9] Bought / Built / Composed / Absent
+            <div class="f-select"><span class="opt">Bought</span><span class="opt">Built</span><span class="opt">Composed</span><span class="opt">Absent</span></div>
+          </div>
+          <div style="font-size:7pt">[10] Covered by the platform-governance plane we already bought?
+            <span class="f-checkline" style="min-height:8mm"><span class="f-check"></span> confirm / override</span>
+          </div>
+          <div style="font-size:7pt">[11] Net-new investment?
+            <span class="f-checkline" style="min-height:8mm"><span class="f-check"></span> confirm / override</span><span style="font-size:6.5pt">If you override the default tick: why, and who signed off</span><span class="f-text" style="height:8mm"></span>
+          </div>
+          <div style="font-size:7pt">[12] The gap, named<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[13] What the gap costs us<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[14] Gap owner<span class="f-owner"></span></div>
+          <div style="font-size:7pt">[15] Decision needed by
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:4mm;flex:0 0 4mm;display:flex;align-items:center;justify-content:center;font-size:7.4pt;font-weight:700">
+        <span class="arrow">&uarr;</span>&nbsp;[2] resolves and ships&nbsp;<span class="prior-src">ch04 L141-144</span>
+      </div>
+
+      <div style="flex:0 0 140mm;border:0.5mm solid #455767;padding:2mm 3mm;background:#e3f0e9;display:flex;flex-direction:column;gap:1mm;min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h3 style="margin:0;text-align:left">[1] Governance and Distribution</h3>
+          <b style="font-size:8pt;letter-spacing:.08em">NET-NEW INVESTMENT</b>
+        </div>
+        <div style="display:flex;gap:2mm;align-items:center;min-height:0">
+          <div class="prior" style="flex:1;padding:1mm 2mm;font-size:7.2pt">Governance and Distribution is the catalogue and approval rules that ship those capabilities between teams: the declared agent dependencies, the internal registry the platform team operates, the package manager that resolves and installs, and the ownership rules that say who is allowed to approve a change.<span class="prior-src">ch04 L147</span></div>
+          <div style="width:190mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organization rejects the definition<span class="f-text" style="height:8mm"></span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1.2fr .9fr 1fr 1fr;gap:2mm;min-height:0">
+          <div style="font-size:7pt">[4] Artefact on disk that proves it exists<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[5] Systems we already run that satisfy it<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[6] Current state
+            <div class="f-select"><span class="opt">Exists</span><span class="opt">Partial</span><span class="opt">Absent</span></div>
+          </div>
+          <div style="font-size:7pt">[7] Owning team today
+            <div class="prior" style="padding:1mm;font-size:7pt">Platform team + Security/Compliance<span class="prior-src">ch06 L120-152</span></div>
+            <span class="f-text" style="height:8mm"></span>
+          </div>
+          <div style="font-size:7pt">[8] Named accountable individual<span class="f-owner"></span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:.9fr 1fr 1fr 1.2fr 1fr 1fr;gap:2mm;min-height:0">
+          <div style="font-size:7pt">[9] Bought / Built / Composed / Absent
+            <div class="f-select"><span class="opt">Bought</span><span class="opt">Built</span><span class="opt">Composed</span><span class="opt">Absent</span></div>
+          </div>
+          <div style="font-size:7pt">[10] Covered by the platform-governance plane we already bought?
+            <span class="f-checkline" style="min-height:8mm"><span class="f-check"></span> confirm / override</span>
+          </div>
+          <div style="font-size:7pt">[11] Net-new investment?
+            <span class="f-checkline" style="min-height:8mm"><span class="f-check">&#10003;</span> confirm / override</span><span style="font-size:6.5pt">If you override the default tick: why, and who signed off</span><span class="f-text" style="height:8mm"></span>
+          </div>
+          <div style="font-size:7pt">[12] The gap, named<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[13] What the gap costs us<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[14] Gap owner<span class="f-owner"></span></div>
+          <div style="font-size:7pt">[15] Decision needed by
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:4mm;flex:0 0 4mm;display:flex;align-items:center;justify-content:center;font-size:7.4pt;font-weight:700">
+        <span class="arrow">&uarr;</span>&nbsp;[2] declared into&nbsp;<span class="prior-src">ch04 L141-144</span>
+      </div>
+
+      <div style="flex:0 0 84mm;border:0.4mm solid #6b7785;padding:2mm 3mm;background:#e3f0e9;display:flex;flex-direction:column;gap:1mm;min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h3 style="margin:0;text-align:left">[1] Context &amp; Capabilities</h3>
+          <b style="font-size:8pt;letter-spacing:.08em">NET-NEW INVESTMENT</b>
+        </div>
+        <div style="display:flex;gap:2mm;align-items:center;min-height:0">
+          <div class="prior" style="flex:1;padding:1mm 2mm;font-size:7.2pt">Context &amp; Capabilities is where the AI capabilities your organisation authors and reuses live — the procedures (how to review a pull request, how to draft an architecture decision record), the lenses (security reviewer, accessibility reviewer), and the knowledge bundles your teams ground agents against, all expressed as text, version-controlled with the rest of your code.<span class="prior-src">ch04 L147</span></div>
+          <div style="width:190mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organization rejects the definition<span class="f-text" style="height:8mm"></span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1.2fr .9fr 1fr 1fr;gap:2mm;min-height:0">
+          <div style="font-size:7pt">[4] Artefact on disk that proves it exists<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[5] Systems we already run that satisfy it<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[6] Current state
+            <div class="f-select"><span class="opt">Exists</span><span class="opt">Partial</span><span class="opt">Absent</span></div>
+          </div>
+          <div style="font-size:7pt">[7] Owning team today
+            <div class="prior" style="padding:1mm;font-size:7pt">Domain Specialist (WHAT) + Agentic Workflow Engineer (HOW)<span class="prior-src">ch06 L120-152</span></div>
+            <span class="f-text" style="height:8mm"></span>
+          </div>
+          <div style="font-size:7pt">[8] Named accountable individual<span class="f-owner"></span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:.9fr 1fr 1fr 1.2fr 1fr 1fr;gap:2mm;min-height:0">
+          <div style="font-size:7pt">[9] Bought / Built / Composed / Absent
+            <div class="f-select"><span class="opt">Bought</span><span class="opt">Built</span><span class="opt">Composed</span><span class="opt">Absent</span></div>
+          </div>
+          <div style="font-size:7pt">[10] Covered by the platform-governance plane we already bought?
+            <span class="f-checkline" style="min-height:8mm"><span class="f-check"></span> confirm / override</span>
+          </div>
+          <div style="font-size:7pt">[11] Net-new investment?
+            <span class="f-checkline" style="min-height:8mm"><span class="f-check">&#10003;</span> confirm / override</span><span style="font-size:6.5pt">If you override the default tick: why, and who signed off</span><span class="f-text" style="height:8mm"></span>
+          </div>
+          <div style="font-size:7pt">[12] The gap, named<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[13] What the gap costs us<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[14] Gap owner<span class="f-owner"></span></div>
+          <div style="font-size:7pt">[15] Decision needed by
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:4mm;flex:0 0 4mm;display:flex;align-items:center;justify-content:center;font-size:7.4pt;font-weight:700">
+        <span class="arrow">&uarr;</span>&nbsp;[2] hosts&nbsp;<span class="prior-src">ch04 L141-144</span>
+      </div>
+
+      <div style="flex:0 0 84mm;border:0.4mm solid #6b7785;padding:2mm 3mm;background:#edf3f7;display:flex;flex-direction:column;gap:1mm;min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h3 style="margin:0;text-align:left">[1] Platform</h3>
+          <b style="font-size:8pt;letter-spacing:.04em">ALREADY COVERED BY THE PLATFORM-GOVERNANCE PLANE YOU BOUGHT</b>
+        </div>
+        <div style="display:flex;gap:2mm;align-items:center;min-height:0">
+          <div class="prior" style="flex:1;padding:1mm 2mm;font-size:7.4pt">Platform is the cloud, source-control, identity, and audit substrate your platform team already operates. There is nothing agent-specific about it.<span class="prior-src">ch04 L147</span></div>
+          <div style="width:230mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organization rejects the definition<span class="f-text" style="height:8mm"></span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1.2fr .9fr 1fr 1fr;gap:2mm;min-height:0">
+          <div style="font-size:7pt">[4] Artefact on disk that proves it exists<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[5] Systems we already run that satisfy it<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[6] Current state
+            <div class="f-select"><span class="opt">Exists</span><span class="opt">Partial</span><span class="opt">Absent</span></div>
+          </div>
+          <div style="font-size:7pt">[7] Owning team today
+            <div class="prior" style="padding:1mm;font-size:7pt">Platform team<span class="prior-src">ch06 L120-152</span></div>
+            <span class="f-text" style="height:8mm"></span>
+          </div>
+          <div style="font-size:7pt">[8] Named accountable individual<span class="f-owner"></span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:.9fr 1fr 1fr 1.2fr 1fr 1fr;gap:2mm;min-height:0">
+          <div style="font-size:7pt">[9] Bought / Built / Composed / Absent
+            <div class="f-select"><span class="opt">Bought</span><span class="opt">Built</span><span class="opt">Composed</span><span class="opt">Absent</span></div>
+          </div>
+          <div style="font-size:7pt">[10] Covered by the platform-governance plane we already bought?
+            <span class="f-checkline" style="min-height:8mm"><span class="f-check">&#10003;</span> confirm / override</span>
+          </div>
+          <div style="font-size:7pt">[11] Net-new investment?
+            <span class="f-checkline" style="min-height:8mm"><span class="f-check"></span> confirm / override</span><span style="font-size:6.5pt">If you override the default tick: why, and who signed off</span><span class="f-text" style="height:8mm"></span>
+          </div>
+          <div style="font-size:7pt">[12] The gap, named<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[13] What the gap costs us<span class="f-text" style="height:8mm"></span></div>
+          <div style="font-size:7pt">[14] Gap owner<span class="f-owner"></span></div>
+          <div style="font-size:7pt">[15] Decision needed by
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="grid-column:2;grid-row:3;border:0.6mm solid #364a5b;padding:2mm;background:#f3f6f8;display:flex;flex-direction:column;gap:1mm;font-size:7pt">
+      <b>[6] Clean-sweep justification — required only if all five layers read Exists</b><span class="f-text" style="height:8mm"></span>
+      <b>[18] Audit block — who can answer which AI capabilities ran in production last quarter, at what version, and with whose approval?</b>
+      <span class="f-owner"></span><span>One named person or write NOBODY.</span>
+      <b>[19] Audit block — where that record physically lives</b>
+      <span class="f-text" style="height:8mm"></span><span>Path, registry, system of record, or NOWHERE.</span>
+      <b>[20] Audit block — probe result (Pass / Fail)</b>
+      <span class="f-computed" data-formula="Pass only when fields 18 and 19 are present and neither reads NOBODY or NOWHERE; otherwise Fail"></span>
+      <b>[21] Layer-3 usability — discoverability mechanism</b>
+      <div class="prior" style="padding:1mm">Catalogue backed by an internal developer platform.<span class="prior-src">ch04 L155</span></div>
+      <span>Write your actual IDP or none.</span>
+      <span class="f-text" style="height:8mm"></span>
+      <b>[21] Layer-3 usability — rollout mechanism</b>
+      <div class="prior" style="padding:1mm">Harness-managed settings pushed by the platform team.<span class="prior-src">ch04 L155</span></div>
+      <span>Write your actual push mechanism or none.</span>
+      <span class="f-text" style="height:8mm"></span>
+    </div>
+    <div style="grid-column:3;grid-row:1 / span 5;display:grid;grid-template-columns:1fr 1fr;gap:2mm;height:492mm">
+      <div style="border:0.4mm solid #657584;padding:2mm;background:#f0f4f6;display:flex;flex-direction:column;align-items:stretch;gap:2mm">
+        <b style="writing-mode:vertical-rl;transform:rotate(180deg);align-self:center">[16] Cross-cutting band — name: Composition across Skills</b>
+        <div class="prior" style="padding:1mm;font-size:7pt">Agent Operations Specialist (composition); mark “emerges only at scale” if not yet staffed.<span class="prior-src">ch06 L120-152</span></div>
+        <div style="font-size:7pt">[17] Cross-cutting band — owner today (team)<span class="f-text" style="height:8mm"></span></div>
+        <div style="font-size:7pt">[17] Cross-cutting band — owner today (named person)<span class="f-owner"></span></div>
+        <div style="font-size:7pt">[14] Gap owner (if UNOWNED or not yet staffed)<span class="f-owner"></span></div>
+        <div style="font-size:7pt">[15] Decision needed by<div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div>
+      </div>
+      <div style="border:0.4mm solid #657584;padding:2mm;background:#f0f4f6;display:flex;flex-direction:column;align-items:stretch;gap:2mm">
+        <b style="writing-mode:vertical-rl;transform:rotate(180deg);align-self:center">[16] Cross-cutting band — name: Identity and policy plane above the lockfile</b>
+        <div class="prior" style="padding:1mm;font-size:7pt">Platform team + Security/Compliance; mark “emerges only at scale” if not yet staffed.<span class="prior-src">ch06 L120-152</span></div>
+        <div style="font-size:7pt">[17] Cross-cutting band — owner today (team)<span class="f-text" style="height:8mm"></span></div>
+        <div style="font-size:7pt">[17] Cross-cutting band — owner today (named person)<span class="f-owner"></span></div>
+        <div style="font-size:7pt">[14] Gap owner (if UNOWNED or not yet staffed)<span class="f-owner"></span></div>
+        <div style="font-size:7pt">[15] Decision needed by<div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-04-five-layer-supply-chain-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
