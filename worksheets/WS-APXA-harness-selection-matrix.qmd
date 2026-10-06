@@ -59,7 +59,7 @@ format:
     </p>
     <p style="font-size:8pt;margin:1mm 0 2mm">
       Field 1 lists the fixed candidates; use the five rows below and add a row for any unlisted harness in use.
-      The default reversal-cost answer is qualitative and named, not an unsupported estimate.
+      Reversal cost is qualitative and named.
     </p>
     <div class="f-select" style="margin:1mm 0 2mm">
       <span class="opt">GitHub Copilot</span><span class="opt">Claude Code</span><span class="opt">Cursor</span>
@@ -87,7 +87,7 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
-          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
         </tr>
         <tr>
           <td class="prior">Claude Code<span class="prior-src">appx-A L23</span></td>
@@ -95,7 +95,7 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
-          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
         </tr>
         <tr>
           <td class="prior">Cursor<span class="prior-src">appx-A L23</span></td>
@@ -103,7 +103,7 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
-          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
         </tr>
         <tr>
           <td class="prior">Codex CLI<span class="prior-src">appx-A L23</span></td>
@@ -111,7 +111,7 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
-          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
         </tr>
         <tr>
           <td class="prior">OpenCode<span class="prior-src">appx-A L23</span></td>
@@ -119,7 +119,7 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
-          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
         </tr>
         <tr>
           <td class="fill"><span class="f-text"></span></td>
@@ -127,11 +127,11 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
-          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
         </tr>
       </tbody>
     </table>
-    <p class="ws-block-note" style="margin-top:2mm">For each harness, name the primitive families that need manual translation and who would do the work. Record the gap between actual use and sanction; do not tidy it away.</p>
+    <p style="font-size:8pt;margin:1mm 0 0"><b>Field 5 rule:</b> exactly one Standardise unless deliberately running two; if two, give the reason: <span class="f-text" style="display:inline-block;width:60%"></span></p><p class="ws-block-note" style="margin-top:1mm">For each harness, name the primitive families that need manual translation and who would do the work. Record the gap between actual use and sanction; do not tidy it away.</p>
   </div>
   <div class="ws-foot">
     <div>WS-APXA-harness-selection-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 9</div>
@@ -568,7 +568,7 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div><span class="f-text"></span></td>
           <td class="locked">2026-04-26<span class="prior-src">appx-A L12-14</span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span></td>
           <td class="fill"><span class="f-text"></span></td>
         </tr>
         <tr>
@@ -578,7 +578,7 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div><span class="f-text"></span></td>
           <td class="locked">2026-04-26<span class="prior-src">appx-A L12-14</span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span></td>
           <td class="fill"><span class="f-text"></span></td>
         </tr>
         <tr>
@@ -588,7 +588,7 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div><span class="f-text"></span></td>
           <td class="locked">2026-04-26<span class="prior-src">appx-A L12-14</span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span></td>
           <td class="fill"><span class="f-text"></span></td>
         </tr>
         <tr>
@@ -598,7 +598,7 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div><span class="f-text"></span></td>
           <td class="locked">2026-04-26<span class="prior-src">appx-A L12-14</span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span></td>
           <td class="fill"><span class="f-text"></span></td>
         </tr>
         <tr>
@@ -608,10 +608,10 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div><span class="f-text"></span></td>
           <td class="locked">2026-04-26<span class="prior-src">appx-A L12-14</span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span></td>
           <td class="fill"><span class="f-text"></span></td>
         </tr>
-      </tbody>
+      <tr><td class="fill"><span class="f-text"></span><small>Unlisted harness from Block A</small></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr></tbody>
     </table>
   </div>
   <div class="ws-foot" style="margin-top:0">
