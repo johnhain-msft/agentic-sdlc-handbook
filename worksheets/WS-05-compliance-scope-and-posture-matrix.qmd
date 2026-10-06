@@ -1,0 +1,413 @@
+---
+title: "Regulatory Scope and Required Posture Matrix"
+pagetitle: "WS-05-compliance-scope-and-posture-matrix"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 594mm; --sheet-h: 420mm; --sheet-margin: 16mm; }
+            @page { size: A2 landscape; margin: 16mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-05-compliance-scope-and-posture-matrix</b> &middot; review copy &middot;
+  declared format <b>A2 landscape, printed two-sided</b> &middot; 2 sheets.
+  Each white page below is one physical sheet at true size. Anything spilling
+  past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Regulatory Scope and Required Posture Matrix</h1>
+      <p class="ws-sub">A signed statement of regulatory scope and the governance capabilities that are non-negotiable for this organisation.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-compliance-scope-and-posture-matrix</b><br>
+      Pack E - Guardrails: authority, risk and proof<br>
+      fill order <b>2</b> &middot; type <b>matrix</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>Compliance Framework Mapping</i> &middot;
+    <code>handbook/ch05-governance-for-ai-assisted-delivery.qmd</code> L75-96 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-compliance-mapping">#sec-governance-compliance-mapping</a>
+  </div>
+
+  <div class="ws-instruction">
+    With legal or compliance present, mark each framework yes or no and name the products, data types and jurisdictions that bring each yes into scope. For every in-scope framework, record today's posture, the gap, a named owner and the real audit or filing date. Block B is derived from your scope decisions; read it aloud and transcribe its mandatory rows, do not negotiate the floor. On the reverse, record one approved topology per data class from the executed agreement and obtain security, legal and procurement sign-off. Unknown scope is recorded as no, with an owner and date.
+  </div>
+
+  <div class="ws-block">
+    <p style="font-weight:700;margin:0 0 1mm">This section provides awareness of regulatory frameworks that intersect with AI-assisted software development. It is not legal advice. Specific requirements vary by jurisdiction, industry, and use case. Consult qualified legal counsel for your organization's compliance obligations. <span class="prior-src">ch05 L181</span></p>
+    <p style="font-weight:700;margin:0 0 2mm">That said, ignorance is not a viable compliance strategy. <span class="prior-src">ch05 L183</span></p>
+  </div>
+
+  <div class="ws-block">
+    <h2>A — Regulatory scope
+      <span class="ws-block-note">one fixed row per framework; complete scope and posture for every row</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:9%"><col style="width:7%"><col style="width:12%">
+        <col style="width:11%"><col style="width:11%"><col style="width:14%"><col style="width:8%">
+        <col style="width:10%"><col style="width:8%"><col style="width:7%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th></th>
+          <th><span class="fno">1</span> Framework</th>
+          <th><span class="fno">2</span> In scope for us</th>
+          <th><span class="fno">3</span> What brings it into scope</th>
+          <th><span class="fno">4</span> Relevance to agent-assisted delivery</th>
+          <th><span class="fno">5</span> Key requirement</th>
+          <th><span class="fno">6</span> Recommended posture</th>
+          <th><span class="fno">7</span> Our posture today</th>
+          <th><span class="fno">8</span> Gap</th>
+          <th><span class="fno">9</span> Owner</th>
+          <th><span class="fno">10</span> Audit or assessment date we work back from</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="prior"><div class="f-select"><span class="opt">SOC 2</span></div><span class="prior-src">ch05 L206</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="prior">Auditors will ask about change management for agent-generated code.<span class="prior-src">ch05 L206</span></td>
+          <td class="prior">Demonstrable controls for authorization, review, and monitoring of all code changes.<span class="prior-src">ch05 L206</span></td>
+          <td class="prior">Extend existing change management controls to cover agent-generated changes explicitly. Build audit trail capability.<span class="prior-src">ch05 L206</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">meets</span><span class="opt">partial</span><span class="opt">does not meet</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="prior"><div class="f-select"><span class="opt">ISO 27001</span></div><span class="prior-src">ch05 L83-88</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="prior">not covered by the source</td>
+          <td class="prior">not covered by the source</td>
+          <td class="prior">not covered by the source</td>
+          <td class="fill"><div class="f-select"><span class="opt">meets</span><span class="opt">partial</span><span class="opt">does not meet</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="prior"><div class="f-select"><span class="opt">PCI DSS</span></div><span class="prior-src">ch05 L208</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="prior">Agents generating code that handles payment data must operate within PCI scope.<span class="prior-src">ch05 L208</span></td>
+          <td class="prior">Restrict agent access to cardholder data environments. Log all agent interactions with payment systems.<span class="prior-src">ch05 L208</span></td>
+          <td class="prior">Include agent access in your PCI scope assessment. Apply the same controls as human developer access.<span class="prior-src">ch05 L208</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">meets</span><span class="opt">partial</span><span class="opt">does not meet</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="prior"><div class="f-select"><span class="opt">HIPAA</span></div><span class="prior-src">ch05 L209</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="prior">Agents generating code for health data systems must comply with PHI protections.<span class="prior-src">ch05 L209</span></td>
+          <td class="prior">Agent context must not include protected health information unless compliant safeguards are in place.<span class="prior-src">ch05 L209</span></td>
+          <td class="prior">Exclude PHI from agent context. Use on-premises or BAA-covered model deployments for health data systems.<span class="prior-src">ch05 L209</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">meets</span><span class="opt">partial</span><span class="opt">does not meet</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="prior"><div class="f-select"><span class="opt">EU AI Act</span></div><span class="prior-src">ch05 L205</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="prior">Software built by agents may inherit risk classification of the deployed system.<span class="prior-src">ch05 L205</span></td>
+          <td class="prior">Transparency, record-keeping, human oversight for high-risk applications.<span class="prior-src">ch05 L205</span></td>
+          <td class="prior">Map your products to risk tiers. Evaluate whether your agent governance satisfies the tier's requirements.<span class="prior-src">ch05 L205</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">meets</span><span class="opt">partial</span><span class="opt">does not meet</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="prior"><div class="f-select"><span class="opt">GDPR / data residency</span></div><span class="prior-src">ch05 L207</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="prior">Agent context may be transmitted to model provider infrastructure in different jurisdictions.<span class="prior-src">ch05 L207</span></td>
+          <td class="prior">Data processing must comply with residency and transfer requirements.<span class="prior-src">ch05 L207</span></td>
+          <td class="prior">Verify model API routing. Use enterprise agreements with data processing addenda. Document compliance.<span class="prior-src">ch05 L207</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">meets</span><span class="opt">partial</span><span class="opt">does not meet</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:1mm 0 0">Column 7 is assessed against the recommended posture in column 6, not against the framework in general. A scope marked no still needs a named owner and date if the scope is unknown.</p>
+  </div>
+
+  <div class="ws-block">
+    <p style="font-size:7.4pt;border-left:1mm solid #566878;padding:1mm 2mm;margin:1mm 0">
+      <b>How to read the governance floor.</b> If you are SOC 2-scoped, rows 1, 2, 3, 4, and 6 are critical — you will face audit findings if any of these are at "None." If you handle payment data under PCI DSS, rows 1, 2, 3, and 4 are your floor. If you ship to EU markets and your product touches high-risk categories, the EU AI Act makes rows 1, 3, and 6 non-negotiable. Start where your regulatory exposure intersects with your lowest maturity.
+      <span class="prior-src">ch05 L94</span>
+    </p>
+    <h2>B — The derived governance floor
+      <span class="ws-block-note">read aloud; column 13 is computed from Block A, never negotiated</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:10%">
+        <col style="width:10%"><col style="width:10%"><col style="width:10%"><col style="width:10%">
+        <col style="width:15%"><col style="width:10%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th></th>
+          <th><span class="fno">11</span> Capability</th>
+          <th colspan="6"><span class="fno">12</span> Criticality by framework (printed sub-cells)</th>
+          <th><span class="fno">13</span> Mandatory for us</th>
+          <th><span class="fno">14</span> Transcribed to readiness assessment</th>
+        </tr>
+        <tr>
+          <th></th><th></th><th>SOC 2</th><th>ISO 27001</th><th>PCI DSS</th><th>HIPAA</th><th>EU AI Act</th><th>GDPR / residency</th><th></th><th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"></td><td class="prior">Audit trails</td>
+          <td class="prior">Critical — CC8.1 (change management), CC7.2 (monitoring)</td>
+          <td class="prior">Critical — A.12.4 (logging and monitoring)</td>
+          <td class="prior">Critical — Req. 10 (track and monitor access)</td>
+          <td class="prior">Critical — §164.312(b) (audit controls)</td>
+          <td class="prior">Critical — Art. 12 (record-keeping)</td>
+          <td class="prior">Not covered by the source</td>
+          <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td class="prior">Agent access controls</td>
+          <td class="prior">Critical — CC6.1, CC6.3 (logical access, least privilege)</td>
+          <td class="prior">Critical — A.9.2, A.9.4 (access management, access control)</td>
+          <td class="prior">Critical — Req. 7, Req. 8 (restrict access, identify users)</td>
+          <td class="prior">Critical — §164.312(a) (access control)</td>
+          <td class="prior">Relevant — Art. 14 (human oversight)</td>
+          <td class="prior">Not covered by the source</td>
+          <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td class="prior">Approval workflows</td>
+          <td class="prior">Critical — CC8.1 (change management)</td>
+          <td class="prior">Relevant — A.14.2 (secure development)</td>
+          <td class="prior">Critical — Req. 6 (secure systems)</td>
+          <td class="prior">Relevant — §164.308(a)(5) (security awareness)</td>
+          <td class="prior">Critical — Art. 14 (human oversight of high-risk AI)</td>
+          <td class="prior">Not covered by the source</td>
+          <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td class="prior">Data boundary enforcement</td>
+          <td class="prior">Critical — CC6.7 (data transmission), C1.1 (confidentiality)</td>
+          <td class="prior">Critical — A.13.2 (information transfer)</td>
+          <td class="prior">Critical — Req. 3, Req. 4 (protect stored data, encrypt transmission)</td>
+          <td class="prior">Critical — §164.312(e) (transmission security)</td>
+          <td class="prior">Relevant — Art. 10 (data governance)</td>
+          <td class="prior">Not covered by the source</td>
+          <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td class="prior">Cost controls</td>
+          <td class="prior">Relevant — CC3.1 (risk assessment)</td>
+          <td class="prior">Relevant — A.12.1 (operational planning)</td>
+          <td class="prior">Not directly scoped</td>
+          <td class="prior">Not directly scoped</td>
+          <td class="prior">Not directly scoped</td>
+          <td class="prior">Not covered by the source</td>
+          <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td class="prior">Compliance reporting</td>
+          <td class="prior">Critical — CC4.1 (monitoring activities)</td>
+          <td class="prior">Critical — A.18.2 (compliance review)</td>
+          <td class="prior">Critical — Req. 12 (security policy)</td>
+          <td class="prior">Critical — §164.308(a)(8) (evaluation)</td>
+          <td class="prior">Critical — Art. 13 (transparency)</td>
+          <td class="prior">Not covered by the source</td>
+          <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:1mm 0 0">Column 13 is yes when any framework marked yes in Block A has Critical in its column; otherwise no. Transcribe every row marked yes to WS-05-governance-readiness-assessment before that assessment begins.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-compliance-scope-and-posture-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2 (front)</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Regulatory Scope and Required Posture Matrix</h1>
+      <p class="ws-sub">Reverse — deployment topology per data class and the unresolved IP posture in agent-generated output.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-compliance-scope-and-posture-matrix</b><br>
+      Pack E - Guardrails: authority, risk and proof<br>
+      fill order <b>2</b> &middot; type <b>matrix</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>Compliance Framework Mapping</i> &middot;
+    <code>handbook/ch05-governance-for-ai-assisted-delivery.qmd</code> L83-88 and
+    <code>handbook/ch11-the-runtime-machine.qmd</code> L63-72 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-compliance-mapping">#sec-governance-compliance-mapping</a>
+  </div>
+
+  <div class="ws-instruction">
+    For each data-classification or repository class you operate, select exactly one topology and state what crosses the network, the approved endpoint and region, the provider's contractual retention terms and the control that authorises this deployment. Obtain separate security, legal and procurement signatures. Record IP ownership and licensing only from your own named counsel; the book does not answer that question.
+  </div>
+
+  <div class="ws-block">
+    <h2>C — Deployment topology per data class
+      <span class="ws-block-note">one row per internal data or repository class; use another copy if you operate more classes</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:13%"><col style="width:19%"><col style="width:11%">
+        <col style="width:12%"><col style="width:16%"><col style="width:14%"><col style="width:12%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th></th>
+          <th><span class="fno">15</span> Data class or repository class</th>
+          <th><span class="fno">16</span> Topology — choose one</th>
+          <th><span class="fno">17</span> What crosses the network</th>
+          <th><span class="fno">18</span> Approved model endpoint</th>
+          <th><span class="fno">19</span> What the provider retains</th>
+          <th><span class="fno">20</span> Authorising compliance control</th>
+          <th><span class="fno">21</span> Signed off by</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <div class="prior">
+              <b>Full local.</b> Client, harness, agent source code, and model all run on the developer's laptop. Ollama or a local GGUF serves inference; the harness reads files from the local checkout. Nothing leaves the machine. Useful for air-gapped work, compliance-sensitive repos, or zero-cost experimentation.<br>
+              <b>Hybrid — local client, cloud model.</b> The client, the harness, and the agent source code stay local; only inference calls cross the network. This is the default for most developers running Claude Code or Copilot CLI against a cloud-hosted model. Primitives remain local files; the model never persists them.<br>
+              <b>Full cloud.</b> Client, harness, model, and agent source code all run in the cloud. GitHub's Copilot Coding Agent is the canonical example: a pull-request event triggers a cloud-hosted harness that checks out the repo, loads primitives from the commit, drives inference, and pushes commits — all without touching a developer's machine.
+              <span class="prior-src">ch11 L65-67</span>
+            </div>
+            <div class="f-select"><span class="opt">full local</span><span class="opt">hybrid (local client and harness, cloud model)</span><span class="opt">full cloud</span></div>
+          </td>
+          <td class="fill"><span class="f-box"></span><small>State fact: nothing / inference calls only / checkout and inference.</small></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span><small>Executed agreement or DPA clause reference; not marketing material.</small></td>
+          <td class="fill"><span class="f-box"></span><small>Reference the applicable Block B clause or contractual term.</small></td>
+          <td class="fill tall">
+            Security <span class="f-sign"></span><br>
+            Legal <span class="f-sign"></span><br>
+            Procurement <span class="f-sign"></span><br>
+            Date <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <div class="prior">
+              <b>Full local.</b> Client, harness, agent source code, and model all run on the developer's laptop. Ollama or a local GGUF serves inference; the harness reads files from the local checkout. Nothing leaves the machine. Useful for air-gapped work, compliance-sensitive repos, or zero-cost experimentation.<br>
+              <b>Hybrid — local client, cloud model.</b> The client, the harness, and the agent source code stay local; only inference calls cross the network. This is the default for most developers running Claude Code or Copilot CLI against a cloud-hosted model. Primitives remain local files; the model never persists them.<br>
+              <b>Full cloud.</b> Client, harness, model, and agent source code all run in the cloud. GitHub's Copilot Coding Agent is the canonical example: a pull-request event triggers a cloud-hosted harness that checks out the repo, loads primitives from the commit, drives inference, and pushes commits — all without touching a developer's machine.
+              <span class="prior-src">ch11 L65-67</span>
+            </div>
+            <div class="f-select"><span class="opt">full local</span><span class="opt">hybrid (local client and harness, cloud model)</span><span class="opt">full cloud</span></div>
+          </td>
+          <td class="fill"><span class="f-box"></span><small>State fact: nothing / inference calls only / checkout and inference.</small></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span><small>Executed agreement or DPA clause reference; not marketing material.</small></td>
+          <td class="fill"><span class="f-box"></span><small>Reference the applicable Block B clause or contractual term.</small></td>
+          <td class="fill tall">
+            Security <span class="f-sign"></span><br>
+            Legal <span class="f-sign"></span><br>
+            Procurement <span class="f-sign"></span><br>
+            Date <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>D — The row the book does not answer
+      <span class="ws-block-note">visible gap — complete with counsel's own attributable position, or leave explicitly open with an owner and target date</span></h2>
+
+    <div class="prior" style="border-left:1mm solid #8c3d2b;background:#fff2ed;padding:2mm">
+      <b>Not answered by the source. Requires your own legal position.</b>
+      The source does not address ownership or licensing of agent-generated output. Its IP-and-data-exposure risk row at ch05 L109 concerns inbound licence contamination, not ownership of generated output.
+      <span class="prior-src">Known gap in the book; nearest discussion handbook/ch05-governance-for-ai-assisted-delivery.qmd L109</span>
+    </div>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:25%"><col style="width:33%"><col style="width:20%"><col style="width:19%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th></th>
+          <th><span class="fno">22</span> IP posture in agent-generated output: who owns it, and under what licence is it held or released</th>
+          <th>Your own position and its basis</th>
+          <th>Counsel who gave the position</th>
+          <th>Date taken / target date if open</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="prior">Nothing. The source does not address this.<span class="prior-src">Known gap in the book</span></td>
+          <td class="fill"><span class="f-box lg"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:8pt;margin:1mm 0 0"><span class="redcircle"></span> &nbsp;<span class="defect-note">Not answered by the source. Requires your own legal position.</span> Do not fill this row from memory or treat an unattributed answer as settled.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-compliance-scope-and-posture-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2 (reverse)</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+```
