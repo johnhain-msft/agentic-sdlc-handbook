@@ -6,14 +6,14 @@ format:
     include-in-header:
       - text: |
           <style>
-            html:root { --sheet-w: 1189mm; --sheet-h: 841mm; --sheet-margin: 24mm; }
-            @page { size: A0 landscape; margin: 24mm; }
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
           </style>
 ---
 
 ```{=html}
 <div class="screen-only">
-  <b>WS-07-central-team-charter</b> &middot; review copy &middot; declared format <b>A0 landscape</b> &middot; 1 sheet.
+  <b>WS-07-central-team-charter</b> &middot; review copy &middot; declared format <b>A3 two-page spread</b> &middot; 3 sheets (left page, right page, reconciliation).
   Both facing pages and the reconciliation gutter belong to the same decision.
 </div>
 
@@ -40,12 +40,12 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Complete the left page first: record which working patterns you have and which anti-patterns you refuse, with evidence and mechanisms. Then charter the team, its first recurring ROI-positive loop, its distribution path and its mandatory reuse metric; set the escape hatch and assign all six lifecycle stages. In the center gutter, answer whether this charter is the anti-pattern and write three mechanism-backed commitments. Have the accountable executive and the person who would become the bottleneck sign.
+    Complete the left page first: record which working patterns you have and which anti-patterns you refuse, with evidence and mechanisms. Then charter the team, its first recurring ROI-positive loop, its distribution path and its mandatory reuse metric; set the escape hatch and assign all six lifecycle stages. On the last sheet, answer whether this charter is the anti-pattern and write three mechanism-backed commitments. Have the accountable executive and the person who would become the bottleneck sign.
   </div>
 
-  <div class="spread-layout" style="display:grid;grid-template-columns:minmax(0,1fr) 100mm minmax(0,1fr);grid-template-rows:auto auto;grid-template-areas:'left gutter right' 'left gutter lifecycle';gap:3mm 5mm;align-items:start;">
+  <div class="spread-layout" style="display:grid;grid-template-columns:minmax(0,1fr);gap:3mm;align-items:start;">
 
-    <div class="left-page" style="grid-area:left;">
+    <div class="left-page" style="display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr);gap:2mm;align-items:start;">
       <div class="ws-block">
         <h2>Block A — the three shapes that work
           <span class="ws-block-note">one status and named team per pattern</span></h2>
@@ -104,7 +104,7 @@ format:
           <span class="ws-block-note">status, evidence and mechanism for each</span></h2>
         <table class="ws">
           <colgroup>
-            <col style="width:6%"><col style="width:22%"><col style="width:35%"><col style="width:37%">
+            <col style="width:6%"><col style="width:20%"><col style="width:36%"><col style="width:38%">
           </colgroup>
           <thead>
             <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
@@ -121,7 +121,7 @@ format:
               <td><b>Why the chapter says it fails</b></td>
               <td class="prior">
                 Row 1: a specialised group becomes <b>the bottleneck for all agent work</b>; the result is a coordination tax that eliminates the speed advantage, and a knowledge gap because the AI team does not understand each product domain deeply enough to write good context.<br>
-                Row 2: the boundary between important and routine is not stable, agent code still requires human review and integration, and a two-class system undermines cohesion — all code is the team’s code regardless of who or what produced it.<br>
+                Row 2: some organizations try to create parallel tracks: human engineers handle “important” code, agents handle “routine” code. This fails because the boundary between important and routine is not stable, agent code still requires human review and integration, and a two-class system undermines cohesion — all code is the team’s code regardless of who or what produced it.<br>
                 Row 3: teams that lose senior engineers because “the AI can do that now” lose the judgement required to evaluate agent output and maintain architectural coherence, and produce more code and less working software.
                 <span class="prior-src">ch06 L236-240</span>
               </td>
@@ -164,13 +164,24 @@ format:
       </div>
     </div>
 
-    <div class="right-page" style="grid-area:right;">
+  </div>
+  <div class="ws-foot">
+    <div>WS-07-central-team-charter &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3 &middot; left page; the right page is the other half of this decision</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head"><div><h1>Central AI Team Charter — right page</h1></div><div class="ws-meta"><b>WS-07-central-team-charter</b><br>Blocks C-F</div></div>
+  <div class="spread-layout" style="display:grid;grid-template-columns:minmax(0,1fr);gap:3mm;align-items:start;">
+
+    <div class="right-page" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4mm;align-items:start;">
       <div class="ws-block">
         <h2>Block C — the charter: members and mandate
           <span class="ws-block-note">complete WS-06-role-map-and-staffing-triggers first</span></h2>
         <table class="ws">
           <colgroup>
-            <col style="width:6%"><col style="width:22%"><col style="width:35%"><col style="width:37%">
+            <col style="width:6%"><col style="width:21%"><col style="width:25%"><col style="width:48%">
           </colgroup>
           <thead>
             <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
@@ -192,7 +203,7 @@ format:
               <td class="ws-num"><span class="fno">13</span></td>
               <td><b>Role held</b></td>
               <td class="prior">The roles already exist in the book; the bill adds a <i>mandate</i>, not a new priesthood<span class="prior-src">ch07 L115; ch06 L195</span></td>
-              <td class="fill"><span class="f-select"><span class="opt">Agentic Workflow Engineer</span><span class="opt">Agent Operations Specialist</span><span class="opt">Domain Specialist</span></span></td>
+              <td class="fill"><span class="ours-label">One role per member, in the row order of field 11.</span><div class="f-select"><span class="opt">Agentic Workflow Engineer</span><span class="opt">Agent Operations Specialist</span><span class="opt">Domain Specialist</span></div><div class="f-select"><span class="opt">Agentic Workflow Engineer</span><span class="opt">Agent Operations Specialist</span><span class="opt">Domain Specialist</span></div><div class="f-select"><span class="opt">Agentic Workflow Engineer</span><span class="opt">Agent Operations Specialist</span><span class="opt">Domain Specialist</span></div></td>
             </tr>
             <tr>
               <td class="ws-num"><span class="fno">14</span></td>
@@ -236,13 +247,13 @@ format:
               <td class="ws-num"><span class="fno">18</span></td>
               <td><b>Why this task is recurring</b></td>
               <td class="prior">—<span class="prior-src">derived</span></td>
-              <td class="fill"><span class="f-text"></span></td>
+              <td class="fill"><span class="ours-label">How often it runs, and who does it today.</span><span class="f-text"></span></td>
             </tr>
             <tr>
               <td class="ws-num"><span class="fno">19</span></td>
               <td><b>Why it is ROI-positive</b></td>
               <td class="prior">—<span class="prior-src">ch07 L115</span></td>
-              <td class="fill"><span class="f-text"></span></td>
+              <td class="fill"><span class="ours-label">Our own before-and-after for this task, measured by us.</span><span class="f-text"></span></td>
             </tr>
             <tr>
               <td class="ws-num"><span class="fno">20</span></td>
@@ -362,49 +373,17 @@ format:
       </div>
     </div>
 
-    <div class="gutter" style="grid-area:gutter;">
-      <div class="ws-block">
-        <h2>Block G — the reconciliation</h2>
-        <p class="ws-block-note">Write here, in the gutter between the refusals and the charter. Do not resolve the contradiction for the room.</p>
-        <table class="ws">
-          <colgroup>
-            <col style="width:14%"><col style="width:43%"><col style="width:43%">
-          </colgroup>
-          <tbody>
-            <tr>
-              <td class="ws-num"><span class="fno">33</span></td>
-              <td><b>Which are we?</b><div class="prior">Is this charter the anti-pattern in block B row 1, or not — and what specifically makes the difference?<span class="prior-src">ch06 L236 against ch07 L115</span></div></td>
-              <td class="fill"><span class="f-box xl"></span></td>
-            </tr>
-            <tr>
-              <td class="ws-num"><span class="fno">34</span></td>
-              <td colspan="2">
-                <b>The three commitments that stop this charter becoming that anti-pattern</b>
-                <div class="prior">One line per failure mode: the bottleneck / the coordination tax / the domain-knowledge gap<span class="prior-src">ch06 L236</span></div>
-                <span class="ours-label">Bottleneck</span><span class="f-text"></span>
-                <span class="ours-label">Coordination tax</span><span class="f-text"></span>
-                <span class="ours-label">Domain-knowledge gap</span><span class="f-text"></span>
-                <span class="ours-label">One mechanism-backed commitment against each failure mode.</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="ws-num"><span class="fno">35</span></td>
-              <td colspan="2" class="fill">
-                <b>Signed</b>
-                <span class="ours-label">Accountable executive and whoever would become the bottleneck if this went wrong.</span>
-                <span class="f-sign"></span><span class="f-sign"></span>
-                <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+  </div>
+  <div class="ws-foot"><div>WS-07-central-team-charter &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3 &middot; right page</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
 
-    <div class="lifecycle" style="grid-area:lifecycle;">
+<div class="sheet">
+  <div class="ws-head"><div><h1>Central AI Team Charter — lifecycle and reconciliation</h1></div><div class="ws-meta"><b>WS-07-central-team-charter</b><br>Lifecycle strip, Block G</div></div>
+  <div class="spread-layout" style="display:grid;grid-template-columns:minmax(0,1fr);gap:3mm;align-items:start;">
+        <div class="lifecycle">
       <div class="ws-block">
         <h2>Lifecycle strip — the process the team instantiates
-          <span class="ws-block-note">six stages, across the foot of the charter page</span></h2>
+          <span class="ws-block-note">six stages, assign all six</span></h2>
         <table class="ws">
           <colgroup>
             <col style="width:6%"><col style="width:14%">
@@ -450,11 +429,50 @@ format:
         <p class="ours-label">Name the artefact each stage produces to move to the next stage.</p>
       </div>
     </div>
+<div class="gutter">
+      <div class="ws-block">
+        <h2>Block G — the reconciliation</h2>
+        <p class="ws-block-note">Write here, in the room, after both pages. Do not resolve the contradiction for the room.</p>
+        <table class="ws">
+          <colgroup>
+            <col style="width:5%"><col style="width:47%"><col style="width:48%">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">33</span></td>
+              <td><b>Which are we?</b><div class="prior">Is this charter the anti-pattern in block B row 1, or not — and what specifically makes the difference?<span class="prior-src">ch06 L236 against ch07 L115</span></div></td>
+              <td class="fill"><span class="f-box xl"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">34</span></td>
+              <td colspan="2">
+                <b>The three commitments that stop this charter becoming that anti-pattern</b>
+                <div class="prior">One line per failure mode: the bottleneck / the coordination tax / the domain-knowledge gap<span class="prior-src">ch06 L236</span></div>
+                <span class="ours-label">Bottleneck</span><span class="f-text"></span>
+                <span class="ours-label">Coordination tax</span><span class="f-text"></span>
+                <span class="ours-label">Domain-knowledge gap</span><span class="f-text"></span>
+                <span class="ours-label">One mechanism-backed commitment against each failure mode.</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">35</span></td>
+              <td colspan="2" class="fill">
+                <b>Signed</b>
+                <span class="ours-label">Accountable executive and whoever would become the bottleneck if this went wrong.</span>
+                <span class="f-sign"></span><span class="f-sign"></span>
+                <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
 
   </div>
 
   <div class="ws-foot">
-    <div>WS-07-central-team-charter &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>WS-07-central-team-charter &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
     <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
       &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
   </div>
