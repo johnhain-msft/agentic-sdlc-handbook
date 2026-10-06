@@ -192,8 +192,12 @@ format:
           <td class="ws-num"><span class="fno">17</span></td><td><b>Day 3 — Predicted mistakes: prevented?</b></td>
           <td class="prior">Did the context files prevent the mistakes you predicted? Did they cause new problems?<span class="prior-src">ch27 L163</span></td>
           <td class="fill">
+            <b>Predicted mistake A:</b> <span class="f-text"></span>
             <div class="f-select"><span class="opt">prevented</span><span class="opt">not prevented</span><span class="opt">new problem introduced</span></div>
-            <span class="f-box"></span>
+            <b>Predicted mistake B:</b> <span class="f-text"></span>
+            <div class="f-select"><span class="opt">prevented</span><span class="opt">not prevented</span><span class="opt">new problem introduced</span></div>
+            <b>Predicted mistake C:</b> <span class="f-text"></span>
+            <div class="f-select"><span class="opt">prevented</span><span class="opt">not prevented</span><span class="opt">new problem introduced</span></div>
           </td>
         </tr>
       </tbody>
