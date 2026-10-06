@@ -153,7 +153,7 @@ format:
 
   <div class="ws-block">
     <h2>Reconcile, compare and approve
-      <span class="ws-block-note">Shaded text is the chapter prior; write in ruled or boxed spaces. No recommended split.</span></h2>
+      <span class="ws-block-note">Write in the ruled or boxed spaces. Shading marks chapter priors; the chapter gives no recommended split.</span></h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:3mm;align-items:start">
       <div class="ws-block" style="margin:0;min-width:0">
         <table class="ws">
