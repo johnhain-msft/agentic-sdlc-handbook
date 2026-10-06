@@ -1,0 +1,473 @@
+---
+title: "Agent Conflict Playbook: File, Semantic, Design"
+pagetitle: "WS-17-conflict-resolution-playbook"
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 297mm; --sheet-h: 210mm; --sheet-margin: 12mm; }
+            @page { size: A4 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-17-conflict-resolution-playbook</b> &middot; declared format <b>A4 landscape</b> &middot; 7 sheets.
+  Sheet 1 (Part A) is the register: build it live in a spreadsheet or repository file and use this page as its column spec.
+  Sheets 2-4 (Parts B and C) print as the playbook that goes into the repository. Sheet 5 is the reverse, read aloud first.
+</div>
+
+<!-- ============ SHEET 1 : PART A ============ -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Agent Conflict Playbook: File, Semantic, Design</h1>
+      <p class="ws-sub">A conflict playbook plus a named list of the repository's coordination-bottleneck files &mdash; the partitioning constraints that wave planning must respect.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-conflict-resolution-playbook</b><br>
+      Pack Z &middot; fill order 19 &middot; diagnostic<br>
+      format <b>A4 landscape</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b> &rsaquo; Conflict Resolution &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L273-322 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-conflict-resolution">#sec-multi-agent-conflict-resolution</a>
+  </div>
+
+  <div class="ws-instruction">
+    <b>Part A &mdash; the bottleneck-file register.</b> Work from the churn listing, not from memory: the files touched by the most distinct concerns over the last six to twelve months.
+    One row per file. Take the candidate files and the concerns from the <b>WS-17-agent-team-charter</b> territory field. An empty register is a claim that no file attracts more than one concern &mdash; evidence it or do not make it.
+    This register is a hard partitioning constraint for <b>WS-18-wave-decomposition-plan</b>; fill it before that sheet, never after. Keep it as a sortable file and add rows after the session.
+  </div>
+
+  <div class="ws-block">
+    <h2>Part A &mdash; Bottleneck-file register <span class="ws-block-note">rows are files &middot; the grey row is the book's worked instance, not yours</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:14%"><col style="width:16%"><col style="width:11%"><col style="width:19%"><col style="width:12%"><col style="width:12%"><col style="width:12%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>A1 File path</th><th>A2 Concerns that touch it</th><th>A3 Bottleneck?</th><th>A4 Rule for this file</th><th>A5 Owning agent or team, this wave</th><th>A6 Documented exception granted?</th><th>A7 Split boundary, if split</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">0</span></td>
+          <td class="prior">install.py<span class="prior-src">ch17 L281</span></td>
+          <td class="prior">auth changes, logging changes, type safety changes<span class="prior-src">ch17 L281</span></td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">Default: single agent per wave, even if that agent handles multiple concerns for that file<span class="prior-src">ch17 L279, L281</span></td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">structural calls in one sub-wave, verbose calls in the next<span class="prior-src">cs-apm L141-144</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">watch</span><span class="opt">no</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">single agent per wave (default)</span><span class="opt">split across waves</span><span class="opt">sequential within one agent</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>exception, reason:</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">watch</span><span class="opt">no</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">single agent per wave (default)</span><span class="opt">split across waves</span><span class="opt">sequential within one agent</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>exception, reason:</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:1.5mm 0 0"><b>A3:</b> <b>yes</b> where more than one concern lands; <b>watch</b> where one does today and two are planned.
+      <b>A4:</b> any choice other than the default is written down with a reason. <b>A5:</b> one name per wave; blank means the file is unassigned and the wave cannot dispatch.
+      <b>A6:</b> tick only with a written reason &mdash; an undocumented exception is a planning error dressed as a decision. <b>A7:</b> state the boundary so a dispatcher can apply it.</p>
+  </div>
+  <div class="ws-foot">
+    <div>WS-17-conflict-resolution-playbook &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============ SHEET 2 : PART B file + semantic ============ -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Part B &mdash; Standing policy: file and semantic conflicts</h1>
+      <p class="ws-sub">Filled once, kept in the repository, opened when a checkpoint fails.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-conflict-resolution-playbook</b><br>
+      Pack Z &middot; fill order 19<br>
+      format <b>A4 landscape</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <code>handbook/ch17-multi-agent-orchestration.qmd</code> L275-312 &middot; File Conflicts, Semantic Conflicts &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-conflict-resolution">#sec-multi-agent-conflict-resolution</a>
+  </div>
+
+  <div class="ws-instruction">
+    Fill one block per conflict class. Grey cells are the book's; white cells are yours. For every block, write the last time it happened and what you did.
+    Read the walkthrough on sheet 5 aloud before you fill B6.
+  </div>
+
+  <div class="ws-block">
+    <h2>File conflicts <span class="ws-block-note">two agents, same file, same wave</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:19%"><col style="width:36%"><col style="width:40%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>B1</b> File conflicts &mdash; where a same-file collision is detected</td>
+          <td class="prior">This is a planning error, not a runtime error &mdash; it is caught by the partition check before dispatch, not by a test.<span class="prior-src">ch17 L277</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text">who runs it</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>B2</b> File conflicts &mdash; standing resolution</td>
+          <td class="prior">Merge the two tasks into a single agent's scope, <b>or</b> move one task to a later wave.<span class="prior-src">ch17 L279</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">merge into one agent's scope</span><span class="opt">move one task to a later wave</span></div><span class="f-text">who decides</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>B3</b> File conflicts &mdash; last occurrence</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><span class="f-text">what happened; which resolution was used</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Semantic conflicts <span class="ws-block-note">independently correct, mutually inconsistent</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:19%"><col style="width:36%"><col style="width:40%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>B4</b> Our foundation-before-migration ordering rule</td>
+          <td class="prior">Changes that establish new patterns &mdash; type definitions, utility functions, shared conventions &mdash; go in early waves; changes that consume those patterns go in later waves.<span class="prior-src">ch17 L287</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text">our pattern-establishing artefacts, named</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>B5</b> Commit after every wave</td>
+          <td class="prior">The committed state after Wave 0 is the ground truth for Wave 1 agents. Skip the commit and Wave 1 agents work against stale context.<span class="prior-src">ch17 L289</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>ticked &mdash; we commit after every wave</span><span class="f-checkline"><span class="f-check"></span>deviation, written down:</span><span class="f-text sm"></span></td>
+        </tr>
+              </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-conflict-resolution-playbook &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head"><div><h1>Part B &mdash; Standing policy: semantic conflicts (continued)</h1><p class="ws-sub">Filled once, kept in the repository, opened when a checkpoint fails.</p></div><div class="ws-meta"><b>WS-17-conflict-resolution-playbook</b><br>Pack Z &middot; fill order 19<br>format <b>A4 landscape</b><br>audience <b>practitioner</b></div></div>
+  <div class="ws-source">Source: <code>handbook/ch17-multi-agent-orchestration.qmd</code> L283-312 &middot; Semantic Conflicts &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-conflict-resolution">#sec-multi-agent-conflict-resolution</a></div>
+  <div class="ws-instruction">Continue the semantic-conflict block. B6 must name a specific test layer and the command that runs it; the unit suite alone would have missed the book's own failure.</div>
+  <div class="ws-block"><h2>Semantic conflicts <span class="ws-block-note">detection, recovery, prohibition</span></h2>
+    <table class="ws"><colgroup><col style="width:5%"><col style="width:19%"><col style="width:36%"><col style="width:40%"></colgroup><thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead><tbody>
+<tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>B6</b> Detection signal</td>
+          <td class="prior">Worked instance: unit tests passed and individual files were correct in isolation; the integration suite, run at the wave checkpoint, caught the mixed error types.<span class="prior-src">ch17 L299</span></td>
+          <td class="fill"><span class="f-text">test layer</span><span class="f-text">command</span><span class="f-text">when it runs</span><p style="font-size:6.8pt;margin:.5mm 0 0">Not the unit suite alone.</p></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>B7</b> Recovery rule</td>
+          <td class="locked">"Identify which context was missing from the dispatch, create a targeted recovery wave that carries the missing context, and fix forward rather than reverting." And: "Surgical recovery waves are the right response to surgical failures." (ch17 L310, L312) &mdash; printed; not editable.</td>
+          <td class="fill"><span class="f-text sm">countersigned by</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>B8</b> Prohibited response</td>
+          <td class="locked">Redispatching the entire original wave. A full redo wastes correct work and risks introducing new issues. (ch17 L312) &mdash; printed; not editable.</td>
+          <td class="fill"><span class="f-text sm">countersigned by</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>B9</b> Semantic conflicts &mdash; last occurrence</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><span class="f-text sm">what happened; which context was missing</span></td>
+        </tr>
+      </tbody></table></div>
+  <div class="ws-foot">
+    <div>WS-17-conflict-resolution-playbook &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============ SHEET 3 : PART B design ============ -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Part B &mdash; Standing policy: design conflicts</h1>
+      <p class="ws-sub">Design conflicts are trade-offs, not bugs. Who decides, and against what.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-conflict-resolution-playbook</b><br>
+      Pack Z &middot; fill order 19<br>
+      format <b>A4 landscape</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <code>handbook/ch17-multi-agent-orchestration.qmd</code> L314-318 &middot; Design Conflicts &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-conflict-resolution">#sec-multi-agent-conflict-resolution</a>
+  </div>
+
+  <div class="ws-instruction">
+    The holder of the priority-ordered principles &mdash; usually the engineering leader &mdash; fills this block. Name one person at B10. At B11 write your principles in priority order, one per line, highest first; an unordered list resolves nothing.
+    Draw them from <b>WS-18-plan-charter-and-principles</b> if it exists. If it does not, B11 is the prompt that starts it.
+  </div>
+
+  <div class="ws-block">
+    <h2>Design conflicts <span class="ws-block-note">genuinely different design philosophies</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:20%"><col style="width:33%"><col style="width:42%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>B10</b> Who decides</td>
+          <td class="prior">This is an escalation to the human. Design conflicts are not bugs; they are trade-offs requiring judgement.<span class="prior-src">ch17 L318</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>B11</b> Priority-ordered principles</td>
+          <td class="prior">Worked instance: if UX is prioritised above architectural purity, the domain agent's approach wins.<span class="prior-src">ch17 L318</span></td>
+          <td class="fill taller"><span class="f-text">1.</span><span class="f-text">2.</span><span class="f-text">3.</span><span class="f-text">4.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>B12</b> Where the rationale is written when the principles do not resolve it</td>
+          <td class="prior">The human decides <i>and documents the rationale</i>.<span class="prior-src">ch17 L318</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>B13</b> Design conflicts &mdash; last occurrence</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><span class="f-text">what was decided; which principle decided it</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>The two rules, printed <span class="ws-block-note">rules, not footnotes</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:50%"><col style="width:50%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="locked">Identify which context was missing from the dispatch, create a targeted recovery wave that carries the missing context, and fix forward rather than reverting. (ch17 L310)</td>
+          <td class="locked">Surgical recovery waves are the right response to surgical failures. (ch17 L312)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-conflict-resolution-playbook &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============ SHEET 4 : PART C ============ -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Part C &mdash; ADAPT incident record</h1>
+      <p class="ws-sub">One copy per incident. Filled at the incident, not in the session. Aggregated, the log shows whether your failures are planning defects or dispatch-context defects.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-conflict-resolution-playbook</b><br>
+      Pack Z &middot; fill order 19<br>
+      format <b>A4 landscape</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <code>handbook/ch18-the-execution-meta-process.qmd</code> L240-260 &middot; The ADAPT Loop (absorbs WS-18-adapt-loop-protocol); C4 from ch17 L301, L310 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-adapt-loop">#sec-meta-adapt-loop</a>
+  </div>
+
+  <div class="ws-instruction">
+    When a checkpoint fails or a wave stalls, work the four steps in order and record each. Answer C4 as its own question, separately from the cause.
+    Tick a guardrail only if it is true. If you cannot tick all three, leave the box unticked &mdash; the record exists to surface that.
+  </div>
+
+  <div class="ws-block">
+    <h2>Detect, Diagnose, Adjust, Execute</h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:20%"><col style="width:27%"><col style="width:48%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>C1</b> Incident ID and date</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text sm">incident ID</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>C2</b> DETECT &mdash; signal that fired</td>
+          <td class="prior">Three named triggers: red tests, agent stalled, dependency missed.<span class="prior-src">ch18 L240</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">red tests</span><span class="opt">agent stalled</span><span class="opt">dependency missed</span><span class="opt">other</span></div><span class="f-text sm">detail</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>C3</b> DIAGNOSE &mdash; root cause</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text">one sentence</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>C4</b> DIAGNOSE &mdash; which context was missing from the dispatch</td>
+          <td class="prior">A required, separate question.<span class="prior-src">ch17 L301, L310</span></td>
+          <td class="fill"><span class="f-text">the instruction file, committed artefact or convention the agent did not carry</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>C5</b> ADJUST &mdash; conservative move taken</td>
+          <td class="prior">Add tasks, split tasks, reorder waves &mdash; the only three permitted moves.<span class="prior-src">ch18 L258</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">add task</span><span class="opt">split task</span><span class="opt">reorder wave</span></div><span class="f-text sm">its shape</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>C6</b> EXECUTE &mdash; the re-run and its result</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text">what was re-dispatched</span><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+    <div class="ws-foot">
+    <div>WS-17-conflict-resolution-playbook &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head"><div><h1>Part C &mdash; ADAPT incident record (continued)</h1><p class="ws-sub">Guardrail and root-cause class. One copy per incident.</p></div><div class="ws-meta"><b>WS-17-conflict-resolution-playbook</b><br>Pack Z &middot; fill order 19<br>format <b>A4 landscape</b><br>audience <b>practitioner</b></div></div>
+  <div class="ws-source">Source: <code>handbook/ch18-the-execution-meta-process.qmd</code> L240-260 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-adapt-loop">#sec-meta-adapt-loop</a></div>
+  <div class="ws-instruction">Tick a guardrail only if it is true. If you cannot tick all three, leave the box unticked &mdash; the record exists to surface that.</div>
+
+  <div class="ws-block">
+    <h2>Guardrail <span class="ws-block-note">boxed rule, ch18 L258</span></h2>
+    <div class="prior--boxed" style="border:.5mm solid #1f2933;padding:2mm 3mm;font-size:8.5pt;font-style:italic">
+      The key discipline: adaptation is conservative. You add tasks, split tasks, reorder waves. You do not skip validation. You do not merge unvalidated work. The checkpoint discipline holds even &mdash; especially &mdash; when things go wrong. (ch18 L258)
+    </div>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:20%"><col style="width:27%"><col style="width:48%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>C7</b> Guardrail confirmation</td>
+          <td class="prior">All three ticked, or the incident did not follow the protocol.<span class="prior-src">ch18 L258; ch17 L312</span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>validation was not skipped</span>
+            <span class="f-checkline"><span class="f-check"></span>no unvalidated work was merged</span>
+            <span class="f-checkline"><span class="f-check"></span>the whole wave was not redispatched</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>C8</b> Root-cause class</td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><div class="f-select"><span class="opt">planning defect</span><span class="opt">dispatch-context defect</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>Root-cause roll-up</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-computed" data-formula="every C8 value, collated across incidents"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-conflict-resolution-playbook &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============ SHEET 5 : REVERSE ============ -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Reverse &mdash; Semantic Conflict Recovery: A Walkthrough</h1>
+      <p class="ws-sub">Read aloud before filling Part B. It is the one place a room can watch a green unit-test suite fail to catch a real conflict.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-conflict-resolution-playbook</b><br>
+      reverse of the playbook<br>
+      format <b>A4 landscape</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <code>handbook/ch17-multi-agent-orchestration.qmd</code> L291-312 &middot; reprinted verbatim &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-conflict-resolution">#sec-multi-agent-conflict-resolution</a>
+  </div>
+
+  <div class="locked" style="column-count:2;column-gap:8mm;font-size:7.6pt;line-height:1.28;padding:2mm 3mm">
+    <p style="margin:0 0 1.2mm">Prevention is the ideal. But when a semantic conflict slips through wave ordering, you need a recovery procedure, not a principle. The PR #394 execution hit exactly this case. Here is what happened.</p>
+    <p style="margin:0 0 1.2mm">Wave 0 established a new <code>OperationError</code> type in the resolver module &mdash; a structured error with fields for error code, operation name, and a recoverable flag. This replaced the previous pattern of raising bare <code>ValueError</code> with message strings. The architecture agent committed the new type, updated the resolver, and all Wave 0 tests passed.</p>
+    <p style="margin:0 0 1.2mm">Wave 1 dispatched a domain agent to migrate logging in three command modules. The agent's instructions referenced the committed Wave 0 codebase, but the dispatch prompt focused on logging patterns, not error handling. The domain agent correctly migrated all logging calls &mdash; and, in the process, added new error paths that used the old <code>ValueError</code> pattern. It had no reason to do otherwise. Its context included the logging migration guide, not the error-handling changes from Wave 0.</p>
+    <p style="margin:0 0 1.2mm"><b>Detection.</b> Wave 1's unit tests passed. The individual files were correct in isolation. But the integration test suite &mdash; run at the wave checkpoint &mdash; caught mixed error types. Callers updated in Wave 0 now expected <code>OperationError</code>. The new error paths added in Wave 1 raised <code>ValueError</code>. Three integration tests failed with unhandled exception types.</p>
+    <p style="margin:0 0 1.2mm"><b>Diagnosis.</b> The orchestrator reviewed the failures and identified the root cause in under two minutes: the Wave 1 dispatch prompt loaded the logging context but not the error-handling context. The agent had no visibility into the pattern change.</p>
+    <p style="margin:0 0 1.2mm"><b>Recovery.</b> The fix was not to revert Wave 1. The logging migration was correct. Instead, the orchestrator dispatched Wave 2b &mdash; two targeted agents:</p>
+    <p style="margin:0 0 1.2mm">1. Agent 2b-A received the three command modules plus <code>OperationError</code>'s type definition. Its single task: replace every <code>ValueError</code> raise in the migrated files with the equivalent <code>OperationError</code>. Six files in context. Completed in 3 minutes.</p>
+    <p style="margin:0 0 1.2mm">2. Agent 2b-B updated the corresponding test files to assert on <code>OperationError</code> fields instead of exception message strings.</p>
+    <p style="margin:0 0 1.2mm">Wave 2b committed, all tests passed, and execution continued to Wave 3.</p>
+    <p style="margin:0 0 1.2mm"><b>The lesson.</b> Wave ordering prevents most semantic conflicts. When one slips through, the recovery follows a pattern: identify which context was missing from the dispatch, create a targeted recovery wave that carries the missing context, and fix forward rather than reverting. The recovery wave is small &mdash; scoped to exactly the files affected by the missing context &mdash; and fast, because the agents start with clean sessions and concentrated context.</p>
+    <p style="margin:0">The mistake to avoid: redispatching the entire original wave. The logging migration was 90% correct. A full redo wastes the work and risks introducing new issues. Surgical recovery waves are the right response to surgical failures.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-conflict-resolution-playbook &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 7 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
+
+
+
+
