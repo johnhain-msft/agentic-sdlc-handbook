@@ -217,7 +217,7 @@ format:
           <td class="ws-num"><span class="fno">17</span></td>
           <td><b>Measurement window</b></td>
           <td class="prior">—</td>
-          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span> to <span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><div class="f-date" style="margin-top:1mm">to&nbsp;<span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">18</span></td>
