@@ -251,7 +251,7 @@ format:
   </div>
 
   <div class="ws-block">
-    <h2>Block D — extend or stand up <span class="ws-block-note">answer, rationalise, name the accountable leader, sign</span></h2>
+    <h2>Block D — extend or stand up <span class="ws-block-note">answer, rationalize, name the accountable leader, sign</span></h2>
     <table class="ws">
       <colgroup><col style="width:5%"><col style="width:24%"><col style="width:36%"><col style="width:35%"></colgroup>
       <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your decision</th></tr></thead>
