@@ -24,7 +24,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Skill Gap Map and the Revised Hiring Bar</h1>
-      <p class="ws-sub">A prioritised capability gap map with a hire-train-accept decision per skill, plus a redlined interview loop.</p>
+      <p class="ws-sub">A prioritized capability gap map with a hire-train-accept decision per skill, plus a redlined interview loop.</p>
     </div>
     <div class="ws-meta">
       <b>WS-06-skill-gap-and-hiring-bar</b><br>
@@ -609,7 +609,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Read the book's projected figures with their dagger footnote and both caveats. Record your current figure, your 24-month target and the gap in the separate organisation columns; the book's figures are directional, not targets.
+    Read the book's projected figures with their dagger footnote and both caveats. Record your current figure, your 24-month target and the gap in the separate organization columns; the book's figures are directional, not targets.
   </div>
 
   <div class="ws-block">
