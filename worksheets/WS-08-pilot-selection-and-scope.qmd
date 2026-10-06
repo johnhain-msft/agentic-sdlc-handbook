@@ -1,0 +1,376 @@
+---
+title: "Pilot Selection and Scope Contract"
+pagetitle: "WS-08-pilot-selection-and-scope"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 1189mm; --sheet-h: 841mm; --sheet-margin: 24mm; }
+            @page { size: A0 landscape; margin: 24mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-08-pilot-selection-and-scope</b> &middot; review copy &middot; declared format
+  <b>A0 landscape</b> &middot; 3 sheets. The contract is sheet 1; sheets 2 and 3 are its annex.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Pilot Selection and Scope Contract</h1>
+      <p class="ws-sub">A signed contract naming the pilot teams, bounded workstream, sponsor and lead, and pre-pilot baseline.</p>
+      <p style="font-weight:700">Select pilot teams that are representative, not exceptional</p>
+      <p><i>The pilot team includes your three best developers and a greenfield project. The pilot succeeds brilliantly. Nothing learned transfers to a team of mixed seniority working on a legacy codebase.</i> <span class="prior-src">ch08 L247</span></p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-08-pilot-selection-and-scope</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>9</b> &middot; type <b>decision</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Planning the Transition</b>, <i>Phase 1: Pilot (1–5 months)</i> &middot;
+    <code>handbook\ch08-planning-the-transition.qmd</code> L114-120 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-phase-1-pilot">#sec-transition-phase-1-pilot</a>
+  </div>
+
+  <div class="ws-instruction">
+    Use the completed readiness assessments and the risk-register hero-pilot score. Record every candidate team, compare each against your organisation's norm, and select no more than two. For every selected team, explain in writing why the work will transfer even if a rating is somewhat atypical or exceptional; give every unselected team a reason. Bound one workstream and name what is out of scope. Record all four Month 0 measures and their sources before any tooling is provisioned; if a measure cannot be captured, write “not measurable” and name its substitute. Plan the minimum viable context layer inside Phase 1. Complete the phase-entry and checkpoint-readiness annexes, then sign this contract in the room. The selected phase, budget, owner and target date are recorded in Block F on sheet 2 and incorporated into this contract.
+    <br><b>Prerequisites:</b> WS-06-team-readiness-scorecard and WS-08-pitfall-risk-register.
+    <b>Feeds:</b> WS-08-transition-planning-checklist, WS-08-phase-gate-exit-rollback and WS-08-baseline-measurement-plan.
+  </div>
+
+  <div class="ws-block">
+    <h2>B. Candidates
+      <span class="ws-block-note">one column per candidate; compare with your own organisation's norm</span></h2>
+    <p>Tick no more than two teams in field 8. Include rejected candidates and complete field 9 for each one. If you have more candidates than the columns below, attach a continuation roster using the same fields.</p>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:15%"><col style="width:18%">
+        <col style="width:10.5%"><col style="width:10.5%"><col style="width:10.5%">
+        <col style="width:10.5%"><col style="width:10.5%"><col style="width:10.5%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Field</th>
+          <th>What the book says</th>
+          <th>Candidate A</th><th>Candidate B</th><th>Candidate C</th>
+          <th>Candidate D</th><th>Candidate E</th><th>Candidate F</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>B. Candidates — Team</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>B. Candidates — Readiness rating</b></td>
+          <td class="prior">Phase 1 takes teams that scored “ready.”<span class="prior-src">ch08 L114</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">ready</span><span class="opt">partially ready</span><span class="opt">not ready</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">ready</span><span class="opt">partially ready</span><span class="opt">not ready</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">ready</span><span class="opt">partially ready</span><span class="opt">not ready</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">ready</span><span class="opt">partially ready</span><span class="opt">not ready</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">ready</span><span class="opt">partially ready</span><span class="opt">not ready</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">ready</span><span class="opt">partially ready</span><span class="opt">not ready</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>B. Candidates — Seniority mix vs our organisation's norm</b></td>
+          <td class="prior"><i>exceptional</i> is the hero-pilot flag.<span class="prior-src">ch08 L247</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>B. Candidates — Codebase: age, and greenfield or legacy</b></td>
+          <td class="prior">A greenfield project is named explicitly as half the hero pilot.<span class="prior-src">ch08 L247</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>B. Candidates — Documentation maturity vs our norm</b></td>
+          <td class="prior">Documentation maturity is the dominant driver of Phase 1 duration.<span class="prior-src">ch08 L110, L247</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>B. Candidates — Enthusiasm vs our norm</b></td>
+          <td class="prior">Phase 3 is where “mixed enthusiasm” teams arrive; a uniformly enthusiastic pilot is not representative.<span class="prior-src">ch08 L163, L247</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">representative</span><span class="opt">somewhat atypical</span><span class="opt">exceptional</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>B. Candidates — Written justification against the hero-pilot test</b><br><i>Mandatory for every selected team. What about this team is unlike the rest of our engineering organisation, and why will what we learn still transfer? Address each somewhat atypical or exceptional rating by name.</i></td>
+          <td class="prior">—</td>
+          <td class="fill taller"><span class="f-box lg"></span></td><td class="fill taller"><span class="f-box lg"></span></td>
+          <td class="fill taller"><span class="f-box lg"></span></td><td class="fill taller"><span class="f-box lg"></span></td>
+          <td class="fill taller"><span class="f-box lg"></span></td><td class="fill taller"><span class="f-box lg"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>B. Candidates — Selected</b></td>
+          <td class="prior">One or two teams. Not three.<span class="prior-src">ch08 L114</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Selected</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Selected</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Selected</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Selected</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Selected</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Selected</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>B. Candidates — Reason not selected</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>C. Scope <span class="ws-block-note">one bounded workstream, deliberately controlled</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:24%"><col style="width:31%"><col style="width:40%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">10</span></td><td><b>C. Scope — The bounded workstream</b></td><td class="prior">Well-defined work: a new feature, a contained refactor, a test suite expansion.<span class="prior-src">ch08 L114</span></td><td class="fill"><span class="f-box lg"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">11</span></td><td><b>C. Scope — Explicitly out of scope</b></td><td class="prior">Not a sprawling cross-cutting change.<span class="prior-src">ch08 L114</span></td><td class="fill"><span class="f-box lg"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">12</span></td><td><b>C. Scope — Why this is controlled conditions, not maximum impact</b></td><td class="prior">“The goal is controlled conditions, not maximum impact.”<span class="prior-src">ch08 L114</span></td><td class="fill"><span class="f-box lg"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">13</span></td><td><b>C. Scope — Executive sponsor</b></td><td class="prior">The pre-transition block names both roles.<span class="prior-src">ch08 L265</span></td><td class="fill tall"><span class="f-owner"></span><span class="f-sign"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">14</span></td><td><b>C. Scope — Transition lead</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>D. Baseline <span class="ws-block-note">capture before day one and before tooling is provisioned</span></h2>
+    <div class="prior--hedged">
+      <span class="hedge-figure">Review rejection rate exceeds 60%.</span>
+      <span class="hedge-text">This is a starting threshold to calibrate; your baseline rejection rate should inform the actual trigger.</span>
+      <span class="hedge-src">handbook\ch08-planning-the-transition.qmd L124</span>
+    </div>
+    <table class="ws">
+      <colgroup><col style="width:19%"><col style="width:24%"><col style="width:17%"><col style="width:18%"><col style="width:22%"></colgroup>
+      <thead><tr>
+        <th><span class="fno">15</span> Measure</th><th><span class="fno">16</span> Value at Month 0</th>
+        <th><span class="fno">17</span> Capture date</th><th><span class="fno">18</span> Captured by</th>
+        <th><span class="fno">19</span> Source</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="locked">Current cycle time<span class="prior-src">ch08 L117</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="locked">Review rejection rate<span class="prior-src">ch08 L117</span></td><td class="fill"><span class="ours-label">Our Month 0 review rejection rate</span><span class="f-text"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="locked">Defect rate<span class="prior-src">ch08 L117</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="locked">Developer satisfaction<span class="prior-src">ch08 L117</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+      </tbody>
+    </table>
+    <p>If a measure genuinely cannot be captured, write <b>not measurable</b> in its Month 0 cell and name the substitute there. Do not leave it blank or backfill after the pilot starts.</p>
+    <p>For each measure, name the system or survey instrument in field 19. That is the system of record for the same measure on WS-08-phase-gate-exit-rollback.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>E. Context layer <span class="ws-block-note">build the minimum viable layer inside Phase 1, not before it</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:24%"><col style="width:70%"></colgroup>
+      <thead><tr><th><span class="fno">20</span></th><th>Component</th><th>What the book says</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">20</span></td><td class="locked">Project-level instructions</td><td class="prior">Named context-layer component.<span class="prior-src">ch08 L118</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">20</span></td><td class="locked">Core coding conventions</td><td class="prior">Named context-layer component.<span class="prior-src">ch08 L118</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">20</span></td><td class="locked">Architecture boundaries</td><td class="prior">Named context-layer component.<span class="prior-src">ch08 L118</span></td></tr>
+      </tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:23%"><col style="width:36%"><col style="width:36%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b>E. Context layer — Owner</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">22</span></td><td><b>E. Context layer — Planned effort</b></td><td class="prior">4–6 weeks for a team starting from zero documentation, based on early-adopter experience; not a standard.<span class="prior-src">ch08 L110</span></td><td class="fill"><span class="f-text"></span></td></tr>
+      </tbody>
+    </table>
+    <div class="locked"><span class="fno">23</span> <b>E. Context layer — Built inside Phase 1</b> &nbsp; <span class="f-check">&#10003;</span> Built inside Phase 1, not before it. This is fixed, not a choice. <span class="prior-src">ch08 L110</span></div>
+    <div class="ws-block-note"><span class="fno">24</span> <b>E. Context layer — Sufficiency bar</b> &nbsp; The book says: “Enough context to prevent the most common agent failures, not a comprehensive instrumentation layer.” <span class="prior-src">ch08 L118</span></div>
+    <span class="f-box lg"></span>
+  </div>
+
+  <div class="ws-block">
+    <h2>Contract signature</h2>
+    <p>The executive sponsor named in field 13 signs and dates this contract in the room, before any tooling is provisioned. The phase, investment, budget, accountable owner and target date are set out in Block F on sheet 2.</p>
+    <span class="f-sign"></span>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-08-pilot-selection-and-scope &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Annex — Phase Entry</h1><p class="ws-sub">Select one lifecycle phase; substantiate prerequisite claims, scope the investment, and rank the next phases.</p></div>
+    <div class="ws-meta"><b>WS-08-pilot-selection-and-scope</b><br>Block F &middot; Annex<br>Sheet 2 of 3</div>
+  </div>
+  <div class="ws-source">Phase-entry decision source: <code>handbook\ch04-the-reference-architecture.qmd</code> L193-202, <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch04-the-reference-architecture.html#sec-ref-arch-decision-matrix">#sec-ref-arch-decision-matrix</a>. For all phases, mark every trigger genuinely true; rate each prerequisite and name evidence for every <i>present</i> rating.</div>
+
+  <div class="ws-block">
+    <h2>F. Phase entry <span class="ws-block-note">the eight-phase decision matrix and evidence</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:10%"><col style="width:18%"><col style="width:7%"><col style="width:17%">
+        <col style="width:15%"><col style="width:11%"><col style="width:15%"><col style="width:7%">
+      </colgroup>
+      <thead><tr>
+        <th><span class="fno">25</span> Lifecycle phase</th><th><span class="fno">26</span> “Start here if…”</th>
+        <th><span class="fno">27</span> True of us</th><th><span class="fno">28</span> First investment</th>
+        <th><span class="fno">29</span> Maturity prerequisite</th><th><span class="fno">30</span> Present / partial / absent</th>
+        <th><span class="fno">31</span> Evidence for that claim</th><th><span class="fno">32</span> Expected timeline</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="prior"><b>Code</b><span class="prior-src">ch04 L195-202</span></td><td class="prior">Your developers already use AI tools.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>True</span></td><td class="prior">Custom instructions encoding your conventions.<span class="prior-src">ch04 L195-202</span></td><td class="prior">Linter, test suite, CI pipeline.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="prior"><span class="f-computed" data-formula="Lifecycle phase → chapter 4 expected timeline">2–4 weeks</span><span class="prior-src">ch04 L195-202</span></td></tr>
+        <tr><td class="prior"><b>Review</b><span class="prior-src">ch04 L195-202</span></td><td class="prior">PR review is a bottleneck.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>True</span></td><td class="prior">Agent-assisted review with human sign-off.<span class="prior-src">ch04 L195-202</span></td><td class="prior">Documented quality standards and clear review criteria.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="prior"><span class="f-computed" data-formula="Lifecycle phase → chapter 4 expected timeline">4–8 weeks</span><span class="prior-src">ch04 L195-202</span></td></tr>
+        <tr><td class="prior"><b>Test</b><span class="prior-src">ch04 L195-202</span></td><td class="prior">Test coverage is low or tests are brittle.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>True</span></td><td class="prior">Agent-generated tests with human-defined strategy.<span class="prior-src">ch04 L195-202</span></td><td class="prior">Test framework, coverage tooling, defined test policy.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="prior"><span class="f-computed" data-formula="Lifecycle phase → chapter 4 expected timeline">4–8 weeks</span><span class="prior-src">ch04 L195-202</span></td></tr>
+        <tr><td class="prior"><b>Plan</b><span class="prior-src">ch04 L195-202</span></td><td class="prior">Planning is slow and produces inconsistent artifacts.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>True</span></td><td class="prior">ADR templates and specification structures.<span class="prior-src">ch04 L195-202</span></td><td class="prior">Issue tracker, documented architecture decisions.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="prior"><span class="f-computed" data-formula="Lifecycle phase → chapter 4 expected timeline">8–12 weeks</span><span class="prior-src">ch04 L195-202</span></td></tr>
+        <tr><td class="prior"><b>Build</b><span class="prior-src">ch04 L195-202</span></td><td class="prior">CI failures consume significant developer time.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>True</span></td><td class="prior">Agent-assisted build diagnostics.<span class="prior-src">ch04 L195-202</span></td><td class="prior">CI/CD pipeline with structured error output.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="prior"><span class="f-computed" data-formula="Lifecycle phase → chapter 4 expected timeline">4–8 weeks</span><span class="prior-src">ch04 L195-202</span></td></tr>
+        <tr><td class="prior"><b>Release</b><span class="prior-src">ch04 L195-202</span></td><td class="prior">Release process is manual and error-prone.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>True</span></td><td class="prior">Agent-drafted changelogs and breaking-change detection.<span class="prior-src">ch04 L195-202</span></td><td class="prior">Semantic versioning, structured commit history.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="prior"><span class="f-computed" data-formula="Lifecycle phase → chapter 4 expected timeline">8–12 weeks</span><span class="prior-src">ch04 L195-202</span></td></tr>
+        <tr><td class="prior"><b>Ideate</b><span class="prior-src">ch04 L195-202</span></td><td class="prior">Research and discovery are ad hoc.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>True</span></td><td class="prior">Agent-assisted research synthesis.<span class="prior-src">ch04 L195-202</span></td><td class="prior">Knowledge base, searchable decision history.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="prior"><span class="f-computed" data-formula="Lifecycle phase → chapter 4 expected timeline">12–18 weeks</span><span class="prior-src">ch04 L195-202</span></td></tr>
+        <tr><td class="prior"><b>Operate</b><span class="prior-src">ch04 L195-202</span></td><td class="prior">Incident response is slow to diagnose.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>True</span></td><td class="prior">Agent-assisted alert correlation and timeline drafting.<span class="prior-src">ch04 L195-202</span></td><td class="prior">Observability stack, structured runbooks.<span class="prior-src">ch04 L195-202</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td><td class="fill"><span class="f-text"></span></td><td class="prior"><span class="f-computed" data-formula="Lifecycle phase → chapter 4 expected timeline">12–18 weeks</span><span class="prior-src">ch04 L195-202</span></td></tr>
+      </tbody>
+    </table>
+    <p>For every <i>present</i> prerequisite, name the linter, pipeline, standard or runbook in field 31. Without named evidence, rate it <i>partial</i>.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Phase decision and commitment</h2>
+    <div class="ws-block-note"><span class="fno">33</span> <b>F. Phase entry — Our calibrated timeline</b> &nbsp; Record a range calibrated to documentation maturity and organisation size; this is a planning horizon, not a schedule. <span class="prior-src">ch04 L240, L252</span></div>
+    <span class="f-text"></span>
+    <p class="prior"><span class="fno">34</span> <b>F. Phase entry — Chosen phase</b> &nbsp; The chapter advises starting where tooling is mature and payoff is immediate: Code, Review and Test.<span class="prior-src">ch04 L204</span></p>
+    <p>Tick exactly one phase.</p>
+    <div>
+      <span class="f-checkline"><span class="f-check"></span>Code</span>
+      <span class="f-checkline"><span class="f-check"></span>Review</span>
+      <span class="f-checkline"><span class="f-check"></span>Test</span>
+      <span class="f-checkline"><span class="f-check"></span>Plan</span>
+      <span class="f-checkline"><span class="f-check"></span>Build</span>
+      <span class="f-checkline"><span class="f-check"></span>Release</span>
+      <span class="f-checkline"><span class="f-check"></span>Ideate</span>
+      <span class="f-checkline"><span class="f-check"></span>Operate</span>
+    </div>
+    <p><span class="fno">35</span> <b>F. Phase entry — Ranked shortlist, next two</b></p>
+    <div class="f-select">
+      <span class="opt"><b>2nd</b></span><span class="opt">Code</span><span class="opt">Review</span><span class="opt">Test</span><span class="opt">Plan</span><span class="opt">Build</span><span class="opt">Release</span><span class="opt">Ideate</span><span class="opt">Operate</span>
+    </div>
+    <div class="f-select">
+      <span class="opt"><b>3rd</b></span><span class="opt">Code</span><span class="opt">Review</span><span class="opt">Test</span><span class="opt">Plan</span><span class="opt">Build</span><span class="opt">Release</span><span class="opt">Ideate</span><span class="opt">Operate</span>
+    </div>
+    <table class="ws">
+      <colgroup><col style="width:30%"><col style="width:30%"><col style="width:40%"></colgroup>
+      <thead><tr><th><span class="fno">36</span> First investment budget</th><th><span class="fno">37</span> Accountable owner</th><th>Target date</th></tr></thead>
+      <tbody><tr><td class="fill"><span class="f-currency" data-symbol="&pound;"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr></tbody>
+    </table>
+    <p>Reconcile the budget to WS-07-spend-pool-budget-model. Record the named pilot team, first investment, budget, owner and date as the signed Phase 1 decision.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-08-pilot-selection-and-scope &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Annex — Checkpoint Readiness</h1><p class="ws-sub">Measure test readiness per repository and decide whether the checkpoint can run after every wave.</p></div>
+    <div class="ws-meta"><b>WS-08-pilot-selection-and-scope</b><br>Block G &middot; Annex<br>Sheet 3 of 3</div>
+  </div>
+  <div class="ws-source">Checkpoint source: <b>Checkpoint Discipline</b>, <code>handbook\ch18-the-execution-meta-process.qmd</code> L216-236 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-checkpoints">#sec-meta-checkpoints</a></div>
+  <div class="ws-instruction">Complete one record per repository the pilot will touch. Measure runtime and flake rate; record coverage of the pilot workstream, not global coverage. Define the gate and sampling rule. If the verdict is no, name the remediation and its cost here and carry it to WS-08-transition-planning-checklist as a task with an owner and date.</div>
+
+  <div class="ws-block">
+    <h2>G. Checkpoint readiness <span class="ws-block-note">one record per repository; copy this record for every repository the pilot touches</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:24%"><col style="width:35%"><col style="width:36%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">38</span></td><td><b>G. Checkpoint readiness — Repository</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">39</span></td><td><b>G. Checkpoint readiness — Full suite runtime</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">40</span></td><td><b>G. Checkpoint readiness — Flake rate</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">41</span></td><td><b>G. Checkpoint readiness — Coverage of the behaviour agents will change</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">42</span></td><td><b>G. Checkpoint readiness — Runs locally, or CI only</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">local</span><span class="opt">CI only</span><span class="opt">both</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">43</span></td><td><b>G. Checkpoint readiness — Test gate: which suite, what pass criterion</b></td><td class="prior">“The full test suite runs. If any test fails, the wave is not committed.”<span class="prior-src">ch18 L228</span></td><td class="fill"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">44</span></td><td><b>G. Checkpoint readiness — Spot-check: who, sampling what</b></td><td class="prior">Focus on boundary conditions, pattern compliance and scope discipline: did the agent handle the edge case, follow existing patterns rather than invent new ones, and change only what was specified?<span class="prior-src">ch18 L230</span></td><td class="fill"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">45</span></td><td><b>G. Checkpoint readiness — Commit convention</b></td><td class="prior">“Every wave gets its own commit with a descriptive message,” producing a clean bisectable history.<span class="prior-src">ch18 L232</span></td><td class="fill"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">46</span></td><td><b>G. Checkpoint readiness — Plan review trigger</b></td><td class="prior">Reviewed when the current wave revealed something unexpected: a missed dependency, a task that should be split, a wave that should be reordered.<span class="prior-src">ch18 L234</span></td><td class="fill"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">47</span></td><td><b>G. Checkpoint readiness — Verdict: can we afford to run this after every wave?</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">48</span></td><td><b>G. Checkpoint readiness — If no: remediation and its cost</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><span class="f-currency" data-symbol="&pound;"></span></td></tr>
+      </tbody>
+    </table>
+    <p>A no in field 47 needs a costed remediation in field 48 before the transformation. Copy this record for every additional repository.</p>
+  </div>
+  <div class="ws-block">
+      <h2>G. Checkpoint readiness — additional repository record</h2>
+      <table class="ws">
+        <colgroup><col style="width:5%"><col style="width:24%"><col style="width:35%"><col style="width:36%"></colgroup>
+        <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+        <tbody>
+          <tr><td class="ws-num"><span class="fno">38</span></td><td><b>Repository</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+          <tr><td class="ws-num"><span class="fno">39</span></td><td><b>Full suite runtime</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+          <tr><td class="ws-num"><span class="fno">40</span></td><td><b>Flake rate</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+          <tr><td class="ws-num"><span class="fno">41</span></td><td><b>Coverage of the behaviour agents will change</b></td><td class="prior">—</td><td class="fill"><span class="f-text"></span></td></tr>
+          <tr><td class="ws-num"><span class="fno">42</span></td><td><b>Runs locally, or CI only</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">local</span><span class="opt">CI only</span><span class="opt">both</span></div></td></tr>
+          <tr><td class="ws-num"><span class="fno">43</span></td><td><b>Test gate: which suite, what pass criterion</b></td><td class="prior">“The full test suite runs. If any test fails, the wave is not committed.”<span class="prior-src">ch18 L228</span></td><td class="fill"><span class="f-box"></span></td></tr>
+          <tr><td class="ws-num"><span class="fno">44</span></td><td><b>Spot-check: who, sampling what</b></td><td class="prior">Focus on boundary conditions, pattern compliance and scope discipline: did the agent handle the edge case, follow existing patterns rather than invent new ones, and change only what was specified?<span class="prior-src">ch18 L230</span></td><td class="fill"><span class="f-box"></span></td></tr>
+          <tr><td class="ws-num"><span class="fno">45</span></td><td><b>Commit convention</b></td><td class="prior">“Every wave gets its own commit with a descriptive message,” producing a clean bisectable history.<span class="prior-src">ch18 L232</span></td><td class="fill"><span class="f-box"></span></td></tr>
+          <tr><td class="ws-num"><span class="fno">46</span></td><td><b>Plan review trigger</b></td><td class="prior">Reviewed when the current wave revealed something unexpected: a missed dependency, a task that should be split, a wave that should be reordered.<span class="prior-src">ch18 L234</span></td><td class="fill"><span class="f-box"></span></td></tr>
+          <tr><td class="ws-num"><span class="fno">47</span></td><td><b>Verdict: can we afford to run this after every wave?</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td></tr>
+          <tr><td class="ws-num"><span class="fno">48</span></td><td><b>If no: remediation and its cost</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span><span class="f-currency" data-symbol="&pound;"></span></td></tr>
+        </tbody>
+      </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-08-pilot-selection-and-scope &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+```
