@@ -24,7 +24,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Review Loop Design Canvas</h1>
-      <p class="ws-sub">Design a draft-review-revise quality loop with a fixed verdict vocabulary, parallel reviewer proxies and a named synthesiser of conflicting fixes, ready to encode as primitives.</p>
+      <p class="ws-sub">Design a draft-review-revise quality loop with a fixed verdict vocabulary, parallel reviewer proxies and a named synthesizer of conflicting fixes, ready to encode as primitives.</p>
     </div>
     <div class="ws-meta">
       <b>WS-CS-HB-review-loop</b><br>
@@ -62,7 +62,7 @@ format:
           <td class="ws-num"><span class="fno">1</span></td>
           <td><b>A1 What goes through the loop</b></td>
           <td class="prior">Exemplar: a chapter<span class="prior-src">case-study L130</span></td>
-          <td class="fill"><span class="f-text"></span><small>Our artefact type, named precisely</small></td>
+          <td class="fill"><span class="f-text"></span><small>Our artifact type, named precisely</small></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">2</span></td>
@@ -80,7 +80,7 @@ format:
           <td class="ws-num"><span class="fno">4</span></td>
           <td><b>A4 What the draft stage returns</b></td>
           <td class="prior">&mdash;<span class="prior-src">case-study L146</span></td>
-          <td class="fill"><span class="f-text"></span><small>The artefact, and its expected shape</small></td>
+          <td class="fill"><span class="f-text"></span><small>The artifact, and its expected shape</small></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">5</span></td>
