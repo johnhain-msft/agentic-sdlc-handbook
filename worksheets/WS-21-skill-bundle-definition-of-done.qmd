@@ -65,13 +65,14 @@ format:
 
   <div class="ws-block">
     <h2>The twelve checks
-      <span class="ws-block-note">one row per check &middot; the book places checks 7-10 inside the CI gate: "Internal to the package; CI gate." (ch21 L66). Column "Enforced by" is decided once for the gate, not per bundle. Checks 11 and 12 are not manifest fields today &mdash; name a reviewer.</span></h2>
+      <span class="ws-block-note">one row per check</span></h2>
+    <div class="ws-instruction">The book places checks 7-10 inside the CI gate: "Internal to the package; CI gate." (ch21 L66). Column 4, "Enforced by", is decided once for the gate, not per bundle. Checks 11 and 12 are not manifest fields today &mdash; name a reviewer. Column numbers in the headers are the ones used in the text. Check 2 (this sheet's rule, not the book's): score by the reason-to-change question only; write the answer in column 5, either "no section has an independent reason to change" or the sections that do.</div>
     <table class="ws">
       <colgroup>
         <col style="width:3%"><col style="width:12%"><col style="width:21%"><col style="width:8%"><col style="width:8%"><col style="width:11%"><col style="width:8%"><col style="width:6%"><col style="width:8%"><col style="width:7%"><col style="width:8%">
       </colgroup>
       <thead>
-        <tr><th>#</th><th>Check</th><th>What "done" looks like</th><th>Verdict</th><th>Enforced by</th><th>Evidence</th><th>CI job or check name</th><th>Waived?</th><th>Waiver reason</th><th>Waiver expiry</th><th>Reviewer</th></tr>
+        <tr><th>#</th><th>1 Check</th><th>2 What "done" looks like</th><th>3 Verdict</th><th>4 Enforced by</th><th>5 Evidence</th><th>6 CI job or check name</th><th>7 Waived?</th><th>8 Waiver reason</th><th>9 Waiver expiry</th><th>10 Reviewer</th></tr>
       </thead>
       <tbody>
         <tr>
@@ -90,7 +91,7 @@ format:
         <tr>
           <td class="ws-num"><b>2</b></td>
           <td class="prior"><b>Entrypoint is a module, not a monolith</b></td>
-          <td class="prior">The entrypoint is <i>small</i>. Test: does this section have its own reason to change? If yes, it wants to be its own primitive. Score it by this question only; evidence in column 5 is the answer, not a line count.<span class="prior-src">ch21 L58, L68</span></td>
+          <td class="prior">The entrypoint is <i>small</i>. Test: does this section have its own reason to change? If yes, it wants to be its own primitive.<span class="prior-src">ch21 L58, L68</span></td>
           <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not applicable</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">CI (automated)</span><span class="opt">reviewer judgement</span></div></td>
           <td class="fill"><span class="f-text"></span></td>
@@ -173,13 +174,14 @@ format:
     <div class="ws-meta"><b>WS-21-skill-bundle-definition-of-done</b><br>continued<br>bundle <span style="display:inline-block;width:50mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
 
   <div class="ws-block">
-    <h2>The twelve checks, continued <span class="ws-block-note">checks 7-10 are the book's CI gate (ch21 L66); 11 and 12 are not manifest fields today &mdash; name a reviewer</span></h2>
+    <h2>The twelve checks, continued <span class="ws-block-note">checks 7-10 are the book's CI gate (ch21 L66)</span></h2>
+    <div class="ws-instruction">11 and 12 are not manifest fields today &mdash; name a reviewer. Check 11: where a WS-22-recursion-governance-bounds row exists for this Skill, write its row reference in column 5; the two verdicts must agree. If column 4 is set to reviewer judgement for any of 7-10, write the reason in column 5. A "not applicable" also needs its reason in column 5. A job name in column 6 is required wherever column 4 reads CI (automated); column 7 applies only to a fail.</div>
     <table class="ws">
       <colgroup>
         <col style="width:3%"><col style="width:12%"><col style="width:21%"><col style="width:8%"><col style="width:8%"><col style="width:11%"><col style="width:8%"><col style="width:6%"><col style="width:8%"><col style="width:7%"><col style="width:8%">
       </colgroup>
       <thead>
-        <tr><th>#</th><th>Check</th><th>What "done" looks like</th><th>Verdict</th><th>Enforced by</th><th>Evidence</th><th>CI job or check name</th><th>Waived?</th><th>Waiver reason</th><th>Waiver expiry</th><th>Reviewer</th></tr>
+        <tr><th>#</th><th>1 Check</th><th>2 What "done" looks like</th><th>3 Verdict</th><th>4 Enforced by</th><th>5 Evidence</th><th>6 CI job or check name</th><th>7 Waived?</th><th>8 Waiver reason</th><th>9 Waiver expiry</th><th>10 Reviewer</th></tr>
       </thead>
       <tbody>
         <tr>
@@ -261,6 +263,25 @@ format:
           <td class="fill"><span class="f-owner"></span></td>
         </tr>
 
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Policy reconciliation <span class="ws-block-note">prerequisite: WS-21-primitive-governance-policy</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:25%"><col style="width:45%"><col style="width:30%"></colgroup>
+      <tbody>
+        <tr>
+          <td><b>Policy reference</b></td>
+          <td class="prior">The twelve checks and their "Enforced by" settings (column 4) must appear in that policy's publish-pipeline gates row, in the same words. If they differ, the policy describes a gate that does not exist.</td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td><b>Gates row matches this sheet?</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><div class="f-select"><span class="opt">matches</span><span class="opt">differs</span></div></td>
+        </tr>
       </tbody>
     </table>
   </div>
