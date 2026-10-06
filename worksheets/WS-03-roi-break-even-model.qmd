@@ -364,7 +364,7 @@ format:
       <span class="hedge-text">The break-even calculation is less obviously favorable than the book implies, and the author has not seen enough longitudinal data to be certain it tips the right way.</span>
       <span class="hedge-src">handbook/ch27-what-comes-next.qmd L207</span>
     </div>
-    <div class="ours-label">The poles are a prompt to test a range, not endpoints you must adopt. Enter organisation-specific values below; any productivity-gain assumption here is a RANGE, never a single figure.</div>
+    <div class="ours-label">The poles are a prompt to test a range, not endpoints you must adopt. Enter organization-specific values below; any productivity-gain assumption here is a RANGE, never a single figure.</div>
   </div>
 
   <div class="ws-block">
