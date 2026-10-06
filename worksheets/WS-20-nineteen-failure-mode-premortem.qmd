@@ -24,7 +24,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Pre-Mortem: Which of the 19 Failure Modes Will We Hit?</h1>
-      <p class="ws-sub">A ranked organisational risk register — typically the top five to seven failure modes, each with a named owner and a dated mitigation.</p>
+      <p class="ws-sub">A ranked organizational risk register — typically the top five to seven failure modes, each with a named owner and a dated mitigation.</p>
     </div>
     <div class="ws-meta">
       <b>WS-20-nineteen-failure-mode-premortem</b><br>
