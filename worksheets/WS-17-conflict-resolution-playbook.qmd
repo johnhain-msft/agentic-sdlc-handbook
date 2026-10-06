@@ -15,7 +15,7 @@ format:
 <div class="screen-only">
   <b>WS-17-conflict-resolution-playbook</b> &middot; declared format <b>A4 landscape</b> &middot; 7 sheets.
   Sheet 1 (Part A) is the register: build it live in a spreadsheet or repository file and use this page as its column spec.
-  Sheets 2-4 (Parts B and C) print as the playbook that goes into the repository. Sheet 5 is the reverse, read aloud first.
+  Sheets 2-6 (Parts B and C) print as the playbook that goes into the repository. Sheet 7 is the reverse, read aloud first.
 </div>
 
 <!-- ============ SHEET 1 : PART A ============ -->
@@ -64,7 +64,7 @@ format:
           <td class="prior">Default: single agent per wave, even if that agent handles multiple concerns for that file<span class="prior-src">ch17 L279, L281</span></td>
           <td class="prior">&mdash;</td>
           <td class="prior">&mdash;</td>
-          <td class="prior">structural calls in one sub-wave, verbose calls in the next<span class="prior-src">cs-apm L141-144</span></td>
+          <td class="prior">&mdash;</td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">1</span></td>
@@ -122,7 +122,7 @@ format:
 
   <div class="ws-instruction">
     Fill one block per conflict class. Grey cells are the book's; white cells are yours. For every block, write the last time it happened and what you did.
-    Read the walkthrough on sheet 5 aloud before you fill B6.
+    Read the walkthrough on sheet 7 aloud before you fill B6.
   </div>
 
   <div class="ws-block">
@@ -134,7 +134,7 @@ format:
         <tr>
           <td class="ws-num"><span class="fno">1</span></td>
           <td><b>B1</b> File conflicts &mdash; where a same-file collision is detected</td>
-          <td class="prior">This is a planning error, not a runtime error &mdash; it is caught by the partition check before dispatch, not by a test.<span class="prior-src">ch17 L277</span></td>
+          <td class="prior">This is a planning error, not a runtime error.<span class="prior-src">ch17 L277</span></td>
           <td class="fill"><span class="f-text"></span><span class="f-text">who runs it</span></td>
         </tr>
         <tr>
@@ -168,7 +168,7 @@ format:
         <tr>
           <td class="ws-num"><span class="fno">5</span></td>
           <td><b>B5</b> Commit after every wave</td>
-          <td class="prior">The committed state after Wave 0 is the ground truth for Wave 1 agents. Skip the commit and Wave 1 agents work against stale context.<span class="prior-src">ch17 L289</span></td>
+          <td class="prior">The committed state after Wave 0 is the ground truth for Wave 1 agents. Skip the commit and Wave 1 agents work against stale context and semantic conflicts multiply.<span class="prior-src">ch17 L289</span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>ticked &mdash; we commit after every wave</span><span class="f-checkline"><span class="f-check"></span>deviation, written down:</span><span class="f-text sm"></span></td>
         </tr>
               </tbody>
@@ -203,7 +203,7 @@ format:
         <tr>
           <td class="ws-num"><span class="fno">8</span></td>
           <td><b>B8</b> Prohibited response</td>
-          <td class="locked">Redispatching the entire original wave. A full redo wastes correct work and risks introducing new issues. (ch17 L312) &mdash; printed; not editable.</td>
+          <td class="locked">Redispatching the entire original wave. A full redo wastes the work and risks introducing new issues. (ch17 L312) &mdash; printed; not editable.</td>
           <td class="fill"><span class="f-text sm">countersigned by</span></td>
         </tr>
         <tr>
@@ -255,7 +255,7 @@ format:
         <tr>
           <td class="ws-num"><span class="fno">10</span></td>
           <td><b>B10</b> Who decides</td>
-          <td class="prior">This is an escalation to the human. Design conflicts are not bugs; they are trade-offs requiring judgement.<span class="prior-src">ch17 L318</span></td>
+          <td class="prior">This is an escalation to the human. Design conflicts are not bugs. They are trade-offs that require judgment.<span class="prior-src">ch17 L318</span></td>
           <td class="fill"><span class="f-owner"></span></td>
         </tr>
         <tr>
