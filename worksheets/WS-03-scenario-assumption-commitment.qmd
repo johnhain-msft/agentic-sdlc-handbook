@@ -24,7 +24,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Scenario &amp; Assumption Commitment</h1>
-      <p class="ws-sub">A signed, dated set of modelling assumptions that every downstream number inherits - and an explicit record of who chose the optimism level.</p>
+      <p class="ws-sub">A signed, dated set of modeling assumptions that every downstream number inherits - and an explicit record of who chose the optimism level.</p>
     </div>
     <div class="ws-meta">
       <b>WS-03-scenario-assumption-commitment</b><br>
