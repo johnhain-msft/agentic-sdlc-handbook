@@ -1,0 +1,273 @@
+---
+title: "The Silent Primitive: Four-Phase Triage Sheet"
+pagetitle: "WS-14-silent-primitive-phase-triage"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-14-silent-primitive-phase-triage</b> &middot; review copy &middot; declared format <b>A4 portrait, two-sided</b> &middot;
+  4 sheet(s): side A (2 pages), then side B (2 pages). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SIDE A ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>The Silent Primitive &mdash; side A: did the file load?</h1>
+      <p class="ws-sub">Names the failing phase and the fix; the tally counts whether failures are budget pressure or description grammar.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-14-silent-primitive-phase-triage</b><br>
+      Pack Z &middot; fill order <b>8</b><br>
+      type <b>diagnostic</b> &middot; <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Load Lifecycle</b>, <i>Activate</i> &middot;
+    <code>handbook/ch14-the-load-lifecycle.qmd</code> L93-107 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch14-the-load-lifecycle.html#sec-load-activate">#sec-load-activate</a>
+  </div>
+
+  <div class="ws-instruction">
+    A primitive stayed silent. Fill the five lines, then work the four phases <b>in order</b>. Run each one-minute test, record the result and quote the output. Name the one phase that failed and the fix. Turn on the harness's verbose mode first.
+  </div>
+
+  <div class="ws-block">
+    <h2>The primitive <span class="ws-block-note">one card per failure</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:32%"><col style="width:38%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">1</span></td><td><b>Primitive path</b></td><td class="prior">&mdash;</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">2</span></td><td><b>Primitive type and expected binding mode</b></td>
+          <td class="prior">Project-wide rules: eager preload. Scope-attached rules: eager (conditioned). Skill: lazy on-demand. Persona / sub-agent: dispatcher-mediated.<span class="prior-src">ch14 L79-85</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">eager preload</span><span class="opt">eager (conditioned)</span><span class="opt">lazy on-demand</span><span class="opt">dispatcher-mediated</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">3</span></td><td><b>The task that should have activated it</b></td><td class="prior">&mdash;</td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">4</span></td><td><b>Harness, and verbose mode on?</b></td><td class="prior">Verbose log is where the activation tests are read.<span class="prior-src">ch14 L103</span></td>
+          <td class="fill"><span class="f-text sm"></span><span class="f-checkline"><span class="f-check"></span>verbose mode on, log actually read</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">5</span></td><td><b>Practitioner / date</b></td><td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>The four phases <span class="ws-block-note">top to bottom; stop guessing, quote output</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:16%"><col style="width:33%"><col style="width:20%"><col style="width:26%"></colgroup>
+      <thead><tr><th></th><th>Phase and owner</th><th>The one-minute test</th><th>Result</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">6</span></td>
+          <td class="prior"><b>Resolve</b><br>package manager, once per install<span class="prior-src">ch14 L20, L24-27, L31</span></td>
+          <td class="prior"><code>apm install --dry-run</code>; read the printed closure.<span class="prior-src">ch14 L43</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not run</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">7</span></td>
+          <td class="prior"><b>Materialize</b><br>install step, once per install<span class="prior-src">ch14 L20, L31</span></td>
+          <td class="prior">Is the file at the path <i>this</i> harness parses? Copilot <code>.github/skills/&lt;name&gt;/SKILL.md</code>; Claude Code <code>.claude/skills/&lt;name&gt;/SKILL.md</code>; Cursor <code>.cursor/rules/*.mdc</code>; Codex <code>AGENTS.md</code>.<span class="prior-src">ch14 L53-59</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not run</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">8</span></td>
+          <td class="prior"><b>Bind</b><br>harness, at session start<span class="prior-src">ch14 L20, L31</span></td>
+          <td class="prior"><code>yamllint</code> the frontmatter; confirm the binding mode.<span class="prior-src">ch14 L98, L103</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not run</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">9</span></td>
+          <td class="prior"><b>Activate</b><br>dispatcher, at every decision point<span class="prior-src">ch14 L20, L31</span></td>
+          <td class="prior">Read the verbose log entry for this primitive.<span class="prior-src">ch14 L103</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span><span class="opt">not run</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:7pt;margin:1mm 0 0">Evidence is the literal line of output or log text, quoted. A <b>pass</b> with an empty evidence cell is <b>not run</b>.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-14-silent-primitive-phase-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Side A, continued: which phase failed?</h1>
+      <p class="ws-sub">Rows 10-14. Fill row 10 and 11 only if row 9 failed.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-14-silent-primitive-phase-triage</b><br>
+      Pack Z &middot; fill order <b>8</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Activate row only <span class="ws-block-note">fill if row 9 failed</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:32%"><col style="width:38%"></colgroup>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">10</span></td><td><b>Activate row only &mdash; which bullet failed</b></td>
+          <td class="prior">Path predicate, frontmatter validity, lockfile closure: deterministic. Description matching, budget pressure: probabilistic.<span class="prior-src">ch14 L97-101</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">path predicate</span><span class="opt">frontmatter validity</span><span class="opt">lockfile closure</span><span class="opt">description matching</span><span class="opt">budget pressure</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">11</span></td><td><b>Activate row only &mdash; verbose-log verdict</b></td>
+          <td class="prior">The log says <i>did not match</i> or <i>registered but not pulled</i>.<span class="prior-src">ch14 L101, L103</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">did not match</span><span class="opt">registered but not pulled</span><span class="opt">no entry at all</span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Result <span class="ws-block-note">one failing phase</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:32%"><col style="width:38%"></colgroup>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">12</span></td><td><b>Failing phase</b></td>
+          <td class="prior">A primitive that does not surface has failed at <b>exactly one</b> of the four.<span class="prior-src">ch14 L31-33, L103</span></td>
+          <td class="fill"><span class="f-computed" data-formula="first row (6-9) reading fail"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">13</span></td><td><b>Fix applied</b></td><td class="prior">&mdash;</td><td class="fill"><span class="f-box sm"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">14</span></td><td><b>Re-tested, and now binds</b></td><td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>re-ran the same test; it now passes</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    Routing rule: work side A first; flip only when all four phases pass and the primitive still had no effect. (ch14 L113)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-14-silent-primitive-phase-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SIDE A ============================ -->
+
+<!-- ============================ SIDE B ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>The Silent Primitive &mdash; side B: did the model attend to it?</h1>
+      <p class="ws-sub">Only if all four phases on side A passed. Three numbers settle almost every case.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-14-silent-primitive-phase-triage</b><br>
+      Pack Z &middot; fill order <b>8</b><br>
+      type <b>diagnostic</b> &middot; <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Attention and Context Economy</b>, <i>Symptoms of attention starvation</i> &middot;
+    <code>handbook/ch15-attention-and-context-economy.qmd</code> L32-47 &middot; worked example <code>ch14</code> L4-10
+  </div>
+
+  <div class="ws-instruction">
+    Tick the symptom or symptoms you saw. Measure the three numbers on the failing session, name the prime suspect, apply one lever and re-run the same task. These are measurements of one session, not targets.
+  </div>
+
+  <div class="ws-block">
+    <h2>Symptom <span class="ws-block-note">tick what you saw</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:29%"><col style="width:30%"><col style="width:27%"><col style="width:10%"></colgroup>
+      <thead><tr><th></th><th>Symptom in the session</th><th>What is actually happening</th><th>First thing to check</th><th>Observed</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td class="prior">Agent ignores an explicit, scope-loaded instruction</td><td class="prior">The rule is in the middle of a long payload; effective attention has moved past it</td><td class="prior">Token count at the failing turn; position of the rule within it<span class="prior-src">ch15 L36-41</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">16</span></td><td class="prior">Output references a file the agent worked on twenty turns ago, wrongly</td><td class="prior">The earlier file's contents are no longer in active attention; the agent is reasoning from a stale, summarised memory</td><td class="prior">Conversation length; how many tool calls have happened since the file was last read<span class="prior-src">ch15 L36-41</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">17</span></td><td class="prior">Agent forgets to call a tool it called correctly five turns ago</td><td class="prior">Tool-use cues from the system prompt are competing with accumulated recent context and losing</td><td class="prior">Whether the tool description is at the start or end of the system prompt and how full the window is<span class="prior-src">ch15 L36-41</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">18</span></td><td class="prior">Hallucinated detail about your codebase</td><td class="prior">Grounding evidence either was never loaded, was loaded but pushed out of attention, or sits in the middle</td><td class="prior">Closure of files actually loaded at decision time (Ch13's transitive-closure question)<span class="prior-src">ch15 L36-41</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td class="prior">Quality cliff after a long error-debugging exchange</td><td class="prior">Each pasted error has bloated context with low-signal tokens; the original task has slipped out of effective attention</td><td class="prior">Number of pasted error blobs; ratio of error-text tokens to task-text tokens<span class="prior-src">ch15 L36-41</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">20</span></td><td class="prior">Inconsistent answers to the same question across two sessions</td><td class="prior">One session is loading more peripheral material than the other, even though both are within window</td><td class="prior">Diff the two sessions' loaded-file lists<span class="prior-src">ch15 L36-41</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>The three numbers <span class="ws-block-note">measure, do not grade</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:36%"><col style="width:34%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td><b>Number one &mdash; token count at the failing turn</b></td>
+          <td class="prior">"If the answer is more than a third of the window, attention is the prime suspect."<span class="prior-src">ch15 L43</span></td>
+          <td class="fill"><span class="f-text sm"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">22</span></td><td><b>Number two &mdash; position of the failing instruction in the payload</b></td>
+          <td class="prior">"If it is in the middle, position is the prime suspect."<span class="prior-src">ch15 L43, L53-72</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">head</span><span class="opt">mid-payload</span><span class="opt">recent turns</span><span class="opt">tail</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Number three &mdash; pasted blobs and tool outputs since that instruction was last reinforced</b></td>
+          <td class="prior">"If the answer is more than a handful, recency-bias is eating your earlier inputs."<span class="prior-src">ch15 L43</span></td>
+          <td class="fill"><span class="f-text sm"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-14-silent-primitive-phase-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Side B, continued: diagnosis and tally</h1>
+      <p class="ws-sub">Rows 24-27, and the book's worked example.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-14-silent-primitive-phase-triage</b><br>
+      Pack Z &middot; fill order <b>8</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Diagnosis and tally</h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:36%"><col style="width:34%"></colgroup>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">24</span></td><td><b>Prime suspect</b></td><td class="prior">&mdash;</td>
+          <td class="fill"><div class="f-select"><span class="opt">position</span><span class="opt">load</span><span class="opt">closure</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Lever applied</b></td><td class="prior">Progressive disclosure; subagent isolation; plan-write-then-reload.<span class="prior-src">ch15 L80-98</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">progressive disclosure</span><span class="opt">subagent isolation</span><span class="opt">plan-write-then-reload</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">26</span></td><td><b>Symptom cleared</b></td><td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>re-ran the same task; cleared</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td><b>Tally contribution</b></td><td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-computed" data-formula="failing phase (side A, row 12) or prime suspect (side B, row 24)"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Worked example <span class="ws-block-note">the book's opening case</span></h2>
+    <div class="prior" style="padding:1.5mm 2mm">
+      A correct skill, a sharp description, the right directory, no binding. The verbose log showed the skill registered, but a parent file with <code>applyTo: "**/*.py"</code> pulled in 6,200 tokens of Python guidance first. "The skill is not silent because of its description. It is silent because of someone else's <code>applyTo</code> glob." That is row 10, <i>budget pressure</i>. This is what happened to one engineer, not a threshold.<span class="prior-src">ch14 L4-10</span>
+    </div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-14-silent-primitive-phase-triage &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SIDE B ============================ -->
+```
