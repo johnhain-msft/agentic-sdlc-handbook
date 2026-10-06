@@ -43,7 +43,7 @@ format:
   <div class="ws-instruction">
     Fill this in the room, with the person who will actually be interrupted present. Name two
     individuals who can approve a plan version, say what evidence you will accept for a scope
-    expansion, and say where mid-wave discoveries go. Row A4 is not yours to reword: read it aloud,
+    expansion, and say where mid-wave discoveries go and what the running wave does while they wait. Every file class must sit in A6 or A7. Row A4 is not yours to reword: read it aloud,
     then countersign it. Write in pen.
   </div>
 
@@ -59,13 +59,13 @@ format:
       <tbody>
         <tr>
           <td class="ws-num"><span class="fno">1</span></td>
-          <td><b>Plan gate approval authority</b><br><small>A1 &middot; the individual who approves a plan version</small></td>
+          <td><b>Plan gate approval authority</b><br><small>A1 &middot; the individual who approves a plan version. A named person, not a role or committee, and present in the room.</small></td>
           <td class="prior">&mdash;<span class="prior-src">derived from cs-apm L85 "Approved"</span></td>
           <td class="fill"><span class="f-owner"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">2</span></td>
-          <td><b>Deputy when A1 is unavailable</b><br><small>A2 &middot; a gate with one name is a gate that closes on holiday</small></td>
+          <td><b>Deputy when A1 is unavailable</b><br><small>A2 &middot; a gate with one name is a gate that closes on holiday. A named person, not a role, and present in the room.</small></td>
           <td class="prior">&mdash;<span class="prior-src">org</span></td>
           <td class="fill"><span class="f-owner"></span></td>
         </tr>
@@ -83,19 +83,19 @@ format:
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">5</span></td>
-          <td><b>What happens when scope changes are discovered mid-wave</b><br><small>A5 &middot; who receives it, and where it waits</small></td>
-          <td class="prior">The ladder's L4 response: a follow-up task, raised for the next gate<span class="prior-src">ch17 L349 via WS-17-escalation-autonomy-ladder</span></td>
+          <td><b>What happens when scope changes are discovered mid-wave</b><br><small>          A5 &middot; who receives it, where it waits, and what the running wave does in the meantime. "Raise it at the next gate" alone is not an answer.</small></td>
+                    <td class="prior">The ladder's L4 response: "Human creates follow-up task"<span class="prior-src">ch17 L349 via WS-17-escalation-autonomy-ladder</span></td>
           <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">6</span></td>
-          <td><b>In-plan file classes</b><br><small>A6 &middot; which classes count as planned scope</small></td>
+          <td><b>In-plan file classes</b><br><small>A6 &middot; which classes count as planned scope. Every file class in the repository lands in exactly one of A6 or A7; check A7 against this row for gaps.</small></td>
           <td class="prior">Primary source files (the case planned 47)<span class="prior-src">cs-apm L95</span></td>
           <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">7</span></td>
-          <td><b>Incidental file classes &mdash; discovery does not re-open the gate</b><br><small>A7 &middot; anything not listed here re-opens the gate</small></td>
+          <td><b>Incidental file classes &mdash; discovery does not re-open the gate</b><br><small>A7 &middot; anything not listed here re-opens the gate. A class in neither A6 nor A7 is a gap: place it now.</small></td>
           <td class="prior">Test files, configuration updates, documentation changes (the case's additional 28)<span class="prior-src">cs-apm L95</span></td>
           <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
         </tr>
@@ -190,7 +190,7 @@ format:
       <colgroup><col style="width:5%"><col style="width:25%"><col style="width:70%"></colgroup>
       <tbody>
         <tr>
-          <td class="ws-num"><span class="fno">12</span></td>
+          <td class="ws-num"><span class="fno">&mdash;</span></td>
           <td><b>Approved version in force</b></td>
           <td class="fill"><span class="f-computed" data-formula="the single row where B9 is approved; this is the version WS-18-wave-decomposition-plan waves"></span></td>
         </tr>
