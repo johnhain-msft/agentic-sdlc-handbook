@@ -131,7 +131,7 @@ format:
         </tr>
       </tbody>
     </table>
-    <p style="font-size:8pt;margin:1mm 0 0"><b>Field 5 rule:</b> exactly one Standardise unless deliberately running two; if two, give the reason: <span class="f-text" style="display:inline-block;width:60%"></span></p><p class="ws-block-note" style="margin-top:1mm">For each harness, name the primitive families that need manual translation and who would do the work. Record the gap between actual use and sanction; do not tidy it away.</p>
+    <p style="font-size:8pt;margin:1mm 0 0"><b>Field 5 rule:</b> exactly one Standardise unless deliberately running two; if two, give the reason: <span class="f-text" style="display:inline-block;width:60%"></span></p><p class="ws-block-note" style="margin-top:1mm"><b>Field 6:</b> For each harness, name the primitive families that need manual translation and who would do the work. Record the gap between actual use and sanction; do not tidy it away.</p>
   </div>
   <div class="ws-foot">
     <div>WS-APXA-harness-selection-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 9</div>
@@ -174,6 +174,10 @@ format:
       <span style="display:block">Cursor — user-scope rules live in IDE settings, not the filesystem, so they are not version-controlled; this creates hidden per-developer state and a silent-onboarding failure. Skills activation is partial.</span>
       <span style="display:block">Codex CLI — skills materialise to cross-tool <code>.agents/</code>, not under <code>.codex/</code>; there is no separate prompts primitive.</span>
       <span style="display:block">OpenCode — no native hooks concept; its convention set is the youngest in the matrix.</span>
+    </div>
+    <div class="prior" style="padding:2mm 3mm;margin:1mm 0 2mm">
+      <b>Field 10 pre-mark: the book's empty cells (—)</b> <span class="prior-src">appx-A L21, L25-34</span>
+      <span style="display:block">User-scope rules — no Codex file convention; Cursor Settings UI, not file-based. Prompt / repeatable workflow — none in Claude Code (slash commands), Cursor (partial via rules) and Codex. Memory — Copilot uses scoped instructions. Skill — Cursor partial. Hooks — OpenCode has no native hooks. Mark Native, Partial or None for your chosen harness, then confirm or correct.</span>
     </div>
     <table class="ws b-gap">
       <colgroup>
@@ -370,11 +374,11 @@ format:
     <h2>Block D — target-harness support matrix
       <span class="ws-block-note">appendix snapshot: <b>2026-04-26</b> &middot; re-verified by us on <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span></span></h2>
     <div class="prior" style="padding:2mm 3mm;margin:1mm 0 2mm">
-      Book status reference for the four listed harness groups: project-wide rules, scope-attached
-      rules and user-scope override — <b>Supported</b>. Skill entrypoint — <b>Supported</b> for
-      Copilot and Claude Code; <b>Translated</b> for Cursor and Codex/OpenCode. Persona or specialist —
-      <b>Supported</b> for Copilot and Claude Code; <b>Not supported</b> for Cursor and
-      Codex/OpenCode. Other-harness status is not in the book table. Confirm or correct in each cell.
+      The book's materialization table has a native entry for every cell except these gaps: Skill
+      entrypoint — Cursor "(none — partial via rules)"; Codex/OpenCode "(none — partial via AGENTS.md)".
+      Persona or specialist — Cursor "(none, modes are global)"; Codex/OpenCode "(none — convention varies)".
+      The book assigns no status labels; choose Supported, Translated or Not supported yourself in each
+      cell. Other-harness entries are not in the book table.
       <span class="prior-src">ch14 L55-59</span>
     </div>
     <table class="ws">
