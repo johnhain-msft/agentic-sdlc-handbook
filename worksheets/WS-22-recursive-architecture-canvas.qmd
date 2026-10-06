@@ -1,0 +1,316 @@
+---
+title: "Instantiate the Reference Architecture: Our Skill / Persona / Context Canvas"
+pagetitle: "WS-22-recursive-architecture-canvas"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 841mm; --sheet-h: 594mm; --sheet-margin: 20mm; }
+            @page { size: A1 landscape; margin: 20mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-22-recursive-architecture-canvas</b> &middot; review copy &middot; declared format <b>A1 landscape</b> &middot;
+  1 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Instantiate the Reference Architecture: Our Skill / Persona / Context Canvas</h1>
+      <p class="ws-sub">A filled two-column canvas (TODAY versus TARGET) for one flagship workflow, plus the explicit gap list between the columns.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-22-recursive-architecture-canvas</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>12</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Reference Architecture, Earned</b>, <i>Composition is recursive</i> &middot;
+    <code>handbook/ch22-the-reference-architecture-earned.qmd</code> L15-113 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch22-the-reference-architecture-earned.html#sec-recursion-mechanics">#sec-recursion-mechanics</a>
+    &middot; Prerequisite: <b>WS-21-primitive-governance-policy</b> (rows 5, 6). Outer canvas: <b>WS-04-five-layer-supply-chain-canvas</b> &mdash; rows 19&ndash;21 of TARGET inherit from it; where they disagree, the outer canvas wins and the difference is a GAP entry.
+    &middot; Consumed by <b>WS-22-recursion-governance-bounds</b> (rows 14, 18).
+  </div>
+
+  <div class="ws-instruction">
+    Pick <b>one</b> real workflow &mdash; not a category of work &mdash; and fill the canvas <b>twice</b>: TODAY (researched from the running system, not recalled) and TARGET (what you commit to change). Name the SDLC phase that triggers it, the top-level Skill and its pinned version, every Persona it dispatches, and every Context source with its access mechanism named from the closed list. Then say where recursion fires and to what depth, what artefact each level returns, and what the single human finally reads. Finish with the GAP strip: one entry for every band where the two columns differ, each with an owner and a delivery increment. The grey column is Maya's worked exemplar &mdash; read it, do not write in it.
+  </div>
+
+  <div style="display:grid;grid-template-columns:75% 24%;column-gap:1%">
+
+  <div class="ws-block">
+    <h2>Canvas: TODAY | TARGET
+      <span class="ws-block-note">every field filled once in each column &middot; fill order down the page</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:13%"><col style="width:20%"><col style="width:32%"><col style="width:32%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>Maya's PR #4711 &mdash; exemplar, not for filling</th><th>TODAY</th><th>TARGET</th></tr>
+      </thead>
+      <tbody>
+
+        <tr><td class="locked" colspan="5"><b>BAND 0 &mdash; WORKFLOW HEADER</b></td></tr>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Workflow</b></td>
+          <td class="prior">—<span class="prior-src">ch22 L17</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>SDLC phase that triggers it</b></td>
+          <td class="prior">The seven phases, as a band: Spec, Plan, Build, Test, <b>Review</b> (highlighted), Refine, Release.<span class="prior-src">ch22 L29-32</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Spec</span><span class="opt">Plan</span><span class="opt">Build</span><span class="opt">Test</span><span class="opt">Review</span><span class="opt">Refine</span><span class="opt">Release</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Spec</span><span class="opt">Plan</span><span class="opt">Build</span><span class="opt">Test</span><span class="opt">Review</span><span class="opt">Refine</span><span class="opt">Release</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Trigger event</b></td>
+          <td class="prior">A label applied to a PR, picked up by a CI watcher.<span class="prior-src">ch22 L129</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+        <tr><td class="locked" colspan="5"><b>BAND 1 &mdash; DEPTH 1: SKILL / PERSONA POOL / CONTEXT POOL</b></td></tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>Top-level Skill</b></td>
+          <td class="prior">—<span class="prior-src">ch22 L36-37</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>Version pin</b></td>
+          <td class="prior">—<span class="prior-src">ch22 L95 &mdash; the pins are Governance doing its job</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><br><span style="font-size:7pt">A TARGET Skill with no pin is an intention.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>Resolved from</b></td>
+          <td class="prior">—<span class="prior-src">ch22 L106-108</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Personas dispatched</b><br><span style="font-size:7pt">one per line &middot; sticky notes</span></td>
+          <td class="prior">Six lenses: Tech Lead, Backend, Security, A11y, Docs, Product.<span class="prior-src">ch22 L39-41</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Persona file location</b></td>
+          <td class="prior"><code>.agent.md</code> files inside the bundle.<span class="prior-src">ch22 L106</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>Context sources</b><br><span style="font-size:7pt">one per line &middot; sticky notes &middot; name the owner of each</span></td>
+          <td class="prior">Six: diff, codebase, policy, ticket, RFC, design frames.<span class="prior-src">ch22 L43-45</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>Access mechanism, per context source</b><br><span style="font-size:7pt">Mandatory. One per source in row 9, same order, both columns. Closed list &mdash; no free text.</span></td>
+          <td class="prior">The only permitted answers: file / git / CLI / MCP server / fetched URL / multi-modal artefact.<span class="prior-src">ch22 L188</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">file</span><span class="opt">git</span><span class="opt">CLI</span><span class="opt">MCP server</span><span class="opt">fetched URL</span><span class="opt">multi-modal artefact</span></div>
+            <div class="f-select"><span class="opt">file</span><span class="opt">git</span><span class="opt">CLI</span><span class="opt">MCP server</span><span class="opt">fetched URL</span><span class="opt">multi-modal artefact</span></div>
+            <div class="f-select"><span class="opt">file</span><span class="opt">git</span><span class="opt">CLI</span><span class="opt">MCP server</span><span class="opt">fetched URL</span><span class="opt">multi-modal artefact</span></div>
+            <div class="f-select"><span class="opt">file</span><span class="opt">git</span><span class="opt">CLI</span><span class="opt">MCP server</span><span class="opt">fetched URL</span><span class="opt">multi-modal artefact</span></div>
+          </td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">file</span><span class="opt">git</span><span class="opt">CLI</span><span class="opt">MCP server</span><span class="opt">fetched URL</span><span class="opt">multi-modal artefact</span></div>
+            <div class="f-select"><span class="opt">file</span><span class="opt">git</span><span class="opt">CLI</span><span class="opt">MCP server</span><span class="opt">fetched URL</span><span class="opt">multi-modal artefact</span></div>
+            <div class="f-select"><span class="opt">file</span><span class="opt">git</span><span class="opt">CLI</span><span class="opt">MCP server</span><span class="opt">fetched URL</span><span class="opt">multi-modal artefact</span></div>
+            <div class="f-select"><span class="opt">file</span><span class="opt">git</span><span class="opt">CLI</span><span class="opt">MCP server</span><span class="opt">fetched URL</span><span class="opt">multi-modal artefact</span></div>
+          </td>
+        </tr>
+
+        <tr><td class="locked" colspan="5"><b>BAND 2 &mdash; DEPTH 2 AND DEEPER: WHERE RECURSION FIRES</b></td></tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Where recursion fires</b><br><span style="font-size:7pt">Which Persona dispatches which nested Skill, and on what condition</span></td>
+          <td class="prior">The Security Reviewer dispatches CVE Triage on a dependency bump.<span class="prior-src">ch22 L63, L132</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Nested Skill + pin</b><br><span style="font-size:7pt">one line per nested Skill</span></td>
+          <td class="prior">—<span class="prior-src">ch22 L49-50</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Depth reached</b></td>
+          <td class="prior">—<span class="prior-src">ch22 L15</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3+</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3+</span></div><span style="font-size:7pt">If depth 1 in TARGET, state in writing why.</span></td>
+        </tr>
+
+        <tr><td class="locked" colspan="5"><b>BAND 3 &mdash; RETURN: ARTEFACTS, SYNTHESIS, THE SINGLE HUMAN READ</b></td></tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Artefact returned, per level</b><br><span style="font-size:7pt"><b>One</b> artefact per level.</span></td>
+          <td class="prior">—<span class="prior-src">ch22 L123</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>Synthesiser</b><br><span style="font-size:7pt">Who or what composes the verdicts</span></td>
+          <td class="prior">A Tech Lead Persona structured to preserve dissent rather than average it.<span class="prior-src">ch22 L158</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td>
+          <td><b>What the single human reads</b><br><span style="font-size:7pt">The one artefact a human actually opens</span></td>
+          <td class="prior">One verdict comment, not eight threads.<span class="prior-src">ch22 L182</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td>
+          <td><b>Who that human is</b><br><span style="font-size:7pt">A person, in both columns</span></td>
+          <td class="prior">—<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td>
+          <td><b>Persisted-trail location</b><br><span style="font-size:7pt">Your own path and structure</span></td>
+          <td class="prior">A run-scoped folder (<code>runs/2025-03-04/4711/</code>) holding <code>plan.md</code>, <code>personas/</code> with one file per Persona, <code>nested/</code>, <code>synthesis.md</code> and <code>lockfile-snapshot.apm.lock.yaml</code>.<span class="prior-src">ch22 L172-181</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+
+        <tr><td class="locked" colspan="5"><b>SUBSTRATE FOOTER</b></td></tr>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td>
+          <td><b>Substrate &mdash; harness</b><br><span style="font-size:7pt">Which harness carries the subagent threads</span></td>
+          <td class="prior">Named in the exemplar's footer band: Agent Harness.<span class="prior-src">ch22 L60-61, L95</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">20</span></td>
+          <td><b>Substrate &mdash; governance and distribution</b><br><span style="font-size:7pt">What pins the versions and owns the bundles</span></td>
+          <td class="prior">—<span class="prior-src">ch22 L95</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">21</span></td>
+          <td><b>Substrate &mdash; platform</b><br><span style="font-size:7pt">Where the files live</span></td>
+          <td class="prior">—<span class="prior-src">ch22 L95</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">22</span></td>
+          <td><b>Owner of this band's target state</b><br><span style="font-size:7pt">TARGET only. One per band: workflow header, depth 1, depth 2+, return, substrate.</span></td>
+          <td class="prior">—<span class="prior-src">derived</span></td>
+          <td class="locked">TARGET column only</td>
+          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>GAP
+      <span class="ws-block-note">one entry per band where TODAY and TARGET differ</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:26%"><col style="width:30%"><col style="width:18%"><col style="width:20%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Band</th><th>The gap, in one line</th><th>Owner</th><th>Sequenced into</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">G1</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">header</span><span class="opt">depth 1</span><span class="opt">depth 2+</span><span class="opt">return</span><span class="opt">substrate</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">G2</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">header</span><span class="opt">depth 1</span><span class="opt">depth 2+</span><span class="opt">return</span><span class="opt">substrate</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">G3</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">header</span><span class="opt">depth 1</span><span class="opt">depth 2+</span><span class="opt">return</span><span class="opt">substrate</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">G4</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">header</span><span class="opt">depth 1</span><span class="opt">depth 2+</span><span class="opt">return</span><span class="opt">substrate</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">G5</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">header</span><span class="opt">depth 1</span><span class="opt">depth 2+</span><span class="opt">return</span><span class="opt">substrate</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">G6</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">header</span><span class="opt">depth 1</span><span class="opt">depth 2+</span><span class="opt">return</span><span class="opt">substrate</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="5">Which delivery increment: a gap with no increment is an observation. Feeds the first delivery increment (ch22 &sect;12). Where rows 19&ndash;21 diverge from the outer WS-04 canvas, the outer canvas wins and the difference is a GAP entry. A source whose mechanism nobody in the room can name belongs here too.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  </div>
+
+  <div class="ws-foot-quote">
+    "Treating MCP as the architecture rather than as one mechanism is the most common shape of mistake an architect new to this substrate makes; it is worth naming on first contact." (ch22 L188)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-22-recursive-architecture-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```

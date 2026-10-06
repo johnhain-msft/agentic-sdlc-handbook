@@ -1,0 +1,163 @@
+---
+title: "Agent Failure Triage Log"
+pagetitle: "WS-12-failure-triage-log"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-12-failure-triage-log</b> &middot; declared format <b>A3 landscape</b> &middot; 1 sheet.
+  This is a living file kept in the repository, one row per triage event. The page below is
+  the template for the log; the white page is one physical sheet at true size.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Agent Failure Triage Log</h1>
+      <p class="ws-sub">A running log that turns each agent failure, or gap the process surfaces, into a permanent primitive fix &mdash; the mechanism by which instrumentation compounds.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-12-failure-triage-log</b><br>
+      Pack Z &middot; fill order 14<br>
+      type <b>diagnostic</b> &middot; format <b>A3 landscape</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Ch 12 &middot; The Instrumented Codebase</b> &rsaquo; <b>The Feedback Loop</b> &middot;
+    <code>handbook/ch12-the-instrumented-codebase.qmd</code> L574&ndash;603 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch12-the-instrumented-codebase.html#sec-codebase-feedback-loop">#sec-codebase-feedback-loop</a>
+    &middot; &ldquo;When an agent produces incorrect output, the diagnosis follows a consistent pattern&rdquo;
+    &middot; fill after <code>WS-12-effective-context-trace</code>
+  </div>
+
+  <div class="ws-instruction">
+    <b>Fix the file that should have prevented the mistake, not the generated code.</b>
+    Add one row for each failure the agent produced, or each gap your process surfaced, in the hour you hit it.
+    Name the context file that should have stopped it, pick one of the six root causes (follow the tree until it
+    resolves; &ldquo;unclear&rdquo; is not an option), and record the primitive file you edited and the exact text you added.
+    A row whose column 8 records a manual correction to generated output is an unclosed row. Keep this log in the repo under version control.
+  </div>
+
+  <div class="ws-block">
+    <h2>The diagnosis tree and one real project&rsquo;s examples
+      <span class="ws-block-note">printed once, from the book &mdash; exemplars, never data rows</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:24%"><col style="width:24%"><col style="width:24%"><col style="width:28%"></colgroup>
+      <thead><tr><th>Root cause (col 6) &rarr; routed fix (col 7)</th><th>Failure (col 4)</th><th>Root cause</th><th>Context fix (col 8)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="prior">Agent too generic? &rarr; Add domain knowledge to agent config<span class="prior-src">ch12 L584</span></td>
+          <td class="prior">Agent used <code>_rich_info()</code> directly instead of <code>logger.progress()</code><span class="prior-src">ch12 L596</span></td>
+          <td class="prior">Skill didn&rsquo;t explicitly ban direct calls</td>
+          <td class="prior">Added &ldquo;never call <code>_rich_*</code> directly in commands&rdquo; to CLI skill</td>
+        </tr>
+        <tr>
+          <td class="prior">Skill rules incomplete? &rarr; Add the missing case to the skill<span class="prior-src">ch12 L585</span></td>
+          <td class="prior">Agent invented a new collision detection pattern<span class="prior-src">ch12 L597</span></td>
+          <td class="prior">Instructions didn&rsquo;t list all base-class methods</td>
+          <td class="prior">Added &ldquo;use, don&rsquo;t reimplement&rdquo; table to integrator instructions</td>
+        </tr>
+        <tr>
+          <td class="prior">Instructions missing scope? &rarr; Add a scoped instruction file<span class="prior-src">ch12 L586</span></td>
+          <td class="prior">Agent produced inconsistent Unicode symbols in output<span class="prior-src">ch12 L598</span></td>
+          <td class="prior">No single source of truth for status symbols</td>
+          <td class="prior">Created <code>STATUS_SYMBOLS</code> reference in skill, added to anti-patterns</td>
+        </tr>
+        <tr>
+          <td class="prior">No decision framework? &rarr; Extract a new skill<span class="prior-src">ch12 L587</span></td>
+          <td class="prior">Agent used deprecated <code>SessionAuth</code> in new code<span class="prior-src">ch12 L599</span></td>
+          <td class="prior">Memory file didn&rsquo;t record the deprecation</td>
+          <td class="prior">Added deprecation notice with migration tracking reference</td>
+        </tr>
+        <tr>
+          <td class="prior">Context gap? &rarr; Update the memory file<span class="prior-src">ch12 L588</span></td>
+          <td class="locked" colspan="3">Four examples from a real project, where fixing the instrumentation file fixed the class of error permanently (ch12 L592).</td>
+        </tr>
+        <tr>
+          <td class="prior">No repeatable process? &rarr; Create a prompt<span class="prior-src">ch12 L589</span></td>
+          <td class="locked" colspan="3">Every failure you diagnose and fix is a failure that never recurs (ch12 L601).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Triage log &mdash; one row per event
+      <span class="ws-block-note">columns 1&ndash;17 in fill order, left to right &middot; col 10 is pre-ticked: house policy</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:5%"><col style="width:7%"><col style="width:7%"><col style="width:6%"><col style="width:10%"><col style="width:6%"><col style="width:8%"><col style="width:5%"><col style="width:6%"><col style="width:5%"><col style="width:5%"><col style="width:5%"><col style="width:6%"><col style="width:5%"><col style="width:5%"><col style="width:5%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>1 Entry no.</th><th>2 Date observed</th><th>3 Trigger</th><th>4 What we saw</th>
+          <th>5 Which context file should have prevented it (a path)</th><th>6 Root cause (pick one)</th>
+          <th>7 Routed fix (from col 6)</th><th>8 Primitive edited or created: path <i>and</i> exact text added</th>
+          <th>9 One-off or structural</th><th>10 Primitive created, not patched with an ad-hoc prompt?</th>
+          <th>11 Cascade?</th><th>12 Cascade step</th><th>13 What the rebuild then exposed</th>
+          <th>14 Committed before next fix?</th><th>15 Owner</th><th>16 Date closed</th><th>17 Recurred since?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fill"><span class="f-computed" data-formula="previous entry no. + 1"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Failure observed</span><span class="opt">Gap noticed</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Agent too generic</span><span class="opt">Skill rules incomplete</span><span class="opt">Instructions missing scope</span><span class="opt">No decision framework</span><span class="opt">Context gap</span><span class="opt">No repeatable process</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="routed fix for column 6; override only with a reason in col 8"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">One-off</span><span class="opt">Structural</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check">&#10003;</span>yes</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-computed" data-formula="previous step + 1; resets when col 13 blank"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+        </tr>
+</tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:1.5mm 0 0">Column 13 blank means the cascade closed here; anything written there opens the next row. Column 10: untick only with the reason written in column 8. Column 11: tick when this fix was made during an unresolved cascade. Column 14 unticked is speculative batching. Column 16 is the date the primitive edit merged, not the date the symptom stopped. Column 17 ticked: the fix did not hold &mdash; reopen and re-route through column 6.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Footer rule 1 &mdash; stop and reassess
+      <span class="ws-block-note">fill in before your first cascade, never during one</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:34%"><col style="width:66%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="prior">The published case ran five fixes deep before it closed. That is one project&rsquo;s history, printed as a reference point, not as a recommended limit.<span class="prior-src">WS-CS-PUB-cascade-log; case-study-publishing-pipeline.qmd L67&ndash;104</span></td>
+          <td class="fill"><div class="ours-label">Our cascade threshold: <span class="f-text sm" style="display:inline-block;width:30mm"></span> consecutive fixes, then we stop and reassess. When column 12 reaches this number, the next action is to reassess the approach, not make another fix.</div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    &ldquo;Every failure you diagnose and fix is a failure that never recurs. After 20-30 iterations, your instrumentation set covers the conventions that actually matter.&rdquo; (ch12 L601) &mdash; an expectation about how long the loop takes to pay off, not a target.
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-12-failure-triage-log &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```

@@ -1,0 +1,313 @@
+---
+title: "Target-State Primitive Bundle Definition"
+pagetitle: "WS-27-starter-shape-target"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-27-starter-shape-target</b> &middot; declared format <b>A3 landscape</b> &middot; 3 sheets.
+  Anything spilling past a white page onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Target-State Primitive Bundle Definition</h1>
+      <p class="ws-sub">A one-page definition of what "done" looks like for the primitive layer &mdash; surface A defines the bundle; surface B (sheet 3) tests it later.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-27-starter-shape-target</b><br>
+      Pack Z &middot; fill order <b>4</b><br>
+      type <b>inventory</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Chapter 27 &mdash; What Comes Next</b> &middot; heading <b>The Starter Shape</b> &middot;
+    <code>handbook/ch27-what-comes-next.qmd</code> L217-231 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-starter-shape">#sec-next-starter-shape</a>
+  </div>
+
+  <div class="ws-instruction">
+    Name your team's own instance of each of the five bundle elements. Read the boxed hedge aloud first, then tick it and name who read it.
+    For each element write the instance, an owner and a target date; the book's sizing guidance is printed in grey for comparison and is yours to overwrite.
+    Fill surface A now. Do not fill surface B (sheet 3) in this session &mdash; it is run later against a real bundle.
+  </div>
+
+  <div class="ws-block">
+    <h2>Surface A &mdash; the bundle definition <span class="ws-block-note">five fixed rows, one per named element</span></h2>
+
+    <div class="prior--hedged">
+      <span class="hedge-figure">Sizing guidance: "typically three to seven" skill bundles &mdash; "Not thirty skills covering every conceivable workflow."</span>
+      <span class="hedge-text">"The early signal &mdash; and we name it as a signal, not a settled finding &mdash; is that organizations that mature past the experimentation phase converge on something close to&hellip;" (ch27 L217). "The starter shape is a starting point, not a ceiling." (ch27 L241)</span>
+      <span class="hedge-src">handbook/ch27-what-comes-next.qmd L217, L219, L241</span>
+    </div>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:20%"><col style="width:30%"><col style="width:45%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Scope</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>"Signal, not settled finding" &mdash; acknowledged</b></td>
+          <td class="prior">The hedge printed verbatim in the box above.<span class="prior-src">ch27 L217</span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>Read aloud and acknowledged &mdash; ticked by whoever chairs the session, before filling begins</span>
+            <span class="f-owner"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Whole-bundle target date</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="ws-foot-quote">
+    "The starter shape is a starting point, not a ceiling." (ch27 L241)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-27-starter-shape-target &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Target-State Primitive Bundle Definition &mdash; Surface A, the five elements</h1>
+      <p class="ws-sub">One row per named bundle element. The book's sizing guidance is grey and is yours to overwrite, never a target.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-27-starter-shape-target</b><br>
+      Pack Z &middot; fill order <b>4</b><br>
+      type <b>inventory</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Surface A &mdash; the five bundle elements <span class="ws-block-note">continued from sheet 1; the hedge box there applies to every row</span></h2>
+
+    <div class="prior" style="margin:2mm 0">
+      Permission printed beside column A10: "The starter shape is a starting point, not a ceiling. Teams will adapt and extend it; some will abandon parts that do not fit their domain."<span class="prior-src">ch27 L241</span>
+    </div>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:9%"><col style="width:15%"><col style="width:13%"><col style="width:5%"><col style="width:10%"><col style="width:7%"><col style="width:8%"><col style="width:8%"><col style="width:9%"><col style="width:9%"><col style="width:7%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">4</span> A1 Bundle element</th>
+          <th>A2 The book's sizing guidance</th>
+          <th><span class="fno">5</span> A3 Our instance</th>
+          <th><span class="fno">6</span> A4 Count</th>
+          <th><span class="fno">7</span> A5 Highest-leverage recurring task covered</th>
+          <th><span class="fno">8</span> A6 Owner</th>
+          <th><span class="fno">9</span> A7 Target date</th>
+          <th><span class="fno">10</span> A8 Status</th>
+          <th><span class="fno">11</span> A9 Evidence</th>
+          <th><span class="fno">12</span> A10 Deviation from the book's shape, and why</th>
+          <th><span class="fno">13</span> A11 Our "non-trivial" (row 5 only)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">Skill bundles<span class="prior-src">ch27 L219</span></td>
+          <td class="prior">"typically three to seven &hellip; not thirty skills covering every conceivable workflow"<span class="prior-src">ch27 L219</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of items named in A3"></span></td>
+          <td class="fill"><span class="f-box sm"></span><div class="prior" style="margin-top:1mm">Candidates named: code review, refactoring, test authoring, documentation generation, incident triage. Yours may differ.<span class="prior-src">ch27 L219</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">drafted</span><span class="opt">shipped</span><span class="opt">pinned</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="locked">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior">Scope-attached rule files (<code>.instructions.md</code> with <code>applyTo</code> globs)<span class="prior-src">ch27 L220</span></td>
+          <td class="prior">"the set is small because each rule is reviewed every time it loads; the budget is attention, not disk"<span class="prior-src">ch27 L220</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of items named in A3"></span></td>
+          <td class="locked">&mdash;</td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">drafted</span><span class="opt">shipped</span><span class="opt">pinned</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="locked">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior">One agent file per repository<span class="prior-src">ch27 L221</span></td>
+          <td class="prior">"one agent file per repository"<span class="prior-src">ch27 L221</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of items named in A3"></span></td>
+          <td class="locked">&mdash;</td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">drafted</span><span class="opt">shipped</span><span class="opt">pinned</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="locked">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior">A lockfile and a manifest<span class="prior-src">ch27 L222</span></td>
+          <td class="prior">"pins the bundle's transitive closure"<span class="prior-src">ch27 L222</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of items named in A3"></span></td>
+          <td class="locked">&mdash;</td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">drafted</span><span class="opt">shipped</span><span class="opt">pinned</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="locked">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior">A panel-ready review configuration<span class="prior-src">ch27 L223</span></td>
+          <td class="prior">"escalate any non-trivial PR to a multi-specialist Panel"<span class="prior-src">ch27 L223</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of items named in A3"></span></td>
+          <td class="locked">&mdash;</td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">drafted</span><span class="opt">shipped</span><span class="opt">pinned</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span><div class="prior" style="margin-top:1mm">"when the change crosses the trivial threshold" &mdash; the book leaves it undefined.<span class="prior-src">ch27 L223</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The starter shape is a starting point, not a ceiling." (ch27 L241)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-27-starter-shape-target &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Target-State Primitive Bundle Definition &mdash; Surface B</h1>
+      <p class="ws-sub">The acceptance test: run later against a real bundle, by a reader who did not watch it being designed.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-27-starter-shape-target</b><br>
+      Pack Z &middot; fill order <b>4</b><br>
+      type <b>inventory</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Chapter 27 &mdash; What Comes Next</b> &middot; heading <b>The Starter Shape</b> &middot;
+    <code>handbook/ch27-what-comes-next.qmd</code> L227-231 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-starter-shape">#sec-next-starter-shape</a>
+  </div>
+
+  <div class="ws-instruction">
+    Run this only once a bundle exists, and not on the same day as surface A. For each of the three properties, apply the book's test to the real bundle and record the result, how you tested it, your name and the date.
+    Mark pass, partial or fail; nothing rolls up. If a row is not a pass, name the gap and who owns it.
+  </div>
+
+  <div class="ws-block">
+    <h2>Surface B &mdash; the acceptance test <span class="ws-block-note">three fixed rows, one per stated property</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:12%"><col style="width:25%"><col style="width:9%"><col style="width:20%"><col style="width:9%"><col style="width:9%"><col style="width:16%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>B1 Property</th>
+          <th>B2 The book's test</th>
+          <th><span class="fno">14</span> B3 Result</th>
+          <th><span class="fno">15</span> B4 How it was tested</th>
+          <th><span class="fno">16</span> B5 Tested by</th>
+          <th><span class="fno">17</span> B6 Date tested</th>
+          <th><span class="fno">18</span> B7 If not pass &mdash; the gap and its owner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">It is small enough to read<span class="prior-src">ch27 L227</span></td>
+          <td class="prior">A new team member reads the entire bundle in an afternoon and knows what the agent will do on their first PR.<span class="prior-src">ch27 L227</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">partial</span><span class="opt">fail</span></div></td>
+          <td class="fill"><span class="f-box lg"></span><div class="ws-block-note">Name the person who read the bundle, and the date.</div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-box"></span><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">It is composed, not stacked<span class="prior-src">ch27 L229</span></td>
+          <td class="prior">Each primitive has a single concern and depends explicitly on what it builds on, so the bundle has a dependency graph rather than a flat list.<span class="prior-src">ch27 L229</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">partial</span><span class="opt">fail</span></div></td>
+          <td class="fill"><span class="f-box lg"></span><div class="ws-block-note">Attach or cite the rendered dependency graph.</div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-box"></span><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">It is governed by the lockfile<span class="prior-src">ch27 L231</span></td>
+          <td class="prior">Every release of every primitive is pinned; the lockfile diff appears in the next CI run, and that change goes through the same review the source diff goes through.<span class="prior-src">ch27 L231</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">partial</span><span class="opt">fail</span></div></td>
+          <td class="fill"><span class="f-box lg"></span><div class="ws-block-note">Cite a CI run showing a lockfile diff in review.</div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-box"></span><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The starter shape is a starting point, not a ceiling." (ch27 L241)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-27-starter-shape-target &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```

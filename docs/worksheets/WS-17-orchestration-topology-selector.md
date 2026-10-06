@@ -131,8 +131,8 @@ For each class of work the org actually does (routine feature change, cross-cutt
 
 Rows in block A are the classes of work this organisation actually does. Block B is a printed
 reference transcribed from the chapter's three pattern diagrams and its Domain Teams table; it is
-read, not filled, except for the org's own instantiation at column 14. The sheet is A3 landscape
-with the three pattern diagrams reproduced across the head of the page.
+read, not filled, except for the org's own instantiation at column 14. The sheet is A4 portrait, projected
+and filled live; the three pattern diagrams are printed across a sheet of their own.
 
 **Block A — the sanctioned-topology standard.**
 
@@ -154,7 +154,7 @@ with the three pattern diagrams reproduced across the head of the page.
 |---|---|---|---|---|---|
 | 10 | Topology | `select` (fixed 4) | Single agent / Writer-Reviewer-Tester / Domain Teams / Audit-Execute-Validate | — | ch17 L56, L75, L134 |
 | 11 | Stages, and what passes between them | `free text` (printed, transcribed from the diagrams) | **Writer-Reviewer-Tester** — Writer agent →*code changes*→ Reviewer agent →*findings: bugs, logic errors, security*→ Tester agent →*test updates + verification*→ Verified output. **Audit-Execute-Validate** — Audit agents (read-only) →*findings: files, severity, recommendations*→ Planning (human decision) →*scoped tasks with file assignments*→ Execution agents (read-write) →*code changes*→ Validation agents (read-only) →*review findings, test results*→ Ship. **Domain Teams** — parallel teams, each owning a concern and every file related to it; the pattern scales by adding a team per concern. **Single agent** — no stages | — | ch17 L65-68, L139-152, L77-86 |
-| 12 | The constraint that makes the topology work | `free text` (printed) | **Writer-Reviewer-Tester** — the reviewer receives the diff plus the original source, *not* the writer's conversation history, so it evaluates the output on its own merits rather than being anchored by the writer's reasoning. **Audit-Execute-Validate** — audit and validation agents are read-only and can therefore be dispatched in parallel over the same files with no risk of interference; only execution agents hold write, and the human decision between audit and execution is the highest-impact point in the process. **Domain Teams** — neither team needs the other's context; the coordination cost is between teams, not within them | — | ch17 L73, L154-156, L84-86 |
+| 12 | The constraint that makes the topology work | `free text` (printed) | **Writer-Reviewer-Tester** — the reviewer receives the diff plus the original source, *not* the writer's conversation history, so it evaluates the output on its own merits rather than being anchored by the writer's reasoning. **Audit-Execute-Validate** — audit and validation agents are read-only and can therefore be dispatched in parallel over the same files with no risk of interference; only execution agents hold write, and the human decision between audit and execution is the highest-impact point in the process. **Domain Teams** — neither team needs the other's context; the coordination cost is between teams, not within them | — | ch17 L73, L150-152, L84-86 |
 | 13 | Domain Teams reference split | `free text` (printed) | **Architecture team** — context loaded: type definitions, module boundaries, pattern catalogue, dependency graph. Owns: type-safety fixes, dead-code removal, API consolidation. **Domain expert team** — context loaded: output conventions, symbol dictionaries, UX guidelines, migration patterns. Owns: verbose coverage, logger migration, formatting cleanup | — | ch17 L79-82 |
 | 14 | Our instantiation | `free text` | — | For each topology the org sanctions: our team names, our concerns, and the exclusive file-ownership boundary per team | ch17 L108-130 |
 
