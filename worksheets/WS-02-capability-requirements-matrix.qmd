@@ -9,6 +9,7 @@ format:
           <style>
             html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
             @page { size: A3 landscape; margin: 12mm; }
+            .fno, .prior-src, .prior .prior-src, .f-date, .f-hml .pt { font-size: 7pt !important; }
           </style>
 ---
 
@@ -204,7 +205,7 @@ format:
       </thead>
       <tbody>
         <tr>
-          <td class="ws-num"><span class="fno">13</span></td>
+          <td class="ws-num"><span class="fno">12</span></td>
           <td class="fill"><span class="f-box sm"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">AI coding tool</span><span class="opt">Software delivery platform</span></div></td>
           <td class="prior">Individual developer (tool) vs engineering leadership (platform)<span class="prior-src">ch02 L88-95</span><span class="f-owner"></span></td>
@@ -215,7 +216,7 @@ format:
           <td class="prior">Code (+ expanding) vs ideate through operate<span class="prior-src">ch02 L88-95</span><span class="f-box sm"></span></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">14</span></td>
+          <td class="ws-num"><span class="fno">13</span></td>
           <td class="fill"><span class="f-box sm"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">AI coding tool</span><span class="opt">Software delivery platform</span></div></td>
           <td class="prior">Individual developer (tool) vs engineering leadership (platform)<span class="prior-src">ch02 L88-95</span><span class="f-owner"></span></td>
@@ -243,7 +244,7 @@ format:
       </thead>
       <tbody>
         <tr>
-          <td class="ws-num"><span class="fno">15</span></td>
+          <td class="ws-num"><span class="fno">14</span></td>
           <td class="prior">Work context<span class="prior-src">ch04 L222-226</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Build</span><span class="opt">Buy</span><span class="opt">Compose</span></div></td>
           <td class="fill"><span class="f-text"></span></td>
@@ -254,7 +255,7 @@ format:
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">16</span></td>
+          <td class="ws-num"><span class="fno">15</span></td>
           <td class="prior">Data context<span class="prior-src">ch04 L222-226</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Build</span><span class="opt">Buy</span><span class="opt">Compose</span></div></td>
           <td class="fill"><span class="f-text"></span></td>
@@ -265,7 +266,7 @@ format:
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">17</span></td>
+          <td class="ws-num"><span class="fno">16</span></td>
           <td class="prior">Code context<span class="prior-src">ch04 L222-226</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Build</span><span class="opt">Buy</span><span class="opt">Compose</span></div></td>
           <td class="fill"><span class="f-text"></span></td>
@@ -286,7 +287,7 @@ format:
       <colgroup><col style="width:6%"><col style="width:24%"><col style="width:35%"><col style="width:35%"></colgroup>
       <tbody>
         <tr>
-          <td class="ws-num"><span class="fno">18</span></td>
+          <td class="ws-num"><span class="fno">17</span></td>
           <td><b>Requirements signed off by</b></td>
           <td class="fill"><span class="f-owner"></span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
@@ -335,7 +336,7 @@ format:
       <colgroup><col style="width:5%"><col style="width:24%"><col style="width:22%"><col style="width:23%"><col style="width:26%"></colgroup>
       <tbody>
         <tr>
-          <td class="ws-num"><span class="fno">19</span></td>
+          <td class="ws-num"><span class="fno">18</span></td>
           <td><b>Vendor</b><span class="prior-src">Blank per column group &middot; derived</span></td>
           <td class="fill" colspan="3"><span class="f-text"></span></td>
         </tr>
@@ -347,30 +348,30 @@ format:
         <tr><th></th><th>Capability</th><th>Tier observed</th><th>Evidence class</th><th>If N/A — design intent or genuine gap?</th></tr>
       </thead>
       <tbody>
-        <tr><td class="ws-num"><span class="fno">20</span></td><td class="prior">Code completion<span class="prior-src">ch02 L110</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
-        <tr><td class="ws-num"><span class="fno">21</span></td><td class="prior">Chat / explain<span class="prior-src">ch02 L111</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
-        <tr><td class="ws-num"><span class="fno">22</span></td><td class="prior">Multi-file editing<span class="prior-src">ch02 L112</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
-        <tr><td class="ws-num"><span class="fno">23</span></td><td class="prior">Agent mode (in-editor)<span class="prior-src">ch02 L113</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
-        <tr><td class="ws-num"><span class="fno">24</span></td><td class="prior">Terminal / CLI agent<span class="prior-src">ch02 L114</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
-        <tr><td class="ws-num"><span class="fno">25</span></td><td class="prior">Autonomous PR creation<span class="prior-src">ch02 L115</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
-        <tr><td class="ws-num"><span class="fno">26</span></td><td class="prior">Code review agent<span class="prior-src">ch02 L116</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
-        <tr><td class="ws-num"><span class="fno">27</span></td><td class="prior">Multi-model routing<span class="prior-src">ch02 L117</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
-        <tr><td class="ws-num"><span class="fno">28</span></td><td class="prior">Custom instructions / rules<span class="prior-src">ch02 L118</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
-        <tr><td class="ws-num"><span class="fno">29</span></td><td class="prior">Enterprise governance<span class="prior-src">ch02 L119</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
-        <tr><td class="ws-num"><span class="fno">30</span></td><td class="prior">Full SDLC platform<span class="prior-src">ch02 L120</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td class="prior">Code completion<span class="prior-src">ch02 L110</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">20</span></td><td class="prior">Chat / explain<span class="prior-src">ch02 L111</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td class="prior">Multi-file editing<span class="prior-src">ch02 L112</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">22</span></td><td class="prior">Agent mode (in-editor)<span class="prior-src">ch02 L113</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td class="prior">Terminal / CLI agent<span class="prior-src">ch02 L114</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">24</span></td><td class="prior">Autonomous PR creation<span class="prior-src">ch02 L115</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td class="prior">Code review agent<span class="prior-src">ch02 L116</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">26</span></td><td class="prior">Multi-model routing<span class="prior-src">ch02 L117</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td class="prior">Custom instructions / rules<span class="prior-src">ch02 L118</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">28</span></td><td class="prior">Enterprise governance<span class="prior-src">ch02 L119</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">29</span></td><td class="prior">Full SDLC platform<span class="prior-src">ch02 L120</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
       </tbody>
     </table>
     <table class="ws">
       <colgroup><col style="width:5%"><col style="width:33%"><col style="width:31%"><col style="width:31%"></colgroup>
       <tbody>
         <tr>
-          <td class="ws-num"><span class="fno">31</span></td>
+          <td class="ws-num"><span class="fno">30</span></td>
           <td><b>Assessed on</b><span class="prior-src">Mandatory per vendor group &middot; ch02 L138</span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
           <td class="prior">The landscape evolves quarterly; verify current capabilities at each vendor's site before making tool decisions.<span class="prior-src">ch02 L138</span></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">32</span></td>
+          <td class="ws-num"><span class="fno">31</span></td>
           <td><b>Re-verify by</b><span class="prior-src">Mandatory per vendor group &middot; ch02 L138</span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
           <td class="prior">Set the date now; the snapshot decays.<span class="prior-src">ch02 L138</span></td>
@@ -423,49 +424,49 @@ format:
       </thead>
       <tbody>
         <tr>
-          <td class="ws-num"><span class="fno">33</span></td>
+          <td class="ws-num"><span class="fno">32</span></td>
           <td class="prior">Ideate<span class="prior-src">ch04 L108-118</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
           <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">34</span></td>
+          <td class="ws-num"><span class="fno">33</span></td>
           <td class="prior">Plan<span class="prior-src">ch04 L108-118</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
           <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">35</span></td>
+          <td class="ws-num"><span class="fno">34</span></td>
           <td class="prior">Code<span class="prior-src">ch04 L108-118</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
           <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">36</span></td>
+          <td class="ws-num"><span class="fno">35</span></td>
           <td class="prior">Build<span class="prior-src">ch04 L108-118</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
           <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">37</span></td>
+          <td class="ws-num"><span class="fno">36</span></td>
           <td class="prior">Test<span class="prior-src">ch04 L108-118</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
           <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">38</span></td>
+          <td class="ws-num"><span class="fno">37</span></td>
           <td class="prior">Review<span class="prior-src">ch04 L108-118</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
           <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">39</span></td>
+          <td class="ws-num"><span class="fno">38</span></td>
           <td class="prior">Release<span class="prior-src">ch04 L108-118</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
           <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">40</span></td>
+          <td class="ws-num"><span class="fno">39</span></td>
           <td class="prior">Operate<span class="prior-src">ch04 L108-118</span></td>
           <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
           <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
@@ -476,7 +477,7 @@ format:
       <colgroup><col style="width:5%"><col style="width:24%"><col style="width:71%"></colgroup>
       <tbody>
         <tr>
-          <td class="ws-num"><span class="fno">41</span></td>
+          <td class="ws-num"><span class="fno">40</span></td>
           <td><b>Claim-to-evidence honesty (summary row, one per vendor)</b></td>
           <td class="fill">
             <div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div>
