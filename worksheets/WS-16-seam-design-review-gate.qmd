@@ -73,7 +73,7 @@ format:
           <td class="prior"><b>Draw the line on the diagram</b><span class="prior-src">ch16 L143</span></td>
           <td class="prior">Before you write the prompt or the workflow, sketch the system and label which boxes are deterministic and which are probabilistic. Anything consequential on the probabilistic side is a design defect; redraw until consequential side effects sit on the deterministic side, behind a gate.<span class="prior-src">ch16 L143</span></td>
           <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
-          <td class="fill taller"><span class="f-box"></span><span class="ws-block-note">Attach the diagram, boxes labelled deterministic or probabilistic.</span></td>
+          <td class="fill taller"><span class="f-box"></span><span class="ws-block-note">Attach the diagram, boxes labeled deterministic or probabilistic.</span></td>
           <td class="fill taller"><span class="f-text"></span><span class="f-text"></span><span class="ws-block-note"><b>Must be empty.</b> A non-empty list returns the design.</span></td>
           <td class="fill"><span class="f-owner"></span></td>
         </tr>
