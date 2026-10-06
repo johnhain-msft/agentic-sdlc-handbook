@@ -9,6 +9,7 @@ format:
           <style>
             html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
             @page { size: A3 landscape; margin: 12mm; }
+            .prior-src, .hedge-src { font-size: 7pt !important; }
           </style>
 ---
 
@@ -433,25 +434,6 @@ format:
       </thead>
       <tbody>
         <tr>
-          <td class="ws-num"><span class="fno">11</span></td>
-          <td class="fill"><span class="f-text"></span></td>
-          <td class="fill"><div class="f-select"><span class="opt">individual</span><span class="opt">team-business</span><span class="opt">enterprise</span></div></td>
-          <td class="fill"><div class="f-select"><span class="opt">per-seat subscription</span><span class="opt">usage-based</span><span class="opt">platform-bundled</span></div></td>
-          <td class="fill"><span class="f-text sm"></span></td>
-          <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
-          <td class="fill">
-            <div class="prior--hedged">
-              <span class="hedge-figure">2–4×</span>
-              <span class="hedge-text">Enterprise tiers that add governance, SSO, and audit controls typically run 2–4× the individual price, depending on the vendor.</span>
-              <span class="hedge-src">handbook/ch02-the-ai-native-landscape.qmd L142-146</span>
-            </div>
-            <div class="ours-label">Enterprise premium over individual — our computed ratio</div>
-            <span class="f-computed" data-formula="quoted enterprise unit price ÷ individual unit price from the vendor quote"></span>
-          </td>
-          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
-          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-        </tr>
-        <tr>
           <td class="ws-num"><span class="fno">12</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">individual</span><span class="opt">team-business</span><span class="opt">enterprise</span></div></td>
@@ -472,6 +454,25 @@ format:
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">13</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">individual</span><span class="opt">team-business</span><span class="opt">enterprise</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">per-seat subscription</span><span class="opt">usage-based</span><span class="opt">platform-bundled</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill">
+            <div class="prior--hedged">
+              <span class="hedge-figure">2–4×</span>
+              <span class="hedge-text">Enterprise tiers that add governance, SSO, and audit controls typically run 2–4× the individual price, depending on the vendor.</span>
+              <span class="hedge-src">handbook/ch02-the-ai-native-landscape.qmd L142-146</span>
+            </div>
+            <div class="ours-label">Enterprise premium over individual — our computed ratio</div>
+            <span class="f-computed" data-formula="quoted enterprise unit price ÷ individual unit price from the vendor quote"></span>
+          </td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">individual</span><span class="opt">team-business</span><span class="opt">enterprise</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">per-seat subscription</span><span class="opt">usage-based</span><span class="opt">platform-bundled</span></div></td>
