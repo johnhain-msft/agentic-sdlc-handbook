@@ -101,13 +101,13 @@ format:
         <tr>
           <td class="ws-num"><span class="fno">4</span></td>
           <td><b>Declared recursion depth</b></td>
-          <td class="prior">— The book supplies no number; declare your own integer and start low.<span class="prior-src">ch17 L12</span></td>
-          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="prior">          — The book supplies no number. The bound must be declared and enforced; it is not a tuning parameter.<span class="prior-src">ch17 L12</span></td>
+                    <td class="fill"><span class="f-text sm"></span><small>Write your organization's own integer.</small></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">5</span></td>
           <td><b>Maximum fan-out</b></td>
-          <td class="prior">As above. An undeclared fan-out is a fan-out tree nobody can price or audit.<span class="prior-src">ch17 L12</span></td>
+          <td class="prior">The book supplies no number. An undeclared fan-out is a fan-out tree nobody can price or audit.<span class="prior-src">ch17 L12</span></td>
           <td class="fill"><span class="f-text sm"></span></td>
         </tr>
         <tr>
@@ -141,8 +141,10 @@ format:
               <span class="opt">Asserted</span>
               <span class="opt">Not enforceable</span>
             </div>
-            <small>Verified means somebody tried to exceed the bound and the harness stopped them.</small>
-          </td>
+                        <small>Verified means somebody tried to exceed the bound and the harness stopped them. If Not enforceable: move to unsanctioned, or name a compensating control and its owner.</small>
+                        <span class="f-checkline"><span class="f-check"></span>Moved to unsanctioned</span>
+                        <span class="f-text sm"></span>
+                      </td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">9</span></td>
