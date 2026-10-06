@@ -40,7 +40,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
   </div>
   <div class="ws-instruction">
-    For Days 1&ndash;5, enter five real calendar dates from Monday to Friday in a named week; &ldquo;next week&rdquo; is not a date. For each horizon, name the specific module and team, one owner, and the evidence artifact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives. The Day 30, 60 and 90 commitments are authored for this kit, not supplied by the handbook.
+    For Days 1&ndash;5, enter five real calendar dates from Monday to Friday in a named week; &ldquo;next week&rdquo; is not a date. For each horizon, name the specific module and team, one owner, and the evidence artifact. Mark Done only when the work is complete and sign that row.     Record each day&rsquo;s detail in its numbered field below. Check the module and team against the pilot chosen in WS-08-pilot-selection-and-scope. Use the same three Week 1 files as the Day 2 primitives. The Day 30, 60 and 90 commitments are authored for this kit, not supplied by the handbook.
   </div>
   <div class="ws-block">
     <h2>Day 1&ndash;2 register <span class="ws-block-note">complete one row per horizon; each row is signed individually</span></h2>
@@ -88,7 +88,7 @@ format:
         <tr>
           <td class="ws-num"><span class="fno">11</span></td><td><b>Day 1 — The most-changed module, and how we know</b></td>
           <td class="prior">Pick the module your team changes most frequently. Not the biggest module, the most-changed one.<span class="prior-src">ch27 L151</span></td>
-          <td class="fill"><span class="f-box"></span></td>
+                    <td class="fill"><b>Module:</b> <span class="f-text"></span><b>Evidence (the query or commit count that identified it):</b> <span class="f-text"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">12</span></td><td><b>Day 1 — Implicit conventions found</b></td>
@@ -192,12 +192,12 @@ format:
           <td class="ws-num"><span class="fno">17</span></td><td><b>Day 3 — Predicted mistakes: prevented?</b></td>
           <td class="prior">Did the context files prevent the mistakes you predicted? Did they cause new problems?<span class="prior-src">ch27 L163</span></td>
           <td class="fill">
-            <b>Predicted mistake A:</b> <span class="f-text"></span>
-            <div class="f-select"><span class="opt">prevented</span><span class="opt">not prevented</span><span class="opt">new problem introduced</span></div>
-            <b>Predicted mistake B:</b> <span class="f-text"></span>
-            <div class="f-select"><span class="opt">prevented</span><span class="opt">not prevented</span><span class="opt">new problem introduced</span></div>
-            <b>Predicted mistake C:</b> <span class="f-text"></span>
-            <div class="f-select"><span class="opt">prevented</span><span class="opt">not prevented</span><span class="opt">new problem introduced</span></div>
+            <div style="margin-bottom:3mm"><b>Predicted mistake A:</b> <span class="f-text"></span>
+            <div class="f-select"><span class="opt">prevented</span><span class="opt">not prevented</span><span class="opt">new problem introduced</span></div></div>
+            <div style="margin-bottom:3mm;border-top:.25mm solid #93a0ad;padding-top:2mm"><b>Predicted mistake B:</b> <span class="f-text"></span>
+            <div class="f-select"><span class="opt">prevented</span><span class="opt">not prevented</span><span class="opt">new problem introduced</span></div></div>
+            <div style="border-top:.25mm solid #93a0ad;padding-top:2mm"><b>Predicted mistake C:</b> <span class="f-text"></span>
+            <div class="f-select"><span class="opt">prevented</span><span class="opt">not prevented</span><span class="opt">new problem introduced</span></div></div>
           </td>
         </tr>
       </tbody>
@@ -256,8 +256,8 @@ format:
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">22</span></td><td><b>Day 5 — Who owns which instruction file</b></td>
-          <td class="prior">Who owns which instruction files? One owner per file; do not collapse the list into one name.<span class="prior-src">ch27 L175</span></td>
-          <td class="fill"><span class="f-text"></span><span class="f-owner"></span><span class="f-text"></span><span class="f-owner"></span><span class="f-text"></span><span class="f-owner"></span></td>
+          <td class="prior">          Who owns which instruction files?<span class="prior-src">ch27 L175</span></td>
+                    <td class="fill"><i>One named owner per file, not one owner for all files.</i> <span class="f-text"></span><span class="f-owner"></span><span class="f-text"></span><span class="f-owner"></span><span class="f-text"></span><span class="f-owner"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">23</span></td><td><b>Day 5 — How we keep them current as the code evolves</b></td>
@@ -341,8 +341,8 @@ format:
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">25</span></td><td><b>Week 1 files — Author</b></td>
-          <td class="prior">A named author per file. These three reconcile to the three primitives in field 13.<span class="prior-src">ch12 L719</span></td>
-          <td class="fill"><b>Global instructions</b><span class="f-owner"></span><b>Scoped instruction file</b><span class="f-owner"></span><b>Agent configuration</b><span class="f-owner"></span></td>
+          <td class="prior">          &mdash;<span class="prior-src">ch12 L719</span></td>
+                    <td class="fill"><i>A named author per file; these reconcile to the three primitives in field 13.</i><br><b>Global instructions</b><span class="f-owner"></span><b>Scoped instruction file</b><span class="f-owner"></span><b>Agent configuration</b><span class="f-owner"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">26</span></td><td><b>Week 2 — The real work these files will be exercised on</b></td>
@@ -494,11 +494,6 @@ format:
         </tr>
       </tbody>
     </table>
-  </div>
-  <div class="ws-block">
-    <div class="ws-block-note" style="display:block;border-top:1mm solid #263746;padding-top:2mm;margin-top:2mm">
-      Everything below this line is authored for this kit. The handbook's own plan ends at Day 5 (ch27 L149-177); Chapter 12 carries it to Week 3 and a monthly cadence (ch12 L717-734). Days 30, 60 and 90 are our extension.
-    </div>
   </div>
   <div class="ws-foot">
     <div>WS-27-first-week-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 7</div>
