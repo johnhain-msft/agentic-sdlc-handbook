@@ -9,6 +9,19 @@ format:
           <style>
             html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
             @page { size: A3 landscape; margin: 12mm; }
+            table.ws col:nth-child(2){width:7% !important} table.ws col:nth-child(3){width:8% !important}
+            table.ws col:nth-child(5){width:15% !important} table.ws col:nth-child(8){width:10% !important}
+            table.ws col:nth-child(9){width:7% !important} table.ws col:nth-child(11){width:6% !important}
+            table.ws col:nth-child(14){width:7% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(1){width:10% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(2){width:7% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(3){width:8% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(8){width:7% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(9){width:7% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(11){width:6% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(14){width:8% !important}
+            table.ws td.fill > span.prior{display:block;position:static;width:auto;height:auto;overflow:visible;word-break:break-all;font-size:6pt;margin-bottom:1mm}
+            table.ws td:nth-child(5) .f-text{display:block;height:13mm}
           </style>
 ---
 
@@ -222,7 +235,7 @@ format:
           <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
           <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
           <td class="prior">Require regular unassisted development exercises. Pair juniors with agent output for review practice.<span class="prior-src">ch05 L114</span></td>
-          <td class="prior">WS-05-capability-retention-plan<span class="prior-src">ch05 L114</span></td>
+          <td class="prior">WS-05-capability-retention-plan<span class="prior-src">pointer to worksheet, not book text; risk at ch05 L114</span></td>
           <td class="fill"><span class="prior">WS-05-capability-retention-plan</span><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
           <td class="fill"><span class="prior">WS-05-capability-retention-plan</span><span class="f-text"></span></td>
           <td class="prior">Engineering managers<span class="prior-src">ch05 L114</span></td>
@@ -238,7 +251,7 @@ format:
           <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
           <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
           <td class="prior">Rotate architecture review responsibilities. Include constraint-design tasks in sprint work.<span class="prior-src">ch05 L115</span></td>
-          <td class="prior">WS-05-capability-retention-plan<span class="prior-src">ch05 L115</span></td>
+          <td class="prior">WS-05-capability-retention-plan<span class="prior-src">pointer to worksheet, not book text; risk at ch05 L115</span></td>
           <td class="fill"><span class="prior">WS-05-capability-retention-plan</span><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
           <td class="fill"><span class="prior">WS-05-capability-retention-plan</span><span class="f-text"></span></td>
           <td class="prior">Architecture / CTO<span class="prior-src">ch05 L115</span></td>
