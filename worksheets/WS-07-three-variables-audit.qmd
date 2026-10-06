@@ -1,0 +1,278 @@
+---
+title: "The Three Levers Audit — Model, Tokens, Harness"
+pagetitle: "WS-07-three-variables-audit"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 594mm; --sheet-h: 420mm; --sheet-margin: 16mm; }
+            @page { size: A2 landscape; margin: 16mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-07-three-variables-audit</b> &middot; review copy &middot; declared format <b>A2 landscape</b> &middot;
+  1 sheet. Each white page below is one physical sheet at true size. Anything spilling past a page edge
+  onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head" style="flex-wrap:wrap;row-gap:0;padding-bottom:0">
+    <div>
+      <h1>The Three Levers Audit — Model, Tokens, Harness</h1>
+      <p class="ws-sub">A lever-by-lever audit of running and planned agentic workflows: identify the misroutings and token taxes to fix first, and name an owner for each variable.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-07-three-variables-audit</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>9</b> &middot; type <b>inventory</b><br>
+      audience <b>architect</b>
+    </div>
+    <div style="flex:0 0 100%;display:flex;align-items:center;gap:3mm;font-size:8pt">
+      <b>Sheet mode</b>
+      <span class="prior" style="padding:.5mm 2mm">—<span class="prior-src">derived</span></span>
+      <span class="f-select"><span class="opt">MEASURED</span><span class="opt">PROSPECTIVE</span></span>
+      <span style="font-size:7.5pt">Mark PROSPECTIVE only when every workflow row is planned.</span>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Agentic SDLC Bill</b>, <i>Three Variables You Already Control</i> &middot;
+    <code>handbook/ch07-the-agentic-sdlc-bill.qmd</code> L45-53 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch07-the-agentic-sdlc-bill.html#sec-bill-three-variables">#sec-bill-three-variables</a>
+  </div>
+
+  <div class="ws-instruction">
+    For each significant workflow running or planned, record its mode, what the step does, harness,
+    model tiers, token use, bloat sources, reach and whether to fix it first. Name who decided each
+    lever; write <b>nobody / vendor default</b> when that is the honest answer. Use the first workflow
+    row for the circled highest-spread task from <b>WS-07-cost-variance-baseline</b>. If all rows are
+    planned, mark the sheet <b>PROSPECTIVE</b>; otherwise mark it <b>MEASURED</b>.
+  </div>
+
+  <div class="ws-block">
+    <h2>Workflow audit
+      <span class="ws-block-note">One workflow per row &middot; carry the prerequisite's circled task in row 1 &middot; harness governs the other levers</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:9%"><col style="width:5%"><col style="width:7%">
+        <col style="width:8%"><col style="width:9%"><col style="width:4%"><col style="width:6.5%">
+        <col style="width:8%"><col style="width:5.5%"><col style="width:4%"><col style="width:5.5%">
+        <col style="width:5%"><col style="width:7.5%"><col style="width:5.5%">
+        <col style="width:4%"><col style="width:6.5%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th colspan="3">Workflow</th>
+          <th colspan="4" style="border-left:1mm solid #34495e">HARNESS &mdash; most reach</th>
+          <th colspan="4" style="border-left:1mm solid #34495e">MODEL</th>
+          <th colspan="3" style="border-left:1mm solid #34495e">TOKENS</th>
+          <th colspan="2" style="border-left:1mm solid #34495e">Prioritize</th>
+        </tr>
+        <tr>
+          <th><span class="fno">1</span><br>Workflow</th>
+          <th><span class="fno">2</span><br>Mode</th>
+          <th><span class="fno">3</span><br>What the step actually does</th>
+          <th style="border-left:1mm solid #34495e"><span class="fno">4</span><br>HARNESS &mdash; which harness it runs on</th>
+          <th><span class="fno">5</span><br>HARNESS &mdash; does it encode which model runs each step?</th>
+          <th><span class="fno">6</span><br>HARNESS &mdash; model calls per run</th>
+          <th><span class="fno">7</span><br>HARNESS &mdash; who decided this</th>
+          <th style="border-left:1mm solid #34495e"><span class="fno">8</span><br>MODEL &mdash; tier in use today</th>
+          <th><span class="fno">9</span><br>MODEL &mdash; cheapest sufficient tier for this step</th>
+          <th><span class="fno">10</span><br>MODEL &mdash; misrouted?</th>
+          <th><span class="fno">11</span><br>MODEL &mdash; who decided this</th>
+          <th style="border-left:1mm solid #34495e"><span class="fno">12</span><br>TOKENS &mdash; rough tokens per invocation</th>
+          <th><span class="fno">13</span><br>TOKENS &mdash; bloat sources present</th>
+          <th><span class="fno">14</span><br>TOKENS &mdash; who decided this</th>
+          <th style="border-left:1mm solid #34495e"><span class="fno">15</span><br>Reach</th>
+          <th style="border-left:1mm solid #34495e"><span class="fno">16</span><br>Fix first?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="prior">—<span class="prior-src">derived</span></td>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="prior">—<span class="prior-src">ch07 L49</span></td>
+          <td class="prior">the harness is where you encode <i>which</i> model runs each step and <i>how much</i> context flows through it.<span class="prior-src">ch07 L49</span></td>
+          <td class="prior">—<span class="prior-src">ch07 L49</span></td>
+          <td class="prior">—<span class="prior-src">ch07 L51</span></td>
+          <td class="prior">—<span class="prior-src">ch07 L47, footnote at L191</span></td>
+          <td class="prior">—<span class="prior-src">ch07 L47</span></td>
+          <td class="prior">Routing a mechanical edit to a frontier model is the single most common way teams overpay.<span class="prior-src">ch07 L47</span></td>
+          <td class="prior">—<span class="prior-src">ch07 L51</span></td>
+          <td class="prior">—<span class="prior-src">ch07 L48</span></td>
+          <td class="prior">Prompt bloat, redundant re-reads, oversized tool surfaces, and uncached prefixes.<span class="prior-src">ch07 L48</span></td>
+          <td class="prior">—<span class="prior-src">ch07 L51</span></td>
+          <td class="prior">—<span class="prior-src">derived</span></td>
+          <td class="prior">A harness fix goes ahead of a model swap: the harness governs the other two.<span class="prior-src">ch07 L49</span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">running today</span><span class="opt">planned</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes, statically</span><span class="opt">partly</span><span class="opt">no, the operator chooses</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span><span class="opt">vendor default (unknown)</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>prompt bloat</span><span class="f-checkline"><span class="f-check"></span>redundant re-reads</span><span class="f-checkline"><span class="f-check"></span>oversized tool surface</span><span class="f-checkline"><span class="f-check"></span>uncached prefix</span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">running today</span><span class="opt">planned</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes, statically</span><span class="opt">partly</span><span class="opt">no, the operator chooses</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span><span class="opt">vendor default (unknown)</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>prompt bloat</span><span class="f-checkline"><span class="f-check"></span>redundant re-reads</span><span class="f-checkline"><span class="f-check"></span>oversized tool surface</span><span class="f-checkline"><span class="f-check"></span>uncached prefix</span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">running today</span><span class="opt">planned</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes, statically</span><span class="opt">partly</span><span class="opt">no, the operator chooses</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span><span class="opt">vendor default (unknown)</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>prompt bloat</span><span class="f-checkline"><span class="f-check"></span>redundant re-reads</span><span class="f-checkline"><span class="f-check"></span>oversized tool surface</span><span class="f-checkline"><span class="f-check"></span>uncached prefix</span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">running today</span><span class="opt">planned</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes, statically</span><span class="opt">partly</span><span class="opt">no, the operator chooses</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span><span class="opt">vendor default (unknown)</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>prompt bloat</span><span class="f-checkline"><span class="f-check"></span>redundant re-reads</span><span class="f-checkline"><span class="f-check"></span>oversized tool surface</span><span class="f-checkline"><span class="f-check"></span>uncached prefix</span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">running today</span><span class="opt">planned</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes, statically</span><span class="opt">partly</span><span class="opt">no, the operator chooses</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span><span class="opt">vendor default (unknown)</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>prompt bloat</span><span class="f-checkline"><span class="f-check"></span>redundant re-reads</span><span class="f-checkline"><span class="f-check"></span>oversized tool surface</span><span class="f-checkline"><span class="f-check"></span>uncached prefix</span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">running today</span><span class="opt">planned</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes, statically</span><span class="opt">partly</span><span class="opt">no, the operator chooses</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span><span class="opt">vendor default (unknown)</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">baseline</span><span class="opt">frontier</span><span class="opt">local</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>prompt bloat</span><span class="f-checkline"><span class="f-check"></span>redundant re-reads</span><span class="f-checkline"><span class="f-check"></span>oversized tool surface</span><span class="f-checkline"><span class="f-check"></span>uncached prefix</span></td>
+          <td class="fill"><span class="f-owner"></span><small>or nobody / vendor default</small></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:.3mm 0 0">
+      For column 10, tick when columns 8 and 9 differ and the step is mechanical.
+      Mark at least one fix-first row; order rows so harness fixes precede model swaps.
+      Baseline/frontier/local are tiers, not model names or SKUs.
+    </p>
+    <div style="display:flex;align-items:center;gap:3mm;font-size:7.4pt"><b style="flex:none;width:45%">Only if a model swap is ticked ahead of a harness fix, why the room is departing from the chapter's weighting:</b><div class="fill" style="flex:1"><span class="f-text"></span></div></div>
+  </div>
+
+  <div class="ws-block" style="display:flex;gap:3mm;align-items:stretch;margin-top:0">
+    <div style="flex:1">
+      <h2>Readout <span class="ws-block-note">write counts from the workflow rows</span></h2>
+      <table class="ws">
+        <colgroup><col style="width:42%"><col style="width:25%"><col style="width:33%"></colgroup>
+        <tbody>
+          <tr><td><b>Rows misrouted</b></td><td class="prior">—<span class="prior-src">derived</span></td><td class="fill"><span class="f-computed" data-formula="count of column 10 ticks"></span></td></tr>
+          <tr><td><b>Harness rows with no named decider</b></td><td class="prior">—<span class="prior-src">derived</span></td><td class="fill"><span class="f-computed" data-formula="count of column 7 entries reading nobody / vendor default"></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="flex:2">
+      <h2>Organization-wide owners <span class="ws-block-note">one named person per lever</span></h2>
+      <table class="ws">
+        <colgroup><col style="width:42%"><col style="width:25%"><col style="width:33%"></colgroup>
+        <tbody>
+          <tr><td><b>Organization-wide owner: model choice</b></td><td class="prior">—<span class="prior-src">ch07 L45-51</span></td><td class="fill"><span class="f-owner"></span></td></tr>
+          <tr><td><b>Organization-wide owner: token use</b></td><td class="prior">—<span class="prior-src">ch07 L45-51</span></td><td class="fill"><span class="f-owner"></span></td></tr>
+          <tr><td><b>Organization-wide owner: harness choice</b><br><small style="display:block">Harness seat should be the most central or senior. If it is not, write why below.</small></td><td class="prior">—<span class="prior-src">ch07 L49</span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        </tbody>
+      </table>
+      <div style="display:flex;align-items:center;gap:3mm;font-size:7.4pt"><b style="flex:none;width:45%">Only if the harness owner is less central or senior than the other two, why the room is inverting the chapter's weighting:</b><div class="fill" style="flex:1"><span class="f-text"></span></div></div>
+    </div>
+  </div>
+
+  <div class="ws-block" style="margin-top:0">
+    <div style="display:flex;align-items:center;gap:3mm;font-size:8pt">
+    <div class="prior" style="padding:1mm 2mm;flex:none">—<span class="prior-src">WS-07-cost-variance-baseline</span></div>
+    <b style="flex:none">Highest-spread task carried in</b><span style="flex:none">&mdash; copy the circled task from WS-07-cost-variance-baseline; this is also the workflow to audit in row 1.</span>
+    <div class="fill" style="flex:1"><span class="f-text"></span></div></div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-07-three-variables-audit &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
