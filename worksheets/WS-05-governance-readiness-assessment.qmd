@@ -167,7 +167,7 @@ format:
       <thead>
         <tr>
           <th></th><th>Capability</th><th>Mandatory for us <span style="font-weight:400">(from matrix block B)</span></th>
-          <th>Our level today</th><th>Evidence for column 6</th>
+          <th>Our level today</th><th>Evidence for column 6 <span style="font-weight:400">(Enterprise target: also name its dependency)</span></th>
           <th>Target level</th><th>Target date</th>
           <th>Accountable owner</th><th>Business risk of staying put</th>
           <th>Floor violation</th>
@@ -242,7 +242,7 @@ format:
         <col style="width:4%"><col style="width:14%"><col style="width:23%"><col style="width:12%">
         <col style="width:11%"><col style="width:10%"><col style="width:12%"><col style="width:14%">
       </colgroup>
-      <thead><tr><th></th><th>Primitive</th><th>Intent</th><th>Our tool</th><th>Owner</th><th>In place by</th><th>Where the trail physically lives</th><th>Who is able to rewrite it</th></tr></thead>
+      <thead><tr><th></th><th>Primitive</th><th>Intent</th><th>Our tool</th><th>Owner</th><th>In place by</th><th>Where the trail physically lives</th><th>Who is able to rewrite it <span style="font-weight:400">(confirm, or write the exception and sign)</span></th></tr></thead>
       <tbody>
         <tr>
           <td class="ws-num"><span class="fno">13</span></td>
@@ -250,7 +250,7 @@ format:
           <td class="prior">Make the chain of dispatched skills, spawned threads, and tool calls reconstructible after the fact, the way a stack trace reconstructs a synchronous call.<span class="prior-src">ch19 L149-157</span></td>
           <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">a surface the agent cannot rewrite</span><span class="f-text sm"></span><span class="f-sign"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill">          <span class="prior">nobody<span class="prior-src">spec §5; ch19 L155</span></span><span class="f-text sm"></span><span class="f-sign"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">14</span></td>
@@ -258,7 +258,7 @@ format:
           <td class="prior">Capture the resolved version of every transitive dependency at install time so the runtime closure is reproducible.<span class="prior-src">ch19 L149-157</span></td>
           <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">a surface the agent cannot rewrite</span><span class="f-text sm"></span><span class="f-sign"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill">          <span class="prior">nobody<span class="prior-src">spec §5; ch19 L155</span></span><span class="f-text sm"></span><span class="f-sign"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">15</span></td>
@@ -266,13 +266,13 @@ format:
           <td class="prior">Record every consequential decision the agent made and every consequential effect it produced as an immutable, append-only sequence.<span class="prior-src">ch19 L149-157</span></td>
           <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">a surface the agent cannot rewrite</span><span class="f-text sm"></span><span class="f-sign"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill">          <span class="prior">nobody<span class="prior-src">spec §5; ch19 L155</span></span><span class="f-text sm"></span><span class="f-sign"></span></td>
         </tr>
       </tbody>
     </table>
     <p style="font-size:7.5pt;margin:1.5mm 0">For every row, the cost is paid up front; the alternative is undebuggable after the fact. The trail must be on a surface the agent cannot rewrite. (ch19 L149-157)</p>
     <div class="ours-label">Storage and query budget accepted — specify amount and currency</div>
-    <div class="fill"><span class="f-currency" data-symbol="¤"></span><span class="f-text sm"></span></div>
+    <div class="fill">Amount <span class="f-text sm"></span> Currency <span class="f-text sm"></span> Basis <span class="f-text sm"></span></div>
   </div>
 
   <div class="ws-foot">
