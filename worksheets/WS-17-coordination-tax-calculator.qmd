@@ -110,7 +110,7 @@ format:
     <div class="ws-meta"><b>WS-17-coordination-tax-calculator</b><br>Pack D - Architecture and ownership<br>fill order <b>7</b> &middot; type <b>calculator</b><br>audience <b>mixed</b></div>
   </div>
   <div class="ws-source">Source: <b>Multi-Agent Orchestration</b>, <i>The Coordination Tax: Honest Numbers</i> &middot; <code>handbook\ch17-multi-agent-orchestration.qmd</code> L361-382 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-coordination-tax">#sec-multi-agent-coordination-tax</a><br>Locator: "Multi-agent orchestration saves time through parallelism and improves quality through focused context"</div>
-  <div class="ws-instruction">Use the measured total from field 8 for Block C. Keep the single-agent case explicitly counterfactual; state the basis for your own estimate. All computed outputs use your measured values, never the grey prior column.</div>
+  <div class="ws-instruction">Use the total in field 11, the sum of the four field 8 activity-minute entries, for Block C. Keep the single-agent case explicitly counterfactual; state the basis for your own estimate. All computed outputs use your measured values, never the grey prior column.</div>
 
   <div class="ws-block">
     <h2>Block C — totals
