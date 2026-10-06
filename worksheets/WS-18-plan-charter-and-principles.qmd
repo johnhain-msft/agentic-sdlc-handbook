@@ -1,0 +1,668 @@
+---
+title: "The Plan Charter: Scope, Teams, Waves, Principles, Constraints"
+pagetitle: "WS-18-plan-charter-and-principles"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 841mm; --sheet-h: 594mm; --sheet-margin: 20mm; }
+            @page { size: A1 landscape; margin: 20mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-18-plan-charter-and-principles</b> &middot; review copy &middot; declared format <b>A1 landscape</b> &middot;
+  8 sheets. Each white page below is one physical sheet at true size. Anything spilling past a page edge
+  onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>The Plan Charter: Scope, Teams, Waves, Principles, Constraints</h1>
+      <p class="ws-sub">An approved plan charter and the org's written priority order for resolving trade-offs, reusable across every subsequent change.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-plan-charter-and-principles</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Execution Meta-Process</b>, <i>Phase 2: Plan</i> &middot;
+    <code>handbook/ch18-the-execution-meta-process.qmd</code> L53-96 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-phase-2-plan">#sec-meta-phase-2-plan</a>
+  </div>
+  <div class="ws-instruction">
+    Write the plan you will approve. Fill every block; keep in, out and deferred items distinct, rank principles
+    without ties, and name the people accountable for each decision. Use the book's examples as references,
+    not as your organization's policy. Do not add effort, duration or schedule dates to this charter.
+  </div>
+  <div class="ws-block">
+    <h2>A. Scope <span class="ws-block-note">Write each item separately; move items between in, out and deferred as the room decides.</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:24%"><col style="width:35%"><col style="width:35%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>A. Scope — In scope</b></td>
+          <td class="prior">Auth resolver deduplication, verbose coverage gaps, CommandLogger migration, unicode cleanup.<span class="prior-src">ch18 L60-62</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>A. Scope — Out of scope</b></td>
+          <td class="prior">New auth providers, CLI help text changes.<span class="prior-src">ch18 L63</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>A. Scope — Deferred, and the trigger that reopens it</b></td>
+          <td class="prior">—</td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-18-plan-charter-and-principles &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 8</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>The Plan Charter: Scope, Teams, Waves, Principles, Constraints</h1>
+      <p class="ws-sub">An approved plan charter and the org's written priority order for resolving trade-offs, reusable across every subsequent change.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-plan-charter-and-principles</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Execution Meta-Process</b>, <i>Phase 2: Plan</i> &middot;
+    <code>handbook/ch18-the-execution-meta-process.qmd</code> L53-96 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-phase-2-plan">#sec-meta-phase-2-plan</a>
+  </div>
+  <div class="ws-instruction">
+    Name the teams that will own the concerns in this plan. For each, name a lead persona and the concerns it owns;
+    name a human who is accountable for the work. The persona leads the work; the person answers for it.
+  </div>
+  <div class="ws-block">
+    <h2>B. Teams <span class="ws-block-note">Use a separate line for each team; add rows to this wall block as needed.</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:24%"><col style="width:35%"><col style="width:35%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>B. Teams — Team name</b></td>
+          <td class="prior">Architecture; Logging/UX.<span class="prior-src">ch18 L66-69</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>B. Teams — Lead persona</b></td>
+          <td class="prior">python-architect; cli-logging-expert.<span class="prior-src">ch18 L66, L68</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>B. Teams — Owns (concerns)</b></td>
+          <td class="prior">Type safety, separation of concerns, dead code; verbose coverage, CommandLogger, symbols.<span class="prior-src">ch18 L67, L69</span></td>
+          <td class="fill"><span class="f-box"></span><span class="f-box"></span><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>B. Teams — Accountable human</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-18-plan-charter-and-principles &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 8</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>The Plan Charter: Scope, Teams, Waves, Principles, Constraints</h1>
+      <p class="ws-sub">An approved plan charter and the org's written priority order for resolving trade-offs, reusable across every subsequent change.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-plan-charter-and-principles</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Execution Meta-Process</b>, <i>Phase 2: Plan</i> &middot;
+    <code>handbook/ch18-the-execution-meta-process.qmd</code> L53-96 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-phase-2-plan">#sec-meta-phase-2-plan</a>
+  </div>
+  <div class="ws-instruction">
+    Put work into dependency-ordered waves. Treat Wave 0 as a pipeline test before valuable work, unless you explicitly
+    untick it and write your override in the risk-ordering rationale. Name shared files the approver must inspect.
+  </div>
+  <div class="ws-block">
+    <h2>C. Waves <span class="ws-block-note">The org's wave labels here are the labels used by the downstream decomposition plan.</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:24%"><col style="width:35%"><col style="width:35%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>C. Waves — Wave number</b></td>
+          <td class="prior">Wave 0 (foundation); Wave 1 (core); Wave 2 (migration); Wave 3 (polish).<span class="prior-src">ch18 L72-75</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">0</span><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">N (later wave)</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>C. Waves — Wave content</b></td>
+          <td class="prior">Protocol types and method moves; verbose coverage; CommandLogger migration; unicode cleanup.<span class="prior-src">ch18 L72-75</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>C. Waves — Depends on</b></td>
+          <td class="prior">Wave 1 depends on Wave 0 APIs; Wave 2 on Wave 1 patterns; Wave 3 on Wave 2 completeness.<span class="prior-src">ch18 L72-75</span></td>
+          <td class="fill">
+            <div>Wave 0: <div class="f-select"><span class="opt">none</span></div></div>
+            <div>Wave 1: <div class="f-select"><span class="opt">none</span><span class="opt">Wave 0</span></div></div>
+            <div>Wave 2: <div class="f-select"><span class="opt">none</span><span class="opt">Wave 0</span><span class="opt">Wave 1</span></div></div>
+            <div>Wave 3: <div class="f-select"><span class="opt">none</span><span class="opt">Wave 0</span><span class="opt">Wave 1</span><span class="opt">Wave 2</span></div></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>C. Waves — Wave 0 is a pipeline test</b></td>
+          <td class="prior">☒ Wave 0 proves the pipeline on a single item before valuable work is attempted.<span class="prior-src">case-study-handbook-writing.qmd L124</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Confirm the pipeline test, or clear it and explain the override in field 12.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>C. Waves — Risk-ordering rationale</b></td>
+          <td class="prior">Prove the pipeline; then work with the most existing material (lowest risk); then the hardest work requiring fresh effort; then integration work that depends on earlier waves.<span class="prior-src">case-study-handbook-writing.qmd L124</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>C. Waves — Files changing in more than one wave</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-18-plan-charter-and-principles &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 8</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>The Plan Charter: Scope, Teams, Waves, Principles, Constraints</h1>
+      <p class="ws-sub">An approved plan charter and the org's written priority order for resolving trade-offs, reusable across every subsequent change.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-plan-charter-and-principles</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Execution Meta-Process</b>, <i>Phase 2: Plan</i> &middot;
+    <code>handbook/ch18-the-execution-meta-process.qmd</code> L53-96 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-phase-2-plan">#sec-meta-phase-2-plan</a>
+  </div>
+  <div class="ws-instruction">
+    Rank three to five principles in your own words. Give each a distinct rank: no ties. For every principle, name
+    the tension it resolves, one real decision it settles, and the one person who may amend the order.
+    Surface disagreement instead of smoothing it over.
+  </div>
+  <div class="ws-block">
+    <h2>D. Principles <span class="ws-block-note">A ranked tie-breaker register, not a values poster. Leave unused principle lines blank.</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:24%"><col style="width:35%"><col style="width:35%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>D. Principles — Rank</b></td>
+          <td class="prior">The worked example orders five principles from 1 to 5.<span class="prior-src">ch18 L77-82</span></td>
+          <td class="fill">
+            <div>Principle 1: <div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span></div></div>
+            <div>Principle 2: <div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span></div></div>
+            <div>Principle 3: <div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span></div></div>
+            <div>Principle 4: <div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span></div></div>
+            <div>Principle 5: <div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span></div></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>D. Principles — Principle, one sentence</b></td>
+          <td class="prior">SECURITY (no token leaks, no path traversal) · CORRECTNESS (tests pass, behavior preserved) · UX (first-class developer experience in every message) · KISS (simplest correct solution) · SHIP SPEED (favor shipping over perfection).<span class="prior-src">ch18 L78-82</span></td>
+          <td class="fill">
+            <div>Principle 1<span class="f-box"></span></div><div>Principle 2<span class="f-box"></span></div>
+            <div>Principle 3<span class="f-box"></span></div><div>Principle 4<span class="f-box"></span></div>
+            <div>Principle 5<span class="f-box"></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td>
+          <td><b>D. Principles — The tension it resolves</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><div>1<span class="f-text"></span></div><div>2<span class="f-text"></span></div><div>3<span class="f-text"></span></div><div>4<span class="f-text"></span></div><div>5<span class="f-text"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td>
+          <td><b>D. Principles — Worked example: one decision it settles</b></td>
+          <td class="prior">"The book is 100% useful without APM. APM appears as proof, not prerequisite."<span class="prior-src">case-study-handbook-writing.qmd L254-256</span></td>
+          <td class="fill"><div>1<span class="f-box"></span></div><div>2<span class="f-box"></span></div><div>3<span class="f-box"></span></div><div>4<span class="f-box"></span></div><div>5<span class="f-box"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td>
+          <td><b>D. Principles — Who may amend it</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><div>1<span class="f-owner"></span></div><div>2<span class="f-owner"></span></div><div>3<span class="f-owner"></span></div><div>4<span class="f-owner"></span></div><div>5<span class="f-owner"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-18-plan-charter-and-principles &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 8</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>The Plan Charter: Scope, Teams, Waves, Principles, Constraints</h1>
+      <p class="ws-sub">An approved plan charter and the org's written priority order for resolving trade-offs, reusable across every subsequent change.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-plan-charter-and-principles</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Execution Meta-Process</b>, <i>Phase 2: Plan</i> &middot;
+    <code>handbook/ch18-the-execution-meta-process.qmd</code> L53-96 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-phase-2-plan">#sec-meta-phase-2-plan</a>
+  </div>
+  <div class="ws-instruction">
+    Write constraints as explicit Do NOT statements. Name who may waive each one and the route for doing so;
+    state plainly when it is absolute.
+  </div>
+  <div class="ws-block">
+    <h2>E. Constraints <span class="ws-block-note">A constraint with no named waiver route is either absolute or fiction: say which.</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:24%"><col style="width:35%"><col style="width:35%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td>
+          <td><b>E. Constraints — Constraint (Do NOT …)</b></td>
+          <td class="prior">Do NOT modify test infrastructure · Do NOT change CLI command signatures · Do NOT alter public API return types.<span class="prior-src">ch18 L84-87</span></td>
+          <td class="fill"><span class="f-box"></span><span class="f-box"></span><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">20</span></td>
+          <td><b>E. Constraints — Who may waive it, and by what route</b></td>
+          <td class="prior">—</td>
+          <td class="fill">
+            <div>Constraint 1 — waiver owner <span class="f-owner"></span> route / absolute <span class="f-text"></span></div>
+            <div>Constraint 2 — waiver owner <span class="f-owner"></span> route / absolute <span class="f-text"></span></div>
+            <div>Constraint 3 — waiver owner <span class="f-owner"></span> route / absolute <span class="f-text"></span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-18-plan-charter-and-principles &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 8</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>The Plan Charter: Scope, Teams, Waves, Principles, Constraints</h1>
+      <p class="ws-sub">An approved plan charter and the org's written priority order for resolving trade-offs, reusable across every subsequent change.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-plan-charter-and-principles</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Execution Meta-Process</b>, <i>Phase 2: Plan</i> &middot;
+    <code>handbook/ch18-the-execution-meta-process.qmd</code> L53-96 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-phase-2-plan">#sec-meta-phase-2-plan</a>
+  </div>
+  <div class="ws-instruction">
+    Record what each phase requires of your people, what it produces, the capability it needs, the gate you enforce
+    today, and an honest readiness rating. Name one person for each phase; for an Absent phase, that person is also
+    the remediation owner. Use the ADAPT row to name who may replan mid-execution.
+  </div>
+  <div class="ws-block">
+    <h2>F. Operating model <span class="ws-block-note">One entry per fixed phase; name a remediation owner in the role field whenever readiness is Absent.</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:10%"><col style="width:17%"><col style="width:13%"><col style="width:15%"><col style="width:15%"><col style="width:15%"><col style="width:15%"></colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">21</span>F. Operating model — Phase</th>
+          <th><span class="fno">22</span>F. Operating model — Human decision this phase requires</th>
+          <th><span class="fno">23</span>F. Operating model — Named role who makes it</th>
+          <th><span class="fno">24</span>F. Operating model — Phase output</th>
+          <th><span class="fno">25</span>F. Operating model — Enabling capability: have / must build</th>
+          <th><span class="fno">26</span>F. Operating model — Gate that exists today</th>
+          <th><span class="fno">27</span>F. Operating model — Readiness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior" rowspan="2"><div class="f-select"><span class="opt">Audit</span></div><span class="prior-src">ch18 L14-32</span></td>
+          <td class="prior">Which findings warrant action.<span class="prior-src">ch18 L30</span></td>
+          <td class="prior">—</td>
+          <td class="prior">A set of prioritized findings with citations.<span class="prior-src">ch18 L50</span></td>
+          <td class="prior">Parallel background agents with session isolation and read-only access.<span class="prior-src">ch18 L46</span></td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">have</span><span class="opt">must build</span><span class="opt">partial</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Ready</span><span class="opt">Partial</span><span class="opt">Absent</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior" rowspan="2"><div class="f-select"><span class="opt">Plan</span></div><span class="prior-src">ch18 L14-32</span></td>
+          <td class="prior">Approve the plan.<span class="prior-src">ch18 L90</span></td>
+          <td class="prior">—</td>
+          <td class="prior">An approved plan with scope, teams, waves, principles and constraints.<span class="prior-src">ch18 L96</span></td>
+          <td class="prior">Background exploration agents for dependency graphs and call chains.<span class="prior-src">ch18 L94</span></td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">have</span><span class="opt">must build</span><span class="opt">partial</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Ready</span><span class="opt">Partial</span><span class="opt">Absent</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior" rowspan="2"><div class="f-select"><span class="opt">Wave</span></div><span class="prior-src">ch18 L14-32</span></td>
+          <td class="prior">Dispatch, no decision.<span class="prior-src">ch18 L30, L42</span></td>
+          <td class="prior">—</td>
+          <td class="prior">A commit per wave, with all tests passing.<span class="prior-src">ch18 L112</span></td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">have</span><span class="opt">must build</span><span class="opt">partial</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Ready</span><span class="opt">Partial</span><span class="opt">Absent</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior" rowspan="2"><div class="f-select"><span class="opt">Validate</span></div><span class="prior-src">ch18 L14-32</span></td>
+          <td class="prior">Spot-check the sample and triage failures.<span class="prior-src">ch18 L30, L42, L216-232</span></td>
+          <td class="prior">—</td>
+          <td class="prior">A validated changeset.<span class="prior-src">ch18 L124</span></td>
+          <td class="prior">The project's CI pipeline or test runner.<span class="prior-src">ch18 L127</span></td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">have</span><span class="opt">must build</span><span class="opt">partial</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Ready</span><span class="opt">Partial</span><span class="opt">Absent</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior" rowspan="2"><div class="f-select"><span class="opt">Ship</span></div><span class="prior-src">ch18 L14-32</span></td>
+          <td class="prior">Final verification and merge.<span class="prior-src">ch18 L30, L42</span></td>
+          <td class="prior">—</td>
+          <td class="prior">A merged PR.<span class="prior-src">ch18 L134</span></td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">have</span><span class="opt">must build</span><span class="opt">partial</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Ready</span><span class="opt">Partial</span><span class="opt">Absent</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ws" style="margin-top:4mm">
+      <colgroup><col style="width:6%"><col style="width:24%"><col style="width:35%"><col style="width:35%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">28</span></td>
+          <td><b>F. Operating model — ADAPT: who may replan mid-execution</b></td>
+          <td class="prior">The loop is Validate → Adapt → Plan. The chapter states it "is not a sign of failure."<span class="prior-src">ch18 L24-32</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-18-plan-charter-and-principles &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 8</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>The Plan Charter: Scope, Teams, Waves, Principles, Constraints</h1>
+      <p class="ws-sub">An approved plan charter and the org's written priority order for resolving trade-offs, reusable across every subsequent change.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-plan-charter-and-principles</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Execution Meta-Process</b>, <i>Phase 2: Plan</i> &middot;
+    <code>handbook/ch18-the-execution-meta-process.qmd</code> L53-96 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-phase-2-plan">#sec-meta-phase-2-plan</a>
+  </div>
+  <div class="ws-instruction">
+    Define your own trigger for each tier. The book's file-count anchors are working examples, not your policy:
+    adopt them only after discussion and record that choice explicitly. For each tier, say what compresses and what
+    never does, name the approver, and acknowledge the fixed controls.
+  </div>
+  <div class="ws-block">
+    <h2>G. Process tiering <span class="ws-block-note">No effort, duration or date columns. File-count anchors below are not policy unless you explicitly adopt them.</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:8%"><col style="width:18%"><col style="width:25%"><col style="width:29%"><col style="width:20%"></colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">29</span>G. Process tiering — Tier</th>
+          <th><span class="fno">30</span>G. Process tiering — Our trigger (file count or risk)</th>
+          <th><span class="fno">31</span>G. Process tiering — What compresses, and what never does</th>
+          <th><span class="fno">32</span>G. Process tiering — Approval required at this tier</th>
+          <th><span class="fno">33</span>G. Process tiering — Non-negotiables at every tier</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior" rowspan="2"><div class="f-select"><span class="opt">Small</span></div><span class="prior-src">ch18 L276</span></td>
+          <td class="prior">Fewer than 10 files — the book's working anchor, not org policy.<span class="prior-src">ch18 L276</span></td>
+          <td class="prior">Audit: one expert agent. Plan: a mental model. One wave with 1–2 agents. Validate and Ship unchanged.<span class="prior-src">ch18 L278-282</span></td>
+          <td class="prior">—</td>
+          <td class="locked" rowspan="6">
+            <span class="f-checkline"><span class="f-check">✓</span>Test before committing</span>
+            <span class="f-checkline"><span class="f-check">✓</span>Know what you are changing before you change it</span>
+            <span class="prior-src">ch18 L284 — fixed controls; not choices by tier</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="prior" rowspan="2"><div class="f-select"><span class="opt">Standard</span></div><span class="prior-src">ch18 L276, L288</span></td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+          <td class="prior">—</td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="prior" rowspan="2"><div class="f-select"><span class="opt">Large</span></div><span class="prior-src">ch18 L288</span></td>
+          <td class="prior">More than 100 files — the book's working anchor, not org policy.<span class="prior-src">ch18 L288</span></td>
+          <td class="prior">Audit: 4–6 agents. Plan: 6–10 waves. Two-team structure; slack for recovery waves.<span class="prior-src">ch18 L290-294</span></td>
+          <td class="prior">—</td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="4">Acknowledge the fixed controls for every tier; do not select or waive them.</td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Acknowledged</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-18-plan-charter-and-principles &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 7 of 8</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>The Plan Charter: Scope, Teams, Waves, Principles, Constraints</h1>
+      <p class="ws-sub">An approved plan charter and the org's written priority order for resolving trade-offs, reusable across every subsequent change.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-plan-charter-and-principles</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>1</b> &middot; type <b>canvas</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Execution Meta-Process</b>, <i>Phase 2: Plan</i> &middot;
+    <code>handbook/ch18-the-execution-meta-process.qmd</code> L53-96 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-phase-2-plan">#sec-meta-phase-2-plan</a>
+  </div>
+  <div class="ws-instruction">
+    Agree what you disclose about agent involvement and to whom. Write the approved framing sentence verbatim,
+    test it against the credibility question, and prepare an answer to the objection you actually expect.
+    The accountable engineering leader signs only after approving the complete plan.
+  </div>
+  <div class="ws-block">
+    <h2>H. Disclosure <span class="ws-block-note">The approved sentence and prepared answer are written in the words you will actually use.</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:24%"><col style="width:35%"><col style="width:35%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">34</span></td>
+          <td><b>H. Disclosure — What we disclose about agent involvement</b></td>
+          <td class="prior">—</td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">35</span></td>
+          <td><b>H. Disclosure — To whom</b></td>
+          <td class="prior">—</td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">customers</span><span class="opt">auditors</span><span class="opt">regulators</span><span class="opt">our own engineers</span></div>
+            <span class="f-text"></span><span class="f-text"></span>
+            <span class="prior-src">Tick each audience; use the lines to note where the stance differs.</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">36</span></td>
+          <td><b>H. Disclosure — Approved framing sentence</b></td>
+          <td class="prior">"built using the same methodology it teaches" — never "AI-written".<span class="prior-src">case-study-handbook-writing.qmd L272</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">37</span></td>
+          <td><b>H. Disclosure — Credibility test and our answer</b></td>
+          <td class="prior">"Could this person have written a credible book without AI? If yes, AI reads as methodology demonstration."<span class="prior-src">case-study-handbook-writing.qmd L270</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">38</span></td>
+          <td><b>H. Disclosure — Expected objection + prepared answer</b></td>
+          <td class="prior">Expected: initial scepticism from people who dismiss anything AI-assisted; engaged audiences find the transparency more impressive than the alternative.<span class="prior-src">case-study-handbook-writing.qmd L272-274</span></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td>
+          <td><b>Approver signature + date</b></td>
+          <td class="prior">No implementation starts until you approve the plan.<span class="prior-src">ch18 L92</span></td>
+          <td class="fill tall"><span class="f-sign"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-18-plan-charter-and-principles &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 8 of 8</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
