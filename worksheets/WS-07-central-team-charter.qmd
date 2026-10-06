@@ -1,0 +1,481 @@
+---
+title: "Central AI Team Charter — Mandate, First Loop, and the Reuse Metric"
+pagetitle: "WS-07-central-team-charter"
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-07-central-team-charter</b> &middot; review copy &middot; declared format <b>A3 two-page spread</b> &middot; 3 sheets (left page, right page, reconciliation).
+  Both facing pages and the reconciliation gutter belong to the same decision.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Central AI Team Charter — Mandate, First Loop, and the Reuse Metric</h1>
+      <p class="ws-sub">A signed central AI team charter with a named first loop and a reuse-based success metric — the staffing decision the chapter calls among the highest-leverage in the program.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-07-central-team-charter</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>5</b> &middot; type <b>canvas</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Agentic SDLC Bill</b>, <i>Staff the factory</i> &middot;
+    <code>handbook\ch07-the-agentic-sdlc-bill.qmd</code> L115-121 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch07-the-agentic-sdlc-bill.html#sec-bill-staff-the-factory">#sec-bill-staff-the-factory</a>
+    &middot; Locator: “The roles already exist in this book. The Agentic Workflow Engineer”
+  </div>
+
+  <div class="ws-instruction">
+    Complete the left page first: record which working patterns you have and which anti-patterns you refuse, with evidence and mechanisms. Then charter the team, its first recurring ROI-positive loop, its distribution path and its mandatory reuse metric; set the escape hatch and assign all six lifecycle stages. On the last sheet, answer whether this charter is the anti-pattern and write three mechanism-backed commitments. Have the accountable executive and the person who would become the bottleneck sign.
+  </div>
+
+  <div class="spread-layout" style="display:grid;grid-template-columns:minmax(0,1fr);gap:3mm;align-items:start;">
+
+    <div class="left-page" style="display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr);gap:2mm;align-items:start;">
+      <div class="ws-block">
+        <h2>Block A — the three shapes that work
+          <span class="ws-block-note">one status and named team per pattern</span></h2>
+        <table class="ws">
+          <colgroup>
+            <col style="width:6%"><col style="width:22%"><col style="width:35%"><col style="width:37%">
+          </colgroup>
+          <thead>
+            <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">1</span></td>
+              <td><b>Working pattern</b></td>
+              <td class="prior">Stream-aligned teams with embedded context engineering / a platform team providing shared context infrastructure / a time-boxed enabling team for adoption support<span class="prior-src">ch06 L228-232</span></td>
+              <td class="locked">Fixed pattern list; record status in field 3.</td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">2</span></td>
+              <td><b>Why the chapter says it works</b></td>
+              <td class="prior">Domain knowledge proximity — the people who understand the system encode it / shared assets maintained centrally rather than duplicated, delivered as primitives-as-code / a finite-lifespan team that coaches others through adoption<span class="prior-src">ch06 L228-232</span></td>
+              <td class="locked">Printed reasoning; read-only.</td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">3</span></td>
+              <td><b>Status here</b></td>
+              <td class="prior">—<span class="prior-src">org</span></td>
+              <td class="fill">
+                <b>Stream-aligned</b><div class="f-select"><span class="opt">have it</span><span class="opt">building it</span><span class="opt">absent</span></div>
+                <b>Platform</b><div class="f-select"><span class="opt">have it</span><span class="opt">building it</span><span class="opt">absent</span></div>
+                <b>Enabling</b><div class="f-select"><span class="opt">have it</span><span class="opt">building it</span><span class="opt">absent</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">4</span></td>
+              <td><b>The named team</b></td>
+              <td class="prior">—<span class="prior-src">org</span></td>
+              <td class="fill">
+                <b>Stream-aligned</b><span class="f-text"></span><span class="f-owner"></span>
+                <b>Platform</b><span class="f-text"></span><span class="f-owner"></span>
+                <b>Enabling</b><span class="f-text"></span><span class="f-owner"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">5</span></td>
+              <td><b>End date (enabling team row only)</b></td>
+              <td class="prior">The chapter is explicit that this team has a finite lifespan and folds into the platform team or dissolves once adoption is mature<span class="prior-src">ch06 L232</span></td>
+              <td class="fill"><span class="ours-label">Enabling team only; a blank here is how an enabling team becomes permanent.</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ws-block">
+        <h2>Block B — the three shapes we refuse to build
+          <span class="ws-block-note">status, evidence and mechanism for each</span></h2>
+        <table class="ws">
+          <colgroup>
+            <col style="width:6%"><col style="width:20%"><col style="width:36%"><col style="width:38%">
+          </colgroup>
+          <thead>
+            <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">6</span></td>
+              <td><b>Anti-pattern</b></td>
+              <td class="prior">A centralised “AI team” that handles all agent interactions / splitting “human code” and “agent code” into separate workflows / replacing team roles with agents<span class="prior-src">ch06 L236-240</span></td>
+              <td class="locked">Fixed anti-pattern list; record status in field 8.</td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">7</span></td>
+              <td><b>Why the chapter says it fails</b></td>
+              <td class="prior">
+                Row 1: a specialised group becomes <b>the bottleneck for all agent work</b>; the result is a coordination tax that eliminates the speed advantage, and a knowledge gap because the AI team does not understand each product domain deeply enough to write good context.<br>
+                Row 2: some organizations try to create parallel tracks: human engineers handle “important” code, agents handle “routine” code. This fails because the boundary between important and routine is not stable, agent code still requires human review and integration, and a two-class system undermines cohesion — all code is the team’s code regardless of who or what produced it.<br>
+                Row 3: teams that lose senior engineers because “the AI can do that now” lose the judgement required to evaluate agent output and maintain architectural coherence, and produce more code and less working software.
+                <span class="prior-src">ch06 L236-240</span>
+              </td>
+              <td class="locked">Printed reasoning; read-only.</td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">8</span></td>
+              <td><b>Status here</b></td>
+              <td class="prior">—<span class="prior-src">org</span></td>
+              <td class="fill">
+                <b>Centralised AI team as the funnel</b><div class="f-select"><span class="opt">not present</span><span class="opt">at risk</span><span class="opt">already happening</span></div>
+                <b>Separate human-code / agent-code tracks</b><div class="f-select"><span class="opt">not present</span><span class="opt">at risk</span><span class="opt">already happening</span></div>
+                <b>Replacing team roles with agents</b><div class="f-select"><span class="opt">not present</span><span class="opt">at risk</span><span class="opt">already happening</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">9</span></td>
+              <td><b>Evidence for column 8</b></td>
+              <td class="prior">—<span class="prior-src">derived</span></td>
+              <td class="fill">
+                <b>Centralised AI team as the funnel</b><span class="f-text"></span>
+                <b>Separate human-code / agent-code tracks</b><span class="f-text"></span>
+                <b>Replacing team roles with agents</b><span class="f-text"></span>
+                <span class="ours-label">What you observed. “We would never do that” is not evidence.</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">10</span></td>
+              <td><b>What specifically prevents it</b></td>
+              <td class="prior">—<span class="prior-src">derived</span></td>
+              <td class="fill">
+                <span class="ours-label">A mechanism, not an intention. Required whenever field 8 is not “not present.”</span>
+                <b>Centralised AI team as the funnel</b><span class="f-text"></span>
+                <b>Separate human-code / agent-code tracks</b><span class="f-text"></span>
+                <b>Replacing team roles with agents</b><span class="f-text"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <div class="ws-foot">
+    <div>WS-07-central-team-charter &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3 &middot; left page; the right page is the other half of this decision</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head"><div><h1>Central AI Team Charter — right page</h1></div><div class="ws-meta"><b>WS-07-central-team-charter</b><br>Blocks C-F</div></div>
+  <div class="spread-layout" style="display:grid;grid-template-columns:minmax(0,1fr);gap:3mm;align-items:start;">
+
+    <div class="right-page" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4mm;align-items:start;">
+      <div class="ws-block">
+        <h2>Block C — the charter: members and mandate
+          <span class="ws-block-note">complete WS-06-role-map-and-staffing-triggers first</span></h2>
+        <table class="ws">
+          <colgroup>
+            <col style="width:6%"><col style="width:26%"><col style="width:22%"><col style="width:46%">
+          </colgroup>
+          <thead>
+            <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">11</span></td>
+              <td><b>Member</b></td>
+              <td class="prior">—<span class="prior-src">ch07 L115</span></td>
+              <td class="fill"><span class="ours-label">One row per member; continue on a spare sheet if needed.</span><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">12</span></td>
+              <td><b>Source team, and fraction of their time</b></td>
+              <td class="prior">—<span class="prior-src">ch07 L115</span></td>
+              <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">13</span></td>
+              <td><b>Role held</b></td>
+              <td class="prior">The roles already exist in the book; the bill adds a <i>mandate</i>, not a new priesthood<span class="prior-src">ch07 L115; ch06 L195</span></td>
+              <td class="fill"><span class="ours-label">One role per member, in the row order of field 11.</span><div class="f-select"><span class="opt">Agentic Workflow Engineer</span><span class="opt">Agent Operations Specialist</span><span class="opt">Domain Specialist</span></div><div class="f-select"><span class="opt">Agentic Workflow Engineer</span><span class="opt">Agent Operations Specialist</span><span class="opt">Domain Specialist</span></div><div class="f-select"><span class="opt">Agentic Workflow Engineer</span><span class="opt">Agent Operations Specialist</span><span class="opt">Domain Specialist</span></div></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">14</span></td>
+              <td><b>Mandate sentence</b></td>
+              <td class="prior">Research and encode cost-effective agentic workflows that the rest of the organisation reuses<span class="prior-src">ch07 L115; ch06 L195</span></td>
+              <td class="fill"><span class="f-text"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">15</span></td>
+              <td><b>Power-user feeder path</b></td>
+              <td class="prior">The developers already pushing the frontier on their own are the natural feeder into this function as it matures<span class="prior-src">ch07 L115</span></td>
+              <td class="fill"><span class="f-text"></span><span class="f-owner"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">16</span></td>
+              <td><b>Accountable executive</b></td>
+              <td class="prior">—<span class="prior-src">org</span></td>
+              <td class="fill"><span class="f-owner"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ws-block">
+        <h2>Block D — the first loop</h2>
+        <table class="ws">
+          <colgroup>
+            <col style="width:6%"><col style="width:22%"><col style="width:35%"><col style="width:37%">
+          </colgroup>
+          <thead>
+            <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">17</span></td>
+              <td><b>The first deliverable</b></td>
+              <td class="prior">Not a clever agent — a cheaper, governed loop for a recurring, ROI-positive task<span class="prior-src">ch07 L115; ch06 L195</span></td>
+              <td class="fill"><span class="f-text"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">18</span></td>
+              <td><b>Why this task is recurring</b></td>
+              <td class="prior">—<span class="prior-src">derived</span></td>
+              <td class="fill"><span class="ours-label">How often it runs, and who does it today.</span><span class="f-text"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">19</span></td>
+              <td><b>Why it is ROI-positive</b></td>
+              <td class="prior">—<span class="prior-src">ch07 L115</span></td>
+              <td class="fill"><span class="ours-label">Our own before-and-after for this task, measured by us.</span><span class="f-text"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">20</span></td>
+              <td><b>Delivery date</b></td>
+              <td class="prior">—<span class="prior-src">org</span></td>
+              <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">21</span></td>
+              <td><b>Distribution readiness</b></td>
+              <td class="prior">Release through the package manager with lockfile, integrity checks and version pinning; an IDP catalogue for discoverability; harness-managed settings for mass rollout<span class="prior-src">ch07 L109-111</span></td>
+              <td class="fill">
+                <span class="f-checkline"><span class="f-check"></span>Package manager / APM</span><span class="f-owner"></span>
+                <span class="f-checkline"><span class="f-check"></span>IDP catalogue</span><span class="f-owner"></span>
+                <span class="f-checkline"><span class="f-check"></span>Harness-managed settings</span><span class="f-owner"></span>
+                <span class="ours-label">Which exist, and who owns each gap. A loop nobody can find is a loop nobody reuses.</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ws-block">
+        <h2>Block E — the reuse metric
+          <span class="ws-block-note">mandatory — do not leave blank</span></h2>
+        <table class="ws">
+          <colgroup>
+            <col style="width:6%"><col style="width:22%"><col style="width:35%"><col style="width:37%">
+          </colgroup>
+          <thead>
+            <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">22</span></td>
+              <td><b>The metric</b></td>
+              <td class="prior"><b>Loops reused across the organization — not requests approved.</b><span class="prior-src">ch07 L115</span></td>
+              <td class="locked">Mandatory; this metric cannot be left blank.</td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">23</span></td>
+              <td><b>How we count a reuse</b></td>
+              <td class="prior">—<span class="prior-src">derived</span></td>
+              <td class="fill"><span class="f-box"></span><span class="ours-label">Define before the first loop ships.</span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">24</span></td>
+              <td><b>Metric owner</b></td>
+              <td class="prior">—<span class="prior-src">ch07 L115</span></td>
+              <td class="fill"><span class="f-owner"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">25</span></td>
+              <td><b>Baseline and first reading date</b></td>
+              <td class="prior">—<span class="prior-src">derived</span></td>
+              <td class="fill"><span class="f-text"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">26</span></td>
+              <td><b>Review date</b></td>
+              <td class="prior">—<span class="prior-src">derived</span></td>
+              <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">27</span></td>
+              <td><b>Tripwire</b></td>
+              <td class="prior">A central team that optimises for gatekeeping has missed the point; a central team that optimises for reuse compounds<span class="prior-src">ch07 L115</span></td>
+              <td class="fill"><span class="f-text"></span><span class="f-owner"></span><span class="ours-label">What you do if requests approved rises while loops reused does not — and who does it.</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ws-block">
+        <h2>Block F — the escape hatch
+          <span class="ws-block-note">the gate is a queue, not a wall</span></h2>
+        <table class="ws">
+          <colgroup>
+            <col style="width:6%"><col style="width:22%"><col style="width:35%"><col style="width:37%">
+          </colgroup>
+          <thead>
+            <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">28</span></td>
+              <td><b>Escape-hatch route</b></td>
+              <td class="prior">When the catalogue has no loop for a task that genuinely needs frontier reasoning, a developer requests time-boxed, budget-capped frontier access <b>rather than being blocked</b><span class="prior-src">ch07 L94</span></td>
+              <td class="fill"><span class="f-text"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">29</span></td>
+              <td><b>SLA — response time on a request</b></td>
+              <td class="prior">The test: <i>the gate is a queue, not a wall</i><span class="prior-src">ch07 L94</span></td>
+              <td class="fill"><span class="ours-label">Set your response-time commitment; it distinguishes a queue from a wall.</span><span class="f-text"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">30</span></td>
+              <td><b>Time-box and budget cap per grant</b></td>
+              <td class="prior">—<span class="prior-src">org</span></td>
+              <td class="fill"><span class="f-text"></span><span class="f-currency" data-symbol="&pound;"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">31</span></td>
+              <td><b>Who approves</b></td>
+              <td class="prior">—<span class="prior-src">org</span></td>
+              <td class="fill"><span class="f-owner"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">32</span></td>
+              <td><b>Where the gap goes</b></td>
+              <td class="prior">The gap becomes the next item on the central team’s backlog<span class="prior-src">ch07 L94</span></td>
+              <td class="fill"><span class="f-text"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <div class="ws-foot"><div>WS-07-central-team-charter &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3 &middot; right page</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head"><div><h1>Central AI Team Charter — lifecycle and reconciliation</h1></div><div class="ws-meta"><b>WS-07-central-team-charter</b><br>Lifecycle strip, Block G</div></div>
+  <div class="spread-layout" style="display:grid;grid-template-columns:minmax(0,1fr);gap:3mm;align-items:start;">
+        <div class="lifecycle">
+      <div class="ws-block">
+        <h2>Lifecycle strip — the process the team instantiates
+          <span class="ws-block-note">six stages, assign all six</span></h2>
+        <table class="ws">
+          <colgroup>
+            <col style="width:6%"><col style="width:14%">
+            <col style="width:13.333333%"><col style="width:13.333333%"><col style="width:13.333333%">
+            <col style="width:13.333333%"><col style="width:13.333333%"><col style="width:13.333335%">
+          </colgroup>
+          <thead>
+            <tr><th></th><th>Field</th><th>Explore</th><th>Codify</th><th>Publish</th><th>Consume</th><th>Run and monitor</th><th>Discover</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">36</span></td>
+              <td><b>Stage</b></td>
+              <td class="prior">EXPLORE — spend to learn, frontier model, capped<span class="prior-src">ch07 L149-171</span></td>
+              <td class="prior">CODIFY — persist as a reusable skill<span class="prior-src">ch07 L149-171</span></td>
+              <td class="prior">PUBLISH — portal skill, policy-gated<span class="prior-src">ch07 L149-171</span></td>
+              <td class="prior">CONSUME — pull by manifest<span class="prior-src">ch07 L149-171</span></td>
+              <td class="prior">RUN AND MONITOR — cost per outcome<span class="prior-src">ch07 L149-171</span></td>
+              <td class="prior">DISCOVER — usage reveals the next gap<span class="prior-src">ch07 L149-171</span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">37</span></td>
+              <td><b>Who owns this stage here</b><span class="prior-src">org</span></td>
+              <td class="fill"><span class="f-owner"></span></td>
+              <td class="fill"><span class="f-owner"></span></td>
+              <td class="fill"><span class="f-owner"></span></td>
+              <td class="fill"><span class="f-owner"></span></td>
+              <td class="fill"><span class="f-owner"></span></td>
+              <td class="fill"><span class="f-owner"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">38</span></td>
+              <td><b>What it produces</b><span class="prior-src">ch07 L149-171</span></td>
+              <td class="fill"><span class="f-text"></span></td>
+              <td class="fill"><span class="f-text"></span></td>
+              <td class="fill"><span class="f-text"></span></td>
+              <td class="fill"><span class="f-text"></span></td>
+              <td class="fill"><span class="f-text"></span></td>
+              <td class="fill"><span class="f-text"></span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="ours-label">Name the artefact each stage produces to move to the next stage.</p>
+      </div>
+    </div>
+<div class="gutter">
+      <div class="ws-block">
+        <h2>Block G — the reconciliation</h2>
+        <p class="ws-block-note">Write here, in the room, after both pages. Do not resolve the contradiction for the room.</p>
+        <table class="ws">
+          <colgroup>
+            <col style="width:5%"><col style="width:47%"><col style="width:48%">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">33</span></td>
+              <td><b>Which are we?</b><div class="prior">Is this charter the anti-pattern in block B row 1, or not — and what specifically makes the difference?<span class="prior-src">ch06 L236 against ch07 L115</span></div></td>
+              <td class="fill"><span class="f-box xl"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">34</span></td>
+              <td colspan="2">
+                <b>The three commitments that stop this charter becoming that anti-pattern</b>
+                <div class="prior">One line per failure mode: the bottleneck / the coordination tax / the domain-knowledge gap<span class="prior-src">ch06 L236</span></div>
+                <span class="ours-label">Bottleneck</span><span class="f-text"></span>
+                <span class="ours-label">Coordination tax</span><span class="f-text"></span>
+                <span class="ours-label">Domain-knowledge gap</span><span class="f-text"></span>
+                <span class="ours-label">One mechanism-backed commitment against each failure mode.</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">35</span></td>
+              <td colspan="2" class="fill">
+                <b>Signed</b>
+                <span class="ours-label">Accountable executive and whoever would become the bottleneck if this went wrong.</span>
+                <span class="f-sign"></span><span class="f-sign"></span>
+                <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-07-central-team-charter &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```

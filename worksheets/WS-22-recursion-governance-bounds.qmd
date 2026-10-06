@@ -1,0 +1,350 @@
+---
+title: "Bounding the Recursion: Eval, Plan Persistence and Depth Limits per Skill"
+pagetitle: "WS-22-recursion-governance-bounds"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-22-recursion-governance-bounds</b> &middot; review copy &middot; declared format <b>A4 portrait</b> &middot;
+  3 sheet(s) per Skill card. Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Bounding the Recursion: Eval, Plan Persistence and Depth Limits per Skill</h1>
+      <p class="ws-sub">A per-Skill bound sheet making compute cost and audit reconstructibility explicit before any Skill is dispatched in anger.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-22-recursion-governance-bounds</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>16</b> &middot; type <b>rubric</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Reference Architecture, Earned</b>, <i>What makes the recursion governable</i> &middot;
+    <code>handbook/ch22-the-reference-architecture-earned.qmd</code> L117-125 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch22-the-reference-architecture-earned.html#sec-earned-recursion-governance">#sec-earned-recursion-governance</a>
+    &middot; "Recursion without a bound is a generator for unbounded compute and an unauditable trail."
+  </div>
+
+  <div class="ws-instruction">
+    Fill one card (these three sheets) for every Skill on your completed
+    <code>WS-22-recursive-architecture-canvas</code>, at every depth, including Skills reached only through a
+    subagent thread. Copy the card as many times as the canvas has Skills. For each Skill, say what single
+    artefact it returns, what eval declares a pass, where its plan trace is kept and for how long, how deep it may
+    dispatch and what one invocation may cost. Fill blocks A to E in order, and verify each eval claim by opening
+    the path, not by asking the author.
+  </div>
+
+  <div class="ws-instruction" style="border-left-width:2.2mm">
+    <b>Nothing enforces this sheet but this sheet.</b> The chapter is explicit that the eval "lives alongside the
+    bundle today &mdash; as test inputs, expected outputs, and a runner the bundle author maintains &mdash; not yet as a
+    manifest field; the discipline is what matters, and the schema will catch up." No lockfile field, no CI check and
+    no registry validation currently reads columns 7 to 10. Until the schema catches up, this worksheet is the
+    <b>only</b> place the discipline is recorded, which is why column 18 names a person and column 20 names a date.
+    A team that treats this as paperwork has no bound at all; a team that treats it as the register of record has
+    one, manually.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A &mdash; Which Skill, and where it sits
+      <span class="ws-block-note">one card per Skill on the canvas</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:30%"><col style="width:42%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Skill</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Skill</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L123 &mdash; "a Skill, of a known version"</span></td>
+          <td class="fill"><span class="f-text"></span><small>Bundle name as it resolves in the lockfile</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>Version pin</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L123</span></td>
+          <td class="fill"><span class="f-text"></span><small>The exact pin, e.g. <code>#v1.4.2</code> form. An unpinned Skill cannot be bounded.</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Depth on the canvas</b></td>
+          <td class="prior">&mdash;<span class="prior-src">WS-22-recursive-architecture-canvas</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3+</span></div>
+            <small>Where this Skill sits in the dispatch tree drawn on the canvas</small>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>Dispatched by</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L121</span></td>
+          <td class="fill"><span class="f-text"></span><small>The parent Skill or Persona. Blank only for the top-level Skill.</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>Returned artefact</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L123 &mdash; "each level returns one well-typed artefact"</span></td>
+          <td class="fill"><span class="f-text"></span><small><b>One</b> well-typed artefact. If two things are named here, the row is not bounded.</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-22-recursion-governance-bounds &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Bounding the Recursion &mdash; card, continued</h1>
+      <p class="ws-sub">Skill (column 1): <span style="display:inline-block;width:80mm;border-bottom:.25mm solid #93a0ad"></span></p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-22-recursion-governance-bounds</b><br>
+      Pack Z &middot; fill order <b>16</b><br>
+      type <b>rubric</b> &middot; audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; The eval: what a pass looks like
+      <span class="ws-block-note">the eval is the parent's stop condition &middot; ch22 L119</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:30%"><col style="width:42%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Eval</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>How the parent knows it is correct</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L119 &mdash; the eval is the parent's stop condition</span></td>
+          <td class="fill"><span class="f-text"></span><small>The pass condition in a sentence, before any tooling is named</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Eval: test inputs</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L119</span></td>
+          <td class="fill"><span class="f-text"></span><small>Where they live &mdash; path or repo</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Eval: expected outputs</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L119</span></td>
+          <td class="fill"><span class="f-text"></span><small>Where they live</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>Eval: runner</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L119</span></td>
+          <td class="fill"><span class="f-text"></span><small>The command a reviewer can actually run</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>Eval completeness</b></td>
+          <td class="prior">&mdash;<span class="prior-src">derived from ch22 L119</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div>
+            <small><b>present</b> = all three of columns 7-9 exist and the runner passes today; <b>partial</b> = one or two exist; <b>absent</b> = none.</small>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Eval maintainer</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch21 L175-179 (WHAT concern)</span></td>
+          <td class="fill"><span class="f-owner"></span><small>The bundle author who maintains it. The book assigns the eval set to the Domain Specialist.</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block C &mdash; The plan trace: what it leaves behind
+      <span class="ws-block-note">plan persistence bounds the recursion in time &middot; ch22 L121, L123</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:30%"><col style="width:42%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Plan trace</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Plan-persistence path</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L121; layout example at ch22 L172-181</span></td>
+          <td class="fill"><span class="f-text"></span><small>Where the subagent thread writes its working plan, e.g. a run-scoped directory beside the artefact</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Retention</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L121 &mdash; an auditor six months on, with a regulator on the line</span></td>
+          <td class="fill"><span class="f-text"></span><small>How long the trace is kept, and against which obligation</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Who reads what</b></td>
+          <td class="prior">Parent reads the verdict; auditor reads the plan<span class="prior-src">ch22 L121</span></td>
+          <td class="fill"><span class="f-text"></span><small>Name the actual parent and the actual audit function</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-22-recursion-governance-bounds &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Bounding the Recursion &mdash; card, continued</h1>
+      <p class="ws-sub">Skill (column 1): <span style="display:inline-block;width:80mm;border-bottom:.25mm solid #93a0ad"></span></p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-22-recursion-governance-bounds</b><br>
+      Pack Z &middot; fill order <b>16</b><br>
+      type <b>rubric</b> &middot; audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block D &mdash; The bound: depth, ceiling and breach
+      <span class="ws-block-note">the organization's own numbers, from its own metering</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:30%"><col style="width:42%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Bound</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>Max dispatch depth</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L117 &mdash; "unbounded compute"</span></td>
+          <td class="fill"><span class="f-text sm"></span><small>The org's own number (integer). Beyond it, no further dispatch.</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td>
+          <td><b>Compute ceiling per invocation</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch22 L117; WS-19-where-the-bill-gets-decided</span></td>
+          <td class="fill">
+            <span class="f-currency" data-symbol="&pound;"></span>
+            <span class="f-text"></span>
+            <small>The org's own ceiling, in the unit it actually meters (same unit as WS-19). Currency, or free text for tokens, minutes or other units.</small>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td>
+          <td><b>On breach</b></td>
+          <td class="prior">&mdash;<span class="prior-src">derived</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">hard stop</span><span class="opt">escalate to owner</span><span class="opt">degrade and return partial</span></div>
+            <small>What the harness does when 15 or 16 is reached. "Nothing" is not an option.</small>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td>
+          <td><b>Bound owner</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch21 L175-179 (OPERATIONS concern)</span></td>
+          <td class="fill"><span class="f-owner"></span><small>Who owns the ceiling and the trace expectations. The book assigns these to the Agent Operations Specialist.</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block E &mdash; Verdict
+      <span class="ws-block-note">closes the card</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:30%"><col style="width:42%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Verdict</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td>
+          <td><b>Verdict</b></td>
+          <td class="prior">"A Skill that fails eval-and-plan is a prompt with ambitions."<span class="prior-src">ch22 L125</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">BOUNDED</span><span class="opt">PROMPT WITH AMBITIONS</span></div>
+            <small><b>BOUNDED</b> requires column 10 <b>present</b> <i>and</i> columns 12, 13, 15, 16, 17 filled. Anything else is the other verdict.</small>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">20</span></td>
+          <td><b>Re-review date</b></td>
+          <td class="prior">&mdash;<span class="prior-src">org</span></td>
+          <td class="fill">
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+            <small>When this row is checked again. Every card carries one.</small>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">&mdash;</span></td>
+          <td><b>Architect signature + date</b></td>
+          <td class="prior">&mdash;<span class="prior-src">org</span></td>
+          <td class="fill tall"><span class="f-sign"></span><small>The architect who owns the canvas this sheet bounds</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The eval bounds it in space: each level returns one well-typed artefact. Plan persistence bounds it in time:
+    each level is reconstructible after the fact." (ch22 L123)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-22-recursion-governance-bounds &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+```

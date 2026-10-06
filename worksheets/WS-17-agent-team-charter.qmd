@@ -1,0 +1,269 @@
+---
+title: "Agent Team Charter: Mapping Concerns Onto Owners"
+pagetitle: "WS-17-agent-team-charter"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 841mm; --sheet-h: 594mm; --sheet-margin: 20mm; }
+            @page { size: A1 landscape; margin: 20mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-17-agent-team-charter</b> &middot; review copy &middot; declared format <b>A1 landscape</b> &middot;
+  1 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Agent Team Charter: Mapping Concerns Onto Owners</h1>
+      <p class="ws-sub">A set of agent team charters aligned to the org's real concern ownership, and an explicit map of which conventions are written down and which live only in people's heads.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-agent-team-charter</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>18</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Pattern 2: Domain Teams</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L77-87 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-domain-teams">#sec-multi-agent-domain-teams</a>
+    &middot; Fill after <code>WS-17-orchestration-topology-selector</code>; its answer sanctions Domain Teams as a pattern, this sheet instantiates it.
+  </div>
+
+  <div class="ws-instruction">
+    Hang one sheet per exercise, with one column per agent team your organization will define. Work down the rows, not across.
+    For each team, write the concern it owns, the human team that owns that concern today, the context it loads, the territory it owns, how its work is validated, and the named person who maintains its instruction files.
+    When you cannot fill a context cell, do not write "tribal knowledge": mark it <b>unwritten</b>, give it a target path and a name, and keep going. Those cells are the backlog at the foot of this sheet. Photograph the wall before it comes down.
+  </div>
+
+  <div class="ws-block">
+    <h2>Team charters
+      <span class="ws-block-note">one column per team &middot; the first two are the book's starting pair, the rest are yours</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:15%"><col style="width:22%"><col style="width:15%"><col style="width:15%"><col style="width:15%"><col style="width:15%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Team 1</th><th>Team 2</th><th>Team 3</th><th>Team 4</th></tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Team name</b></td>
+          <td class="prior">Two starting teams: Architecture Team, Domain Expert Team. The chapter names Security and Documentation as the scaling examples.<span class="prior-src">ch17 L79-82, L86</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>Concern owned</b></td>
+          <td class="prior">Architecture: type safety fixes, dead code removal, API consolidation. Domain: verbose coverage, logger migration, formatting cleanup.<span class="prior-src">ch17 L82</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Human team or guild that owns this concern today</b></td>
+          <td class="prior">—<span class="prior-src">ch18 L320 (Conway footnote)</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="7">Field 3: write the real org-chart answer, or <b>unowned</b>. Never leave it blank.</td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>Named human sponsor who maintains this team's instruction files</b></td>
+          <td class="prior">—<span class="prior-src">ch17 L86 "its own instruction files"</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="7">Field 4: an individual, not a function, guild or rota. Instruction files decay without a maintainer.</td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>Context loaded — one line per item</b></td>
+          <td class="prior">Architecture: type definitions, module boundaries, pattern catalogue, dependency graph. Domain: output conventions, symbol dictionaries, UX guidelines, migration patterns.<span class="prior-src">ch17 L81</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="7">Field 5: name your equivalents individually, not as a category. "Tribal knowledge" is not a terminal answer here; it is <b>unwritten</b> at field 6.</td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>Written down?</b> — per context item at field 5</td>
+          <td class="prior">—<span class="prior-src">derived from ch17 L81</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div><div class="f-select"><span class="opt">written</span><span class="opt">partial</span><span class="opt">unwritten</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="7">Field 6 is the discovery column. Expect the room to stall here; the stall is the exercise working. One mark per item, in the same order as field 5.</td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Where it lives, or where it must be created</b></td>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text sm"></span><span class="f-text sm"></span><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="7">Field 7: an existing repository path for <b>written</b>; a target path for <b>partial</b> and <b>unwritten</b>.</td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Who writes the missing one</b></td>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="7">Field 8: required wherever field 6 reads <b>partial</b> or <b>unwritten</b>. One name per missing item; list them in field 5 order.</td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>File or module territory owned</b></td>
+          <td class="prior">Each team "is responsible for all files related to that concern."<span class="prior-src">ch17 L77</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="7">Field 9: paths or globs. Must be disjoint across every team column; check by reading across the row before you move on.</td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>Validation criteria</b></td>
+          <td class="prior">Each team brings "its own validation criteria".<span class="prior-src">ch17 L86</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="7">Field 10: the actual command this team's output must pass.</td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Coordination interface with other teams</b></td>
+          <td class="prior">"The coordination cost is between teams, not within them."<span class="prior-src">ch17 L86</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="7">Field 11: what this team hands to, or receives from, each other team.</td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Does this team need another team's context?</b></td>
+          <td class="prior">In the reference two-team structure, "Neither team needed the other's context".<span class="prior-src">ch17 L84</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>needs another team's context</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>needs another team's context</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>needs another team's context</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>needs another team's context</span></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="7">Field 12: expect this to stay unticked. A tick is a signal the concern split is wrong, not a note.</td>
+        </tr>
+
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Charter sponsor signature + date</b></td>
+          <td class="prior">—<span class="prior-src">org</span></td>
+          <td class="fill tall"><span class="f-sign"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill tall"><span class="f-sign"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill tall"><span class="f-sign"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill tall"><span class="f-sign"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked" colspan="7">Field 13: signed by the holder of field 4, signing to maintain.</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Instrumentation backlog
+      <span class="ws-block-note">the deliverable, not a by-product &middot; a list, not a score &middot; hand it to whoever funds the transformation plan before the pack closes</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:15%"><col style="width:32%"><col style="width:12%"><col style="width:23%"><col style="width:15%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Team</th><th>Context item (field 5, marked partial or unwritten)</th><th>State (field 6)</th><th>Target path (field 7)</th><th>Owner (field 8)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num">&mdash;</td>
+          <td><b>Instrumentation backlog</b></td>
+          <td class="prior" colspan="2">Collate every field-5 item marked <b>partial</b> or <b>unwritten</b>, across all team columns.<span class="prior-src">derived</span></td>
+          <td class="fill" colspan="2"><span class="f-computed" data-formula="every field 5 item marked partial or unwritten, with its field 7 path and field 8 owner"></span></td>
+        </tr>
+        <tr><td></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The coordination cost is between teams, not within them." (ch17 L86)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-agent-team-charter &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
