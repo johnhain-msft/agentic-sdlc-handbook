@@ -42,11 +42,11 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Score each of the four delay risks for your organisation using dated evidence,
-    a named owner, a trend, and a 90-day mitigation. Then carry the committed
-    scenario and signed ROI-model value into Panel B, run your chosen delay
-    period, read the caveat aloud, and write the one sentence your sponsor will
-    deliver to the board.
+    For each delay risk, mark whether it applies and record its severity, trend,
+    accountable owner, and 90-day mitigation. For each risk marked yes, add
+    dated, locatable evidence. Then carry the committed scenario and signed
+    ROI-model value into Panel B, run your chosen delay period, read the caveat
+    aloud, and write the one sentence your sponsor will deliver to the board.
   </div>
 
   <div style="display:grid;grid-template-columns:1.12fr .88fr;gap:4mm;align-items:start">
