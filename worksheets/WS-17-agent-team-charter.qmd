@@ -42,7 +42,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Hang one sheet per exercise, with one column per agent team your organisation will define. Work down the rows, not across.
+    Hang one sheet per exercise, with one column per agent team your organization will define. Work down the rows, not across.
     For each team, write the concern it owns, the human team that owns that concern today, the context it loads, the territory it owns, how its work is validated, and the named person who maintains its instruction files.
     When you cannot fill a context cell, do not write "tribal knowledge": mark it <b>unwritten</b>, give it a target path and a name, and keep going. Those cells are the backlog at the foot of this sheet. Photograph the wall before it comes down.
   </div>
