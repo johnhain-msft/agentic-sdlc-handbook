@@ -229,14 +229,15 @@ format:
         </tr>
       </tbody>
     </table>
-    <p style="font-size:7.4pt;margin:1mm 0 0">
+    <p style="font-size:7.4pt;margin:.3mm 0 0">
       For column 10, tick when columns 8 and 9 differ and the step is mechanical.
       Mark at least one fix-first row; order rows so harness fixes precede model swaps.
       Baseline/frontier/local are tiers, not model names or SKUs.
     </p>
+    <div style="display:flex;align-items:center;gap:3mm;font-size:7.4pt"><b style="flex:none;width:45%">Only if a model swap is ticked ahead of a harness fix, why the room is departing from the chapter's weighting:</b><div class="fill" style="flex:1"><span class="f-text"></span></div></div>
   </div>
 
-  <div class="ws-block" style="display:flex;gap:3mm;align-items:stretch;margin-top:1mm">
+  <div class="ws-block" style="display:flex;gap:3mm;align-items:stretch;margin-top:0">
     <div style="flex:1">
       <h2>Readout <span class="ws-block-note">write counts from the workflow rows</span></h2>
       <table class="ws">
@@ -254,16 +255,18 @@ format:
         <tbody>
           <tr><td><b>Organisation-wide owner: model choice</b></td><td class="prior">—<span class="prior-src">ch07 L45-51</span></td><td class="fill"><span class="f-owner"></span></td></tr>
           <tr><td><b>Organisation-wide owner: token use</b></td><td class="prior">—<span class="prior-src">ch07 L45-51</span></td><td class="fill"><span class="f-owner"></span></td></tr>
-          <tr><td><b>Organisation-wide owner: harness choice</b><small>Harness seat should be the most central or senior.</small></td><td class="prior">—<span class="prior-src">ch07 L49</span></td><td class="fill"><span class="f-owner"></span></td></tr>
+          <tr><td><b>Organisation-wide owner: harness choice</b><br><small style="display:block">Harness seat should be the most central or senior. If it is not, write why below.</small></td><td class="prior">—<span class="prior-src">ch07 L49</span></td><td class="fill"><span class="f-owner"></span></td></tr>
         </tbody>
       </table>
+      <div style="display:flex;align-items:center;gap:3mm;font-size:7.4pt"><b style="flex:none;width:45%">Only if the harness owner is less central or senior than the other two, why the room is inverting the chapter's weighting:</b><div class="fill" style="flex:1"><span class="f-text"></span></div></div>
     </div>
   </div>
 
-  <div class="ws-block" style="margin-top:1mm">
-    <div class="prior" style="padding:1mm 2mm">—<span class="prior-src">WS-07-cost-variance-baseline</span></div>
-    <b>Highest-spread task carried in</b> &mdash; copy the circled task from WS-07-cost-variance-baseline; this is also the workflow to audit in row 1.
-    <div class="fill" style="min-height:8mm"><span class="f-text"></span></div>
+  <div class="ws-block" style="margin-top:0">
+    <div style="display:flex;align-items:center;gap:3mm;font-size:8pt">
+    <div class="prior" style="padding:1mm 2mm;flex:none">—<span class="prior-src">WS-07-cost-variance-baseline</span></div>
+    <b style="flex:none">Highest-spread task carried in</b><span style="flex:none">&mdash; copy the circled task from WS-07-cost-variance-baseline; this is also the workflow to audit in row 1.</span>
+    <div class="fill" style="flex:1"><span class="f-text"></span></div></div>
   </div>
 
   <div class="ws-foot">
