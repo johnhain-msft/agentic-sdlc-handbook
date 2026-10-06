@@ -24,7 +24,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>The Three Levers Audit — Model, Tokens, Harness</h1>
-      <p class="ws-sub">A lever-by-lever audit of current agentic spend: identify the misroutings and token taxes to fix first, and name an owner for each variable.</p>
+      <p class="ws-sub">A lever-by-lever audit of running and planned agentic workflows: identify the misroutings and token taxes to fix first, and name an owner for each variable.</p>
     </div>
     <div class="ws-meta">
       <b>WS-07-three-variables-audit</b><br>
