@@ -43,7 +43,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Use the completed readiness assessments and the risk-register hero-pilot score. Record every candidate team, compare each against your organization's norm, and select no more than two. For every selected team, explain in writing why the work will transfer even if a rating is somewhat atypical or exceptional; give every unselected team a reason. Bound one workstream and name what is out of scope. Record all four Month 0 measures and their sources before any tooling is provisioned; if a measure cannot be captured, write “not measurable” and name its substitute. Plan the minimum viable context layer inside Phase 1. Complete the phase-entry and checkpoint-readiness annexes, then sign this contract in the room. The selected phase, budget, owner and target date are recorded in Block F on sheet 2 and incorporated into this contract.
+    Use the completed readiness assessments and the risk-register hero-pilot score. Record every candidate team, compare each against your organization's norm, and select no more than two. For every selected team, explain in writing why the work will transfer even if a rating is somewhat atypical or exceptional; give every unselected team a reason. Bound one workstream and name what is out of scope. Record all four Month 0 measures and their sources before any tooling is provisioned; if a measure cannot be captured, write “not measurable” and name its substitute. Plan the minimum viable context layer inside Phase 1. Complete the phase-entry and checkpoint-readiness annexes (sheets 2 and 3), then sign this contract in the room. Record the selected phase, budget, owner and target date in the Phase 1 commitment block above the signature.
     <br><b>Prerequisites:</b> WS-06-team-readiness-scorecard and WS-08-pitfall-risk-register.
     <b>Feeds:</b> WS-08-transition-planning-checklist, WS-08-phase-gate-exit-rollback and WS-08-baseline-measurement-plan.
   </div>
@@ -228,8 +228,30 @@ format:
   </div>
 
   <div class="ws-block">
+    <h2>Phase 1 commitment <span class="ws-block-note">fields 34, 36, 37 from Block F; the phase matrix is on sheet 2</span></h2>
+    <p class="prior"><span class="fno">34</span> <b>F. Phase entry — Chosen phase</b> &nbsp; The chapter advises starting where tooling is mature and payoff is immediate: Code, Review and Test.<span class="prior-src">ch04 L204</span></p>
+    <p>Tick exactly one phase.</p>
+    <div>
+      <span class="f-checkline"><span class="f-check"></span>Code</span>
+      <span class="f-checkline"><span class="f-check"></span>Review</span>
+      <span class="f-checkline"><span class="f-check"></span>Test</span>
+      <span class="f-checkline"><span class="f-check"></span>Plan</span>
+      <span class="f-checkline"><span class="f-check"></span>Build</span>
+      <span class="f-checkline"><span class="f-check"></span>Release</span>
+      <span class="f-checkline"><span class="f-check"></span>Ideate</span>
+      <span class="f-checkline"><span class="f-check"></span>Operate</span>
+    </div>
+    <table class="ws">
+      <colgroup><col style="width:30%"><col style="width:30%"><col style="width:40%"></colgroup>
+      <thead><tr><th><span class="fno">36</span> First investment budget</th><th><span class="fno">37</span> Accountable owner</th><th>Target date</th></tr></thead>
+      <tbody><tr><td class="fill"><span class="f-currency" data-symbol="&pound;"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr></tbody>
+    </table>
+    <p>Reconcile the budget to WS-07-spend-pool-budget-model. Record the named pilot team, first investment, budget, owner and date as the signed Phase 1 decision.</p>
+  </div>
+
+  <div class="ws-block">
     <h2>Contract signature</h2>
-    <p>The executive sponsor named in field 13 signs and dates this contract in the room, before any tooling is provisioned. The phase, investment, budget, accountable owner and target date are set out in Block F on sheet 2.</p>
+    <p>The executive sponsor named in field 13 signs and dates this contract in the room, before any tooling is provisioned.</p>
     <span class="f-sign"></span>
   </div>
 
@@ -280,18 +302,7 @@ format:
     <h2>Phase decision and commitment</h2>
     <div class="ws-block-note"><span class="fno">33</span> <b>F. Phase entry — Our calibrated timeline</b> &nbsp; Record a range calibrated to documentation maturity and organization size; this is a planning horizon, not a schedule. <span class="prior-src">ch04 L240, L252</span></div>
     <span class="f-text"></span>
-    <p class="prior"><span class="fno">34</span> <b>F. Phase entry — Chosen phase</b> &nbsp; The chapter advises starting where tooling is mature and payoff is immediate: Code, Review and Test.<span class="prior-src">ch04 L204</span></p>
-    <p>Tick exactly one phase.</p>
-    <div>
-      <span class="f-checkline"><span class="f-check"></span>Code</span>
-      <span class="f-checkline"><span class="f-check"></span>Review</span>
-      <span class="f-checkline"><span class="f-check"></span>Test</span>
-      <span class="f-checkline"><span class="f-check"></span>Plan</span>
-      <span class="f-checkline"><span class="f-check"></span>Build</span>
-      <span class="f-checkline"><span class="f-check"></span>Release</span>
-      <span class="f-checkline"><span class="f-check"></span>Ideate</span>
-      <span class="f-checkline"><span class="f-check"></span>Operate</span>
-    </div>
+    <p>Fields 34, 36 and 37 (chosen phase, budget, owner, target date) are recorded on sheet 1, in the signed contract.</p>
     <p><span class="fno">35</span> <b>F. Phase entry — Ranked shortlist, next two</b></p>
     <div class="f-select">
       <span class="opt"><b>2nd</b></span><span class="opt">Code</span><span class="opt">Review</span><span class="opt">Test</span><span class="opt">Plan</span><span class="opt">Build</span><span class="opt">Release</span><span class="opt">Ideate</span><span class="opt">Operate</span>
@@ -299,12 +310,6 @@ format:
     <div class="f-select">
       <span class="opt"><b>3rd</b></span><span class="opt">Code</span><span class="opt">Review</span><span class="opt">Test</span><span class="opt">Plan</span><span class="opt">Build</span><span class="opt">Release</span><span class="opt">Ideate</span><span class="opt">Operate</span>
     </div>
-    <table class="ws">
-      <colgroup><col style="width:30%"><col style="width:30%"><col style="width:40%"></colgroup>
-      <thead><tr><th><span class="fno">36</span> First investment budget</th><th><span class="fno">37</span> Accountable owner</th><th>Target date</th></tr></thead>
-      <tbody><tr><td class="fill"><span class="f-currency" data-symbol="&pound;"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr></tbody>
-    </table>
-    <p>Reconcile the budget to WS-07-spend-pool-budget-model. Record the named pilot team, first investment, budget, owner and date as the signed Phase 1 decision.</p>
   </div>
 
   <div class="ws-foot">
