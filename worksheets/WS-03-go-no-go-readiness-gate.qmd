@@ -7,15 +7,16 @@ format:
     include-in-header:
       - text: |
           <style>
-            html:root { --sheet-w: 297mm; --sheet-h: 420mm; --sheet-margin: 12mm; }
-            @page { size: A3 portrait; margin: 12mm; }
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 8mm; }
+            @page { size: A3 landscape; margin: 8mm; }
           </style>
 ---
 
 ```{=html}
+<style>.grid1p .f-select{gap:0 2mm}.grid1p .f-select .opt{line-height:1.05}.grid1p td{padding-top:.3mm!important;padding-bottom:.3mm!important}.grid1p td.fill.tall{height:15.8mm}.ws-foot{margin-top:0!important;padding-top:.5mm!important}.grid1p .f-select .opt{white-space:nowrap}.grid1p .ws-block{margin-bottom:0!important;margin-top:0!important}.ws-head{padding-bottom:1mm!important;margin-bottom:1mm!important}.ws-instruction,.ws-source{margin-top:.5mm!important;margin-bottom:.5mm!important}.grid1p td.fill.tall .f-sign{height:16mm}</style>
 <div class="screen-only">
   <b>WS-03-go-no-go-readiness-gate</b> &middot; review copy &middot; declared format
-  <b>A3 portrait</b> &middot; 2 sheets. Each white page below is one physical sheet at true size.
+  <b>A3 landscape</b> &middot; 1 sheet. The white page below is one physical sheet at true size.
   Anything spilling past a page edge onto this grey background is a layout defect.
 </div>
 
@@ -51,7 +52,8 @@ format:
     sign and date it with the first review gate date.
   </div>
 
-  <div class="ws-block">
+<div class="grid1p" style="display:grid;grid-template-columns:1.3fr 1.4fr 1fr;column-gap:3mm;row-gap:1mm;align-items:start">
+  <div class="ws-block" style="grid-column:2;grid-row:1">
     <h2>A. Conditions
       <span class="ws-block-note">one answer and evidence record per condition; book prior — on fields 1 and 6</span></h2>
     <table class="ws" style="font-size:7.1pt;line-height:1.05">
@@ -99,7 +101,7 @@ format:
     </table>
   </div>
 
-  <div class="ws-block">
+  <div class="ws-block" style="grid-column:1;grid-row:1 / span 2">
     <h2>B. Governance gate
       <span class="ws-block-note">for each of the 12 book-prior items, record status, owner, due date and evidence; sign any waiver</span></h2>
     <table class="ws" style="font-size:7pt;line-height:1.02">
@@ -131,44 +133,16 @@ format:
     </table>
   </div>
 
-  <div class="ws-foot">
-    <div>WS-03-go-no-go-readiness-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
-    <div>Filled by <span style="display:inline-block;width:32mm;border-bottom:.25mm solid #93a0ad"></span>
-      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
-  </div>
-
-</div>
-
-<!-- ============================ SHEET 2 ============================== -->
-<div class="sheet">
-  <div class="ws-head">
-    <div>
-      <h1>Go / No-Go Readiness Gate</h1>
-      <p class="ws-sub">Executive commitments, calibration and final sign-off.</p>
-    </div>
-    <div class="ws-meta">
-      <b>WS-03-go-no-go-readiness-gate</b><br>
-      Pack G - The plan we leave with<br>
-      fill order <b>6</b> &middot; type <b>checklist</b><br>
-      audience <b>exec</b>
-    </div>
-  </div>
-  <div class="ws-source">
-    Source: <b>The Business Case</b>, <i>The Honest Version</i> &middot;
-    <code>handbook\ch03-the-business-case.qmd</code> L352-356 &middot;
-    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-honest-version">#sec-business-case-honest-version</a>
-  </div>
-
-  <div class="ws-block">
+  <div class="ws-block" style="grid-column:2;grid-row:2">
     <h2>C. Five moves
-      <span class="ws-block-note">for each pre-printed move, record the accountable executive, target date, evidence of completion and current status</span></h2>
+      <span class="ws-block-note">ch07 L178: pinning a model tier is the engineer's job; requiring it is the leader's. Field 15 is the accountable executive</span></h2>
     <table class="ws" style="font-size:7pt;line-height:1.02">
       <colgroup>
         <col style="width:28%"><col style="width:16%"><col style="width:11%">
         <col style="width:29%"><col style="width:16%">
       </colgroup>
       <thead>
-        <tr><th><b>14</b> Move</th><th><b>15</b> Accountable executive<br><span class="prior-src" style="color:#f2f5f8;font-size:7pt">ch07 L178: pinning is the engineer's job; requiring it is the leader's</span></th><th><b>16</b> Target date</th><th><b>17</b> Evidence that would prove it done</th><th><b>18</b> Current status</th></tr>
+        <tr><th><b>14</b> Move</th><th><b>15</b> Accountable executive</th><th><b>16</b> Target date</th><th><b>17</b> Evidence that would prove it done</th><th><b>18</b> Current status</th></tr>
       </thead>
       <tbody>
         <tr><td class="locked">Build a team of Agentic Workflow Engineers for recurring, ROI-positive use cases<span class="prior-src">ch07 L177-181</span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">not started</span><span class="opt">in progress</span><span class="opt">done</span></div></td></tr>
@@ -180,7 +154,7 @@ format:
     </table>
   </div>
 
-  <div class="ws-block">
+  <div style="grid-column:3;grid-row:1 / span 2"><div class="ws-block">
     <h2>D. Calibration
       <span class="ws-block-note">read before initialing; the organization supplies its own expectation</span></h2>
     <table class="ws" style="font-size:7.1pt;line-height:1.04">
@@ -227,8 +201,11 @@ format:
     </div>
   </div>
 
+</div>
+
+</div>
   <div class="ws-foot">
-    <div>WS-03-go-no-go-readiness-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>WS-03-go-no-go-readiness-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
     <div>Filled by <span style="display:inline-block;width:32mm;border-bottom:.25mm solid #93a0ad"></span>
       &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
   </div>
