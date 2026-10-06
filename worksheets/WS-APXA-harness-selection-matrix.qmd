@@ -362,7 +362,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/appendix-a-cross-harness-reference.html#sec-harness-substrate-matrix">#sec-harness-substrate-matrix</a>
   </div>
   <div class="ws-instruction">
-    For every primitive you require, mark the target harnesses, record the materialisation status,
+    For every primitive you require, mark the target harnesses, record the materialization status,
     and name an owner wherever translation is required. State each accepted gap as a sentence and
     describe the qualitative maintenance burden for every extra layout.
   </div>
@@ -463,7 +463,7 @@ format:
 <!-- ============================ SHEET 7 ============================== -->
 <div class="sheet">
   <div class="ws-head">
-    <div><h1>Harness Selection and Portability Matrix</h1><p class="ws-sub">Block E — portability policy for the primitives your organisation intends to author.</p></div>
+    <div><h1>Harness Selection and Portability Matrix</h1><p class="ws-sub">Block E — portability policy for the primitives your organization intends to author.</p></div>
     <div class="ws-meta"><b>WS-APXA-harness-selection-matrix</b><br>Pack D - Architecture and ownership<br>fill order <b>5</b> &middot; type <b>matrix</b><br>audience <b>mixed</b></div>
   </div>
   <div class="ws-source">
