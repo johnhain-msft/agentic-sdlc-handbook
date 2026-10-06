@@ -1,0 +1,547 @@
+---
+title: "First Week Commitment Register (Day 1 to Day 5)"
+pagetitle: "WS-27-first-week-plan"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-27-first-week-plan</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  7 sheets. Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>First Week Commitment Register (Day 1 to Day 5)</h1>
+      <p class="ws-sub">A signed one-week commitment register — the concrete artifact a pre-groundbreaking workshop should send participants home with.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-27-first-week-plan</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>3</b> &middot; type <b>roadmap</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>What Comes Next</b>, <i>Your First Week: What to Do Starting Monday</i> &middot;
+    <code>handbook\ch27-what-comes-next.qmd</code> L147-177 &middot;
+    locator: &ldquo;For leaders who read Parts I&ndash;II and practitioners who read Part III&rdquo; &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
+  </div>
+  <div class="ws-instruction">
+    For Days 1&ndash;5, enter five real calendar dates from Monday to Friday in a named week; &ldquo;next week&rdquo; is not a date. For each horizon, name the specific module and team, one owner, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives. The Day 30, 60 and 90 commitments are authored for this kit, not supplied by the handbook.
+  </div>
+  <div class="ws-block">
+    <h2>Day 1&ndash;2 register <span class="ws-block-note">complete one row per horizon; each row is signed individually</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:8%"><col style="width:9%"><col style="width:10%"><col style="width:20%">
+        <col style="width:11%"><col style="width:8%"><col style="width:7%"><col style="width:5%">
+        <col style="width:10%"><col style="width:12%">
+      </colgroup>
+      <thead><tr>
+        <th>Horizon</th><th>Source band</th><th>Action</th><th>Deliverable</th>
+        <th>Module or team it applies to</th><th>Owner</th><th>Target date</th><th>Done</th>
+        <th>Done, signed</th><th>Evidence artefact</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked">Day 1</td>
+          <td class="locked">ch27</td>
+          <td class="locked">Audit One Module</td>
+          <td class="locked">A list of 5&ndash;10 implicit conventions an agent would violate on its first task in this module.</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill tall"><span class="f-sign"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Day 2</td>
+          <td class="locked">ch27</td>
+          <td class="locked">Write Your First Three Primitives</td>
+          <td class="locked">Three instruction files, committed to your repository.</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill tall"><span class="f-sign"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-block">
+    <h2>Day 1&ndash;2 detail <span class="ws-block-note">book-supplied context is printed; complete the adjacent answer</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:28%"><col style="width:33%"><col style="width:33%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td><td><b>Day 1 — The most-changed module, and how we know</b></td>
+          <td class="prior">Pick the module your team changes most frequently. Not the biggest module, the most-changed one.<span class="prior-src">ch27 L151</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td><td><b>Day 1 — Implicit conventions found</b></td>
+          <td class="prior">The deliverable&rsquo;s shape is a list of 5&ndash;10 conventions an agent would violate on its first task here — the book&rsquo;s specification for the deliverable, not a performance target.<span class="prior-src">ch27 L151-153</span></td>
+          <td class="fill taller"><span class="f-box lg"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td><td><b>Day 2 — The three primitives</b></td>
+          <td class="prior">One organisational standard · one architectural constraint · one domain-specific rule. Scoped, testable, specific. Three primitives that cover the most common mistakes are worth more than thirty that cover edge cases.<span class="prior-src">ch27 L157</span></td>
+          <td class="fill"><b>Organisational standard</b><span class="f-text"></span><span class="f-owner"></span><b>Architectural constraint</b><span class="f-text"></span><span class="f-owner"></span><b>Domain-specific rule</b><span class="f-text"></span><span class="f-owner"></span><small>Authors are identified per file again in field 25.</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td><td><b>Day 2 — Commit reference</b></td>
+          <td class="prior">Three instruction files, committed to your repository.<span class="prior-src">ch27 L159</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-27-first-week-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>First Week Commitment Register (Day 1 to Day 5)</h1>
+      <p class="ws-sub">The Day 3&ndash;5 commitments and their evidence, carried with the same signed register.</p>
+    </div>
+    <div class="ws-meta"><b>WS-27-first-week-plan</b><br>Pack G - The plan we leave with<br>fill order <b>3</b> &middot; type <b>roadmap</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>What Comes Next</b>, <i>Your First Week: What to Do Starting Monday</i> &middot;
+    <code>handbook\ch27-what-comes-next.qmd</code> L147-177 &middot;
+    locator: &ldquo;For leaders who read Parts I&ndash;II and practitioners who read Part III&rdquo; &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
+  </div>
+  <div class="ws-instruction">
+    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives. The Day 30, 60 and 90 commitments are authored for this kit, not supplied by the handbook.
+  </div>
+  <div class="ws-block">
+    <h2>Day 3&ndash;5 register <span class="ws-block-note">complete one row per horizon; each row is signed individually</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:8%"><col style="width:9%"><col style="width:10%"><col style="width:20%">
+        <col style="width:11%"><col style="width:8%"><col style="width:7%"><col style="width:5%">
+        <col style="width:10%"><col style="width:12%">
+      </colgroup>
+      <thead><tr>
+        <th>Horizon</th><th>Source band</th><th>Action</th><th>Deliverable</th>
+        <th>Module or team it applies to</th><th>Owner</th><th>Target date</th><th>Done</th>
+        <th>Done, signed</th><th>Evidence artefact</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked">Day 3</td><td class="locked">ch27</td><td class="locked">Test Against a Real Task</td>
+          <td class="locked">A before-and-after comparison with specific examples of what changed.</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><span class="f-sign"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Day 4</td><td class="locked">ch27</td><td class="locked">Measure and Adjust</td>
+          <td class="locked">Revised instruction files based on observed agent behavior.</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><span class="f-sign"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Day 5</td><td class="locked">ch27</td><td class="locked">Share and Plan</td>
+          <td class="locked">A team agreement on next steps and ownership.</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><span class="f-sign"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-block">
+    <h2>Day 3&ndash;5 detail <span class="ws-block-note">record observed outputs, not a conclusion from one data point</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:28%"><col style="width:33%"><col style="width:33%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td><td><b>Day 3 — The sprint task used</b></td>
+          <td class="prior">Pick a task from your current sprint — something an agent would plausibly handle.<span class="prior-src">ch27 L163</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td><td><b>Day 3 — Result without context files / with context files</b></td>
+          <td class="prior">Run it twice: once without your new context files, once with them. Record the before-and-after. This is your first data point, not your conclusion.<span class="prior-src">ch27 L163</span></td>
+          <td class="fill"><b>Without</b><span class="f-box"></span><b>With</b><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td><td><b>Day 3 — Predicted mistakes: prevented?</b></td>
+          <td class="prior">Did the context files prevent the mistakes you predicted? Did they cause new problems?<span class="prior-src">ch27 L163</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">prevented</span><span class="opt">not prevented</span><span class="opt">new problem introduced</span></div>
+            <span class="f-box"></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-27-first-week-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>First Week Commitment Register (Day 1 to Day 5)</h1>
+      <p class="ws-sub">Day 4 and Day 5 detail — inspect the actual file behavior, then record the team&rsquo;s next owners.</p>
+    </div>
+    <div class="ws-meta"><b>WS-27-first-week-plan</b><br>Pack G - The plan we leave with<br>fill order <b>3</b> &middot; type <b>roadmap</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>What Comes Next</b>, <i>Your First Week: What to Do Starting Monday</i> &middot;
+    <code>handbook\ch27-what-comes-next.qmd</code> L147-177 &middot;
+    locator: &ldquo;For leaders who read Parts I&ndash;II and practitioners who read Part III&rdquo; &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
+  </div>
+  <div class="ws-instruction">
+    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives.
+  </div>
+  <div class="ws-block">
+    <h2>Day 4&ndash;5 detail <span class="ws-block-note">record the work and ownership agreement</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:28%"><col style="width:33%"><col style="width:33%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td><td><b>Day 4 — Which files made a difference, which were ignored or misinterpreted</b></td>
+          <td class="prior">—</td><td class="fill"><span class="f-box lg"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td><td><b>Day 4 — Revision made</b></td>
+          <td class="prior">Revise the ones that didn&rsquo;t land. Context files are not documentation, they are engineering artifacts that need testing and iteration like any other code.<span class="prior-src">ch27 L169</span></td>
+          <td class="fill"><span class="f-box"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">20</span></td><td><b>Day 5 — Demo held: date and attendees</b></td>
+          <td class="prior">A 15-minute demo at standup, not a presentation. Show the worst agent output without instrumentation and the improved output with it.<span class="prior-src">ch27 L175</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">21</span></td><td><b>Day 5 — Next modules to instrument, in order</b></td>
+          <td class="prior">Plan which modules get instrumented next.<span class="prior-src">ch27 L175</span></td>
+          <td class="fill"><b>1</b><span class="f-text"></span><b>2</b><span class="f-text"></span><b>3</b><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">22</span></td><td><b>Day 5 — Who owns which instruction file</b></td>
+          <td class="prior">Who owns which instruction files? One owner per file; do not collapse the list into one name.<span class="prior-src">ch27 L175</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-owner"></span><span class="f-text"></span><span class="f-owner"></span><span class="f-text"></span><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">23</span></td><td><b>Day 5 — How we keep them current as the code evolves</b></td>
+          <td class="prior">How do you keep the instruction files current as the code evolves?<span class="prior-src">ch27 L175</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-27-first-week-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+
+<!-- ============================ SHEET 4 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>First Week Commitment Register (Day 1 to Day 5)</h1>
+      <p class="ws-sub">The absorbed three-week rollout: exercise the files, extract reusable knowledge, and keep the instrumentation current.</p>
+    </div>
+    <div class="ws-meta"><b>WS-27-first-week-plan</b><br>Pack G - The plan we leave with<br>fill order <b>3</b> &middot; type <b>roadmap</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>What Comes Next</b>, <i>Your First Week: What to Do Starting Monday</i> &middot;
+    <code>handbook\ch27-what-comes-next.qmd</code> L147-177; absorbed rollout from
+    <code>handbook\ch12-the-instrumented-codebase.qmd</code> L717-734 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
+  </div>
+  <div class="ws-instruction">
+    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives. The Day 30, 60 and 90 commitments are authored for this kit, not supplied by the handbook.
+  </div>
+  <div class="ws-block">
+    <h2>Week 2&ndash;Ongoing register <span class="ws-block-note">ch12 continuation; one signature and evidence artefact per horizon</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:8%"><col style="width:9%"><col style="width:10%"><col style="width:20%">
+        <col style="width:11%"><col style="width:8%"><col style="width:7%"><col style="width:5%">
+        <col style="width:10%"><col style="width:12%">
+      </colgroup>
+      <thead><tr>
+        <th>Horizon</th><th>Source band</th><th>Action</th><th>Deliverable</th>
+        <th>Module or team it applies to</th><th>Owner</th><th>Target date</th><th>Done</th>
+        <th>Done, signed</th><th>Evidence artefact</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked">Week 2</td><td class="locked">ch12</td><td class="locked">—</td><td class="locked">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><span class="f-sign"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Week 3</td><td class="locked">ch12</td><td class="locked">—</td><td class="locked">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><span class="f-sign"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Ongoing (monthly)</td><td class="locked">ch12</td><td class="locked">—</td><td class="locked">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><span class="f-sign"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-block">
+    <h2>Week 1 files and rollout detail <span class="ws-block-note">the Week 1 files are the same three primitives recorded on sheet 1, field 13 — not a second set</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:28%"><col style="width:33%"><col style="width:33%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">24</span></td><td><b>Week 1 files — File</b></td>
+          <td class="prior">Global instructions: 10&ndash;15 lines of non-negotiable principles · one scoped instruction file for your most-edited module · one agent configuration for the task agents perform most often.<span class="prior-src">ch12 L719</span></td>
+          <td class="locked">These are the same three files as the Day 2 primitives (field 13), not a second set.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">25</span></td><td><b>Week 1 files — Author</b></td>
+          <td class="prior">A named author per file. These three reconcile to the three primitives in field 13.<span class="prior-src">ch12 L719</span></td>
+          <td class="fill"><b>Global instructions</b><span class="f-owner"></span><b>Scoped instruction file</b><span class="f-owner"></span><b>Agent configuration</b><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">26</span></td><td><b>Week 2 — The real work these files will be exercised on</b></td>
+          <td class="prior">Use these files on real work.<span class="prior-src">ch12 L721</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-27-first-week-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 4 ============================ -->
+
+<!-- ============================ SHEET 5 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>First Week Commitment Register (Day 1 to Day 5)</h1>
+      <p class="ws-sub">Week 2, Week 3 and monthly review detail — carry the instrumentation forward.</p>
+    </div>
+    <div class="ws-meta"><b>WS-27-first-week-plan</b><br>Pack G - The plan we leave with<br>fill order <b>3</b> &middot; type <b>roadmap</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>What Comes Next</b> and absorbed <b>The Instrumented Codebase</b> &middot;
+    <code>handbook\ch12-the-instrumented-codebase.qmd</code> L717-734 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
+  </div>
+  <div class="ws-instruction">
+    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record the Week 2 changes, Week 3 triggers and monthly rule changes in the fields below.
+  </div>
+  <div class="ws-block">
+    <h2>Week 2&ndash;Ongoing detail <span class="ws-block-note">source: ch12 Starting Points; preserve the trigger conditions</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:28%"><col style="width:33%"><col style="width:33%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">27</span></td><td><b>Week 2 — Conventions violated and added</b></td>
+          <td class="prior">When the agent violates a convention not covered by your files, add it. When it does something right that surprised you, check whether your instrumentation contributed.<span class="prior-src">ch12 L721</span></td>
+          <td class="fill"><b>Violated and added</b><span class="f-box"></span><b>Right and surprising; instrumentation contribution checked</b><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">28</span></td><td><b>Week 2 — Memory file updated</b></td>
+          <td class="prior">Update the memory file with the decisions and trade-offs you resolved this week.<span class="prior-src">ch12 L721</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>updated</span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">29</span></td><td><b>Week 3 — First skill extracted</b></td>
+          <td class="prior">Trigger: you&rsquo;ve written the same guidance in two different instruction files. Package the shared knowledge as a skill with a decision framework.<span class="prior-src">ch12 L723</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">30</span></td><td><b>Week 3 — First prompt file</b></td>
+          <td class="prior">Trigger: a task you have now asked an agent to do three or more times.<span class="prior-src">ch12 L723</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">31</span></td><td><b>Ongoing — Monthly review owner and date</b></td>
+          <td class="prior">Review context files monthly.<span class="prior-src">ch12 L725</span></td>
+          <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">32</span></td><td><b>Ongoing — Rules removed / tightened / added</b></td>
+          <td class="prior">Remove rules that never trigger · tighten rules that trigger but don&rsquo;t prevent the failure · add new rules only in response to observed failures. Treat your instrumentation like a test suite: it should grow with the codebase, stay accurate, and never contain dead rules.<span class="prior-src">ch12 L725</span></td>
+          <td class="fill"><b>Removed — what changed and why</b><span class="f-text"></span><b>Tightened — what changed and why</b><span class="f-text"></span><b>Added — what changed and why</b><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-block">
+    <div class="ws-block-note" style="display:block;border-top:1mm solid #263746;padding-top:2mm;margin-top:2mm">
+      Everything below this line is authored for this kit. The handbook's own plan ends at Day 5 (ch27 L149-177); Chapter 12 carries it to Week 3 and a monthly cadence (ch12 L717-734). Days 30, 60 and 90 are our extension.
+    </div>
+  </div>
+  <div class="ws-foot">
+    <div>WS-27-first-week-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 5 ============================ -->
+
+<!-- ============================ SHEET 6 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>First Week Commitment Register (Day 1 to Day 5)</h1>
+      <p class="ws-sub">Extension band — authored for this kit, beyond the handbook&rsquo;s plan.</p>
+    </div>
+    <div class="ws-meta"><b>WS-27-first-week-plan</b><br>Pack G - The plan we leave with<br>fill order <b>3</b> &middot; type <b>roadmap</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: kit-authored extension to <b>What Comes Next</b>, <i>Your First Week: What to Do Starting Monday</i> &middot;
+    <code>handbook\ch27-what-comes-next.qmd</code> L149-177 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
+  </div>
+  <div class="ws-instruction">
+    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record each commitment, owner, evidence and review date below. These horizons and commitments are authored for this kit, not supplied by the handbook.
+  </div>
+  <div class="ws-block">
+    <h2>Extension register <span class="ws-block-note">AUTHORED — not in the book; complete only the organisation&rsquo;s own commitments</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:8%"><col style="width:9%"><col style="width:10%"><col style="width:20%">
+        <col style="width:11%"><col style="width:8%"><col style="width:7%"><col style="width:5%">
+        <col style="width:10%"><col style="width:12%">
+      </colgroup>
+      <thead><tr>
+        <th>Horizon</th><th>Source band</th><th>Action</th><th>Deliverable</th>
+        <th>Module or team it applies to</th><th>Owner</th><th>Target date</th><th>Done</th>
+        <th>Done, signed</th><th>Evidence artefact</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked">Day 30</td><td class="locked">AUTHORED — not in the book</td><td class="locked">—</td><td class="locked">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><span class="f-sign"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Day 60</td><td class="locked">AUTHORED — not in the book</td><td class="locked">—</td><td class="locked">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><span class="f-sign"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Day 90</td><td class="locked">AUTHORED — not in the book</td><td class="locked">—</td><td class="locked">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><span class="f-sign"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-block">
+    <h2>Extension detail <span class="ws-block-note">no pre-filled commitments; write the organisation&rsquo;s own</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:28%"><col style="width:33%"><col style="width:33%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">33</span></td><td><b>Extension (AUTHORED) — Commitment</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><b>Day 30</b><span class="f-box"></span><b>Day 60</b><span class="f-box"></span><b>Day 90</b><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-block">
+    <div class="ws-block-note" style="display:block;border-top:1mm solid #263746;padding-top:2mm;margin-top:2mm">
+      Everything below this line is authored for this kit. The handbook's own plan ends at Day 5 (ch27 L149-177); Chapter 12 carries it to Week 3 and a monthly cadence (ch12 L717-734). Days 30, 60 and 90 are our extension.
+    </div>
+  </div>
+  <div class="ws-foot">
+    <div>WS-27-first-week-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 6 ============================ -->
+
+<!-- ============================ SHEET 7 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>First Week Commitment Register (Day 1 to Day 5)</h1>
+      <p class="ws-sub">Extension detail — assign an owner, evidence and review date to each authored commitment.</p>
+    </div>
+    <div class="ws-meta"><b>WS-27-first-week-plan</b><br>Pack G - The plan we leave with<br>fill order <b>3</b> &middot; type <b>roadmap</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: kit-authored extension to <b>What Comes Next</b>, <i>Your First Week: What to Do Starting Monday</i> &middot;
+    <code>handbook\ch27-what-comes-next.qmd</code> L149-177 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
+  </div>
+  <div class="ws-instruction">
+    For each authored horizon, enter the owner, evidence artefact and review date that match the Day 30, Day 60 and Day 90 commitments on sheet 6. This extension is authored for this kit, not supplied by the handbook.
+  </div>
+  <div class="ws-block">
+    <h2>Extension detail <span class="ws-block-note">no pre-filled commitments; write the organisation&rsquo;s own</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:28%"><col style="width:33%"><col style="width:33%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">34</span></td><td><b>Extension (AUTHORED) — Owner, evidence and review date</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><b>Day 30</b><span class="f-owner"></span><b>Evidence</b><span class="f-text"></span><b>Review</b><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+            <b>Day 60</b><span class="f-owner"></span><b>Evidence</b><span class="f-text"></span><b>Review</b><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+            <b>Day 90</b><span class="f-owner"></span><b>Evidence</b><span class="f-text"></span><b>Review</b><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-27-first-week-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 7 of 7</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 7 ============================ -->
+```
