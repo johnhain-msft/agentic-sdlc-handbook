@@ -1,0 +1,890 @@
+---
+title: "Skill Gap Map and the Revised Hiring Bar"
+pagetitle: "WS-06-skill-gap-and-hiring-bar"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-06-skill-gap-and-hiring-bar</b> &middot; review copy &middot; declared format
+  <b>A3 landscape booklet</b> &middot; 11 sheets. Block C is confidential: do not distribute,
+  project or photograph it.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Skill Gap Map and the Revised Hiring Bar</h1>
+      <p class="ws-sub">A prioritised capability gap map with a hire-train-accept decision per skill, plus a redlined interview loop.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-skill-gap-and-hiring-bar</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>1</b> &middot; type <b>rubric</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Skill Matrix Evolution</i> &middot;
+    <code>handbook\ch06-team-structures.qmd</code> L262-298 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-team-skill-matrix">#sec-team-skill-matrix</a>
+  </div>
+
+  <div class="ws-instruction">
+    For each skill, score your team today and the level it needs under agentic delivery; record the gap and choose exactly one action: hire, train or accept. If you choose train, name a track from block F. Then redline the hiring loop and assign an owner to every decision.
+  </div>
+
+  <div class="ws-block">
+    <h2>A &mdash; The skill gap map
+      <span class="ws-block-note">one row per skill &middot; complete from left to right</span></h2>
+    <p class="ws-block-note">
+      Strength and required-level anchors: 1 = nobody has it; 2 = one person has it;
+      3 = several have it, unevenly; 4 = most of the team; 5 = the team's routine standard.
+      Gap is a per-skill band, never a sum. Choose a block F track only for a train action.
+    </p>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:15%"><col style="width:10%"><col style="width:11%"><col style="width:11%">
+        <col style="width:9%"><col style="width:9%"><col style="width:9%"><col style="width:10%">
+        <col style="width:7%"><col style="width:9%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span> Skill</th>
+          <th><span class="fno">2</span> Pre-agentic value</th>
+          <th><span class="fno">3</span> Agentic value</th>
+          <th><span class="fno">4</span> Direction</th>
+          <th><span class="fno">5</span> Our strength today</th>
+          <th><span class="fno">6</span> Required level under agentic delivery</th>
+          <th><span class="fno">7</span> Gap</th>
+          <th><span class="fno">8</span> Action</th>
+          <th><span class="fno">9</span> Owner</th>
+          <th><span class="fno">10</span> If train: which enablement track</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked">Syntax and language fluency</td>
+          <td class="prior">High &mdash; daily necessity<span class="prior-src">ch06 L268</span></td>
+          <td class="prior">Low &mdash; agents handle this<span class="prior-src">ch06 L268</span></td>
+          <td class="prior">Declining<span class="prior-src">ch06 L268</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="required level vs strength; band: none / one step / two or more steps"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">train</span><span class="opt">accept</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">F1</span><span class="opt">F2</span><span class="opt">F3</span><span class="opt">F4</span><span class="opt">F5</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Algorithm and data structure mastery</td>
+          <td class="prior">Medium &mdash; interviews, specific domains<span class="prior-src">ch06 L269</span></td>
+          <td class="prior">Low to medium &mdash; agents implement known algorithms<span class="prior-src">ch06 L269</span></td>
+          <td class="prior">Declining for implementation, stable for design<span class="prior-src">ch06 L269</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="required level vs strength; band: none / one step / two or more steps"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">train</span><span class="opt">accept</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">F1</span><span class="opt">F2</span><span class="opt">F3</span><span class="opt">F4</span><span class="opt">F5</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">System design and architecture</td>
+          <td class="prior">High<span class="prior-src">ch06 L270</span></td>
+          <td class="prior">Very high &mdash; the primary human differentiator<span class="prior-src">ch06 L270</span></td>
+          <td class="prior">Increasing<span class="prior-src">ch06 L270</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="required level vs strength; band: none / one step / two or more steps"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">train</span><span class="opt">accept</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">F1</span><span class="opt">F2</span><span class="opt">F3</span><span class="opt">F4</span><span class="opt">F5</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Code review and evaluation</td>
+          <td class="prior">Medium &mdash; supporting skill<span class="prior-src">ch06 L271</span></td>
+          <td class="prior">High &mdash; core daily activity<span class="prior-src">ch06 L271</span></td>
+          <td class="prior">Increasing<span class="prior-src">ch06 L271</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="required level vs strength; band: none / one step / two or more steps"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">train</span><span class="opt">accept</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">F1</span><span class="opt">F2</span><span class="opt">F3</span><span class="opt">F4</span><span class="opt">F5</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Technical writing and specification</td>
+          <td class="prior">Low to medium &mdash; often neglected<span class="prior-src">ch06 L272</span></td>
+          <td class="prior">High &mdash; specification quality drives agent output quality<span class="prior-src">ch06 L272</span></td>
+          <td class="prior">Sharply increasing<span class="prior-src">ch06 L272</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="required level vs strength; band: none / one step / two or more steps"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">train</span><span class="opt">accept</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">F1</span><span class="opt">F2</span><span class="opt">F3</span><span class="opt">F4</span><span class="opt">F5</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Context engineering</td>
+          <td class="prior">Did not exist<span class="prior-src">ch06 L273</span></td>
+          <td class="prior">High &mdash; new foundational skill<span class="prior-src">ch06 L273</span></td>
+          <td class="prior">New<span class="prior-src">ch06 L273</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="required level vs strength; band: none / one step / two or more steps"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">train</span><span class="opt">accept</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">F1</span><span class="opt">F2</span><span class="opt">F3</span><span class="opt">F4</span><span class="opt">F5</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Debugging and root cause analysis</td>
+          <td class="prior">High<span class="prior-src">ch06 L274</span></td>
+          <td class="prior">High &mdash; agent-generated bugs are subtler<span class="prior-src">ch06 L274</span></td>
+          <td class="prior">Stable, but harder<span class="prior-src">ch06 L274</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="required level vs strength; band: none / one step / two or more steps"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">train</span><span class="opt">accept</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">F1</span><span class="opt">F2</span><span class="opt">F3</span><span class="opt">F4</span><span class="opt">F5</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Domain knowledge</td>
+          <td class="prior">High<span class="prior-src">ch06 L275</span></td>
+          <td class="prior">Very high &mdash; agents cannot learn what is not documented<span class="prior-src">ch06 L275</span></td>
+          <td class="prior">Increasing<span class="prior-src">ch06 L275</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="required level vs strength; band: none / one step / two or more steps"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">train</span><span class="opt">accept</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">F1</span><span class="opt">F2</span><span class="opt">F3</span><span class="opt">F4</span><span class="opt">F5</span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Collaboration and communication</td>
+          <td class="prior">Medium<span class="prior-src">ch06 L276</span></td>
+          <td class="prior">High &mdash; coordination with agents adds a new dimension<span class="prior-src">ch06 L276</span></td>
+          <td class="prior">Increasing<span class="prior-src">ch06 L276</span></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><div class="f-scale"><span class="pt">1</span><span class="pt">2</span><span class="pt">3</span><span class="pt">4</span><span class="pt">5</span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="required level vs strength; band: none / one step / two or more steps"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">train</span><span class="opt">accept</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">F1</span><span class="opt">F2</span><span class="opt">F3</span><span class="opt">F4</span><span class="opt">F5</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-skill-gap-and-hiring-bar &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 11</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Revised interview loop and retention risks</h1>
+      <p class="ws-sub">Redline what you screen for and stop requiring; assign conversations for the two named retention risks.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-skill-gap-and-hiring-bar</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>1</b> &middot; type <b>rubric</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Hiring Implications and Retention Risks</i> &middot;
+    <code>handbook\ch06-team-structures.qmd</code> L280-298 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-team-skill-matrix">#sec-team-skill-matrix</a>
+  </div>
+
+  <div class="ws-instruction">
+    Mark which screening skills your loop tests and at what stage. For every stop-requiring item still in the loop, write when it comes out. Build and assign both interview exercises. Keep block C confidential: name the people at risk, who will speak with them, by when, and what signal you will watch.
+  </div>
+
+  <div class="ws-block">
+    <h2>B &mdash; The redlined interview loop
+      <span class="ws-block-note">redline in both directions: add the exercises and remove the old proxies</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:21%"><col style="width:39%"><col style="width:34%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Screen for</b></td>
+          <td class="prior">Systems thinking<span class="prior-src">ch06 L284</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tested today</span> Stage <span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td></td>
+          <td class="prior">Technical communication in writing, not just verbally<span class="prior-src">ch06 L284</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tested today</span> Stage <span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td></td>
+          <td class="prior">Evaluation skill on code the candidate did not write<span class="prior-src">ch06 L284</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tested today</span> Stage <span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td></td>
+          <td class="prior">Comfort with ambiguity<span class="prior-src">ch06 L284</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tested today</span> Stage <span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td></td>
+          <td class="prior">Learning velocity<span class="prior-src">ch06 L284</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tested today</span> Stage <span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Stop requiring</b></td>
+          <td class="prior">Whiteboard algorithm implementation<span class="prior-src">ch06 L286</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Still in loop</span> Comes out <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td></td>
+          <td class="prior">Syntax trivia<span class="prior-src">ch06 L286</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Still in loop</span> Comes out <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td></td>
+          <td class="prior">Memorized API knowledge<span class="prior-src">ch06 L286</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Still in loop</span> Comes out <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Review exercise</b></td>
+          <td class="prior">Give candidates agent-generated code with subtle defects; evaluate how they identify and explain the problems.<span class="prior-src">ch06 L288</span></td>
+          <td class="fill">
+            Our real defect(s): <span class="f-box"></span>
+            Builds it <span class="f-owner"></span>
+            By <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-skill-gap-and-hiring-bar &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 11</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Revised interview loop &mdash; continued</h1>
+      <p class="ws-sub">Finish the specification exercise and secure both required signatures.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-skill-gap-and-hiring-bar</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>1</b> &middot; type <b>rubric</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Hiring Implications</i> &middot;
+    <code>handbook\ch06-team-structures.qmd</code> L288 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-team-skill-matrix">#sec-team-skill-matrix</a>
+  </div>
+
+  <div class="ws-instruction">
+    Build the specification exercise from one of your own ambiguous requirements, name its builder and due date, then obtain both signatures before changing the live interview pipeline.
+  </div>
+
+  <div class="ws-block">
+    <h2>B &mdash; The redlined interview loop
+      <span class="ws-block-note">continued &middot; finish both exercises and sign-off</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:21%"><col style="width:39%"><col style="width:34%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Specification exercise</b></td>
+          <td class="prior">Give candidates an ambiguous requirement; evaluate how they decompose it into a clear, implementable specification.<span class="prior-src">ch06 L288</span></td>
+          <td class="fill">
+            Our ambiguous requirement: <span class="f-box"></span>
+            Builds it <span class="f-owner"></span>
+            By <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>Loop sign-off</b></td>
+          <td class="prior">—</td>
+          <td class="fill tall">
+            Hiring manager <span class="f-sign"></span>
+            Recruiting partner <span class="f-sign"></span>
+            Date <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-skill-gap-and-hiring-bar &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 11</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 4 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Retention risk register</h1>
+      <p class="ws-sub">Confidential working register: name the people, conversations and signals.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-skill-gap-and-hiring-bar</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>1</b> &middot; type <b>rubric</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Retention Risks</i> &middot;
+    <code>handbook\ch06-team-structures.qmd</code> L290-298 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-team-skill-matrix">#sec-team-skill-matrix</a>
+  </div>
+
+  <div class="ws-instruction">
+    CONFIDENTIAL &mdash; do not distribute, project or photograph this page. Record actual names, not counts; name the person who will hold each conversation, set a date and write the signal that would show the risk is landing.
+  </div>
+
+  <div class="ws-block">
+    <h2>C &mdash; Retention risk register
+      <span class="ws-block-note">CONFIDENTIAL &mdash; not for general distribution, projection or photography</span></h2>
+    <p class="ws-block-note">Actual names, not counts. Keep this page with the people named and those responsible for the conversations.</p>
+    <table class="ws">
+      <colgroup><col style="width:19%"><col style="width:19%"><col style="width:34%"><col style="width:10%"><col style="width:18%"></colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">16</span> Risk</th>
+          <th><span class="fno">17</span> Named individuals at risk</th>
+          <th><span class="fno">18</span> The conversation we owe them, and who has it</th>
+          <th><span class="fno">19</span> By when</th>
+          <th><span class="fno">20</span> Signal we will watch</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked">Senior engineers who feel deskilled<span class="prior-src">ch06 L294</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span><small>A count is not a register.</small></td>
+          <td class="prior">
+            Their judgment is more valuable than ever; the <i>form</i> of the contribution changes. Context engineering and architectural guidance are expressions of the same expertise.
+            <span class="prior-src">ch06 L294-295</span>
+            <div class="fill">Our words: <span class="f-box"></span> Conversation owner <span class="f-owner"></span></div>
+          </td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Junior engineers who feel replaceable<span class="prior-src">ch06 L296</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span><small>A count is not a register.</small></td>
+          <td class="prior">
+            Show the growth path, evidenced by block D. The seniors of 2030 are the juniors you invest in today.
+            <span class="prior-src">ch06 L296</span>
+            <div class="fill">Our words: <span class="f-box"></span> Conversation owner <span class="f-owner"></span></div>
+          </td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-skill-gap-and-hiring-bar &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 11 &middot; confidential register</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 5 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Junior pathway and team composition</h1>
+      <p class="ws-sub">Choose and measure the junior development mix; record today's team profile, the destination and the path.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-skill-gap-and-hiring-bar</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>1</b> &middot; type <b>rubric</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>The Junior Pipeline and Staffing Models</i> &middot;
+    <code>handbook\ch06-team-structures.qmd</code> L246-258, L302-335 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-team-junior-pipeline">#sec-team-junior-pipeline</a>
+  </div>
+
+  <div class="ws-instruction">
+    For each selected junior-development model, name a supervising senior, make the model's risk visible, define the control and commit to a competency measure. Allocate the mix by quarter. Keep your team figures separate from the book's projected priors; record the path mix and its assumptions so the target can be checked later.
+  </div>
+
+  <div class="ws-block">
+    <h2>D &mdash; The junior development pathway
+      <span class="ws-block-note">three model rows &middot; complete the measure for every selected model</span></h2>
+    <div class="prior">
+      <b>Disclaimer band:</b> Informed hypotheses, not proven patterns. No organisation has run any of these for a full cycle &mdash; 12+ months &mdash; with measured outcomes on engineer competency development.
+      <span class="prior-src">ch06 L248</span>
+    </div>
+    <table class="ws">
+      <colgroup>
+        <col style="width:18%"><col style="width:12%"><col style="width:17%"><col style="width:14%">
+        <col style="width:14%"><col style="width:14%"><col style="width:11%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">21</span> Model</th>
+          <th><span class="fno">22</span> The chapter's named risk for this model</th>
+          <th><span class="fno">23</span> Our mix, by quarter</th>
+          <th><span class="fno">24</span> Supervising senior</th>
+          <th><span class="fno">25</span> Our mitigating control for column 22</th>
+          <th><span class="fno">26</span> Competency measure we will report back</th>
+          <th><span class="fno">27</span> Disclaimer band</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked">A: review-intensive apprenticeship<span class="prior-src">ch06 L250-251</span></td>
+          <td class="prior">Can feel passive; requires disciplined senior oversight and deliberate hands-on coding assignments.<span class="prior-src">ch06 L251</span></td>
+          <td class="fill">Q1 share <span class="f-text sm"></span><br>Q2 share <span class="f-text sm"></span><br>Q3 share <span class="f-text sm"></span><br>Q4 share <span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span><small>Mandatory if selected</small></td>
+          <td class="locked">†<span class="prior-src">ch06 L248</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note">Record this model's share in each quarter; read the three model sheets together to see how the mix shifts as capability grows.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-skill-gap-and-hiring-bar &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 11 &middot; Model A</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 6 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Junior development pathway &mdash; Model B</h1>
+      <p class="ws-sub">Agent-assisted learning with scaffolded complexity.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-skill-gap-and-hiring-bar</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>1</b> &middot; type <b>rubric</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>The Junior Pipeline</i> &middot;
+    <code>handbook\ch06-team-structures.qmd</code> L248-258 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-team-junior-pipeline">#sec-team-junior-pipeline</a>
+  </div>
+  <div class="ws-instruction">
+    If you select this model, allocate the A/B/C mix in each quarter, name the supervising senior, define the control for the risk, and commit to a competency measure to report back.
+  </div>
+  <div class="ws-block">
+    <h2>D &mdash; The junior development pathway <span class="ws-block-note">Model B of three</span></h2>
+    <div class="prior">Disclaimer band: Informed hypotheses, not proven patterns. No organisation has run any of these for a full cycle &mdash; 12+ months &mdash; with measured outcomes on engineer competency development.<span class="prior-src">ch06 L248</span></div>
+    <table class="ws">
+      <colgroup><col style="width:18%"><col style="width:12%"><col style="width:17%"><col style="width:14%"><col style="width:14%"><col style="width:14%"><col style="width:11%"></colgroup>
+      <thead><tr><th><span class="fno">21</span> Model</th><th><span class="fno">22</span> The chapter's named risk for this model</th><th><span class="fno">23</span> Our mix, by quarter</th><th><span class="fno">24</span> Supervising senior</th><th><span class="fno">25</span> Our mitigating control for column 22</th><th><span class="fno">26</span> Competency measure we will report back</th><th><span class="fno">27</span> Disclaimer band</th></tr></thead>
+      <tbody><tr>
+        <td class="locked">B: agent-assisted learning with scaffolded complexity<span class="prior-src">ch06 L252-253</span></td>
+        <td class="prior">Without structure, juniors accept agent output uncritically. The scaffolding must actually exist, not just be assumed.<span class="prior-src">ch06 L253</span></td>
+        <td class="fill">Q1 share <span class="f-text sm"></span><br>Q2 share <span class="f-text sm"></span><br>Q3 share <span class="f-text sm"></span><br>Q4 share <span class="f-text sm"></span></td>
+        <td class="fill"><span class="f-owner"></span></td>
+        <td class="fill"><span class="f-box"></span></td>
+        <td class="fill"><span class="f-box"></span><small>Mandatory if selected</small></td>
+        <td class="locked">†<span class="prior-src">ch06 L248</span></td>
+      </tr></tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-06-skill-gap-and-hiring-bar &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 11 &middot; Model B</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 7 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Junior development pathway &mdash; Model C</h1>
+      <p class="ws-sub">Specification-first roles.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-skill-gap-and-hiring-bar</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>1</b> &middot; type <b>rubric</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>The Junior Pipeline</i> &middot;
+    <code>handbook\ch06-team-structures.qmd</code> L248-258 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-team-junior-pipeline">#sec-team-junior-pipeline</a>
+  </div>
+  <div class="ws-instruction">
+    If you select this model, allocate the A/B/C mix in each quarter, name the supervising senior, define the control for the risk, and commit to a competency measure to report back.
+  </div>
+  <div class="ws-block">
+    <h2>D &mdash; The junior development pathway <span class="ws-block-note">Model C of three</span></h2>
+    <div class="prior">Disclaimer band: Informed hypotheses, not proven patterns. No organisation has run any of these for a full cycle &mdash; 12+ months &mdash; with measured outcomes on engineer competency development.<span class="prior-src">ch06 L248</span></div>
+    <table class="ws">
+      <colgroup><col style="width:18%"><col style="width:12%"><col style="width:17%"><col style="width:14%"><col style="width:14%"><col style="width:14%"><col style="width:11%"></colgroup>
+      <thead><tr><th><span class="fno">21</span> Model</th><th><span class="fno">22</span> The chapter's named risk for this model</th><th><span class="fno">23</span> Our mix, by quarter</th><th><span class="fno">24</span> Supervising senior</th><th><span class="fno">25</span> Our mitigating control for column 22</th><th><span class="fno">26</span> Competency measure we will report back</th><th><span class="fno">27</span> Disclaimer band</th></tr></thead>
+      <tbody><tr>
+        <td class="locked">C: specification-first roles<span class="prior-src">ch06 L254</span></td>
+        <td class="prior">Delays hands-on coding experience; some skills require building things, not just specifying them.<span class="prior-src">ch06 L254</span></td>
+        <td class="fill">Q1 share <span class="f-text sm"></span><br>Q2 share <span class="f-text sm"></span><br>Q3 share <span class="f-text sm"></span><br>Q4 share <span class="f-text sm"></span></td>
+        <td class="fill"><span class="f-owner"></span></td>
+        <td class="fill"><span class="f-box"></span></td>
+        <td class="fill"><span class="f-box"></span><small>Mandatory if selected</small></td>
+        <td class="locked">†<span class="prior-src">ch06 L248</span></td>
+      </tr></tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-06-skill-gap-and-hiring-bar &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 7 of 11 &middot; Model C</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 8 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Team composition target</h1>
+      <p class="ws-sub">Keep four profile-matched book priors beside, but distinct from, your own figures.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-skill-gap-and-hiring-bar</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>1</b> &middot; type <b>rubric</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Staffing Models</i> &middot;
+    <code>handbook\ch06-team-structures.qmd</code> L302-321 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-team-staffing-models">#sec-team-staffing-models</a>
+  </div>
+
+  <div class="ws-instruction">
+    Read the book's projected figures with their dagger footnote and both caveats. Record your current figure, your 24-month target and the gap in the separate organisation columns; the book's figures are directional, not targets.
+  </div>
+
+  <div class="ws-block">
+    <h2>E &mdash; The team composition target
+      <span class="ws-block-note">book priors and our figures are separate; projections are directional, not prescriptive</span></h2>
+    <div class="prior--hedged">
+      <span class="hedge-figure">Typical team size: 4–7 engineers † &nbsp; | &nbsp; Senior-to-junior ratio: 1:1 to 2:1 † &nbsp; | &nbsp; Context engineering allocation: 10–20% of team capacity † &nbsp; | &nbsp; Review time allocation: 25–35% of team capacity †</span>
+      <span class="hedge-text">† Projected figures are based on early adopter reports and the author's observations, not longitudinal studies. Pre-agentic figures reflect established industry norms.</span>
+      <span class="hedge-src">handbook\ch06-team-structures.qmd L308-315</span>
+    </div>
+    <div class="prior">
+      <b>These are directional, not prescriptive.</b> Your ratios depend on codebase complexity, agent maturity, and domain risk. A team working on a payments system with strict regulatory requirements will need a higher senior ratio than a team building internal tooling.
+      <br><b>Smaller does not mean fewer total engineers.</b> Agent-augmented teams produce more per person, but the economic argument is not "we need fewer engineers." It is "we need the same or fewer engineers to do more, with a different mix of skills." The staffing question is about composition and capability, not reduction.
+      <span class="prior-src">ch06 L319-321</span>
+    </div>
+    <div class="prior"><b>Dagger footnote and caveats:</b> the dagger disclosure and both caveats above apply to all four profile-matched priors. The figures are directional, not prescriptive; the ratio depends on codebase complexity, agent maturity and domain risk, and smaller does not mean fewer total engineers.<span class="prior-src">ch06 L315, L319-321</span></div>
+
+    <table class="ws">
+      <colgroup><col style="width:18%"><col style="width:14%"><col style="width:15%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:14%"></colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">28</span> Team profile</th>
+          <th><span class="fno">29</span> The book's pre-agentic figure</th>
+          <th><span class="fno">30</span> The book's agentic (mature) figure †</th>
+          <th><span class="fno">31</span> Dagger footnote and caveats</th>
+          <th><span class="fno">32</span> Our figure today</th>
+          <th><span class="fno">33</span> Our 24-month target</th>
+          <th><span class="fno">34</span> Gap</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="locked">Typical team size</td><td class="prior">6–10 engineers<span class="prior-src">ch06 L308</span></td><td class="prior">See attached † profile-matched prior above<span class="prior-src">ch06 L308-315</span></td><td class="locked">See disclosure band above<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="locked">Senior-to-junior ratio</td><td class="prior">1:2 to 1:3<span class="prior-src">ch06 L309</span></td><td class="prior">See attached † profile-matched prior above<span class="prior-src">ch06 L309-315</span></td><td class="locked">See disclosure band above<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="locked">Context engineering allocation</td><td class="prior">0%<span class="prior-src">ch06 L310</span></td><td class="prior">See attached † profile-matched prior above<span class="prior-src">ch06 L310-315</span></td><td class="locked">See disclosure band above<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="locked">Review time allocation</td><td class="prior">15–20% of team capacity<span class="prior-src">ch06 L311</span></td><td class="prior">See attached † profile-matched prior above<span class="prior-src">ch06 L311-315</span></td><td class="locked">See disclosure band above<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-skill-gap-and-hiring-bar &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 8 of 11</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 9 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Team composition path mix</h1>
+      <p class="ws-sub">Record the staffing path and the assumptions and cadence that make it reviewable.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-skill-gap-and-hiring-bar</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>1</b> &middot; type <b>rubric</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Staffing Models</i> &middot;
+    <code>handbook\ch06-team-structures.qmd</code> L323-335 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-team-staffing-models">#sec-team-staffing-models</a>
+  </div>
+
+  <div class="ws-instruction">
+    Allocate your path mix across A, B and C. Write down the attrition and hiring assumptions, the Path B mentoring-load assumption, and who tracks the ratio quarterly.
+  </div>
+
+  <div class="ws-block">
+    <h2>E &mdash; The team composition target
+      <span class="ws-block-note">continued &middot; paths and assumptions</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:28%"><col style="width:19%"><col style="width:19%"><col style="width:18%"><col style="width:16%"></colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">35</span> Path mix</th>
+          <th><span class="fno">36</span> Assumed attrition rate</th>
+          <th><span class="fno">37</span> Assumed hiring pace</th>
+          <th><span class="fno">38</span> Senior mentoring load accepted for path B</th>
+          <th><span class="fno">39</span> Ratio tracking cadence and owner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fill">
+            A: hire senior, hold junior headcount <span class="f-text"></span><br>
+            B: accelerate high-potential juniors <span class="f-text"></span><br>
+            C: attrit and rebalance <span class="f-text"></span><br>
+            Most organisations combine all three.<span class="prior-src">ch06 L327-331</span>
+          </td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <div class="prior--hedged">
+              <span class="hedge-figure">typically around 10-15% of their time</span>
+              <span class="hedge-text">based on early adopter estimates</span>
+              <span class="hedge-src">handbook\ch06-team-structures.qmd L329</span>
+            </div>
+            <div class="ours-label">Our figure, separate from the estimate</div>
+            <span class="f-text"></span>
+          </td>
+          <td class="prior">Quarterly<span class="prior-src">ch06 L333</span><br>Tracking owner <span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note">Path B's book estimate is a hedged prior, not a target; write your own figure in the adjacent field.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-skill-gap-and-hiring-bar &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 9 of 11</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 10 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Enablement tracks and attention levers</h1>
+      <p class="ws-sub">Name the people, sequence, delivery, owner and hours for each track; turn attention gaps into an owned backlog.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-skill-gap-and-hiring-bar</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>1</b> &middot; type <b>rubric</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Planning the Transition</b>, <i>Skill Development Paths</i> &middot;
+    <code>handbook\ch08-planning-the-transition.qmd</code> L188-200; and <b>Attention and Context Economy</b>, <i>Three levers of the attention economy</i> &middot;
+    <code>handbook\ch15-attention-and-context-economy.qmd</code> L78-98
+  </div>
+
+  <div class="ws-instruction">
+    Complete all five role-based tracks and assign every engineer to exactly one. Put the senior/tech-lead track first and keep review-before-generation as the junior track's safety order.
+  </div>
+
+  <div class="ws-block">
+    <h2>F &mdash; The enablement tracks
+      <span class="ws-block-note">every engineer in exactly one track &middot; hours per participant and budget owner</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:25%"><col style="width:16%"><col style="width:17%"><col style="width:15%"><col style="width:13%"><col style="width:14%"></colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">40</span> Track</th>
+          <th><span class="fno">41</span> Named people in it</th>
+          <th><span class="fno">42</span> Sequence relative to the phase roadmap</th>
+          <th><span class="fno">43</span> Delivery mechanism</th>
+          <th><span class="fno">44</span> Owner</th>
+          <th><span class="fno">45</span> Budgeted hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked">F1 &mdash; Senior engineers and tech leads: context engineering and failure-mode recognition<span class="prior-src">ch08 L190</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span></td>
+          <td class="prior">Highest-priority training investment.<span class="prior-src">ch08 L190</span><br>Our phase sequence <span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill">Hours per participant <span class="f-text sm"></span><br>Budget line <span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">F2 &mdash; Mid-level developers: delegation scoping and calibrated trust<span class="prior-src">ch08 L192</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill">Hours per participant <span class="f-text sm"></span><br>Budget line <span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">F3 &mdash; Junior developers: review before generation<span class="prior-src">ch08 L194</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span></td>
+          <td class="prior">Review before generation is a safety measure, not a preference.<span class="prior-src">ch08 L194</span><br>Our phase sequence <span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill">Hours per participant <span class="f-text sm"></span><br>Budget line <span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">F4 &mdash; Engineering managers: measurement and coaching<span class="prior-src">ch08 L196</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill">Hours per participant <span class="f-text sm"></span><br>Budget line <span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">F5 &mdash; Architects and staff engineers: making architecture agent-legible<span class="prior-src">ch08 L198</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill">Hours per participant <span class="f-text sm"></span><br>Budget line <span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-skill-gap-and-hiring-bar &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 10 of 11</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 11 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>The three attention levers</h1>
+      <p class="ws-sub">Turn the practitioner baseline into an owned enablement backlog.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-skill-gap-and-hiring-bar</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>1</b> &middot; type <b>rubric</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Attention and Context Economy</b>, <i>Three levers of the attention economy</i> &middot;
+    <code>handbook\ch15-attention-and-context-economy.qmd</code> L78-98 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch15-attention-and-context-economy.html#sec-attention-three-levers">#sec-attention-three-levers</a>
+  </div>
+
+  <div class="ws-instruction">
+    Ask a practitioner who runs agents daily to score each lever. Name the concrete, observable practice that would demonstrate its next level, then select the enablement needed and assign an owner and target date.
+  </div>
+
+  <div class="ws-block">
+    <h2>G &mdash; The three attention levers
+      <span class="ws-block-note">have a practitioner who runs agents daily score current state</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:20%"><col style="width:20%"><col style="width:30%"><col style="width:15%"><col style="width:15%"></colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">46</span> Lever</th>
+          <th><span class="fno">47</span> Current state</th>
+          <th><span class="fno">48</span> The practice that would evidence the next level</th>
+          <th><span class="fno">49</span> Enablement needed</th>
+          <th><span class="fno">50</span> Owner and target date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked">Progressive disclosure<span class="prior-src">ch15 L78-98</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">ad hoc</span><span class="opt">standardised</span><span class="opt">enforced by tooling</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">training</span><span class="opt">template</span><span class="opt">harness feature</span></div></td>
+          <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Subagent isolation<span class="prior-src">ch15 L78-98</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">ad hoc</span><span class="opt">standardised</span><span class="opt">enforced by tooling</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">training</span><span class="opt">template</span><span class="opt">harness feature</span></div></td>
+          <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Plan-write-then-reload<span class="prior-src">ch15 L78-98</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">ad hoc</span><span class="opt">standardised</span><span class="opt">enforced by tooling</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">training</span><span class="opt">template</span><span class="opt">harness feature</span></div></td>
+          <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note">The enablement backlog is the set of rows with an enablement need, together with block A rows marked train and resolved to a track here.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-skill-gap-and-hiring-bar &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 11 of 11</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
