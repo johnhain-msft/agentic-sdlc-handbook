@@ -150,6 +150,23 @@ format:
     </div>
   </div>
 
+  <div class="ws-block">
+    <h2>Block E &mdash; Reconciliation with the context inventory
+      <span class="ws-block-note">only if WS-03-context-moat-asset-inventory exists</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:40%"><col style="width:55%"></colgroup>
+      <thead><tr><th></th><th>Item in the &ldquo;in heads&rdquo; column of WS-03</th><th>Now a row above, or deliberately excluded because&hellip;</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num">1</td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">2</td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">3</td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">4</td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">5</td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">6</td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="ws-foot-quote">
     "Memory files are the most likely primitive to drift from reality. Include dates. Review them quarterly. If a section hasn't been updated in six months, verify that it's still accurate or remove it." (ch12 L260)
   </div>
@@ -166,7 +183,7 @@ format:
 
   <div class="ws-block">
     <h2>Block D &mdash; One decision row
-      <span class="ws-block-note">no confidence score, no file-format column: a date is the only integrity signal</span></h2>
+      <span class="ws-block-note">no confidence score, no file-format column: a date is the only integrity signal. Grey cells are the book's example, not your data.</span></h2>
 
     <table class="ws">
       <colgroup>
@@ -193,7 +210,7 @@ format:
           <td><b>Primitive type this knowledge belongs in</b></td>
           <td class="prior">The routing table in Block B. Only <b>memory file</b> stays on this sheet.<span class="prior-src">ch12 L451-459</span></td>
           <td class="fill">
-            <div class="f-select"><span class="opt">instruction file</span><span class="opt">agent config</span><span class="opt">skill</span><span class="opt">prompt</span><span class="opt">memory file</span><span class="opt">specification</span><span class="opt">hook</span></div>
+            <div class="f-select"><span class="opt">instruction file</span><span class="opt">agent configuration</span><span class="opt">skill</span><span class="opt">prompt</span><span class="opt">memory file</span><span class="opt">specification</span><span class="opt">hook</span></div>
           </td>
         </tr>
         <tr>
@@ -237,7 +254,7 @@ format:
         <tr>
           <td class="ws-num"><span class="fno">10</span></td>
           <td><b>The correction</b></td>
-          <td class="prior">"CORRECTION: EMU tokens use standard PAT prefixes. <code>ghu_</code> is OAuth."<span class="prior-src">ch12 L241</span></td>
+          <td class="prior">"CORRECTION: EMU tokens use standard PAT prefixes (<code>github_pat_</code> / <code>ghp_</code>). <code>ghu_</code> is OAuth."<span class="prior-src">ch12 L241</span></td>
           <td class="fill"><span class="f-text"></span><span class="f-note">The right answer, written for the agent, not a human reader.</span></td>
         </tr>
         <tr>
