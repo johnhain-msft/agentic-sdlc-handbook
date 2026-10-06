@@ -40,7 +40,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
   </div>
   <div class="ws-instruction">
-    For Days 1&ndash;5, enter five real calendar dates from Monday to Friday in a named week; &ldquo;next week&rdquo; is not a date. For each horizon, name the specific module and team, one owner, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives. The Day 30, 60 and 90 commitments are authored for this kit, not supplied by the handbook.
+    For Days 1&ndash;5, enter five real calendar dates from Monday to Friday in a named week; &ldquo;next week&rdquo; is not a date. For each horizon, name the specific module and team, one owner, and the evidence artifact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives. The Day 30, 60 and 90 commitments are authored for this kit, not supplied by the handbook.
   </div>
   <div class="ws-block">
     <h2>Day 1&ndash;2 register <span class="ws-block-note">complete one row per horizon; each row is signed individually</span></h2>
@@ -132,7 +132,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
   </div>
   <div class="ws-instruction">
-    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives. The Day 30, 60 and 90 commitments are authored for this kit, not supplied by the handbook.
+    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artifact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives. The Day 30, 60 and 90 commitments are authored for this kit, not supplied by the handbook.
   </div>
   <div class="ws-block">
     <h2>Day 3&ndash;5 register <span class="ws-block-note">complete one row per horizon; each row is signed individually</span></h2>
@@ -223,7 +223,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
   </div>
   <div class="ws-instruction">
-    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives.
+    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artifact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives.
   </div>
   <div class="ws-block">
     <h2>Day 4&ndash;5 detail <span class="ws-block-note">record the work and ownership agreement</span></h2>
@@ -287,10 +287,10 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
   </div>
   <div class="ws-instruction">
-    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives. The Day 30, 60 and 90 commitments are authored for this kit, not supplied by the handbook.
+    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artifact. Mark Done only when the work is complete and sign that row. Record each day&rsquo;s detail in its numbered field below. Use the same three Week 1 files as the Day 2 primitives. The Day 30, 60 and 90 commitments are authored for this kit, not supplied by the handbook.
   </div>
   <div class="ws-block">
-    <h2>Week 2&ndash;Ongoing register <span class="ws-block-note">ch12 continuation; one signature and evidence artefact per horizon</span></h2>
+    <h2>Week 2&ndash;Ongoing register <span class="ws-block-note">ch12 continuation; one signature and evidence artifact per horizon</span></h2>
     <table class="ws">
       <colgroup>
         <col style="width:8%"><col style="width:9%"><col style="width:10%"><col style="width:20%">
@@ -371,7 +371,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
   </div>
   <div class="ws-instruction">
-    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record the Week 2 changes, Week 3 triggers and monthly rule changes in the fields below.
+    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artifact. Mark Done only when the work is complete and sign that row. Record the Week 2 changes, Week 3 triggers and monthly rule changes in the fields below.
   </div>
   <div class="ws-block">
     <h2>Week 2&ndash;Ongoing detail <span class="ws-block-note">source: ch12 Starting Points; preserve the trigger conditions</span></h2>
@@ -440,10 +440,10 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
   </div>
   <div class="ws-instruction">
-    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artefact. Mark Done only when the work is complete and sign that row. Record each commitment, owner, evidence and review date below. These horizons and commitments are authored for this kit, not supplied by the handbook.
+    For each horizon, name the specific module and team, one owner, a calendar date, and the evidence artifact. Mark Done only when the work is complete and sign that row. Record each commitment, owner, evidence and review date below. These horizons and commitments are authored for this kit, not supplied by the handbook.
   </div>
   <div class="ws-block">
-    <h2>Extension register <span class="ws-block-note">AUTHORED — not in the book; complete only the organisation&rsquo;s own commitments</span></h2>
+    <h2>Extension register <span class="ws-block-note">AUTHORED — not in the book; complete only the organization's own commitments</span></h2>
     <table class="ws">
       <colgroup>
         <col style="width:8%"><col style="width:9%"><col style="width:10%"><col style="width:20%">
@@ -478,7 +478,7 @@ format:
     </table>
   </div>
   <div class="ws-block">
-    <h2>Extension detail <span class="ws-block-note">no pre-filled commitments; write the organisation&rsquo;s own</span></h2>
+    <h2>Extension detail <span class="ws-block-note">no pre-filled commitments; write the organization's own</span></h2>
     <table class="ws">
       <colgroup><col style="width:6%"><col style="width:28%"><col style="width:33%"><col style="width:33%"></colgroup>
       <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
@@ -519,10 +519,10 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-first-week">#sec-next-first-week</a>
   </div>
   <div class="ws-instruction">
-    For each authored horizon, enter the owner, evidence artefact and review date that match the Day 30, Day 60 and Day 90 commitments on sheet 6. This extension is authored for this kit, not supplied by the handbook.
+    For each authored horizon, enter the owner, evidence artifact and review date that match the Day 30, Day 60 and Day 90 commitments on sheet 6. This extension is authored for this kit, not supplied by the handbook.
   </div>
   <div class="ws-block">
-    <h2>Extension detail <span class="ws-block-note">no pre-filled commitments; write the organisation&rsquo;s own</span></h2>
+    <h2>Extension detail <span class="ws-block-note">no pre-filled commitments; write the organization's own</span></h2>
     <table class="ws">
       <colgroup><col style="width:6%"><col style="width:28%"><col style="width:33%"><col style="width:33%"></colgroup>
       <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
