@@ -1,0 +1,311 @@
+---
+title: "Model Tier Access Policy — Who Gets the Frontier, and How"
+pagetitle: "WS-07-model-tier-access-policy"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 594mm; --sheet-h: 420mm; --sheet-margin: 16mm; }
+            @page { size: A2 landscape; margin: 16mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-07-model-tier-access-policy</b> &middot; review copy &middot;
+  declared format <b>A2 landscape</b> &middot; 1 sheet.
+  The white page below is one physical sheet at true size. Anything spilling past
+  its edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Model Tier Access Policy — Who Gets the Frontier, and How</h1>
+      <p class="ws-sub">A written model-tier access policy with an escape-hatch process — the artifact that lets a leader give a thousand developers frontier-engineered loops without handing a thousand developers a frontier invoice.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-07-model-tier-access-policy</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>12</b> &middot; type <b>decision</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Agentic SDLC Bill</b>, <i>Tier the model access</i> &middot;
+    <code>handbook/ch07-the-agentic-sdlc-bill.qmd</code> L94 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch07-the-agentic-sdlc-bill.html#sec-bill-model-tiering">#sec-bill-model-tiering</a>
+  </div>
+
+  <div class="ws-instruction">
+    Define both tiers by capability, not vendor SKU. Set baseline models, eligible user segments and any open-access ceiling. Name the central AI team members, write their reuse charter and set the frontier cap. Then make the escape hatch usable: name its approver and deputy, request route, decision SLA, grant time box and cap, expiry behavior, backlog destination and triage SLA, and the helpful route offered after a denial. Set the tier re-review cadence and owner, and choose a health measure based on loops reused rather than requests approved. Complete <b>WS-07-three-variables-audit</b> first; use its tier-in-use evidence for Blocks A and B. Use the funded pool from <b>WS-07-spend-pool-budget-model</b> for the caps.
+  </div>
+
+  <div style="display:grid;grid-template-columns:.88fr 1.05fr 1.3fr;gap:5mm;align-items:start;flex:1 1 auto;min-height:0">
+
+    <div class="ws-block">
+      <h2>Block A — Baseline tier
+        <span class="ws-block-note">capability, access and owner</span></h2>
+      <table class="ws">
+        <colgroup>
+          <col style="width:6%"><col style="width:29%"><col style="width:34%"><col style="width:31%">
+        </colgroup>
+        <thead>
+          <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ws-num"><span class="fno">1</span></td>
+            <td><b>A. Baseline tier — capability class</b></td>
+            <td class="prior">The most cost-effective, versatile models on the market — the tier that delivers most of the value at a fraction of the frontier price.<span class="prior-src">ch07 L94</span></td>
+            <td class="fill"><span class="f-box"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">2</span></td>
+            <td><b>A. Models currently in that class</b></td>
+            <td class="prior">—<span class="prior-src">ch07 L191</span></td>
+            <td class="fill"><span style="font-size:7pt">Today's SKUs; write in pencil and re-review with field 22.</span><span class="f-text"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">3</span></td>
+            <td><b>A. Who gets it</b></td>
+            <td class="prior">Open, baseline access for everyone — the floor.<span class="prior-src">ch07 L94, L104</span></td>
+            <td class="fill">
+              <div class="f-select">
+                <span class="opt">everyone</span>
+                <span class="opt">named segments</span>
+              </div>
+              <span style="font-size:7pt">Name segments, if selected:</span>
+              <span class="f-text"></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">4</span></td>
+            <td><b>A. Open-access ceiling</b></td>
+            <td class="prior">—<span class="prior-src">ch07 L104</span></td>
+            <td class="fill"><span style="font-size:7pt">Ceiling, if any, and where it is read:</span><span class="f-box"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">5</span></td>
+            <td><b>A. Owner</b></td>
+            <td class="prior">—<span class="prior-src">org</span></td>
+            <td class="fill"><span class="f-owner"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ws-block">
+      <h2>Block B — Gated frontier tier
+        <span class="ws-block-note">the central team's production mandate</span></h2>
+      <p style="font-size:7.6pt;line-height:1.2;margin:0 0 1.5mm">
+        “This sounds austere; it is the opposite. It is how you give a thousand developers the benefit of frontier-model engineering without handing a thousand developers a frontier-model invoice.” (ch07 L94)
+      </p>
+      <table class="ws">
+        <colgroup>
+          <col style="width:6%"><col style="width:29%"><col style="width:34%"><col style="width:31%">
+        </colgroup>
+        <thead>
+          <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ws-num"><span class="fno">6</span></td>
+            <td><b>B. Frontier tier — capability class</b></td>
+            <td class="prior">The frontier model is a tool of production, used by the people who build the loops — not a default, billed to everyone who runs them.<span class="prior-src">ch07 L94</span></td>
+            <td class="fill"><span class="f-box"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">7</span></td>
+            <td><b>B. Models currently in that class</b></td>
+            <td class="prior">—<span class="prior-src">ch07 L191</span></td>
+            <td class="fill"><span style="font-size:7pt">Today's SKUs; write in pencil against the field 22 re-review.</span><span class="f-text"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">8</span></td>
+            <td><b>B. Named members of the central AI team</b></td>
+            <td class="prior">A small central AI team.<span class="prior-src">ch07 L94</span></td>
+            <td class="fill">
+              <span class="f-owner"></span><span class="f-owner"></span>
+              <span class="f-owner"></span><span class="f-owner"></span>
+              <span style="font-size:6.6pt">One named person per line; continue the list if needed.</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">9</span></td>
+            <td><b>B. Charter sentence</b></td>
+            <td class="prior">“Code cost-effective loops for everyone else to reuse.”<span class="prior-src">ch07 L94</span></td>
+            <td class="fill"><span class="f-box"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">10</span></td>
+            <td><b>B. Cap, and the pool it draws on</b></td>
+            <td class="prior">—<span class="prior-src">ch07 L102</span></td>
+            <td class="fill">
+              <span class="f-currency" data-symbol="$"></span>
+              <div style="font-size:6.8pt;margin-top:1mm">Use the funded pool in WS-07-spend-pool-budget-model.</div>
+              <div class="f-select"><span class="opt">Frontier R&amp;D</span></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">11</span></td>
+            <td><b>B. Owner</b></td>
+            <td class="prior">—<span class="prior-src">org</span></td>
+            <td class="fill"><span class="f-owner"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ws-block">
+      <h2>Block C — Escape hatch
+        <span class="ws-block-note">complete this in the room; the gate is a queue, not a wall</span></h2>
+      <p style="font-size:7.4pt;line-height:1.2;margin:0 0 1.5mm">
+        “The one deliberate exception is a metered escape hatch: when the catalog has no loop for a task that genuinely needs frontier reasoning, a developer requests time-boxed, budget-capped frontier access rather than being blocked — and that gap becomes the next item on the central team's backlog. <b>The gate is a queue, not a wall.</b>” (ch07 L94)
+      </p>
+      <table class="ws">
+        <colgroup>
+          <col style="width:5%"><col style="width:29%"><col style="width:34%"><col style="width:32%">
+        </colgroup>
+        <thead>
+          <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ws-num"><span class="fno">12</span></td>
+            <td><b>C. Escape-hatch trigger</b></td>
+            <td class="prior">When the catalog has no loop for a task that genuinely needs frontier reasoning.<span class="prior-src">ch07 L94</span></td>
+            <td class="fill"><span class="f-text"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">13</span></td>
+            <td><b>C. How a developer requests it</b></td>
+            <td class="prior">—<span class="prior-src">ch07 L94</span></td>
+            <td class="fill"><span class="f-text"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">14</span></td>
+            <td><b>C. Approver, and deputy</b></td>
+            <td class="prior">—<span class="prior-src">ch07 L94</span></td>
+            <td class="fill">
+              <span style="font-size:6.8pt">Approver</span><span class="f-owner"></span>
+              <span style="font-size:6.8pt">Deputy</span><span class="f-owner"></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">15</span></td>
+            <td><b>C. Decision SLA</b></td>
+            <td class="prior">—<span class="prior-src">ch07 L94</span></td>
+            <td class="fill"><span class="f-text sm"></span><span style="font-size:6.8pt">Duration; calibrate against a comparable approval and agree it with the approver.</span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">16</span></td>
+            <td><b>C. Time box per grant</b></td>
+            <td class="prior">“Time-boxed.”<span class="prior-src">ch07 L94</span></td>
+            <td class="fill"><span class="f-text sm"></span><span style="font-size:6.8pt">Write the duration.</span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">17</span></td>
+            <td><b>C. Budget cap per grant, and the pool</b></td>
+            <td class="prior">“Budget-capped.”<span class="prior-src">ch07 L94</span></td>
+            <td class="fill">
+              <span class="f-currency" data-symbol="$"></span>
+              <div style="font-size:6.8pt;margin-top:1mm">Select the pool:</div>
+              <div class="f-select">
+                <span class="opt">Frontier R&amp;D</span>
+                <span class="opt">Per-workflow run</span>
+                <span class="opt">Everyday prompting</span>
+                <span class="opt">Local models</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">18</span></td>
+            <td><b>C. What happens at expiry</b></td>
+            <td class="prior">—<span class="prior-src">derived</span></td>
+            <td class="fill">
+              <div class="f-select">
+                <span class="opt">lapses</span>
+                <span class="opt">renewable once</span>
+                <span class="opt">must be re-requested</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">19</span></td>
+            <td><b>C. Where the unmet request lands</b></td>
+            <td class="prior">That gap becomes the next item on the central team's backlog.<span class="prior-src">ch07 L94</span></td>
+            <td class="fill"><span class="f-text"></span><span style="font-size:6.8pt">Name the backlog and triage owner.</span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">20</span></td>
+            <td><b>C. Backlog triage SLA</b></td>
+            <td class="prior">—<span class="prior-src">derived</span></td>
+            <td class="fill"><span class="f-text sm"></span><span style="font-size:6.8pt">Duration.</span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">21</span></td>
+            <td><b>C. Denial route</b></td>
+            <td class="prior">—<span class="prior-src">ch07 L94</span></td>
+            <td class="fill"><span class="f-box"></span><span style="font-size:6.8pt">Offer the nearest catalogue loop, a place in the backlog, or a date — not just “no”.</span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">22</span></td>
+            <td><b>Tier re-review cadence + owner</b></td>
+            <td class="prior">Read these as tiers, not endorsements; the policy is tier-the-access, whatever the SKUs are the week you deploy.<span class="prior-src">ch07 L191</span></td>
+            <td class="fill">
+              <div class="f-select">
+                <span class="opt">monthly</span>
+                <span class="opt">quarterly</span>
+                <span class="opt">annually</span>
+                <span class="opt">other</span>
+              </div>
+              <span style="font-size:6.8pt">Write chosen cadence if other:</span>
+              <span class="f-text sm"></span>
+              <span style="font-size:6.8pt">Re-review owner</span><span class="f-owner"></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">23</span></td>
+            <td><b>Escape-hatch health measure</b></td>
+            <td class="prior">The central team's success is measured in “loops reused across the organization, not requests approved.”<span class="prior-src">ch07 L115</span></td>
+            <td class="fill"><span class="f-box"></span><span style="font-size:6.8pt">Do not use requests approved as the measure.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:5mm;align-items:end;margin-top:2mm">
+    <div>
+      <div style="font-size:7.4pt;font-weight:700;margin-bottom:1mm"><span class="fno">24</span> Procurement acknowledgement</div>
+      <div class="f-sign"></div>
+      <div style="font-size:6.8pt">Tiers purchasable; caps are spendable. Sign in the room.</div>
+    </div>
+    <div>
+      <div style="font-size:7.4pt;font-weight:700;margin-bottom:1mm"><span class="fno">25</span> Security acknowledgement</div>
+      <div class="f-sign"></div>
+      <div style="font-size:6.8pt">Route preserves data-residency and audit controls. Sign in the room.</div>
+    </div>
+    <div>
+      <div style="font-size:7.4pt;font-weight:700;margin-bottom:1mm"><span class="fno">26</span> Policy owner sign-off + date</div>
+      <div style="display:grid;grid-template-columns:1fr auto;gap:3mm;align-items:end">
+        <div class="f-sign"></div>
+        <div><div style="font-size:6.8pt">Date</div><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div>
+      </div>
+      <div style="font-size:6.8pt">Sign in the room.</div>
+    </div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-07-model-tier-access-policy &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>All three signatories present in the room</div>
+  </div>
+
+</div>
+```
