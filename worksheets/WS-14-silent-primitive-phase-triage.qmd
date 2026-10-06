@@ -41,7 +41,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    A primitive stayed silent. Fill the five lines, then work the four phases <b>in order</b>. Run each one-minute test, record the result and quote the output. Name the one phase that failed and the fix. Turn on the harness's verbose mode first.
+    A primitive stayed silent. Turn on the harness's verbose mode first. Fill the five lines, then work the four phases <b>in order</b>. Run each one-minute test, record the result and quote the output. Name the one phase that failed and the fix.
   </div>
 
   <div class="ws-block">
