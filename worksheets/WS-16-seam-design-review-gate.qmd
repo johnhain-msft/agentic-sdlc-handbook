@@ -142,7 +142,7 @@ format:
 
   <div class="ws-head">
     <div>
-      <h1>Seam Design-Review Gate &mdash;       Region B (rows 1-9)</h1>
+      <h1>Seam Design-Review Gate       &mdash; Region B (rows 1-9)</h1>
             <p class="ws-sub">The pattern selection and trade-off register.</p>
     </div>
     <div class="ws-meta">
