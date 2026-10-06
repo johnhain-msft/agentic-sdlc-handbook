@@ -42,7 +42,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Use one set of these three pages per checkpoint (one wave boundary from <b>WS-18-wave-decomposition-plan</b>), and one copy of the field list per assertion. For each assertion, write the behaviour this change is supposed to make observable, the command that observes it, and the output you expect. Do not write "tests pass". Fields 6, 7 and 12 are filled at the checkpoint, not in the planning session. The signer is not the author of the change. Keep each checkpoint's pages unbound: they are signed at the checkpoint itself.
+    Use one set of these three pages per checkpoint (one wave boundary from <b>WS-18-wave-decomposition-plan</b>), and one copy of the field list per assertion. For each assertion, write the behavior this change is supposed to make observable, the command that observes it, and the output you expect. Do not write "tests pass". Fields 6, 7 and 12 are filled at the checkpoint, not in the planning session. The signer is not the author of the change. Keep each checkpoint's pages unbound: they are signed at the checkpoint itself.
   </div>
 
   <div class="ws-block">
