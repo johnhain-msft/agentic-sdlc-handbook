@@ -1,0 +1,285 @@
+---
+title: "Project Decision Register and Staleness Review"
+pagetitle: "WS-12-project-decision-register"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-12-project-decision-register</b> &middot; declared format <b>A4 portrait</b> &middot; 3 sheets.
+  Spec &sect;8 says the register is filled live, projected, in the file or store it will live in.
+  This printed sheet is the schema and the header box; it is still signed and dated.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Project Decision Register and Staleness Review</h1>
+      <p class="ws-sub">A dated register of the decisions an agent would otherwise guess wrong, plus a standing review cadence with a named person who re-verifies it.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-12-project-decision-register</b><br>
+      pack Z &middot; fill order 2<br>
+      format <b>A4 portrait</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Ch 12 &mdash; The Instrumented Codebase</b> &middot; heading <b>Memory</b> &middot;
+    <code>handbook/ch12-the-instrumented-codebase.qmd</code> L260-265 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch12-the-instrumented-codebase.html#sec-codebase-memory">#sec-codebase-memory</a>
+  </div>
+
+  <div class="ws-instruction">
+    Fill the header box once, then add one row per decision an agent would otherwise get wrong. Write
+    the history, not the rule: what happened and what is still true. The register is for whatever you
+    keep your memory in, a markdown file or a database, so record which below. Name one person who runs
+    the review and put its next date in a real calendar before you leave the room.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A &mdash; Register header box
+      <span class="ws-block-note">filled once, at the top of the live register</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:22%"><col style="width:30%"><col style="width:43%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num">&mdash;</td>
+          <td><b>Register scope</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span><span class="f-note">The repository, service or product this register covers.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num">&mdash;</td>
+          <td><b>Where this register physically lives</b></td>
+          <td class="prior">Some tools keep memory in a database rather than flat files; the principles are the same.<span class="prior-src">ch12 L262-265</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-note">Markdown file, database-backed memory store, or harness-native store: record which. Recorded once here, never per row.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num">&mdash;</td>
+          <td><b>Review cadence</b></td>
+          <td class="prior">Quarterly (pre-selected)<span class="prior-src">ch12 L260</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">quarterly</span><span class="opt">other</span></div>
+            <span class="f-note">Override only with a written reason:</span>
+            <span class="f-text"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num">&mdash;</td>
+          <td><b>Next review date</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch12 L260</span></td>
+          <td class="fill">
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+            <span class="f-note">The date in a real calendar.</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num">&mdash;</td>
+          <td><b>Review owner</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-owner"></span><span class="f-note">Who runs the review, not who attends it.</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; The routing gate, read aloud before the first row
+      <span class="ws-block-note">column 3 of every row is filtered by this table</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:55%"><col style="width:45%">
+      </colgroup>
+      <thead>
+        <tr><th>If the knowledge&hellip;</th><th>It belongs in&hellip;</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="prior">Is a rule scoped to specific files/directories</td><td class="prior">An instruction file</td></tr>
+        <tr><td class="prior">Requires specialist expertise or a specific model</td><td class="prior">An agent configuration</td></tr>
+        <tr><td class="prior">Applies across files and needs a decision framework</td><td class="prior">A skill</td></tr>
+        <tr><td class="prior">Defines a repeatable multi-step process</td><td class="prior">A prompt</td></tr>
+        <tr><td class="prior"><b>Records a decision, trade-off, or historical fact</b></td><td class="prior"><b>A memory file</b> &mdash; the only destination that stays on this sheet</td></tr>
+        <tr><td class="prior">Specifies a feature with components and success criteria</td><td class="prior">A specification</td></tr>
+        <tr><td class="prior">Defines an automated response to a development event<span class="prior-src">ch12 L451-459</span></td><td class="prior">A hook</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-12-project-decision-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-block">
+    <h2>Block C &mdash; The book's worked example, printed as the pattern to copy
+      <span class="ws-block-note">not your data</span></h2>
+    <div class="prior" style="margin-bottom:1.5mm">
+      <b>Context versus rule.</b> "Use JWT for authentication" is a rule (instruction). "We migrated from
+      sessions to JWT in Q1, and the old <code>SessionAuth</code> class is still in the code but deprecated"
+      is context (memory). An agent that knows only the rule might use the deprecated class.<span class="prior-src">ch12 L258</span>
+    </div>
+    <div class="prior">
+      <b>Authentication (last updated: YYYY-MM-DD)</b> &mdash; the book writes each section heading with a date.<br>
+      &bull; EMU tokens use <code>ghu_</code> prefix &larr; INCORRECT, agent error<br>
+      &bull; CORRECTION: EMU tokens use standard PAT prefixes (<code>github_pat_</code> / <code>ghp_</code>). <code>ghu_</code> is OAuth.<br>
+      &bull; The <code>SessionAuth</code> class is deprecated but not yet removed. Do NOT use it for new code. Migration tracked in JIRA-4521.<br>
+      <b>API Versioning</b> &mdash; versioning is URL-based, decided in ADR-017. <b>Performance Decisions</b> &mdash; the section the book dates third.<span class="prior-src">ch12 L234-256</span>
+    </div>
+  </div>
+
+  <div class="ws-foot-quote">
+    "Memory files are the most likely primitive to drift from reality. Include dates. Review them quarterly. If a section hasn't been updated in six months, verify that it's still accurate or remove it." (ch12 L260)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-12-project-decision-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-block">
+    <h2>Block D &mdash; One decision row
+      <span class="ws-block-note">no confidence score, no file-format column: a date is the only integrity signal</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:20%"><col style="width:33%"><col style="width:42%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Domain / section</b></td>
+          <td class="prior">Authentication; API Versioning; Performance Decisions<span class="prior-src">ch12 L237, L245, L251</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-note">Your own domain.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>The decision, stated as context</b></td>
+          <td class="prior">"Migrated from session-based to JWT auth in Q1 2025." A rule is not context.<span class="prior-src">ch12 L234-258</span></td>
+          <td class="fill taller"><span class="f-box sm"></span><span class="f-note">What happened and what is still true.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Primitive type this knowledge belongs in</b></td>
+          <td class="prior">The routing table in Block B. Only <b>memory file</b> stays on this sheet.<span class="prior-src">ch12 L451-459</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">instruction file</span><span class="opt">agent config</span><span class="opt">skill</span><span class="opt">prompt</span><span class="opt">memory file</span><span class="opt">specification</span><span class="opt">hook</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>If not a memory file, routed to</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span><span class="f-note">The instruction file, skill, agent file, prompt, spec or hook it was moved to.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>Date last verified</b></td>
+          <td class="prior">Heading convention: (last updated: YYYY-MM-DD)<span class="prior-src">ch12 L237, L245, L251, L260</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>Superseded alternative</b></td>
+          <td class="prior"><code>SessionAuth</code><span class="prior-src">ch12 L242-243</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-note">The class, endpoint, pattern or service this replaced.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Deprecation status</b></td>
+          <td class="prior">"Deprecated but not yet removed. Do NOT use it for new code."<span class="prior-src">ch12 L242-243</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">deprecated and still present</span><span class="opt">removed</span><span class="opt">not applicable</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Migration or decision reference</b></td>
+          <td class="prior">JIRA-4521; ADR-017<span class="prior-src">ch12 L243, L250</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-note">Your own ticket and ADR identifiers.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>Recorded agent error</b></td>
+          <td class="prior">"EMU tokens use <code>ghu_</code> prefix &larr; INCORRECT, agent error." Kept visible, not deleted.<span class="prior-src">ch12 L240</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-note">The wrong thing an agent actually believed. Empty is correct until real corrections accumulate.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>The correction</b></td>
+          <td class="prior">"CORRECTION: EMU tokens use standard PAT prefixes. <code>ghu_</code> is OAuth."<span class="prior-src">ch12 L241</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-note">The right answer, written for the agent, not a human reader.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Re-verifier</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch12 L260</span></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-note">A named individual per row.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Next review due</b></td>
+          <td class="prior">&mdash;<span class="prior-src">ch12 L260</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+            <span class="f-note">From the cadence box unless this row needs a tighter one.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Review outcome</b></td>
+          <td class="prior">A section untouched for six months is verified as still accurate, or removed.<span class="prior-src">ch12 L260</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">verified unchanged</span><span class="opt">updated</span><span class="opt">removed</span></div>
+            <span class="f-note">Dated:</span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Failure cost if the agent gets this wrong</b></td>
+          <td class="prior">Critical: security, data corruption, production outage. High: architectural violation accruing as debt. Medium: convention violation needing rework in review. Low: style preference not affecting correctness.<span class="prior-src">ch12 L444-447</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-12-project-decision-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
