@@ -24,7 +24,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>The Coordination Tax Calculator: When Does Orchestration Pay?</h1>
-      <p class="ws-sub">A defensible cost model and a go/no-go threshold for multi-agent orchestration on this codebase — plus an honest statement of what the investment buys: quality and reduced context degradation, not elapsed time.</p>
+      <p class="ws-sub">A defensible cost model and a go/no-go threshold for multi-agent orchestration on this codebase — plus a statement of what the investment buys: quality and reduced context degradation, not elapsed time.</p>
     </div>
     <div class="ws-meta">
       <b>WS-17-coordination-tax-calculator</b><br>
