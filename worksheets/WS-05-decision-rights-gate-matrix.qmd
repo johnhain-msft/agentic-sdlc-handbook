@@ -81,7 +81,7 @@ format:
           <td class="fill"><span class="f-text"></span></td>
           <td class="prior">Review and merge<span class="prior-src">ch05 L303</span></td>
           <td class="fill"><span class="f-text"></span></td>
-          <td class="fill"><div class="prior">Human reviewer<span class="prior-src">ch05 L303</span></div><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior">Human reviewer<span class="prior-src">derived from gate wording, ch05 L303</span></div><span class="f-owner"></span></td>
           <td class="prior">Diff; test output; agent stack trace<span class="prior-src">ch05 L303</span></td>
           <td class="fill"><span class="f-box sm"></span></td>
           <td class="fill"><span class="f-box sm"></span></td>
@@ -135,7 +135,7 @@ format:
           <td class="fill"><span class="f-text"></span></td>
           <td class="prior">Approve rollout; monitor canary<span class="prior-src">ch05 L306</span></td>
           <td class="fill"><span class="f-text"></span></td>
-          <td class="fill"><div class="prior">Deployment approver<span class="prior-src">ch05 L306</span></div><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior">Deployment approver<span class="prior-src">derived from gate wording, ch05 L306</span></div><span class="f-owner"></span></td>
           <td class="prior">Artefact hash; lockfile; deployment manifest; pre-deploy check output<span class="prior-src">ch05 L306</span></td>
           <td class="fill"><span class="f-box sm"></span></td>
           <td class="fill"><span class="f-box sm"></span></td>
@@ -171,7 +171,7 @@ format:
           <td class="fill"><span class="f-text"></span></td>
           <td class="prior">Approve install and run against expected ROI; assign budget pocket<span class="prior-src">ch05 L308</span></td>
           <td class="fill"><span class="f-text"></span></td>
-          <td class="fill"><div class="prior">Cost-vs-value approver<span class="prior-src">ch05 L308</span></div><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior">Cost-vs-value approver<span class="prior-src">derived from gate wording, ch05 L308</span></div><span class="f-owner"></span></td>
           <td class="prior">Cost gradient (model tier, eval results); expected per-run cost; budget-pocket assignment; run telemetry<span class="prior-src">ch05 L308</span></td>
           <td class="fill"><span class="f-box sm"></span></td>
           <td class="fill"><span class="f-box sm"></span></td>
@@ -249,7 +249,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Complete Block B for every agent role you intend to run, including any role you add. Use explicit tool names, exact file scope, and named operations that must stop for human approval — never a wildcard. Complete Block C for the pilot before the steady-state matrix is in force. Then check every column 16, record every yes and its remediation owner below, and sign only after the check is complete.
+    Complete Block B for every agent role you intend to run, including any role you add. Use explicit tool names, exact file scope, and named operations that must stop for human approval — never a wildcard. Complete Block C for the pilot before the steady-state matrix is in force. Then check every column 16, record every yes and its remediation owner in Block D on sheet 3, and sign only after the check is complete.
   </div>
 
   <div class="ws-block">
@@ -377,7 +377,7 @@ format:
   <div class="ws-block">
     <h2>Block D — validation pass and sign-off <span class="ws-block-note">Do not compress this check</span></h2>
     <table class="ws">
-      <colgroup><col style="width:8%"><col style="width:27%"><col style="width:18%"><col style="width:47%"></colgroup>
+      <colgroup><col style="width:5%"><col style="width:15%"><col style="width:22%"><col style="width:58%"></colgroup>
       <thead>
         <tr><th></th><th>Field</th><th>What the book says</th><th>Complete here</th></tr>
       </thead>
