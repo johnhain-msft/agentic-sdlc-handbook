@@ -23,7 +23,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Target-State Primitive Bundle Definition</h1>
-      <p class="ws-sub">A one-page definition of what "done" looks like for the primitive layer &mdash; surface A defines the bundle; surface B (sheet 2) tests it later.</p>
+      <p class="ws-sub">A one-page definition of what "done" looks like for the primitive layer &mdash; surface A defines the bundle; surface B (sheet 3) tests it later.</p>
     </div>
     <div class="ws-meta">
       <b>WS-27-starter-shape-target</b><br>
@@ -42,7 +42,7 @@ format:
   <div class="ws-instruction">
     Name your team's own instance of each of the five bundle elements. Read the boxed hedge aloud first, then tick it and name who read it.
     For each element write the instance, an owner and a target date; the book's sizing guidance is printed in grey for comparison and is yours to overwrite.
-    Fill surface A now. Do not fill surface B (sheet 2) in this session &mdash; it is run later against a real bundle.
+    Fill surface A now. Do not fill surface B (sheet 3) in this session &mdash; it is run later against a real bundle.
   </div>
 
   <div class="ws-block">
@@ -260,11 +260,11 @@ format:
         <tr>
           <th>B1 Property</th>
           <th>B2 The book's test</th>
-          <th><span class="fno">1</span> B3 Result</th>
-          <th><span class="fno">2</span> B4 How it was tested</th>
-          <th><span class="fno">3</span> B5 Tested by</th>
-          <th><span class="fno">4</span> B6 Date tested</th>
-          <th><span class="fno">5</span> B7 If not pass &mdash; the gap and its owner</th>
+          <th><span class="fno">14</span> B3 Result</th>
+          <th><span class="fno">15</span> B4 How it was tested</th>
+          <th><span class="fno">16</span> B5 Tested by</th>
+          <th><span class="fno">17</span> B6 Date tested</th>
+          <th><span class="fno">18</span> B7 If not pass &mdash; the gap and its owner</th>
         </tr>
       </thead>
       <tbody>
