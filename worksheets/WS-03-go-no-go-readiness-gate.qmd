@@ -43,7 +43,7 @@ format:
 
   <div class="ws-instruction">
     Put the completed prerequisite sheets on the table. For each condition, mark yes or no,
-    name and date its evidence artefact, and identify who checked it. A no does not block the
+    name and date its evidence artifact, and identify who checked it. A no does not block the
     decision; it makes GO a GO WITH CONDITIONS and must be written with its due date. Reconcile
     condition 2 to your calibrated roadmap, not the book's curve. Complete the governance
     register and five owned moves, then record your own expected return and evidence grade.
@@ -53,7 +53,7 @@ format:
 
   <div class="ws-block">
     <h2>A. Conditions
-      <span class="ws-block-note">one answer and evidence record per condition; book prior — on fields 2, 4 and 5</span></h2>
+      <span class="ws-block-note">one answer and evidence record per condition; book prior — on fields 1 and 6</span></h2>
     <table class="ws" style="font-size:7.1pt;line-height:1.05">
       <colgroup>
         <col style="width:22%"><col style="width:10%"><col style="width:25%">
@@ -101,7 +101,7 @@ format:
 
   <div class="ws-block">
     <h2>B. Governance gate
-      <span class="ws-block-note">12 items; book prior — on fields 8–13; evidence pointer; signed waiver acceptance</span></h2>
+      <span class="ws-block-note">for each of the 12 book-prior items, record status, owner, due date and evidence; sign any waiver</span></h2>
     <table class="ws" style="font-size:7pt;line-height:1.02">
       <colgroup>
         <col style="width:25%"><col style="width:11%"><col style="width:12%">
@@ -161,7 +161,7 @@ format:
 
   <div class="ws-block">
     <h2>C. Five moves
-      <span class="ws-block-note">one accountable executive, date, proof and status per move; book prior — on fields 16–18</span></h2>
+      <span class="ws-block-note">for each pre-printed move, record the accountable executive, target date, evidence of completion and current status</span></h2>
     <table class="ws" style="font-size:7pt;line-height:1.02">
       <colgroup>
         <col style="width:28%"><col style="width:16%"><col style="width:11%">
@@ -182,7 +182,7 @@ format:
 
   <div class="ws-block">
     <h2>D. Calibration
-      <span class="ws-block-note">read before initialling; the organisation supplies its own expectation</span></h2>
+      <span class="ws-block-note">read before initialing; the organization supplies its own expectation</span></h2>
     <table class="ws" style="font-size:7.1pt;line-height:1.04">
       <colgroup><col style="width:5%"><col style="width:22%"><col style="width:48%"><col style="width:25%"></colgroup>
       <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
@@ -211,7 +211,7 @@ format:
         </tr>
       </tbody>
     </table>
-    <div class="ours-label">Our expected return — write the organisation's expectation, not the book's. If the book's figure is your only expectation, select “author estimate”.</div>
+    <div class="ours-label">Our expected return — write the organization's expectation, not the book's. If the book's figure is your only expectation, select “author estimate”.</div>
   </div>
 
   <div class="ws-block" style="font-size:7.1pt">
