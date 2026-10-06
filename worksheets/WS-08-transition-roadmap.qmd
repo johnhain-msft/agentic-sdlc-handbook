@@ -23,7 +23,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>The Transition Roadmap — Three Phases, Named Teams, Dated Gates</h1>
-      <p class="ws-sub">A dated, team-named, three-phase transition roadmap with realistic durations calibrated to the organization's actual size and documentation maturity — the backbone artifact of the entire delivery.</p>
+      <p class="ws-sub">A dated, team-named, three-phase transition roadmap, with durations calibrated to org size and documentation maturity.</p>
     </div>
     <div class="ws-meta">
       <b>WS-08-transition-roadmap</b><br>
@@ -156,7 +156,7 @@ format:
 <div class="sheet">
   <div class="ws-head"><div><h1>The Transition Roadmap — Three Phases, Named Teams, Dated Gates</h1><p class="ws-sub">Wall band 4 of 5 &middot; Phase 3 — Scale. This phase moves to an ongoing capability, not a completion date.</p></div><div class="ws-meta"><b>WS-08-transition-roadmap</b><br>Pack G - The plan we leave with<br>fill order <b>5</b> &middot; type <b>roadmap</b><br>audience <b>mixed</b></div></div>
   <div class="ws-source">Source: <b>Planning the Transition</b>, <i>Phased Adoption</i> &middot; <code>handbook\ch08-planning-the-transition.qmd</code> L72-184 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-phases">#sec-transition-phases</a></div>
-  <div class="ws-instruction">Use the size band and baseline calibration on sheet 1. Enter planned duration as a range and explain the choice even when adopting the book's band unchanged. Name every team, owner, and enablement function. No calendar window before captured baseline and Month 0. The programme-improvement criterion below is a suggested, hedged prior; do not treat it as a target. Describe the capability that continues beyond this phase on the Ongoing band.</div>
+  <div class="ws-instruction">Use the size band and baseline calibration on sheet 1. Enter planned duration as a range and explain the choice even when adopting the book's band unchanged. Name every team, owner, and enablement function. No calendar window before captured baseline and Month 0. The program-improvement criterion below is a suggested, hedged prior; do not treat it as a target. Describe the capability that continues beyond this phase on the Ongoing band.</div>
   <div class="ws-block"><h2>Phase band — Phase 3 — Scale <span class="ws-block-note">No completion date; the steady state is on the following band</span></h2>
     <table class="ws"><colgroup><col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%"></colgroup><thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead><tbody>
       <tr><td class="ws-num"><span class="fno">59</span></td><td><b>Phase band — Phase</b></td><td class="prior">Phase 3 — Scale<span class="prior-src">ch08 L159, L292</span></td><td class="locked">Fixed phase label.</td></tr>
