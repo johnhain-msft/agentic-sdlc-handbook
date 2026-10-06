@@ -62,7 +62,7 @@ Seven pre-populated decision classes plus blank rows the organisation adds from 
 
 ## 5. Field-level schema
 
-A3 landscape, two sides. **Front — block A**, the decision-rights matrix itself: this is the
+A2 landscape, three sheets. **Sheet 1 — block A**, the decision-rights matrix itself: this is the
 artefact the chapter tells you to post next to the readiness checklist, so it is designed to be
 read on a wall and our own columns are kept short. **Back — block B**, the agent authority
 matrix; **block C**, the pilot decision-rights strip; and **block D**, the validation pass and
@@ -188,7 +188,7 @@ Every row below was merged into this worksheet. Its field detail must appear in 
 | When in the session | Pack F, fourth sheet, after both hard prerequisites: `WS-05-governance-readiness-assessment`, because a capability has to exist before a decision can use it, and `WS-06-role-map-and-staffing-triggers`, because columns 6 and 21 name people that sheet identified. It also wants `WS-05-org-policy-encoding-inventory` — not a formal prerequisite, but the gates enumerated there are the ones that belong in column 11, and running this sheet first means deriving the same list twice. |
 | Duration | Block A, 90-120 minutes: seven rows, of which columns 9, 12 and 15 are each a small investigation rather than a question. Block B, 45. Block C, 20. Block D, 15 — and it must not be compressed, because it is the validation the chapter's first principle demands and the only place a `yes` in column 16 gets recorded. |
 | Data needed in advance | The CI configuration with job names; branch protection and required-reviewer settings **as configured**, not as remembered; the real storage location of every evidence artefact the organisation already produces — build logs, lockfiles, ADRs, audit logs, incident timelines; the agent tooling configuration files, for block B column 18; and the outputs of both prerequisite sheets. |
-| Room format | A3 landscape, two-sided. Block A is the posted artefact — design it to be legible on a wall next to the readiness assessment, and hold the room to short entries in the our-columns. **Fill columns 12 and 16 by checking, not by asserting:** one laptop open on the CI configuration during block A saves a quarter's worth of embarrassment, and it is the single highest-value piece of room setup on this sheet. |
+| Room format | A2 landscape, three sheets (sheet 1 block A; sheet 2 blocks B and C; sheet 3 block D). Block A is the posted artefact — design it to be legible on a wall next to the readiness assessment, and hold the room to short entries in the our-columns. **Fill columns 12 and 16 by checking, not by asserting:** one laptop open on the CI configuration during block A saves a quarter's worth of embarrassment, and it is the single highest-value piece of room setup on this sheet. |
 
 **Facilitation note carried from ch05.** Three principles read across every row, and each has an
 operational consequence the facilitator has to enforce rather than merely read out.

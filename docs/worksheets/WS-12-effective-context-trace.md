@@ -68,8 +68,9 @@ Pick two or three representative files from the repository. For each, walk the c
 ## 5. Field-level schema
 
 One trace per file; seven fixed rows per trace — the six layers of the composition cascade plus
-the cross-cutting hooks layer. Physically it is one A4 side per traced file, and the chapter asks
-for two or three files, so the pad ships in threes. A header box identifies the trace; the layer
+the cross-cutting hooks layer. Physically it is one A3 landscape side per traced file, and the chapter asks
+for two or three files, so the pad ships in threes. A header box identifies the trace, and carries one writable line,
+"why these files, and how they are unalike" (§9.5); the layer
 table *is* the trace.
 
 | # | Column | Input type | Pre-filled from the book | Blank - org supplies | Source |
@@ -126,7 +127,7 @@ None - this worksheet absorbed no other candidate.
 | When in the session | Pack Z, fill order 5, after `WS-02-shadow-ai-usage-inventory`. The dependency is substantive rather than procedural: the census supplies the list of primitives that actually exist, and that list is column 3's row set. Run it before `WS-12-failure-triage-log`, which consumes it — a triage log with no trace behind it records symptoms and calls them causes. |
 | Duration | 30-45 minutes per file. The chapter asks for two or three, so 90 minutes to two hours. The first trace takes roughly twice as long as the third; budget for that rather than cutting the third. |
 | Data needed in advance | The repository's primitive layout — every `copilot-instructions.md`, `*.instructions.md`, `SKILL.md`, `*.agent.md`, prompt, memory file and hook — and the `applyTo` globs. Two or three candidate files chosen to be **unalike**: one from a well-instrumented area, one from a neglected one. Three files from the same module find the same gap three times. |
-| Room format | A4 per file, side by side on a table, filled by hand — but done at a machine with the repository open. Column 3 must be answered by looking, never by remembering; a trace filled from recall records the instrumentation the team believes it has. |
+| Room format | A3 landscape per file, side by side on a table, filled by hand — but done at a machine with the repository open. Column 3 must be answered by looking, never by remembering; a trace filled from recall records the instrumentation the team believes it has. |
 
 **Facilitation note — Pack Z prerequisite condition.** This sheet traces an estate. Where the
 shadow-AI census turned up little — a repository with one `copilot-instructions.md` and no scoped
