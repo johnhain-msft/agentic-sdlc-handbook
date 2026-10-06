@@ -249,7 +249,7 @@ format:
 
   <div class="ws-block">
     <h2>Block D &mdash; The bound: depth, ceiling and breach
-      <span class="ws-block-note">the organisation's own numbers, from its own metering</span></h2>
+      <span class="ws-block-note">the organization's own numbers, from its own metering</span></h2>
 
     <table class="ws">
       <colgroup>
