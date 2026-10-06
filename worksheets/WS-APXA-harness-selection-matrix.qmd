@@ -25,7 +25,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Harness Selection and Portability Matrix: What We Standardise On, and What It Costs Us</h1>
-      <p class="ws-sub">A procurement-grade harness decision: one standard, the sanctioned exceptions, the primitive concepts we forfeit, and the estimated migration cost if we switch.</p>
+      <p class="ws-sub">A procurement-grade harness decision: one standard, the sanctioned exceptions, primitive gaps, and the qualitative cost of reversing the choice.</p>
     </div>
     <div class="ws-meta">
       <b>WS-APXA-harness-selection-matrix</b><br>
