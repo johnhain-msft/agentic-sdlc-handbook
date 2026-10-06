@@ -153,7 +153,7 @@ format:
     &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-readiness">#sec-governance-readiness</a>
   </div>
   <div class="ws-instruction">
-    For each capability, carry the mandatory posture across from block B of the completed compliance scope matrix. Select the honest level today and cite the artefact that proves it. Choose a Basic or Enterprise target and date, name an accountable individual and rate the risk of staying put. If Enterprise is selected, record its named dependency with the current evidence.
+    For each capability, carry the mandatory posture across from block B of the completed compliance scope matrix. Select the honest level today and cite the artifact that proves it. Choose a Basic or Enterprise target and date, name an accountable individual and rate the risk of staying put. If Enterprise is selected, record its named dependency with the current evidence.
   </div>
   <div class="ws-block">
     <h2>Block A — organisation scores <span class="ws-block-note">complete after reviewing the capability descriptions on sheet 1</span></h2>
