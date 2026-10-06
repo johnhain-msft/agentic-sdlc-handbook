@@ -288,7 +288,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Copy each canvas into one row below. Read down the tool and path columns: two rows that look alike mean one persona too many. Standing note: the pod structure ports, the personas do not &mdash; the book's own eleven editorial personas are the roster for writing a book, not a template for an engineering org. Matched pair: if these tool lists and the capability column of WS-13-agent-authority-matrix differ, the canvas is right and the matrix is stale; log the difference against the matrix, never harmonise it silently.
+    Copy each canvas into one row below. Read down the tool and path columns: two rows that look alike mean one persona too many. Standing note: the pod structure ports, the personas do not &mdash; the book's own eleven editorial personas are the roster for writing a book, not a template for an engineering org. Matched pair: if these tool lists and the capability column of WS-13-agent-authority-matrix differ, the canvas is right and the matrix is stale; log the difference against the matrix, never harmonize it silently.
   </div>
 
   <div class="ws-block">
@@ -319,7 +319,7 @@ format:
 
   <div class="ws-block">
     <h2>Roster size
-      <span class="ws-block-note">and the rule for adding a specialisation</span></h2>
+      <span class="ws-block-note">and the rule for adding a specialization</span></h2>
     <table class="ws">
       <colgroup><col style="width:4%"><col style="width:17%"><col style="width:37%"><col style="width:42%"></colgroup>
       <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
