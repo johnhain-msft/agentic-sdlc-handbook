@@ -165,7 +165,7 @@ format:
   <div class="ws-instruction">
     One row per planned wave. Wave 0 is tasks with no dependencies; the ordering is directional and strict. For each wave name the
     committed output it builds on, set the parallel agent count using the trade-off table beside B3, state the scope boundary, and
-    write the checkpoint as an observable behaviour, the command that observes it and the output expected. Checkpoints are authored
+    write the checkpoint as an observable behavior, the command that observes it and the output expected. Checkpoints are authored
     properly in <b>WS-CS-APM-checkpoint-assertions</b>; transcribe them here.
   </div>
 
