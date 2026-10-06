@@ -24,7 +24,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Consequential Side-Effect Register: What Can Our Agents Actually Do To Us?</h1>
-      <p class="ws-sub">A signed register of every consequential agent-reachable side effect, its reversal cost and current enforcement point — the org's agent blast-radius baseline.</p>
+      <p class="ws-sub">Record each consequential side effect agents can produce, what reversal costs, and where it is controlled today.</p>
     </div>
     <div class="ws-meta">
       <b>WS-16-consequential-effect-register</b><br>
@@ -423,7 +423,7 @@ format:
 
 <!-- ============================ SHEET 11 ============================== -->
 <div class="sheet">
-  <div class="ws-head"><div><h1>Additional Consequential Effects</h1><p class="ws-sub">Use these repeated records for effects in your own vocabulary; copy this page when your register has more entries.</p></div><div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Block C &middot; additional effects</div></div>
+  <div class="ws-head"><div><h1>Additional Consequential Effects</h1><p class="ws-sub">Add effects in your own words, one row per effect. Copy this page when you need more rows.</p></div><div class="ws-meta"><b>WS-16-consequential-effect-register</b><br>Block C &middot; additional effects</div></div>
   <div class="ws-source">Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>Consequential Side Effects Belong on the Deterministic Side</i> &middot; <code>handbook\ch16-deterministic-probabilistic-boundary.qmd</code> L45-60 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-consequential-effects">#sec-seam-consequential-effects</a></div>
   <div class="ws-block"><h2>Block C — outbound: the consequential effect register <span class="ws-block-note">write-in effect</span></h2>
     <table class="ws"><colgroup><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"><col style="width:3%"><col style="width:12%"><col style="width:10%"><col style="width:25%"></colgroup>
