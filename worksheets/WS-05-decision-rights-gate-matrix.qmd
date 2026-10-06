@@ -1,0 +1,424 @@
+---
+title: "Decision Rights and Gate Matrix: Who Decides What, With Which Evidence"
+pagetitle: "WS-05-decision-rights-gate-matrix"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root {                         --sheet-w: 594mm; --sheet-h: 420mm; --sheet-margin: 16mm; }
+                        @page { size: A2 landscape; margin: 16mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-05-decision-rights-gate-matrix</b> &middot; Pack F &middot;
+  format <b>A2 landscape</b> &middot; 3 sheets.
+  Each white page below is one physical sheet at true size.
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Decision Rights and Gate Matrix: Who Decides What, With Which Evidence</h1>
+      <p class="ws-sub">An adapted, org-specific decision-rights and approval-gate matrix — the RACI of agent-assisted delivery — ready to post next to the readiness assessment.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-decision-rights-gate-matrix</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>4</b> &middot; type <b>matrix</b><br>
+      audience <b>eng-leader</b> &middot; sheet 1 of 3
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>The Architecture Decision Matrix</i> &middot;
+    <code>handbook/ch05-governance-for-ai-assisted-delivery.qmd</code> L295-323 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-decision-matrix">#sec-governance-decision-matrix</a>
+  </div>
+
+  <div class="ws-instruction">
+    Use the completed WS-05-governance-readiness-assessment and WS-06-role-map-and-staffing-triggers. Start with the seven book rows and add decision classes that recur in your pull-request reviews or incident postmortems. Name what your agent and people actually do, the individual approver, each evidence artifact and its storage location, and the gate as configured today. Reconcile approver names with the role map. Check columns 12 and 16 against the live configuration. Where a gate is not fully in place, name its owner and build-by date. Record the specific irreversible step and whether the agent can write past it.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A — the decision-rights matrix
+      <span class="ws-block-note">Front / posted beside the readiness checklist &middot; keep our entries short</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:9%"><col style="width:7%"><col style="width:4%"><col style="width:8%">
+        <col style="width:4%"><col style="width:6%"><col style="width:11%"><col style="width:6%">
+        <col style="width:6%"><col style="width:7%"><col style="width:6%"><col style="width:4%">
+        <col style="width:6%"><col style="width:6%"><col style="width:6%"><col style="width:4%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span>Decision class</th>
+          <th><span class="fno">2</span>Agent role — the book</th>
+          <th><span class="fno">3</span>Agent role — ours</th>
+          <th><span class="fno">4</span>Human role — the book</th>
+          <th><span class="fno">5</span>Human role — ours</th>
+          <th><span class="fno">6</span>Named approver: role + person</th>
+          <th><span class="fno">7</span>Evidence captured — the book</th>
+          <th><span class="fno">8</span>Evidence we will actually capture</th>
+          <th><span class="fno">9</span>Where each artefact is stored</th>
+          <th><span class="fno">10</span>Gate — the book</th>
+          <th><span class="fno">11</span>Our gate</th>
+          <th><span class="fno">12</span>Does this gate exist today?</th>
+          <th><span class="fno">13</span>If not: owner + build-by date</th>
+          <th><span class="fno">14</span>Reversibility</th>
+          <th><span class="fno">15</span>The irreversible step in this row</th>
+          <th><span class="fno">16</span>Does the agent hold the write capability at column 15?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior"><b>Code change in a low-risk module</b><br>(internal tooling, dev docs, non-production scripts)<span class="prior-src">ch05 L303</span></td>
+          <td class="prior">Author diff; run tests; open PR<span class="prior-src">ch05 L303</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Review and merge<span class="prior-src">ch05 L303</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Human reviewer<span class="prior-src">derived from gate wording, ch05 L303</span></div><span class="f-owner"></span></td>
+          <td class="prior">Diff; test output; agent stack trace<span class="prior-src">ch05 L303</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="prior">PR review by one human reviewer<span class="prior-src">ch05 L303</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partial</span><span class="opt">no</span></div></td>
+          <td class="fill"><small>Required unless yes</small><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Reversible: revert the commit<span class="prior-src">ch05 L303</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Code change in a regulated path</b><br>(auth, payments, data access, customer PII handlers)<span class="prior-src">ch05 L304</span></td>
+          <td class="prior">Draft diff; cite constraint<span class="prior-src">ch05 L304</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Review with security-aware reviewer; sign off<span class="prior-src">ch05 L304</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Security-aware reviewer; security or compliance approver<span class="prior-src">ch05 L304</span></div><span class="f-owner"></span></td>
+          <td class="prior">Diff; agent stack trace; loaded scope-attached rules; cited constraint<span class="prior-src">ch05 L304</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="prior">Two human approvers; one holds the relevant security or compliance label<span class="prior-src">ch05 L304</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partial</span><span class="opt">no</span></div></td>
+          <td class="fill"><small>Required unless yes</small><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Reversible at code level; downstream data writes may not be<span class="prior-src">ch05 L304</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Architecture decision affecting two or more teams</b><br>(API contract, shared module boundary, cross-cutting convention)<span class="prior-src">ch05 L305</span></td>
+          <td class="prior">Draft ADR; enumerate alternatives<span class="prior-src">ch05 L305</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Decide; sign the ADR<span class="prior-src">ch05 L305</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Named decision owner<span class="prior-src">ch05 L305</span></div><span class="f-owner"></span></td>
+          <td class="prior">Draft ADR; discussion thread; prior ADRs cited by agent<span class="prior-src">ch05 L305</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="prior">Architecture review forum; named decision owner signs<span class="prior-src">ch05 L305</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partial</span><span class="opt">no</span></div></td>
+          <td class="fill"><small>Required unless yes</small><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Reversible only by another ADR; reversal costs the migration<span class="prior-src">ch05 L305</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Production deploy</b><br>(any change reaching customer-facing systems)<span class="prior-src">ch05 L306</span></td>
+          <td class="prior">Build artefact; produce deployment manifest; run pre-deploy checks<span class="prior-src">ch05 L306</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Approve rollout; monitor canary<span class="prior-src">ch05 L306</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Deployment approver<span class="prior-src">derived from gate wording, ch05 L306</span></div><span class="f-owner"></span></td>
+          <td class="prior">Artefact hash; lockfile; deployment manifest; pre-deploy check output<span class="prior-src">ch05 L306</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="prior">Deterministic CI gate; human deployment approval<span class="prior-src">ch05 L306</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partial</span><span class="opt">no</span></div></td>
+          <td class="fill"><small>Required unless yes</small><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Rollback within deployment window; not after data migrations land<span class="prior-src">ch05 L306</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>External dependency adoption</b><br>(new library or external agentic primitive bundle)<span class="prior-src">ch05 L307</span></td>
+          <td class="prior">Identify candidate; produce lockfile diff and supply-chain summary<span class="prior-src">ch05 L307</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Review supply chain; approve or reject<span class="prior-src">ch05 L307</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Named library owner<span class="prior-src">ch05 L307</span></div><span class="f-owner"></span></td>
+          <td class="prior">Lockfile diff; signature verification; licence report; supply-chain summary<span class="prior-src">ch05 L307</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="prior">Security review; named library owner signs<span class="prior-src">ch05 L307</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partial</span><span class="opt">no</span></div></td>
+          <td class="fill"><small>Required unless yes</small><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Reversible only by removing dependency and refactoring consumers<span class="prior-src">ch05 L307</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Installing or running a cost-bearing agentic workflow</b><br>(frontier-model loops, high-volume automation)<span class="prior-src">ch05 L308</span></td>
+          <td class="prior">Declare model tier, expected per-run cost and stop condition; emit cost telemetry<span class="prior-src">ch05 L308</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Approve install and run against expected ROI; assign budget pocket<span class="prior-src">ch05 L308</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Cost-vs-value approver<span class="prior-src">derived from gate wording, ch05 L308</span></div><span class="f-owner"></span></td>
+          <td class="prior">Cost gradient (model tier, eval results); expected per-run cost; budget-pocket assignment; run telemetry<span class="prior-src">ch05 L308</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="prior">Cost-vs-value approval at install and run; local, low-gradient workflows waved through. See WS-07-cost-vs-value-gate for cost, budget pocket and stop condition.<span class="prior-src">ch05 L308, L321</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partial</span><span class="opt">no</span></div></td>
+          <td class="fill"><small>Required unless yes</small><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Uninstall or revoke; spend already incurred is not recoverable<span class="prior-src">ch05 L308</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Production incident response</b><br>(active outage, data exposure, security event)<span class="prior-src">ch05 L309</span></td>
+          <td class="prior">Surface diagnostic context; draft remediation candidates; never execute<span class="prior-src">ch05 L309</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">On-call engineer decides and executes<span class="prior-src">ch05 L309</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">On-call engineer<span class="prior-src">ch05 L309</span></div><span class="f-owner"></span></td>
+          <td class="prior">Incident timeline; agent diagnostic queries; drafted candidates; chosen path<span class="prior-src">ch05 L309</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="prior">Human-only execution; agent advisory only<span class="prior-src">ch05 L309</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partial</span><span class="opt">no</span></div></td>
+          <td class="fill"><small>Required unless yes</small><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Decision-by-decision; agent does not hold write capability<span class="prior-src">ch05 L309</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><b>Add a recurring PR-review or incident-postmortem decision class</b><span class="f-text"></span></td>
+          <td class="prior">—</td><td class="fill"><span class="f-text"></span></td>
+          <td class="prior">—</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-owner"></span></td>
+          <td class="prior">—</td><td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="prior">—</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partial</span><span class="opt">no</span></div></td>
+          <td class="fill"><small>Required unless yes</small><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">—</div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:1.2mm 0 0;color:#454f59">For column 9, write one storage location for each artifact named in column 8; use “nowhere” when that is the honest answer. Column 13 is mandatory wherever column 12 is not yes. Add rows as needed.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-decision-rights-gate-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Decision Rights and Gate Matrix: Who Decides What, With Which Evidence</h1>
+      <p class="ws-sub">Back — agent authority, pilot decision rights, and the validation pass.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-decision-rights-gate-matrix</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>4</b> &middot; type <b>matrix</b><br>
+      audience <b>eng-leader</b> &middot; sheet 2 of 3
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>The Architecture Decision Matrix</i> &middot;
+    <code>handbook/ch05-governance-for-ai-assisted-delivery.qmd</code> L295-323 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-decision-matrix">#sec-governance-decision-matrix</a>
+    &nbsp; Related sources: ch13 L224-243; case-study-publishing-pipeline.qmd L28-34
+  </div>
+
+  <div class="ws-instruction">
+    Complete Block B for every agent role you intend to run, including any role you add. Use explicit tool names, exact file scope, and named operations that must stop for human approval — never a wildcard. Complete Block C for the pilot before the steady-state matrix is in force. Then check every column 16, record every yes and its remediation owner in Block D on sheet 3, and sign only after the check is complete.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B — the agent authority matrix
+      <span class="ws-block-note">One row per agent role &middot; five seeded; add your own</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:12%"><col style="width:24%"><col style="width:24%">
+        <col style="width:24%"><col style="width:8%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">17</span>Agent role</th>
+          <th><span class="fno">18</span>Capability — explicit tool whitelist (no wildcards)</th>
+          <th><span class="fno">19</span>Knowledge — file scope it can see</th>
+          <th><span class="fno">20</span>Authority — named operations that must STOP for human approval</th>
+          <th><span class="fno">21</span>Who gives that approval?</th>
+          <th><span class="fno">22</span>Within what time?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior"><b>Code writer</b><span class="prior-src">ch13 L234-239</span></td>
+          <td class="fill"><div class="prior">editFiles, runCommands, search, readFiles, testRunner<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Domain files only; cannot see infra config, CI/CD or deploy scripts<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Modifying public API signatures; changing database schemas; touching auth logic<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Reviewer</b><span class="prior-src">ch13 L234-239</span></td>
+          <td class="fill"><div class="prior">readFiles, search, runCommands (read-only lint, test, type-check)<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Full repository read access; no write tools<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">No approval gates; cannot change anything; commentary only<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Test runner</b><span class="prior-src">ch13 L234-239</span></td>
+          <td class="fill"><div class="prior">runCommands, readFiles, testRunner<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Test files and source under test; no deploy config, secrets or CI definitions<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Deleting test fixtures; modifying shared test infrastructure; skipping tests<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Deployer</b><span class="prior-src">ch13 L234-239</span></td>
+          <td class="fill"><div class="prior">runCommands (deploy scripts only), readFiles<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Deployment manifests, environment config, release notes; no source-code write access<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Every deployment action; human approves each environment promotion<span class="prior-src">ch13 L234-239</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Planning agent (architect chatmode)</b><span class="prior-src">ch13 L243</span></td>
+          <td class="fill"><div class="prior">readFiles, search; no write tools<span class="prior-src">ch13 L243</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">Read and search only; implementation agent consumes its plan in a separate session<span class="prior-src">ch13 L243</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="prior">No write operations; output is a plan, not code<span class="prior-src">ch13 L243</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:1mm 0 0;color:#454f59">A <code>tools: ["*"]</code> entry is the chapter's named anti-pattern. Do not use wildcards in column 18.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block C — the pilot decision-rights strip
+      <span class="ws-block-note">One row per decision class in the pilot</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:19%"><col style="width:15%"><col style="width:12%"><col style="width:40%"><col style="width:14%"></colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">23</span>Decision class in the pilot</th>
+          <th><span class="fno">24</span>Who decides?</th>
+          <th><span class="fno">25</span>Who executes?</th>
+          <th><span class="fno">26</span>What evidence must the agent surface before the human decides?</th>
+          <th><span class="fno">27</span>Is the human decision reversible?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="fill"><div class="f-select"><span class="opt">Philosophy and strategy</span><span class="opt">Architecture</span><span class="opt">Tool selection</span><span class="opt">Implementation</span><span class="opt">Refinement</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-box"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td></tr>
+        <tr><td class="fill"><div class="f-select"><span class="opt">Philosophy and strategy</span><span class="opt">Architecture</span><span class="opt">Tool selection</span><span class="opt">Implementation</span><span class="opt">Refinement</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-box"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td></tr>
+        <tr><td class="fill"><div class="f-select"><span class="opt">Philosophy and strategy</span><span class="opt">Architecture</span><span class="opt">Tool selection</span><span class="opt">Implementation</span><span class="opt">Refinement</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-box"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td></tr>
+        <tr><td class="fill"><div class="f-select"><span class="opt">Philosophy and strategy</span><span class="opt">Architecture</span><span class="opt">Tool selection</span><span class="opt">Implementation</span><span class="opt">Refinement</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-box"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td></tr>
+        <tr><td class="fill"><div class="f-select"><span class="opt">Philosophy and strategy</span><span class="opt">Architecture</span><span class="opt">Tool selection</span><span class="opt">Implementation</span><span class="opt">Refinement</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-box"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:1mm 0 0;color:#454f59">The agent surfaces options and trade-offs before the call, not as a justification after it.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-decision-rights-gate-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Decision Rights and Gate Matrix: Who Decides What, With Which Evidence</h1>
+      <p class="ws-sub">Block D — complete the validation only after every decision row has been checked.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-decision-rights-gate-matrix</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>4</b> &middot; type <b>matrix</b><br>
+      audience <b>eng-leader</b> &middot; sheet 3 of 3
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>The Architecture Decision Matrix</i> &middot;
+    <code>handbook/ch05-governance-for-ai-assisted-delivery.qmd</code> L295-323 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-decision-matrix">#sec-governance-decision-matrix</a>
+  </div>
+
+  <div class="ws-instruction">
+    After checking every column 16, tick the validation, list every yes as a finding with its remediation owner, and sign this check. Record changes to gates and the physical or digital location where the matrix is posted. Complete the final sign-off only when the validation is complete.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block D — validation pass and sign-off <span class="ws-block-note">Do not compress this check</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:15%"><col style="width:22%"><col style="width:58%"></colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Complete here</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">28</span></td>
+          <td><b>Validation: no irreversible action leaves the agent holding the write capability</b></td>
+          <td class="prior">Wherever the action is not reversible, the human is in the gate, not adjacent to it.<span class="prior-src">ch05 L315</span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>Tick only after every column 16 is checked.</span>
+            <small>Every YES: finding + remediation owner</small>
+            <span class="f-box"></span>
+            <small>Validation signature</small><span class="f-sign"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">29</span></td>
+          <td><b>Gates added, gates removed, this revision</b></td>
+          <td class="prior">Adding a gate slows the decision; removing a load-bearing one can produce a quietly non-compliant outcome nobody notices until the audit.<span class="prior-src">ch05 L319</span></td>
+          <td class="fill"><span class="f-box lg"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">30</span></td>
+          <td><b>Posted where</b></td>
+          <td class="prior">Next to the governance readiness checklist<span class="prior-src">ch05 L323</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">31</span></td>
+          <td><b>Signed</b></td>
+          <td class="prior">—</td>
+          <td class="fill tall"><span class="f-sign"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-decision-rights-gate-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
