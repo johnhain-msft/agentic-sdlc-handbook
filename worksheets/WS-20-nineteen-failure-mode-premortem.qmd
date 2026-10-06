@@ -1,0 +1,562 @@
+---
+title: "Pre-Mortem: Which of the 19 Failure Modes Will We Hit?"
+pagetitle: "WS-20-nineteen-failure-mode-premortem"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 841mm; --sheet-h: 594mm; --sheet-margin: 20mm; }
+            @page { size: A1 landscape; margin: 20mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-20-nineteen-failure-mode-premortem</b> &middot; review copy &middot;
+  declared format <b>A1 landscape</b> &middot; 2 sheets. Each white page below is one
+  physical sheet at true size. Anything spilling past a page edge onto this grey
+  background is a layout defect.
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Pre-Mortem: Which of the 19 Failure Modes Will We Hit?</h1>
+      <p class="ws-sub">A ranked organisational risk register — typically the top five to seven failure modes, each with a named owner and a dated mitigation.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-20-nineteen-failure-mode-premortem</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>2</b> &middot; type <b>diagnostic</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Anti-Patterns and Failure Modes</b>, <i>The Taxonomy</i> &middot;
+    <code>handbook/ch20-anti-patterns-and-failure-modes.qmd</code> L14-42 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch20-anti-patterns-and-failure-modes.html#sec-anti-taxonomy">#sec-anti-taxonomy</a>
+  </div>
+
+  <div class="ws-instruction">
+    Score each mode individually before reconciling. Record likelihood, impact, any cited incident, blast radius, the control you have, the gap to build before the pilot, one committed mitigation, its named owner and landing date. Tick “Seen it already” only with a reference. A Low likelihood needs a named existing control. Record any difference from the book's severity in Blast radius. A Band 1 row without a mitigation is a go/no-go item.
+  </div>
+
+  <div class="ws-block" style="margin-bottom:1.5mm">
+    <h2>Shared risk scale <span class="ws-block-note">use the same vocabulary as WS-08-pitfall-risk-register</span></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5mm;font-size:7pt;line-height:1.15">
+      <div><b>Likelihood</b> &mdash; High: already seen, or a named precondition is present today. Medium: no local precedent, but current practice would not prevent it. Low: a named existing control would catch it before harm; name it in Control we already have.</div>
+      <div><b>Impact</b> &mdash; Critical: corrupts the codebase or crosses a trust boundary, discovered late or not at all. High: costs a wave or sprint of rework, or loses confidence. Medium: costs hours, visible at the next checkpoint. Low: an irritation absorbed inside the normal loop.</div>
+    </div>
+    <p style="font-size:7pt;line-height:1.1;margin:1mm 0 0"><b>Watch band:</b> Band 1 = High likelihood with Critical or High impact; Band 2 = any other pairing containing Critical or High; Band 3 = everything else. No weighting, multiplication or numeric score.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Nineteen failure modes
+      <span class="ws-block-note">complete each row; compare ratings only after silent individual scoring</span></h2>
+    <table class="ws" style="font-size:7pt;line-height:1.05">
+      <colgroup>
+        <col style="width:3%"><col style="width:8%"><col style="width:6%"><col style="width:9%">
+        <col style="width:3%"><col style="width:5%"><col style="width:5%"><col style="width:3%">
+        <col style="width:8%"><col style="width:7%"><col style="width:8%"><col style="width:8%">
+        <col style="width:9%"><col style="width:5%"><col style="width:4%"><col style="width:5%">
+        <col style="width:4%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Pattern number</th><th>Anti-pattern</th><th>Constraint violated</th><th>Summary</th>
+          <th>Severity printed in the book</th><th>Likelihood here</th><th>Impact here</th>
+          <th>Seen it already</th><th>Incident or evidence reference</th><th>Blast radius</th>
+          <th>Control we already have</th><th>Control we must build before the pilot starts</th>
+          <th>The single mitigation we commit to</th><th>Owner</th><th>Date it lands</th>
+          <th>Watch band</th><th>Go / no-go item</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">1</span></td>
+          <td class="locked">Monolithic Prompt<span class="prior-src">ch20 L20</span></td>
+          <td class="locked">Orchestrated Composition<span class="prior-src">ch20 L20</span></td>
+          <td class="locked">All instructions in one block; small changes cause unpredictable cascades<span class="prior-src">ch20 L20</span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L20-29</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Decompose into composable primitives: agent personas for domain expertise, skills for cross-cutting concerns, file-scoped instructions for local conventions. When you add logging standards, they live in a logging skill, not alongside database rules.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Extract the most volatile section into its own primitive. Validate for a week. Extract the next. Work outward from the pain.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">2</span></td>
+          <td class="locked">Context Dumping<span class="prior-src">ch20 L21</span></td>
+          <td class="locked">Progressive Disclosure<span class="prior-src">ch20 L21</span></td>
+          <td class="locked">Everything loaded upfront; capacity wasted, attention diluted<span class="prior-src">ch20 L21</span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L20-29</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Context budgeting. For each task, include only the target file, direct dependencies, and relevant primitives. The meta-process's planning phase does this naturally: each wave's task assignment specifies exactly which files each agent receives.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Subtract files from context one at a time, re-running the task. You will likely find that removing irrelevant files improves quality.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">3</span></td>
+          <td class="locked">Unbounded Agent<span class="prior-src">ch20 L22</span></td>
+          <td class="locked">Safety Boundaries<span class="prior-src">ch20 L22</span></td>
+          <td class="locked">No limits on tools or authority; non-determinism plus unlimited access<span class="prior-src">ch20 L22</span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L20-29</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">The plan specifies which files each agent may modify. Instructions include "Do NOT modify" clauses. The harness enforces one file, one agent per wave.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Revert to the last checkpoint. Rewrite the task with explicit scope constraints. Re-dispatch. Re-execution costs less than surgical extraction from a tangled diff.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">4</span></td>
+          <td class="locked">Flat Instructions<span class="prior-src">ch20 L23</span></td>
+          <td class="locked">Explicit Hierarchy<span class="prior-src">ch20 L23</span></td>
+          <td class="locked">Same rules everywhere; backend security rules load when editing CSS<span class="prior-src">ch20 L23</span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L20-29</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Layer instructions global to local. Database patterns scope to **/db/**. Frontend patterns scope to **/components/**. Contradictions between domains never coexist in the same context.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Audit instructions for cross-domain contradictions. Move domain-specific rules into scoped primitives, starting with the contradiction that caused the most recent failure.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">5</span></td>
+          <td class="locked">Scope Creep<span class="prior-src">ch20 L24</span></td>
+          <td class="locked">Reduced Scope<span class="prior-src">ch20 L24</span></td>
+          <td class="locked">Task grows mid-execution; agent loses coherence as context degrades<span class="prior-src">ch20 L24</span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L20-29</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="prior">PAT 403<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Right-size tasks to context capacity. When scope expansion is discovered mid-task, the correct response is escalation (create a follow-up task), not absorption (add it to the current session).<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Stop. Commit what works. Create a new task for the expanded scope in a fresh session. Sunk cost of the current session is less than the debugging cost of degraded output.<span class="prior-src">ch20 L50-294</span></span><span class="prior">L4 escalation through the plan gate<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">6</span></td>
+          <td class="locked">The Solo Hero<span class="prior-src">ch20 L25</span></td>
+          <td class="locked">Orchestrated Composition<span class="prior-src">ch20 L25</span></td>
+          <td class="locked">One massive agent doing everything; no decomposition, no review<span class="prior-src">ch20 L25</span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L20-29</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">One file, one agent per wave. Checkpoint discipline provides the review gate a solo agent lacks.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">No Recovery line printed for this pattern.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">7</span></td>
+          <td class="locked">The Trust Fall<span class="prior-src">ch20 L26</span></td>
+          <td class="locked">Safety Boundaries<span class="prior-src">ch20 L26</span></td>
+          <td class="locked">Accepting agent output without verification<span class="prior-src">ch20 L26</span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L20-29</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="prior">Unicode persistence<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="prior">Unicode persistence<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>          <td class="fill"><span class="prior">Never rely on self-reports. Run the test suite. Verify file state with git diff. Spot-check critical changes. One line of diff output is worth a thousand words of agent narrative.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">No Recovery line printed for this pattern.<span class="prior-src">ch20 L50-294</span></span><span class="prior">Never accept self-report without diff check<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">8</span></td>
+          <td class="locked">Same-File Parallel Edits<span class="prior-src">ch20 L27</span></td>
+          <td class="locked">Orchestrated Composition<span class="prior-src">ch20 L27</span></td>
+          <td class="locked">Two agents editing one file; second agent's changes fail silently<span class="prior-src">ch20 L27</span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L20-29</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">One file, one agent per wave. Sequence cross-domain changes to the same file across waves.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">No Recovery line printed for this pattern.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">9</span></td>
+          <td class="locked">Skipping Checkpoints<span class="prior-src">ch20 L28</span></td>
+          <td class="locked">Safety Boundaries<span class="prior-src">ch20 L28</span></td>
+          <td class="locked">Committing multiple waves without validation between them<span class="prior-src">ch20 L28</span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L20-29</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="prior">Silent NameError<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">Test after every wave. Commit after every wave. The two-minute checkpoint cost is insurance against three-hour debugging cascades.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">No Recovery line printed for this pattern.<span class="prior-src">ch20 L50-294</span></span><span class="prior">Assert on observable behaviour, not just pass/fail<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">10</span></td>
+          <td class="locked">Not Fixing the Primitives<span class="prior-src">ch20 L29</span></td>
+          <td class="locked">Explicit Hierarchy<span class="prior-src">ch20 L29</span></td>
+          <td class="locked">Correcting symptoms manually instead of updating the instruction set<span class="prior-src">ch20 L29</span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L20-29</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Every recurring failure triggers the feedback loop: identify the root primitive and add the missing rule. The system should learn, not repeat.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">No Recovery line printed for this pattern.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">11</span></td>
+          <td class="locked">Context Window Exhaustion<span class="prior-src">ch20 L30</span></td>
+          <td class="locked">Progressive Disclosure<span class="prior-src">ch20 L30</span></td>
+          <td class="locked">Agent hits capacity mid-task and silently drops earlier instructions<span class="prior-src">ch20 L30</span></td>
+          <td class="prior">High<span class="prior-src">ch20 L169</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="prior">install.py stuck<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">Right-size tasks. If the agent followed a convention in its first three functions but ignores it in the fifth, the context is exhausted. End session, checkpoint, start fresh.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">Revert degraded output. Split remaining work into a new task with fresh context.<span class="prior-src">ch20 L50-294</span></span><span class="prior">Split file across waves; manual completion<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">12</span></td>
+          <td class="locked">Hallucinated Edits<span class="prior-src">ch20 L31</span></td>
+          <td class="locked">Safety Boundaries<span class="prior-src">ch20 L31</span></td>
+          <td class="locked">Agent reports success on changes it didn't persist<span class="prior-src">ch20 L31</span></td>
+          <td class="prior">Critical<span class="prior-src">ch20 L184</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="prior">Unicode persistence<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">Verify file state after completion. git diff is ground truth. The checkpoint discipline catches functional regressions; spot-checks catch non-functional missing edits.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Compare agent's reported changes against actual diff. Re-dispatch focused tasks for just the missing edits.<span class="prior-src">ch20 L50-294</span></span><span class="prior">File-state verification after every dispatch<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">13</span></td>
+          <td class="locked">Stale Context Between Waves<span class="prior-src">ch20 L32</span></td>
+          <td class="locked">Progressive Disclosure<span class="prior-src">ch20 L32</span></td>
+          <td class="locked">Agent in wave N works against wave N-2 state of a file<span class="prior-src">ch20 L32</span></td>
+          <td class="prior">High<span class="prior-src">ch20 L199</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="prior">Token type error<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>          <td class="fill"><span class="prior">Re-read file state after each wave before assembling next wave's context. Include explicit references to interface changes: "Note: resolve() now takes a strict parameter (added in wave 2)."<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Run integration tests that exercise cross-module interactions. Revert affected output and re-dispatch with current file content.<span class="prior-src">ch20 L50-294</span></span><span class="prior">Re-validate expert findings before wiring<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">14</span></td>
+          <td class="locked">Cost Runaway<span class="prior-src">ch20 L33</span></td>
+          <td class="locked">Reduced Scope<span class="prior-src">ch20 L33</span></td>
+          <td class="locked">Unbounded retries burn tokens without progress<span class="prior-src">ch20 L33</span></td>
+          <td class="prior">Medium<span class="prior-src">ch20 L214</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">Set a retry budget. After two failed dispatches for the same task, change the approach: decompose further, add context, or escalate. Don't loop at the same level.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Stop. Review what's been attempted. Often the agent is stuck because the task is underspecified. One specific constraint added to context is worth more than ten retries with the same input.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">15</span></td>
+          <td class="locked">The "Almost Done" Trap<span class="prior-src">ch20 L34</span></td>
+          <td class="locked">Reduced Scope<span class="prior-src">ch20 L34</span></td>
+          <td class="locked">Last 10% takes longer than starting over<span class="prior-src">ch20 L34</span></td>
+          <td class="prior">Medium<span class="prior-src">ch20 L229</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">Identify the hard part during planning. Consider doing it manually or as a separate, tightly-scoped agent task with maximum context.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Accept the 90%. Commit it. Handle the rest manually or in a fresh session focused exclusively on the hard part.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">16</span></td>
+          <td class="locked">Session State Loss<span class="prior-src">ch20 L35</span></td>
+          <td class="locked">Safety Boundaries<span class="prior-src">ch20 L35</span></td>
+          <td class="locked">Session crashes; no checkpoint means unrecoverable work<span class="prior-src">ch20 L35</span></td>
+          <td class="prior">High<span class="prior-src">ch20 L244</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Commit after every wave. Externalize state that matters (plan file, task status) to persistent storage. Smaller waves mean smaller blast radius.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Revert to last committed checkpoint. Re-read the plan. Re-dispatch from the last completed wave. Cost is one wave's re-execution, not the entire session.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">17</span></td>
+          <td class="locked">Persona Drift<span class="prior-src">ch20 L36</span></td>
+          <td class="locked">Explicit Hierarchy<span class="prior-src">ch20 L36</span></td>
+          <td class="locked">Agent shifts role mid-session, applying wrong domain expertise<span class="prior-src">ch20 L36</span></td>
+          <td class="prior">Medium<span class="prior-src">ch20 L259</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Keep persona definitions short and directive. Reinforce role boundaries in the task prompt, not just the system prompt. Shorter sessions reduce drift opportunity.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Fresh session with the persona restated. Review drifted output for out-of-role changes — a security reviewer that started editing code may have introduced changes outside its competence.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">18</span></td>
+          <td class="locked">Cross-Wave Merge Conflicts<span class="prior-src">ch20 L37</span></td>
+          <td class="locked">Orchestrated Composition<span class="prior-src">ch20 L37</span></td>
+          <td class="locked">Structural conflicts between waves that pass individually but break together<span class="prior-src">ch20 L37</span></td>
+          <td class="prior">High<span class="prior-src">ch20 L274</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Integration tests after each wave, not just unit tests. When wave 2 modifies a module that wave 1 also touched, include wave 1's final output in wave 2's context. Treat shared interfaces as explicit contracts in the plan.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Run the full test suite on the combined state. Identify the conflict boundary. Re-dispatch the later wave with the earlier wave's output as context.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="fixed pattern number">19</span></td>
+          <td class="locked">Prompt Injection via Dependencies<span class="prior-src">ch20 L38</span></td>
+          <td class="locked">Safety Boundaries<span class="prior-src">ch20 L38</span></td>
+          <td class="locked">External content in context hijacks agent behavior<span class="prior-src">ch20 L38</span></td>
+          <td class="prior">Critical<span class="prior-src">ch20 L289</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Treat all external content in agent context as untrusted input. Restrict agent access to vetted files. Use allowlists, not blocklists, for context inclusion. Review dependency code before including it in agent context.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Identify the injecting content. Remove it from context. Revert any agent output produced after the injection point. Audit all changes from the affected session — injection may have caused subtle, intentional-looking modifications.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-20-nineteen-failure-mode-premortem &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Extend the failure-mode taxonomy</h1>
+      <p class="ws-sub">Use the same row number in both tables. Continue the house taxonomy from 20; re-read it annually.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-20-nineteen-failure-mode-premortem</b><br>
+      Pack G - The plan we leave with<br>
+      continuation rows <b>20+</b><br>
+      type <b>diagnostic</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Anti-Patterns and Failure Modes</b>, <i>What This Chapter Is Not</i> &middot;
+    <code>handbook/ch20-anti-patterns-and-failure-modes.qmd</code> L496-500 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch20-anti-patterns-and-failure-modes.html#sec-anti-scope-limits">#sec-anti-scope-limits</a>
+  </div>
+
+  <div class="ws-instruction">
+    For each new house entry, complete the matching numbered row in both tables. Use the same likelihood and impact vocabulary as the front. Record the symptom, root cause, violated PROSE constraint, prevention, recovery, severity, first-seen date, incident link and the primitive that now guards against recurrence.
+  </div>
+
+  <div class="ws-block">
+    <h2>House entries — risk register
+      <span class="ws-block-note">fields 1-17; continue numbering from 20</span></h2>
+    <table class="ws" style="font-size:7pt;line-height:1.05">
+      <colgroup>
+        <col style="width:3%"><col style="width:8%"><col style="width:6%"><col style="width:9%">
+        <col style="width:3%"><col style="width:5%"><col style="width:5%"><col style="width:3%">
+        <col style="width:8%"><col style="width:7%"><col style="width:8%"><col style="width:8%">
+        <col style="width:9%"><col style="width:5%"><col style="width:4%"><col style="width:5%">
+        <col style="width:4%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Pattern number</th><th>Anti-pattern</th><th>Constraint violated</th><th>Summary</th>
+          <th>Severity printed in the book</th><th>Likelihood here</th><th>Impact here</th>
+          <th>Seen it already</th><th>Incident or evidence reference</th><th>Blast radius</th>
+          <th>Control we already have</th><th>Control we must build before the pilot starts</th>
+          <th>The single mitigation we commit to</th><th>Owner</th><th>Date it lands</th>
+          <th>Watch band</th><th>Go / no-go item</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="continue from pattern number 20">20</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Orchestrated Composition</span><span class="opt">Progressive Disclosure</span><span class="opt">Safety Boundaries</span><span class="opt">Explicit Hierarchy</span><span class="opt">Reduced Scope</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L496-500</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="continue from pattern number 20">21</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Orchestrated Composition</span><span class="opt">Progressive Disclosure</span><span class="opt">Safety Boundaries</span><span class="opt">Explicit Hierarchy</span><span class="opt">Reduced Scope</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L496-500</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+        <tr>
+          <td class="locked"><span class="f-computed" data-formula="continue from pattern number 20">22</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Orchestrated Composition</span><span class="opt">Progressive Disclosure</span><span class="opt">Safety Boundaries</span><span class="opt">Explicit Hierarchy</span><span class="opt">Reduced Scope</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="prior">not printed<span class="prior-src">ch20 L496-500</span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="Band 1 and field 13 is blank"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>House entries — symptom-first template
+      <span class="ws-block-note">fields 18-26; each row corresponds to the same-numbered entry above</span></h2>
+    <table class="ws" style="font-size:7.2pt">
+      <colgroup>
+        <col style="width:13%"><col style="width:13%"><col style="width:9%">
+        <col style="width:13%"><col style="width:13%"><col style="width:8%">
+        <col style="width:8%"><col style="width:10%"><col style="width:13%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Symptom</th><th>Root cause</th><th>Constraint violated</th>
+          <th>Prevention</th><th>Recovery</th><th>Severity</th>
+          <th>First seen</th><th>Incident link</th><th>Primitive that now guards against it</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fill"><span class="prior">symptom<span class="prior-src">ch20 L496-500</span></span><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Orchestrated Composition</span><span class="opt">Progressive Disclosure</span><span class="opt">Safety Boundaries</span><span class="opt">Explicit Hierarchy</span><span class="opt">Reduced Scope</span></div></td>
+          <td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="prior">symptom<span class="prior-src">ch20 L496-500</span></span><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Orchestrated Composition</span><span class="opt">Progressive Disclosure</span><span class="opt">Safety Boundaries</span><span class="opt">Explicit Hierarchy</span><span class="opt">Reduced Scope</span></div></td>
+          <td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="prior">symptom<span class="prior-src">ch20 L496-500</span></span><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Orchestrated Composition</span><span class="opt">Progressive Disclosure</span><span class="opt">Safety Boundaries</span><span class="opt">Explicit Hierarchy</span><span class="opt">Reduced Scope</span></div></td>
+          <td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <div class="ours-label">Re-run date — next annual re-read of this living taxonomy</div>
+    <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-20-nineteen-failure-mode-premortem &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
