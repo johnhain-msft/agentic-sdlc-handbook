@@ -42,7 +42,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Write your organisation's position on each governance decision below: where the registry lives, whether a manifest and lockfile are mandatory or advisory, who owns each shared primitive, the semver rule, the publish-pipeline gates you run, the override-versus-fork threshold, and the deprecation window. Name one owner per decision and where it is checked; a position with no enforcement point is a preference.
+    Write your organization's position on each governance decision below: where the registry lives, whether a manifest and lockfile are mandatory or advisory, who owns each shared primitive, the semver rule, the publish-pipeline gates you run, the override-versus-fork threshold, and the deprecation window. Name one owner per decision and where it is checked; a position with no enforcement point is a preference.
   </div>
 
   <div class="ws-block">
