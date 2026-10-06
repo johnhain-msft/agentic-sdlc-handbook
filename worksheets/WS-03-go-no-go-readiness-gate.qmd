@@ -106,8 +106,8 @@ format:
       <span class="ws-block-note">for each of the 12 book-prior items, record status, owner, due date and evidence; sign any waiver</span></h2>
     <table class="ws" style="font-size:7pt;line-height:1.02">
       <colgroup>
-        <col style="width:25%"><col style="width:11%"><col style="width:12%">
-        <col style="width:9%"><col style="width:16%"><col style="width:6%"><col style="width:21%">
+        <col style="width:24%"><col style="width:12%"><col style="width:12%">
+        <col style="width:9%"><col style="width:15%"><col style="width:8%"><col style="width:20%">
       </colgroup>
       <thead>
         <tr>
