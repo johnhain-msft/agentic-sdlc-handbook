@@ -1,0 +1,558 @@
+---
+title: "Organisational Policy Encoding Inventory: What Your Agents Cannot Know"
+pagetitle: "WS-05-org-policy-encoding-inventory"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 841mm; --sheet-h: 594mm; --sheet-margin: 20mm; }
+            @page { size: A1 landscape; margin: 20mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-05-org-policy-encoding-inventory</b> &middot; review copy &middot;
+  declared format <b>A1 landscape</b> &middot; 3 sheets. Each white page below is
+  one physical sheet at true size. Anything spilling past a page edge is a layout defect.
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Organisational Policy Encoding Inventory: What Your Agents Cannot Know</h1>
+      <p class="ws-sub">A ranked backlog of policies to encode as versioned machine-readable context primitives, plus the human escape valves.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-org-policy-encoding-inventory</b><br>
+      Pack E - Guardrails: authority, risk and proof<br>
+      fill order <b>3</b> &middot; type <b>inventory</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>The Organizational Knowledge Gap</i> &middot;
+    <code>handbook/ch05-governance-for-ai-assisted-delivery.qmd</code> L153-177 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-organizational-policy-gap">#sec-organizational-policy-gap</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Organizational Policy: The Permanent Governance Gap</h2>
+    <p>One limitation of AI-assisted governance that no model improvement will resolve: organizational policy awareness lives nowhere in training data. An agent can enforce coding standards from a rules file. It can run 22 automated policy checks in CI. But it cannot know that your organization's legal team requires review for any feature touching PII, or that a PR linking a personal asset from a corporate repository creates a compliance risk — unless that policy is explicitly encoded in the context layer. This is why governance primitives must include organizational policies, not just technical standards. Part III makes the underlying mechanism concrete: Chapter 12 explains how to instrument the codebase so policy gates fail loudly rather than silently, Chapter 16 explains how those gates sit at the seam where the agent's action meets the deterministic system, and Chapter 21 explains how policy primitives are versioned and shared the way application code is. The Growth Engine case study documents this finding in detail: fifteen agent personas across seven expert panels missed a compliance constraint that a human caught in seconds.</p>
+    <span class="prior-src">handbook/ch05-governance-for-ai-assisted-delivery.qmd L153-157</span>
+  </div>
+
+  <div class="ws-foot-quote">
+    "fifteen personas across seven panels missed it because organizational policy is not in the training data." (ch05 L163)
+  </div>
+
+  <div class="ws-instruction">
+    On the wall, list one policy or constraint per row; use the printed seeds as prompts and add every relevant policy of your own. Record its operative rule, current location and encoding, owners, enforcement path, prevalence, stakes and encoding date. For every human escape valve, name the person and the route the workflow uses to reach them. Complete Block B separately with the facts agents must restate correctly, their verified source, owner and review date; a person must verify each fact before downstream use.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A — the policy and constraint inventory
+      <span class="ws-block-note">one policy per row; 13 seeds are prompts, not a scope limit</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:10%"><col style="width:14%"><col style="width:9%"><col style="width:5%">
+        <col style="width:5%"><col style="width:7%"><col style="width:7%"><col style="width:10%">
+        <col style="width:6%"><col style="width:5%"><col style="width:4%"><col style="width:7%">
+        <col style="width:5%"><col style="width:6%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span>Policy or constraint</th>
+          <th><span class="fno">2</span>What it requires, in one sentence an agent could act on</th>
+          <th><span class="fno">3</span>Where it lives today</th>
+          <th><span class="fno">4</span>Machine-readable today</th>
+          <th><span class="fno">5</span>Versioned</th>
+          <th><span class="fno">6</span>Owner of record</th>
+          <th><span class="fno">7</span>Who can waive it</th>
+          <th><span class="fno">8</span>Encodable as an executable check at the seam</th>
+          <th><span class="fno">9</span>Enforcement mode</th>
+          <th><span class="fno">10</span>Prevalence</th>
+          <th><span class="fno">11</span>Stakes if missed</th>
+          <th><span class="fno">12</span>Encoding priority</th>
+          <th><span class="fno">13</span>Encode by</th>
+          <th><span class="fno">14</span>Escape-valve owner and route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="prior">Legal or CELA review triggers<span class="prior-src">ch05 L156, L165; ch20 L375; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Data classification taxonomy<span class="prior-src">ch05 L156, L165; ch20 L375; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Cross-business-unit data-sharing rules<span class="prior-src">ch05 L165; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Jurisdiction-specific approval thresholds<span class="prior-src">ch05 L165; ch20 L375; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">PII-touching-feature review<span class="prior-src">ch05 L156, L165; ch20 L375; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">The corporate-to-personal asset boundary<span class="prior-src">ch05 L156; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Brand and promotional rules<span class="prior-src">ch05 L156; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Procurement and vendor rules<span class="prior-src">ch05 L156; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block-note">
+    Record the actual policy name and document identifier in column 1. Keep the owner of record and the person who can waive the policy separate. Use another copy of this sheet for any policies beyond the three added rows.
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-org-policy-encoding-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Organisational Policy Encoding Inventory: What Your Agents Cannot Know</h1>
+      <p class="ws-sub">Block A — continued. Add the policies your organisation's seed list does not name.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-org-policy-encoding-inventory</b><br>
+      Pack E - Guardrails: authority, risk and proof<br>
+      fill order <b>3</b> &middot; type <b>inventory</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>The Organizational Knowledge Gap</i> &middot;
+    <code>handbook/ch05-governance-for-ai-assisted-delivery.qmd</code> L153-177 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-organizational-policy-gap">#sec-organizational-policy-gap</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Organizational Policy: The Permanent Governance Gap</h2>
+    <p>One limitation of AI-assisted governance that no model improvement will resolve: organizational policy awareness lives nowhere in training data. An agent can enforce coding standards from a rules file. It can run 22 automated policy checks in CI. But it cannot know that your organization's legal team requires review for any feature touching PII, or that a PR linking a personal asset from a corporate repository creates a compliance risk — unless that policy is explicitly encoded in the context layer. This is why governance primitives must include organizational policies, not just technical standards. Part III makes the underlying mechanism concrete: Chapter 12 explains how to instrument the codebase so policy gates fail loudly rather than silently, Chapter 16 explains how those gates sit at the seam where the agent's action meets the deterministic system, and Chapter 21 explains how policy primitives are versioned and shared the way application code is. The Growth Engine case study documents this finding in detail: fifteen agent personas across seven expert panels missed a compliance constraint that a human caught in seconds.</p>
+    <span class="prior-src">handbook/ch05-governance-for-ai-assisted-delivery.qmd L153-157</span>
+  </div>
+
+  <div class="ws-foot-quote">
+    "fifteen personas across seven panels missed it because organizational policy is not in the training data." (ch05 L163)
+  </div>
+
+  <div class="ws-instruction">
+    Continue the policy backlog. Use these rows for the remaining seed policies and add any more your organisation names; the seeds are prompts, not the scope. Record each actual policy name and document identifier. Use another copy of this sheet for additional policies. Complete both owners independently and connect every human escape valve to a named person and reachable route.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A — the policy and constraint inventory
+      <span class="ws-block-note">one policy per row; 13 seeds are prompts, not a scope limit</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:10%"><col style="width:14%"><col style="width:9%"><col style="width:5%">
+        <col style="width:5%"><col style="width:7%"><col style="width:7%"><col style="width:10%">
+        <col style="width:6%"><col style="width:5%"><col style="width:4%"><col style="width:7%">
+        <col style="width:5%"><col style="width:6%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span>Policy or constraint</th>
+          <th><span class="fno">2</span>What it requires, in one sentence an agent could act on</th>
+          <th><span class="fno">3</span>Where it lives today</th>
+          <th><span class="fno">4</span>Machine-readable today</th>
+          <th><span class="fno">5</span>Versioned</th>
+          <th><span class="fno">6</span>Owner of record</th>
+          <th><span class="fno">7</span>Who can waive it</th>
+          <th><span class="fno">8</span>Encodable as an executable check at the seam</th>
+          <th><span class="fno">9</span>Enforcement mode</th>
+          <th><span class="fno">10</span>Prevalence</th>
+          <th><span class="fno">11</span>Stakes if missed</th>
+          <th><span class="fno">12</span>Encoding priority</th>
+          <th><span class="fno">13</span>Encode by</th>
+          <th><span class="fno">14</span>Escape-valve owner and route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="prior">Data residency<span class="prior-src">ch05 L156; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Open-source contribution policy<span class="prior-src">ch05 L156; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Export control<span class="prior-src">ch05 L156; ch20 L375; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Retention<span class="prior-src">ch05 L156; ch20 L375; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Compliance thresholds<span class="prior-src">ch05 L165; ch20 L375; case study L143-150</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Additional policy / constraint<span class="prior-src">organisation adds</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Additional policy / constraint<span class="prior-src">organisation adds</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Additional policy / constraint<span class="prior-src">organisation adds</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171; WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">instruction file</span><span class="opt">governance primitive</span><span class="opt">CI check</span><span class="opt">privileged system</span><span class="opt">wiki</span><span class="opt">PDF</span><span class="opt">institutional memory only</span><span class="opt">nowhere</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div><small>Use no for privileged system, wiki, PDF, institutional memory only or nowhere.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L171</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>version + change history agent can pin</span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L143-150</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">yes, CI check</span><span class="opt">yes, pre-commit gate</span><span class="opt">yes, automated approval rule</span><span class="opt">no, human escape valve only</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">WS-20</span></div><div class="fill"><div class="f-select"><span class="opt">advisory</span><span class="opt">gate</span><span class="opt">blocking</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><div class="f-select"><span class="opt">routine</span><span class="opt">low-prevalence</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L172</span></div><div class="fill"><span class="f-computed" data-formula="If column 10 is low-prevalence AND column 11 is H, encode first; otherwise choose qualitatively between encode next and advisory is adequate"></span><small>encode first / encode next / advisory is adequate</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><small>Required unless advisory is adequate.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">ch05 L173</span></div><div class="fill"><span class="f-owner"></span><span class="f-text"></span><small>Required if column 8 is no.</small></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block-note">
+    Record the actual policy name and document identifier in column 1. Keep owner of record and waiver authority separate. Where column 3 is institutional memory only or nowhere, do not leave the gap without an encode-by date or an owned decision to accept it. No specialist agent is a control.
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-org-policy-encoding-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Organisational Policy Encoding Inventory: What Your Agents Cannot Know</h1>
+      <p class="ws-sub">Block B — the load-bearing facts register. Short by design: facts agents will restate across deliverables.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-org-policy-encoding-inventory</b><br>
+      Pack E - Guardrails: authority, risk and proof<br>
+      fill order <b>3</b> &middot; type <b>inventory</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>The Organizational Knowledge Gap</i> &middot;
+    <code>handbook/ch05-governance-for-ai-assisted-delivery.qmd</code> L153-177 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-organizational-policy-gap">#sec-organizational-policy-gap</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Organizational Policy: The Permanent Governance Gap</h2>
+    <p>One limitation of AI-assisted governance that no model improvement will resolve: organizational policy awareness lives nowhere in training data. An agent can enforce coding standards from a rules file. It can run 22 automated policy checks in CI. But it cannot know that your organization's legal team requires review for any feature touching PII, or that a PR linking a personal asset from a corporate repository creates a compliance risk — unless that policy is explicitly encoded in the context layer. This is why governance primitives must include organizational policies, not just technical standards. Part III makes the underlying mechanism concrete: Chapter 12 explains how to instrument the codebase so policy gates fail loudly rather than silently, Chapter 16 explains how those gates sit at the seam where the agent's action meets the deterministic system, and Chapter 21 explains how policy primitives are versioned and shared the way application code is. The Growth Engine case study documents this finding in detail: fifteen agent personas across seven expert panels missed a compliance constraint that a human caught in seconds.</p>
+    <span class="prior-src">handbook/ch05-governance-for-ai-assisted-delivery.qmd L153-157</span>
+  </div>
+
+  <div class="ws-foot-quote">
+    "fifteen personas across seven panels missed it because organizational policy is not in the training data." (ch05 L163)
+  </div>
+
+  <div class="ws-instruction">
+    For each fact, write the value exactly as it must appear, cite its system of record (never another generated artefact), name its owner and review date, and have a person verify it before any downstream worksheet or agent primitive uses it. Tick and date column 20 only after human verification. Add other fact classes in the open rows.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B — the load-bearing facts register
+      <span class="ws-block-note">one row per fact; generated profiles are not a verified source</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:18%"><col style="width:24%"><col style="width:25%">
+        <col style="width:12%"><col style="width:10%"><col style="width:11%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">15</span>Fact class</th><th><span class="fno">16</span>The correct value</th><th><span class="fno">17</span>Verified source</th>
+          <th><span class="fno">18</span>Owner</th><th><span class="fno">19</span>Review date</th><th><span class="fno">20</span>Human-verified before downstream use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="prior">Role and job titles<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Team names<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Product names<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Customer names<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Compliance claims<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Metrics<span class="prior-src">case study L110-114</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Additional fact class<span class="prior-src">organisation adds</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+        </tr>
+        <tr>
+          <td><div class="prior">Additional fact class<span class="prior-src">organisation adds</span></div><div class="fill"><div class="f-select"><span class="opt">Role and job titles</span><span class="opt">Team names</span><span class="opt">Product names</span><span class="opt">Customer names</span><span class="opt">Compliance claims</span><span class="opt">Metrics</span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-text"></span><small>System of record, never a generated artefact.</small></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><span class="f-owner"></span></div></td>
+          <td><div class="prior">—<span class="prior-src">org</span></div><div class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+          <td><div class="prior">—<span class="prior-src">case study L110-114</span></div><div class="fill"><span class="f-checkline"><span class="f-check"></span>person verified</span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+  <div class="ws-foot">
+    <div>WS-05-org-policy-encoding-inventory &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
