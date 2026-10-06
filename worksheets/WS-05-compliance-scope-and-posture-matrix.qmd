@@ -26,7 +26,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Regulatory Scope and Required Posture Matrix</h1>
-      <p class="ws-sub">A signed statement of regulatory scope and the governance capabilities that are non-negotiable for this organisation.</p>
+      <p class="ws-sub">A signed statement of regulatory scope and the governance capabilities that are non-negotiable for this organization.</p>
     </div>
     <div class="ws-meta">
       <b>WS-05-compliance-scope-and-posture-matrix</b><br>
