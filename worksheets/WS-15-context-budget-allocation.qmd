@@ -1,0 +1,441 @@
+---
+title: "Context Budget Allocation Worksheet"
+pagetitle: "WS-15-context-budget-allocation"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-15-context-budget-allocation</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  4 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Context Budget Allocation Worksheet</h1>
+      <p class="ws-sub">A per-repository context budget with a hard eager-load ceiling and a named treatment for every category &mdash; the number a team can regression-test against.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-15-context-budget-allocation</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>9</b> &middot; type <b>calculator</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Attention and Context Economy</b>, <i>A practitioner's budget</i> &middot;
+    <code>handbook/ch15-attention-and-context-economy.qmd</code> L102-120 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch15-attention-and-context-economy.html#sec-attention-budget">#sec-attention-budget</a>
+    &middot; prerequisite: <b>WS-21-primitive-governance-policy</b>
+  </div>
+
+  <div class="ws-instruction">
+    One repository, two people, the harness's verbose log open beside this sheet. For each of the eleven categories, tick or untick column 2 (untick, never delete), then fill columns 6&ndash;12 and 14 in your own words and numbers. Fill column 7 from the harness token report, not from recollection. The shaded italic columns 3&ndash;5 are the book's calibration, not yours. Column 13 ticks itself from your column 10 choice. Totals and the committed ceiling are on sheet 4.
+  </div>
+
+  <div class="prior--hedged">
+    <span class="hedge-figure">Eleven-category context cost-versus-benefit table (columns 3&ndash;5 below)</span>
+    <span class="hedge-text">"The table below is not a benchmark; it is a starting calibration drawn from the author's practice across Copilot CLI, Claude Code, and similar harnesses. Numbers will shift with model, harness, and task; the <i>order</i> is what the author has found stable."</span>
+    <span class="hedge-src">handbook/ch15-attention-and-context-economy.qmd L102</span>
+  </div>
+  <p style="font-size:8pt;margin:1mm 0 1.5mm">Expect to disagree with <b>all</b> of the book's rows on the numbers, and with <b>few</b> of them on the ordering. Your own figures go in columns 6&ndash;14, never over the book's.</p>
+
+  <div class="ws-block">
+    <h2>Context categories &mdash; rows 1&ndash;3 of 11
+      <span class="ws-block-note">one row per category, pre-printed; one sheet per repository</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:8%"><col style="width:4%"><col style="width:6%"><col style="width:7%"><col style="width:10%"><col style="width:9%"><col style="width:6%"><col style="width:6%"><col style="width:5%"><col style="width:12%"><col style="width:9%"><col style="width:7%"><col style="width:4%"><col style="width:7%">
+      </colgroup>
+      <thead>
+        <tr><th>1 Context category</th><th>2 Applies to this repo?</th><th>3 Book's typical cost</th><th>4 Book's typical benefit</th><th>5 Book's recommended treatment</th><th>6 What it actually is, here</th><th>7 Our token figure</th><th>8 Measured or estimated?</th><th>9 Our benefit</th><th>10 Our treatment</th><th>11 Divergent from col 5? Why</th><th>12 Owner</th><th>13 Eager load?</th><th>14 Regression check</th></tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="locked"><b>Project-base rules</b> (always relevant)<span class="prior-src">ch15 L106</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="prior">low (under 500 tokens)</td>
+          <td class="prior">high (frames every turn)</td>
+          <td class="prior">Always-loaded at head</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">always-loaded at head</span><span class="opt">always-loaded by scope predicate</span><span class="opt">progressive / description-driven</span><span class="opt">pull on matching diff only</span><span class="opt">load directly and trim</span><span class="opt">summarise and let sediment</span><span class="opt">reset and carry a summary</span><span class="opt">do not load</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="col 10 = at head or scope predicate"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+        <tr>
+          <td class="locked"><b>Scope-attached rules</b> (relevant to current path)<span class="prior-src">ch15 L107</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="prior">low to moderate</td>
+          <td class="prior">high (when in scope)</td>
+          <td class="prior">Always-loaded by scope predicate; carve scope tightly</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">always-loaded at head</span><span class="opt">always-loaded by scope predicate</span><span class="opt">progressive / description-driven</span><span class="opt">pull on matching diff only</span><span class="opt">load directly and trim</span><span class="opt">summarise and let sediment</span><span class="opt">reset and carry a summary</span><span class="opt">do not load</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="col 10 = at head or scope predicate"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+        <tr>
+          <td class="locked"><b>On-demand skill body</b><span class="prior-src">ch15 L108</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="prior">moderate</td>
+          <td class="prior">high (when activated)</td>
+          <td class="prior">Progressive disclosure; description-driven activation</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">always-loaded at head</span><span class="opt">always-loaded by scope predicate</span><span class="opt">progressive / description-driven</span><span class="opt">pull on matching diff only</span><span class="opt">load directly and trim</span><span class="opt">summarise and let sediment</span><span class="opt">reset and carry a summary</span><span class="opt">do not load</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="col 10 = at head or scope predicate"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-15-context-budget-allocation &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Context Budget Allocation Worksheet</h1>
+      <p class="ws-sub">Rows 4&ndash;6 of 11. Columns 3&ndash;5 remain the book's starting calibration, not a benchmark &mdash; see the caveat on sheet 1.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-15-context-budget-allocation</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>9</b> &middot; type <b>calculator</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+  <div class="ws-block">
+    <h2>Context categories &mdash; rows 4&ndash;6 of 11</h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:8%"><col style="width:4%"><col style="width:6%"><col style="width:7%"><col style="width:10%"><col style="width:9%"><col style="width:6%"><col style="width:6%"><col style="width:5%"><col style="width:12%"><col style="width:9%"><col style="width:7%"><col style="width:4%"><col style="width:7%">
+      </colgroup>
+      <thead>
+        <tr><th>1 Context category</th><th>2 Applies to this repo?</th><th>3 Book's typical cost</th><th>4 Book's typical benefit</th><th>5 Book's recommended treatment</th><th>6 What it actually is, here</th><th>7 Our token figure</th><th>8 Measured or estimated?</th><th>9 Our benefit</th><th>10 Our treatment</th><th>11 Divergent from col 5? Why</th><th>12 Owner</th><th>13 Eager load?</th><th>14 Regression check</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked"><b>Reference architectural docs</b><span class="prior-src">ch15 L109</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="prior">high</td>
+          <td class="prior">low per turn, occasionally critical</td>
+          <td class="prior">Skill that pulls only on matching diff; never always-loaded</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">always-loaded at head</span><span class="opt">always-loaded by scope predicate</span><span class="opt">progressive / description-driven</span><span class="opt">pull on matching diff only</span><span class="opt">load directly and trim</span><span class="opt">summarise and let sediment</span><span class="opt">reset and carry a summary</span><span class="opt">do not load</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="col 10 = at head or scope predicate"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+        <tr>
+          <td class="locked"><b>Source files for the current change</b><span class="prior-src">ch15 L110</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="prior">moderate to high</td>
+          <td class="prior">essential</td>
+          <td class="prior">Load directly; trim unrelated files; rely on type stubs over full sources</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">always-loaded at head</span><span class="opt">always-loaded by scope predicate</span><span class="opt">progressive / description-driven</span><span class="opt">pull on matching diff only</span><span class="opt">load directly and trim</span><span class="opt">summarise and let sediment</span><span class="opt">reset and carry a summary</span><span class="opt">do not load</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="col 10 = at head or scope predicate"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+        <tr>
+          <td class="locked"><b>Tool output from earlier turns</b><span class="prior-src">ch15 L111</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="prior">grows without bound</td>
+          <td class="prior">low after one or two turns</td>
+          <td class="prior">Summarise into the plan; let the raw output sediment</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">always-loaded at head</span><span class="opt">always-loaded by scope predicate</span><span class="opt">progressive / description-driven</span><span class="opt">pull on matching diff only</span><span class="opt">load directly and trim</span><span class="opt">summarise and let sediment</span><span class="opt">reset and carry a summary</span><span class="opt">do not load</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="col 10 = at head or scope predicate"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-15-context-budget-allocation &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Context Budget Allocation Worksheet</h1>
+      <p class="ws-sub">Rows 7&ndash;11 of 11. Columns 3&ndash;5 remain the book's starting calibration, not a benchmark &mdash; see the caveat on sheet 1.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-15-context-budget-allocation</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>9</b> &middot; type <b>calculator</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Context categories &mdash; rows 7&ndash;11 of 11
+      <span class="ws-block-note">same columns as sheet 1; untick rather than delete</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:8%"><col style="width:4%"><col style="width:6%"><col style="width:7%"><col style="width:10%"><col style="width:9%"><col style="width:6%"><col style="width:6%"><col style="width:5%"><col style="width:12%"><col style="width:9%"><col style="width:7%"><col style="width:4%"><col style="width:7%">
+      </colgroup>
+      <thead>
+        <tr><th>1 Context category</th><th>2 Applies to this repo?</th><th>3 Book's typical cost</th><th>4 Book's typical benefit</th><th>5 Book's recommended treatment</th><th>6 What it actually is, here</th><th>7 Our token figure</th><th>8 Measured or estimated?</th><th>9 Our benefit</th><th>10 Our treatment</th><th>11 Divergent from col 5? Why</th><th>12 Owner</th><th>13 Eager load?</th><th>14 Regression check</th></tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="locked"><b>Pasted error tracebacks</b><span class="prior-src">ch15 L112</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="prior">high</td>
+          <td class="prior">low past the first paste</td>
+          <td class="prior">After two pastes, reset; carry forward a one-line summary</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">always-loaded at head</span><span class="opt">always-loaded by scope predicate</span><span class="opt">progressive / description-driven</span><span class="opt">pull on matching diff only</span><span class="opt">load directly and trim</span><span class="opt">summarise and let sediment</span><span class="opt">reset and carry a summary</span><span class="opt">do not load</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="col 10 = at head or scope predicate"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+        <tr>
+          <td class="locked"><b>Conversation history beyond the last ten turns</b><span class="prior-src">ch15 L113</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="prior">high</td>
+          <td class="prior">low, mostly recency illusions</td>
+          <td class="prior">Reset session; carry forward <code>plan.md</code></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">always-loaded at head</span><span class="opt">always-loaded by scope predicate</span><span class="opt">progressive / description-driven</span><span class="opt">pull on matching diff only</span><span class="opt">load directly and trim</span><span class="opt">summarise and let sediment</span><span class="opt">reset and carry a summary</span><span class="opt">do not load</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="col 10 = at head or scope predicate"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+        <tr>
+          <td class="locked"><b>External documentation pulled by web fetch</b><span class="prior-src">ch15 L114</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="prior">very high</td>
+          <td class="prior">high <i>for one decision</i>, low afterward</td>
+          <td class="prior">Bounded-scope grounding; cite the answer, drop the dump</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">always-loaded at head</span><span class="opt">always-loaded by scope predicate</span><span class="opt">progressive / description-driven</span><span class="opt">pull on matching diff only</span><span class="opt">load directly and trim</span><span class="opt">summarise and let sediment</span><span class="opt">reset and carry a summary</span><span class="opt">do not load</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="col 10 = at head or scope predicate"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+        <tr>
+          <td class="locked"><b>Repository-wide grep/search results</b><span class="prior-src">ch15 L115</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="prior">very high</td>
+          <td class="prior">rarely needed</td>
+          <td class="prior">Replace with targeted reads</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">always-loaded at head</span><span class="opt">always-loaded by scope predicate</span><span class="opt">progressive / description-driven</span><span class="opt">pull on matching diff only</span><span class="opt">load directly and trim</span><span class="opt">summarise and let sediment</span><span class="opt">reset and carry a summary</span><span class="opt">do not load</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="col 10 = at head or scope predicate"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+        <tr>
+          <td class="locked"><b>Vendor model card or general guidance</b><span class="prior-src">ch15 L116</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="prior">high</td>
+          <td class="prior">near zero for the agent's task</td>
+          <td class="prior">Do not load</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">always-loaded at head</span><span class="opt">always-loaded by scope predicate</span><span class="opt">progressive / description-driven</span><span class="opt">pull on matching diff only</span><span class="opt">load directly and trim</span><span class="opt">summarise and let sediment</span><span class="opt">reset and carry a summary</span><span class="opt">do not load</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="col 10 = at head or scope predicate"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-15-context-budget-allocation &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Context Budget Allocation Worksheet</h1>
+      <p class="ws-sub">Footer block &mdash; the number the sheet exists to produce: the committed eager-load ceiling.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-15-context-budget-allocation</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>9</b> &middot; type <b>calculator</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Footer block
+      <span class="ws-block-note">one per repository; the committed ceiling is the only limit on this sheet, and your team writes it</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:30%"><col style="width:36%"><col style="width:30%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Footer field</th><th>Notes</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Model and harness this budget is written against</b></td>
+          <td class="prior">Numbers will shift with model, harness, and task.<span class="prior-src">ch15 L102</span><br><span style="font-style:normal">Name both explicitly: a budget with no named model is not a budget.</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>Window size for that model</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Eager-load subtotal</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-computed" data-formula="sum of column 7 where column 13 is ticked"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>Share of window consumed before any source file is loaded</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-computed" data-formula="eager-load subtotal (field 3) &divide; window (field 2)"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>Committed eager-load ceiling</b></td>
+          <td class="prior">—</td>
+          <td class="fill tall"><span class="f-text sm"></span><span style="font-size:7.4pt;color:#454f59">Your team's own number, written down and regression-tested. The durable output of this sheet. The book supplies no value.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>Ceiling owner</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Date written / next review</b></td>
+          <td class="prior">—</td>
+          <td class="fill">
+            written <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+            next review <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Two heuristics
+      <span class="ws-block-note">the test to apply when column 10 and column 5 disagree</span></h2>
+    <div class="prior" style="margin-bottom:2mm"><i>Anything that is needed on every turn earns a place at the head; everything else should be progressive.</i><span class="prior-src">ch15 L118</span></div>
+    <div class="prior"><i>Anything that grows without bound across a session is a candidate for a periodic reset and a one-paragraph summary.</i><span class="prior-src">ch15 L118</span></div>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The table below is not a benchmark; it is a starting calibration." (ch15 L102)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-15-context-budget-allocation &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
+
+
