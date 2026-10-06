@@ -21,7 +21,7 @@ format:
 
 <div class="sheet">
 
-  <div class="ws-head">
+  <div class="ws-head" style="flex-wrap:wrap;row-gap:0;padding-bottom:0">
     <div>
       <h1>The Three Levers Audit — Model, Tokens, Harness</h1>
       <p class="ws-sub">A lever-by-lever audit of running and planned agentic workflows: identify the misroutings and token taxes to fix first, and name an owner for each variable.</p>
@@ -31,6 +31,12 @@ format:
       Pack C - The case and the money<br>
       fill order <b>9</b> &middot; type <b>inventory</b><br>
       audience <b>architect</b>
+    </div>
+    <div style="flex:0 0 100%;display:flex;align-items:center;gap:3mm;font-size:8pt">
+      <b>Sheet mode</b>
+      <span class="prior" style="padding:.5mm 2mm">—<span class="prior-src">derived</span></span>
+      <span class="f-select"><span class="opt">MEASURED</span><span class="opt">PROSPECTIVE</span></span>
+      <span style="font-size:7.5pt">Mark PROSPECTIVE only when every workflow row is planned.</span>
     </div>
   </div>
 
@@ -52,20 +58,13 @@ format:
     <h2>Workflow audit
       <span class="ws-block-note">One workflow per row &middot; carry the prerequisite's circled task in row 1 &middot; harness governs the other levers</span></h2>
 
-    <div style="display:flex;align-items:center;gap:3mm;margin:0 0 1.5mm;font-size:8pt">
-      <b>Sheet mode</b>
-      <span class="prior" style="padding:1mm 2mm">—<span class="prior-src">derived</span></span>
-      <span class="f-select"><span class="opt">MEASURED</span><span class="opt">PROSPECTIVE</span></span>
-      <span style="font-size:7.5pt">Mark PROSPECTIVE only when every workflow row is planned.</span>
-    </div>
-
     <table class="ws">
       <colgroup>
-        <col style="width:5.5%"><col style="width:5.5%"><col style="width:8%">
-        <col style="width:8%"><col style="width:7.5%"><col style="width:4%"><col style="width:7%">
-                <col style="width:7%"><col style="width:6.5%"><col style="width:4%"><col style="width:7%">
-        <col style="width:6%"><col style="width:8%"><col style="width:7%">
-        <col style="width:4%"><col style="width:5.5%">
+        <col style="width:9%"><col style="width:5%"><col style="width:8%">
+        <col style="width:9%"><col style="width:9%"><col style="width:4%"><col style="width:6.5%">
+        <col style="width:5.5%"><col style="width:5.5%"><col style="width:4%"><col style="width:5.5%">
+        <col style="width:5%"><col style="width:8%"><col style="width:5.5%">
+        <col style="width:4%"><col style="width:6.5%">
       </colgroup>
       <thead>
         <tr>
@@ -73,7 +72,7 @@ format:
           <th colspan="4" style="border-left:1mm solid #34495e">HARNESS &mdash; most reach</th>
           <th colspan="4" style="border-left:1mm solid #34495e">MODEL</th>
           <th colspan="3" style="border-left:1mm solid #34495e">TOKENS</th>
-          <th colspan="2" style="border-left:1mm solid #34495e">Prioritise</th>
+          <th colspan="2" style="border-left:1mm solid #34495e">Prioritize</th>
         </tr>
         <tr>
           <th><span class="fno">1</span><br>Workflow</th>
@@ -111,7 +110,7 @@ format:
           <td class="prior">Prompt bloat, redundant re-reads, oversized tool surfaces, and uncached prefixes.<span class="prior-src">ch07 L48</span></td>
           <td class="prior">—<span class="prior-src">ch07 L51</span></td>
           <td class="prior">—<span class="prior-src">derived</span></td>
-          <td class="prior">—<span class="prior-src">ch07 L49</span></td>
+          <td class="prior">A harness fix goes ahead of a model swap: the harness governs the other two.<span class="prior-src">ch07 L49</span></td>
         </tr>
         <tr>
           <td class="fill"><span class="f-text"></span></td>
@@ -249,13 +248,13 @@ format:
       </table>
     </div>
     <div style="flex:2">
-      <h2>Organisation-wide owners <span class="ws-block-note">one named person per lever</span></h2>
+      <h2>Organization-wide owners <span class="ws-block-note">one named person per lever</span></h2>
       <table class="ws">
         <colgroup><col style="width:42%"><col style="width:25%"><col style="width:33%"></colgroup>
         <tbody>
-          <tr><td><b>Organisation-wide owner: model choice</b></td><td class="prior">—<span class="prior-src">ch07 L45-51</span></td><td class="fill"><span class="f-owner"></span></td></tr>
-          <tr><td><b>Organisation-wide owner: token use</b></td><td class="prior">—<span class="prior-src">ch07 L45-51</span></td><td class="fill"><span class="f-owner"></span></td></tr>
-          <tr><td><b>Organisation-wide owner: harness choice</b><br><small style="display:block">Harness seat should be the most central or senior. If it is not, write why below.</small></td><td class="prior">—<span class="prior-src">ch07 L49</span></td><td class="fill"><span class="f-owner"></span></td></tr>
+          <tr><td><b>Organization-wide owner: model choice</b></td><td class="prior">—<span class="prior-src">ch07 L45-51</span></td><td class="fill"><span class="f-owner"></span></td></tr>
+          <tr><td><b>Organization-wide owner: token use</b></td><td class="prior">—<span class="prior-src">ch07 L45-51</span></td><td class="fill"><span class="f-owner"></span></td></tr>
+          <tr><td><b>Organization-wide owner: harness choice</b><br><small style="display:block">Harness seat should be the most central or senior. If it is not, write why below.</small></td><td class="prior">—<span class="prior-src">ch07 L49</span></td><td class="fill"><span class="f-owner"></span></td></tr>
         </tbody>
       </table>
       <div style="display:flex;align-items:center;gap:3mm;font-size:7.4pt"><b style="flex:none;width:45%">Only if the harness owner is less central or senior than the other two, why the room is inverting the chapter's weighting:</b><div class="fill" style="flex:1"><span class="f-text"></span></div></div>
