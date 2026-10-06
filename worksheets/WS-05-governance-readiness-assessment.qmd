@@ -24,7 +24,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Governance Readiness Self-Assessment (Six Capabilities)</h1>
-      <p class="ws-sub">A scored governance baseline with an owner and target date per capability, plus a named floor-violation list for any capability at None.</p>
+      <p class="ws-sub">Score each capability. Name its owner and target date; list every capability at None as a floor violation.</p>
     </div>
     <div class="ws-meta">
       <b>WS-05-governance-readiness-assessment</b><br>
