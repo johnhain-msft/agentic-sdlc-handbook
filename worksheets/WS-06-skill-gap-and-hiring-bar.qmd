@@ -394,7 +394,7 @@ format:
       <tbody>
         <tr>
           <td class="locked">Senior engineers who feel deskilled<span class="prior-src">ch06 L294</span></td>
-          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span><small>A count is not a register.</small></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span><small>A count is not a register.</small><div class="fill">&#9744; Assessed as not present here. Evidence (&ldquo;we don&rsquo;t think that&rsquo;s an issue&rdquo; is not evidence): <span class="f-box sm"></span></div></td>
           <td class="prior">
             Their judgment is more valuable than ever; the <i>form</i> of the contribution changes. Context engineering and architectural guidance are expressions of the same expertise.
             <span class="prior-src">ch06 L294-295</span>
@@ -405,7 +405,7 @@ format:
         </tr>
         <tr>
           <td class="locked">Junior engineers who feel replaceable<span class="prior-src">ch06 L296</span></td>
-          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span><small>A count is not a register.</small></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-owner"></span><span class="f-owner"></span><small>A count is not a register.</small><div class="fill">&#9744; Assessed as not present here. Evidence (&ldquo;we don&rsquo;t think that&rsquo;s an issue&rdquo; is not evidence): <span class="f-box sm"></span></div></td>
           <td class="prior">
             Show the growth path, evidenced by block D. The seniors of 2030 are the juniors you invest in today.
             <span class="prior-src">ch06 L296</span>
@@ -620,13 +620,6 @@ format:
       <span class="hedge-text">† Projected figures are based on early adopter reports and the author's observations, not longitudinal studies. Pre-agentic figures reflect established industry norms.</span>
       <span class="hedge-src">handbook\ch06-team-structures.qmd L308-315</span>
     </div>
-    <div class="prior">
-      <b>These are directional, not prescriptive.</b> Your ratios depend on codebase complexity, agent maturity, and domain risk. A team working on a payments system with strict regulatory requirements will need a higher senior ratio than a team building internal tooling.
-      <br><b>Smaller does not mean fewer total engineers.</b> Agent-augmented teams produce more per person, but the economic argument is not "we need fewer engineers." It is "we need the same or fewer engineers to do more, with a different mix of skills." The staffing question is about composition and capability, not reduction.
-      <span class="prior-src">ch06 L319-321</span>
-    </div>
-    <div class="prior"><b>Dagger footnote and caveats:</b> the dagger disclosure and both caveats above apply to all four profile-matched priors. The figures are directional, not prescriptive; the ratio depends on codebase complexity, agent maturity and domain risk, and smaller does not mean fewer total engineers.<span class="prior-src">ch06 L315, L319-321</span></div>
-
     <table class="ws">
       <colgroup><col style="width:18%"><col style="width:14%"><col style="width:15%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:14%"></colgroup>
       <thead>
@@ -641,10 +634,10 @@ format:
         </tr>
       </thead>
       <tbody>
-        <tr><td class="locked">Typical team size</td><td class="prior">6–10 engineers<span class="prior-src">ch06 L308</span></td><td class="prior">See attached † profile-matched prior above<span class="prior-src">ch06 L308-315</span></td><td class="locked">See disclosure band above<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
-        <tr><td class="locked">Senior-to-junior ratio</td><td class="prior">1:2 to 1:3<span class="prior-src">ch06 L309</span></td><td class="prior">See attached † profile-matched prior above<span class="prior-src">ch06 L309-315</span></td><td class="locked">See disclosure band above<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
-        <tr><td class="locked">Context engineering allocation</td><td class="prior">0%<span class="prior-src">ch06 L310</span></td><td class="prior">See attached † profile-matched prior above<span class="prior-src">ch06 L310-315</span></td><td class="locked">See disclosure band above<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
-        <tr><td class="locked">Review time allocation</td><td class="prior">15–20% of team capacity<span class="prior-src">ch06 L311</span></td><td class="prior">See attached † profile-matched prior above<span class="prior-src">ch06 L311-315</span></td><td class="locked">See disclosure band above<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="locked">Typical team size</td><td class="prior">6–10 engineers<span class="prior-src">ch06 L308</span></td><td class="prior">4–7 engineers †<span class="prior-src">ch06 L308</span></td><td class="locked">† Projected figures are based on early adopter reports and the author's observations, not longitudinal studies. Pre-agentic figures reflect established industry norms. Directional, not prescriptive; a payments team under strict regulatory requirements needs a higher senior ratio than a team building internal tooling. Smaller does not mean fewer total engineers.<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="locked">Senior-to-junior ratio</td><td class="prior">1:2 to 1:3<span class="prior-src">ch06 L309</span></td><td class="prior">1:1 to 2:1 †<span class="prior-src">ch06 L309</span></td><td class="locked">† Projected figures are based on early adopter reports and the author's observations, not longitudinal studies. Pre-agentic figures reflect established industry norms. Directional, not prescriptive; a payments team under strict regulatory requirements needs a higher senior ratio than a team building internal tooling. Smaller does not mean fewer total engineers.<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="locked">Context engineering allocation</td><td class="prior">0%<span class="prior-src">ch06 L310</span></td><td class="prior">10–20% of team capacity †<span class="prior-src">ch06 L310</span></td><td class="locked">† Projected figures are based on early adopter reports and the author's observations, not longitudinal studies. Pre-agentic figures reflect established industry norms. Directional, not prescriptive; a payments team under strict regulatory requirements needs a higher senior ratio than a team building internal tooling. Smaller does not mean fewer total engineers.<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="locked">Review time allocation</td><td class="prior">15–20% of team capacity<span class="prior-src">ch06 L311</span></td><td class="prior">25–35% of team capacity †<span class="prior-src">ch06 L311</span></td><td class="locked">† Projected figures are based on early adopter reports and the author's observations, not longitudinal studies. Pre-agentic figures reflect established industry norms. Directional, not prescriptive; a payments team under strict regulatory requirements needs a higher senior ratio than a team building internal tooling. Smaller does not mean fewer total engineers.<span class="prior-src">ch06 L315, L319-321</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
       </tbody>
     </table>
   </div>
