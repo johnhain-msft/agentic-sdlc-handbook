@@ -168,7 +168,7 @@ format:
         <col style="width:29%"><col style="width:16%">
       </colgroup>
       <thead>
-        <tr><th><b>14</b> Move</th><th><b>15</b> Accountable executive<br><span class="prior-src">ch07 L178: pinning is the engineer's job; requiring it is the leader's</span></th><th><b>16</b> Target date</th><th><b>17</b> Evidence that would prove it done</th><th><b>18</b> Current status</th></tr>
+        <tr><th><b>14</b> Move</th><th><b>15</b> Accountable executive<br><span class="prior-src" style="color:#f2f5f8;font-size:7pt">ch07 L178: pinning is the engineer's job; requiring it is the leader's</span></th><th><b>16</b> Target date</th><th><b>17</b> Evidence that would prove it done</th><th><b>18</b> Current status</th></tr>
       </thead>
       <tbody>
         <tr><td class="locked">Build a team of Agentic Workflow Engineers for recurring, ROI-positive use cases<span class="prior-src">ch07 L177-181</span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">not started</span><span class="opt">in progress</span><span class="opt">done</span></div></td></tr>
