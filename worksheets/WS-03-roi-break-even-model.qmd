@@ -24,7 +24,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Agentic ROI &amp; Break-Even Model</h1>
-      <p class="ws-sub">A CFO-legible ROI model with stated assumptions, a break-even month and a value-to-cost ratio the board can stress-test.</p>
+      <p class="ws-sub">Build the case from stated assumptions; calculate break-even and the value-to-cost ratio.</p>
     </div>
     <div class="ws-meta">
       <b>WS-03-roi-break-even-model</b><br>
@@ -101,7 +101,7 @@ format:
     <div class="ws-meta"><b>WS-03-roi-break-even-model</b><br>Pack C - The case and the money<br>fill order <b>6</b> &middot; audience <b>exec</b></div>
   </div>
   <div class="ws-source">Source: <b>The Business Case</b>, <i>Building Your Business Case</i> &middot; <code>handbook/ch03-the-business-case.qmd</code> L206-228 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-building">#sec-business-case-building</a></div>
-  <div class="ws-instruction">Enter the organisation's number, its source, one basis and the named owner for every line. Use the cycle-time value committed on <b>WS-03-scenario-assumption-commitment</b>, unchanged.</div>
+  <div class="ws-instruction">Enter the organization's number, its source, one basis and the named owner for every line. Use the cycle-time value committed on <b>WS-03-scenario-assumption-commitment</b>, unchanged.</div>
 
   <div class="ws-block">
     <h2>Page 1 — the model, lines 5–8</h2>
@@ -148,7 +148,7 @@ format:
     <div class="ws-meta"><b>WS-03-roi-break-even-model</b><br>Pack C - The case and the money<br>fill order <b>6</b> &middot; audience <b>exec</b></div>
   </div>
   <div class="ws-source">Source: <b>The Business Case</b>, <i>Building Your Business Case</i> &middot; <code>handbook/ch03-the-business-case.qmd</code> L206-228 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-building">#sec-business-case-building</a></div>
-  <div class="ws-instruction">Enter the organisation's number, its source, one basis and the named owner for every line.</div>
+  <div class="ws-instruction">Enter the organization's number, its source, one basis and the named owner for every line.</div>
   <div class="ws-block">
     <h2>Page 1 — the model, lines 9–12</h2>
     <table class="ws">
@@ -254,7 +254,7 @@ format:
 
 <div class="sheet">
   <div class="ws-head">
-    <div><h1>Model outputs &amp; sign-off</h1><p class="ws-sub">Page 1 continuation — complete and sign before the room breaks.</p></div>
+    <div><h1>Model outputs &amp; sign-off</h1><p class="ws-sub">Page 1 continuation — model outputs, attestations and cautions.</p></div>
     <div class="ws-meta"><b>WS-03-roi-break-even-model</b><br>Pack C - The case and the money<br>fill order <b>6</b> &middot; audience <b>exec</b></div>
   </div>
   <div class="ws-source">
@@ -264,7 +264,7 @@ format:
     <br>Cost prior: <b>The Agentic SDLC Bill</b>, <i>The Same Task, an 8.5× Bill</i> &middot;
     <code>handbook/ch07-the-agentic-sdlc-bill.qmd</code> L13, L118
   </div>
-  <div class="ws-instruction">Complete the outputs from the formula lines. Read both cautions and tick all attestations; the CFO signs the final model sheet after both pages are complete.</div>
+  <div class="ws-instruction">Complete the outputs from the formula lines. Read both cautions and tick all attestations; the CFO signs page 1 after both pages are complete.</div>
 
   <div class="ws-block">
     <h2>Model outputs <span class="ws-block-note">complete from the rows above</span></h2>
@@ -343,7 +343,7 @@ format:
 
   <div class="ws-instruction">
     Enter your own low and high for every input; include engineer count, loaded cost, initial
-    primitive-authoring hours and monthly maintenance hours. Carry the committed rework rate from
+    hours to author the initial primitive set and monthly maintenance hours. Carry the committed rework rate from
     <b>WS-03-scenario-assumption-commitment</b>. Compute break-even at both gain endpoints and the
     minimum sustained gain at which the investment clears zero. Do not present a point estimate.
   </div>
