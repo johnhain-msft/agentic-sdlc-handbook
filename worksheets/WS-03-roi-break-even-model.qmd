@@ -9,6 +9,9 @@ format:
           <style>
             html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
             @page { size: A4 portrait; margin: 12mm; }
+            .ws-block p { margin-top: 1mm; margin-bottom: 1mm; }
+            .f-computed { height: auto; min-height: 8mm; }
+            .f-computed::after { position: static; display: block; font-size: 7pt; line-height: 1.15; padding: .6mm 1mm; text-align: left; }
           </style>
 ---
 
@@ -58,8 +61,8 @@ format:
       </colgroup>
       <thead>
         <tr>
-          <th>Formula line</th><th>Symbol</th><th>Worked example †</th><th>Our number</th>
-          <th>Where it came from</th><th>Basis</th><th>Owner</th>
+          <th>Formula line</th><th>Symbol</th><th>Worked example, 50-person team †</th><th>Our number</th>
+          <th>Where our number came from</th><th>Basis</th><th>Owner of this line</th>
         </tr>
       </thead>
       <tbody>
@@ -110,7 +113,7 @@ format:
         <col style="width:18%"><col style="width:7%"><col style="width:15%"><col style="width:13%">
         <col style="width:11%"><col style="width:20%"><col style="width:16%">
       </colgroup>
-      <thead><tr><th>Formula line</th><th>Symbol</th><th>Worked example †</th><th>Our number</th><th>Where it came from</th><th>Basis</th><th>Owner</th></tr></thead>
+          <thead><tr><th>Formula line</th><th>Symbol</th><th>Worked example, 50-person team †</th><th>Our number</th><th>Where our number came from</th><th>Basis</th><th>Owner of this line</th></tr></thead>
       <tbody>
         <tr>
           <td class="locked">Cycle time value</td><td class="locked">B</td><td class="locked">$2,500,000</td>
@@ -156,7 +159,7 @@ format:
         <col style="width:18%"><col style="width:7%"><col style="width:15%"><col style="width:13%">
         <col style="width:11%"><col style="width:20%"><col style="width:16%">
       </colgroup>
-      <thead><tr><th>Formula line</th><th>Symbol</th><th>Worked example †</th><th>Our number</th><th>Where it came from</th><th>Basis</th><th>Owner</th></tr></thead>
+          <thead><tr><th>Formula line</th><th>Symbol</th><th>Worked example, 50-person team †</th><th>Our number</th><th>Where our number came from</th><th>Basis</th><th>Owner of this line</th></tr></thead>
       <tbody>
         <tr>
           <td class="locked">Current onboarding cost per new hire</td><td class="locked">—</td><td class="locked">$15,000</td>
@@ -202,7 +205,7 @@ format:
         <col style="width:18%"><col style="width:7%"><col style="width:15%"><col style="width:13%">
         <col style="width:11%"><col style="width:20%"><col style="width:16%">
       </colgroup>
-      <thead><tr><th>Formula line</th><th>Symbol</th><th>Worked example †</th><th>Our number</th><th>Where it came from</th><th>Basis</th><th>Owner</th></tr></thead>
+          <thead><tr><th>Formula line</th><th>Symbol</th><th>Worked example, 50-person team †</th><th>Our number</th><th>Where our number came from</th><th>Basis</th><th>Owner of this line</th></tr></thead>
       <tbody>
         <tr>
           <td class="locked">Total annual value (B+C+D)</td><td class="locked">—</td><td class="locked">$2,645,000 †</td>
@@ -270,15 +273,20 @@ format:
     <h2>Model outputs <span class="ws-block-note">complete from the rows above</span></h2>
     <table class="ws">
       <colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col style="width:25%"></colgroup>
-      <thead><tr><th>Total annual value</th><th>Year-1 cost</th><th>Value-to-cost ratio</th><th>Break-even month</th></tr></thead>
+      <thead><tr><th>Total annual value (B+C+D), our figure</th><th>Year-1 cost, our figure</th><th>Value-to-cost ratio, our figure</th><th>Break-even month, our figure</th></tr></thead>
       <tbody><tr>
+        <td class="locked">Worked example: $2,645,000 †</td>
+        <td class="locked">Worked example: $350,000–1,150,000 †, scaled 5× from a team-of-ten TCO</td>
+        <td class="locked">Worked example: 2.3–7.6× †</td>
+        <td class="locked">Worked example: month 6–10 †; conservative pushes to month 10–14 †, aggressive pulls in to month 4–6 †</td>
+      </tr><tr>
         <td class="fill"><span class="f-computed" data-formula="B + C + D"></span></td>
         <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
         <td class="fill"><span class="f-computed" data-formula="total annual value &divide; year-1 cost"></span></td>
         <td class="fill"><span class="f-computed" data-formula="year-1 cost &divide; monthly value run-rate at steady state"></span></td>
       </tr></tbody>
     </table>
-    <p class="ws-block-note">Carry the year-1 total verbatim from <b>WS-03-tco-calculator</b> at actual headcount; do not scale this book example. Months 1–4 are ramp-up.</p>
+    <p class="ws-block-note">† Author estimates (ch03 L242-263). Carry the year-1 total verbatim from <b>WS-03-tco-calculator</b> at actual headcount; do not scale this book example. Months 1–4 are ramp-up.</p>
   </div>
 
   <div class="ws-block">
@@ -392,11 +400,11 @@ format:
         </tr>
         <tr>
           <td class="locked">Sustained productivity gain</td>
-          <td class="locked">15–20%</td><td class="locked">2–3×</td>
+          <td class="locked">15–20% † book pole, see hedge above</td><td class="locked">2–3× † book pole, see hedge above</td>
           <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text sm"></span></td>
-          <td class="fill"><span class="f-computed" data-formula="break-even month using our low sustained gain"></span></td>
-          <td class="fill"><span class="f-computed" data-formula="break-even month using our high sustained gain"></span></td>
-          <td class="fill"><span class="f-computed" data-formula="gain at zero net investment"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="month n where authoring cost + n &times; monthly maintenance cost = n &times; monthly value (engineers &times; loaded cost &times; low gain &divide; 12); hours priced at our own hourly rate"></span></td>
+                    <td class="fill"><span class="f-computed" data-formula="same equation with our high gain in place of our low gain"></span></td>
+                    <td class="fill"><span class="f-computed" data-formula="gain g where engineers &times; loaded cost &times; g &divide; 12 = monthly maintenance cost + authoring cost spread over our own horizon"></span></td>
         </tr>
       </tbody>
     </table>
@@ -411,7 +419,7 @@ format:
       <tbody>
         <tr>
           <td><b>Rework rate carried in</b></td>
-          <td class="prior">20% &rarr; 35% effective; 40% &rarr; 25%; 60% &rarr; 15%, all daggered.<span class="prior-src">ch03 L275-279</span></td>
+          <td class="prior">20% &rarr; 35% effective †; 40% &rarr; 25% †; 60% &rarr; 15% †. † Author estimates: effective improvement is modeled as a function of the base scenario (25% at 40% rework).<span class="prior-src">ch03 L275-279</span></td>
           <td class="fill"><span class="f-text"></span><span class="prior-src">Carry the rate committed on WS-03-scenario-assumption-commitment verbatim.</span></td>
         </tr>
         <tr>
