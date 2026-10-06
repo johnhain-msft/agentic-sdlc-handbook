@@ -48,7 +48,7 @@ format:
   </div>
 
   <div class="ws-block">
-    <h2>Part A &mdash; Policy <span class="ws-block-note">filled once per organisation</span></h2>
+    <h2>Part A &mdash; Policy <span class="ws-block-note">filled once per organization</span></h2>
     <table class="ws">
       <colgroup>
         <col style="width:5%"><col style="width:19%"><col style="width:32%"><col style="width:44%">
