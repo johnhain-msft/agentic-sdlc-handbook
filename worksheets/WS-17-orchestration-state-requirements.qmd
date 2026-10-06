@@ -140,8 +140,7 @@ format:
       </colgroup>
       <thead>
         <tr>
-          <th><span class="fno">10</span> Rule</th>
-          <th colspan="1"></th>
+          <th colspan="2"><span class="fno">10</span> Rule</th>
           <th><span class="fno">11</span> What it means</th>
           <th><span class="fno">12</span> Status here</th>
           <th><span class="fno">13</span> Enforcement mechanism <span class="prior-src">mandatory where col 12 reads Enforced: what actually stops the violation</span></th>
