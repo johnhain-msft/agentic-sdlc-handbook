@@ -1,0 +1,238 @@
+---
+title: "Go / No-Go Readiness Gate"
+pagetitle: "WS-03-go-no-go-readiness-gate"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 297mm; --sheet-h: 420mm; --sheet-margin: 12mm; }
+            @page { size: A3 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-03-go-no-go-readiness-gate</b> &middot; review copy &middot; declared format
+  <b>A3 portrait</b> &middot; 2 sheets. Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Go / No-Go Readiness Gate</h1>
+      <p class="ws-sub">One signed decision to break ground, with the three conditions and their evidence attached.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-go-no-go-readiness-gate</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>6</b> &middot; type <b>checklist</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>The Honest Version</i> &middot;
+    <code>handbook\ch03-the-business-case.qmd</code> L352-356 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-honest-version">#sec-business-case-honest-version</a><br>
+    Locator: “AI-assisted development tools produce measurable value when three conditions hold”
+  </div>
+
+  <div class="ws-instruction">
+    Put the completed prerequisite sheets on the table. For each condition, mark yes or no,
+    name and date its evidence artefact, and identify who checked it. A no does not block the
+    decision; it makes GO a GO WITH CONDITIONS and must be written with its due date. Reconcile
+    condition 2 to your calibrated roadmap, not the book's curve. Complete the governance
+    register and five owned moves, then record your own expected return and evidence grade.
+    Read and initial the calibration. Choose the decision, write every attached condition, and
+    sign and date it with the first review gate date.
+  </div>
+
+  <div class="ws-block">
+    <h2>A. Conditions
+      <span class="ws-block-note">one answer and evidence record per condition; book prior — on fields 2, 4 and 5</span></h2>
+    <table class="ws" style="font-size:7.1pt;line-height:1.05">
+      <colgroup>
+        <col style="width:22%"><col style="width:10%"><col style="width:25%">
+        <col style="width:15%"><col style="width:28%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><b>1</b> Condition</th>
+          <th><b>2</b> Holds</th>
+          <th><b>3</b> Evidence artefact</th>
+          <th><b>4</b> Attested by</th>
+          <th><b>5</b> If not: what is missing, and by when</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked">The team invests in structured context so agents work with accurate information<span class="prior-src">ch03 L352</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><span class="f-text"></span><span class="prior-src">Condition 1: WS-03-context-moat-asset-inventory</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">The organization commits to a 4–6 month adoption curve before expecting returns<span class="prior-src">ch03 L352</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><span class="f-text"></span><span class="prior-src">Condition 2: WS-08-phase-gate-exit-rollback and WS-08-transition-roadmap</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked">Success is measured in outcomes — cycle time, defect rates, knowledge retention — rather than in lines of code produced<span class="prior-src">ch03 L352</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span></div></td>
+          <td class="fill"><span class="f-text"></span><span class="prior-src">Condition 3: WS-03-delivery-baseline-scorecard and WS-08-baseline-measurement-plan</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="locked"><b>6</b> Condition 2 reconciliation<span class="prior-src">ch03 L352; ch08 L108, L134, L161</span></td>
+          <td class="prior" colspan="2">The book states a 4–6 month adoption curve. Use your calibrated curve from the org-size band on WS-08-transition-roadmap. For a 1,000+ engineer organisation, ch08 L108 puts Phase 1 alone at 4–6 months; 4–6 months to returns is not universal.</td>
+          <td class="fill" colspan="2"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>B. Governance gate
+      <span class="ws-block-note">12 items; book prior — on fields 8–13; evidence pointer; signed waiver acceptance</span></h2>
+    <table class="ws" style="font-size:7pt;line-height:1.02">
+      <colgroup>
+        <col style="width:25%"><col style="width:11%"><col style="width:12%">
+        <col style="width:9%"><col style="width:16%"><col style="width:6%"><col style="width:21%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><b>7</b> Item</th><th><b>8</b> Status</th><th><b>9</b> Owner</th>
+          <th><b>10</b> Due date</th><th><b>11</b> Evidence artefact</th>
+          <th><b>12</b> Waived</th><th><b>13</b> Waiver accepted by (signature)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="locked">Governance readiness self-assessment across the six areas, prioritised by regulatory scope<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+        <tr><td class="locked">Prioritise audit trails and agent access controls if either is at “None”<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+        <tr><td class="locked">Classify agent-introduced risks across all six taxonomy categories and assign owners<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+        <tr><td class="locked">Map products to regulatory frameworks and evaluate agent-specific gaps<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+        <tr><td class="locked">Review agent instruction files and context sources for supply-chain integrity, applying change-management controls<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+        <tr><td class="locked">Establish a board reporting cadence with targets and trends<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+        <tr><td class="locked">Review the code review process for agent-specific failure modes, including implicit compliance decisions<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+        <tr><td class="locked">Document the data boundary policy and verify enforcement is systemic, not procedural<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+        <tr><td class="locked">Design deliberate practice into the process to mitigate knowledge atrophy<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+        <tr><td class="locked">Test the fallback: can delivery be sustained if agent assistance is unavailable for 48 hours<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+        <tr><td class="locked">Confirm E&amp;O and cyber insurance address agent-generated code, raising it with the CFO before the board does<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+        <tr><td class="locked">Schedule a quarterly governance review<span class="prior-src">ch05 L265-276</span></td><td class="fill"><div class="f-select"><span class="opt">complete</span><span class="opt">in progress</span><span class="opt">not started</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td><td class="fill tall"><div style="display:grid;grid-template-columns:1fr 1.4fr;gap:1mm;align-items:end"><span class="f-owner"></span><span class="f-sign"></span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-go-no-go-readiness-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:32mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Go / No-Go Readiness Gate</h1>
+      <p class="ws-sub">Executive commitments, calibration and final sign-off.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-go-no-go-readiness-gate</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>6</b> &middot; type <b>checklist</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>The Honest Version</i> &middot;
+    <code>handbook\ch03-the-business-case.qmd</code> L352-356 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-honest-version">#sec-business-case-honest-version</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>C. Five moves
+      <span class="ws-block-note">one accountable executive, date, proof and status per move; book prior — on fields 16–18</span></h2>
+    <table class="ws" style="font-size:7pt;line-height:1.02">
+      <colgroup>
+        <col style="width:28%"><col style="width:16%"><col style="width:11%">
+        <col style="width:29%"><col style="width:16%">
+      </colgroup>
+      <thead>
+        <tr><th><b>14</b> Move</th><th><b>15</b> Accountable executive<br><span class="prior-src">ch07 L178: pinning is the engineer's job; requiring it is the leader's</span></th><th><b>16</b> Target date</th><th><b>17</b> Evidence that would prove it done</th><th><b>18</b> Current status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="locked">Build a team of Agentic Workflow Engineers for recurring, ROI-positive use cases<span class="prior-src">ch07 L177-181</span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">not started</span><span class="opt">in progress</span><span class="opt">done</span></div></td></tr>
+        <tr><td class="locked">Mandate that each shipped workflow pins its model tier, and the tier of every subagent it spawns, to the cheapest sufficient class with prompt compression and token discipline while output quality holds<span class="prior-src">ch07 L178</span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">not started</span><span class="opt">in progress</span><span class="opt">done</span></div></td></tr>
+        <tr><td class="locked">Release, distribute and monitor the loops as software artifacts, through the package manager and the catalog<span class="prior-src">ch07 L177-181</span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">not started</span><span class="opt">in progress</span><span class="opt">done</span></div></td></tr>
+        <tr><td class="locked">Gate usage with explicit cost-vs-value approvals, waving through local and low-gradient workflows<span class="prior-src">ch07 L177-181</span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">not started</span><span class="opt">in progress</span><span class="opt">done</span></div></td></tr>
+        <tr><td class="locked">Give everyone open, baseline access to the most cost-effective versatile models, and treat any spend beyond that baseline as an intentional bet made once monitoring proves net-positive ROI<span class="prior-src">ch07 L177-181</span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">not started</span><span class="opt">in progress</span><span class="opt">done</span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>D. Calibration
+      <span class="ws-block-note">read before initialling; the organisation supplies its own expectation</span></h2>
+    <table class="ws" style="font-size:7.1pt;line-height:1.04">
+      <colgroup><col style="width:5%"><col style="width:22%"><col style="width:48%"><col style="width:25%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td>
+          <td><b>The book's calibration</b><br><span class="prior-src">ch03 L354</span></td>
+          <td class="prior">
+            The value is not 10×.
+            <span class="prior--hedged"><span class="hedge-figure">20–40% improvements in cycle time</span><span class="hedge-text">“On well-scoped tasks with mature context, expect 20–40% improvements in cycle time and measurable reductions in convention-violation defects.” Over 12+ months, the working hypothesis is that the effects of documented knowledge and institutional context compound — that returns accelerate rather than plateau. The early signal from teams 12+ months in is consistent with that hypothesis; the field does not yet have multi-year longitudinal evidence that would close the case.</span><span class="hedge-src">handbook/ch03-the-business-case.qmd L354</span></span>
+            License costs are the smallest component of a total investment that includes context engineering, training, governance, and the opportunity cost of the learning curve. Build the business case on the measurable near-term returns and treat the compounding thesis as the upside, not the foundation.
+          </td>
+          <td class="fill">Initials of every signatory:<span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">20</span></td>
+          <td><b>Our own expected return</b><br><span class="prior-src">ch03 L354; ch01 L136-142</span></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">21</span></td>
+          <td><b>Falsifier for that expectation</b><br><span class="prior-src">ch01 L136-142</span></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ours-label">Our expected return — write the organisation's expectation, not the book's. If the book's figure is your only expectation, select “author estimate”.</div>
+  </div>
+
+  <div class="ws-block" style="font-size:7.1pt">
+    <h2>Decision and sign-off <span class="ws-block-note">book prior — for the decision, attached conditions, signature and review date</span></h2>
+    <div style="display:grid;grid-template-columns:1fr 2fr 1fr;gap:2mm;align-items:end">
+      <div><b>Decision</b><div class="f-select"><span class="opt">GO</span><span class="opt">GO WITH CONDITIONS</span><span class="opt">NO-GO</span></div></div>
+      <div><b>Conditions attached</b><span class="f-box"></span><span class="prior-src">Populate from every “If not” entry and every ticked waiver</span></div>
+      <div><b>First review gate date — match Gate 1 on WS-08-phase-gate-exit-rollback</b><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:2mm;margin-top:1mm;align-items:end">
+      <div><b>Accountable executive signature</b><span class="f-sign"></span><span class="prior-src">ch05 L263</span></div>
+      <div><b>Date</b><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></div>
+    </div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-go-no-go-readiness-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:32mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+```
