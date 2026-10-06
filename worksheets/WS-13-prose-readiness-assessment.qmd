@@ -1,0 +1,268 @@
+---
+title: "PROSE Readiness Assessment and Remediation Plan"
+pagetitle: "WS-13-prose-readiness-assessment"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only"><b>WS-13-prose-readiness-assessment</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot; 3 sheet(s). Each white page below is one physical sheet at true size. Anything spilling past a page edge onto this grey background is a layout defect.</div>
+
+<div class="sheet">
+  <div class="ws-head"><div><h1>PROSE Readiness Assessment and Remediation Plan</h1><p class="ws-sub">A dated PROSE scorecard per repository or team, plus a remediation backlog ordered by blast radius. Surface A of four: the eleven-question compliance checklist.</p></div>
+  <div class="ws-meta"><b>WS-13-prose-readiness-assessment</b><br>Pack Z - Second wave: the practitioner kit<br>fill order <b>7</b> &middot; type <b>rubric</b><br>audience <b>mixed</b></div></div>
+  <div class="ws-source">Source: <b>The PROSE Constraints</b>, <i>Compliance Checklist</i> &middot; <code>handbook/ch13-the-prose-specification.qmd</code> L535-565 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch13-the-prose-specification.html#sec-prose-compliance-checklist">#sec-prose-compliance-checklist</a></div>
+  <div class="ws-instruction">Answer each of the eleven yes/no questions below, Pass or Fail, with evidence: a file path for every Pass, a named counter-example file for every Fail. Name an owner and a target date for every Fail. Fail on S1, S2 or S3 means start there, whatever else you find. If the shadow-AI census found little, defer this surface and write DEFERRED across it &mdash; do not mark it passed. Surfaces A and B are filled live; B follows on sheet 2.</div>
+  <div class="ws-block"><h2>Header <span class="ws-block-note">every surface carries the same scope, date and assessor</span></h2>
+  <table class="ws"><colgroup><col style="width:3%"><col style="width:9%"><col style="width:30%"><col style="width:3%"><col style="width:9%"><col style="width:16%"><col style="width:3%"><col style="width:9%"><col style="width:18%"></colgroup>
+  <tbody><tr><td class="ws-num"><span class="fno">1</span></td><td><b>Scope</b> (repository or team assessed)</td><td class="fill"><span class="f-text"></span></td>
+  <td class="ws-num"><span class="fno">2</span></td><td><b>Assessment date</b></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+  <td class="ws-num"><span class="fno">3</span></td><td><b>Assessor</b></td><td class="fill"><span class="f-owner"></span></td></tr></tbody></table>
+  </div>
+  <div class="ws-block"><h2>A &mdash; Compliance checklist <span class="ws-block-note">one row per question; no total score is kept</span></h2>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:4%"><col style="width:9%"><col style="width:23%"><col style="width:7%"><col style="width:19%"><col style="width:10%"><col style="width:12%"><col style="width:13%"></colgroup>
+    <thead><tr><th></th><th>#</th><th>Constraint</th><th>Question</th><th>Pass</th><th>Evidence (file path for Pass; named counter-example for Fail) &mdash; mandatory</th><th>Remediation band</th><th>Owner (required for every Fail)</th><th>Target date (required for every Fail)</th></tr></thead>
+    <tbody>
+<tr><td class="ws-num"><span class="fno">4</span></td><td class="prior"><b>P1</b></td><td class="prior">Progressive Disclosure</td><td class="prior">Does every instruction file over 100 lines use links (not inline content) for subsidiary topics?<span class="prior-src">ch13 L541-551</span></td>
+<td class="fill"><div class="f-select"><span class="opt">Pass</span><span class="opt">Fail</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><span class="f-computed" data-formula="if P1 = Fail: Band 3"></span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">5</span></td><td class="prior"><b>P2</b></td><td class="prior">Progressive Disclosure</td><td class="prior">Does every cross-reference link include a description of what the target contains (not just a filename)?<span class="prior-src">ch13 L541-551</span></td>
+<td class="fill"><div class="f-select"><span class="opt">Pass</span><span class="opt">Fail</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><span class="f-computed" data-formula="if P2 = Fail: Band 3"></span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">6</span></td><td class="prior"><b>R1</b></td><td class="prior">Reduced Scope</td><td class="prior">Can you state each agent task in one sentence with a single deliverable?<span class="prior-src">ch13 L541-551</span></td>
+<td class="fill"><div class="f-select"><span class="opt">Pass</span><span class="opt">Fail</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><span class="f-computed" data-formula="if R1 = Fail: Band 3"></span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">7</span></td><td class="prior"><b>R2</b></td><td class="prior">Reduced Scope</td><td class="prior">Do multi-step workflows start each phase with a fresh context (no accumulated session state)?<span class="prior-src">ch13 L541-551</span></td>
+<td class="fill"><div class="f-select"><span class="opt">Pass</span><span class="opt">Fail</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><span class="f-computed" data-formula="if R2 = Fail: Band 3"></span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">8</span></td><td class="prior"><b>O1</b></td><td class="prior">Orchestrated Composition</td><td class="prior">Does each instruction file address exactly one concern (check: could you name the file after its single topic)?<span class="prior-src">ch13 L541-551</span></td>
+<td class="fill"><div class="f-select"><span class="opt">Pass</span><span class="opt">Fail</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><span class="f-computed" data-formula="if O1 = Fail: Band 3"></span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">9</span></td><td class="prior"><b>O2</b></td><td class="prior">Orchestrated Composition</td><td class="prior">Do workflow prompts reference shared instruction files by link rather than pasting their content?<span class="prior-src">ch13 L541-551</span></td>
+<td class="fill"><div class="f-select"><span class="opt">Pass</span><span class="opt">Fail</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><span class="f-computed" data-formula="if O2 = Fail: Band 3"></span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">10</span></td><td class="prior"><b>S1</b></td><td class="prior">Safety Boundaries</td><td class="prior">Does every agent configuration have an explicit <code>tools</code> list (no wildcards)?<span class="prior-src">ch13 L541-551</span></td>
+<td class="fill"><div class="f-select"><span class="opt">Pass</span><span class="opt">Fail</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><span class="f-computed" data-formula="if S1 = Fail: Band 1"></span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">11</span></td><td class="prior"><b>S2</b></td><td class="prior">Safety Boundaries</td><td class="prior">Is there a <code>**STOP**</code> gate before every operation that modifies auth, database schemas, or production config?<span class="prior-src">ch13 L541-551</span></td>
+<td class="fill"><div class="f-select"><span class="opt">Pass</span><span class="opt">Fail</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><span class="f-computed" data-formula="if S2 = Fail: Band 1"></span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">12</span></td><td class="prior"><b>S3</b></td><td class="prior">Safety Boundaries</td><td class="prior">Does every agent have a file-path boundary (explicit list of directories it may modify)?<span class="prior-src">ch13 L541-551</span></td>
+<td class="fill"><div class="f-select"><span class="opt">Pass</span><span class="opt">Fail</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><span class="f-computed" data-formula="if S3 = Fail: Band 1"></span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">13</span></td><td class="prior"><b>E1</b></td><td class="prior">Explicit Hierarchy</td><td class="prior">Do instructions exist at three or more specificity levels (e.g., root &rarr; domain &rarr; module)?<span class="prior-src">ch13 L541-551</span></td>
+<td class="fill"><div class="f-select"><span class="opt">Pass</span><span class="opt">Fail</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><span class="f-computed" data-formula="if E1 = Fail: Band 2"></span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">14</span></td><td class="prior"><b>E2</b></td><td class="prior">Explicit Hierarchy</td><td class="prior">Can you add module-specific rules without editing any file above that module's scope?<span class="prior-src">ch13 L541-551</span></td>
+<td class="fill"><div class="f-select"><span class="opt">Pass</span><span class="opt">Fail</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="fill"><span class="f-computed" data-formula="if E2 = Fail: Band 2"></span></td>
+<td class="fill"><span class="f-owner"></span></td>
+<td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+
+    </tbody></table>
+    <div class="prior" style="margin-top:2mm"><b>Remediation bands (the book's own, not re-ordered).</b> <b>Band 1 = S1, S2, S3</b> &mdash; start here regardless of total score; highest blast radius and fastest to close (one YAML change per agent). <b>Band 2 = E1, E2</b> &mdash; address next; fastest architectural change (create two scoped files and you have three levels). <b>Band 3 = P1, P2, R1, R2, O1, O2</b> &mdash; discipline and refactoring; prioritise the constraint that maps to your current failure mode: scope creep, fix R1/R2; context dilution, fix P1/P2; debugging nightmares, fix O1/O2.<span class="prior-src">ch13 L555-559</span></div>
+  </div>
+  <div class="ws-foot"><div>WS-13-prose-readiness-assessment &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+  <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head"><div><h1>PROSE Readiness Assessment and Remediation Plan</h1><p class="ws-sub">Surface B: the five-constraint rollup and executive-reporting layer. Surface D: the structural-properties control map, filled last.</p></div>
+  <div class="ws-meta"><b>WS-13-prose-readiness-assessment</b><br>Pack Z - Second wave: the practitioner kit<br>fill order <b>7</b> &middot; type <b>rubric</b><br>audience <b>mixed</b></div></div>
+  <div class="ws-source">Source: <b>The PROSE Constraints</b>, <i>Compliance Checklist</i> &middot; <code>handbook/ch13-the-prose-specification.qmd</code> L535-565 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch13-the-prose-specification.html#sec-prose-compliance-checklist">#sec-prose-compliance-checklist</a></div>
+  <div class="ws-instruction">For each PROSE constraint, say whether today's practice is absent, ad hoc, documented or enforced, and name the file, gate, job or policy that satisfies it. Tick every anti-pattern you currently exhibit and give one concrete example for each tick &mdash; a file, a prompt, an agent configuration or a session. A constraint may be called enforced only if every checklist item rolled into it passed on sheet 1. Then, at the end, name the specific control for each structural property, its owner and how it is verified.</div>
+  <div class="ws-block"><h2>B &mdash; Constraint rollup <span class="ws-block-note">one row per constraint; no weighting across constraints, no score</span></h2>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:9%"><col style="width:13%"><col style="width:13%"><col style="width:14%"><col style="width:7%"><col style="width:17%"><col style="width:7%"><col style="width:17%"></colgroup>
+    <thead><tr><th></th><th>Constraint</th><th>Addresses / Induces</th><th>Today's practice</th><th>Artefact or control that satisfies it</th><th>Checklist items rolling up</th><th>Matching anti-pattern (the book)</th><th>Tick</th><th>One example of the anti-pattern &mdash; mandatory when ticked</th></tr></thead>
+    <tbody>
+<tr><td class="ws-num"><span class="fno">15</span></td><td class="prior"><b>Progressive Disclosure</b><span class="prior-src">ch13 L16-22</span></td>
+<td class="prior">Addresses: Context overload. Induces: Efficient context utilization.<span class="prior-src">ch13 L16-22; ch01 L63-69</span></td>
+<td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">ad hoc</span><span class="opt">documented</span><span class="opt">enforced</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">P1, P2<span class="prior-src">ch13 L541-551</span></td>
+<td class="prior"><b>Context dumping</b> &mdash; Everything loaded upfront; wastes capacity; dilutes attention on what matters<span class="prior-src">ch01 L112-118</span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>exhibited</span></td>
+<td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">16</span></td><td class="prior"><b>Reduced Scope</b><span class="prior-src">ch13 L16-22</span></td>
+<td class="prior">Addresses: Scope creep. Induces: Manageable complexity.<span class="prior-src">ch13 L16-22; ch01 L63-69</span></td>
+<td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">ad hoc</span><span class="opt">documented</span><span class="opt">enforced</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">R1, R2<span class="prior-src">ch13 L541-551</span></td>
+<td class="prior"><b>Scope creep</b> &mdash; Task grows mid-session; agent loses track of earlier instructions as attention degrades<span class="prior-src">ch01 L112-118</span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>exhibited</span></td>
+<td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">17</span></td><td class="prior"><b>Orchestrated Composition</b><span class="prior-src">ch13 L16-22</span></td>
+<td class="prior">Addresses: Monolithic collapse. Induces: Flexibility, reusability.<span class="prior-src">ch13 L16-22; ch01 L63-69</span></td>
+<td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">ad hoc</span><span class="opt">documented</span><span class="opt">enforced</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">O1, O2<span class="prior-src">ch13 L541-551</span></td>
+<td class="prior"><b>Monolithic prompt</b> &mdash; All instructions in one block; small changes produce unpredictable results; impossible to debug<span class="prior-src">ch01 L112-118</span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>exhibited</span></td>
+<td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">18</span></td><td class="prior"><b>Safety Boundaries</b><span class="prior-src">ch13 L16-22</span></td>
+<td class="prior">Addresses: Unbounded autonomy. Induces: Reliability, verifiability.<span class="prior-src">ch13 L16-22; ch01 L63-69</span></td>
+<td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">ad hoc</span><span class="opt">documented</span><span class="opt">enforced</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">S1, S2, S3<span class="prior-src">ch13 L541-551</span></td>
+<td class="prior"><b>Unbounded agent</b> &mdash; No limits on tools or authority; non-determinism plus unlimited access equals unpredictable behavior<span class="prior-src">ch01 L112-118</span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>exhibited</span></td>
+<td class="fill"><span class="f-text"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">19</span></td><td class="prior"><b>Explicit Hierarchy</b><span class="prior-src">ch13 L16-22</span></td>
+<td class="prior">Addresses: Flat guidance. Induces: Modularity, domain adaptation.<span class="prior-src">ch13 L16-22; ch01 L63-69</span></td>
+<td class="fill"><div class="f-select"><span class="opt">absent</span><span class="opt">ad hoc</span><span class="opt">documented</span><span class="opt">enforced</span></div></td>
+<td class="fill"><span class="f-text"></span></td>
+<td class="prior">E1, E2<span class="prior-src">ch13 L541-551</span></td>
+<td class="prior"><b>Flat instructions</b> &mdash; Same rules everywhere; backend security rules load when editing frontend CSS<span class="prior-src">ch01 L112-118</span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>exhibited</span></td>
+<td class="fill"><span class="f-text"></span></td></tr>
+
+    </tbody></table>
+  </div>
+  <div class="ws-block"><h2>D &mdash; Structural properties control map <span class="ws-block-note">five rows, filled last</span></h2>
+    <div class="prior" style="margin-bottom:2mm">The book says these five properties "map directly to the PROSE constraints" but prints no row-by-row correspondence. Column D2 is therefore your team's own reading, marked <b>derived</b>, not the book's.<span class="prior-src">ch27 L106</span></div>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:20%"><col style="width:16%"><col style="width:24%"><col style="width:13%"><col style="width:14%"><col style="width:10%"></colgroup>
+    <thead><tr><th></th><th>Structural property</th><th>PROSE constraint it maps to (derived &mdash; the team's reading)</th><th>Our named control (a specific control, not an intention)</th><th>Owner</th><th>How it is verified (the check that would catch it lapsing)</th><th>Control in place</th></tr></thead>
+    <tbody>
+<tr><td class="ws-num"><span class="fno">20</span></td><td class="prior">Context will remain finite and fragile.<span class="prior-src">ch27 L96-104</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">21</span></td><td class="prior">Output will remain probabilistic.<span class="prior-src">ch27 L96-104</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">22</span></td><td class="prior">Explicit knowledge will remain more valuable than implicit knowledge.<span class="prior-src">ch27 L96-104</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">23</span></td><td class="prior">Human judgment will remain the bottleneck and the differentiator.<span class="prior-src">ch27 L96-104</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td></tr>
+<tr><td class="ws-num"><span class="fno">24</span></td><td class="prior">Composition will remain necessary.<span class="prior-src">ch27 L96-104</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">partial</span><span class="opt">absent</span></div></td></tr>
+
+    </tbody></table>
+  </div>
+  <div class="ws-foot"><div>WS-13-prose-readiness-assessment &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+  <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head"><div><h1>PROSE Readiness Assessment and Remediation Plan</h1><p class="ws-sub">Surface C: the file-by-file disclosure and refactor inventory, one row per existing instruction file, skill, persona and prompt. Prepare it before the session; the full list lives in your spreadsheet.</p></div>
+  <div class="ws-meta"><b>WS-13-prose-readiness-assessment</b><br>Pack Z - Second wave: the practitioner kit<br>fill order <b>7</b> &middot; type <b>rubric</b><br>audience <b>mixed</b></div></div>
+  <div class="ws-source">Source: <b>The PROSE Constraints</b>, <i>Compliance Checklist</i> &middot; <code>handbook/ch13-the-prose-specification.qmd</code> L535-565 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch13-the-prose-specification.html#sec-prose-compliance-checklist">#sec-prose-compliance-checklist</a></div>
+  <div class="ws-instruction">Before the session, run a line count across the estate and list every existing instruction file, skill, persona and prompt, one per row. Tick both size tests for every file, list the subsidiary topics inlined by heading, name the file each should be extracted to, and give an owner and target date for every action other than none. Fill in the header on sheet 1 first. Continue in the spreadsheet if you run out of rows.</div>
+  <div class="ws-block"><h2>C &mdash; Disclosure and refactor inventory <span class="ws-block-note">one row per primitive file</span></h2>
+    <div class="prior"><b>C3 &mdash; a design target (ch12).</b> "If your instruction file exceeds 40-50 lines, it's trying to do too much," because every line of instruction competes for attention with the source code the agent needs to read.<span class="prior-src">ch12 L74</span></div>
+    <div class="prior" style="margin-top:1.5mm"><b>C4 &mdash; a hard trigger (ch13, checklist item P1).</b> Does every instruction file over 100 lines use links, not inline content, for subsidiary topics?<span class="prior-src">ch13 L541</span></div>
+    <div class="prior" style="margin-top:1.5mm"><b>C5, C6, C7, C9 &mdash; the chapter's worked example.</b> Before: five inlined sections (coding standards, authentication, error handling, deployment, accessibility). After: five pointers with descriptive labels, e.g. "Authentication patterns and token lifecycle", not <code>auth.md</code> &mdash; same information, a fraction of the context cost per task. Extraction targets look like <code>./standards/auth.md</code>.<span class="prior-src">ch13 L81-104</span></div>
+    <div class="prior" style="margin:1.5mm 0 2mm"><i>The book states 40-50 lines (ch12) and 100 lines (ch13, checklist item P1) in different chapters without reconciling them. This sheet records both, as two different tests. The intended reading is an open question for the author.</i></div>
+    <table class="ws"><colgroup><col style="width:3%"><col style="width:12%"><col style="width:5%"><col style="width:6%"><col style="width:6%"><col style="width:13%"><col style="width:13%"><col style="width:9%"><col style="width:6%"><col style="width:10%"><col style="width:12%"><col style="width:5%"></colgroup>
+    <thead><tr><th></th><th>C1 Path</th><th>C2 Lines</th><th>C3 Over target</th><th>C4 Over hard trigger</th><th>C5 Subsidiary topics inlined</th><th>C6 Target file each extracts to</th><th>C7 Every link carries a descriptive label</th><th>C8 Single concern</th><th>C9 Refactor action</th><th>C10 Owner (and target date in margin)</th><th>C11 Rolls up to</th></tr></thead>
+    <tbody>
+<tr><td class="ws-num"><span class="fno">25</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="measured line count"></span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">n/a</span></div></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+<td class="fill"><div class="f-select"><span class="opt">split</span><span class="opt">extract</span><span class="opt">relabel</span><span class="opt">none</span></div></td>
+<td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="C4 + C5 &rarr; P1; C7 &rarr; P2; C8 &rarr; O1"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">26</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="measured line count"></span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">n/a</span></div></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+<td class="fill"><div class="f-select"><span class="opt">split</span><span class="opt">extract</span><span class="opt">relabel</span><span class="opt">none</span></div></td>
+<td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="C4 + C5 &rarr; P1; C7 &rarr; P2; C8 &rarr; O1"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">27</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="measured line count"></span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">n/a</span></div></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+<td class="fill"><div class="f-select"><span class="opt">split</span><span class="opt">extract</span><span class="opt">relabel</span><span class="opt">none</span></div></td>
+<td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="C4 + C5 &rarr; P1; C7 &rarr; P2; C8 &rarr; O1"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">28</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="measured line count"></span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">n/a</span></div></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+<td class="fill"><div class="f-select"><span class="opt">split</span><span class="opt">extract</span><span class="opt">relabel</span><span class="opt">none</span></div></td>
+<td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="C4 + C5 &rarr; P1; C7 &rarr; P2; C8 &rarr; O1"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">29</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="measured line count"></span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">n/a</span></div></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+<td class="fill"><div class="f-select"><span class="opt">split</span><span class="opt">extract</span><span class="opt">relabel</span><span class="opt">none</span></div></td>
+<td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="C4 + C5 &rarr; P1; C7 &rarr; P2; C8 &rarr; O1"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">30</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="measured line count"></span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">n/a</span></div></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+<td class="fill"><div class="f-select"><span class="opt">split</span><span class="opt">extract</span><span class="opt">relabel</span><span class="opt">none</span></div></td>
+<td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="C4 + C5 &rarr; P1; C7 &rarr; P2; C8 &rarr; O1"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">31</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="measured line count"></span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">n/a</span></div></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+<td class="fill"><div class="f-select"><span class="opt">split</span><span class="opt">extract</span><span class="opt">relabel</span><span class="opt">none</span></div></td>
+<td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="C4 + C5 &rarr; P1; C7 &rarr; P2; C8 &rarr; O1"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">32</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="measured line count"></span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">n/a</span></div></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+<td class="fill"><div class="f-select"><span class="opt">split</span><span class="opt">extract</span><span class="opt">relabel</span><span class="opt">none</span></div></td>
+<td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="C4 + C5 &rarr; P1; C7 &rarr; P2; C8 &rarr; O1"></span></td></tr>
+<tr><td class="ws-num"><span class="fno">33</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-computed" data-formula="measured line count"></span></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>over</span></td>
+<td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+<td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">n/a</span></div></td>
+<td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+<td class="fill"><div class="f-select"><span class="opt">split</span><span class="opt">extract</span><span class="opt">relabel</span><span class="opt">none</span></div></td>
+<td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-computed" data-formula="C4 + C5 &rarr; P1; C7 &rarr; P2; C8 &rarr; O1"></span></td></tr>
+
+    </tbody></table>
+  </div>
+  <div class="ws-foot"><div>WS-13-prose-readiness-assessment &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+  <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+```

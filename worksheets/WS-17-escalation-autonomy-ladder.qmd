@@ -1,0 +1,332 @@
+---
+title: "Our Escalation and Autonomy Ladder (L1-L4)"
+pagetitle: "WS-17-escalation-autonomy-ladder"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-17-escalation-autonomy-ladder</b> &middot; declared format <b>A3 landscape</b> &middot; 3 sheets.
+  Sheet 1 is the published ladder; sheet 2 carries rate calibration and the stop rule.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Our Escalation and Autonomy Ladder (L1-L4)</h1>
+      <p class="ws-sub">The published ladder: how much an agent may decide unsupervised, who is paged when it stops, and where that is logged. Pinned into the orchestration runbook.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-escalation-autonomy-ladder</b><br>
+      Pack E &middot; fill order <b>6</b> &middot; rubric<br>
+      format <b>A3 landscape</b> &middot; side 1 of 3<br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b> &middot; <i>The Escalation Protocol</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L340-357 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-escalation">#sec-multi-agent-escalation</a>
+    &middot; requires <code>WS-16-consequential-effect-register</code> completed first
+  </div>
+
+  <div class="ws-instruction">
+    You hold the pen. The grey columns are the book's four levels, left as printed. Write our own trigger, response and a real
+    incident from our own delivery in columns 7-9, one line each, because this side gets read at three in the morning. Then name who is
+    paged, the response window, and where the escalation is logged. Higher autonomy means <i>different</i> human involvement, not
+    less. Do not copy the book's examples into column 9.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A &mdash; the ladder <span class="ws-block-note">one row per level; four rows, fixed. Fill left to right.</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:5%">
+        <col style="width:7%"><col style="width:8%"><col style="width:8%"><col style="width:10%"><col style="width:6%">
+        <col style="width:5%"><col style="width:6%"><col style="width:6%"><col style="width:7%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span> Level</th>
+          <th><span class="fno">2</span> The book's trigger</th>
+          <th><span class="fno">3</span> The book's response</th>
+          <th><span class="fno">4</span> The book's example</th>
+          <th><span class="fno">5</span> Automated or human judgement</th>
+          <th><span class="fno">6</span> The case study's variant wording</th>
+          <th><span class="fno">7</span> Our trigger</th>
+          <th><span class="fno">8</span> Our response</th>
+          <th><span class="fno">9</span> Our worked example</th>
+          <th><span class="fno">10</span> Who is paged</th>
+          <th><span class="fno">11</span> Response window</th>
+          <th><span class="fno">12</span> Authority to approve a scope change</th>
+          <th><span class="fno">13</span> Where the escalation is logged</th>
+          <th><span class="fno">14</span> Consequential effects that must resolve here or above</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior"><b>L1: Self-heal</b><span class="prior-src">ch17 L346</span></td>
+          <td class="locked">Agent hits a test failure it can debug</td>
+          <td class="locked">Agent fixes and continues</td>
+          <td class="locked">Type error in generated code</td>
+          <td class="locked">Automated</td>
+          <td class="locked">&mdash; (the reference case runs a three-tier variant with no L1 and a narrower L3)</td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="locked">L4 only</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>L2: Retry</b><span class="prior-src">ch17 L347</span></td>
+          <td class="locked">Agent produces incomplete output</td>
+          <td class="locked">Re-dispatch with refined prompt</td>
+          <td class="locked">Agent missed 3 of 12 files in scope</td>
+          <td class="locked">Automated</td>
+          <td class="locked"><i>agent needs guidance</i></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="locked">L4 only</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>L3: Human decides</b><span class="prior-src">ch17 L348</span></td>
+          <td class="locked">Trade-off between competing principles</td>
+          <td class="locked">Human makes design call</td>
+          <td class="locked">UX convention vs architectural purity</td>
+          <td class="locked">Requires human judgement</td>
+          <td class="locked"><i>agent cannot complete</i></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="locked">L4 only</td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>L4: Scope change</b><span class="prior-src">ch17 L349</span></td>
+          <td class="locked">Finding requires work outside the current plan</td>
+          <td class="locked">Human creates follow-up task</td>
+          <td class="locked">Discovery of a pre-existing bug unrelated to the change</td>
+          <td class="locked">Requires human judgement</td>
+          <td class="locked"><i>plan scope changes</i></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:7.4pt;color:#454f59;margin:2mm 0 0">
+      Column 5: "The L1 and L2 levels are automated. L3 and L4 require human judgment." (ch17 L353). Column 6 sources: case study APM L125-131.
+      Columns 10-13: case study APM L125-131. Column 12 is printed on the L4 row only: the person who can say yes to work outside the plan.
+      Name a person or a named rota position, not "the tech lead". Column 14: carry across from <code>WS-16-consequential-effect-register</code>
+      column 25: every judgement-external gate lands at L3 or L4, with the same owner. Column 6 is printed, not reconciled: the case study and the
+      chapter number the middle of the ladder slightly differently, so you see both.
+    </p>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The goal is to minimize L3 and L4 interventions not by suppressing them, but by making the plan specific enough that most decisions resolve at L1 or L2." (ch17 L353)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-escalation-autonomy-ladder &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Rate calibration, stop rule and handoff</h1>
+      <p class="ws-sub">Working pages. Block B is deliberately more label than number. Block C is the exit the ladder does not otherwise name.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-escalation-autonomy-ladder</b><br>
+      Pack E &middot; fill order <b>6</b> &middot; rubric<br>
+      format <b>A3 landscape</b> &middot; side 2 of 3<br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; rate calibration <span class="ws-block-note">the figures come from one reference execution of ~25 dispatches; ours ships blank</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:72%"><col style="width:24%">
+      </colgroup>
+      <thead>
+                <tr><th></th><th>15 &middot; The book's figure</th><th>16 &middot; Status label, printed beside every row</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num">a</td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">Observed intervention rate approximately 12% across ~25 dispatches</span> <span class="hedge-text">"That ~20% rate is characteristic of what we observed in a well-planned execution on a non-trivial change." "These thresholds are calibration points from our reference case study, not validated benchmarks."</span> <span class="hedge-src">ch17 L355, L320</span></div></td>
+          <td class="locked"><b>Starting hypothesis, replace after one quarter.</b></td>
+        </tr>
+        <tr>
+          <td class="ws-num">b</td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">15-20% offered as a starting hypothesis for well-planned work</span> <span class="hedge-text">"though this has not been validated across multiple teams. These thresholds are calibration points from our reference case study, not validated benchmarks."</span> <span class="hedge-src">ch17 L320</span></div></td>
+          <td class="locked"><b>Starting hypothesis, replace after one quarter.</b></td>
+        </tr>
+        <tr>
+          <td class="ws-num">c</td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">Upper alarm: an L3+ rate above 25% means the plan needs more specific principles or better task scoping</span> <span class="hedge-text">"That ~20% rate is characteristic of what we observed in a well-planned execution on a non-trivial change." Three interventions in one execution of one project.</span> <span class="hedge-src">ch17 L355</span></div></td>
+          <td class="locked"><b>Starting hypothesis, replace after one quarter.</b></td>
+        </tr>
+        <tr>
+          <td class="ws-num">d</td>
+          <td class="prior"><div class="prior--hedged"><span class="hedge-figure">Lower alarm: a rate below 5% warrants scrutiny</span> <span class="hedge-text">"These thresholds are calibration points from our reference case study, not validated benchmarks."</span> <span class="hedge-src">ch17 L320</span></div></td>
+          <td class="locked"><b>Starting hypothesis, replace after one quarter.</b></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ours-label">Our own figures &mdash; written by us, not derived from the book's rows above</div>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:26%"><col style="width:24%"><col style="width:44%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>Guidance</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td><td><b>Our measured rate</b></td>
+          <td class="locked">Ships blank. Filled at the first quarterly review from our own dispatch log, never in this session.</td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td><td><b>Our target L3+ rate</b></td>
+          <td class="locked">Written by us, with a rationale that is not "the book says".</td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td><td><b>Our upper alarm, and the action we take at it</b></td>
+          <td class="prior">The chapter's response to a high rate: more specific principles or better task scoping, not suppressing escalations.<span class="prior-src">ch17 L353, L355</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">20</span></td><td><b>Our lower alarm, and the action we take at it</b></td>
+          <td class="prior">Two readings: the work may be too simple for orchestration, or review may be insufficient.<span class="prior-src">ch17 L320</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">21</span></td><td><b>Who measures it, from what data, how often</b></td>
+          <td class="locked">The dispatch log or equivalent. "We'll know" is not a data source.</td>
+          <td class="fill"><span class="f-owner"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">22</span></td><td><b>Date of the first replacement review</b></td>
+          <td class="locked">One quarter from publication.</td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-escalation-autonomy-ladder &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Stop rule and handoff checklist</h1>
+      <p class="ws-sub">Block C: the exit the ladder does not otherwise name.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-escalation-autonomy-ladder</b><br>
+      Pack E &middot; fill order <b>6</b> &middot; rubric<br>
+      format <b>A3 landscape</b> &middot; side 3 of 3<br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block C &mdash; the stop rule and handoff checklist <span class="ws-block-note">filled once; a stop is an exit, not a failure</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:24%"><col style="width:30%"><col style="width:40%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">23</span></td><td><b>How many distinct approaches before we stop</b></td>
+          <td class="prior">The reference case stopped after three genuinely distinct approaches. One case, not a rule.<span class="prior-src">case study growth L58-106</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">24</span></td><td><b>What distinguishes a platform limitation from an application-logic problem</b></td>
+          <td class="prior">The platform rejects the operation by construction, rather than our inputs being wrong.<span class="prior-src">case study growth L58-106</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">25</span></td><td><b>Who declares the stop</b></td>
+          <td class="locked">A named individual. Abandoning automation must be someone's call to make.</td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">26</span></td><td><b>Required format of the manual handoff checklist</b></td>
+          <td class="prior">A short numbered list of concrete steps a human with no context can execute directly.<span class="prior-src">case study growth L58-106</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">27</span></td><td><b>Where the stop and the handoff are logged</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">28</span></td><td><b>Published by</b></td>
+          <td class="locked">The owner of the orchestration runbook.</td>
+          <td class="fill tall"><span class="f-sign"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-escalation-autonomy-ladder &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```

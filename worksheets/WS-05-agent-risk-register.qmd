@@ -1,0 +1,572 @@
+---
+title: "Agent Risk Register (Six Categories, Twelve Named Risks)"
+pagetitle: "WS-05-agent-risk-register"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+            table.ws col:nth-child(2){width:7% !important} table.ws col:nth-child(3){width:8% !important}
+            table.ws col:nth-child(5){width:15% !important} table.ws col:nth-child(8){width:10% !important}
+            table.ws col:nth-child(9){width:7% !important} table.ws col:nth-child(11){width:6% !important}
+            table.ws col:nth-child(14){width:7% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(1){width:10% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(2){width:7% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(3){width:8% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(8){width:7% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(9){width:7% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(11){width:6% !important}
+            .sheet:nth-of-type(n+5) table.ws col:nth-child(14){width:8% !important}
+            table.ws td.fill > span.prior{display:block;position:static;width:auto;height:auto;overflow:visible;word-break:normal;overflow-wrap:break-word;font-size:7pt;margin-bottom:1mm}
+            table.ws td:nth-child(5) .f-text{display:block;height:13mm}
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-05-agent-risk-register</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  5 sheets. Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Agent Risk Register (Six Categories, Twelve Named Risks)</h1>
+      <p class="ws-sub">A populated, owned agent risk register to table at a risk committee and re-review quarterly.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-agent-risk-register</b><br>
+      Pack E - Guardrails: authority, risk and proof<br>
+      fill order <b>1</b> &middot; type <b>matrix</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>Risk Taxonomy</i> &middot;
+    <code>handbook\ch05-governance-for-ai-assisted-delivery.qmd</code> L100-121 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-risk-taxonomy">#sec-governance-risk-taxonomy</a>
+  </div>
+
+  <div class="ws-instruction">
+    For each risk, decide whether it applies to you; name the system and your concrete manifestation; mark likelihood and impact; record your control, its status and the artifact that proves it; name an individual with a surname; and set the next review within one quarter of the tabling date. Complete the five organization-specific rows to the same standard. For the two knowledge-atrophy risks, point to <b>WS-05-capability-retention-plan</b>, not a control invented here; if that plan is not complete, record the dependency and its closure date in the evidence field.
+  </div>
+
+  <div class="ws-block">
+    <h2>Agent risk register <span class="ws-block-note">Named risks — 1 of 3</span></h2>
+    <table class="ws" style="font-size:7pt;line-height:1.05">
+      <colgroup>
+        <col style="width:6%"><col style="width:8%"><col style="width:10%"><col style="width:5%">
+        <col style="width:7%"><col style="width:6%"><col style="width:6%"><col style="width:12%">
+        <col style="width:8%"><col style="width:5%"><col style="width:7%"><col style="width:6%">
+        <col style="width:6%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span><br>Category</th><th><span class="fno">2</span><br>Risk</th>
+          <th><span class="fno">3</span><br>The book's example</th><th><span class="fno">4</span><br>Applies to us</th>
+          <th><span class="fno">5</span><br>Our manifestation</th><th><span class="fno">6</span><br>Likelihood</th>
+          <th><span class="fno">7</span><br>Impact</th><th><span class="fno">8</span><br>The book's mitigation</th>
+          <th><span class="fno">9</span><br>Our control</th><th><span class="fno">10</span><br>Control status</th>
+          <th><span class="fno">11</span><br>Evidence for column 10</th><th><span class="fno">12</span><br>Owner — function</th>
+          <th><span class="fno">13</span><br>Owner — named individual</th><th><span class="fno">14</span><br>Next review</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">IP and data exposure<span class="prior-src">ch05 L108</span></td>
+          <td class="prior">Proprietary code sent to external model<span class="prior-src">ch05 L108</span></td>
+          <td class="prior">Agent context includes auth module source; developer uses cloud-hosted model without enterprise data agreement<span class="prior-src">ch05 L108</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Enforce enterprise-tier agreements with training opt-out. Deploy context filters. Maintain data classification policy covering agent workflows.<span class="prior-src">ch05 L108</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Security / Legal<span class="prior-src">ch05 L108</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior">IP and data exposure<span class="prior-src">ch05 L109</span></td>
+          <td class="prior">Training data reproduced in output<span class="prior-src">ch05 L109</span></td>
+          <td class="prior">Agent generates a near-exact copy of a GPL-licensed implementation, merged without review<span class="prior-src">ch05 L109</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Integrate license-scanning tools into CI. Flag agent-generated code for IP review in sensitive components.<span class="prior-src">ch05 L109</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Legal / Engineering<span class="prior-src">ch05 L109</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior">Quality degradation<span class="prior-src">ch05 L110</span></td>
+          <td class="prior">Plausible incorrectness<span class="prior-src">ch05 L110</span></td>
+          <td class="prior">Agent implements a data pipeline that passes all tests but silently drops null values the business logic depends on<span class="prior-src">ch05 L110</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Require property-based or invariant tests for agent-generated code in critical paths. Review output against ADRs.<span class="prior-src">ch05 L110</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Engineering leads<span class="prior-src">ch05 L110</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior">Quality degradation<span class="prior-src">ch05 L111</span></td>
+          <td class="prior">Convention drift<span class="prior-src">ch05 L111</span></td>
+          <td class="prior">Fifty agent-generated files use three different error-handling patterns; none match the team standard<span class="prior-src">ch05 L111</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Encode conventions as structured context (instruction files, linters, architectural rules) that agents consume during generation.<span class="prior-src">ch05 L111</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Tech leads / Architects<span class="prior-src">ch05 L111</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-agent-risk-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Agent Risk Register (Six Categories, Twelve Named Risks)</h1>
+      <p class="ws-sub">A populated, owned agent risk register to table at a risk committee and re-review quarterly.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-agent-risk-register</b><br>
+      Pack E - Guardrails: authority, risk and proof<br>
+      fill order <b>1</b> &middot; type <b>matrix</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>Risk Taxonomy</i> &middot;
+    <code>handbook\ch05-governance-for-ai-assisted-delivery.qmd</code> L100-121 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-risk-taxonomy">#sec-governance-risk-taxonomy</a>
+  </div>
+  <div class="ws-instruction">
+    For each risk, decide whether it applies to you; name the system and your concrete manifestation; mark likelihood and impact; record your control, its status and the artifact that proves it; name an individual with a surname; and set the next review within one quarter of the tabling date. For the two knowledge-atrophy risks, point to <b>WS-05-capability-retention-plan</b>, not a control invented here; if that plan is not complete, record the dependency and its closure date in the evidence field.
+  </div>
+  <div class="ws-block">
+    <h2>Agent risk register <span class="ws-block-note">Named risks — 2 of 3</span></h2>
+    <table class="ws" style="font-size:7pt;line-height:1.05">
+      <colgroup>
+        <col style="width:6%"><col style="width:8%"><col style="width:10%"><col style="width:5%">
+        <col style="width:7%"><col style="width:6%"><col style="width:6%"><col style="width:12%">
+        <col style="width:8%"><col style="width:5%"><col style="width:7%"><col style="width:6%">
+        <col style="width:6%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span><br>Category</th><th><span class="fno">2</span><br>Risk</th>
+          <th><span class="fno">3</span><br>The book's example</th><th><span class="fno">4</span><br>Applies to us</th>
+          <th><span class="fno">5</span><br>Our manifestation</th><th><span class="fno">6</span><br>Likelihood</th>
+          <th><span class="fno">7</span><br>Impact</th><th><span class="fno">8</span><br>The book's mitigation</th>
+          <th><span class="fno">9</span><br>Our control</th><th><span class="fno">10</span><br>Control status</th>
+          <th><span class="fno">11</span><br>Evidence for column 10</th><th><span class="fno">12</span><br>Owner — function</th>
+          <th><span class="fno">13</span><br>Owner — named individual</th><th><span class="fno">14</span><br>Next review</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">Dependency and concentration<span class="prior-src">ch05 L112</span></td>
+          <td class="prior">Model outage<span class="prior-src">ch05 L112</span></td>
+          <td class="prior">Primary model provider has a 4-hour outage during a release sprint; team cannot complete agent-assisted tasks<span class="prior-src">ch05 L112</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Maintain fallback model configurations. Ensure critical workflows degrade gracefully to human-only execution. Test fallback quarterly.<span class="prior-src">ch05 L112</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Platform / Engineering<span class="prior-src">ch05 L112</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior">Dependency and concentration<span class="prior-src">ch05 L113</span></td>
+          <td class="prior">Vendor lock-in<span class="prior-src">ch05 L113</span></td>
+          <td class="prior">Organization has 2,000 tool-specific instruction files; switching tools requires rewriting all of them<span class="prior-src">ch05 L113</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Use portable, vendor-neutral formats for context artifacts. Separate content from format.<span class="prior-src">ch05 L113</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Architecture / Platform<span class="prior-src">ch05 L113</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior">Knowledge atrophy<span class="prior-src">ch05 L114</span></td>
+          <td class="prior">Debugging skill loss<span class="prior-src">ch05 L114</span></td>
+          <td class="prior">Junior engineers cannot diagnose a production issue because they never debugged code without agent assistance<span class="prior-src">ch05 L114</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Require regular unassisted development exercises. Pair juniors with agent output for review practice.<span class="prior-src">ch05 L114</span></td>
+          <td class="prior">WS-05-capability-retention-plan<span class="prior-src">pointer to worksheet, not book text; risk at ch05 L114</span></td>
+          <td class="fill"><span class="prior">WS-05-capability-retention-plan</span><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="prior">WS-05-capability-retention-plan</span><span class="f-text"></span></td>
+          <td class="prior">Engineering managers<span class="prior-src">ch05 L114</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior">Knowledge atrophy<span class="prior-src">ch05 L115</span></td>
+          <td class="prior">Architectural reasoning decay<span class="prior-src">ch05 L115</span></td>
+          <td class="prior">Team cannot redesign a subsystem because no one has practiced trade-off decisions outside agent-provided constraints<span class="prior-src">ch05 L115</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Rotate architecture review responsibilities. Include constraint-design tasks in sprint work.<span class="prior-src">ch05 L115</span></td>
+          <td class="prior">WS-05-capability-retention-plan<span class="prior-src">pointer to worksheet, not book text; risk at ch05 L115</span></td>
+          <td class="fill"><span class="prior">WS-05-capability-retention-plan</span><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="prior">WS-05-capability-retention-plan</span><span class="f-text"></span></td>
+          <td class="prior">Architecture / CTO<span class="prior-src">ch05 L115</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-05-agent-risk-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Agent Risk Register (Six Categories, Twelve Named Risks)</h1>
+      <p class="ws-sub">A populated, owned agent risk register to table at a risk committee and re-review quarterly.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-agent-risk-register</b><br>
+      Pack E - Guardrails: authority, risk and proof<br>
+      fill order <b>1</b> &middot; type <b>matrix</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>Risk Taxonomy</i> &middot;
+    <code>handbook\ch05-governance-for-ai-assisted-delivery.qmd</code> L100-121 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-risk-taxonomy">#sec-governance-risk-taxonomy</a>
+  </div>
+  <div class="ws-instruction">
+    For each risk, decide whether it applies to you; name the system and your concrete manifestation; mark likelihood and impact; record your control, its status and the artifact that proves it; name an individual with a surname; and set the next review within one quarter of the tabling date. For the two knowledge-atrophy risks, point to <b>WS-05-capability-retention-plan</b>, not a control invented here; if that plan is not complete, record the dependency and its closure date in the evidence field.
+  </div>
+  <div class="ws-block">
+    <h2>Agent risk register <span class="ws-block-note">Named risks — 3 of 3</span></h2>
+    <table class="ws" style="font-size:7pt;line-height:1.05">
+      <colgroup>
+        <col style="width:6%"><col style="width:8%"><col style="width:10%"><col style="width:5%">
+        <col style="width:7%"><col style="width:6%"><col style="width:6%"><col style="width:12%">
+        <col style="width:8%"><col style="width:5%"><col style="width:7%"><col style="width:6%">
+        <col style="width:6%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span><br>Category</th><th><span class="fno">2</span><br>Risk</th>
+          <th><span class="fno">3</span><br>The book's example</th><th><span class="fno">4</span><br>Applies to us</th>
+          <th><span class="fno">5</span><br>Our manifestation</th><th><span class="fno">6</span><br>Likelihood</th>
+          <th><span class="fno">7</span><br>Impact</th><th><span class="fno">8</span><br>The book's mitigation</th>
+          <th><span class="fno">9</span><br>Our control</th><th><span class="fno">10</span><br>Control status</th>
+          <th><span class="fno">11</span><br>Evidence for column 10</th><th><span class="fno">12</span><br>Owner — function</th>
+          <th><span class="fno">13</span><br>Owner — named individual</th><th><span class="fno">14</span><br>Next review</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">Regulatory liability<span class="prior-src">ch05 L116</span></td>
+          <td class="prior">Implicit compliance violation<span class="prior-src">ch05 L116</span></td>
+          <td class="prior">Agent generates a logging module that captures user IP addresses and geolocation where this requires explicit consent<span class="prior-src">ch05 L116</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Define compliance constraints as explicit agent context for regulated code paths. Require compliance-aware review.<span class="prior-src">ch05 L116</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Legal / Security<span class="prior-src">ch05 L116</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior">Regulatory liability<span class="prior-src">ch05 L117</span></td>
+          <td class="prior">Accountability gap<span class="prior-src">ch05 L117</span></td>
+          <td class="prior">Regulator asks who decided to store customer data in a specific format; the decision was made by an agent in a 50-file PR<span class="prior-src">ch05 L117</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Maintain decision logs for agent-generated code in regulated areas. Include "compliance-relevant choices" in PR review checklists.<span class="prior-src">ch05 L117</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Engineering leads / Legal<span class="prior-src">ch05 L117</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior">Supply chain and context integrity<span class="prior-src">ch05 L118</span></td>
+          <td class="prior">Prompt injection via dependency<span class="prior-src">ch05 L118</span></td>
+          <td class="prior">A transitive dependency README includes hidden instructions causing the agent to exfiltrate environment variables<span class="prior-src">ch05 L118</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Restrict agent context to vetted, first-party sources for sensitive operations. Apply context sanitization.<span class="prior-src">ch05 L118</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Security / Platform<span class="prior-src">ch05 L118</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="prior">Supply chain and context integrity<span class="prior-src">ch05 L119</span></td>
+          <td class="prior">Compromised instruction files<span class="prior-src">ch05 L119</span></td>
+          <td class="prior">Attacker subtly modifies an agent instruction file via PR, causing generated auth code to include a backdoor pattern<span class="prior-src">ch05 L119</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Apply code review and change-management controls to instruction files with the same rigor as production code.<span class="prior-src">ch05 L119</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">Security / Engineering leads<span class="prior-src">ch05 L119</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-05-agent-risk-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Agent Risk Register (Six Categories, Twelve Named Risks)</h1>
+      <p class="ws-sub">A populated, owned agent risk register to table at a risk committee and re-review quarterly.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-agent-risk-register</b><br>
+      Pack E - Guardrails: authority, risk and proof<br>
+      fill order <b>1</b> &middot; type <b>matrix</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>Risk Taxonomy</i> &middot;
+    <code>handbook\ch05-governance-for-ai-assisted-delivery.qmd</code> L100-121 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-risk-taxonomy">#sec-governance-risk-taxonomy</a>
+  </div>
+  <div class="ws-instruction">
+    Add each organization-specific risk and complete every field to the same standard as the printed risks. Tabled at is the committee and date; the register owner signs below, distinct from the individuals named for each risk.
+  </div>
+  <div class="ws-block">
+    <h2>Organisation-specific risks <span class="ws-block-note">Rows 1–3 of 5; complete each to the same standard</span></h2>
+    <table class="ws" style="font-size:7pt;line-height:1.05">
+      <colgroup>
+        <col style="width:15%"><col style="width:7%"><col style="width:8%"><col style="width:5%">
+        <col style="width:7%"><col style="width:5%"><col style="width:5%"><col style="width:10%">
+        <col style="width:7%"><col style="width:5%"><col style="width:6%"><col style="width:5%">
+        <col style="width:7%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span><br>Category</th><th><span class="fno">2</span><br>Risk</th>
+          <th><span class="fno">3</span><br>The book's example</th><th><span class="fno">4</span><br>Applies to us</th>
+          <th><span class="fno">5</span><br>Our manifestation</th><th><span class="fno">6</span><br>Likelihood</th>
+          <th><span class="fno">7</span><br>Impact</th><th><span class="fno">8</span><br>The book's mitigation</th>
+          <th><span class="fno">9</span><br>Our control</th><th><span class="fno">10</span><br>Control status</th>
+          <th><span class="fno">11</span><br>Evidence for column 10</th><th><span class="fno">12</span><br>Owner — function</th>
+          <th><span class="fno">13</span><br>Owner — named individual</th><th><span class="fno">14</span><br>Next review</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">IP and data exposure</span><span class="opt">Quality degradation</span><span class="opt">Dependency and concentration</span><span class="opt">Knowledge atrophy</span><span class="opt">Regulatory liability</span><span class="opt">Supply chain and context integrity</span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="locked">—</td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="locked">—</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="locked">—</td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">IP and data exposure</span><span class="opt">Quality degradation</span><span class="opt">Dependency and concentration</span><span class="opt">Knowledge atrophy</span><span class="opt">Regulatory liability</span><span class="opt">Supply chain and context integrity</span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="locked">—</td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="locked">—</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="locked">—</td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">IP and data exposure</span><span class="opt">Quality degradation</span><span class="opt">Dependency and concentration</span><span class="opt">Knowledge atrophy</span><span class="opt">Regulatory liability</span><span class="opt">Supply chain and context integrity</span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="locked">—</td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="locked">—</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="locked">—</td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-05-agent-risk-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Agent Risk Register (Six Categories, Twelve Named Risks)</h1>
+      <p class="ws-sub">A populated, owned agent risk register to table at a risk committee and re-review quarterly.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-agent-risk-register</b><br>
+      Pack E - Guardrails: authority, risk and proof<br>
+      fill order <b>1</b> &middot; type <b>matrix</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>Risk Taxonomy</i> &middot;
+    <code>handbook\ch05-governance-for-ai-assisted-delivery.qmd</code> L100-121 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-risk-taxonomy">#sec-governance-risk-taxonomy</a>
+  </div>
+  <div class="ws-instruction">
+    Complete the final two organization-specific risks to the same standard as the printed risks. Tabled at is the committee and date; the register owner signs below, distinct from the individuals named for each risk.
+  </div>
+  <div class="ws-block">
+    <h2>Organisation-specific risks <span class="ws-block-note">Rows 4–5 of 5</span></h2>
+    <table class="ws" style="font-size:7pt;line-height:1.05">
+      <colgroup>
+        <col style="width:15%"><col style="width:7%"><col style="width:8%"><col style="width:5%">
+        <col style="width:7%"><col style="width:5%"><col style="width:5%"><col style="width:10%">
+        <col style="width:7%"><col style="width:5%"><col style="width:6%"><col style="width:5%">
+        <col style="width:7%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span><br>Category</th><th><span class="fno">2</span><br>Risk</th>
+          <th><span class="fno">3</span><br>The book's example</th><th><span class="fno">4</span><br>Applies to us</th>
+          <th><span class="fno">5</span><br>Our manifestation</th><th><span class="fno">6</span><br>Likelihood</th>
+          <th><span class="fno">7</span><br>Impact</th><th><span class="fno">8</span><br>The book's mitigation</th>
+          <th><span class="fno">9</span><br>Our control</th><th><span class="fno">10</span><br>Control status</th>
+          <th><span class="fno">11</span><br>Evidence for column 10</th><th><span class="fno">12</span><br>Owner — function</th>
+          <th><span class="fno">13</span><br>Owner — named individual</th><th><span class="fno">14</span><br>Next review</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">IP and data exposure</span><span class="opt">Quality degradation</span><span class="opt">Dependency and concentration</span><span class="opt">Knowledge atrophy</span><span class="opt">Regulatory liability</span><span class="opt">Supply chain and context integrity</span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="locked">—</td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="locked">—</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="locked">—</td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">IP and data exposure</span><span class="opt">Quality degradation</span><span class="opt">Dependency and concentration</span><span class="opt">Knowledge atrophy</span><span class="opt">Regulatory liability</span><span class="opt">Supply chain and context integrity</span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="locked">—</td>
+          <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="locked">—</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">in place</span><span class="opt">planned</span><span class="opt">absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td><td class="locked">—</td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-block">
+    <h2>Tabling and accountability</h2>
+    <table class="ws">
+      <colgroup><col style="width:16%"><col style="width:84%"></colgroup>
+      <tbody>
+        <tr>
+          <td><b>Tabled at</b></td>
+          <td class="fill"><span class="f-text"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td><b>Register owner signature</b></td>
+          <td class="fill tall"><span class="f-sign"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-05-agent-risk-register &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```

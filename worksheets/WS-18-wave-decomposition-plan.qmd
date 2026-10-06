@@ -1,0 +1,496 @@
+---
+title: "Wave Decomposition Plan and Self-Sufficiency Check"
+pagetitle: "WS-18-wave-decomposition-plan"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-18-wave-decomposition-plan</b> &middot; declared format <b>A3 landscape</b> &middot; 4 sheets
+  (A, B, C one per epic, D). The white page is one physical sheet at true size.
+</div>
+
+<!-- ===================== SHEET 1 : PART A ===================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Wave Decomposition Plan and Self-Sufficiency Check</h1>
+      <p class="ws-sub">An executable wave plan with verified file partitioning and no task that will stall mid-wave &mdash; the direct input to dispatch. Part A sizes the work.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-wave-decomposition-plan</b><br>
+      Pack Z &middot; fill order 21 &middot; roadmap<br>
+      audience <b>practitioner</b><br>
+      Part <b>A of A&ndash;D</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Ch 18 &mdash; The Execution Meta-Process</b> &middot; Wave Decomposition &middot;
+    <code>handbook/ch18-the-execution-meta-process.qmd</code> L138&ndash;180 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-wave-decomposition">#sec-meta-wave-decomposition</a>
+    &middot; Part A also draws on <code>case-study-apm-overhaul.qmd</code> L135&ndash;144.
+  </div>
+
+  <div class="ws-instruction">
+    You are filling this with the person who will orchestrate the waves. For each candidate work item, <b>count</b> the
+    touchpoints in the real repository &mdash; do not estimate &mdash; then divide by the per-agent ceiling your team adopts and read off how
+    many sub-waves it needs. The ceiling printed below is one project's observation, not a rule: start from it if you must, and
+    write your own, with a date, after your first wave has run. Prerequisites: <b>WS-18-plan-charter-and-principles</b> and
+    <b>WS-17-conflict-resolution-playbook</b>. This sheet is not a single-session sheet: do A and B now, then schedule a named
+    follow-up to close C and D before any dispatch.
+  </div>
+
+  <div class="ws-block">
+    <h2>Part A &mdash; Size the work <span class="ws-block-note">rows are candidate work items &middot; projected and filled live</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:14%"><col style="width:12%"><col style="width:10%"><col style="width:12%"><col style="width:10%"><col style="width:18%"><col style="width:24%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">A1</span> Work item</th>
+          <th><span class="fno">A2</span> Touchpoint type</th>
+          <th><span class="fno">A3</span> Touchpoint count</th>
+          <th><span class="fno">A4</span> Per-agent ceiling &mdash; starting calibration, re-measure after the first wave</th>
+          <th><span class="fno">A5</span> Sub-waves required</th>
+          <th><span class="fno">A6</span> Split boundary used</th>
+          <th><span class="fno">A7</span> Re-measured ceiling after the first wave</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">&mdash;<span class="prior-src">cs-apm L135&ndash;144</span></td>
+          <td class="prior">&mdash;<span class="prior-src">cs-apm L135&ndash;144</span></td>
+          <td class="prior">&mdash;<span class="prior-src">cs-apm L135&ndash;144</span></td>
+          <td class="prior">One project's calibration &mdash; see the hedged box below. Not a rule.<span class="prior-src">cs-apm L26; L135&ndash;144</span></td>
+          <td class="prior">&mdash;<span class="prior-src">cs-apm L141&ndash;144</span></td>
+          <td class="prior">Worked instance: structural calls in one sub-wave, verbose calls in the next &mdash; a boundary of kind, not of line number.<span class="prior-src">cs-apm L141&ndash;144</span></td>
+          <td class="prior">&mdash; (this column is why A4 is a prior and not a rule)<span class="prior-src">derived; required by &sect;10</span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">call sites</span><span class="opt">files</span><span class="opt">endpoints</span><span class="opt">other</span></div></td>
+          <td class="fill"><span class="f-text sm"></span><span style="font-size:7pt">counted from the repository</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="A3 &divide; A4, rounded up"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">call sites</span><span class="opt">files</span><span class="opt">endpoints</span><span class="opt">other</span></div></td>
+          <td class="fill"><span class="f-text sm"></span><span style="font-size:7pt">counted from the repository</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="A3 &divide; A4, rounded up"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">call sites</span><span class="opt">files</span><span class="opt">endpoints</span><span class="opt">other</span></div></td>
+          <td class="fill"><span class="f-text sm"></span><span style="font-size:7pt">counted from the repository</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="A3 &divide; A4, rounded up"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">call sites</span><span class="opt">files</span><span class="opt">endpoints</span><span class="opt">other</span></div></td>
+          <td class="fill"><span class="f-text sm"></span><span style="font-size:7pt">counted from the repository</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="A3 &divide; A4, rounded up"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:1.5mm 0 0">A4 is what this team adopts to begin with. A7 replaces it once a wave has run. A sheet whose A7 is still empty is visibly carrying a borrowed calibration.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>A4 &mdash; the book's starting calibration, with its hedge <span class="ws-block-note">one unit &middot; never a target</span></h2>
+    <div class="prior--hedged">
+      <span class="hedge-figure">One project's observed threshold: ~25 call sites per agent, after a single dispatch carrying 58 call sites in one file ran for 45+ minutes and stopped producing coherent edits.</span>
+      <span class="hedge-text">A single file in a single project. The number that generalises is the practice - count touchpoints before dispatch - not the threshold.</span>
+      <span class="hedge-src">case-study-apm-overhaul.qmd L135&ndash;144 (figure: cs-apm L26)</span>
+    </div>
+    <div class="ours-label">Our own ceiling &mdash; measured on our code, dated (copy into A7 when a wave has run)</div>
+    <span class="f-text"></span>
+  </div>
+
+  <div class="ws-foot-quote">
+    "can an agent complete this task without asking me a question?" (ch18 L176)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-18-wave-decomposition-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ===================== SHEET 2 : PART B ===================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Wave Decomposition Plan and Self-Sufficiency Check</h1>
+      <p class="ws-sub">Part B is the wave table. Foundation work &mdash; types, protocols, shared conventions &mdash; is forced into Wave 0.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-wave-decomposition-plan</b><br>
+      Pack Z &middot; fill order 21 &middot; roadmap<br>
+      audience <b>practitioner</b><br>
+      Part <b>B of A&ndash;D</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Ch 18 &mdash; The Execution Meta-Process</b> &middot; Wave Decomposition &middot;
+    <code>handbook/ch18-the-execution-meta-process.qmd</code> L138&ndash;180 (L142, L159, L163&ndash;172) &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-wave-decomposition">#sec-meta-wave-decomposition</a>
+  </div>
+
+  <div class="ws-instruction">
+    One row per planned wave. Wave 0 is tasks with no dependencies; the ordering is directional and strict. For each wave name the
+    committed output it builds on, set the parallel agent count using the trade-off table beside B3, state the scope boundary, and
+    write the checkpoint as an observable behavior, the command that observes it and the output expected. Checkpoints are authored
+    properly in <b>WS-CS-APM-checkpoint-assertions</b>; transcribe them here.
+  </div>
+
+  <div class="ws-block">
+    <h2>Part B &mdash; The wave table <span class="ws-block-note">rows are waves &middot; projected and filled live</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:7%"><col style="width:13%"><col style="width:10%"><col style="width:10%"><col style="width:13%"><col style="width:21%"><col style="width:12%"><col style="width:14%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">B1</span> Wave number</th>
+          <th><span class="fno">B2</span> Wave name</th>
+          <th><span class="fno">B3</span> Parallel agent count</th>
+          <th><span class="fno">B4</span> Depends on</th>
+          <th><span class="fno">B5</span> Scope boundary</th>
+          <th><span class="fno">B6</span> Named checkpoint assertion</th>
+          <th><span class="fno">B7</span> Commit before next wave</th>
+          <th><span class="fno">B8</span> Documented exception to one-file-one-agent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">Wave 0 = tasks with no dependencies.<span class="prior-src">ch18 L142</span></td>
+          <td class="prior">Foundation &rarr; Core &rarr; Migration &rarr; Polish; or Foundation, Auth wiring, Logger wiring, Tests, Ship.<span class="prior-src">ch18 L146; cs-apm L105&ndash;111</span></td>
+          <td class="prior">See trade-off table below. Start with smaller waves.<span class="prior-src">ch18 L163&ndash;172</span></td>
+          <td class="prior">No task in wave N may depend on a task in wave N+1.<span class="prior-src">ch18 L142</span></td>
+          <td class="prior">One file, one agent, per wave.<span class="prior-src">ch18 L159; cs-apm L115&ndash;117</span></td>
+          <td class="prior">&ldquo;tests pass&rdquo; is not an acceptable entry.<span class="prior-src">cs-apm L207&ndash;210</span></td>
+          <td class="prior">The committed state after a wave is the ground truth for the next wave's agents.<span class="prior-src">ch17 L289</span></td>
+          <td class="prior">The reference execution carried exactly one and documented it.<span class="prior-src">cs-apm L115&ndash;117</span></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">0</span><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">&hellip;</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">previous wave</span></div><span style="font-size:7pt">committed output built on:</span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>committed</span><span class="f-checkline"><span class="f-check"></span>deviation written:</span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>exception, reason:</span><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">0</span><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">&hellip;</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">previous wave</span></div><span style="font-size:7pt">committed output built on:</span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>committed</span><span class="f-checkline"><span class="f-check"></span>deviation written:</span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>exception, reason:</span><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">0</span><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">&hellip;</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">previous wave</span></div><span style="font-size:7pt">committed output built on:</span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>committed</span><span class="f-checkline"><span class="f-check"></span>deviation written:</span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>exception, reason:</span><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">0</span><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">&hellip;</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">previous wave</span></div><span style="font-size:7pt">committed output built on:</span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>committed</span><span class="f-checkline"><span class="f-check"></span>deviation written:</span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>exception, reason:</span><span class="f-box sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>B3 decision aid &mdash; the wave-sizing trade-off table <span class="ws-block-note">ch18 L163&ndash;172 &middot; observed, one input among four</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:16%"><col style="width:42%"><col style="width:42%"></colgroup>
+      <thead><tr><th>Factor</th><th>Smaller waves (2-4 agents)</th><th>Larger waves (6-10 agents)</th></tr></thead>
+      <tbody>
+        <tr><td class="prior">Execution time</td><td class="prior">3-5 minutes</td><td class="prior">8-12 minutes (slowest agent dominates)</td></tr>
+        <tr><td class="prior">Debug difficulty</td><td class="prior">Low &mdash; few changes to inspect</td><td class="prior">High &mdash; more changes interacting</td></tr>
+        <tr><td class="prior">Commit granularity</td><td class="prior">Fine &mdash; easy to bisect</td><td class="prior">Coarse &mdash; harder to isolate regressions</td></tr>
+        <tr><td class="prior">Overhead</td><td class="prior">Higher &mdash; more validation cycles</td><td class="prior">Lower &mdash; fewer cycles<span class="prior-src">ch18 L165&ndash;170</span></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.6pt;margin:1.5mm 0 0"><b>Heuristic (ch18 L172):</b> start with smaller waves. Combine tasks into larger waves only when they are genuinely independent (different files, different concerns, no shared state) and when the validation overhead of extra cycles outweighs the debugging advantage.</p>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The dependency is directional and strict: no task in wave N may depend on a task in wave N+1." (ch18 L142)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-18-wave-decomposition-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ===================== SHEET 3 : PART C ===================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Wave Decomposition Plan and Self-Sufficiency Check</h1>
+      <p class="ws-sub">Part C is the task table &mdash; one block per wave, at the session granularity an agent actually receives. Print one sheet per epic.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-wave-decomposition-plan</b><br>
+      Pack Z &middot; fill order 21 &middot; roadmap<br>
+      audience <b>practitioner</b><br>
+      Part <b>C of A&ndash;D</b> &middot; epic <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Ch 18 &mdash; The Execution Meta-Process</b> L174&ndash;178 and L159 &middot; <code>handbook/ch18-the-execution-meta-process.qmd</code> &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-wave-decomposition">#sec-meta-wave-decomposition</a>
+    &middot; session table: <code>ch13-the-prose-specification.qmd</code> L509&ndash;523, L495&ndash;497, L525&ndash;529
+  </div>
+
+  <div class="ws-instruction">
+    Take one real epic and work it task by task, wave <span style="display:inline-block;width:12mm;border-bottom:.25mm solid #93a0ad"></span>.
+    Run the self-sufficiency test <b>aloud</b>, with the question worded exactly as printed, and have someone <b>other than the task's author</b>
+    give the verdict. Authors say yes to their own tasks because the missing context is in their head. Anything not ready is refined, split, or moved to a later wave.
+  </div>
+
+  <div class="ws-block">
+    <h2>Part C &mdash; The task table <span class="ws-block-note">rows are tasks &middot; printed, one sheet per epic</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:10%"><col style="width:10%"><col style="width:8%"><col style="width:9%"><col style="width:9%"><col style="width:17%"><col style="width:14%"><col style="width:9%"><col style="width:9%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">C1</span> Session / task number</th>
+          <th><span class="fno">C2</span> The task, in one sentence</th>
+          <th><span class="fno">C3</span> Key context to load</th>
+          <th><span class="fno">C4</span> Single deliverable</th>
+          <th><span class="fno">C5</span> Exclusive file list (feeds Part D)</th>
+          <th><span class="fno">C6</span> Self-sufficiency verdict</th>
+          <th><span class="fno">C7</span> If not ready, why</th>
+          <th><span class="fno">C8</span> Action taken</th>
+          <th><span class="fno">C9</span> Path whitelist enforced</th>
+          <th><span class="fno">C10</span> Hand-off contract to the next session</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">Shape from the worked five-session table<span class="prior-src">ch13 L509&ndash;523</span></td>
+          <td class="prior">Worked instances are one line each, verb first, scope explicit.<span class="prior-src">ch13 L509&ndash;523</span></td>
+          <td class="prior">Instruction file, prior session's output, external reference &mdash; three items, not twelve.<span class="prior-src">ch13 L509&ndash;523</span></td>
+          <td class="prior">A file path or a named test suite &mdash; one per session.<span class="prior-src">ch13 L509&ndash;523</span></td>
+          <td class="prior">Must not overlap another task in the same wave.<span class="prior-src">ch18 L159</span></td>
+          <td class="prior"><i>can an agent complete this task without asking me a question?</i><span class="prior-src">ch18 L176</span></td>
+          <td class="prior">The three named causes are the first three options.<span class="prior-src">ch18 L176</span></td>
+          <td class="prior">The chapter's three permitted responses are the only options.<span class="prior-src">ch18 L176</span></td>
+          <td class="prior">Worked instance: a session limited to two directories; the agent began extending into a third and the boundary stopped it. The suggestion went in its summary and was handled later by the agent with the right context.<span class="prior-src">ch13 L495&ndash;497, L525&ndash;529</span></td>
+          <td class="prior">Worked instance: the downstream session received only the API contract &mdash; endpoint URLs, request and response shapes &mdash; not the implementation details.<span class="prior-src">ch13 L523</span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">self-sufficient</span><span class="opt">not ready</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">ambiguous design decision</span><span class="opt">unclear scope</span><span class="opt">undocumented conventions in the target file</span><span class="opt">other</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">refine the instructions</span><span class="opt">split the task</span><span class="opt">move to a later wave</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">self-sufficient</span><span class="opt">not ready</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">ambiguous design decision</span><span class="opt">unclear scope</span><span class="opt">undocumented conventions in the target file</span><span class="opt">other</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">refine the instructions</span><span class="opt">split the task</span><span class="opt">move to a later wave</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">self-sufficient</span><span class="opt">not ready</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">ambiguous design decision</span><span class="opt">unclear scope</span><span class="opt">undocumented conventions in the target file</span><span class="opt">other</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">refine the instructions</span><span class="opt">split the task</span><span class="opt">move to a later wave</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">self-sufficient</span><span class="opt">not ready</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">ambiguous design decision</span><span class="opt">unclear scope</span><span class="opt">undocumented conventions in the target file</span><span class="opt">other</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">refine the instructions</span><span class="opt">split the task</span><span class="opt">move to a later wave</span></div></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:1.5mm 0 0">Tasks that fail the test are the primary source of mid-wave escalations; catching them in planning eliminates interruptions in execution (ch18 L178). A task still reading &ldquo;not ready&rdquo; may not sit in a dispatchable wave.</p>
+  </div>
+
+  <div class="ws-foot-quote">
+    "can an agent complete this task without asking me a question?" (ch18 L176)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-18-wave-decomposition-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ===================== SHEET 4 : PART D ===================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Wave Decomposition Plan and Self-Sufficiency Check</h1>
+      <p class="ws-sub">Part D is the file-partition check &mdash; the only part that proves the plan is dispatchable. Rows are files, one per file per wave.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-18-wave-decomposition-plan</b><br>
+      Pack Z &middot; fill order 21 &middot; roadmap<br>
+      audience <b>practitioner</b><br>
+      Part <b>D of A&ndash;D</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Ch 18 &mdash; The Execution Meta-Process</b> L142, L159 &middot; <code>handbook/ch18-the-execution-meta-process.qmd</code> &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-wave-decomposition">#sec-meta-wave-decomposition</a>
+    &middot; resolutions: <code>ch17</code> L277, L279
+  </div>
+
+  <div class="ws-instruction">
+    <b>Build this part in a spreadsheet, or generate it with a script against the repository.</b> Sorting by file path is how D4 finds anything,
+    and a printed table cannot be re-sorted. This page is the column layout and a short paper fallback for the first few paths. Every engineer
+    whose files appear here must be in the room or have agreed ownership in advance; where two teams both claim a file, the named arbiter decides.
+    Do not dispatch while any D4 reads yes.
+  </div>
+
+  <div class="ws-block">
+    <h2>Part D &mdash; The file-partition check <span class="ws-block-note">rows are files &middot; sortable by path &middot; asynchronous</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:34%"><col style="width:10%"><col style="width:16%"><col style="width:14%"><col style="width:26%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">D1</span> File path</th>
+          <th><span class="fno">D2</span> Wave</th>
+          <th><span class="fno">D3</span> Agent</th>
+          <th><span class="fno">D4</span> Appears under another agent in this wave?</th>
+          <th><span class="fno">D5</span> Resolution if yes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">One row per file per wave.<span class="prior-src">ch18 L159</span></td>
+          <td class="prior">&mdash;<span class="prior-src">ch18 L142</span></td>
+          <td class="prior">&mdash;<span class="prior-src">ch18 L159</span></td>
+          <td class="prior">Any yes is a blocking planning error, not a risk to accept.<span class="prior-src">ch17 L277</span></td>
+          <td class="prior">The chapter's two resolutions are the only options offered.<span class="prior-src">ch17 L279</span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">0</span><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">&hellip;</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="yes if D1 repeats in this wave under a different D3, else no"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">merge into a single agent's scope</span><span class="opt">move one task to a later wave</span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">0</span><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">&hellip;</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="yes if D1 repeats in this wave under a different D3, else no"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">merge into a single agent's scope</span><span class="opt">move one task to a later wave</span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">0</span><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">&hellip;</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="yes if D1 repeats in this wave under a different D3, else no"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">merge into a single agent's scope</span><span class="opt">move one task to a later wave</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Dispatch readiness <span class="ws-block-note">computed &middot; derived</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:50%"><col style="width:50%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="locked">Green only when every D4 reads no, every C6 reads self-sufficient, and every B6 is non-empty and is not a paraphrase of &ldquo;tests pass&rdquo;.</td>
+          <td class="fill"><span class="f-computed" data-formula="all D4 = no AND all C6 = self-sufficient AND every B6 non-empty, not &ldquo;tests pass&rdquo;"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "Within a wave, no two agents may edit the same file." (ch18 L159)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-18-wave-decomposition-plan &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```

@@ -1,0 +1,223 @@
+---
+title: "Cost of Delay Case"
+pagetitle: "WS-02-cost-of-delay-case"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 594mm; --sheet-h: 841mm; --sheet-margin: 20mm; }
+            @page { size: A1 portrait; margin: 20mm; }
+            .prior .prior-src, .prior-src, .prior--hedged .hedge-src, .f-date, .f-owner::after { font-size: 7pt !important; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-02-cost-of-delay-case</b> &middot; review copy &middot; declared format
+  <b>A1 portrait</b> &middot; 1 sheet. Each white page below is one physical
+  sheet at true size. Anything spilling past a page edge is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Cost of Delay Case</h1>
+      <p class="ws-sub">A board-facing answer to "what if we wait a year?" with a risk register and a number the CFO can interrogate.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-02-cost-of-delay-case</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>10</b> &middot; type <b>assessment</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The AI-Native Landscape</b>, <i>Inaction Is a Decision</i> &middot;
+    <code>handbook/ch02-the-ai-native-landscape.qmd</code> L201-209 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch02-the-ai-native-landscape.html#sec-landscape-inaction">#sec-landscape-inaction</a>
+    <br>Panel B source: <code>handbook/ch03-the-business-case.qmd</code> L315.
+  </div>
+
+  <div class="ws-instruction">
+    For each delay risk, mark whether it applies and record its severity, trend,
+    accountable owner, and 90-day mitigation. For each risk marked yes, add
+    dated, locatable evidence. Then carry the committed scenario and signed
+    ROI-model value into Panel B, run your chosen delay period, read the caveat
+    aloud, and write the one sentence your sponsor will deliver to the board.
+  </div>
+
+  <div style="display:grid;grid-template-columns:1.12fr .88fr;gap:4mm;align-items:start">
+
+    <div class="ws-block">
+      <h2>Panel A — the four delay risks
+        <span class="ws-block-note">one row per risk &middot; qualitative, evidenced, owned</span></h2>
+
+      <div style="border:.35mm solid #aab4be;padding:.25mm;margin:0 0 .5mm;page-break-inside:avoid">
+        <h3 style="margin:0 0 1mm">Talent</h3>
+        <table class="ws">
+          <colgroup><col style="width:30%"><col style="width:70%"></colgroup>
+          <tbody>
+            <tr><td><b>Delay risk</b></td><td class="prior">Talent<span class="prior-src">ch02 L203</span></td></tr>
+            <tr><td><b>What "wait and see" costs here</b></td><td class="prior">Developers increasingly expect AI tooling as a workplace standard.<span class="prior-src">ch02 L203</span></td></tr>
+            <tr><td><b>The book's supporting evidence</b></td><td class="prior">A 2023 GitHub-commissioned survey (Wakefield Research, n=500, U.S. enterprise developers at companies with 1,000+ employees) found 92% report using AI coding tools at work or personally — an externally cited survey with a stated sample, not an author estimate.<span class="prior-src">ch02 L203</span></td></tr>
+          </tbody>
+        </table>
+        <table class="ws">
+          <colgroup><col style="width:6%"><col style="width:34%"><col style="width:60%"></colgroup>
+          <tbody>
+            <tr><td class="ws-num"><span class="fno">1</span></td><td><b>Does this apply to us?</b></td><td class="fill"><div class="f-select"><span class="opt">yes, evidenced</span><span class="opt">yes, suspected</span><span class="opt">no, evidenced</span><span class="opt">unknown</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">2</span></td><td><b>Our evidence</b><br><small>dated and locatable</small></td><td class="fill"><span class="f-text"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">3</span></td><td><b>Severity for us</b><br><small>argued, not computed</small></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">4</span></td><td><b>Trend over the last two quarters</b></td><td class="fill"><div class="f-select"><span class="opt">worsening</span><span class="opt">flat</span><span class="opt">improving</span><span class="opt">unmeasured</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">5</span></td><td><b>Accountable owner</b><br><small>one named individual</small></td><td class="fill"><span class="f-owner"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">6</span></td><td><b>What we would do in the next 90 days if we delay</b><br><small>carry from WS-01-model-upgrade-assumption-audit, column 7</small></td><td class="fill"><span class="f-text"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">7</span></td><td><b>Reversibility</b></td><td class="fill"><div class="f-select"><span class="opt">reversible</span><span class="opt">recoverable at cost</span><span class="opt">irreversible</span></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="border:.35mm solid #aab4be;padding:.25mm;margin:0 0 .5mm;page-break-inside:avoid">
+        <h3 style="margin:0 0 1mm">Shadow IT</h3>
+        <table class="ws">
+          <colgroup><col style="width:30%"><col style="width:70%"></colgroup>
+          <tbody>
+            <tr><td><b>Delay risk</b></td><td class="prior">Shadow IT<span class="prior-src">ch02 L205</span></td></tr>
+            <tr><td><b>What "wait and see" costs here</b></td><td class="prior">Every month without a sanctioned tool is a month developers find their own, compounding data-residency, IP and compliance gaps.<span class="prior-src">ch02 L205</span></td></tr>
+            <tr><td><b>The book's supporting evidence</b></td><td class="prior">No figure is supplied for this risk in the cited passage.<span class="prior-src">ch02 L205</span></td></tr>
+          </tbody>
+        </table>
+        <table class="ws">
+          <colgroup><col style="width:6%"><col style="width:34%"><col style="width:60%"></colgroup>
+          <tbody>
+            <tr><td class="ws-num"><span class="fno">8</span></td><td><b>Does this apply to us?</b></td><td class="fill"><div class="f-select"><span class="opt">yes, evidenced</span><span class="opt">yes, suspected</span><span class="opt">no, evidenced</span><span class="opt">unknown</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">9</span></td><td><b>Our evidence</b><br><small>dated and locatable</small></td><td class="fill"><span class="f-text"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">10</span></td><td><b>Severity for us</b><br><small>argued, not computed</small></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">11</span></td><td><b>Trend over the last two quarters</b></td><td class="fill"><div class="f-select"><span class="opt">worsening</span><span class="opt">flat</span><span class="opt">improving</span><span class="opt">unmeasured</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">12</span></td><td><b>Accountable owner</b><br><small>one named individual</small></td><td class="fill"><span class="f-owner"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">13</span></td><td><b>What we would do in the next 90 days if we delay</b><br><small>carry from WS-01-model-upgrade-assumption-audit, column 7</small></td><td class="fill"><span class="f-text"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">14</span></td><td><b>Reversibility</b></td><td class="fill"><div class="f-select"><span class="opt">reversible</span><span class="opt">recoverable at cost</span><span class="opt">irreversible</span></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="border:.35mm solid #aab4be;padding:.25mm;margin:0 0 .5mm;page-break-inside:avoid">
+        <h3 style="margin:0 0 1mm">Context accumulation</h3>
+        <table class="ws">
+          <colgroup><col style="width:30%"><col style="width:70%"></colgroup>
+          <tbody>
+            <tr><td><b>Delay risk</b></td><td class="prior">Context accumulation<span class="prior-src">ch02 L207</span></td></tr>
+            <tr><td><b>What "wait and see" costs here</b></td><td class="prior">Early adopters are building a compounding context asset; yours starts from zero.<span class="prior-src">ch02 L207</span></td></tr>
+            <tr><td><b>The book's supporting evidence</b></td><td class="prior">No figure is supplied for this risk in the cited passage.<span class="prior-src">ch02 L207</span></td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:7.5pt;margin:.25mm 0">Cross-link the asset to <b>WS-03-context-moat-asset-inventory</b>; do not rate this from instinct.</p>
+        <table class="ws">
+          <colgroup><col style="width:6%"><col style="width:34%"><col style="width:60%"></colgroup>
+          <tbody>
+            <tr><td class="ws-num"><span class="fno">15</span></td><td><b>Does this apply to us?</b></td><td class="fill"><div class="f-select"><span class="opt">yes, evidenced</span><span class="opt">yes, suspected</span><span class="opt">no, evidenced</span><span class="opt">unknown</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">16</span></td><td><b>Our evidence</b><br><small>dated and locatable</small></td><td class="fill"><span class="f-text"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">17</span></td><td><b>Severity for us</b><br><small>argued, not computed</small></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">18</span></td><td><b>Trend over the last two quarters</b></td><td class="fill"><div class="f-select"><span class="opt">worsening</span><span class="opt">flat</span><span class="opt">improving</span><span class="opt">unmeasured</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">19</span></td><td><b>Accountable owner</b><br><small>one named individual</small></td><td class="fill"><span class="f-owner"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">20</span></td><td><b>What we would do in the next 90 days if we delay</b><br><small>carry from WS-01-model-upgrade-assumption-audit, column 7</small></td><td class="fill"><span class="f-text"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">21</span></td><td><b>Reversibility</b></td><td class="fill"><div class="f-select"><span class="opt">reversible</span><span class="opt">recoverable at cost</span><span class="opt">irreversible</span></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="border:.35mm solid #aab4be;padding:.25mm;margin:0 0 .5mm;page-break-inside:avoid">
+        <h3 style="margin:0 0 1mm">Competitive</h3>
+        <table class="ws">
+          <colgroup><col style="width:30%"><col style="width:70%"></colgroup>
+          <tbody>
+            <tr><td><b>Delay risk</b></td><td class="prior">Competitive<span class="prior-src">ch02 L209</span></td></tr>
+            <tr><td><b>What "wait and see" costs here</b></td><td class="prior">If competitors ship faster because their developers can delegate and yours cannot, the gap shows up in release cadence and time-to-market.<span class="prior-src">ch02 L209</span></td></tr>
+            <tr><td><b>The book's supporting evidence</b></td><td class="prior">No figure is supplied for this risk in the cited passage.<span class="prior-src">ch02 L209</span></td></tr>
+          </tbody>
+        </table>
+        <table class="ws">
+          <colgroup><col style="width:6%"><col style="width:34%"><col style="width:60%"></colgroup>
+          <tbody>
+            <tr><td class="ws-num"><span class="fno">22</span></td><td><b>Does this apply to us?</b></td><td class="fill"><div class="f-select"><span class="opt">yes, evidenced</span><span class="opt">yes, suspected</span><span class="opt">no, evidenced</span><span class="opt">unknown</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Our evidence</b><br><small>dated and locatable</small></td><td class="fill"><span class="f-text"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">24</span></td><td><b>Severity for us</b><br><small>argued, not computed</small></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Trend over the last two quarters</b></td><td class="fill"><div class="f-select"><span class="opt">worsening</span><span class="opt">flat</span><span class="opt">improving</span><span class="opt">unmeasured</span></div></td></tr>
+            <tr><td class="ws-num"><span class="fno">26</span></td><td><b>Accountable owner</b><br><small>one named individual</small></td><td class="fill"><span class="f-owner"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">27</span></td><td><b>What we would do in the next 90 days if we delay</b><br><small>carry from WS-01-model-upgrade-assumption-audit, column 7</small></td><td class="fill"><span class="f-text"></span></td></tr>
+            <tr><td class="ws-num"><span class="fno">28</span></td><td><b>Reversibility</b></td><td class="fill"><div class="f-select"><span class="opt">reversible</span><span class="opt">recoverable at cost</span><span class="opt">irreversible</span></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="ws-block">
+      <h2>Panel B — the reverse run
+        <span class="ws-block-note">use the signed model</span></h2>
+      <p style="font-size:7.5pt;margin:0 0 1.5mm">Source: ch03 L315. Carry values verbatim from the named worksheets.</p>
+
+      <table class="ws">
+        <colgroup><col style="width:7%"><col style="width:39%"><col style="width:54%"></colgroup>
+        <tbody>
+          <tr>
+            <td class="ws-num"><span class="fno">29</span></td>
+            <td><b>Scenario used</b><br><small>carry verbatim from WS-03-scenario-assumption-commitment</small></td>
+            <td class="fill"><span class="prior">The book runs the moderate scenario in reverse.<span class="prior-src">ch03 L315</span></span><span class="f-text"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">30</span></td>
+            <td><b>Delay period modelled</b></td>
+            <td class="fill"><span class="prior">The book models 12 months.<span class="prior-src">ch03 L315</span></span><div class="f-select"><span class="opt">6 months</span><span class="opt">12 months</span><span class="opt">other</span></div></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="prior--hedged" style="margin-top:2mm">
+        <span class="hedge-figure" style="font-size:8pt">The model yields a figure in the range of $1.5–2.5M in throughput improvement not realized for a 50-person team delaying 12 months.</span>
+        <span class="hedge-text" style="font-size:8pt">"That figure is illustrative, not predictive: it compounds the model's existing estimation error by running the assumptions backward, and it omits the unquantified but real costs of competitive position and hiring friction. The value of this exercise is not the dollar amount; it is the framing."</span>
+        <span class="hedge-src">handbook/ch03-the-business-case.qmd L315</span>
+      </div>
+      <div class="ours-label">Annual value not realised, our figure — from the signed WS-03-roi-break-even-model for our own delay period</div>
+      <div class="fill" style="min-height:10mm"><span class="fno">31</span> <span class="f-text"></span></div>
+      <p style="font-size:7.5pt;margin:.5mm 0 0">Write the value carried from the signed WS-03-roi-break-even-model for the committed scenario and our own delay period.</p>
+
+      <table class="ws" style="margin-top:1.5mm">
+        <colgroup><col style="width:7%"><col style="width:39%"><col style="width:54%"></colgroup>
+        <tbody>
+          <tr>
+            <td class="ws-num"><span class="fno">32</span></td>
+            <td><b>Estimation-error caveat</b></td>
+            <td class="fill"><span class="f-checkline"><span class="f-check"></span>Tick to confirm it was read aloud, not merely printed</span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"></td>
+            <td><b>What the number omits</b></td>
+            <td class="locked">The chapter states the figure omits the unquantified but real costs of competitive position and hiring friction — which is why Panel A is not optional.<span class="prior-src">ch03 L315</span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">33</span></td>
+            <td><b>Board answer, one sentence</b><br><small>fit one line; do not lead with the dollar figure</small></td>
+            <td class="fill"><span class="f-text"></span></td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">34</span></td>
+            <td><b>Sponsor signature + date</b><br><small>executive who will deliver the sentence</small></td>
+            <td class="fill tall"><span class="f-sign"></span><br>Date <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-02-cost-of-delay-case &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
