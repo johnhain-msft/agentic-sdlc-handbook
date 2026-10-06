@@ -46,7 +46,7 @@ format:
     Pick <b>one</b> real workflow &mdash; not a category of work &mdash; and fill the canvas <b>twice</b>: TODAY (researched from the running system, not recalled) and TARGET (what you commit to change). Name the SDLC phase that triggers it, the top-level Skill and its pinned version, every Persona it dispatches, and every Context source with its access mechanism named from the closed list. Then say where recursion fires and to what depth, what artefact each level returns, and what the single human finally reads. Finish with the GAP strip: one entry for every band where the two columns differ, each with an owner and a delivery increment. The grey column is Maya's worked exemplar &mdash; read it, do not write in it.
   </div>
 
-  <div style="display:grid;grid-template-columns:76% 24%;column-gap:0">
+  <div style="display:grid;grid-template-columns:75% 24%;column-gap:1%">
 
   <div class="ws-block">
     <h2>Canvas: TODAY | TARGET
