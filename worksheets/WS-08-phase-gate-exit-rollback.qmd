@@ -338,7 +338,7 @@ format:
 
 <!-- GATE 3 PROGRAMME KILL CRITERION -->
 <div class="sheet">
-  <div class="ws-head"><div><h1>Gate 3 — programme kill criterion</h1><p class="ws-sub">Record the same calibrated stop condition on the programme kill-switch card.</p></div><div class="ws-meta"><b>WS-08-phase-gate-exit-rollback</b><br>Gate 3: Phase 3 selective<br>rollback trigger continuation<br>audience <b>eng-leader</b></div></div>
+  <div class="ws-head"><div><h1>Gate 3 — programme kill criterion</h1><p class="ws-sub">Record the same calibrated stop condition on the program kill-switch card.</p></div><div class="ws-meta"><b>WS-08-phase-gate-exit-rollback</b><br>Gate 3: Phase 3 selective<br>rollback trigger continuation<br>audience <b>eng-leader</b></div></div>
   <div class="ws-source">Source: <b>Planning the Transition</b>, <i>Phase 3: Scale</i> &middot; <code>handbook/ch08-planning-the-transition.qmd</code> L180 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-phases">#sec-transition-phases</a></div>
   <div class="ws-instruction">Calibrate this program-level stop condition to your Month 0 baseline. If it is not measurable, write <b>not measurable</b> and make the trigger qualitative; never substitute the printed starting point. Write the same calibrated criterion on the Program kill switch card.</div>
   <div class="ws-block"><h2>Rollback trigger — Programme kill criterion <span class="ws-block-note">after a full Phase 1 and Phase 2 cycle</span></h2>
