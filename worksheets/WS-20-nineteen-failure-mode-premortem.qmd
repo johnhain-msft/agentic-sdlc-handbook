@@ -149,8 +149,8 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
           <td class="fill"><span class="prior">PAT 403<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
-          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
-          <td class="fill"><span class="prior">Right-size tasks to context capacity. When scope expansion is discovered mid-task, the correct response is escalation (create a follow-up task), not absorption (add it to the current session).<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">Right-size tasks to context capacity. When scope expansion is discovered mid-task, the correct response is escalation (create a follow-up task), not absorption (add it to the current session).<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="prior">Stop. Commit what works. Create a new task for the expanded scope in a fresh session. Sunk cost of the current session is less than the debugging cost of degraded output.<span class="prior-src">ch20 L50-294</span></span><span class="prior">L4 escalation through the plan gate<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
           <td class="fill"><span class="f-owner"></span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
@@ -181,7 +181,7 @@ format:
           <td class="prior">not printed<span class="prior-src">ch20 L20-29</span></td>
           <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
-          <td class="fill"><span class="prior">Unicode persistence<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-checkline"><span class="f-check"></span></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
           <td class="fill"><span class="prior">Unicode persistence<span class="prior-src">case-study-apm-overhaul.qmd L230-239</span></span><span class="f-text"></span></td>
           <td class="fill"><span class="f-text"></span></td>          <td class="fill"><span class="prior">Never rely on self-reports. Run the test suite. Verify file state with git diff. Spot-check critical changes. One line of diff output is worth a thousand words of agent narrative.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
           <td class="fill"><span class="f-text"></span></td>
@@ -305,7 +305,7 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
           <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
-          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">Set a retry budget. After two failed dispatches for the same task, change the approach: decompose further, add context, or escalate. Don't loop at the same level.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Set a retry budget. After two failed dispatches for the same task, change the approach: decompose further, add context, or escalate. Don't loop at the same level.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="prior">Stop. Review what's been attempted. Often the agent is stuck because the task is underspecified. One specific constraint added to context is worth more than ten retries with the same input.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
           <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
@@ -321,7 +321,7 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">Critical</span><span class="opt">High</span><span class="opt">Medium</span><span class="opt">Low</span></div></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td>
           <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
-          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">Identify the hard part during planning. Consider doing it manually or as a separate, tightly-scoped agent task with maximum context.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Identify the hard part during planning. Consider doing it manually or as a separate, tightly-scoped agent task with maximum context.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="prior">Accept the 90%. Commit it. Handle the rest manually or in a fresh session focused exclusively on the hard part.<span class="prior-src">ch20 L50-294</span></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
           <td class="fill"><span class="f-computed" data-formula="High likelihood with Critical or High impact = Band 1; other Critical or High = Band 2; otherwise Band 3"></span></td>
