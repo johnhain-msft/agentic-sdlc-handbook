@@ -7,15 +7,15 @@ format:
     include-in-header:
       - text: |
           <style>
-            html:root { --sheet-w: 594mm; --sheet-h: 420mm; --sheet-margin: 16mm; }
-            @page { size: A2 landscape; margin: 16mm; }
+            html:root {                         --sheet-w: 594mm; --sheet-h: 420mm; --sheet-margin: 16mm; }
+                        @page { size: A2 landscape; margin: 16mm; }
           </style>
 ---
 
 ```{=html}
 <div class="screen-only">
   <b>WS-05-decision-rights-gate-matrix</b> &middot; Pack F &middot;
-  declared format <b>A2 landscape, two-sided</b> &middot; 2 sheets.
+  format <b>A2 landscape</b> &middot; 3 sheets.
   Each white page below is one physical sheet at true size.
 </div>
 
