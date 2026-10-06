@@ -196,7 +196,7 @@ format:
           <td class="prior">Critical — Art. 12 (record-keeping)</td>
           <td class="prior">Not covered by the source</td>
           <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to readiness assessment</span><span class="f-checkline"><span class="f-check"></span>Its target there is at least Basic</span></td>
         </tr>
         <tr>
           <td class="ws-num"></td><td class="prior">Agent access controls</td>
@@ -207,7 +207,7 @@ format:
           <td class="prior">Relevant — Art. 14 (human oversight)</td>
           <td class="prior">Not covered by the source</td>
           <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to readiness assessment</span><span class="f-checkline"><span class="f-check"></span>Its target there is at least Basic</span></td>
         </tr>
         <tr>
           <td class="ws-num"></td><td class="prior">Approval workflows</td>
@@ -218,7 +218,7 @@ format:
           <td class="prior">Critical — Art. 14 (human oversight of high-risk AI)</td>
           <td class="prior">Not covered by the source</td>
           <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to readiness assessment</span><span class="f-checkline"><span class="f-check"></span>Its target there is at least Basic</span></td>
         </tr>
         <tr>
           <td class="ws-num"></td><td class="prior">Data boundary enforcement</td>
@@ -229,7 +229,7 @@ format:
           <td class="prior">Relevant — Art. 10 (data governance)</td>
           <td class="prior">Not covered by the source</td>
           <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to readiness assessment</span><span class="f-checkline"><span class="f-check"></span>Its target there is at least Basic</span></td>
         </tr>
         <tr>
           <td class="ws-num"></td><td class="prior">Cost controls</td>
@@ -240,7 +240,7 @@ format:
           <td class="prior">Not directly scoped</td>
           <td class="prior">Not covered by the source</td>
           <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to readiness assessment</span><span class="f-checkline"><span class="f-check"></span>Its target there is at least Basic</span></td>
         </tr>
         <tr>
           <td class="ws-num"></td><td class="prior">Compliance reporting</td>
@@ -251,7 +251,7 @@ format:
           <td class="prior">Critical — Art. 13 (transparency)</td>
           <td class="prior">Not covered by the source</td>
           <td class="fill"><span class="f-computed" data-formula="yes if any Critical in column 12 is under a framework marked yes in Block A column 2; otherwise no"></span><span class="prior-src">derived from ch05 L94</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to WS-05-governance-readiness-assessment</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Copied to readiness assessment</span><span class="f-checkline"><span class="f-check"></span>Its target there is at least Basic</span></td>
         </tr>
       </tbody>
     </table>
@@ -330,7 +330,7 @@ format:
           </td>
           <td class="fill"><span class="f-box"></span><small>State fact: nothing / inference calls only / checkout and inference.</small></td>
           <td class="fill"><span class="f-box"></span></td>
-          <td class="fill"><span class="f-box"></span><small>Executed agreement or DPA clause reference; not marketing material.</small></td>
+          <td class="fill"><span class="f-box"></span><small>Executed agreement or DPA clause reference; not marketing material.</small><small>Contract not in the room? Park it: owner <span class="f-owner"></span> target date <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span></small></td>
           <td class="fill"><span class="f-box"></span><small>Reference the applicable Block B clause or contractual term.</small></td>
           <td class="fill tall">
             Security <span class="f-sign"></span><br>
@@ -353,7 +353,7 @@ format:
           </td>
           <td class="fill"><span class="f-box"></span><small>State fact: nothing / inference calls only / checkout and inference.</small></td>
           <td class="fill"><span class="f-box"></span></td>
-          <td class="fill"><span class="f-box"></span><small>Executed agreement or DPA clause reference; not marketing material.</small></td>
+          <td class="fill"><span class="f-box"></span><small>Executed agreement or DPA clause reference; not marketing material.</small><small>Contract not in the room? Park it: owner <span class="f-owner"></span> target date <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span></small></td>
           <td class="fill"><span class="f-box"></span><small>Reference the applicable Block B clause or contractual term.</small></td>
           <td class="fill tall">
             Security <span class="f-sign"></span><br>
@@ -385,7 +385,7 @@ format:
           <th></th>
           <th><span class="fno">22</span> IP posture in agent-generated output: who owns it, and under what licence is it held or released</th>
           <th>Your own position and its basis</th>
-          <th>Counsel who gave the position</th>
+          <th>Counsel who gave the position; if open, owner who will obtain it</th>
           <th>Date taken / target date if open</th>
         </tr>
       </thead>
