@@ -45,7 +45,7 @@ format:
   <div class="ws-instruction">
     Fill the five blocks of a dispatch: the instruction files loaded (and only those), the exclusively owned file list,
     the committed reference the agent must read rather than a description of it, the explicit constraints
-    (do-not-modify list, signatures, behaviour preservation), and the verification command the agent runs before
+    (do-not-modify list, signatures, behavior preservation), and the verification command the agent runs before
     reporting done. Then tick the five quality criteria on Part B before dispatching. Part A is one brief for one
     real task. Draws on <code>WS-17-agent-team-charter</code> (rows 2 and 4) and keys to
     <code>WS-18-wave-decomposition-plan</code> (row 1).
