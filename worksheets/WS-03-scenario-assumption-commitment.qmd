@@ -1,0 +1,352 @@
+---
+title: "Scenario & Assumption Commitment"
+pagetitle: "WS-03-scenario-assumption-commitment"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 297mm; --sheet-h: 420mm; --sheet-margin: 12mm; }
+            @page { size: A3 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-03-scenario-assumption-commitment</b> &middot; declared format <b>A3 portrait</b> &middot;
+  3 sheets. Each white page below is one physical sheet at true size.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Scenario &amp; Assumption Commitment</h1>
+      <p class="ws-sub">A signed, dated set of modelling assumptions that every downstream number inherits - and an explicit record of who chose the optimism level.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-scenario-assumption-commitment</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>2</b> &middot; type <b>decision</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>Step 3: Model your value — three scenarios</i> &middot;
+    <code>handbook/ch03-the-business-case.qmd</code> L200-285 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-value-scenarios">#sec-business-case-value-scenarios</a>
+  </div>
+
+  <div class="ws-instruction">
+    Choose a value for each of the six assumption lines, record the evidence and basis, and name a replacement owner and date whenever you borrow a book figure. Then complete the commitment on sheet 3: choose one scenario and rework rate, record the single optimism owner, resolve and sign the gamble gate, attest to the blended-value rule, and have the executive sponsor countersign and date the sheet.
+  </div>
+
+  <div class="ws-block">
+    <h2>Assumption lines — 1 to 3
+      <span class="ws-block-note">book priors are locked; each line has its own evidence, basis and scenario</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:19%"><col style="width:17%"><col style="width:17%"><col style="width:17%"><col style="width:24%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Assumption line</th><th>Book's conservative</th><th>Book's moderate</th><th>Book's aggressive</th><th>Our number / our state</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td><td class="locked"><b>Cycle time improvement</b></td>
+          <td class="prior">10–15% †<span class="prior-src">ch03 L189-194</span></td><td class="prior">20–30% †<span class="prior-src">ch03 L189-194</span></td><td class="prior">35–50% †<span class="prior-src">ch03 L189-194</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:26%"><col style="width:68%"></colgroup>
+      <thead><tr><th></th><th>Evidence for our number</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">2</span></td><td><b>Evidence for our number</b></td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">3</span></td><td><b>Basis</b></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span><span class="opt">borrowed from the book</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">4</span></td><td><b>If borrowed — replace by</b><br><small>Mandatory whenever Basis is “borrowed from the book”</small></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">5</span></td><td><b>Scenario this line implies</b></td><td class="fill"><span class="f-computed" data-formula="closest of fields 2, 3, and 4 to field 5"></span></td></tr>
+      </tbody>
+    </table>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:19%"><col style="width:17%"><col style="width:17%"><col style="width:17%"><col style="width:24%">
+      </colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td><td class="locked"><b>Defect reduction</b></td>
+          <td class="prior">5–10% †<span class="prior-src">ch03 L189-194</span></td><td class="prior">15–25% †<span class="prior-src">ch03 L189-194</span></td><td class="prior">25–35% †<span class="prior-src">ch03 L189-194</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:26%"><col style="width:68%"></colgroup>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">7</span></td><td><b>Evidence for our number</b></td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">8</span></td><td><b>Basis</b></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span><span class="opt">borrowed from the book</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">9</span></td><td><b>If borrowed — replace by</b><br><small>Mandatory whenever Basis is “borrowed from the book”</small></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">10</span></td><td><b>Scenario this line implies</b></td><td class="fill"><span class="f-computed" data-formula="closest of fields 2, 3, and 4 to field 5"></span></td></tr>
+      </tbody>
+    </table>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:19%"><col style="width:17%"><col style="width:17%"><col style="width:17%"><col style="width:24%">
+      </colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td><td class="locked"><b>Context engineering maturity</b></td>
+          <td class="prior">Basic conventions documented<span class="prior-src">ch03 L189-194</span></td><td class="prior">Full instruction hierarchy<span class="prior-src">ch03 L189-194</span></td><td class="prior">Comprehensive context architecture<span class="prior-src">ch03 L189-194</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:26%"><col style="width:68%"></colgroup>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">12</span></td><td><b>Evidence for our number</b></td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">13</span></td><td><b>Basis</b></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span><span class="opt">borrowed from the book</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">14</span></td><td><b>If borrowed — replace by</b><br><small>Mandatory whenever Basis is “borrowed from the book”</small></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">15</span></td><td><b>Scenario this line implies</b></td><td class="fill"><span class="f-computed" data-formula="closest of fields 2, 3, and 4 to field 5"></span></td></tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note">Each set of fields belongs to the assumption line immediately above it. For “If borrowed”, record when the measured number replaces the prior and who owns that replacement.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-scenario-assumption-commitment &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Scenario &amp; Assumption Commitment</h1>
+      <p class="ws-sub">Complete the remaining assumption lines; make the signed commitment on sheet 3.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-scenario-assumption-commitment</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>2</b> &middot; type <b>decision</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>Step 3: Model your value — three scenarios</i> &middot;
+    <code>handbook/ch03-the-business-case.qmd</code> L200-285 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-value-scenarios">#sec-business-case-value-scenarios</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Assumption lines — 4 to 6
+      <span class="ws-block-note">book priors are locked; each line has its own evidence, basis and scenario</span></h2>
+
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:19%"><col style="width:17%"><col style="width:17%"><col style="width:17%"><col style="width:24%"></colgroup>
+      <thead><tr><th></th><th>Assumption line</th><th>Book's conservative</th><th>Book's moderate</th><th>Book's aggressive</th><th>Our number / our state</th></tr></thead>
+      <tbody><tr>
+        <td class="ws-num"><span class="fno">16</span></td><td class="locked"><b>Adoption depth</b></td>
+        <td class="prior">Code phase only<span class="prior-src">ch03 L189-194</span></td><td class="prior">Code + Test + Review<span class="prior-src">ch03 L189-194</span></td><td class="prior">Multi-phase SDLC coverage<span class="prior-src">ch03 L189-194</span></td>
+        <td class="fill"><span class="f-text"></span></td>
+      </tr></tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:26%"><col style="width:68%"></colgroup>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">17</span></td><td><b>Evidence for our number</b></td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">18</span></td><td><b>Basis</b></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span><span class="opt">borrowed from the book</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">19</span></td><td><b>If borrowed — replace by</b><br><small>Mandatory whenever Basis is “borrowed from the book”</small></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">20</span></td><td><b>Scenario this line implies</b></td><td class="fill"><span class="f-computed" data-formula="closest of fields 2, 3, and 4 to field 5"></span></td></tr>
+      </tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:19%"><col style="width:17%"><col style="width:17%"><col style="width:17%"><col style="width:24%"></colgroup>
+      <tbody><tr>
+        <td class="ws-num"><span class="fno">21</span></td><td class="locked"><b>Time to positive ROI</b></td>
+        <td class="prior">9–12 months †<span class="prior-src">ch03 L189-194</span></td><td class="prior">6–9 months †<span class="prior-src">ch03 L189-194</span></td><td class="prior">4–6 months †<span class="prior-src">ch03 L189-194</span></td>
+        <td class="fill"><span class="f-text sm"></span></td>
+      </tr></tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:26%"><col style="width:68%"></colgroup>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">22</span></td><td><b>Evidence for our number</b></td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Basis</b></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span><span class="opt">borrowed from the book</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">24</span></td><td><b>If borrowed — replace by</b><br><small>Mandatory whenever Basis is “borrowed from the book”</small></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Scenario this line implies</b></td><td class="fill"><span class="f-computed" data-formula="closest of fields 2, 3, and 4 to field 5"></span></td></tr>
+      </tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:19%"><col style="width:17%"><col style="width:17%"><col style="width:17%"><col style="width:24%"></colgroup>
+      <tbody><tr>
+        <td class="ws-num"><span class="fno">26</span></td><td class="locked"><b>Assumption</b></td>
+        <td class="prior">Minimal context investment, cautious delegation<span class="prior-src">ch03 L189-194</span></td><td class="prior">Sustained context engineering, skilled practitioners<span class="prior-src">ch03 L189-194</span></td><td class="prior">Significant upfront investment, mature practices<span class="prior-src">ch03 L189-194</span></td>
+        <td class="fill"><span class="f-text"></span></td>
+      </tr></tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:26%"><col style="width:68%"></colgroup>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td><b>Evidence for our number</b></td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">28</span></td><td><b>Basis</b></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">estimated</span><span class="opt">borrowed from the book</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">29</span></td><td><b>If borrowed — replace by</b><br><small>Mandatory whenever Basis is “borrowed from the book”</small></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">30</span></td><td><b>Scenario this line implies</b></td><td class="fill"><span class="f-computed" data-formula="closest of fields 2, 3, and 4 to field 5"></span></td></tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note">Each set of fields belongs to the assumption line immediately above it. For “If borrowed”, record when the measured number replaces the prior and who owns that replacement.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-scenario-assumption-commitment &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Scenario &amp; Assumption Commitment</h1>
+      <p class="ws-sub">Commit to the scenario and rework assumption, resolve the gates, and sign before this sheet leaves the room.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-scenario-assumption-commitment</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>2</b> &middot; type <b>decision</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>Step 3: Model your value — three scenarios</i> &middot;
+    <code>handbook/ch03-the-business-case.qmd</code> L200-285 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-value-scenarios">#sec-business-case-value-scenarios</a>
+  </div>
+
+  <div class="ws-block">
+    <h2>Sheet-level commitment
+      <span class="ws-block-note">one scenario; one named optimism owner; signed in the room</span></h2>
+
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:31%"><col style="width:31%"><col style="width:32%"></colgroup>
+      <thead><tr><th></th><th>Commitment</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody><tr>
+        <td class="ws-num"><span class="fno">31</span></td>
+        <td><b>Scenario committed to</b></td>
+        <td class="prior">Exactly one for the whole sheet<span class="prior-src">ch03 L200-202</span></td>
+        <td class="fill"><div class="f-select"><span class="opt">conservative</span><span class="opt">moderate</span><span class="opt">aggressive</span></div></td>
+      </tr></tbody>
+    </table>
+
+    <div class="ws-foot-quote">
+      Most organizations should plan for the conservative scenario and invest toward the moderate one. If your business case only works at the aggressive scenario, you don't have a business case — you have a gamble. (ch03 L202)
+    </div>
+
+    <div class="prior--hedged">
+      <div class="hedge-figure">
+        <table class="ws">
+          <colgroup><col style="width:24%"><col style="width:38%"><col style="width:38%"></colgroup>
+          <thead><tr><th>Rework rate</th><th>Effective cycle-time improvement †</th><th>Value-to-cost ratio †</th></tr></thead>
+          <tbody>
+            <tr><td class="prior">20% (optimistic)<span class="prior-src">ch03 L275-279</span></td><td class="prior">35% †<span class="prior-src">ch03 L275-279</span></td><td class="prior">3.1–10.3× †<span class="prior-src">ch03 L275-279</span></td></tr>
+            <tr><td class="prior">40% (moderate)<span class="prior-src">ch03 L275-279</span></td><td class="prior">25% †<span class="prior-src">ch03 L275-279</span></td><td class="prior">2.3–7.6× †<span class="prior-src">ch03 L275-279</span></td></tr>
+            <tr><td class="prior">60% (conservative)<span class="prior-src">ch03 L275-279</span></td><td class="prior">15% †<span class="prior-src">ch03 L275-279</span></td><td class="prior">1.4–4.6× †<span class="prior-src">ch03 L275-279</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <span class="hedge-text">† Author estimates. The effective cycle time improvement is modeled as a function of the base scenario (25% at 40% rework).</span>
+      <span class="hedge-src">handbook/ch03-the-business-case.qmd L283</span>
+
+      <div class="ours-label"><span class="fno">32</span> Rework rate committed to — choose one</div>
+      <div class="f-select">
+        <span class="opt">20% †</span><span class="opt">40% †</span><span class="opt">60% †</span><span class="opt">our measured rate</span>
+      </div>
+      <div class="ours-label">Our measured rework rate, if we have one</div>
+      <span class="f-text sm"></span>
+
+      <table class="ws">
+        <colgroup><col style="width:6%"><col style="width:35%"><col style="width:35%"><col style="width:24%"></colgroup>
+        <tbody>
+          <tr>
+            <td class="ws-num"><span class="fno">33</span></td>
+            <td><b>Effective cycle-time improvement at that rework rate †</b></td>
+            <td class="prior">35% † / 25% † / 15% †<span class="prior-src">ch03 L277-279</span></td>
+            <td class="locked">Use the prior matching the selected rate above.</td>
+          </tr>
+          <tr>
+            <td class="ws-num"><span class="fno">34</span></td>
+            <td><b>Value-to-cost ratio at that rework rate †</b></td>
+            <td class="prior">3.1–10.3× † / 2.3–7.6× † / 1.4–4.6× †<span class="prior-src">ch03 L277-279</span></td>
+            <td class="fill"><div class="ours-label">Our own ratio, computed later on WS-03-roi-break-even-model and written back here</div><span class="f-text sm"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:31%"><col style="width:31%"><col style="width:32%"></colgroup>
+      <thead><tr><th></th><th>Commitment</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">35</span></td>
+          <td><b>Optimism owner</b></td>
+          <td class="prior">The single individual who chose the scenario; not a committee<span class="prior-src">ch03 L202 intent</span></td>
+          <td class="fill tall"><span class="f-owner"></span><span class="f-sign"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">36</span></td>
+          <td><b>Gamble declaration</b></td>
+          <td class="prior">If your business case only works at the aggressive scenario, you don't have a business case — you have a gamble.<span class="prior-src">ch03 L202</span></td>
+          <td class="fill tall">
+            <span class="f-checkline"><span class="f-check"></span>The case does not depend on the aggressive column</span>
+            <div class="ours-label">Otherwise write “gamble” and sign beside it</div>
+            <span class="f-text sm"></span><span class="f-sign"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">37</span></td>
+          <td><b>Double-counting attestation</b></td>
+          <td class="prior">The scenario values are already blended; do not apply a separate coding-phase multiplier<span class="prior-src">ch03 L230-232</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>I confirm no separate coding-phase multiplier was applied on top of the scenario value</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">38</span></td>
+          <td><b>Date + countersignature</b></td>
+          <td class="prior">Executive sponsor<span class="prior-src">org</span></td>
+          <td class="fill tall"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><span class="f-sign"></span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ws-foot-quote">
+      The scenario table's lower percentages (10–50%) are the team-wide blended average: they already account for the fact that not all tasks are agent-suitable and that adoption depth varies by scenario. Use the scenario values directly. Applying a separate coding-phase multiplier on top would double-count the discount. (ch03 L232)
+    </div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-scenario-assumption-commitment &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+```
