@@ -15,7 +15,7 @@ format:
 ```{=html}
 <div class="screen-only">
   <b>WS-05-governance-readiness-assessment</b> &middot; review copy &middot;
-  declared format <b>A3 landscape</b> &middot; 4 sheets. Each white page below is one
+  declared format <b>A3 landscape</b> &middot; 6 sheets. Each white page below is one
   physical sheet at true size. Anything spilling past a page edge onto this grey
   background is a layout defect.
 </div>
@@ -166,7 +166,7 @@ format:
       </colgroup>
       <thead>
         <tr>
-          <th></th><th>Capability</th><th>Mandatory for us</th>
+          <th></th><th>Capability</th><th>Mandatory for us <span style="font-weight:400">(from matrix block B)</span></th>
           <th>Our level today</th><th>Evidence for column 6</th>
           <th>Target level</th><th>Target date</th>
           <th>Accountable owner</th><th>Business risk of staying put</th>
@@ -174,12 +174,12 @@ format:
         </tr>
       </thead>
       <tbody>
-        <tr><td class="ws-num"><span class="fno">1</span></td><td class="locked">Audit trails</td><td class="fill"><span class="f-computed" data-formula="carry across from WS-05-compliance-scope-and-posture-matrix block B"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
-        <tr><td class="ws-num"><span class="fno">2</span></td><td class="locked">Agent access controls</td><td class="fill"><span class="f-computed" data-formula="carry across from WS-05-compliance-scope-and-posture-matrix block B"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
-        <tr><td class="ws-num"><span class="fno">3</span></td><td class="locked">Approval workflows</td><td class="fill"><span class="f-computed" data-formula="carry across from WS-05-compliance-scope-and-posture-matrix block B"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
-        <tr><td class="ws-num"><span class="fno">4</span></td><td class="locked">Data boundary enforcement</td><td class="fill"><span class="f-computed" data-formula="carry across from WS-05-compliance-scope-and-posture-matrix block B"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
-        <tr><td class="ws-num"><span class="fno">5</span></td><td class="locked">Cost controls</td><td class="fill"><span class="f-computed" data-formula="carry across from WS-05-compliance-scope-and-posture-matrix block B"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
-        <tr><td class="ws-num"><span class="fno">6</span></td><td class="locked">Compliance reporting</td><td class="fill"><span class="f-computed" data-formula="carry across from WS-05-compliance-scope-and-posture-matrix block B"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">1</span></td><td class="locked">Audit trails</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">2</span></td><td class="locked">Agent access controls</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">3</span></td><td class="locked">Approval workflows</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">4</span></td><td class="locked">Data boundary enforcement</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">5</span></td><td class="locked">Cost controls</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">6</span></td><td class="locked">Compliance reporting</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">None</span><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Basic</span><span class="opt">Enterprise</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-computed" data-formula="column 6 reads None"></span></td></tr>
       </tbody>
     </table>
 
@@ -202,13 +202,6 @@ format:
         </tr>
       </tbody>
     </table>
-    <div class="ws-block">
-      <h2>Block D — checks we are choosing not to run
-        <span class="ws-block-note">list each check, reason and named owner; sign the omission list</span></h2>
-      <div class="fill taller"><span class="f-box"></span></div>
-      <div class="fill"><span class="f-owner"></span></div>
-      <div class="fill tall"><span class="f-sign"></span></div>
-    </div>
   </div>
 
   <div class="ws-foot">
@@ -257,7 +250,7 @@ format:
           <td class="prior">Make the chain of dispatched skills, spawned threads, and tool calls reconstructible after the fact, the way a stack trace reconstructs a synchronous call.<span class="prior-src">ch19 L149-157</span></td>
           <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">nobody</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">a surface the agent cannot rewrite</span><span class="f-text sm"></span><span class="f-sign"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">14</span></td>
@@ -265,7 +258,7 @@ format:
           <td class="prior">Capture the resolved version of every transitive dependency at install time so the runtime closure is reproducible.<span class="prior-src">ch19 L149-157</span></td>
           <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">nobody</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">a surface the agent cannot rewrite</span><span class="f-text sm"></span><span class="f-sign"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">15</span></td>
@@ -273,7 +266,7 @@ format:
           <td class="prior">Record every consequential decision the agent made and every consequential effect it produced as an immutable, append-only sequence.<span class="prior-src">ch19 L149-157</span></td>
           <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
           <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
-          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">nobody</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="prior">a surface the agent cannot rewrite</span><span class="f-text sm"></span><span class="f-sign"></span></td>
         </tr>
       </tbody>
     </table>
@@ -327,7 +320,7 @@ format:
     </table>
     <p style="font-size:7.5pt;margin:1.5mm 0">Installing a package and executing it are the same event: “file presence is execution.” (ch20 L297-307)</p>
     <div><b>Go / no-go line for installing any third-party primitive</b> <span class="prior-src">ch20 L297-307</span></div>
-    <div class="fill taller"><span class="f-box"></span></div>
+    <div class="fill"><span class="f-text"></span></div><div class="fill"><span class="f-text"></span></div>
     <div class="fill tall"><span class="f-sign"></span></div>
   </div>
   <div class="ws-foot">
@@ -356,7 +349,7 @@ format:
     &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch20-anti-patterns-and-failure-modes.html#sec-anti-silent-failure-checklist">#sec-anti-silent-failure-checklist</a>
   </div>
   <div class="ws-instruction">
-    For each check below, record the real tool or command, whether it is automated or manual, its named owner, whether it is in place today, and whether it is a hard gate or advisory. If you choose not to run a check, list it with the reason and an owner on the final sheet; do not leave its omission implicit.
+    For each check, record the real tool or command, automated or manual, owner, in place today, hard gate or advisory. List any check you will not run (reason, owner, signature) in the omissions block on the final sheet (sheet 6).
   </div>
   <div class="ws-block">
     <h2>Block D — after every agent dispatch <span class="ws-block-note">four checks</span></h2>
@@ -409,7 +402,9 @@ format:
         <tr><td class="ws-num"><span class="fno">33</span></td><td class="prior"><div class="f-select"><span class="opt">After every wave, before committing</span></div><span class="prior-src">ch20 L317-357</span></td><td class="prior">Context capacity spot-check<span class="prior-src">ch20 L317-357</span></td><td class="prior">Compare quality of first output vs. last in the wave — degradation signals exhaustion<span class="prior-src">ch20 L317-357</span></td><td class="prior">Context Window Exhaustion (#11)<span class="prior-src">ch20 L317-357</span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Manual</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partial</span><span class="opt">no</span></div><div class="f-select"><span class="opt">Hard gate</span><span class="opt">Advisory</span></div></td></tr>
       </tbody>
     </table>
+    <p style="font-size:7pt;margin:0;line-height:1.1">Column “In place / hard gate or advisory” records both statuses for every check. Automate what you can. Checklist the rest. (ch20 L357)</p>
   </div>
+>
   <div class="ws-foot">
     <div>WS-05-governance-readiness-assessment &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 6</div>
     <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
@@ -420,7 +415,7 @@ format:
 <div class="sheet">
   <div class="ws-head">
     <div>
-      <h1>Governance Readiness — Verification Cadence (continued)</h1>
+      <h1>Verification Cadence (continued)</h1>
       <p class="ws-sub">Finish the PR-review and weekly checks, then sign the explicit omissions list.</p>
     </div>
     <div class="ws-meta">
@@ -436,7 +431,7 @@ format:
     &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch20-anti-patterns-and-failure-modes.html#sec-anti-silent-failure-checklist">#sec-anti-silent-failure-checklist</a>
   </div>
   <div class="ws-instruction">
-    Complete the remaining checks using real commands or jobs. The book's weekly token-cost method includes a week-over-week spike heuristic; record your actual command and your organization's own value in the tool-or-command field. Explicitly name any check you choose not to run, its reason and owner, and sign the list.
+    Finish the checks, then list any you will not run below.
   </div>
   <div class="ws-block">
     <h2>Block D — after every PR at the human review gate <span class="ws-block-note">four checks</span></h2>
@@ -450,7 +445,7 @@ format:
         <tr><td class="ws-num"><span class="fno">37</span></td><td class="prior"><div class="f-select"><span class="opt">After every PR at the human review gate</span></div><span class="prior-src">ch20 L317-357</span></td><td class="prior">Diff size sanity check<span class="prior-src">ch20 L317-357</span></td><td class="prior">If diff is 3× expected size, agent likely absorbed scope<span class="prior-src">ch20 L317-357</span></td><td class="prior">Scope Creep (#5), Solo Hero (#6)<span class="prior-src">ch20 L317-357</span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Manual</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partial</span><span class="opt">no</span></div><div class="f-select"><span class="opt">Hard gate</span><span class="opt">Advisory</span></div></td></tr>
       </tbody>
     </table>
-    <h2>Weekly (team-level) <span class="ws-block-note">four checks</span></h2>
+    <h2 style="margin:0;padding:0">Weekly (team-level) <span class="ws-block-note">four checks</span></h2>
     <table class="ws">
       <colgroup><col style="width:4%"><col style="width:18%"><col style="width:18%"><col style="width:18%"><col style="width:10%"><col style="width:9%"><col style="width:7%"><col style="width:7%"><col style="width:9%"></colgroup>
       <tbody>
@@ -460,8 +455,12 @@ format:
         <tr><td class="ws-num"><span class="fno">41</span></td><td class="prior"><div class="f-select"><span class="opt">Weekly at team level</span></div><span class="prior-src">ch20 L317-357</span></td><td class="prior">Persona effectiveness review<span class="prior-src">ch20 L317-357</span></td><td class="prior">Spot-check 2–3 agent sessions for role adherence<span class="prior-src">ch20 L317-357</span></td><td class="prior">Persona Drift (#17)<span class="prior-src">ch20 L317-357</span></td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Automated</span><span class="opt">Manual</span></div></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">partial</span><span class="opt">no</span></div><div class="f-select"><span class="opt">Hard gate</span><span class="opt">Advisory</span></div></td></tr>
       </tbody>
     </table>
-    <p style="font-size:7.5pt">Column “In place / hard gate or advisory” records both statuses for every check. Automate what you can. Checklist the rest. (ch20 L357)</p>
+
   </div>
+    <div class="ws-block">
+      <h2 style="margin:0 0 .5mm">Block D — checks we are choosing not to run</h2>
+      <table class="ws"><colgroup><col style="width:50%"><col style="width:25%"><col style="width:25%"></colgroup><tbody><tr><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-sign"></span></td></tr></tbody></table>
+    </div>
   <div class="ws-foot">
     <div>WS-05-governance-readiness-assessment &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 6</div>
     <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
