@@ -221,7 +221,7 @@ format:
     <h2>Part B &mdash; register <span class="ws-block-note">one row per primitive &middot; B7 is ticked against the header-box line on sheet 1, not against any benchmark</span></h2>
     <table class="ws">
       <colgroup>
-        <col style="width:3%"><col style="width:9%"><col style="width:9%"><col style="width:9%"><col style="width:7%"><col style="width:5%"><col style="width:5%"><col style="width:7%"><col style="width:5%"><col style="width:5%"><col style="width:7%"><col style="width:7%"><col style="width:6%"><col style="width:5%"><col style="width:5%"><col style="width:6%">
+        <col style="width:3%"><col style="width:8%"><col style="width:9%"><col style="width:9%"><col style="width:7%"><col style="width:5%"><col style="width:5%"><col style="width:7%"><col style="width:7%"><col style="width:5%"><col style="width:6%"><col style="width:7%"><col style="width:6%"><col style="width:5%"><col style="width:5%"><col style="width:6%">
       </colgroup>
       <thead>
         <tr><th></th><th>B1 Path</th><th>B2 Primitive type</th><th>B3 Binding mode (confirm default or record exception)</th><th>B4 Trigger that loads it (actual glob, description or call)</th><th>B5 Measured size (tokens, measured)</th><th>B6 Cost cadence</th><th>B7 Eager and over our size line</th><th>B8 Owner and CODEOWNERS line</th><th>B9 Last edited</th><th>B10 Consuming teams</th><th>B11 Overlap</th><th>B12 If ESSENTIAL: extraction target and ticket</th><th>B13 In a manifest</th><th>B14 In a lockfile</th><th>B15 Last change and semver class</th></tr>
