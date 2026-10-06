@@ -1,0 +1,322 @@
+---
+title: "Seam Design-Review Gate Checklist"
+pagetitle: "WS-16-seam-design-review-gate"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-16-seam-design-review-gate</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  3 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Seam Design-Review Gate Checklist</h1>
+      <p class="ws-sub">A standing design-review gate that every agentic system must pass. Completed by the reviewer, once per design. The place to find out is in the design review, not in the post-mortem.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-16-seam-design-review-gate</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>15</b> &middot; type <b>checklist</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Deterministic/Probabilistic Boundary</b>, <i>The Architect's Discipline</i> &middot;
+    <code>handbook/ch16-deterministic-probabilistic-boundary.qmd</code> L138-146 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch16-deterministic-probabilistic-boundary.html#sec-seam-architects-discipline">#sec-seam-architects-discipline</a>
+    &middot; Prerequisites: <code>WS-16-seam-placement-canvas</code> (the diagram habit 1 inspects), <code>WS-16-consequential-effect-register</code> (the rows of the habit 2 table)
+  </div>
+
+  <div class="ws-instruction">
+    You are the reviewer, not the author. The author stays in the room and supplies evidence; you hold the pen. For this design, answer three questions with a verdict and evidence each: is the line drawn and is every consequential box on the deterministic side; was the gate chosen before the model; and was a direct write token offered, and if accepted, is the reason and compensating control written down. Each habit returns the design on its own. Nothing here is added up or averaged.
+  </div>
+
+  <div class="ws-block">
+    <h2>Header <span class="ws-block-note">one per design</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:24%"><col style="width:17%"><col style="width:17%"><col style="width:12%"><col style="width:25%"></colgroup>
+      <thead><tr><th></th><th>Design under review</th><th>Author</th><th>Reviewer</th><th>Date</th><th>Verdict</th></tr></thead>
+      <tbody><tr>
+        <td class="ws-num"><span class="fno">1</span></td>
+        <td class="fill"><span class="f-text"></span></td>
+        <td class="fill"><span class="f-owner"></span></td>
+        <td class="fill"><span class="f-owner"></span></td>
+        <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        <td class="fill"><div class="f-select"><span class="opt">APPROVED</span><span class="opt">APPROVED WITH CONDITIONS</span><span class="opt">RETURNED</span></div></td>
+      </tr></tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Region A &mdash; the three habits <span class="ws-block-note">one row per habit; this is the gate</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:12%"><col style="width:25%"><col style="width:8%"><col style="width:22%"><col style="width:18%"><col style="width:12%"></colgroup>
+      <thead><tr><th></th><th>Habit</th><th>What the habit requires</th><th>Verdict</th><th>Evidence</th><th>Consequential effects still on the probabilistic side</th><th>Reviewer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td class="prior"><b>Draw the line on the diagram</b><span class="prior-src">ch16 L143</span></td>
+          <td class="prior">Before you write the prompt or the workflow, sketch the system and label which boxes are deterministic and which are probabilistic. Anything consequential on the probabilistic side is a design defect; redraw until consequential side effects sit on the deterministic side, behind a gate.<span class="prior-src">ch16 L143</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
+          <td class="fill taller"><span class="f-box"></span><span class="ws-block-note">Attach the diagram, boxes labelled deterministic or probabilistic.</span></td>
+          <td class="fill taller"><span class="f-text"></span><span class="f-text"></span><span class="ws-block-note"><b>Must be empty.</b> A non-empty list returns the design.</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td class="prior"><b>Pick the gate before you pick the model</b><span class="prior-src">ch16 L144</span></td>
+          <td class="prior">For each consequential effect, name the failure mode you fear and pick the gate cell &mdash; programmatic-internal, judgement-internal, programmatic-external, judgement-external &mdash; that catches it. Then implement the gate. The model choice is downstream.<span class="prior-src">ch16 L144</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
+          <td class="fill taller"><span class="f-box"></span><span class="ws-block-note">Evidence, not assertion: a dated decision record, an ADR, a commit order.</span></td>
+          <td class="fill taller"><span class="f-text"></span><span class="f-text"></span><span class="ws-block-note"><b>Must be empty.</b> A non-empty list returns the design.</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td class="prior"><b>Refuse the write token</b><span class="prior-src">ch16 L145</span></td>
+          <td class="prior">When a vendor or a tool offers the agent a credential that allows direct externalization, ask whether the client offers a strong-form alternative. If it does, take it. If it does not, document why you accepted weak-form and what the compensating control is. Never accept the token without making the choice explicit.<span class="prior-src">ch16 L145</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td>
+          <td class="fill taller"><span class="f-text"></span><span class="f-text"></span><span class="ws-block-note"><b>Must be empty.</b> A non-empty list returns the design.</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Habit 2 &mdash; one row per consequential effect <span class="ws-block-note">carry rows over from WS-16-consequential-effect-register; do not invent new ones here</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:20%"><col style="width:19%"><col style="width:22%"><col style="width:10%"><col style="width:26%"></colgroup>
+      <thead><tr><th></th><th>2a Consequential effect</th><th>2b Failure mode feared (named before the gate)</th><th>2c Gate cell</th><th>2d Gate implemented?</th><th>2e Gate chosen before the model? Chosen but not built is a fail.</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>built</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num">&nbsp;</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>built</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num">&nbsp;</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">programmatic-internal</span><span class="opt">judgement-internal</span><span class="opt">programmatic-external</span><span class="opt">judgement-external</span></div></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>built</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-16-seam-design-review-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Seam Design-Review Gate &mdash; Habit 3 and Region B</h1>
+      <p class="ws-sub">The write-token decision, then the pattern selection and trade-off register.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-16-seam-design-review-gate</b><br>
+      continued from sheet 1<br>
+      fill order <b>15</b> &middot; type <b>checklist</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Region B &mdash; pattern selection and trade-off register <span class="ws-block-note">the matrix is printed; the trade-off column is the load-bearing field</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:7%"><col style="width:15%"><col style="width:11%"><col style="width:15%"><col style="width:12%"><col style="width:8%"><col style="width:9%"><col style="width:12%"><col style="width:8%"></colgroup>
+      <thead><tr><th></th><th>B1 Layer</th><th>B2 When you have&hellip;</th><th>B3 Reach for</th><th>B4 Trade-off you accept</th><th>B5 Failure mode if you skip</th><th>B6 Does this describe us?</th><th>B7 Pattern we commit to</th><th>B8 Trade-off we explicitly accept (mandatory wherever B7 is filled)</th><th>B9 Architect signs</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num">1</td><td class="prior">Composition<span class="prior-src">ch19 L163</span></td><td class="prior">Same content needed in 3+ consumers</td><td class="prior">Dependency</td><td class="prior">Distribution boundary; versioning; transitive closure</td><td class="prior">Duplicated leaf; drift between copies</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill tall" rowspan="9"><span class="f-sign"></span></td></tr>
+        <tr><td class="ws-num">2</td><td class="prior">Composition</td><td class="prior">One module needs to specialize one section of another</td><td class="prior">Override (Template Method)</td><td class="prior">Slot names become a public contract</td><td class="prior">Forking the upstream module</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">3</td><td class="prior">Composition</td><td class="prior">A capability ships with assets and a description</td><td class="prior">Skill (Module + Facade)</td><td class="prior">Description is the API; rewording is breaking</td><td class="prior">Asset leakage into the consumer's context</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">4</td><td class="prior">Assembly</td><td class="prior">A session that runs more than a turn or two against the same primitives</td><td class="prior">Cache-Aware Prefix</td><td class="prior">Prefix layout becomes a public contract; no timestamps or mutable IDs in the head</td><td class="prior">Every turn pays full input on the entire prefix</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">5</td><td class="prior">Dispatch</td><td class="prior">A decision needs &ge;3 independent lenses</td><td class="prior">Panel</td><td class="prior">Synthesis cost; one extra orchestration thread</td><td class="prior">Single-lens bias; missed dissent</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">6</td><td class="prior">Dispatch</td><td class="prior">Work decomposes into ordered, gateable stages</td><td class="prior">Wave</td><td class="prior">Each stage's output must be durable; gates must be deterministic</td><td class="prior">Stage collapse (planning and implementing in one turn)</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">7</td><td class="prior">Dispatch</td><td class="prior">Sub-tasks are independent and parallel-safe</td><td class="prior">Scatter-Gather</td><td class="prior">One writer per sink; concurrency budget</td><td class="prior">Shared-state interlock; serialized fan-out</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">8</td><td class="prior">Dispatch</td><td class="prior">A sub-task needs cold context</td><td class="prior">Threading + Subagent Spawn</td><td class="prior">Re-load cost; explicit hand-off packet</td><td class="prior">Attention contamination from parent</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">9</td><td class="prior">Dispatch</td><td class="prior">Mixed-complexity workload with a 5&times;+ cost spread across model classes</td><td class="prior">Model Router</td><td class="prior">Classification-turn cost; routing rules are a public contract</td><td class="prior">Single-class cost floor; overspend on trivial work or underpower hard work</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-16-seam-design-review-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Seam Design-Review Gate &mdash; Region B (rows 10-18)</h1>
+      <p class="ws-sub">The register continues; B9 is signed once per half.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-16-seam-design-review-gate</b><br>
+      continued from sheet 2<br>
+      fill order <b>15</b> &middot; type <b>checklist</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Region B (continued) &mdash; pattern selection and trade-off register</h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:7%"><col style="width:15%"><col style="width:11%"><col style="width:15%"><col style="width:12%"><col style="width:8%"><col style="width:9%"><col style="width:12%"><col style="width:8%"></colgroup>
+      <thead><tr><th></th><th>B1 Layer</th><th>B2 When you have&hellip;</th><th>B3 Reach for</th><th>B4 Trade-off you accept</th><th>B5 Failure mode if you skip</th><th>B6 Does this describe us?</th><th>B7 Pattern we commit to</th><th>B8 Trade-off we explicitly accept (mandatory wherever B7 is filled)</th><th>B9 Architect signs</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num">10</td><td class="prior">Dispatch</td><td class="prior">A workflow with stratifiable stages (planning / execution / triage)</td><td class="prior">Gradient Workflow</td><td class="prior">Tier switches must land at thread or wave boundaries to preserve cache</td><td class="prior">Flat model assignment; heavy model on cheap work</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill tall" rowspan="9"><span class="f-sign"></span></td></tr>
+        <tr><td class="ws-num">11</td><td class="prior">Boundary</td><td class="prior">A consequential action against a system of record</td><td class="prior">Supervised Execution (strong form)</td><td class="prior">Client lock-in; capability-based security wiring</td><td class="prior">Plan-and-pray; LLM-asserted side effects</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">12</td><td class="prior">Boundary</td><td class="prior">Freeform model output must enter typed substrate</td><td class="prior">Schema-Checked Transformer</td><td class="prior">Schema becomes a public contract</td><td class="prior">Type errors past the gate; runtime faults</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">13</td><td class="prior">Boundary</td><td class="prior">Long-session goal drift</td><td class="prior">Plan-Write-Then-Reload</td><td class="prior">Plan artifact must be re-readable in a fresh thread</td><td class="prior">Drift compounds invisibly across turns</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">14</td><td class="prior">Boundary</td><td class="prior">External corpus loaded as grounding</td><td class="prior">Bounded-Scope Grounding</td><td class="prior">Must declare what the corpus owns</td><td class="prior">Authority overreach; vocabulary contamination</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">15</td><td class="prior">Boundary</td><td class="prior">A tool catalogue large enough to dominate the prefix, with disjoint per-phase usage</td><td class="prior">Tool Subset</td><td class="prior">Subset is a phase-scoped contract; mid-session mutation is a cache invalidator</td><td class="prior">Tool-definition tax compounds with turn count; prefix crowds out grounding</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">16</td><td class="prior">Recovery</td><td class="prior">Multi-skill multi-thread runs whose provenance matters</td><td class="prior">Agent Stack Trace</td><td class="prior">Tracing emission cost on every dispatch</td><td class="prior">Undebuggable after the fact</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">17</td><td class="prior">Recovery</td><td class="prior">External dependencies whose drift changes behaviour</td><td class="prior">Lockfile</td><td class="prior">Lockfile becomes a public artifact</td><td class="prior">Non-reproducible runtime closure</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">18</td><td class="prior">Recovery<span class="prior-src">ch19 L163-181</span></td><td class="prior">Consequential effects an auditor must reconstruct</td><td class="prior">Audit Trail</td><td class="prior">Storage + query infrastructure; append-only discipline<span class="prior-src">ch19 L161, L183</span></td><td class="prior">Implicit-trust outer loop; clandestine bot</td><td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not yet</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "Reviewer rule: a design that names a pattern from column three without naming the trade-off in column four is structurally incomplete. The trade-off is what makes the choice deliberate rather than accidental." (ch19 L183)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-16-seam-design-review-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Seam Design-Review Gate &mdash; Habit 3 and Region C</h1>
+      <p class="ws-sub">The write-token decision, then the before-and-after compliance scorecard.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-16-seam-design-review-gate</b><br>
+      continued from sheet 3<br>
+      fill order <b>15</b> &middot; type <b>checklist</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Habit 3 &mdash; the write-token decision</h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:17%"><col style="width:17%"><col style="width:20%"><col style="width:21%"><col style="width:22%"></colgroup>
+      <thead><tr><th></th><th>3a Was a direct write credential offered? (by a vendor, a tool or the runtime)</th><th>3b Does the client offer a strong-form alternative? <i>not checked</i> is a fail.</th><th>3c Form accepted</th><th>3d If weak-form: why (mandatory)</th><th>3e If weak-form: compensating control (mandatory)</th></tr></thead>
+      <tbody><tr>
+        <td class="ws-num"><span class="fno">6</span></td>
+        <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes, offered</span></td>
+        <td class="fill"><div class="f-select"><span class="opt">yes</span><span class="opt">no</span><span class="opt">not checked</span></div></td>
+        <td class="prior">When the client offers strong-form, use it.<span class="prior-src">ch16 L130</span><div class="f-select"><span class="opt">strong-form</span><span class="opt">weak-form</span></div></td>
+        <td class="fill taller"><span class="f-box"></span></td>
+        <td class="fill taller"><span class="f-box"></span><span class="ws-block-note">A blank here is a fail regardless of how good 3d is.</span></td>
+      </tr></tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Region C &mdash; design compliance scorecard, before and after <span class="ws-block-note">five fixed checks, scored twice; every residual FAIL becomes the redesign backlog</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:17%"><col style="width:8%"><col style="width:20%"><col style="width:10%"><col style="width:20%"><col style="width:22%"></colgroup>
+      <thead><tr><th></th><th>C1 Check</th><th>C2 Current design</th><th>C3 Evidence, current (auditable line by line)</th><th>C4 Redesigned</th><th>C5 Evidence, redesigned</th><th>C6 If still FAIL: backlog item + owner</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">7</span></td><td class="prior">Reduced scope (per-lens fresh window)<span class="prior-src">appendix-b L33-41</span></td><td class="fill"><div class="f-select"><span class="opt">PASS</span><span class="opt">FAIL</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">PASS</span><span class="opt">FAIL</span><span class="opt">n/a</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">&nbsp;</td><td class="prior">Orchestrated composition (independent contracts)</td><td class="fill"><div class="f-select"><span class="opt">PASS</span><span class="opt">FAIL</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">PASS</span><span class="opt">FAIL</span><span class="opt">n/a</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">&nbsp;</td><td class="prior">Single-writer interlock on output</td><td class="fill"><div class="f-select"><span class="opt">PASS</span><span class="opt">FAIL</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">PASS</span><span class="opt">FAIL</span><span class="opt">n/a</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">&nbsp;</td><td class="prior">God-module avoidance</td><td class="fill"><div class="f-select"><span class="opt">PASS</span><span class="opt">FAIL</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">PASS</span><span class="opt">FAIL</span><span class="opt">n/a</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">&nbsp;</td><td class="prior">Fan-out where applicable</td><td class="fill"><div class="f-select"><span class="opt">PASS</span><span class="opt">FAIL</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">PASS</span><span class="opt">FAIL</span><span class="opt">n/a</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span><span class="f-owner"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-16-seam-design-review-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Seam Design-Review Gate &mdash; Region D</h1>
+      <p class="ws-sub">The pattern-rejection record.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-16-seam-design-review-gate</b><br>
+      continued from sheet 4<br>
+      fill order <b>15</b> &middot; type <b>checklist</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Region D &mdash; the pattern-rejection record <span class="ws-block-note">one row per near-miss pattern the design considered and did not adopt; the two greyed rows are the book's worked exemplars</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:16%"><col style="width:12%"><col style="width:35%"><col style="width:34%"></colgroup>
+      <thead><tr><th></th><th>D1 Pattern</th><th>D2 Verdict</th><th>D3 The pattern's own WHEN-clause, quoted verbatim</th><th>D4 Why our case fails that clause (ours, in one line)</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num">ex</td><td class="prior">A8 Alignment Loop<span class="prior-src">appendix-b L80</span></td><td class="prior">REJECTED</td><td class="prior">"The first attempt is unlikely to satisfy the goal in one pass ... Goal drift is a real risk over several rounds."<span class="prior-src">appendix-b L80</span></td><td class="prior">A binary PR verdict against a fixed rubric is one-shot per PR event, so an iterative alignment loop does not apply.<span class="prior-src">appendix-b L80</span></td></tr>
+        <tr><td class="ws-num">ex</td><td class="prior">A5 Wave Execution<span class="prior-src">appendix-b L80</span></td><td class="prior">REJECTED</td><td class="prior">"No DAG; lenses are mutually independent."<span class="prior-src">appendix-b L80</span></td><td class="prior">&mdash;<span class="prior-src">appendix-b L80</span></td></tr>
+        <tr><td class="ws-num"><span class="fno">8</span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">CONSIDERED</span><span class="opt">ADOPTED</span><span class="opt">REJECTED</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">&nbsp;</td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">CONSIDERED</span><span class="opt">ADOPTED</span><span class="opt">REJECTED</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">&nbsp;</td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">CONSIDERED</span><span class="opt">ADOPTED</span><span class="opt">REJECTED</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "Reaching for a pattern is half the discipline; declining a near-miss with the WHEN-clause cited is the other half." (appendix-b L80)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-16-seam-design-review-gate &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
