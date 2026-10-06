@@ -142,8 +142,8 @@ format:
 
   <div class="ws-head">
     <div>
-      <h1>Seam Design-Review Gate &mdash; Habit 3 and Region B</h1>
-      <p class="ws-sub">The write-token decision, then the pattern selection and trade-off register.</p>
+      <h1>Seam Design-Review Gate &mdash;       Region B (rows 1-9)</h1>
+            <p class="ws-sub">The pattern selection and trade-off register.</p>
     </div>
     <div class="ws-meta">
       <b>WS-16-seam-design-review-gate</b><br>
@@ -185,7 +185,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Seam Design-Review Gate &mdash; Region B (rows 10-18)</h1>
-      <p class="ws-sub">The register continues; B9 is signed once per half.</p>
+      <p class="ws-sub">The register continues.</p>
     </div>
     <div class="ws-meta">
       <b>WS-16-seam-design-review-gate</b><br>
