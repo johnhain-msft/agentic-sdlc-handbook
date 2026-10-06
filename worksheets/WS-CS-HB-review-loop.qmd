@@ -1,0 +1,334 @@
+---
+title: "Review Loop Design Canvas"
+pagetitle: "WS-CS-HB-review-loop"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-CS-HB-review-loop</b> &middot; declared format <b>A3 landscape</b> &middot; 2 sheets.
+  The white page below is one physical sheet at true size. Anything spilling past its
+  edge onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Review Loop Design Canvas</h1>
+      <p class="ws-sub">Design a draft-review-revise quality loop with a fixed verdict vocabulary, parallel reviewer proxies and a named synthesiser of conflicting fixes, ready to encode as primitives.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-CS-HB-review-loop</b><br>
+      Pack Z &middot; fill order 13 &middot; canvas<br>
+      format <b>A3 landscape</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Writing a ~68,000-Word Book with Agent Fleets</b> &middot; The Draft&rarr;Review&rarr;Revise Cycle &middot;
+    <code>case-study-handbook-writing.qmd</code> L130-166 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/case-study-handbook-writing.html#sec-cs-handbook-review-cycle">#sec-cs-handbook-review-cycle</a> &middot;
+    "Every chapter passed through an identical three-stage pipeline. This is the core quality loop" &middot;
+    Fill first: <code>WS-12-agent-persona-design-canvas</code>
+  </div>
+
+  <div class="ws-instruction">
+    Design your own loop. Region A is the loop itself: one answer per decision, filled once. Region B is the reviewer roster: one row per proxy, and each row must stand in for a named real person's reading. Bring one of those people. The grey cells are the book's case, printed as an example to compare against, not an answer to copy. Write the complete, closed list of verdicts in A8 before you fill any proxy's column 6. Then encode all of it as primitives within the week.
+  </div>
+
+  <div style="display:grid;grid-template-columns:49% 49%;column-gap:2%;align-items:start">
+
+  <div class="ws-block">
+    <h2>Region A &mdash; the loop design <span class="ws-block-note">filled once</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:17%"><col style="width:33%"><col style="width:45%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book's case did</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>A1 What goes through the loop</b></td>
+          <td class="prior">Exemplar: a chapter<span class="prior-src">case-study L130</span></td>
+          <td class="fill"><span class="f-text"></span><small>Our artefact type, named precisely</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>A2 Draft stage: who drafts</b></td>
+          <td class="prior">Exemplar: a Draft Agent acting as domain specialist<span class="prior-src">case-study L139</span></td>
+          <td class="fill"><span class="f-text"></span><small>Our drafting persona</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>A3 What the draft stage receives</b></td>
+          <td class="prior">Exemplar: an architecture spec plus source material<span class="prior-src">case-study L145</span></td>
+          <td class="fill"><span class="f-text"></span><small>Our dispatch packet</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>A4 What the draft stage returns</b></td>
+          <td class="prior">&mdash;<span class="prior-src">case-study L146</span></td>
+          <td class="fill"><span class="f-text"></span><small>The artefact, and its expected shape</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>A5 Are reviews parallel?</b></td>
+          <td class="prior">Pre-ticked: the case runs three reviews in parallel<span class="prior-src">case-study L148-152</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>parallel</span><small>Untick only with a reason in A6</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>A6 Why, if not parallel</b></td>
+          <td class="prior">&mdash;<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>A7 Batching unit</b></td>
+          <td class="prior">The case moved to batching by reviewer in later waves: one reviewer receives several artefacts at once, to cut dispatch overhead without losing coverage.<span class="prior-src">case-study L164</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">by artefact</span><span class="opt">by reviewer</span></div>
+            <small>Our choice, and the reason for it</small><span class="f-text sm"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>A8 Verdict vocabulary</b></td>
+          <td class="prior">Exemplar: the case's reviewers return a <b>REVISE</b> verdict plus fixes.<span class="prior-src">case-study L154-156</span></td>
+          <td class="fill"><span class="f-text"></span><small>The complete, closed set of verdicts a reviewer may return, one word each. Free-text verdicts are prohibited by construction.</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Region A &mdash; the loop design, continued <span class="ws-block-note">filled once</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:17%"><col style="width:33%"><col style="width:45%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book's case did</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>A9 Who synthesises conflicting fixes</b></td>
+          <td class="prior">Exemplar: the orchestrator synthesises consensus fixes<span class="prior-src">case-study L158</span></td>
+          <td class="fill"><span class="f-owner"></span><small>Named person or named agent. Never "the team".</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>A10 Tie-break rule</b></td>
+          <td class="prior">&mdash;<span class="prior-src">derived from case-study L158</span></td>
+          <td class="fill"><span class="f-text"></span><small>What happens when two proxies return incompatible fixes. A rule written down, not a judgement made each time.</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>A11 Who applies the fixes</b></td>
+          <td class="prior">Exemplar: a separate Revision Agent, not the drafter<span class="prior-src">case-study L159-160</span></td>
+          <td class="fill"><span class="f-text"></span><small>Our revision stage</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>A12 Checkpoint commit: where</b></td>
+          <td class="prior">Exemplar: a commit containing draft and revision together<span class="prior-src">case-study L161</span></td>
+          <td class="fill"><span class="f-text"></span><small>Branch or path</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>A13 Checkpoint commit: what it contains</b></td>
+          <td class="prior">&mdash;<span class="prior-src">case-study L161</span></td>
+          <td class="fill"><span class="f-text"></span><small>Enough to reconstruct the round</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>A14 Loop ceiling</b></td>
+          <td class="prior">&mdash;<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-text sm"></span><small>Rounds before this escalates to a human decision. Our own number.</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>A15 Who the escalation goes to</b></td>
+          <td class="prior">&mdash;<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td>
+          <td><b>A16 Loop owner</b></td>
+          <td class="prior">&mdash;<span class="prior-src">org</span></td>
+          <td class="fill"><span class="f-owner"></span><small>Maintains the loop and its personas</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-CS-HB-review-loop &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Review Loop Design Canvas &mdash; Region B</h1>
+      <p class="ws-sub">The reviewer roster. Draw proxies from the <code>WS-12-agent-persona-design-canvas</code> roster; B4 must resolve to a real persona entry.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-CS-HB-review-loop</b><br>
+      format <b>A3 landscape</b><br>
+      sheet 2 of 2
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Region B &mdash; the reviewer roster <span class="ws-block-note">one row per reviewer proxy</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:11%"><col style="width:13%"><col style="width:12%"><col style="width:12%"><col style="width:12%"><col style="width:10%"><col style="width:8%"><col style="width:10%"><col style="width:12%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>B1 Proxy name</th>
+          <th>B2 Whose lens it reads as (a named real role; "Reviewer 2" fails)</th>
+          <th>B3 What it reviews for (one line)</th>
+          <th>B4 Persona file (path; must resolve to a roster entry)</th>
+          <th>B5 Context it receives (its own slice)</th>
+          <th>B6 Verdicts it may return (subset of A8)</th>
+          <th>B7 Can it block?</th>
+          <th>B8 Precedence when it conflicts (rank; feeds A10)</th>
+          <th>B9 Human owner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">CTO Proxy<span class="prior-src">case-study L140</span></td>
+          <td class="prior">&mdash;<span class="prior-src">case-study L140-142</span></td>
+          <td class="prior">Executive audience<span class="prior-src">case-study L149</span></td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;<span class="prior-src">case-study L149-151</span></td>
+          <td class="prior">REVISE<span class="prior-src">case-study L154</span></td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior">Dev Lead Proxy<span class="prior-src">case-study L141</span></td>
+          <td class="prior">&mdash;<span class="prior-src">case-study L140-142</span></td>
+          <td class="prior">Practitioner audience<span class="prior-src">case-study L150</span></td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;<span class="prior-src">case-study L149-151</span></td>
+          <td class="prior">REVISE<span class="prior-src">case-study L155</span></td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="prior">Chief Editor<span class="prior-src">case-study L142</span></td>
+          <td class="prior">&mdash;<span class="prior-src">case-study L140-142</span></td>
+          <td class="prior">Coherence and voice<span class="prior-src">case-study L151</span></td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;<span class="prior-src">case-study L149-151</span></td>
+          <td class="prior">REVISE<span class="prior-src">case-study L156</span></td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;</td>
+        </tr>
+        <tr class="roster">
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocks</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr class="roster">
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocks</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr class="roster">
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocks</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr class="roster">
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocks</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr class="roster">
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>blocks</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:2mm 0 0">The three grey rows are the book's case, printed as an exemplar. The case names the lenses but does not give persona files, blocking or precedence, so those cells print a dash. Proxies that receive identical context in B5 are one proxy. Two proxies at the same rank in B8 need an explicit rule in A10.</p>
+
+    <h2 style="margin-top:4mm">The case's own loop <span class="ws-block-note">exemplar, not a fill area</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:100%"></colgroup>
+      <tbody>
+        <tr><td class="locked">Orchestrator dispatches the Draft Agent (architecture spec + source material) &rarr; draft returned &rarr; three parallel reviews (CTO Proxy, Dev Lead Proxy, Chief Editor), each returning REVISE + fixes &rarr; Orchestrator synthesises consensus fixes &rarr; Revision Agent applies them &rarr; Orchestrator commits a checkpoint of draft + revision. (case-study L145-161)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "In later waves, the orchestrator batched reviews by persona rather than by chapter &mdash; sending one reviewer all 5 chapters at once rather than dispatching 15 separate reviews." (case-study L164)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-CS-HB-review-loop &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
