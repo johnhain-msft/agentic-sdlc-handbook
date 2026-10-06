@@ -1,0 +1,504 @@
+---
+title: "Year-One Total Cost of Ownership Calculator"
+pagetitle: "WS-03-tco-calculator"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+            .prior-src, .hedge-src { font-size: 7pt !important; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-03-tco-calculator</b> &middot; review copy &middot; declared format
+  <b>A3 landscape</b> &middot; 4 sheets. Each white page below is one physical
+  sheet at true size. Anything spilling past a page edge onto this grey
+  background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Year-One Total Cost of Ownership Calculator</h1>
+      <p class="ws-sub">Build an auditable year-1 cost input for the break-even model and CFO review.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-tco-calculator</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>3</b> &middot; type <b>calculator</b><br>
+      audience <b>engineering lead, finance, procurement</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>What It Actually Costs</i> &middot;
+    <code>handbook/ch03-the-business-case.qmd</code> L36-97 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-costs">#sec-business-case-costs</a>
+    &middot; locator: "Every vendor pitch includes the license fee. None of them include the other"
+  </div>
+
+  <div class="ws-instruction">
+    Work with finance and procurement. Price each component for your actual team,
+    write the assumption a CFO will test beside it, and name the person who can
+    defend it. Use current dated quotes and finance-authorized internal rates;
+    treat every book estimate as a prior, never a default. Complete every line,
+    then carry the signed year-1 total to WS-03-roi-break-even-model.
+  </div>
+
+  <div class="ws-block">
+    <h2>Team size and cost build-up
+      <span class="ws-block-note">complete all six components for your actual team</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:12%"><col style="width:15%">
+              <col style="width:16%"><col style="width:8%"><col style="width:14%">
+              <col style="width:12%"><col style="width:11%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th></th><th>Cost component</th><th>What's often missed</th>
+          <th>Illustrative range, team of 10, year 1 †</th>
+          <th>Our figure, year 1</th><th>Our assumption behind it</th>
+          <th>Basis</th><th>Owner of this line</th><th>Confidence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td class="prior">Tool licences<span class="prior-src">ch03 L84</span></td>
+          <td class="prior">Enterprise tier + premium model usage overages<span class="prior-src">ch03 L84</span></td>
+          <td class="prior">
+            <div class="prior--hedged">
+              <span class="hedge-figure">$24,000–50,000</span>
+              <span class="hedge-text">† Author estimates based on advisory work with early-adopter teams. Tool license costs reflect published pricing; all other ranges are projections that will vary by region, seniority, codebase complexity, and tooling maturity.</span>
+              <span class="hedge-src">handbook/ch03-the-business-case.qmd L84, L94</span>
+            </div>
+          </td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">quoted</span><span class="opt">invoiced</span>
+              <span class="opt">estimated internally</span><span class="opt">scaled from the book's range</span>
+            </div>
+          </td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td class="prior">Context engineering<span class="prior-src">ch03 L85</span></td>
+          <td class="prior">Measured in engineering time, not invoices<span class="prior-src">ch03 L85</span></td>
+          <td class="prior">
+            <div class="prior--hedged">
+              <span class="hedge-figure">$20,000–60,000 †</span>
+              <span class="hedge-text">† Author estimates based on advisory work with early-adopter teams. Tool license costs reflect published pricing; all other ranges are projections that will vary by region, seniority, codebase complexity, and tooling maturity.</span>
+              <span class="hedge-src">handbook/ch03-the-business-case.qmd L85, L94</span>
+            </div>
+          </td>
+          <td class="fill"><span class="f-computed" data-formula="engineers assigned × weeks of effort × fully loaded weekly cost"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">quoted</span><span class="opt">invoiced</span>
+              <span class="opt">estimated internally</span><span class="opt">scaled from the book's range</span>
+            </div>
+          </td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td class="prior">Token &amp; compute<span class="prior-src">ch03 L86</span></td>
+          <td class="prior">Scales with adoption success<span class="prior-src">ch03 L86</span></td>
+          <td class="prior">
+            <div class="prior--hedged">
+              <span class="hedge-figure">$6,000–24,000 †</span>
+              <span class="hedge-text">† Author estimates based on advisory work with early-adopter teams. Tool license costs reflect published pricing; all other ranges are projections that will vary by region, seniority, codebase complexity, and tooling maturity.</span>
+              <span class="hedge-src">handbook/ch03-the-business-case.qmd L86, L94</span>
+            </div>
+          </td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">quoted</span><span class="opt">invoiced</span>
+              <span class="opt">estimated internally</span><span class="opt">scaled from the book's range</span>
+            </div>
+          </td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ws-block-note">
+      <b>For each line:</b> write one assumption sentence (seat count, headcount,
+      day rate or weeks); tick one basis; name the individual owner; argue
+      confidence rather than computing it.
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Context-engineering sub-calculator
+      <span class="ws-block-note">the year-1 figure in component 2 is this product</span></h2>
+
+    <div class="prior--hedged">
+      <span class="hedge-figure">2–4 weeks</span>
+      <span class="hedge-text">For a team of 10–15 developers, in our experience with teams adopting this methodology, expect 2–4 weeks of engineering time for initial context architecture.</span>
+      <span class="hedge-src">handbook/ch03-the-business-case.qmd L58</span>
+    </div>
+
+    <table class="ws">
+      <colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col style="width:25%"></colgroup>
+      <thead><tr><th>Engineers assigned</th><th>Weeks of effort</th><th>Fully loaded weekly cost, as finance defines it</th><th>Context engineering figure</th></tr></thead>
+      <tbody><tr>
+        <td class="fill"><span class="f-text sm"></span></td>
+        <td class="fill"><span class="f-text sm"></span></td>
+        <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+        <td class="fill"><span class="f-computed" data-formula="engineers assigned × weeks of effort × fully loaded weekly cost"></span></td>
+      </tr></tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "If your business case shows only the first row, it is incomplete." (ch03 L96)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-tco-calculator &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Year-One Total Cost of Ownership Calculator</h1>
+      <p class="ws-sub">Cost build-up, continued — complete every component for your actual team.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-tco-calculator</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>3</b> &middot; type <b>calculator</b><br>
+      audience <b>engineering lead, finance, procurement</b>
+    </div>
+  </div>
+
+  <div class="ws-instruction">
+    Continue the build-up. The book's ranges are disclosed priors, not defaults;
+    use your own numbers and record the basis, assumption, owner and confidence
+    for each line.
+  </div>
+
+  <div class="ws-block">
+    <h2>Cost build-up, continued <span class="ws-block-note">components 4–6</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:12%"><col style="width:15%">
+            <col style="width:16%"><col style="width:8%"><col style="width:14%">
+            <col style="width:12%"><col style="width:11%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th></th><th>Cost component</th><th>What's often missed</th>
+          <th>Illustrative range, team of 10, year 1 †</th>
+          <th>Our figure, year 1</th><th>Our assumption behind it</th>
+          <th>Basis</th><th>Owner of this line</th><th>Confidence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td class="prior">Training &amp; change management<span class="prior-src">ch03 L87</span></td>
+          <td class="prior">Productivity dip during learning curve<span class="prior-src">ch03 L87</span></td>
+          <td class="prior"><div class="prior--hedged">
+            <span class="hedge-figure">$15,000–40,000 †</span>
+            <span class="hedge-text">† Author estimates based on advisory work with early-adopter teams. Tool license costs reflect published pricing; all other ranges are projections that will vary by region, seniority, codebase complexity, and tooling maturity.</span>
+            <span class="hedge-src">handbook/ch03-the-business-case.qmd L87, L94</span>
+          </div></td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select">
+            <span class="opt">quoted</span><span class="opt">invoiced</span>
+            <span class="opt">estimated internally</span><span class="opt">scaled from the book's range</span>
+          </div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td class="prior">Governance setup<span class="prior-src">ch03 L88</span></td>
+          <td class="prior">Security review, policy definition, audit configuration<span class="prior-src">ch03 L88</span></td>
+          <td class="prior"><div class="prior--hedged">
+            <span class="hedge-figure">$10,000–25,000 †</span>
+            <span class="hedge-text">† Author estimates based on advisory work with early-adopter teams. Tool license costs reflect published pricing; all other ranges are projections that will vary by region, seniority, codebase complexity, and tooling maturity.</span>
+            <span class="hedge-src">handbook/ch03-the-business-case.qmd L88, L94</span>
+          </div></td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select">
+            <span class="opt">quoted</span><span class="opt">invoiced</span>
+            <span class="opt">estimated internally</span><span class="opt">scaled from the book's range</span>
+          </div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td class="prior">Adoption-curve opportunity cost<span class="prior-src">ch03 L89</span></td>
+          <td class="prior">60–90 days of reduced velocity<span class="prior-src">ch03 L89</span></td>
+          <td class="prior"><div class="prior--hedged">
+            <span class="hedge-figure">$20,000–50,000 †</span>
+            <span class="hedge-text">† Author estimates based on advisory work with early-adopter teams. Tool license costs reflect published pricing; all other ranges are projections that will vary by region, seniority, codebase complexity, and tooling maturity.</span>
+            <span class="hedge-src">handbook/ch03-the-business-case.qmd L89, L94</span>
+          </div></td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select">
+            <span class="opt">quoted</span><span class="opt">invoiced</span>
+            <span class="opt">estimated internally</span><span class="opt">scaled from the book's range</span>
+          </div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ws-block-note">
+      <b>For each line:</b> write one assumption sentence (seat count, headcount,
+      day rate or weeks); tick one basis; name the individual owner; argue
+      confidence rather than computing it.
+    </div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-tco-calculator &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Year-One Total Cost of Ownership Calculator</h1>
+      <p class="ws-sub">Complete the team-size basis, year-1 total and finance sign-off.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-tco-calculator</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>3</b> &middot; type <b>calculator</b><br>
+      audience <b>engineering lead, finance, procurement</b>
+    </div>
+  </div>
+
+  <div class="ws-instruction">
+    Record your actual engineer count, calculate the total from all six component
+    figures, explain any divergence in licence share, and obtain finance sign-off.
+  </div>
+
+  <div class="prior">
+    The book's illustrative table is built for a team of 10; use your actual
+    engineer count in the footer.<span class="prior-src">ch03 L82</span>
+  </div>
+
+  <div class="ws-block">
+    <h2>Year-1 total and licence share
+      <span class="ws-block-note">record the organization's figures, not the book's estimates</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:25%"><col style="width:34%"><col style="width:35%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>Book prior</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Year-1 total, our figure</b></td>
+          <td class="prior">
+            <div class="prior--hedged">
+              <span class="hedge-figure">$95,000–249,000 †</span>
+              <span class="hedge-text">† Author estimates based on advisory work with early-adopter teams. Tool license costs reflect published pricing; all other ranges are projections that will vary by region, seniority, codebase complexity, and tooling maturity.</span>
+              <span class="hedge-src">handbook/ch03-the-business-case.qmd L90, L94</span>
+            </div>
+          </td>
+          <td class="fill"><span class="f-computed" data-formula="sum of Our figure, year 1 for all six cost components"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>Licence share of our total</b></td>
+          <td class="prior">
+            <div class="prior--hedged">
+              <span class="hedge-figure">20–25% †</span>
+              <span class="hedge-text">† Author estimates based on advisory work with early-adopter teams. Tool license costs reflect published pricing; all other ranges are projections that will vary by region, seniority, codebase complexity, and tooling maturity.</span>
+              <span class="hedge-src">handbook/ch03-the-business-case.qmd L90, L94</span>
+            </div>
+          </td>
+          <td class="fill"><span class="f-computed" data-formula="Our figure for Tool licences ÷ Year-1 total, our figure"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>Divergence note</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span><small>Why our licence share differs from the book's observation, if it does.</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Finance sign-off</b></td>
+          <td class="prior">—</td>
+          <td class="fill tall">
+            <span class="f-sign"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-tco-calculator &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 4</div>
+    <div>Team size this build-up is for <span class="fno">7</span>
+      <span class="f-text sm" style="display:inline-block;width:20mm"></span>
+      &nbsp; Filled by <span style="display:inline-block;width:28mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+
+<!-- ============================ SHEET 4 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Year-One Total Cost of Ownership Calculator</h1>
+      <p class="ws-sub">Licence quote ledger — complete from current, dated procurement quotes.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-tco-calculator</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>3</b> &middot; type <b>calculator</b><br>
+      audience <b>engineering lead, finance, procurement</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Pricing model source: <b>The AI-Native Landscape</b>, <i>How These Tools Are Priced</i> &middot;
+    <code>handbook/ch02-the-ai-native-landscape.qmd</code> L142-146 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch02-the-ai-native-landscape.html">published chapter</a>
+  </div>
+
+  <div class="ws-instruction">
+    Use one row per tool and record the quoted unit price exactly as procured,
+    with its mandatory quote date. The March 2025 vendor table and the
+    per-developer price range are deliberately not printed. Add a continuation
+    sheet if you need more tool rows.
+  </div>
+
+  <div class="ws-block">
+    <h2>Price the tools in your actual plan
+      <span class="ws-block-note">fill from a dated quote; no vendor price is pre-filled</span></h2>
+
+    <p style="margin:0 0 2mm">
+      The budget conversation that matters isn't "what does the tool cost?" but
+      "what does the tool cost relative to the developer time it displaces, and
+      does the enterprise tier's governance premium justify avoiding the shadow
+      IT remediation cost?" (ch02 L142-146)
+    </p>
+
+    <div class="prior--hedged">
+      <span class="hedge-figure">2–4× the individual price</span>
+      <span class="hedge-text">Enterprise tiers that add governance, SSO, and audit controls typically run 2–4× the individual price, depending on the vendor.</span>
+      <span class="hedge-src">handbook/ch02-the-ai-native-landscape.qmd L142-146</span>
+    </div>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:11%"><col style="width:12%">
+        <col style="width:17%"><col style="width:6%"><col style="width:9%">
+        <col style="width:14%"><col style="width:9%"><col style="width:10%"><col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th></th><th>Tool</th><th>Tier being bought</th><th>Licence model</th>
+          <th>Seats</th><th>Quoted unit price</th><th>Enterprise premium over individual</th>
+          <th>Included usage allowance</th><th>Expected overage basis</th><th>Quote date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">individual</span><span class="opt">team-business</span><span class="opt">enterprise</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">per-seat subscription</span><span class="opt">usage-based</span><span class="opt">platform-bundled</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill">
+            <div class="prior--hedged">
+              <span class="hedge-figure">2–4×</span>
+              <span class="hedge-text">Enterprise tiers that add governance, SSO, and audit controls typically run 2–4× the individual price, depending on the vendor.</span>
+              <span class="hedge-src">handbook/ch02-the-ai-native-landscape.qmd L142-146</span>
+            </div>
+            <div class="ours-label">Enterprise premium over individual — our computed ratio</div>
+            <span class="f-computed" data-formula="quoted enterprise unit price ÷ individual unit price from the vendor quote"></span>
+          </td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">individual</span><span class="opt">team-business</span><span class="opt">enterprise</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">per-seat subscription</span><span class="opt">usage-based</span><span class="opt">platform-bundled</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill">
+            <div class="prior--hedged">
+              <span class="hedge-figure">2–4×</span>
+              <span class="hedge-text">Enterprise tiers that add governance, SSO, and audit controls typically run 2–4× the individual price, depending on the vendor.</span>
+              <span class="hedge-src">handbook/ch02-the-ai-native-landscape.qmd L142-146</span>
+            </div>
+            <div class="ours-label">Enterprise premium over individual — our computed ratio</div>
+            <span class="f-computed" data-formula="quoted enterprise unit price ÷ individual unit price from the vendor quote"></span>
+          </td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">individual</span><span class="opt">team-business</span><span class="opt">enterprise</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">per-seat subscription</span><span class="opt">usage-based</span><span class="opt">platform-bundled</span></div></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill">
+            <div class="prior--hedged">
+              <span class="hedge-figure">2–4×</span>
+              <span class="hedge-text">Enterprise tiers that add governance, SSO, and audit controls typically run 2–4× the individual price, depending on the vendor.</span>
+              <span class="hedge-src">handbook/ch02-the-ai-native-landscape.qmd L142-146</span>
+            </div>
+            <div class="ours-label">Enterprise premium over individual — our computed ratio</div>
+            <span class="f-computed" data-formula="quoted enterprise unit price ÷ individual unit price from the vendor quote"></span>
+          </td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-tco-calculator &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 4 ============================ -->
+```
