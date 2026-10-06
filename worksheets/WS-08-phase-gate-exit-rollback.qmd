@@ -23,7 +23,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Phase Gate Cards — Exit Signals, Rollback Triggers, and the Kill Switch</h1>
-      <p class="ws-sub">A signed gate card with organization-specific thresholds and a named decision-maker, including a pre-agreed programme kill switch.</p>
+      <p class="ws-sub">A signed gate card with organization-specific thresholds and a named decision-maker, including a pre-agreed program kill switch.</p>
     </div>
     <div class="ws-meta"><b>WS-08-phase-gate-exit-rollback</b><br>Pack G - The plan we leave with<br>fill order <b>4</b> &middot; type <b>checklist</b><br>audience <b>eng-leader</b></div>
   </div>
@@ -44,7 +44,7 @@ format:
     </table>
   </div>
   <div class="ws-block">
-    <h2>Exit signals <span class="ws-block-note">for each signal: mark status and record evidence plus its artefact</span></h2>
+    <h2>Exit signals <span class="ws-block-note">for each signal: mark status and record evidence plus its artifact</span></h2>
     <table class="ws">
       <colgroup><col style="width:6%"><col style="width:34%"><col style="width:17%"><col style="width:22%"><col style="width:21%"></colgroup>
       <thead><tr><th></th><th>Exit signal — Signal</th><th>Exit signal — Met / not met</th><th>Exit signal — Evidence</th><th>Exit signal — Evidence artefact reference</th></tr></thead>
@@ -108,7 +108,7 @@ format:
 
 <!-- GATE 2 FRONT -->
 <div class="sheet">
-  <div class="ws-head"><div><h1>Phase Gate Cards — Exit Signals, Rollback Triggers, and the Kill Switch</h1><p class="ws-sub">A signed gate card with organization-specific thresholds and a named decision-maker, including a pre-agreed programme kill switch.</p></div><div class="ws-meta"><b>WS-08-phase-gate-exit-rollback</b><br>Pack G - The plan we leave with<br>fill order <b>4</b> &middot; type <b>checklist</b><br>audience <b>eng-leader</b></div></div>
+  <div class="ws-head"><div><h1>Phase Gate Cards — Exit Signals, Rollback Triggers, and the Kill Switch</h1><p class="ws-sub">A signed gate card with organization-specific thresholds and a named decision-maker, including a pre-agreed program kill switch.</p></div><div class="ws-meta"><b>WS-08-phase-gate-exit-rollback</b><br>Pack G - The plan we leave with<br>fill order <b>4</b> &middot; type <b>checklist</b><br>audience <b>eng-leader</b></div></div>
   <div class="ws-source">Source: <b>Planning the Transition</b>, <i>Phase 2: Expand</i> &middot; <code>handbook/ch08-planning-the-transition.qmd</code> L148-153 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-phase-1-pilot">#sec-transition-phase-1-pilot</a></div>
   <div class="ws-instruction">Complete one card for each gate. Record evidence, not enthusiasm. Calibrate every trigger against its Month 0 baseline, give every measure a named measurer and source, and leave review dates provisional until the baseline status is captured. The calibration recorder must accept or override every printed starting point; the gate caller and calibration recorder sign and date their decisions.</div>
   <div class="ws-block"><h2>Gate 2 — Phase 2 → Phase 3 <span class="ws-block-note">front of signed card · one named gate caller</span></h2>
@@ -120,7 +120,7 @@ format:
       <tr><td class="ws-num"><span class="fno">5</span></td><td><b>Card header — Calibration recorded by, and date</b></td><td class="prior">Name the person who accepted or overrode every printed figure on this card. Calibration is an act with a name on it, not a default.<span class="prior-src">ch04 L240; ch08 L124</span></td><td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
     </tbody></table>
   </div>
-  <div class="ws-block"><h2>Exit signals <span class="ws-block-note">for each signal: mark status and record evidence plus its artefact</span></h2>
+  <div class="ws-block"><h2>Exit signals <span class="ws-block-note">for each signal: mark status and record evidence plus its artifact</span></h2>
     <table class="ws"><colgroup><col style="width:6%"><col style="width:34%"><col style="width:17%"><col style="width:22%"><col style="width:21%"></colgroup><thead><tr><th></th><th>Exit signal — Signal</th><th>Exit signal — Met / not met</th><th>Exit signal — Evidence</th><th>Exit signal — Evidence artefact reference</th></tr></thead><tbody>
       <tr><td class="ws-num"><span class="fno">6</span></td><td class="locked">Expanding teams are productive with agentic tools without daily support from pilot members.<span class="prior-src">ch08 L148</span></td><td class="fill"><div class="f-select"><span class="opt">met</span><span class="opt">partial</span><span class="opt">not met</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
       <tr><td class="ws-num"><span class="fno">6</span></td><td class="locked">Shared context assets exist and have a responsible owner.<span class="prior-src">ch08 L148</span></td><td class="fill"><div class="f-select"><span class="opt">met</span><span class="opt">partial</span><span class="opt">not met</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
@@ -183,7 +183,7 @@ format:
 
 <!-- GATE 3 FRONT -->
 <div class="sheet">
-  <div class="ws-head"><div><h1>Phase Gate Cards — Exit Signals, Rollback Triggers, and the Kill Switch</h1><p class="ws-sub">A signed gate card with organization-specific thresholds and a named decision-maker, including a pre-agreed programme kill switch.</p></div><div class="ws-meta"><b>WS-08-phase-gate-exit-rollback</b><br>Pack G - The plan we leave with<br>fill order <b>4</b> &middot; type <b>checklist</b><br>audience <b>eng-leader</b></div></div>
+  <div class="ws-head"><div><h1>Phase Gate Cards — Exit Signals, Rollback Triggers, and the Kill Switch</h1><p class="ws-sub">A signed gate card with organization-specific thresholds and a named decision-maker, including a pre-agreed program kill switch.</p></div><div class="ws-meta"><b>WS-08-phase-gate-exit-rollback</b><br>Pack G - The plan we leave with<br>fill order <b>4</b> &middot; type <b>checklist</b><br>audience <b>eng-leader</b></div></div>
   <div class="ws-source">Source: <b>Planning the Transition</b>, <i>Phase 3: Scale</i> &middot; <code>handbook/ch08-planning-the-transition.qmd</code> L177-184 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-phase-1-pilot">#sec-transition-phase-1-pilot</a></div>
   <div class="ws-instruction">Complete one card for each gate. Record evidence, not enthusiasm. Calibrate every trigger against its Month 0 baseline, give every measure a named measurer and source, and leave review dates provisional until the baseline status is captured. Phase 3 has no exit signal and no end date.</div>
   <div class="ws-block"><h2>Gate 3 — Phase 3 selective, no endpoint <span class="ws-block-note">front of signed card · Phase 3 is the steady state</span></h2>
@@ -239,9 +239,9 @@ format:
 
 <!-- KILL SWITCH FRONT -->
 <div class="sheet">
-  <div class="ws-head"><div><h1>Phase Gate Cards — Exit Signals, Rollback Triggers, and the Kill Switch</h1><p class="ws-sub">A signed gate card with organization-specific thresholds and a named decision-maker, including a pre-agreed programme kill switch.</p></div><div class="ws-meta"><b>WS-08-phase-gate-exit-rollback</b><br>Pack G - The plan we leave with<br>fill order <b>4</b> &middot; type <b>checklist</b><br>audience <b>eng-leader</b></div></div>
+  <div class="ws-head"><div><h1>Phase Gate Cards — Exit Signals, Rollback Triggers, and the Kill Switch</h1><p class="ws-sub">A signed gate card with organization-specific thresholds and a named decision-maker, including a pre-agreed program kill switch.</p></div><div class="ws-meta"><b>WS-08-phase-gate-exit-rollback</b><br>Pack G - The plan we leave with<br>fill order <b>4</b> &middot; type <b>checklist</b><br>audience <b>eng-leader</b></div></div>
   <div class="ws-source">Source: <b>Planning the Transition</b>, <i>Phase 3: Scale</i> &middot; <code>handbook/ch08-planning-the-transition.qmd</code> L177-184 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-phase-1-pilot">#sec-transition-phase-1-pilot</a></div>
-  <div class="ws-instruction">Complete the programme kill switch before the programme starts. Name the person authorized to stop it and quote the calibrated criterion from this card in the valley contract on its reverse. Document what you will preserve and revisit if the criterion is met.</div>
+  <div class="ws-instruction">Complete the program kill switch before the program starts. Name the person authorized to stop it and quote the calibrated criterion from this card in the valley contract on its reverse. Document what you will preserve and revisit if the criterion is met.</div>
   <div class="ws-block"><h2>Programme kill switch <span class="ws-block-note">front of signed card · one stop authority</span></h2>
     <table class="ws"><colgroup><col style="width:6%"><col style="width:28%"><col style="width:33%"><col style="width:33%"></colgroup><thead><tr><th></th><th>Field</th><th>Book / instruction</th><th>Your entry</th></tr></thead><tbody>
       <tr><td class="ws-num"><span class="fno">1</span></td><td><b>Card header — Gate</b></td><td class="locked"><div class="f-select"><span class="opt">Gate 1: Phase 1 → Phase 2</span><span class="opt">Gate 2: Phase 2 → Phase 3</span><span class="opt">Gate 3: Phase 3 selective, no endpoint</span><span class="opt">Programme kill switch</span></div></td><td class="locked">This card: Programme kill switch</td></tr>
@@ -264,7 +264,7 @@ format:
 <div class="sheet">
   <div class="ws-head"><div><h1>Programme kill switch — valley contract</h1><p class="ws-sub">Keep the stop authority physically with the pre-commitment and the evidence for stopping.</p></div><div class="ws-meta"><b>WS-08-phase-gate-exit-rollback</b><br>Programme kill switch<br>back of card<br>audience <b>eng-leader</b></div></div>
   <div class="ws-source">Source: <b>The Business Case</b>, <i>The Adoption Timeline</i> &middot; <code>handbook/ch03-the-business-case.qmd</code> L131-164; <b>Planning the Transition</b> L180</div>
-  <div class="ws-instruction">Write the valley contract before the programme starts, with the people who will be asked to explain negative months. Name one stop authority. The evidence must quote the calibrated kill criterion from this card's rollback trigger, word for word. Write the month-3 board sentence now, while nobody is under pressure.</div>
+  <div class="ws-instruction">Write the valley contract before the program starts, with the people who will be asked to explain negative months. Name one stop authority. The evidence must quote the calibrated kill criterion from this card's rollback trigger, word for word. Write the month-3 board sentence now, while nobody is under pressure.</div>
   <div class="ws-block"><h2>Kill-switch rollback trigger <span class="ws-block-note">calibrated threshold, not a copied starting point</span></h2>
     <table class="ws"><colgroup><col style="width:6%"><col style="width:24%"><col style="width:35%"><col style="width:35%"></colgroup><tbody>
       <tr><td class="ws-num"><span class="fno">10</span></td><td><b>Rollback trigger — Trigger</b></td><td class="locked">Participating teams show measurable improvement on quality or efficiency metrics after a full Phase 1 and Phase 2 cycle.<span class="prior-src">ch08 L180</span></td><td class="prior"><b><span class="fno">11</span> Rollback trigger — The book's printed starting point</b><br><span>author-observed, calibrate</span><br><div class="prior--hedged"><span class="hedge-figure">Fewer than 40% of participating teams show measurable improvement.</span><span class="hedge-text">a suggested threshold; adjust based on your organization's risk tolerance</span><span class="hedge-src">handbook/ch08-planning-the-transition.qmd L180</span></div></td></tr>
@@ -339,7 +339,7 @@ format:
 <div class="sheet">
   <div class="ws-head"><div><h1>Gate 3 — programme kill criterion</h1><p class="ws-sub">Record the same calibrated stop condition on the programme kill-switch card.</p></div><div class="ws-meta"><b>WS-08-phase-gate-exit-rollback</b><br>Gate 3: Phase 3 selective<br>rollback trigger continuation<br>audience <b>eng-leader</b></div></div>
   <div class="ws-source">Source: <b>Planning the Transition</b>, <i>Phase 3: Scale</i> &middot; <code>handbook/ch08-planning-the-transition.qmd</code> L180 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch08-planning-the-transition.html#sec-transition-phase-1-pilot">#sec-transition-phase-1-pilot</a></div>
-  <div class="ws-instruction">Calibrate this programme-level stop condition to your Month 0 baseline. If it is not measurable, write <b>not measurable</b> and make the trigger qualitative; never substitute the printed starting point. Write the same calibrated criterion on the Programme kill switch card.</div>
+  <div class="ws-instruction">Calibrate this program-level stop condition to your Month 0 baseline. If it is not measurable, write <b>not measurable</b> and make the trigger qualitative; never substitute the printed starting point. Write the same calibrated criterion on the Program kill switch card.</div>
   <div class="ws-block"><h2>Rollback trigger — Programme kill criterion <span class="ws-block-note">after a full Phase 1 and Phase 2 cycle</span></h2>
     <table class="ws"><colgroup><col style="width:6%"><col style="width:24%"><col style="width:35%"><col style="width:35%"></colgroup><tbody>
       <tr><td class="ws-num"><span class="fno">10</span></td><td><b>Rollback trigger — Trigger</b></td><td class="locked">Participating teams show measurable improvement on quality or efficiency metrics after a full Phase 1 and Phase 2 cycle.<span class="prior-src">ch08 L180</span></td><td class="prior"><b><span class="fno">11</span> Rollback trigger — The book's printed starting point</b><br><span>author-observed, calibrate</span><br><div class="prior--hedged"><span class="hedge-figure">Fewer than 40% of participating teams show measurable improvement.</span><span class="hedge-text">a suggested threshold; adjust based on your organization's risk tolerance</span><span class="hedge-src">handbook/ch08-planning-the-transition.qmd L180</span></div></td></tr>
