@@ -291,7 +291,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    For each data-classification or repository class you operate, select exactly one topology and state what crosses the network, the approved endpoint and region, the provider's contractual retention terms and the control that authorises this deployment. Obtain separate security, legal and procurement signatures. Record IP ownership and licensing only from your own named counsel; the book does not answer that question.
+    For each data-classification or repository class you operate, select exactly one topology and state what crosses the network, the approved endpoint and region, the provider's contractual retention terms and the control that authorizes this deployment. Obtain separate security, legal and procurement signatures. Record IP ownership and licensing only from your own named counsel; the book does not answer that question.
   </div>
 
   <div class="ws-block">
