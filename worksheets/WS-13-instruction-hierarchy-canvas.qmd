@@ -1,0 +1,395 @@
+---
+title: "Instruction Hierarchy Design Canvas"
+pagetitle: "WS-13-instruction-hierarchy-canvas"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-13-instruction-hierarchy-canvas</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  3 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Instruction Hierarchy Design Canvas</h1>
+      <p class="ws-sub">A target instruction hierarchy with at least three specificity levels, and the migration list for flattening or splitting what exists today.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-13-instruction-hierarchy-canvas</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>6</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The PROSE Constraints</b>, <i>E &mdash; Explicit Hierarchy</i> &middot;
+    <code>handbook/ch13-the-prose-specification.qmd</code> L295-370 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch13-the-prose-specification.html#sec-prose-explicit-hierarchy">#sec-prose-explicit-hierarchy</a>
+    &middot; prerequisite: <code>WS-03-context-moat-asset-inventory</code> (its classified rule list is surface B's row set)
+  </div>
+
+  <div class="ws-instruction">
+    Sketch the target instruction hierarchy for one real repository. Start with the diagnostic box below, and fill it out loud
+    before anything else. Then, on sheets 2 and 3, put each node in the tree: what belongs at the root (true everywhere), at each
+    domain, and at each module. For every rule your repository holds globally today, decide whether to keep it, scope it down or
+    delete it. At each level apply one test: can module-specific rules be added without editing any file above that module?
+  </div>
+
+  <div class="ws-block">
+    <h2>Diagnostic box &mdash; fill this first
+      <span class="ws-block-note">filled even when the answer is no</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:20%"><col style="width:35%"><col style="width:40%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Repository</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>Does one root file carry rules for two or more unrelated domains?</b></td>
+          <td class="prior">The anti-pattern's worked file: a single root file with a <code># Project Instructions</code> heading, then sections ## Python ("Use type hints. Follow PEP 8..."), ## React ("Use functional components. Follow accessibility guidelines..."), ## Authentication ("Use JWT with RS256. Rotate refresh tokens..."), ## Database ("Use migrations for all schema changes...") and ## CSS ("Use CSS modules. Follow BEM naming...").<span class="prior-src">ch13 L343-366</span></td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>Yes</span>
+            <span class="f-checkline"><span class="f-check"></span>No</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>The domains found in it</b></td>
+          <td class="prior">Listed by heading, as the worked file does.<span class="prior-src">ch13 L347-364</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>Filled by / date</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-owner"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>What the book prints &mdash; read before drawing
+      <span class="ws-block-note">reference only; nothing to write here</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:50%"><col style="width:50%">
+      </colgroup>
+      <tbody>
+        <tr>
+          <td class="prior"><b>The worked four-level tree</b> (root, <code>frontend/</code>, <code>frontend/components/</code>, <code>backend/</code>, <code>backend/auth/</code>)<br>
+            <code>project/AGENTS.md</code> &mdash; Global: naming, commits, documentation<br>
+            <code>&nbsp;&nbsp;frontend/AGENTS.md</code> &mdash; Frontend: React patterns, accessibility<br>
+            <code>&nbsp;&nbsp;&nbsp;&nbsp;frontend/components/AGENTS.md</code> &mdash; Components: prop conventions, testing<br>
+            <code>&nbsp;&nbsp;backend/AGENTS.md</code> &mdash; Backend: API design, error handling<br>
+            <code>&nbsp;&nbsp;&nbsp;&nbsp;backend/auth/AGENTS.md</code> &mdash; Auth: security patterns, token handling<span class="prior-src">ch13 L304-314</span></td>
+          <td class="prior"><b>The resolution walk.</b> An agent editing <code>backend/auth/token.py</code> resolves <code>auth/AGENTS.md</code> + <code>backend/AGENTS.md</code> + root <code>AGENTS.md</code>. An agent editing <code>frontend/components/Button.tsx</code> resolves <code>components/AGENTS.md</code> + <code>frontend/AGENTS.md</code> + root <code>AGENTS.md</code>. Neither loads the other's domain-specific rules.<span class="prior-src">ch13 L316</span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Two scope forms.</b> Directory placement: a file at the root applies everywhere; <code>frontend/AGENTS.md</code> applies only to frontend code. Pattern: <code>applyTo: "**/*.py"</code>, then <code>"src/api/**/*.py"</code>, then <code>"src/api/auth/**/*.py"</code> &mdash; more specific patterns override or extend less specific ones.<span class="prior-src">ch13 L301-337</span></td>
+          <td class="prior"><b>Three mechanisms.</b> Directory-scoped <code>AGENTS.md</code>; <code>applyTo</code> pattern; authored then compiled. The authored instructions are the source of truth; the compiled output is the portable delivery format.<span class="prior-src">ch13 L301, L318, L339</span></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>The filled three-level sample.</b> Root: TypeScript strict mode, Conventional Commits, JSDoc on public functions, links to error and testing docs. Backend: <code>asyncHandler</code> wrapper, Zod validation of request bodies, database access only through repository classes. Auth module (<code>applyTo: "src/auth/**"</code>): RS256 token signing, single-use refresh tokens, never log token values, a STOP gate before changing signing or rotation.<span class="prior-src">ch13 L410-474</span></td>
+          <td class="prior"><b>The fix for a flat file.</b> Split by scope. Python rules in a Python-scoped file, React rules in a frontend-scoped file, authentication rules in an auth-scoped file. Each agent loads only what applies to its current task. <b>Before/after:</b> bare inlined sections become labelled pointers, e.g. "Authentication patterns and token lifecycle".<span class="prior-src">ch13 L91-102, L368</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-13-instruction-hierarchy-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Surface A &mdash; the target tree</h1>
+      <p class="ws-sub">One row per node in the target hierarchy. At least three levels, so at least three rows.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-13-instruction-hierarchy-canvas</b><br>
+      fill order <b>6</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>A &mdash; Target tree: one row per node
+      <span class="ws-block-note">draw the tree on the wall first; copy each node here</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:7%"><col style="width:11%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:11%"><col style="width:9%"><col style="width:9%"><col style="width:8%"><col style="width:6%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">A1</span> Level</th>
+          <th><span class="fno">A2</span> Node</th>
+          <th><span class="fno">A3</span> Scope expression</th>
+          <th><span class="fno">A4</span> Mechanism</th>
+          <th><span class="fno">A5</span> What belongs here</th>
+          <th><span class="fno">A6</span> Inherits from</th>
+          <th><span class="fno">A7</span> Single concern</th>
+          <th><span class="fno">A8</span> Linked subsidiaries</th>
+          <th><span class="fno">A9</span> E2 test</th>
+          <th><span class="fno">A10</span> Owner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">Root, domain, module or deeper: the worked tree has root, <code>frontend/</code>, <code>frontend/components/</code>, <code>backend/</code>, <code>backend/auth/</code>.<span class="prior-src">ch13 L304-314</span></td>
+          <td class="prior">The worked tree's node names.<span class="prior-src">ch13 L304-314</span></td>
+          <td class="prior"><code>frontend/AGENTS.md</code>; <code>**/*.py</code>, then <code>src/api/**/*.py</code>, then <code>src/api/auth/**/*.py</code>.<span class="prior-src">ch13 L304-334</span></td>
+          <td class="prior">All three named; the authored file is the source of truth, the compiled output the portable format.<span class="prior-src">ch13 L301, L318, L339</span></td>
+          <td class="prior">The filled sample: root conventions, backend API rules, auth-module security rules.<span class="prior-src">ch13 L410-474</span></td>
+          <td class="prior"><code>backend/auth/token.py</code> resolves <code>auth/</code> + <code>backend/</code> + root, never the frontend's.<span class="prior-src">ch13 L316</span></td>
+          <td class="prior">Could you name the file after its one topic?<span class="prior-src">ch13 L545</span></td>
+          <td class="prior">Bare sections vs labelled pointers, e.g. "Authentication patterns and token lifecycle".<span class="prior-src">ch13 L91-102, L542, L546</span></td>
+          <td class="prior">Can a module-specific rule be added here without editing any file above it?<span class="prior-src">ch13 L551</span></td>
+          <td class="prior">&mdash;</td>
+        </tr>
+
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">root</span><span class="opt">domain</span><span class="opt">module</span><span class="opt">deeper</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">directory-scoped AGENTS.md</span><span class="opt">applyTo pattern</span><span class="opt">authored then compiled</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">root</span><span class="opt">domain</span><span class="opt">module</span><span class="opt">deeper</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">directory-scoped AGENTS.md</span><span class="opt">applyTo pattern</span><span class="opt">authored then compiled</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">root</span><span class="opt">domain</span><span class="opt">module</span><span class="opt">deeper</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">directory-scoped AGENTS.md</span><span class="opt">applyTo pattern</span><span class="opt">authored then compiled</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">root</span><span class="opt">domain</span><span class="opt">module</span><span class="opt">deeper</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">directory-scoped AGENTS.md</span><span class="opt">applyTo pattern</span><span class="opt">authored then compiled</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">root</span><span class="opt">domain</span><span class="opt">module</span><span class="opt">deeper</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">directory-scoped AGENTS.md</span><span class="opt">applyTo pattern</span><span class="opt">authored then compiled</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><div class="f-select"><span class="opt">root</span><span class="opt">domain</span><span class="opt">module</span><span class="opt">deeper</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">directory-scoped AGENTS.md</span><span class="opt">applyTo pattern</span><span class="opt">authored then compiled</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:2mm 0 0">A5: write rules true at this scope and no narrower. A3: the literal path or glob. A6: the parent node. A7 and A8: tick per node. A9: pass or fail, per node.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Levels check <span class="ws-block-note">computed</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:25%"><col style="width:35%"><col style="width:35%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Levels in the target tree</b></td>
+          <td class="prior">E1: instructions exist at three or more specificity levels (e.g., root &rarr; domain &rarr; module).<span class="prior-src">ch13 L550</span></td>
+          <td class="fill"><span class="f-computed" data-formula="count of distinct values in A1"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-13-instruction-hierarchy-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Surface B &mdash; the migration list</h1>
+      <p class="ws-sub">One row per rule currently held globally. The repository owner must be present: deleting a global rule needs someone with standing to declare it no longer true.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-13-instruction-hierarchy-canvas</b><br>
+      fill order <b>6</b> &middot; type <b>canvas</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>B &mdash; Migration list
+      <span class="ws-block-note">B5 names a node from surface A; B6 is required for every delete</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:22%"><col style="width:13%"><col style="width:8%"><col style="width:16%"><col style="width:12%"><col style="width:15%"><col style="width:14%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">B1</span> Rule, as currently written</th>
+          <th><span class="fno">B2</span> Where it lives today</th>
+          <th><span class="fno">B3</span> True everywhere?</th>
+          <th><span class="fno">B4</span> Decision</th>
+          <th><span class="fno">B5</span> Target node</th>
+          <th><span class="fno">B6</span> Reason, if delete</th>
+          <th><span class="fno">B7</span> Owner and target date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">Quote the rule; do not paraphrase.<span class="prior-src">ch13 L343-366</span></td>
+          <td class="prior">Path and line number.</td>
+          <td class="prior">The question that decides B4: is it global, true everywhere?<span class="prior-src">ch13 L297</span></td>
+          <td class="prior">The chapter's own fix: split by scope, so each agent loads only what applies to its current task.<span class="prior-src">ch13 L368</span></td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;</td>
+          <td class="prior">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">keep at root</span><span class="opt">scope down</span><span class="opt">delete</span><span class="opt">split</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">keep at root</span><span class="opt">scope down</span><span class="opt">delete</span><span class="opt">split</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">keep at root</span><span class="opt">scope down</span><span class="opt">delete</span><span class="opt">split</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">keep at root</span><span class="opt">scope down</span><span class="opt">delete</span><span class="opt">split</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">keep at root</span><span class="opt">scope down</span><span class="opt">delete</span><span class="opt">split</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">keep at root</span><span class="opt">scope down</span><span class="opt">delete</span><span class="opt">split</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.4pt;margin:2mm 0 0">B5 is required whenever B4 is <b>scope down</b> or <b>split</b>, and must name a node that exists on surface A. B6 is required whenever B4 is <b>delete</b>: say why the rule is no longer true, or never was. Continue on a second copy of this sheet if you need more rows.</p>
+  </div>
+
+  <div class="ws-foot-quote">
+    "Can you add module-specific rules without editing any file above that module's scope?" (ch13 L551)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-13-instruction-hierarchy-canvas &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
