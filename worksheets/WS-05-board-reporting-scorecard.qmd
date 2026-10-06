@@ -180,7 +180,7 @@ format:
     <div class="ws-meta"><b>WS-05-board-reporting-scorecard</b><br>Pack G - fill order 7<br>type <b>register</b><br>audience <b>leadership</b></div>
   </div>
   <div class="ws-source">Source: <b>The Agentic SDLC Thesis</b>, <i>Scope and Limitations</i> &middot; <code>handbook\ch01-the-agentic-sdlc-thesis.qmd</code> L136-142 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch01-the-agentic-sdlc-thesis.html#sec-thesis-scope-limits">#sec-thesis-scope-limits</a></div>
-  <div class="ws-instruction">For each load-bearing claim the transformation plan depends on, record its source, grade, your confidence, and the specific observation that would falsify it. Name the source chapter and line for an author estimate, or the vendor and document for a vendor claim. These are the honesty notes behind the board statement of what you are betting on and how you will know it was wrong.</div>
+  <div class="ws-instruction">For each load-bearing claim the transformation plan depends on, record its source, grade, your confidence, and the specific observation that would falsify it. Name the source chapter and line for an author estimate, or the vendor and document for a vendor claim.</div>
   <div class="ws-block">
     <h2>CLAIMS <span class="ws-block-note">each claim and its falsifier stay together</span></h2>
     <table class="ws">
