@@ -1,0 +1,412 @@
+---
+title: "Agent Dispatch Brief Template and Quality Check"
+pagetitle: "WS-17-dispatch-brief-template"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-17-dispatch-brief-template</b> &middot; review copy &middot; declared format <b>A4 portrait</b> &middot;
+  4 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Agent Dispatch Brief Template and Quality Check</h1>
+      <p class="ws-sub">A reusable dispatch brief plus a pre-flight quality check &mdash; Part A: the brief, one per dispatch.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-dispatch-brief-template</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>20</b> &middot; type <b>checklist</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Concrete Dispatch: What It Actually Looks Like</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L90-132 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-dispatch-example">#sec-multi-agent-dispatch-example</a>
+    <br>"The Domain Teams pattern describes structure. Here is what a dispatch actually"
+  </div>
+
+  <div class="ws-instruction">
+    Fill the five blocks of a dispatch: the instruction files loaded (and only those), the exclusively owned file list,
+    the committed reference the agent must read rather than a description of it, the explicit constraints
+    (do-not-modify list, signatures, behaviour preservation), and the verification command the agent runs before
+    reporting done. Then tick the five quality criteria on Part B before dispatching. Part A is one brief for one
+    real task. Draws on <code>WS-17-agent-team-charter</code> (rows 2 and 4) and keys to
+    <code>WS-18-wave-decomposition-plan</code> (row 1).
+  </div>
+
+  <div class="ws-block">
+    <h2>Part A &mdash; the dispatch brief
+      <span class="ws-block-note">one filled instance per dispatch &middot; rows A1-A8 (A9-A15 overleaf)</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:20%"><col style="width:38%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>A1 Dispatch ID, wave, agent</b></td>
+          <td class="prior">&mdash;<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>A2 Agent team</b><br><small>Chosen from the team charter; determines which instruction files are legitimate at A4.</small></td>
+          <td class="prior">&mdash;<span class="prior-src">ch17 L77-86</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>A3 Transformation rule, one sentence</b><br><small>State it as a transformation, not a goal.</small></td>
+          <td class="prior">Worked instance: "Migrate the following files from print-based output to the structured logger established in Wave 0."<span class="prior-src">ch17 L104-105</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>A4 Instruction files loaded</b><br><small>The actual paths, from the team's charter.</small></td>
+          <td class="prior">Worked instance: a project-wide conventions file always loaded, plus one integration-specific file. Constraint: two instruction files, not twelve.<span class="prior-src">ch17 L97-98, L128</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>A5 Exclusively owned file list</b><br><small>Explicit paths. Not a directory, not a glob.</small></td>
+          <td class="prior">Worked instance: three named command modules, with "exclusive ownership this wave" stated in the prompt.<span class="prior-src">ch17 L108-111, L126</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>A6 Committed reference</b><br><small>The artefact, its path, and evidence it is committed.</small></td>
+          <td class="prior">Worked instance: a factory pattern in a named source file, "committed and tested"; the prompt says "established in Wave 0" so the agent reads real code.<span class="prior-src">ch17 L105-106, L127</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>A7 Structural context</b><br><small>This task's structural facts, or "none for this task".</small></td>
+          <td class="prior">The category: module boundaries, dependency relationships, file organisation conventions &mdash; what a new function should be named, where it should live, which existing patterns it follows.<span class="prior-src">ch10 L52</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>A8 Constraint context</b><br><small>This task's constraints.</small></td>
+          <td class="prior">The category: what the agent must not do, which files are off-limits, which behavioural contracts must be preserved. Worked constraint block: do not modify any file outside the list; do not change function signatures or public APIs; preserve all existing behaviour; use the named helpers and see the named examples file.<span class="prior-src">ch10 L53; ch17 L113-118</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-dispatch-brief-template &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Agent Dispatch Brief Template and Quality Check</h1>
+      <p class="ws-sub">Part A, continued &mdash; context, exclusions, verification, escalation, and the calibration pair.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-dispatch-brief-template</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>20</b> &middot; type <b>checklist</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Part A &mdash; the dispatch brief, continued
+      <span class="ws-block-note">rows A9-A15</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:20%"><col style="width:38%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>A9 Domain context</b><br><small>This task's domain facts, or an explicit "none for this task". A blank must be a decision, not an oversight.</small></td>
+          <td class="prior">The category: business logic, edge cases, the implicit rules that exist in the team's understanding but not in the code &mdash; why a seemingly redundant check exists, why error messages are worded as they are.<span class="prior-src">ch10 L54</span></td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>A10 Explicit exclusions</b><br><small>Anything off-limits beyond the complement of A5.</small></td>
+          <td class="prior">Pre-printed: "Do NOT modify any file not in this list" is the one-file-one-agent rule stated in the agent's own terms.<span class="prior-src">ch17 L114, L130</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>A11 Verification command the agent runs before reporting done</b><br><small>The actual command, with arguments.</small></td>
+          <td class="prior">Worked instance: a scoped test command with a fail-fast flag, followed by "Fix any failures before reporting done."<span class="prior-src">ch17 L120-121, L129</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>A12 Escalation instruction</b><br><small>What this agent does when it cannot proceed, and to whom.</small></td>
+          <td class="prior">Self-validation before reporting completion is L1 self-heal; anything the agent cannot resolve routes up the ladder.<span class="prior-src">ch17 L129; ch17 L344-349</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>A13 Dispatched by, date</b></td>
+          <td class="prior">&mdash;<span class="prior-src">org</span></td>
+          <td class="fill">
+            <span class="f-owner"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>A14 Calibration pair &mdash; the bad specification</b><br><small>The team's own bad spec, for its own codebase.</small></td>
+          <td class="prior">Worked instance: a one-line migration rule that sounds precise until the agent meets a call that was a deliberate workaround, migrates it dutifully, and the regression surfaces weeks later under load.<span class="prior-src">ch10 L46-47</span></td>
+          <td class="fill"><span class="f-box lg"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>A15 Calibration pair &mdash; the good specification</b><br><small>The team's own good spec, same transformation.</small></td>
+          <td class="prior">Worked instance: the same rule plus the named exception, the reason for it, and the marker the agent must leave behind &mdash; requiring knowledge of the codebase the agent cannot infer.<span class="prior-src">ch10 L48</span></td>
+          <td class="fill"><span class="f-box lg"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-dispatch-brief-template &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Agent Dispatch Brief Template and Quality Check</h1>
+      <p class="ws-sub">Part B &mdash; the pre-flight check. Keep this card at the orchestrator's desk; it gates the dispatch.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-dispatch-brief-template</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>20</b> &middot; type <b>checklist</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-instruction">
+    Before you dispatch, tick each of the five criteria against the brief you filled in Part A. Do not tick a box
+    you have not checked. Then record the gate at the foot of the card: if any box is empty, the dispatch is
+    blocked, and the card records the block, not just the release.
+  </div>
+
+  <div class="ws-block">
+    <h2>Part B &mdash; pre-flight check
+      <span class="ws-block-note">five checkboxes &middot; dispatch gate</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:40%"><col style="width:32%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Criterion</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>B1 Exclusive file list confirmed</b><br><small>Checked against the wave's partition.</small></td>
+          <td class="prior">"The agent knows exactly which files it owns. No ambiguity, no overlap with other agents in this wave."<span class="prior-src">ch17 L126</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>confirmed</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>B2 Committed reference confirmed</b></td>
+          <td class="prior">"The agent reads the actual committed code, not a description of what it should look like."<span class="prior-src">ch17 L127</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>confirmed</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>B3 Scoped instructions confirmed</b></td>
+          <td class="prior">"Two instruction files, not twelve." Nothing irrelevant to this task is carried.<span class="prior-src">ch17 L128</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>confirmed</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>B4 Built-in validation confirmed</b></td>
+          <td class="prior">"The prompt ends with a test command. The agent self-validates before reporting completion."<span class="prior-src">ch17 L129</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>confirmed</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>B5 Explicit constraints confirmed</b></td>
+          <td class="prior">The one-file-one-agent rule is stated in the agent's own terms inside the prompt.<span class="prior-src">ch17 L130</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>confirmed</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>Dispatch gate</b><br><small>Blocked until B1-B5 are all ticked. Record the block, not just the release.</small></td>
+          <td class="prior">&mdash;<span class="prior-src">ch17 L124-130</span></td>
+          <td class="fill"><span class="f-computed" data-formula="B1 &and; B2 &and; B3 &and; B4 &and; B5 ticked &rarr; released; otherwise BLOCKED"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The orchestrator dispatches this prompt in a fresh session, monitors for completion or escalation, and moves to the next dispatch." (ch17 L132)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-dispatch-brief-template &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+
+<!-- ============================ SHEET 4 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Agent Dispatch Brief Template and Quality Check</h1>
+      <p class="ws-sub">Part C &mdash; the first-run record. One sheet per person, filled at the desk.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-dispatch-brief-template</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>20</b> &middot; type <b>checklist</b><br>
+      audience <b>practitioner</b>
+    </div>
+  </div>
+
+  <div class="ws-instruction">
+    Take one real ticket. After your own first real dispatch, fill one row per step, yourself, at the desk. A grid
+    filled by someone else on your behalf is worthless. For every step, write the elapsed time, the role you were
+    in, whether you dispatched it or typed it by hand, and &mdash; the column that matters &mdash; which context
+    file you improved as a result. Then copy every column-4 entry into the instruction-file edit list at the foot.
+  </div>
+
+  <div class="ws-block">
+    <h2>Part C &mdash; what each column means
+      <span class="ws-block-note">printed by the book &middot; do not write here</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:20%"><col style="width:58%"><col style="width:16%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Column</th><th>What the book says</th><th>Source</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="ws-num"></td><td><b>C1 Elapsed time</b></td>
+          <td class="locked">Shape only: 0:00, 0:04, 0:08, &hellip;</td><td class="locked">ch10 L150-172</td></tr>
+        <tr><td class="ws-num"></td><td><b>C2 Role you were in</b></td>
+          <td class="locked">Architect / Reviewer / Escalation handler &mdash; the three roles. (One-line definitions are those printed in the book's first-day section, ch10 L150-172.)</td><td class="locked">ch10 L150-172</td></tr>
+        <tr><td class="ws-num"></td><td><b>C3 Dispatched or typed by hand</b></td>
+          <td class="locked">Worked instance: the middleware was dispatched, the three-line wiring was typed, the two-line policy fix was typed rather than re-dispatched because the specification-to-code ratio would have been absurd.</td><td class="locked">ch10 L150-172</td></tr>
+        <tr><td class="ws-num"></td><td><b>C4 Which context file was improved as a result</b></td>
+          <td class="locked">Worked instance: a fail-closed policy added to the middleware instruction file; a warning against sleep-based assertions added to the test instruction file.</td><td class="locked">ch10 L150-172</td></tr>
+        <tr><td class="ws-num"></td><td><b>C5 Outcome of the step</b></td>
+          <td class="locked">&mdash;</td><td class="locked">org</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Part C &mdash; the first-run grid
+      <span class="ws-block-note">one row per step &middot; one grid per person</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:11%"><col style="width:19%"><col style="width:20%"><col style="width:25%"><col style="width:25%">
+      </colgroup>
+      <thead>
+        <tr><th>C1 Elapsed</th><th>C2 Role</th><th>C3 Dispatched / typed</th><th>C4 Context file improved (path + line added)</th><th>C5 Outcome</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Architect</span><span class="opt">Reviewer</span><span class="opt">Escalation handler</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">dispatched</span><span class="opt">typed</span><span class="opt">both</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Architect</span><span class="opt">Reviewer</span><span class="opt">Escalation handler</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">dispatched</span><span class="opt">typed</span><span class="opt">both</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Architect</span><span class="opt">Reviewer</span><span class="opt">Escalation handler</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">dispatched</span><span class="opt">typed</span><span class="opt">both</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Architect</span><span class="opt">Reviewer</span><span class="opt">Escalation handler</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">dispatched</span><span class="opt">typed</span><span class="opt">both</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Architect</span><span class="opt">Reviewer</span><span class="opt">Escalation handler</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">dispatched</span><span class="opt">typed</span><span class="opt">both</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ours-label">Instruction-file edit list &mdash; every C4 entry collated: the evidence that the improvement loop actually closes</div>
+    <span class="f-computed" data-formula="all non-empty C4 entries, one per line"></span>
+    <span class="f-box"></span>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-dispatch-brief-template &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 4 ============================ -->
+```
