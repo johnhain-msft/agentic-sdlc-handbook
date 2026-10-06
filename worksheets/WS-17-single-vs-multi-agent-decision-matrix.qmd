@@ -67,7 +67,7 @@ format:
           <td class="locked">Files changed</td>
           <td class="prior">&lt; 10<span class="prior-src">ch17 L35</span></td>
           <td class="prior">&gt; 15<span class="prior-src">ch17 L35</span></td>
-          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><i style="font-size:6.5pt;color:#222">using the book's prior</i><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
           <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
@@ -76,7 +76,7 @@ format:
           <td class="locked">Concerns</td>
           <td class="prior">1<span class="prior-src">ch17 L36</span></td>
           <td class="prior">2+<span class="prior-src">ch17 L36</span></td>
-          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><i style="font-size:6.5pt;color:#222">using the book's prior</i><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
           <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
@@ -85,7 +85,7 @@ format:
           <td class="locked">File dependencies</td>
           <td class="prior">Linear<span class="prior-src">ch17 L37</span></td>
           <td class="prior">Graph (can parallelise)<span class="prior-src">ch17 L37</span></td>
-          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><i style="font-size:6.5pt;color:#222">using the book's prior</i><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
           <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
@@ -94,7 +94,7 @@ format:
           <td class="locked">Required expertise</td>
           <td class="prior">One domain<span class="prior-src">ch17 L38</span></td>
           <td class="prior">Multiple domains<span class="prior-src">ch17 L38</span></td>
-          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><i style="font-size:6.5pt;color:#222">using the book's prior</i><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
           <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
@@ -103,7 +103,7 @@ format:
           <td class="locked">Time pressure</td>
           <td class="prior">Low<span class="prior-src">ch17 L39</span></td>
           <td class="prior">Moderate to high<span class="prior-src">ch17 L39</span></td>
-          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><i style="font-size:6.5pt;color:#222">using the book's prior</i><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
           <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
@@ -112,7 +112,7 @@ format:
           <td class="locked">Risk of context overload</td>
           <td class="prior">Low<span class="prior-src">ch17 L40</span></td>
           <td class="prior">High<span class="prior-src">ch17 L40</span></td>
-          <td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><i style="font-size:6.5pt;color:#222">using the book's prior</i><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">Single</span><span class="opt">Multiple</span><span class="opt">Marginal</span></div></td>
           <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
@@ -135,7 +135,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Single Agent or Many? &mdash; criteria and verdict</h1>
-      <p class="ws-sub">Blocks B and C. Keep this sheet with the change's plan.</p>
+      <p class="ws-sub">Block B. Block C, the verdict, is on sheet 3. Keep this sheet with the change's plan.</p>
     </div>
     <div class="ws-meta">
       <b>WS-17-single-vs-multi-agent-decision-matrix</b><br>
@@ -211,7 +211,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Single Agent or Many? &mdash; verdict</h1>
-      <p class="ws-sub">Block C. Keep this sheet with the change's plan.</p>
+      <p class="ws-sub">Block C, the verdict. Blocks A and B are on sheets 1 and 2. Keep this sheet with the change's plan.</p>
     </div>
     <div class="ws-meta">
       <b>WS-17-single-vs-multi-agent-decision-matrix</b><br>
