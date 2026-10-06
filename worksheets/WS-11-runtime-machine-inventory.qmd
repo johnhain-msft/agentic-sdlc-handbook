@@ -45,7 +45,7 @@ format:
 
   <div class="ws-instruction">
     Write one line per part: the product and version in use today, the team that owns it, one named person, whether it is
-    standardised or left to developer choice, and the differences you actually see between teams. Where teams differ, use one copy of this
+    standardized or left to developer choice, and the differences you actually see between teams. Where teams differ, use one copy of this
     sheet per team and write the differences down before anyone merges them &mdash; the variation is the finding, not noise.
     Count the client row from CI workflow files and endpoint data, not from memory: a CI runner invoking the harness on every pull request is a client.
     Chapter note: the diagram draws a fifth node, Tools, that the prose does not count as a part; it is recorded under the harness at field 12.
