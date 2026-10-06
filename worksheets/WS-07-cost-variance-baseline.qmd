@@ -15,7 +15,7 @@ format:
 ```{=html}
 <div class="screen-only">
   <b>WS-07-cost-variance-baseline</b> &middot; review copy &middot; declared format
-  <b>A3 landscape</b> &middot; 2 sheets. The white page below is one physical sheet
+  <b>A3 landscape</b> &middot; 1 sheet. The white page below is one physical sheet
   at true size. Anything beyond its edge is a layout defect.
 </div>
 
@@ -42,7 +42,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Choose up to three recurring, high-frequency engineering tasks. For each task, record your own run count, describe both loops, enter your own costs, and mark each cost basis separately. Record whether outputs are identical, calculate the spread and exposure, and name the individual who would own the design of this path. Mark the measurement window. Use only your organization's figures; do not copy the illustrative run. If every cost basis is estimated, mark the sheet PROSPECTIVE. Circle the highest-spread task and carry it into WS-07-three-variables-audit; carry total annualized exposure into WS-07-spend-pool-budget-model.
+    Choose two or three recurring, high-frequency engineering tasks. For each task, record your own run count, describe both loops, enter your own costs, and mark each cost basis separately. Record whether outputs are identical, calculate the spread and exposure, and name the individual who would own the design of this path. Mark the measurement window. Use only your organization's figures; do not copy the illustrative run. If every cost basis is estimated, mark the sheet PROSPECTIVE. Circle the highest-spread task and carry it into WS-07-three-variables-audit; carry total annualized exposure into WS-07-spend-pool-budget-model.
   </div>
 
   <div style="display:grid;grid-template-columns:72% 26%;gap:2%;align-items:start">
@@ -178,42 +178,7 @@ format:
       </table>
     </div>
 
-    </div>
-
-  <div class="ws-foot">
-    <div>WS-07-cost-variance-baseline &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
-    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
-      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
-  </div>
-
-</div>
-
-<div class="sheet">
-
-  <div class="ws-head">
     <div>
-      <h1>Our Own Cost Spread — Measuring the Variance Before We Budget</h1>
-      <p class="ws-sub">A one-page variance exhibit in our own numbers — the CFO-facing artifact that reframes the agentic bill from a price negotiation into an engineering-design decision.</p>
-      <p style="font-size:12pt;font-weight:700;margin:1mm 0 0">Model choice, token use and harness govern the bill, and all three are in our control.</p>
-    </div>
-    <div class="ws-meta">
-      <b>WS-07-cost-variance-baseline</b><br>
-      Pack C - The case and the money<br>
-      fill order <b>4</b> &middot; type <b>calculator</b><br>
-      audience <b>mixed</b>
-    </div>
-  </div>
-
-  <div class="ws-source">
-    Source: <b>The Agentic SDLC Bill</b>, <i>The Same Task, an 8.5× Bill</i>
-    &middot; <code>handbook/ch07-the-agentic-sdlc-bill.qmd</code> L13-41
-    &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch07-the-agentic-sdlc-bill.html#sec-bill-cost-variance">#sec-bill-cost-variance</a>
-  </div>
-
-  <div class="ws-instruction">
-    Choose up to three recurring, high-frequency engineering tasks. For each task, record your own run count, describe both loops, enter your own costs, and mark each cost basis separately. Record whether outputs are identical, calculate the spread and exposure, and name the individual who would own the design of this path. Mark the measurement window. Use only your organization's figures; do not copy the illustrative run. If every cost basis is estimated, mark the sheet PROSPECTIVE. Circle the highest-spread task and carry it into WS-07-three-variables-audit; carry total annualized exposure into WS-07-spend-pool-budget-model.
-  </div>
-
   <div class="ws-block">
     <h2>Book's illustrative run
       <span class="ws-block-note">reference only; not an organization figure</span></h2>
@@ -226,7 +191,7 @@ format:
 
   <div class="ws-block">
     <h2>Exhibit-level figures
-      <span class="ws-block-note">computed from the task columns above</span></h2>
+      <span class="ws-block-note">computed from the task columns at left</span></h2>
     <table class="ws">
       <colgroup>
         <col style="width:5%"><col style="width:23%"><col style="width:25%">
@@ -258,14 +223,16 @@ format:
           <td class="ws-num"><span class="fno">18</span></td>
           <td><b>Sheet mode</b></td>
           <td class="prior">—</td>
-          <td class="fill"><span class="f-computed" data-formula="PROSPECTIVE if every basis in columns 8 and 9 is estimated; otherwise MEASURED"></span> &middot; mark PROSPECTIVE across the header when applicable</td>
+          <td class="fill"><div class="f-select"><span class="opt">MEASURED</span><span class="opt">PROSPECTIVE</span></div> PROSPECTIVE if every basis in columns 8 and 9 is estimated; mark it across the header</td>
         </tr>
       </tbody>
     </table>
   </div>
+    </div>
+  </div>
 
   <div class="ws-foot">
-    <div>WS-07-cost-variance-baseline &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>WS-07-cost-variance-baseline &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
     <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
       &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
   </div>
