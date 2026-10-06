@@ -22,7 +22,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>The Role Map — Who Holds Each Hat, and When We Staff It</h1>
-      <p class="ws-sub">A staffed role map: roles we have today, hats worn part-time, and roles we will not staff yet—with the written trigger that would change that.</p>
+      <p class="ws-sub">A staffed role map: current roles, part-time hats, and the trigger for staffing Agent Operations when its work exists.</p>
     </div>
     <div class="ws-meta">
       <b>WS-06-role-map-and-staffing-triggers</b><br>
@@ -38,7 +38,7 @@ format:
     Locator: "The <b>Domain Specialist</b> is the role that owns <i>what a Skill encodes</i>."
   </div>
   <div class="ws-instruction">
-    Name the real people and teams behind each role. Record what changes and what comes off each person's plate. For each activity, choose now, later, or never. Mark new roles as dedicated, a hat, or a gap; decide whether the work exists before staffing it. Map team coverage, the orchestrator charter, and named owners for WHAT, HOW, and OPERATIONS on each Skill.
+    Name the real people and teams behind each role. Record what changes and what comes off each person's plate. For each activity, choose now, later, or never. Mark new roles as dedicated, a hat, or a gap. For Agent Operations, decide whether the work exists before staffing it. Map team coverage, the orchestrator charter, and named owners for WHAT, HOW, and OPERATIONS on each Skill.
   </div>
 
   <div class="ws-block">
@@ -183,7 +183,7 @@ format:
   <div class="ws-instruction">Use the completed WS-04-five-layer-supply-chain-canvas first. For each role, name its holder and mark dedicated, hat, or gap. If there is a gap, record hire, promote, or contract and a date. Tick only Agent Operations triggers that are true today; decide whether to staff it, and write the condition that would change a “do not staff yet” verdict. Sign the extend-or-stand-up decision below.</div>
 
   <div class="ws-block">
-    <h2>Block C — the three new roles <span class="ws-block-note">hat is a first-class answer; do not staff before the work exists</span></h2>
+    <h2>Block C — the three new roles <span class="ws-block-note">hat is a first-class answer; staff Agent Operations only when its work exists</span></h2>
     <table class="ws">
       <colgroup><col style="width:4%"><col style="width:18%"><col style="width:25%"><col style="width:17.67%"><col style="width:17.67%"><col style="width:17.66%"></colgroup>
       <thead><tr>
