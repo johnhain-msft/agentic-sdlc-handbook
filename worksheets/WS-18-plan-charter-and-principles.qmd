@@ -9,6 +9,8 @@ format:
           <style>
             html:root { --sheet-w: 841mm; --sheet-h: 594mm; --sheet-margin: 20mm; }
             @page { size: A1 landscape; margin: 20mm; }
+            .fno, .prior-src, .prior .prior-src { font-size: 7pt; }
+            .f-owner::after { font-size: 7pt; }
           </style>
 ---
 
@@ -195,7 +197,7 @@ format:
           <td class="ws-num"><span class="fno">11</span></td>
           <td><b>C. Waves — Wave 0 is a pipeline test</b></td>
           <td class="prior">☒ Wave 0 proves the pipeline on a single item before valuable work is attempted.<span class="prior-src">case-study-handbook-writing.qmd L124</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Confirm the pipeline test, or clear it and explain the override in field 12.</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check">✓</span>Confirm the pipeline test, or clear it and explain the override in field 12.</span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">12</span></td>
@@ -238,7 +240,7 @@ format:
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-phase-2-plan">#sec-meta-phase-2-plan</a>
   </div>
   <div class="ws-instruction">
-    Rank three to five principles in your own words. Give each a distinct rank: no ties. For every principle, name
+    Rank your principles in your own words. Give each a distinct rank: no ties. For every principle, name
     the tension it resolves, one real decision it settles, and the one person who may amend the order.
     Surface disagreement instead of smoothing it over.
   </div>
@@ -279,7 +281,7 @@ format:
         <tr>
           <td class="ws-num"><span class="fno">17</span></td>
           <td><b>D. Principles — Worked example: one decision it settles</b></td>
-          <td class="prior">"The book is 100% useful without APM. APM appears as proof, not prerequisite."<span class="prior-src">case-study-handbook-writing.qmd L254-256</span></td>
+          <td class="prior">"The book is 100% useful without APM. APM appears as proof, not prerequisite."<span class="prior-src">case-study-handbook-writing.qmd L252</span></td>
           <td class="fill"><div>1<span class="f-box"></span></div><div>2<span class="f-box"></span></div><div>3<span class="f-box"></span></div><div>4<span class="f-box"></span></div><div>5<span class="f-box"></span></div></td>
         </tr>
         <tr>
@@ -635,19 +637,19 @@ format:
         <tr>
           <td class="ws-num"><span class="fno">36</span></td>
           <td><b>H. Disclosure — Approved framing sentence</b></td>
-          <td class="prior">"built using the same methodology it teaches" — never "AI-written".<span class="prior-src">case-study-handbook-writing.qmd L272</span></td>
+          <td class="prior">"built using the same methodology it teaches" — never "AI-written".<span class="prior-src">case-study-handbook-writing.qmd L270</span></td>
           <td class="fill taller"><span class="f-box"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">37</span></td>
           <td><b>H. Disclosure — Credibility test and our answer</b></td>
-          <td class="prior">"Could this person have written a credible book without AI? If yes, AI reads as methodology demonstration."<span class="prior-src">case-study-handbook-writing.qmd L270</span></td>
+          <td class="prior">"Could this person have written a credible book without AI? If yes, AI reads as methodology demonstration."<span class="prior-src">case-study-handbook-writing.qmd L268</span></td>
           <td class="fill taller"><span class="f-box"></span></td>
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">38</span></td>
           <td><b>H. Disclosure — Expected objection + prepared answer</b></td>
-          <td class="prior">Expected: initial scepticism from people who dismiss anything AI-assisted; engaged audiences find the transparency more impressive than the alternative.<span class="prior-src">case-study-handbook-writing.qmd L272-274</span></td>
+          <td class="prior">Expected: initial scepticism from people who dismiss anything AI-assisted; engaged audiences find the transparency more impressive than the alternative.<span class="prior-src">case-study-handbook-writing.qmd L270</span></td>
           <td class="fill taller"><span class="f-box"></span></td>
         </tr>
         <tr>
