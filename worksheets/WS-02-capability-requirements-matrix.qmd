@@ -1,0 +1,496 @@
+---
+title: "Capability Requirements Matrix"
+pagetitle: "WS-02-capability-requirements-matrix"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-02-capability-requirements-matrix</b> &middot; declared format <b>A3 landscape</b> &middot; 4 sheets.
+  Sheets 1-2 are the durable, vendor-neutral requirements record. Make one copy of sheets 3-4
+  per shortlisted vendor; they are the dated scorecard.
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Capability Requirements Matrix</h1>
+      <p class="ws-sub">A vendor-neutral requirements definition that outlives any single landscape snapshot, plus a defensible shortlist score with the reasoning attached.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-02-capability-requirements-matrix</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>1</b> &middot; type <b>matrix</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The AI-Native Landscape</b>, <i>The Landscape Today: Capabilities That Actually Matter</i> &middot;
+    <code>handbook\ch02-the-ai-native-landscape.qmd</code> L100-140 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch02-the-ai-native-landscape.html#sec-landscape-capabilities">#sec-landscape-capabilities</a>
+  </div>
+
+  <div class="ws-instruction">
+    For each capability, write what it must do for your organisation without naming a product, choose Must-have, Nice-to-have, or Not applicable, and give the reason. State what evidence you will demand and how you implement it today. Complete and sign this durable, vendor-neutral requirements side before writing any vendor name on the dated scorecard.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A — capability requirements
+      <span class="ws-block-note">durable and vendor-neutral; one requirement per capability</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:11%"><col style="width:15%"><col style="width:10%">
+        <col style="width:11%"><col style="width:8%"><col style="width:8%"><col style="width:17%"><col style="width:16%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Capability</th><th>What this must do for us</th><th>Priority</th><th>Why, in one line</th><th>Book flag: look here first</th><th>Book flag: table stakes</th><th>Evidence we will demand</th><th>Our implementation of this today</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td class="prior">Code completion<span class="prior-src">ch02 L110</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must-have</span><span class="opt">Nice-to-have</span><span class="opt">Not applicable</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">—</td>          <td class="prior">&#9745; Ticked<span class="prior-src">ch02 L132</span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td class="prior">Chat / explain<span class="prior-src">ch02 L111</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must-have</span><span class="opt">Nice-to-have</span><span class="opt">Not applicable</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">—</td>          <td class="prior">&#9745; Ticked<span class="prior-src">ch02 L132</span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td class="prior">Multi-file editing<span class="prior-src">ch02 L112</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must-have</span><span class="opt">Nice-to-have</span><span class="opt">Not applicable</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">—</td>          <td class="prior">&#9745; Ticked<span class="prior-src">ch02 L132</span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td class="prior">Agent mode (in-editor)<span class="prior-src">ch02 L113</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must-have</span><span class="opt">Nice-to-have</span><span class="opt">Not applicable</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">—</td><td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td class="prior">Terminal / CLI agent<span class="prior-src">ch02 L114</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must-have</span><span class="opt">Nice-to-have</span><span class="opt">Not applicable</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">—</td><td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td class="prior">Autonomous PR creation<span class="prior-src">ch02 L115</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must-have</span><span class="opt">Nice-to-have</span><span class="opt">Not applicable</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">&#9745; Ticked<span class="prior-src">ch02 L130</span></td><td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td class="prior">Code review agent<span class="prior-src">ch02 L116</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must-have</span><span class="opt">Nice-to-have</span><span class="opt">Not applicable</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">&#9745; Ticked<span class="prior-src">ch02 L130</span></td><td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td class="prior">Multi-model routing<span class="prior-src">ch02 L117</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must-have</span><span class="opt">Nice-to-have</span><span class="opt">Not applicable</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">—</td><td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td class="prior">Custom instructions / rules<span class="prior-src">ch02 L118, L128</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must-have</span><span class="opt">Nice-to-have</span><span class="opt">Not applicable</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">&#9745; Ticked<span class="prior-src">ch02 L126-128</span></td><td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td class="prior">Enterprise governance<span class="prior-src">ch02 L119</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must-have</span><span class="opt">Nice-to-have</span><span class="opt">Not applicable</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">&#9745; Ticked<span class="prior-src">ch02 L129</span></td><td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td class="prior">Full SDLC platform<span class="prior-src">ch02 L120</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must-have</span><span class="opt">Nice-to-have</span><span class="opt">Not applicable</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="prior">—</td><td class="prior">—</td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note">For Custom instructions / rules, note your existing file-path convention, if any. The mechanism is portable; paths are vendor-specific. A Must-have without a reason is a preference.</p>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-02-capability-requirements-matrix &middot; durable side 1 &middot; sheet 1 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Capability Requirements Matrix</h1>
+      <p class="ws-sub">Durable side 1 continued — purchase decision rights and build / buy / compose posture.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-02-capability-requirements-matrix</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>1</b> &middot; type <b>matrix</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The AI-Native Landscape</b>, <i>Coding Tools vs. Software Delivery Platforms</i> &middot;
+    <code>handbook\ch02-the-ai-native-landscape.qmd</code> L75-96 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch02-the-ai-native-landscape.html#sec-landscape-tools-vs-platforms">#sec-landscape-tools-vs-platforms</a>
+    &nbsp; Supporting source: <code>handbook\ch04-the-reference-architecture.qmd</code> L218-233.
+  </div>
+
+  <div class="ws-instruction">
+    Record each purchase pending or already in flight, including purchases made without central approval. Describe the need without naming a product or vendor on this durable side. Classify the decision and complete all six criteria. For each context domain, choose a posture and record your team's cost, integration burden, owned supply-chain layers, exit cost, and renewal date. Use another copy of this page if the purchase register needs more rows.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block C — tool or platform?
+      <span class="ws-block-note">one row per purchase; include items already bought without central approval</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:13%"><col style="width:12%"><col style="width:12%">
+        <col style="width:12%"><col style="width:13%"><col style="width:12%"><col style="width:11%"><col style="width:11%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Purchase under consideration</th><th>Classification</th><th>Who decides</th><th>Primary value we are buying</th><th>Evaluation scope</th><th>Risk if ungoverned</th><th>Switching cost</th><th>SDLC coverage</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">AI coding tool</span><span class="opt">Software delivery platform</span></div></td>
+          <td class="prior">Individual developer (tool) vs engineering leadership (platform)<span class="prior-src">ch02 L88-95</span><span class="f-owner"></span></td>
+          <td class="prior">Coding speed and quality vs lifecycle governance and automation<span class="prior-src">ch02 L88-95</span><span class="f-box sm"></span></td>
+          <td class="prior">Editor experience and model quality vs security, compliance, audit trails<span class="prior-src">ch02 L88-95</span><span class="f-box sm"></span></td>
+          <td class="prior">Inconsistent code quality vs shadow IT and compliance exposure<span class="prior-src">ch02 L88-95</span><span class="f-box sm"></span></td>
+          <td class="prior">Low (editor plugin) vs high (CI/CD, permissions, history)<span class="prior-src">ch02 L88-95</span><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Code (+ expanding) vs ideate through operate<span class="prior-src">ch02 L88-95</span><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">AI coding tool</span><span class="opt">Software delivery platform</span></div></td>
+          <td class="prior">Individual developer (tool) vs engineering leadership (platform)<span class="prior-src">ch02 L88-95</span><span class="f-owner"></span></td>
+          <td class="prior">Coding speed and quality vs lifecycle governance and automation<span class="prior-src">ch02 L88-95</span><span class="f-box sm"></span></td>
+          <td class="prior">Editor experience and model quality vs security, compliance, audit trails<span class="prior-src">ch02 L88-95</span><span class="f-box sm"></span></td>
+          <td class="prior">Inconsistent code quality vs shadow IT and compliance exposure<span class="prior-src">ch02 L88-95</span><span class="f-box sm"></span></td>
+          <td class="prior">Low (editor plugin) vs high (CI/CD, permissions, history)<span class="prior-src">ch02 L88-95</span><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="prior">Code (+ expanding) vs ideate through operate<span class="prior-src">ch02 L88-95</span><span class="f-box sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note">Name the accountable individual and check the match: developers decide on coding tools; engineering leadership decides on platforms. Record your own switching-cost assessment and its reason. Write an internal team name rather than a vendor name on this durable side.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block D — build / buy / compose posture
+      <span class="ws-block-note">one posture per context domain</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:12%"><col style="width:12%"><col style="width:12%">
+        <col style="width:10%"><col style="width:17%"><col style="width:18%"><col style="width:9%"><col style="width:6%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Context domain</th><th>Posture</th><th>Named vendor or team</th><th>Annual cost</th><th>Integration burden accepted</th><th>Lock-in exposure — which supply-chain layers this vendor would own</th><th>Exit cost</th><th>Contract renews</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td class="prior">Work context<span class="prior-src">ch04 L222-226</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Build</span><span class="opt">Buy</span><span class="opt">Compose</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-currency" data-symbol=""></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span><span class="prior-src">Cross-reference band names on WS-04-five-layer-supply-chain-canvas</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td>
+          <td class="prior">Data context<span class="prior-src">ch04 L222-226</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Build</span><span class="opt">Buy</span><span class="opt">Compose</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-currency" data-symbol=""></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span><span class="prior-src">Cross-reference band names on WS-04-five-layer-supply-chain-canvas</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td>
+          <td class="prior">Code context<span class="prior-src">ch04 L222-226</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Build</span><span class="opt">Buy</span><span class="opt">Compose</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-currency" data-symbol=""></span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><span class="f-box sm"></span><span class="prior-src">Cross-reference band names on WS-04-five-layer-supply-chain-canvas</span></td>
+          <td class="fill"><span class="f-box sm"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note">For each Buy or Compose posture, record the owned supply-chain layers, exit cost, and renewal date. On this durable sheet, use the accountable internal team in “Named vendor or team”; keep vendor names on the dated scorecard.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Requirements sign-off <span class="ws-block-note">close side 1 before opening the vendor scorecard</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:6%"><col style="width:24%"><col style="width:35%"><col style="width:35%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td>
+          <td><b>Requirements signed off by</b></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <span class="prior-src">Owner + date &middot; derived</span>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-02-capability-requirements-matrix &middot; durable side 1 continued &middot; sheet 2 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Capability Requirements Matrix</h1>
+      <p class="ws-sub">Dated, disposable side 2 — shortlist scorecard. Print one copy per shortlisted vendor.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-02-capability-requirements-matrix</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>1</b> &middot; type <b>matrix</b><br>
+      audience <b>architect / evaluator</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The AI-Native Landscape</b>, <i>The Landscape Today: Capabilities That Actually Matter</i> &middot;
+    <code>handbook\ch02-the-ai-native-landscape.qmd</code> L100-140 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch02-the-ai-native-landscape.html#sec-landscape-capabilities">#sec-landscape-capabilities</a>
+  </div>
+
+  <div class="ws-instruction">
+    Use the signed-off requirements on side 1. Write this vendor's name, then assess each capability against your repository: record only what you observed, its evidence class, and whether an N/A is design intent or a genuine gap. Enter the assessment and re-verification dates. This scorecard is dated and disposable; make a fresh copy for each shortlisted vendor and evaluation cycle.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B — shortlist scorecard
+      <span class="ws-block-note">one vendor per copy; evidence is the evaluator's observation, never the vendor's claim</span></h2>
+    <div class="ws-block-note">Now = available and shipping in production &middot; Emerging = available but limited, or in public preview &middot; Directional = announced, demonstrated or roadmapped but not usable at production scale &middot; N/A = the architecture does not target this capability. N/A is design intent or a genuine gap; it is not automatically a deficiency. Source: ch02 L102, L134.</div>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:24%"><col style="width:22%"><col style="width:23%"><col style="width:26%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td>
+          <td><b>Vendor</b><span class="prior-src">Blank per column group &middot; derived</span></td>
+          <td class="fill" colspan="3"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:24%"><col style="width:22%"><col style="width:23%"><col style="width:26%"></colgroup>
+      <thead>
+        <tr><th></th><th>Capability</th><th>Tier observed</th><th>Evidence class</th><th>If N/A — design intent or genuine gap?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">20</span></td><td class="prior">Code completion<span class="prior-src">ch02 L110</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">21</span></td><td class="prior">Chat / explain<span class="prior-src">ch02 L111</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">22</span></td><td class="prior">Multi-file editing<span class="prior-src">ch02 L112</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td class="prior">Agent mode (in-editor)<span class="prior-src">ch02 L113</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">24</span></td><td class="prior">Terminal / CLI agent<span class="prior-src">ch02 L114</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td class="prior">Autonomous PR creation<span class="prior-src">ch02 L115</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">26</span></td><td class="prior">Code review agent<span class="prior-src">ch02 L116</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">27</span></td><td class="prior">Multi-model routing<span class="prior-src">ch02 L117</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">28</span></td><td class="prior">Custom instructions / rules<span class="prior-src">ch02 L118</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">29</span></td><td class="prior">Enterprise governance<span class="prior-src">ch02 L119</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">30</span></td><td class="prior">Full SDLC platform<span class="prior-src">ch02 L120</span></td><td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td><td class="fill"><div class="f-select"><span class="opt">Design intent</span><span class="opt">Gap</span></div></td></tr>
+      </tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:33%"><col style="width:31%"><col style="width:31%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">31</span></td>
+          <td><b>Assessed on</b><span class="prior-src">Mandatory per vendor group &middot; ch02 L138</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="prior">The landscape evolves quarterly; verify current capabilities at each vendor's site before making tool decisions.<span class="prior-src">ch02 L138</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">32</span></td>
+          <td><b>Re-verify by</b><span class="prior-src">Mandatory per vendor group &middot; ch02 L138</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="prior">Set the date now; the snapshot decays.<span class="prior-src">ch02 L138</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-02-capability-requirements-matrix &middot; dated scorecard &middot; sheet 3 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Capability Requirements Matrix</h1>
+      <p class="ws-sub">Dated, disposable side 2 continued — compare vendor claims with observed evidence.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-02-capability-requirements-matrix</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>1</b> &middot; type <b>matrix</b><br>
+      audience <b>architect / evaluator</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Reference Architecture</b>, <i>Three-Tier Honesty</i> &middot;
+    <code>handbook\ch04-the-reference-architecture.qmd</code> L103-121 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch04-the-reference-architecture.html#sec-ref-arch-three-tier-honesty">#sec-ref-arch-three-tier-honesty</a>
+    &nbsp; Related capability context: <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch02-the-ai-native-landscape.html#sec-landscape-capabilities">ch02 L134</a>.
+  </div>
+
+  <div class="ws-instruction">
+    For this shortlisted vendor, work through all eight lifecycle phases. Record the tier the vendor claims, ask the vendor to define that term in its own words, mark whether the claim was demonstrated or asserted, and write your verdict. Finish with the anchored claim-to-evidence honesty summary. Keep this dated card with the vendor's scorecard and replace it when the evidence becomes stale.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block E — vendor claims vs reality audit
+      <span class="ws-block-note">one copy per shortlisted vendor; eight lifecycle phases, not capability rows</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:14%"><col style="width:19%"><col style="width:30%"><col style="width:14%"><col style="width:18%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Lifecycle phase</th><th>Tier the vendor claims</th><th>The vendor's own definition of that term</th><th>Demonstrated or asserted</th><th>Evaluator verdict</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">33</span></td>
+          <td class="prior">Ideate<span class="prior-src">ch04 L108-118</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">34</span></td>
+          <td class="prior">Plan<span class="prior-src">ch04 L108-118</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">35</span></td>
+          <td class="prior">Code<span class="prior-src">ch04 L108-118</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">36</span></td>
+          <td class="prior">Build<span class="prior-src">ch04 L108-118</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">37</span></td>
+          <td class="prior">Test<span class="prior-src">ch04 L108-118</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">38</span></td>
+          <td class="prior">Review<span class="prior-src">ch04 L108-118</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">39</span></td>
+          <td class="prior">Release<span class="prior-src">ch04 L108-118</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">40</span></td>
+          <td class="prior">Operate<span class="prior-src">ch04 L108-118</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">N/A</span></div></td>
+          <td class="fill"><span class="f-box sm"></span></td><td class="fill"><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span></div></td><td class="fill"><span class="f-box sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:24%"><col style="width:71%"></colgroup>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">41</span></td>
+          <td><b>Claim-to-evidence honesty (summary row, one per vendor)</b></td>
+          <td class="fill">
+            <div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div>
+            <span class="prior-src">H — every tier the vendor claimed was demonstrated against our repository. M — claims broadly held, but at least one Now was asserted rather than shown. L — one or more claimed tiers could not be demonstrated at all. &middot; derived</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-02-capability-requirements-matrix &middot; dated scorecard &middot; sheet 4 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
