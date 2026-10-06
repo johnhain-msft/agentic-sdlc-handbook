@@ -22,7 +22,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Five-Layer Supply Chain Instantiation Canvas</h1>
-      <p class="ws-sub">A marked-up five-layer diagram of the organisation's actual capability supply chain, showing owned layers, gap layers, and the named owner of each.</p>
+      <p class="ws-sub">A marked-up five-layer diagram of the organization's actual capability supply chain, showing owned layers, gap layers, and the named owner of each.</p>
     </div>
     <div class="ws-meta">
       <b>WS-04-five-layer-supply-chain-canvas</b><br>
@@ -40,12 +40,12 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Start at the bottom with Platform and work upward. For each layer, name the actual repo, path, registry or system of record that proves it exists (not a description); record its state and real owning team, including unsanctioned systems. A Partial state in field 6 requires field 12. Name a person, not a role; if nobody owns a layer, write UNOWNED in field 8 and fill its gap owner and decision date. An Absent layer still needs the artefact that would prove it exists. Use the glossary strip first; fill the two cross-cutting bands and audit panel, then close the audit probe as Pass or Fail.
+    Start at the bottom with Platform and work upward. For each layer, name the actual repo, path, registry or system of record that proves it exists (not a description); record its state and real owning team, including unsanctioned systems. A Partial state in field 6 requires field 12. Name a person, not a role; if nobody owns a layer, write UNOWNED in field 8 and fill its gap owner and decision date. An Absent layer still needs the artifact that would prove it exists. Use the glossary strip first; fill the two cross-cutting bands and audit panel, then close the audit probe as Pass or Fail.
   </div>
 
   <div class="ws-block" style="margin:0 0 2mm">
     <h2>[22-27] Glossary strip &middot; complete before the canvas
-      <span class="ws-block-note">[23] Glossary strip — the book's definition prints under each term; map it to [24] your name, [25] state, [26] owning team and [27] artefact</span></h2>
+      <span class="ws-block-note">[23] Glossary strip — the book's definition prints under each term; map it to [24] your name, [25] state, [26] owning team and [27] artifact</span></h2>
     <div style="display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:1.5mm">
       <div style="border:0.3mm solid #9aa5ae;padding:1.2mm;font-size:7pt"><b>[22] Glossary strip — term: primitive</b><div class="prior" style="padding:1mm;font-size:7pt">The unit at the Context &amp; Capabilities layer: a Skill, a Persona, or a Context bundle. Markdown on disk.<span class="prior-src">ch09 L12-23</span></div><div>[24] Glossary strip — our name for it today<span class="f-text" style="height:8mm"></span>[25] Glossary strip — do we have one?<div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>[26] Glossary strip — owning team<span class="f-text" style="height:8mm"></span>[27] Glossary strip — where it lives<span class="f-text" style="height:8mm"></span></div></div>
       <div style="border:0.3mm solid #9aa5ae;padding:1.2mm;font-size:7pt"><b>[22] Glossary strip — term: manifest</b><div class="prior" style="padding:1mm;font-size:7pt">apm.yml. Declares which primitives this repository depends on, by name and version range.<span class="prior-src">ch09 L12-23</span></div><div>[24] Glossary strip — our name for it today<span class="f-text" style="height:8mm"></span>[25] Glossary strip — do we have one?<div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div>[26] Glossary strip — owning team<span class="f-text" style="height:8mm"></span>[27] Glossary strip — where it lives<span class="f-text" style="height:8mm"></span></div></div>
@@ -60,7 +60,7 @@ format:
 
   <div class="ws-block" style="margin-bottom:2mm">
     <h2>Five layers &middot; bottom to top
-      <span class="ws-block-note">one band per layer &middot; field 6 Partial requires field 12 &middot; use one sticky colour per team</span></h2>
+      <span class="ws-block-note">one band per layer &middot; field 6 Partial requires field 12 &middot; use one sticky color per team</span></h2>
 
     <div class="canvas" style="height:492mm;display:grid;grid-template-columns:minmax(0,1fr) 200mm 190mm;grid-template-rows:84mm 84mm 140mm 84mm 84mm;gap:4mm;border:0">
       <div style="grid-column:1;grid-row:1 / span 5;display:flex;flex-direction:column;gap:4mm;height:492mm">
@@ -71,7 +71,7 @@ format:
         </div>
         <div style="display:flex;gap:2mm;align-items:center;min-height:0">
           <div class="prior" style="flex:1;padding:1mm 2mm;font-size:7.4pt">SDLC phases is the top of the stack: the application output. Plan, Spec, Build, Review, Test, Deploy, Operate.<span class="prior-src">ch09 L27-59</span></div>
-          <div style="width:230mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organisation rejects the definition
+          <div style="width:230mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organization rejects the definition
             <span class="f-text" style="height:8mm"></span>
           </div>
           </div>
@@ -117,7 +117,7 @@ format:
         </div>
         <div style="display:flex;gap:2mm;align-items:center;min-height:0">
           <div class="prior" style="flex:1;padding:1mm 2mm;font-size:7.4pt">Agent Harness (an &quot;agent runtime&quot;) is the runtime application your developers — and increasingly your business users — actually run. Different vendors, same load contract.<span class="prior-src">ch04 L147</span></div>
-          <div style="width:230mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organisation rejects the definition<span class="f-text" style="height:8mm"></span></div>
+          <div style="width:230mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organization rejects the definition<span class="f-text" style="height:8mm"></span></div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1.2fr .9fr 1fr 1fr;gap:2mm;min-height:0">
           <div style="font-size:7pt">[4] Artefact on disk that proves it exists<span class="f-text" style="height:8mm"></span></div>
@@ -161,7 +161,7 @@ format:
         </div>
         <div style="display:flex;gap:2mm;align-items:center;min-height:0">
           <div class="prior" style="flex:1;padding:1mm 2mm;font-size:7.2pt">Governance and Distribution is the catalogue and approval rules that ship those capabilities between teams: the declared agent dependencies, the internal registry the platform team operates, the package manager that resolves and installs, and the ownership rules that say who is allowed to approve a change.<span class="prior-src">ch04 L147</span></div>
-          <div style="width:190mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organisation rejects the definition<span class="f-text" style="height:8mm"></span></div>
+          <div style="width:190mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organization rejects the definition<span class="f-text" style="height:8mm"></span></div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1.2fr .9fr 1fr 1fr;gap:2mm;min-height:0">
           <div style="font-size:7pt">[4] Artefact on disk that proves it exists<span class="f-text" style="height:8mm"></span></div>
@@ -205,7 +205,7 @@ format:
         </div>
         <div style="display:flex;gap:2mm;align-items:center;min-height:0">
           <div class="prior" style="flex:1;padding:1mm 2mm;font-size:7.2pt">Context &amp; Capabilities is where the AI capabilities your organisation authors and reuses live — the procedures (how to review a pull request, how to draft an architecture decision record), the lenses (security reviewer, accessibility reviewer), and the knowledge bundles your teams ground agents against, all expressed as text, version-controlled with the rest of your code.<span class="prior-src">ch04 L147</span></div>
-          <div style="width:190mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organisation rejects the definition<span class="f-text" style="height:8mm"></span></div>
+          <div style="width:190mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organization rejects the definition<span class="f-text" style="height:8mm"></span></div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1.2fr .9fr 1fr 1fr;gap:2mm;min-height:0">
           <div style="font-size:7pt">[4] Artefact on disk that proves it exists<span class="f-text" style="height:8mm"></span></div>
@@ -249,7 +249,7 @@ format:
         </div>
         <div style="display:flex;gap:2mm;align-items:center;min-height:0">
           <div class="prior" style="flex:1;padding:1mm 2mm;font-size:7.4pt">Platform is the cloud, source-control, identity, and audit substrate your platform team already operates. There is nothing agent-specific about it.<span class="prior-src">ch04 L147</span></div>
-          <div style="width:230mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organisation rejects the definition<span class="f-text" style="height:8mm"></span></div>
+          <div style="width:230mm;font-size:7pt">[3] The layer's job &middot; Edit only if your organization rejects the definition<span class="f-text" style="height:8mm"></span></div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1.2fr .9fr 1fr 1fr;gap:2mm;min-height:0">
           <div style="font-size:7pt">[4] Artefact on disk that proves it exists<span class="f-text" style="height:8mm"></span></div>
