@@ -52,7 +52,7 @@ For a primitive that failed to fire, the practitioner works the four phases in o
 
 ## 5. Field-level schema
 
-A single **two-sided A5 card**, filled at the desk by whoever hit the failure. **Side A** answers
+A single **two-sided A4 card** (one sheet printed duplex, folded to A5 for the pad if the team prefers), filled at the desk by whoever hit the failure. **Side A** answers
 *did the file load?* — the four phases of the load lifecycle, each with its one-minute test.
 **Side B** answers *did the model attend to it once it loaded?* — the six symptoms and the three
 numbers the chapter says settle almost every case. The card's spine is the book's own two-question
@@ -143,7 +143,7 @@ Every row below was merged into this worksheet. Its field detail must appear in 
 | When in the session | Pack Z, fill order 8, after `WS-21-primitive-governance-policy`. The dependency is mechanical rather than procedural: the Resolve test is `apm install --dry-run` against a manifest and a lockfile, and whether those exist at all is a Part A decision on that sheet. Where they do not exist, the Resolve row reads `not run` — which is a governance finding, not a pass. |
 | Duration | Five to ten minutes for side A, if verbose mode is already on. The chapter's opening case burned an hour without this vocabulary; the card exists to turn that hour into ten minutes, and it fails at its job if filling it becomes a task. |
 | Data needed in advance | Verbose mode enabled in the harness — the card is close to useless without it, and this is the single most common reason one comes back half-filled. The primitive's path, its frontmatter, and its `applyTo` glob or description. A token counter. That is the whole list: the chapter is explicit that none of these questions needs special tooling. |
-| Room format | A printed two-sided A5 card, kept as a pad in the team area. Not a document, not a form, not a ticket type. The only thing that leaves the card is the tally, transcribed once a month. |
+| Room format | A printed two-sided A4 card, exactly two sheets in the build (side A and side B), kept as a pad in the team area. A4 rather than A5 because the phase tests, symptoms and numbers do not fit A5 above 7pt. Not a document, not a form, not a ticket type. The only thing that leaves the card is the tally, transcribed once a month. |
 
 **Facilitation note — Pack Z prerequisite condition.** This is the most immediately usable
 instrument in the pack and the one least likely to be filled in a session at all. It needs an

@@ -1,0 +1,441 @@
+---
+title: "Agentic ROI & Break-Even Model"
+pagetitle: "WS-03-roi-break-even-model"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+            .ws-block p { margin-top: 1mm; margin-bottom: 1mm; }
+            td.fill .f-computed { height: auto; min-height: 8mm; }
+            td.fill .f-computed::after { position: static; display: block; font-size: 7pt; line-height: 1.15; padding: .6mm 1mm; text-align: left; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-03-roi-break-even-model</b> &middot; review copy &middot; declared format <b>A4 portrait</b> &middot;
+  6 sheets. Each white page is one physical sheet at true size. Anything spilling past a page edge
+  onto this grey background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Agentic ROI &amp; Break-Even Model</h1>
+      <p class="ws-sub">Build the case from stated assumptions; calculate break-even and the value-to-cost ratio.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-roi-break-even-model</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>6</b> &middot; type <b>calculator</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>Building Your Business Case</i> &middot;
+    <code>handbook/ch03-the-business-case.qmd</code> L168-267 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-building">#sec-business-case-building</a>
+  </div>
+
+  <div class="ws-instruction">
+    With the signed <b>WS-03-tco-calculator</b> and <b>WS-03-scenario-assumption-commitment</b> on
+    the table, complete every row. Finance enters column 4; name the source, basis and owner for
+    every figure. Carry year-1 cost verbatim from the TCO sheet. Keep page 2 as a range, not a point,
+    and complete both pages before signing page 1.
+  </div>
+
+  <div class="ws-block">
+    <h2>Page 1 — the model, lines 1–4
+      <span class="ws-block-note">one row per formula line &middot; carry the example as a reference only</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:18%"><col style="width:7%"><col style="width:15%"><col style="width:13%">
+        <col style="width:11%"><col style="width:20%"><col style="width:16%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Formula line</th><th>Symbol</th><th>Worked example, 50-person team †</th><th>Our number</th>
+          <th>Where our number came from</th><th>Basis</th><th>Owner of this line</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked">Annual developer cost (fully loaded)</td><td class="locked">—</td>
+          <td class="locked">$200,000</td><td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Team size</td><td class="locked">—</td><td class="locked">50</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Total annual developer investment</td><td class="locked">A</td><td class="locked">$10,000,000</td>
+          <td class="fill"><span class="f-computed" data-formula="annual developer cost &times; team size"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Cycle time improvement %</td><td class="locked">—</td><td class="locked">25%</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-roi-break-even-model &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 6</div>
+    <div>Filled by <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>ROI &amp; Break-Even Model</h1><p class="ws-sub">Page 1 continuation — formula lines 5–8.</p></div>
+    <div class="ws-meta"><b>WS-03-roi-break-even-model</b><br>Pack C - The case and the money<br>fill order <b>6</b> &middot; audience <b>exec</b></div>
+  </div>
+  <div class="ws-source">Source: <b>The Business Case</b>, <i>Building Your Business Case</i> &middot; <code>handbook/ch03-the-business-case.qmd</code> L206-228 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-building">#sec-business-case-building</a></div>
+  <div class="ws-instruction">Enter the organization's number, its source, one basis and the named owner for every line. Use the cycle-time value committed on <b>WS-03-scenario-assumption-commitment</b>, unchanged.</div>
+
+  <div class="ws-block">
+    <h2>Page 1 — the model, lines 5–8</h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:18%"><col style="width:7%"><col style="width:15%"><col style="width:13%">
+        <col style="width:11%"><col style="width:20%"><col style="width:16%">
+      </colgroup>
+          <thead><tr><th>Formula line</th><th>Symbol</th><th>Worked example, 50-person team †</th><th>Our number</th><th>Where our number came from</th><th>Basis</th><th>Owner of this line</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked">Cycle time value</td><td class="locked">B</td><td class="locked">$2,500,000</td>
+          <td class="fill"><span class="f-computed" data-formula="cycle time improvement &times; A"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Current defect remediation cost per year</td><td class="locked">—</td><td class="locked">$500,000</td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Expected defect reduction %</td><td class="locked">—</td><td class="locked">20%</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Annual defect savings</td><td class="locked">C</td><td class="locked">$100,000</td>
+          <td class="fill"><span class="f-computed" data-formula="defect remediation cost &times; expected defect reduction"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-03-roi-break-even-model &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 6</div>
+    <div>Filled by <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>ROI &amp; Break-Even Model</h1><p class="ws-sub">Page 1 continuation — formula lines 9–12.</p></div>
+    <div class="ws-meta"><b>WS-03-roi-break-even-model</b><br>Pack C - The case and the money<br>fill order <b>6</b> &middot; audience <b>exec</b></div>
+  </div>
+  <div class="ws-source">Source: <b>The Business Case</b>, <i>Building Your Business Case</i> &middot; <code>handbook/ch03-the-business-case.qmd</code> L206-228 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-building">#sec-business-case-building</a></div>
+  <div class="ws-instruction">Enter the organization's number, its source, one basis and the named owner for every line.</div>
+  <div class="ws-block">
+    <h2>Page 1 — the model, lines 9–12</h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:18%"><col style="width:7%"><col style="width:15%"><col style="width:13%">
+        <col style="width:11%"><col style="width:20%"><col style="width:16%">
+      </colgroup>
+          <thead><tr><th>Formula line</th><th>Symbol</th><th>Worked example, 50-person team †</th><th>Our number</th><th>Where our number came from</th><th>Basis</th><th>Owner of this line</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked">Current onboarding cost per new hire</td><td class="locked">—</td><td class="locked">$15,000</td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Hires per year</td><td class="locked">—</td><td class="locked">10 hires</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Expected reduction in onboarding time %</td><td class="locked">—</td><td class="locked">30%</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Annual retention savings</td><td class="locked">D</td><td class="locked">$45,000</td>
+          <td class="fill"><span class="f-computed" data-formula="onboarding cost per hire &times; hires per year &times; reduction in onboarding time"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-03-roi-break-even-model &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 6</div>
+    <div>Filled by <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>ROI &amp; Break-Even Model</h1><p class="ws-sub">Page 1 continuation — formula lines 13–15.</p></div>
+    <div class="ws-meta"><b>WS-03-roi-break-even-model</b><br>Pack C - The case and the money<br>fill order <b>6</b> &middot; audience <b>exec</b></div>
+  </div>
+  <div class="ws-source">Source: <b>The Business Case</b>, <i>Building Your Business Case</i> &middot; <code>handbook/ch03-the-business-case.qmd</code> L206-228 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-building">#sec-business-case-building</a></div>
+  <div class="ws-instruction">Complete every output line. Carry year-1 cost verbatim from <b>WS-03-tco-calculator</b> at actual headcount; do not scale the book example.</div>
+  <div class="ws-block">
+    <h2>Page 1 — the model, lines 13–15</h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:18%"><col style="width:7%"><col style="width:15%"><col style="width:13%">
+        <col style="width:11%"><col style="width:20%"><col style="width:16%">
+      </colgroup>
+          <thead><tr><th>Formula line</th><th>Symbol</th><th>Worked example, 50-person team †</th><th>Our number</th><th>Where our number came from</th><th>Basis</th><th>Owner of this line</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="locked">Total annual value (B+C+D)</td><td class="locked">—</td><td class="locked">$2,645,000 †</td>
+          <td class="fill"><span class="f-computed" data-formula="B + C + D"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Total year-1 cost</td><td class="locked">—</td><td class="locked">$350,000–1,150,000 †<br>scaled 5× from team-of-ten TCO</td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="locked">Break-even month</td><td class="locked">—</td><td class="locked">month 6–10 †</td>
+          <td class="fill"><span class="f-computed" data-formula="year-1 cost &divide; monthly value run-rate at steady state (months 6+)"></span></td>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">finance-authorised rate</span><span class="opt">scenario commitment</span><span class="opt">estimated</span></div></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Scenario projections — reference only</h2>
+    <div class="prior--hedged">
+      <span class="hedge-figure">Cycle time improvement: Conservative 10–15% † &middot; Moderate 20–30% † &middot; Aggressive 35–50% †. Defect reduction: 5–10% † &middot; 15–25% † &middot; 25–35% †. Time to positive ROI: 9–12 months † &middot; 6–9 months † &middot; 4–6 months †.</span>
+      <span class="hedge-text">† Author projections based on early-adopter patterns and the author's advisory work. Not derived from controlled studies.</span>
+      <span class="hedge-src">handbook/ch03-the-business-case.qmd L183-199</span>
+    </div>
+    <p>Use the cycle-time value committed on <b>WS-03-scenario-assumption-commitment</b>, unchanged. These scenario projections are prior references, not targets or acceptance criteria.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>CFO signature + date <span class="ws-block-note">sign only after both pages are complete</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:70%"><col style="width:30%"></colgroup>
+      <thead><tr><th>Finance signatory who will defend this model</th><th>Date</th></tr></thead>
+      <tbody><tr>
+        <td class="fill tall"><span class="f-sign"></span></td>
+        <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+      </tr></tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-roi-break-even-model &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 6</div>
+    <div>Filled by <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Model outputs &amp; sign-off</h1><p class="ws-sub">Page 1 continuation — model outputs, attestations and cautions.</p></div>
+    <div class="ws-meta"><b>WS-03-roi-break-even-model</b><br>Pack C - The case and the money<br>fill order <b>6</b> &middot; audience <b>exec</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>Building Your Business Case</i> &middot;
+    <code>handbook/ch03-the-business-case.qmd</code> L232, L234-236 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-building">#sec-business-case-building</a>
+    <br>Cost prior: <b>The Agentic SDLC Bill</b>, <i>The Same Task, an 8.5× Bill</i> &middot;
+    <code>handbook/ch07-the-agentic-sdlc-bill.qmd</code> L13, L118
+  </div>
+  <div class="ws-instruction">Complete the outputs from the formula lines. Read both cautions and tick all attestations; the CFO signs page 1 after both pages are complete.</div>
+
+  <div class="ws-block">
+    <h2>Model outputs <span class="ws-block-note">complete from the rows above</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col style="width:25%"></colgroup>
+      <thead><tr><th>Total annual value (B+C+D), our figure</th><th>Year-1 cost, our figure</th><th>Value-to-cost ratio, our figure</th><th>Break-even month, our figure</th></tr></thead>
+      <tbody><tr>
+        <td class="locked">Worked example: $2,645,000 †</td>
+        <td class="locked">Worked example: $350,000–1,150,000 †, scaled 5× from a team-of-ten TCO</td>
+        <td class="locked">Worked example: 2.3–7.6× †</td>
+        <td class="locked">Worked example: month 6–10 †; conservative pushes to month 10–14 †, aggressive pulls in to month 4–6 †</td>
+      </tr><tr>
+        <td class="fill"><span class="f-computed" data-formula="B + C + D"></span></td>
+        <td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+        <td class="fill"><span class="f-computed" data-formula="total annual value &divide; year-1 cost"></span></td>
+        <td class="fill"><span class="f-computed" data-formula="year-1 cost &divide; monthly value run-rate at steady state"></span></td>
+      </tr></tbody>
+    </table>
+    <p class="ws-block-note">† Author estimates (ch03 L242-263). Carry the year-1 total verbatim from <b>WS-03-tco-calculator</b> at actual headcount; do not scale this book example. Months 1–4 are ramp-up.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Attestations <span class="ws-block-note">tick all three before the CFO signs</span></h2>
+    <div class="f-checkline"><span class="f-check"></span><b>Headcount:</b> time savings are not modelled as headcount reduction. The value is increased throughput and quality at the same payroll.</div>
+    <div class="f-checkline"><span class="f-check"></span><b>Knowledge retention:</b> (D) is not load-bearing in year 1.</div>
+    <div class="f-checkline"><span class="f-check"></span><b>Double-counting:</b> no separate coding-phase multiplier is applied on top of the blended scenario value.</div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Agentic run-cost exposure</h2>
+    <div class="prior--hedged">
+      <span class="hedge-figure">One illustrative run: $41.01 versus $4.81 on identical output — an 8.5× spread.</span>
+      <span class="hedge-text">The figures in this chapter — the 8.5× spread, the $4.81 versus $41.01 run, the model-price ranges — are illustrative single runs and point-in-time prices, not benchmarks. They are real, and they are not universal: the magnitude depends on the task, the models available the week you read this, and the harness. Treat them as existence proofs of variance you can engineer, not as a guaranteed return. The durable claim is the mechanism — model choice, token use, and harness govern the bill, and all three are in your control. The specific multiples will move. The lever will not.</span>
+      <span class="hedge-src">handbook/ch07-the-agentic-sdlc-bill.qmd L13, L118</span>
+    </div>
+    <div class="ours-label">Our total annualised exposure — carry from WS-07-cost-variance-baseline, or write NOT YET MEASURED and date it</div>
+    <span class="f-currency" data-symbol="$"></span>
+    <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span>
+  </div>
+
+  <div class="ws-block">
+    <h2>Two cautions and the multiplier clarification <span class="ws-block-note">ch03 L232, L234-236 — read before sign-off</span></h2>
+    <p><b>On the cycle time multiplier.</b> The value drivers section above reports 30–50% cycle time reduction on <i>individual agent-suitable tasks</i> — measured across the full PR lifecycle (issue opened to code merged), not just the coding phase. The scenario table's lower percentages (10–50%) are the <i>team-wide blended average</i>: they already account for the fact that not all tasks are agent-suitable and that adoption depth varies by scenario. Use the scenario values directly. Applying a separate coding-phase multiplier on top would double-count the discount.</p>
+    <p>Two cautions. First, the "time savings" line is not headcount reduction. Developers whose routine implementation time decreases do not become surplus — they shift attention to higher-value work: architecture, code review, complex problem-solving. The value manifests as increased throughput and quality, not reduced payroll. If your business case depends on reducing headcount, you will either be disappointed or you will lose the engineers whose judgment makes the tools effective.</p>
+    <p>Second, knowledge retention savings are real but slow. Don't lean on them for a first-year business case. They are the compounding return that justifies sustained investment — the reason year 2 looks dramatically better than year 1.</p>
+    <span class="prior-src">handbook/ch03-the-business-case.qmd L232, L234-236</span>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-roi-break-even-model &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 6</div>
+    <div>Filled by <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>ROI sensitivity — range, never a point</h1>
+      <p class="ws-sub">Stress-test the case across both ends of the productivity-gain assumption. Page 2 is mandatory.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-03-roi-break-even-model</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>6</b> &middot; page <b>2</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Business Case</b>, <i>Building Your Business Case</i> &middot;
+    <code>handbook/ch03-the-business-case.qmd</code> L183-199 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch03-the-business-case.html#sec-business-case-value-scenarios">#sec-business-case-value-scenarios</a>
+    <br>Absorbed source: <b>What Comes Next</b>, <i>What the Author Probably Got Wrong</i> &middot;
+    <code>handbook/ch27-what-comes-next.qmd</code> L207 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-author-caveats">#sec-next-author-caveats</a>
+  </div>
+
+  <div class="ws-instruction">
+    Enter your own low and high for every input; include engineer count, loaded cost, initial
+    hours to author the initial primitive set and monthly maintenance hours. Carry the committed rework rate from
+    <b>WS-03-scenario-assumption-commitment</b>. Compute break-even at both gain endpoints and the
+    minimum sustained gain at which the investment clears zero. Do not present a point estimate.
+  </div>
+
+  <div class="ws-block">
+    <h2>Required range and book reference poles
+      <span class="ws-block-note">the book does not settle the break-even question</span></h2>
+    <div class="prior--hedged">
+      <span class="hedge-figure">Sceptical pole: 15–20% sustained gain &middot; Optimistic pole: 2–3×</span>
+      <span class="hedge-text">The break-even calculation is less obviously favorable than the book implies, and the author has not seen enough longitudinal data to be certain it tips the right way.</span>
+      <span class="hedge-src">handbook/ch27-what-comes-next.qmd L207</span>
+    </div>
+    <div class="ours-label">The poles are a prompt to test a range, not endpoints you must adopt. Enter organization-specific values below; any productivity-gain assumption here is a RANGE, never a single figure.</div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Sensitivity inputs and outputs <span class="ws-block-note">both our-number columns are required</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:16%"><col style="width:12%"><col style="width:12%"><col style="width:12%">
+        <col style="width:12%"><col style="width:12%"><col style="width:12%"><col style="width:12%">
+      </colgroup>
+      <thead>
+        <tr><th>Sensitivity input</th><th>Sceptical pole †</th><th>Optimistic pole †</th><th>Our low</th><th>Our high</th><th>Months at low</th><th>Months at high</th><th>Minimum gain</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="locked">Engineer count</td><td class="locked">—</td><td class="locked">—</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text sm"></span></td>
+          <td class="locked">—</td><td class="locked">—</td><td class="locked">—</td>
+        </tr>
+        <tr>
+          <td class="locked">Fully loaded cost per engineer</td><td class="locked">—</td><td class="locked">—</td>
+          <td class="fill"><span class="f-currency" data-symbol="$"></span></td><td class="fill"><span class="f-currency" data-symbol="$"></span></td>
+          <td class="locked">—</td><td class="locked">—</td><td class="locked">—</td>
+        </tr>
+        <tr>
+          <td class="locked">Hours to author the initial primitive set</td><td class="locked">—</td><td class="locked">—</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text sm"></span></td>
+          <td class="locked">—</td><td class="locked">—</td><td class="locked">—</td>
+        </tr>
+        <tr>
+          <td class="locked">Ongoing maintenance hours per month</td><td class="locked">—</td><td class="locked">—</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text sm"></span></td>
+          <td class="locked">—</td><td class="locked">—</td><td class="locked">—</td>
+        </tr>
+        <tr>
+          <td class="locked">Sustained productivity gain</td>
+          <td class="locked">15–20% † book pole, see hedge above</td><td class="locked">2–3× † book pole, see hedge above</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-computed" data-formula="month n where authoring cost + n &times; monthly maintenance cost = n &times; monthly value (engineers &times; loaded cost &times; low gain &divide; 12); hours priced at our own hourly rate"></span></td>
+                    <td class="fill"><span class="f-computed" data-formula="same equation with our high gain in place of our low gain"></span></td>
+                    <td class="fill"><span class="f-computed" data-formula="gain g where engineers &times; loaded cost &times; g &divide; 12 = monthly maintenance cost + authoring cost spread over our own horizon"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note">Outputs: months to break even at each end of the range, and the minimum sustained gain at which the investment clears zero.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Carry-in and range discipline</h2>
+    <table class="ws">
+      <colgroup><col style="width:28%"><col style="width:40%"><col style="width:32%"></colgroup>
+      <thead><tr><th>Field</th><th>Book / committed reference</th><th>Organisation supplies</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>Rework rate carried in</b></td>
+          <td class="prior">20% &rarr; 35% effective †; 40% &rarr; 25% †; 60% &rarr; 15% †. † Author estimates: effective improvement is modeled as a function of the base scenario (25% at 40% rework).<span class="prior-src">ch03 L275-279</span></td>
+          <td class="fill"><span class="f-text"></span><span class="prior-src">Carry the rate committed on WS-03-scenario-assumption-commitment verbatim.</span></td>
+        </tr>
+        <tr>
+          <td><b>Range discipline attestation</b></td>
+          <td class="prior">—</td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Gain is a range; no point estimate is presented anywhere.</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-03-roi-break-even-model &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 6</div>
+    <div>Filled by <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:18mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```

@@ -1,0 +1,313 @@
+---
+title: "Quarterly Board Scorecard: Adoption, Value, Cost, Risk"
+pagetitle: "WS-05-board-reporting-scorecard"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 841mm; --sheet-h: 1189mm; --sheet-margin: 24mm; }
+            @page { size: A0 portrait; margin: 24mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-05-board-reporting-scorecard</b> &middot; review copy &middot; declared format
+  <b>A0 portrait</b> &middot; 5 sheets. Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Quarterly Board Scorecard: Adoption, Value, Cost, Risk</h1>
+      <p class="ws-sub">A one-page quarterly board artifact and, before launch, the measurement plan for day-one instrumentation.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-05-board-reporting-scorecard</b><br>
+      Pack G - The plan we leave with<br>
+      fill order <b>7</b> &middot; type <b>canvas</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Governance for AI-Assisted Delivery</b>, <i>Board Reporting Template</i> &middot;
+    <code>handbook\ch05-governance-for-ai-assisted-delivery.qmd</code> L217-247 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-board-reporting">#sec-governance-board-reporting</a>
+  </div>
+
+  <div class="ws-instruction">
+    For each metric, record its Month 0 baseline, the named system of record, and the person who owns the number. Enter your current figure, dated target and trend with its prior value. Grade every row, name the grade's source, and write the specific observation that would falsify the target. Add the pre-agreed tripwire action and watcher. Before launch, treat every missing baseline or system of record as instrumentation to establish on day one: write "not instrumented" in that cell, with the owner and the date to fix it. Mark any target graded author estimate or vendor claim with †. Keep Adoption and Value targets no more aggressive than the calibrated triggers in WS-08-phase-gate-exit-rollback. Complete the decision asks for this quarter. Do not issue a target without its evidence grade and falsifier in the same row.
+  </div>
+
+  <div class="ws-block">
+    <h2>ADOPTION <span class="ws-block-note">all fields required &middot; targets reconcile with WS-08 phase-gate triggers</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:3%"><col style="width:6%"><col style="width:11%"><col style="width:7%">
+        <col style="width:8%"><col style="width:6%"><col style="width:7%"><col style="width:7%">
+        <col style="width:6%"><col style="width:7%"><col style="width:9%"><col style="width:7%">
+        <col style="width:5%"><col style="width:7%"><col style="width:4%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Section</th><th>Metric</th><th>Month 0 baseline</th><th>System of record</th><th>Owner of the number</th><th>Current</th><th>Target</th><th>Evidence grade</th><th>Grade source</th><th>Falsifier</th><th>Trend, with the prior value</th><th>Our confidence</th><th>Tripwire: what we do when it trips</th><th>Watcher</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td class="prior">Adoption<span class="prior-src">ch05 L227-229</span></td>
+          <td class="locked">Developers using agent tools</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., 120 of 400 (30%)</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-text sm"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">80% by Q4</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">↑ from 18% last quarter</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td><td class="prior">Adoption<span class="prior-src">ch05 L227-229</span></td><td class="locked">PRs with agent-generated code</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., 22%</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-text sm"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">40% by Q4</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">↑ from 12%</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td><td class="prior">Adoption<span class="prior-src">ch05 L227-229</span></td><td class="locked">Phase maturity</td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., Phase 2 (conversational)</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-text"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">Phase 3 (agentic) by year-end</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">Advanced from Phase 1 in Q1</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-text"></span></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>VALUE <span class="ws-block-note">targets reconcile with WS-08 phase-gate triggers</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:6%"><col style="width:11%"><col style="width:7%"><col style="width:8%"><col style="width:6%"><col style="width:7%"><col style="width:7%"><col style="width:6%"><col style="width:7%"><col style="width:9%"><col style="width:7%"><col style="width:5%"><col style="width:7%"><col style="width:4%"></colgroup>
+      <thead><tr><th></th><th>Section</th><th>Metric</th><th>Month 0 baseline</th><th>System of record</th><th>Owner of the number</th><th>Current</th><th>Target</th><th>Evidence grade</th><th>Grade source</th><th>Falsifier</th><th>Trend, with the prior value</th><th>Our confidence</th><th>Tripwire: what we do when it trips</th><th>Watcher</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">4</span></td><td class="prior">Value<span class="prior-src">ch05 L230-232</span></td><td class="locked">Cycle time (agent-assisted vs. baseline)</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., −18% on eligible tasks</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-text sm"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">−25%</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">↑ improving (was −11%)</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-text sm"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">5</span></td><td class="prior">Value<span class="prior-src">ch05 L230-232</span></td><td class="locked">Deployment frequency</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., 3.2/week</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-text sm"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">4/week</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">→ flat</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-text sm"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">6</span></td><td class="prior">Value<span class="prior-src">ch05 L230-232</span></td><td class="locked">Developer satisfaction (survey)</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., 7.4/10</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-text sm"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">≥7.5</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">↑ from 6.8</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-text sm"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>COST <span class="ws-block-note">reconcile with WS-04 and WS-07; finance present</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:6%"><col style="width:11%"><col style="width:7%"><col style="width:8%"><col style="width:6%"><col style="width:7%"><col style="width:7%"><col style="width:6%"><col style="width:7%"><col style="width:9%"><col style="width:7%"><col style="width:5%"><col style="width:7%"><col style="width:4%"></colgroup>
+      <thead><tr><th></th><th>Section</th><th>Metric</th><th>Month 0 baseline</th><th>System of record</th><th>Owner of the number</th><th>Current</th><th>Target</th><th>Evidence grade</th><th>Grade source</th><th>Falsifier</th><th>Trend, with the prior value</th><th>Our confidence</th><th>Tripwire: what we do when it trips</th><th>Watcher</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">7</span></td><td class="prior">Cost<span class="prior-src">ch05 L233-235</span></td><td class="locked">Tool licensing</td><td class="fill"><span class="f-currency" data-symbol="$"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., $42K/quarter</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-currency" data-symbol="$"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">≤$50K</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">→ stable</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-currency" data-symbol="$"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">8</span></td><td class="prior">Cost<span class="prior-src">ch05 L233-235</span></td><td class="locked">Model API / token spend</td><td class="fill"><span class="f-currency" data-symbol="$"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., $28K/quarter</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-currency" data-symbol="$"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">≤$35K</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">↑ from $19K (adoption growth)</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-currency" data-symbol="$"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">9</span></td><td class="prior">Cost<span class="prior-src">ch05 L233-235</span></td><td class="locked">Total cost of ownership</td><td class="fill"><span class="f-currency" data-symbol="$"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., $85K/quarter</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-currency" data-symbol="$"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">≤$100K</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-currency" data-symbol="$"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">↑ tracking to plan</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-currency" data-symbol="$"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>RISK <span class="ws-block-note">reconcile with WS-05-governance-readiness-assessment &middot; insurance answer must name the policy document</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:3%"><col style="width:6%"><col style="width:11%"><col style="width:7%"><col style="width:8%"><col style="width:6%"><col style="width:7%"><col style="width:7%"><col style="width:6%"><col style="width:7%"><col style="width:9%"><col style="width:7%"><col style="width:5%"><col style="width:7%"><col style="width:4%"></colgroup>
+      <thead><tr><th></th><th>Section</th><th>Metric</th><th>Month 0 baseline</th><th>System of record</th><th>Owner of the number</th><th>Current</th><th>Target</th><th>Evidence grade</th><th>Grade source</th><th>Falsifier</th><th>Trend, with the prior value</th><th>Our confidence</th><th>Tripwire: what we do when it trips</th><th>Watcher</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">10</span></td><td class="prior">Risk<span class="prior-src">ch05 L236-240</span></td><td class="locked">Governance readiness (lowest capability)</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., Basic in 4/6 areas</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">Basic in 6/6 by Q3</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">↑ was None in 3/6</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-text sm"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">11</span></td><td class="prior">Risk<span class="prior-src">ch05 L236-240</span></td><td class="locked">Open audit findings (agent-related)</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., 2 open</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-text sm"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">0</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">↓ from 5</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-text sm"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">12</span></td><td class="prior">Risk<span class="prior-src">ch05 L236-240</span></td><td class="locked">Agent-related incidents</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., 1 this quarter</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-text sm"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">0</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-text sm"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">→ flat</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-text sm"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">13</span></td><td class="prior">Risk<span class="prior-src">ch05 L236-240</span></td><td class="locked">Data boundary compliance</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., Compliant</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">Maintain</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">→ stable</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-text"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">14</span></td><td class="prior">Risk<span class="prior-src">ch05 L236-240</span></td><td class="locked">Insurance / liability coverage</td><td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="prior--hedged"><span class="hedge-figure">e.g., E&amp;O and cyber reviewed; agent clause pending</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our figure</span><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">Agent-specific coverage confirmed</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our target, with a date</span><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><div class="prior--hedged"><span class="hedge-figure">In progress</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our direction / prior value</span><div class="f-select"><span class="opt">↑ improving</span><span class="opt">→ flat</span><span class="opt">↓ declining</span></div><span class="f-text"></span></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>DECISIONS NEEDED <span class="ws-block-note">book examples are prompts, not current requests</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:47%"><col style="width:30%"><col style="width:23%"></colgroup>
+      <thead><tr><th><span class="fno">15</span>Decision requested</th><th><span class="fno">16</span>Who must decide</th><th><span class="fno">17</span>Needed by</th></tr></thead>
+      <tbody>
+        <tr><td class="fill"><div class="prior--hedged"><span class="hedge-figure">Budget approval for next quarter; data classification policy update requiring board awareness; vendor contract renewal; risk acceptance for identified gaps</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our actual asks this quarter</span><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block-note">† author estimate — not industry-validated. Every target on this page carries its evidence grade and its falsifier.</div>
+
+  <div class="ws-foot">
+    <div>WS-05-board-reporting-scorecard &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Annex A: claims</h1><p class="ws-sub">Leader's working paper &middot; keep behind the board page</p></div>
+    <div class="ws-meta"><b>WS-05-board-reporting-scorecard</b><br>Pack G - fill order 7<br>type <b>register</b><br>audience <b>leadership</b></div>
+  </div>
+  <div class="ws-source">Source: <b>The Agentic SDLC Thesis</b>, <i>Scope and Limitations</i> &middot; <code>handbook\ch01-the-agentic-sdlc-thesis.qmd</code> L136-142 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch01-the-agentic-sdlc-thesis.html#sec-thesis-scope-limits">#sec-thesis-scope-limits</a></div>
+  <div class="ws-instruction">For each load-bearing claim the transformation plan depends on, record its source, grade, your confidence, and the specific observation that would falsify it. Name the source chapter and line for an author estimate, or the vendor and document for a vendor claim.</div>
+  <div class="ws-block">
+    <h2>CLAIMS <span class="ws-block-note">each claim and its falsifier stay together</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:20%"><col style="width:14%"><col style="width:17%"><col style="width:12%"><col style="width:37%"></colgroup>
+      <thead><tr><th><span class="fno">18</span>Claim the plan depends on</th><th><span class="fno">19</span>Source</th><th><span class="fno">20</span>Evidence grade</th><th><span class="fno">21</span>Our confidence</th><th><span class="fno">22</span>Falsifier</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="fill"><span class="f-box xl"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-box xl"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box xl"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-box xl"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-box xl"></span></td>
+          <td class="fill"><span class="f-box"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td>
+          <td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td>
+          <td class="fill"><span class="f-box xl"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ws-block-note">The outcome is a board-ready statement of the organization's bets and how it will know when it was wrong. Add rows on a working copy as required; do not omit the source, grade, confidence or observable falsifier.</div>
+  </div>
+  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex A &middot; sheet 2 of 5</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+
+<!-- ============================ SHEET 4 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Annex B: outcomes</h1><p class="ws-sub">Agreed, measurable definition of success &middot; benefits-realization basis for later review</p></div>
+    <div class="ws-meta"><b>WS-05-board-reporting-scorecard</b><br>Pack G - fill order 7<br>type <b>scorecard</b><br>audience <b>leadership</b></div>
+  </div>
+  <div class="ws-source">Source: <b>The Execution Meta-Process</b>, <i>What the Meta-Process Produces</i> &middot; <code>handbook\ch18-the-execution-meta-process.qmd</code> L302-316 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch18-the-execution-meta-process.html#sec-meta-outputs">#sec-meta-outputs</a></div>
+  <div class="ws-instruction">For each claimed output, record today's baseline, the observable test that would prove it, an agreed target and review date. Confirm the book's author-estimate grades for reproducible process and proportional cost; keep those grades until you have measured the outcomes yourself. Strike through any outcome you are not willing to be measured on.</div>
+  <div class="ws-block">
+    <h2>OUTCOME SCORECARD <span class="ws-block-note">four claimed outputs from the book</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:16%"><col style="width:14%"><col style="width:25%"><col style="width:13%"><col style="width:24%"><col style="width:8%"></colgroup>
+      <thead><tr><th><span class="fno">23</span>Claimed output</th><th><span class="fno">24</span>Baseline today</th><th><span class="fno">25</span>Observable evidence that would prove it</th><th><span class="fno">26</span>Evidence grade</th><th><span class="fno">27</span>Target and review date</th><th><span class="fno">28</span>Struck through</th></tr></thead>
+      <tbody>
+        <tr><td class="locked">Bisectable history</td><td class="fill"><span class="f-box"></span></td><td class="prior">Can we bisect to a wave?<span class="prior-src">ch18 L304</span><span class="f-box"></span></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-box"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td></tr>
+        <tr><td class="locked">Auditable decisions</td><td class="fill"><span class="f-box"></span></td><td class="prior">Is there a decision record per PR?<span class="prior-src">ch18 L306</span><span class="f-box"></span></td><td class="fill"><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-box"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td></tr>
+        <tr><td class="locked">Reproducible process</td><td class="fill"><span class="f-box"></span></td><td class="prior">Would a different developer with the same codebase, context files and plan produce substantially similar output?<span class="prior-src">ch18 L308</span><span class="f-box"></span></td><td class="fill"><span class="prior--hedged"><span class="hedge-figure">author estimate</span><span class="hedge-text">This is our hypothesis, not a tested claim</span><span class="hedge-src">handbook\ch18-the-execution-meta-process.qmd L308</span></span><span class="ours-label">Confirm or upgrade once measured</span><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-box"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td></tr>
+        <tr><td class="locked">Proportional cost</td><td class="fill"><span class="f-box"></span></td><td class="prior">Does cost scale with change scope rather than codebase size?<span class="prior-src">ch18 L310</span><span class="f-box"></span></td><td class="fill"><span class="prior--hedged"><span class="hedge-figure">author estimate</span><span class="hedge-text">we have verified this only at the scale documented in the reference case study</span><span class="hedge-src">handbook\ch18-the-execution-meta-process.qmd L310</span></span><span class="ours-label">Confirm or upgrade once measured</span><div class="f-select"><span class="opt">measured</span><span class="opt">author estimate</span><span class="opt">vendor claim</span></div></td><td class="fill"><span class="f-box"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-checkline"><span class="f-check"></span></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex B &middot; sheet 3 of 5</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+
+<!-- ============================ SHEET 5 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Annex C: assumptions</h1><p class="ws-sub">A quarterly risk register that keeps the transformation plan honest as the field moves</p></div>
+    <div class="ws-meta"><b>WS-05-board-reporting-scorecard</b><br>Pack G - fill order 7<br>type <b>register</b><br>audience <b>leadership</b></div>
+  </div>
+  <div class="ws-source">Source: <b>What Comes Next</b>, <i>What the Author Probably Got Wrong</i> &middot; <code>handbook\ch27-what-comes-next.qmd</code> L199-211 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-author-caveats">#sec-next-author-caveats</a></div>
+  <div class="ws-instruction">For each assumption, decide whether it holds for your organization; unknown is a legitimate answer and requires a watcher. Record the observable signal that would show it broke, who watches, the action to take, and a quarterly review date.</div>
+  <div class="ws-block">
+    <h2>ASSUMPTION REGISTER <span class="ws-block-note">five named assumptions &middot; review quarterly</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:25%"><col style="width:17%"><col style="width:19%"><col style="width:16%"><col style="width:23%"></colgroup>
+      <thead><tr><th><span class="fno">29</span>Assumption</th><th><span class="fno">30</span>Does it hold for us</th><th><span class="fno">31</span>Observable signal it broke</th><th><span class="fno">32</span>Who watches, and what we do</th><th><span class="fno">33</span>Quarterly review date</th></tr></thead>
+      <tbody>
+        <tr><td class="locked">The pace of capability improvement may outrun governance</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="locked">The emphasis on human-in-the-loop may prove too conservative</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="locked">The human-as-orchestrator model may be transitional rather than enduring</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="locked">The documentation burden may not pay for itself</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="locked">Human judgement as a differentiator may be temporal rather than structural</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex C &middot; sheet 4 of 5</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+
+<!-- ============================ SHEET 6 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Annex D: bets</h1><p class="ws-sub">Investment tiers, confidence, budget and hedge if the tier proves wrong</p></div>
+    <div class="ws-meta"><b>WS-05-board-reporting-scorecard</b><br>Pack G - fill order 7<br>type <b>register</b><br>audience <b>leadership</b></div>
+  </div>
+  <div class="ws-source">Source: <b>What Comes Next</b>, <i>Three-Tier Honesty Applied to This Chapter's Own Claims</i> &middot; <code>handbook\ch27-what-comes-next.qmd</code> L112-125 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch27-what-comes-next.html#sec-next-three-tier-honesty">#sec-next-three-tier-honesty</a></div>
+  <div class="ws-instruction">Record each planned investment on its own row. Classify it as Available now, Emerging, Directional or Structural; add your confidence, the budget attached (reconciled with WS-07 and WS-04), and what you will do instead and what it would cost if the tier proves wrong. The book's table is a worked example, not your organization's data.</div>
+  <div class="ws-block">
+    <h2>THE BOOK'S EIGHT-ROW WORKED EXAMPLE <span class="ws-block-note">example claims, not organization targets</span></h2>
+    <div class="prior--hedged">
+      <span class="hedge-figure">† Author estimate / directional claim examples</span>
+      <span class="hedge-text">Tables containing author estimates are marked with † throughout. The reader should calibrate accordingly. Invest confidently in the "available now" tier. Prepare for the "emerging" tier. Be aware of the "directional" tier without betting the organization on specific timelines.</span>
+      <span class="hedge-src">handbook\ch01-the-agentic-sdlc-thesis.qmd L140; handbook\ch27-what-comes-next.qmd L123</span>
+    </div>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:42%"><col style="width:26%"><col style="width:28%"></colgroup>
+      <thead><tr><th></th><th>Claim in the chapter's example</th><th>Book's tier</th><th>Book's confidence and qualification</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num">1</td><td class="locked">Tool-using agents become the default interaction mode</td><td class="locked">Available now</td><td class="prior">High — shipping in multiple platforms<span class="prior-src">ch27 L114</span></td></tr>
+        <tr><td class="ws-num">2</td><td class="locked">Multi-agent orchestration enters mainstream tooling</td><td class="locked">Available now</td><td class="prior">High — shipping in multiple tools<span class="prior-src">ch27 L115</span></td></tr>
+        <tr><td class="ws-num">3</td><td class="locked">Agent governance becomes a distinct discipline</td><td class="locked">Emerging</td><td class="prior">Medium — need is clear, tooling is not<span class="prior-src">ch27 L116</span></td></tr>
+        <tr><td class="ws-num">4</td><td class="locked">Specification replaces implementation as the core skill</td><td class="locked">Emerging</td><td class="prior">Medium — direction clear, timeline uncertain<span class="prior-src">ch27 L117</span></td></tr>
+        <tr><td class="ws-num">5</td><td class="locked">Full lifecycle agent coverage becomes operational</td><td class="locked">Directional</td><td class="prior">Low-to-medium — plausible, not inevitable<span class="prior-src">ch27 L118</span></td></tr>
+        <tr><td class="ws-num">6</td><td class="locked">Context infrastructure becomes as foundational as CI/CD</td><td class="locked">Directional</td><td class="prior">Medium — trajectory clear, timeline 5+ years<span class="prior-src">ch27 L119</span></td></tr>
+        <tr><td class="ws-num">7</td><td class="locked">Agentic computing stack layers consolidate</td><td class="locked">Emerging</td><td class="prior">Medium — convergence visible, standardization not<span class="prior-src">ch27 L120</span></td></tr>
+        <tr><td class="ws-num">8</td><td class="locked">The five core constraints hold</td><td class="locked">Structural</td><td class="prior">High — properties of the problem<span class="prior-src">ch27 L121</span></td></tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note">The example is the book's own, not a forecast for your organization.</p>
+  </div>
+  <div class="ws-block">
+    <h2>OUR INVESTMENT REGISTER <span class="ws-block-note">one investment per row</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:24%"><col style="width:18%"><col style="width:12%"><col style="width:16%"><col style="width:30%"></colgroup>
+      <thead><tr><th><span class="fno">34</span>Investment</th><th><span class="fno">35</span>Tier</th><th><span class="fno">36</span>Our confidence</th><th><span class="fno">37</span>Budget attached</th><th><span class="fno">38</span>Hedge if the tier proves wrong</th></tr></thead>
+      <tbody>
+        <tr><td class="fill"><span class="f-box"></span></td><td class="fill"><div class="f-select"><span class="opt">Available now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">Structural</span></div></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-currency" data-symbol="$"></span></td><td class="fill"><span class="f-box lg"></span></td></tr>
+        <tr><td class="fill"><span class="f-box"></span></td><td class="fill"><div class="f-select"><span class="opt">Available now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">Structural</span></div></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-currency" data-symbol="$"></span></td><td class="fill"><span class="f-box lg"></span></td></tr>
+        <tr><td class="fill"><span class="f-box"></span></td><td class="fill"><div class="f-select"><span class="opt">Available now</span><span class="opt">Emerging</span><span class="opt">Directional</span><span class="opt">Structural</span></div></td><td class="fill"><div class="f-hml"><span class="pt">H</span><span class="pt">M</span><span class="pt">L</span></div></td><td class="fill"><span class="f-currency" data-symbol="$"></span></td><td class="fill"><span class="f-box lg"></span></td></tr>
+      </tbody>
+    </table>
+    <div class="ws-block-note">Add rows on a working copy as required. Reconcile the budget with WS-07-spend-pool-budget-model and WS-04-intent-build-operate-investment-balance.</div>
+  </div>
+  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex D &middot; sheet 5 of 5</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+</div>
+```

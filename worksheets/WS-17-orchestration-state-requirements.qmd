@@ -1,0 +1,338 @@
+---
+title: "Orchestration Layer Requirements: What the Harness Must Track"
+pagetitle: "WS-17-orchestration-state-requirements"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+            .iso { display:flex; gap:6mm; align-items:stretch; }
+            .iso .agents { display:flex; gap:5mm; }
+            .iso .agents .ag { flex:1; }
+            .iso .ag { border:.5mm solid #1f2933; padding:2mm 3mm; font-size:8pt; text-align:center; min-width:28mm; }
+            .iso .ag i { display:block; border:.3mm dashed #4b5563; margin-top:1.5mm; padding:1.5mm; }
+            .iso .fsys { border:.7mm solid #1f2933; padding:2.5mm; font-size:8pt; text-align:center; margin-top:3mm; font-weight:bold; }
+            .iso .arrows { display:flex; gap:5mm; font-size:11pt; text-align:center; }
+            .iso .arrows span { flex:1; min-width:28mm; }
+            .iso .noedge { font-size:7.5pt; margin-top:1.5mm; font-style:italic; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-17-orchestration-state-requirements</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
+  2 sheet(s). Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Orchestration Layer Requirements: What the Harness Must Track</h1>
+      <p class="ws-sub">A build-or-buy requirements list for the orchestration layer: the concrete checklist to evaluate harnesses and internal tooling against.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-orchestration-state-requirements</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>8</b> &middot; type <b>checklist</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Session Management</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L386-442 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-session-management">#sec-multi-agent-session-management</a>
+    &middot; Prerequisite: WS-17-orchestration-topology-selector. Candidates are the harnesses marked Standardise or Support via shim in WS-APXA-harness-selection-matrix.
+  </div>
+
+  <div class="ws-instruction">
+    For each of the four coordination-state items, write where that state lives today, whether it is enforced or merely recorded, and who maintains it. Write <b>nowhere</b> where that is the truth: it is a finding, not a blank. A maintainer is a person or a named process, never an agent. Name up to three candidate harnesses or tools in the column heads, then mark each against every requirement. In the second block, mark each session-lifetime rule Enforced, Convention or Absent.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A &mdash; the four coordination-state items
+      <span class="ws-block-note">one row per item &middot; one column group per candidate (write names in the heads)</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:7%"><col style="width:20%"><col style="width:10%"><col style="width:9%"><col style="width:7%"><col style="width:8%"><col style="width:8%"><col style="width:10.3%"><col style="width:10.3%"><col style="width:10.4%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span> Coordination state item</th>
+          <th><span class="fno">2</span> What it must track</th>
+          <th><span class="fno">3</span> Where it lives today</th>
+          <th><span class="fno">4</span> Enforced or merely recorded?</th>
+          <th><span class="fno">5</span> Who maintains it</th>
+          <th><span class="fno">6</span> Provided by</th>
+          <th><span class="fno">7</span> Requirement verdict</th>
+          <th><span class="fno">8</span> <span class="fno">9</span> Candidate 1 (write name): <span style="display:block;background:#fff;height:6mm;margin:1mm 0;border-bottom:.3mm solid #1f2933"></span>meets it / evidence</th>
+          <th>Candidate 2 (write name): <span style="display:block;background:#fff;height:6mm;margin:1mm 0;border-bottom:.3mm solid #1f2933"></span>meets it / evidence (8, 9)</th>
+          <th>Candidate 3 (write name): <span style="display:block;background:#fff;height:6mm;margin:1mm 0;border-bottom:.3mm solid #1f2933"></span>meets it / evidence (8, 9)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior"><b>Task status</b><span class="prior-src">ch17 L433</span></td>
+          <td class="prior">Which tasks are pending, in progress, complete or blocked.<span class="prior-src">ch17 L433-436</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Enforced</span><span class="opt">Recorded</span><span class="opt">Neither</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Harness-native</span><span class="opt">External tool</span><span class="opt">Human process</span><span class="opt">Nothing</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must have</span><span class="opt">Should have</span><span class="opt">Nice to have</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>File ownership</b><span class="prior-src">ch17 L434</span></td>
+          <td class="prior">Which agent is currently modifying which files; the enforcement mechanism for the one-file-one-agent rule.<span class="prior-src">ch17 L433-436</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Enforced</span><span class="opt">Recorded</span><span class="opt">Neither</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Harness-native</span><span class="opt">External tool</span><span class="opt">Human process</span><span class="opt">Nothing</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must have</span><span class="opt">Should have</span><span class="opt">Nice to have</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Wave progress</b><span class="prior-src">ch17 L435</span></td>
+          <td class="prior">Which waves have been completed and tested, which is currently executing.<span class="prior-src">ch17 L433-436</span></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Enforced</span><span class="opt">Recorded</span><span class="opt">Neither</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Harness-native</span><span class="opt">External tool</span><span class="opt">Human process</span><span class="opt">Nothing</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must have</span><span class="opt">Should have</span><span class="opt">Nice to have</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Escalation log</b><span class="prior-src">ch17 L436</span></td>
+          <td class="prior">What has been escalated, what decision was made, and why.<span class="prior-src">ch17 L433-436</span></td>
+                    <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Enforced</span><span class="opt">Recorded</span><span class="opt">Neither</span></div></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Harness-native</span><span class="opt">External tool</span><span class="opt">Human process</span><span class="opt">Nothing</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Must have</span><span class="opt">Should have</span><span class="opt">Nice to have</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div><div class="f-select"><span class="opt">Demonstrated</span><span class="opt">Asserted</span><span class="opt">Not shown</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="ws-block-note" style="font-size:7.5pt;margin:1.5mm 0 0">Col 3: where it lives (spreadsheet, issue tracker, harness feature, custom tool, or nowhere) &middot; Col 4: file ownership written in a spreadsheet does not stop two agents editing the same file (ch17 L434) &middot; Col 5: a person or named process, not an agent (ch17 L438) &middot; Col 7: set before evaluating any candidate &middot; Col 9: applies per candidate column.</p>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; the three session-lifetime rules
+      <span class="ws-block-note">one row per rule</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:9%"><col style="width:35%"><col style="width:14%"><col style="width:24%"><col style="width:12%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th colspan="2"><span class="fno">10</span> Rule</th>
+          <th><span class="fno">11</span> What it means</th>
+          <th><span class="fno">12</span> Status here</th>
+          <th><span class="fno">13</span> Enforcement mechanism <span class="prior-src">mandatory where col 12 reads Enforced: what actually stops the violation</span></th>
+          <th><span class="fno">14</span> Owner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior" colspan="2"><b>One task per session</b><span class="prior-src">ch17 L421</span></td>
+          <td class="prior">Reusing a session for a second, unrelated task inherits the first task's conversation history, dead weight for the second.<span class="prior-src">ch17 L421-425</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Enforced</span><span class="opt">Convention</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="prior" colspan="2"><b>Reset on failure</b><span class="prior-src">ch17 L423</span></td>
+          <td class="prior">When an agent loops on the same error or produces the same incorrect output, terminate the session and dispatch a fresh one with refined instructions; the fresh session starts without the accumulated confusion.<span class="prior-src">ch17 L421-425</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Enforced</span><span class="opt">Convention</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="prior" colspan="2"><b>State through files, not memory</b><span class="prior-src">ch17 L425</span></td>
+          <td class="prior">Anything that must survive across sessions is written to the filesystem: committed code, plan documents, checkpoint records. Session-internal state (reasoning, intermediate attempts, debugging output) is ephemeral and should be treated as such.<span class="prior-src">ch17 L421-425</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Enforced</span><span class="opt">Convention</span><span class="opt">Absent</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-orchestration-state-requirements &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Orchestration Layer Requirements: What the Harness Must Track</h1>
+      <p class="ws-sub">Isolation contract, per-workflow handoff, and the build-or-buy verdict.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-orchestration-state-requirements</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>8</b> &middot; type <b>checklist</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block C &mdash; the session-isolation contract
+      <span class="ws-block-note">diagram reproduced from the chapter &middot; no edges between the agents</span></h2>
+
+    <div class="iso">
+      <div>
+        <div class="agents">
+          <div class="ag"><b>Agent 1</b><i>Conversation (isolated)</i></div>
+          <div class="ag"><b>Agent 2</b><i>Conversation (isolated)</i></div>
+          <div class="ag"><b>Agent 3</b><i>Conversation (isolated)</i></div>
+        </div>
+        <div class="arrows"><span>&darr;</span><span>&darr;</span><span>&darr;</span></div>
+        <div class="fsys">Shared filesystem (committed files = ground truth between waves)</div>
+        <div class="noedge">Session isolation: agents share filesystem, not conversation state. (ch17, fig-session-isolation)</div>
+      </div>
+      <div style="flex:1">
+        <table class="ws">
+          <colgroup><col style="width:6%"><col style="width:20%"><col style="width:40%"><col style="width:34%"></colgroup>
+          <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">15</span></td>
+              <td><b>The isolation model</b></td>
+              <td class="prior">Each agent session is independent: agent A cannot see agent B's conversation history, edits or reasoning. This is a feature, not a limitation: isolation stops one agent's context degradation propagating to others. Information flows between agents through <b>committed artefacts</b>, not shared sessions: when agent B builds on agent A's work it reads the committed files that passed tests at the wave checkpoint, not agent A's internal reasoning or discarded alternatives.<span class="prior-src">ch17 L390-392</span></td>
+              <td class="locked">&mdash;</td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">16</span></td>
+              <td><b>Does our tooling preserve isolation?</b></td>
+              <td class="prior">&mdash;<span class="prior-src">ch17 L390</span></td>
+              <td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Partial</span><span class="opt">No</span></div></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">17</span></td>
+              <td><b>Where isolation leaks</b></td>
+              <td class="prior">&mdash;<span class="prior-src">ch17 L438</span></td>
+              <td class="fill"><span class="f-box sm"></span><span class="ws-block-note">Any shared session, shared scratchpad, or agent asked to carry state on another agent's behalf.</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block D &mdash; per-workflow handoff contract
+      <span class="ws-block-note">one row per multi-step or multi-agent workflow &middot; reference: inference is per-thread; the filesystem is shared (ch11 L159-167)</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:15%"><col style="width:22%"><col style="width:11%"><col style="width:11%"><col style="width:20%"><col style="width:21%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">18</span> Workflow</th>
+          <th><span class="fno">19</span> The file that carries state between threads</th>
+          <th><span class="fno">20</span> Who writes it</th>
+          <th><span class="fno">21</span> Who reads it</th>
+          <th><span class="fno">22</span> Decision points at which it is re-read</th>
+          <th><span class="fno">23</span> What a child thread is guaranteed to inherit</th>
+        </tr>
+        <tr>
+          <td class="prior">&mdash;<span class="prior-src">ch11 L159-167</span></td>
+          <td class="prior">Inference is per-thread; the filesystem is shared. The filesystem is the shared memory of every multi-thread agentic system that has ever existed. Write the actual path.<span class="prior-src">ch11 L159-167</span></td>
+          <td class="prior">Person or agent role<span class="prior-src">ch11 L159-167</span></td>
+          <td class="prior">Person or agent role<span class="prior-src">ch11 L159-167</span></td>
+          <td class="prior">Plan-write-then-reload: the agent writes its plan to a file mid-session and re-reads it at decision points. The plan survives the inference; the inference does not survive the plan. Name ours.<span class="prior-src">ch11 L159-167</span></td>
+          <td class="prior"><b>Only what the parent wrote down.</b> A worker cannot ask the parent; it must read a file the parent wrote. Confirm this holds for our workflow, or name the assumption we make instead.<span class="prior-src">ch11 L159-167</span></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block E &mdash; the build-or-buy verdict
+      <span class="ws-block-note">one row per Block A and Block B requirement (7 needed; 3 printed, copy the block for the rest)</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:15%"><col style="width:25%"><col style="width:20%"><col style="width:22%"><col style="width:18%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Requirement (write it)</th>
+          <th><span class="fno">24</span> Requirement met by</th>
+          <th><span class="fno">25</span> If Build: owner and effort <span class="prior-src">effort in our own planning vocabulary</span></th>
+          <th><span class="fno">26</span> Gap accepted? <span class="prior-src">an accepted gap is a decision; an unmarked gap is an oversight</span></th>
+          <th><span class="fno">27</span> Evaluated on / re-evaluate by</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Harness-native</span><span class="opt">Existing tool</span><span class="opt">Build</span><span class="opt">Human process</span><span class="opt">Unmet</span></div></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>accepted</span><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Harness-native</span><span class="opt">Existing tool</span><span class="opt">Build</span><span class="opt">Human process</span><span class="opt">Unmet</span></div></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>accepted</span><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Harness-native</span><span class="opt">Existing tool</span><span class="opt">Build</span><span class="opt">Human process</span><span class="opt">Unmet</span></div></td>
+          <td class="fill"><span class="f-owner"></span><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>accepted</span><span class="f-text"></span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    The agent sessions are stateless workers. The coordination layer is the stateful manager. (ch17 L438)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-orchestration-state-requirements &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 2</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+```

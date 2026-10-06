@@ -1,0 +1,721 @@
+---
+title: "Orchestration Topology Selector: Which Patterns Do We Sanction?"
+pagetitle: "WS-17-orchestration-topology-selector"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-17-orchestration-topology-selector</b> &middot; review copy &middot;
+  declared format <b>A4 portrait</b> &middot; 9 sheets.
+  Each white page below is one physical sheet at true size.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Orchestration Topology Selector: Which Patterns Do We Sanction?</h1>
+      <p class="ws-sub">A sanctioned-topology table: work class, topology, recursion depth, max fan-out, and enforcing harness — the reference architecture for how your organization runs agents.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-orchestration-topology-selector</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>6</b> &middot; type <b>decision</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Agent Specialization Patterns</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L50-154 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-specialization">#sec-multi-agent-specialization</a>
+  </div>
+
+  <div class="ws-instruction">
+    Use one copy of Block A for each class of work your organization does. Select its sanctioned topology, declare recursion depth and maximum fan-out, mark whether both bounds are declared at the dispatch site, and name the harness that enforces them.     Blocks B to D follow on later sheets.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A — the sanctioned-topology standard
+      <span class="ws-block-note">one copy per class of work</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Class of work</b></td>
+          <td class="prior">Routine feature change / Cross-cutting refactor / Exploratory modernisation / Code review / Incident response<span class="prior-src">derived</span></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">Routine feature change</span>
+              <span class="opt">Cross-cutting refactor</span>
+              <span class="opt">Exploratory modernisation</span>
+              <span class="opt">Code review</span>
+              <span class="opt">Incident response</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>Sanctioned topology</b></td>
+          <td class="prior">Single agent / Writer-Reviewer-Tester / Domain Teams / Audit-Execute-Validate<span class="prior-src">ch17 L56, L75, L134</span></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">Single agent — default for unlisted classes</span>
+              <span class="opt">Writer-Reviewer-Tester</span>
+              <span class="opt">Domain Teams</span>
+              <span class="opt">Audit-Execute-Validate</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Composition-pattern name</b></td>
+          <td class="prior">Pre-filled Panel for Domain Teams only — the chapter's footnote names it so. The other three mappings are deliberately left open.<span class="prior-src">ch09 L73; ch17 L475</span></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">Panel</span>
+              <span class="opt">Wave</span>
+              <span class="opt">Scatter-Gather</span>
+              <span class="opt">Subagent</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>Declared recursion depth</b></td>
+          <td class="prior">          — The book supplies no number. The bound must be declared and enforced; it is not a tuning parameter.<span class="prior-src">ch17 L12</span></td>
+                    <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>Maximum fan-out</b></td>
+          <td class="prior">The book supplies no number. An undeclared fan-out is a fan-out tree nobody can price or audit.<span class="prior-src">ch17 L12</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>Declared at the dispatch site?</b></td>
+          <td class="prior">— The bound must be declared where the dispatch happens, not only in this document.<span class="prior-src">ch17 L12</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Both bounds are declared at the dispatch site</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Enforcing harness</b></td>
+          <td class="prior">— The harness must actually enforce the bound. None is valid and disqualifying.<span class="prior-src">ch17 L12</span></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">GitHub Copilot</span>
+              <span class="opt">Claude Code</span>
+              <span class="opt">Cursor</span>
+              <span class="opt">Codex CLI</span>
+              <span class="opt">OpenCode</span>
+              <span class="opt">None</span>
+            </div>
+            <div class="f-select">
+              <span class="opt">Standardise</span>
+              <span class="opt">Support via shim</span>
+              <span class="opt">Declined</span>
+            </div>
+            <small>A bound assigned to a declined harness is void: refill the row.</small>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Enforcement status</b></td>
+          <td class="prior">—<span class="prior-src">derived</span></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">Verified</span>
+              <span class="opt">Asserted</span>
+              <span class="opt">Not enforceable</span>
+            </div>
+                        <small>Verified = someone tried to exceed the bound and was stopped.</small>
+                        <span class="f-checkline"><span class="f-check"></span>Moved to unsanctioned</span>
+                        <small>Compensating control</small>
+                        <span class="f-text sm"></span>
+                        <small>Owner</small>
+                        <span class="f-text sm"></span>
+                      </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>Sanctioned by / date</b></td>
+          <td class="prior">—<span class="prior-src">derived</span></td>
+          <td class="fill">
+            <span class="f-owner"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-orchestration-topology-selector &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Topology reference</h1>
+      <p class="ws-sub">Block B — topology reference, read-only. Point to the stages and hand-offs the organization is choosing.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-orchestration-topology-selector</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>6</b> &middot; type <b>decision</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Agent Specialization Patterns</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L50-154 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-specialization">#sec-multi-agent-specialization</a>
+  </div>
+
+  <div class="ws-instruction">
+    Read the reference. Use the topology pages later in this packet to record your organization's instantiation for each topology you sanction.
+  </div>
+
+  <div class="ws-block">
+    <h2>Three specialization patterns
+      <span class="ws-block-note">reference diagrams</span></h2>
+    <div style="display:grid;grid-template-columns:1fr;gap:2mm;font-size:8pt">
+      <div style="border:0.4mm solid #73808c;padding:2mm">
+        <b>Writer / Reviewer / Tester</b><br>
+        Writer agent &rarr; <i>code changes</i> &rarr; Reviewer agent &rarr;
+        <i>findings: bugs, logic errors, security</i> &rarr; Tester agent &rarr;
+        <i>test updates + verification</i> &rarr; Verified output
+      </div>
+      <div style="border:0.4mm solid #73808c;padding:2mm">
+        <b>Domain Teams</b><br>
+        Architecture team: type definitions, module boundaries, pattern catalog, dependency graph
+        &nbsp;&nbsp; | &nbsp;&nbsp;
+        Domain expert team: output conventions, symbol dictionaries, UX guidelines, migration patterns.
+        Each team owns its concern and its related files.
+      </div>
+      <div style="border:0.4mm solid #73808c;padding:2mm">
+        <b>Audit / Execute / Validate</b><br>
+        Audit agents (read-only) &rarr; <i>findings: files, severity, recommendations</i> &rarr;
+        Planning (human decision) &rarr; <i>scoped tasks with file assignments</i> &rarr;
+        Execution agents (read-write) &rarr; <i>code changes</i> &rarr;
+        Validation agents (read-only) &rarr; <i>review findings, test results</i> &rarr; Ship
+      </div>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B — topology reference
+      <span class="ws-block-note">printed, read-only except column 14 on topology pages</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>Topology</b></td>
+          <td class="prior">Single agent / Writer-Reviewer-Tester / Domain Teams / Audit-Execute-Validate<span class="prior-src">ch17 L56, L75, L134</span></td>
+          <td class="locked">Printed reference. Read; do not fill.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Stages, and what passes between them</b></td>
+          <td class="prior">Writer-Reviewer-Tester — Writer agent &rarr; code changes &rarr; Reviewer agent &rarr; findings: bugs, logic errors, security &rarr; Tester agent &rarr; test updates + verification &rarr; Verified output.<br><br>
+            Audit-Execute-Validate — Audit agents (read-only) &rarr; findings: files, severity, recommendations &rarr; Planning (human decision) &rarr; scoped tasks with file assignments &rarr; Execution agents (read-write) &rarr; code changes &rarr; Validation agents (read-only) &rarr; review findings, test results &rarr; Ship.<br><br>
+            Domain Teams — parallel teams, each owning a concern and every file related to it; the pattern scales by adding a team per concern.<br><br>
+            Single agent — no stages.<span class="prior-src">ch17 L65-68, L139-152, L77-86</span></td>
+          <td class="locked">Printed reference. Read; do not fill.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-orchestration-topology-selector &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Topology constraints and team reference</h1>
+      <p class="ws-sub">Block B continued — read-only constraints that make each topology work.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-orchestration-topology-selector</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>6</b> &middot; type <b>decision</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Agent Specialization Patterns</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L50-154 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-specialization">#sec-multi-agent-specialization</a>
+  </div>
+
+  <div class="ws-instruction">
+    Read the reference. The stage boundary and ownership details are printed so your team can point to the constraint it intends to preserve.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B — topology reference (continued)
+      <span class="ws-block-note">printed, read-only except column 14 on topology pages</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>The constraint that makes the topology work</b></td>
+          <td class="prior">Writer-Reviewer-Tester — the reviewer receives the diff plus the original source, not the writer's conversation history, so it evaluates the output on its own merits rather than being anchored by the writer's reasoning.<br><br>
+            Audit-Execute-Validate — audit and validation agents are read-only and can therefore be dispatched in parallel over the same files with no risk of interference; only execution agents hold write, and the human decision between audit and execution is the highest-impact point in the process.<br><br>
+            Domain Teams — neither team needs the other's context; the coordination cost is between teams, not within them.<span class="prior-src">ch17 L73, L150-152, L84-86</span></td>
+          <td class="locked">Printed reference. Read; do not fill.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Domain Teams reference split</b></td>
+          <td class="prior"><b>Architecture team</b> — context loaded: type definitions, module boundaries, pattern catalogue, dependency graph. Owns: type-safety fixes, dead-code removal, API consolidation.<br><br>
+            <b>Domain expert team</b> — context loaded: output conventions, symbol dictionaries, UX guidelines, migration patterns. Owns: verbose coverage, logger migration, formatting cleanup.<span class="prior-src">ch17 L79-82</span></td>
+          <td class="locked">Printed reference. Read; do not fill.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-orchestration-topology-selector &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+
+<!-- ============================ SHEET 4 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Our topology instantiation — Single agent</h1>
+      <p class="ws-sub">Block B, column 14 — fill only if your organization sanctions this topology.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-orchestration-topology-selector</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>6</b> &middot; type <b>decision</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Agent Specialization Patterns</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L50-154 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-specialization">#sec-multi-agent-specialization</a>
+  </div>
+
+  <div class="ws-instruction">
+    If you sanction Single agent, name your team or owner, the concerns it handles, and its exclusive file-ownership boundary. Leave this page blank if you do not sanction this topology.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B — topology reference
+      <span class="ws-block-note">one printed page per sanctioned topology</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Our instantiation</b></td>
+          <td class="prior">—<span class="prior-src">ch17 L108-130</span></td>
+          <td class="fill taller"><span class="f-box xl"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ws-block-note">For each topology your organization sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-orchestration-topology-selector &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 4 ============================ -->
+
+<!-- ============================ SHEET 5 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Our topology instantiation — Writer-Reviewer-Tester</h1>
+      <p class="ws-sub">Block B, column 14 — fill only if your organization sanctions this topology.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-orchestration-topology-selector</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>6</b> &middot; type <b>decision</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Agent Specialization Patterns</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L50-154 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-specialization">#sec-multi-agent-specialization</a>
+  </div>
+
+  <div class="ws-instruction">
+    If you sanction Writer-Reviewer-Tester, name your team(s), the concerns they handle, and each team's exclusive file-ownership boundary. Leave this page blank if you do not sanction this topology.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B — topology reference
+      <span class="ws-block-note">one printed page per sanctioned topology</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Our instantiation</b></td>
+          <td class="prior">—<span class="prior-src">ch17 L108-130</span></td>
+          <td class="fill taller"><span class="f-box xl"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ws-block-note">For each topology your organization sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-orchestration-topology-selector &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 5 ============================ -->
+
+<!-- ============================ SHEET 6 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Our topology instantiation — Domain Teams</h1>
+      <p class="ws-sub">Block B, column 14 — fill only if your organization sanctions this topology.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-orchestration-topology-selector</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>6</b> &middot; type <b>decision</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Agent Specialization Patterns</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L50-154 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-specialization">#sec-multi-agent-specialization</a>
+  </div>
+
+  <div class="ws-instruction">
+    If you sanction Domain Teams, name your team(s), the concerns they handle, and each team's exclusive file-ownership boundary. Leave this page blank if you do not sanction this topology.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B — topology reference
+      <span class="ws-block-note">one printed page per sanctioned topology</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Our instantiation</b></td>
+          <td class="prior">—<span class="prior-src">ch17 L108-130</span></td>
+          <td class="fill taller"><span class="f-box xl"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ws-block-note">For each topology your organization sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-orchestration-topology-selector &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 6 ============================ -->
+
+<!-- ============================ SHEET 7 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Our topology instantiation — Audit-Execute-Validate</h1>
+      <p class="ws-sub">Block B, column 14 — fill only if your organization sanctions this topology.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-orchestration-topology-selector</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>6</b> &middot; type <b>decision</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Agent Specialization Patterns</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L50-154 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-specialization">#sec-multi-agent-specialization</a>
+  </div>
+
+  <div class="ws-instruction">
+    If you sanction Audit-Execute-Validate, name your team(s), the concerns they handle, and each team's exclusive file-ownership boundary. Leave this page blank if you do not sanction this topology.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B — topology reference
+      <span class="ws-block-note">one printed page per sanctioned topology</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Our instantiation</b></td>
+          <td class="prior">—<span class="prior-src">ch17 L108-130</span></td>
+          <td class="fill taller"><span class="f-box xl"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ws-block-note">For each topology your organization sanctions: name your team(s), your concerns, and the exclusive file-ownership boundary per team.</div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-orchestration-topology-selector &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 7 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 7 ============================ -->
+
+<!-- ============================ SHEET 8 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Per-workflow recursion policy</h1>
+      <p class="ws-sub">Block C — one row per intended agent workflow; use one copy of this sheet per workflow.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-orchestration-topology-selector</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>6</b> &middot; type <b>decision</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Agent Specialization Patterns</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L50-154 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-specialization">#sec-multi-agent-specialization</a>
+  </div>
+
+  <div class="ws-instruction">
+    For each intended agent workflow, name the workflow, select its composition pattern, and record its maximum dispatch depth, per-thread context budget, eval stop condition, and persisted-plan path. Copy this sheet for each additional workflow.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block C — per-workflow recursion policy
+      <span class="ws-block-note">one row per intended agent workflow</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td>
+          <td><b>Intended agent workflow</b></td>
+          <td class="prior">—<span class="prior-src">ch09 L65-69</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td>
+          <td><b>Composition pattern</b></td>
+          <td class="prior"><b>Panel</b> — a Mediator with a Scatter-Gather distribution; specialist threads review the same artefact in parallel and a synthesiser reconciles their findings into one decision.<br><br>
+            <b>Wave</b> — a Pipeline; one thread's output becomes the next thread's input.<br><br>
+            <b>Scatter-Gather</b> — fan out, collect, return, with no synthesis lens on top.<br><br>
+            <b>Subagent</b> — any thread the harness spawns with its own context budget.<span class="prior-src">ch09 L73</span></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">Panel</span>
+              <span class="opt">Wave</span>
+              <span class="opt">Scatter-Gather</span>
+              <span class="opt">Subagent</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td>
+          <td><b>Maximum dispatch depth</b></td>
+          <td class="prior">—<span class="prior-src">ch09 L69; ch17 L12</span></td>
+          <td class="fill"><span class="f-text sm"></span><small>Your own value; must not exceed column 4 for the matching work class.</small></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td>
+          <td><b>Context budget per thread</b></td>
+          <td class="prior">—<span class="prior-src">ch09 L69</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td>
+          <td><b>The eval that gives the parent a stop condition</b></td>
+          <td class="prior">Convention: every Skill carries an eval, so the parent has a stop condition.<span class="prior-src">ch09 L69</span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">20</span></td>
+          <td><b>Path where the dispatched plan is persisted</b></td>
+          <td class="prior">Convention: every dispatch persists its plan, so the parent can read the artefact instead of re-dispatching.<span class="prior-src">ch09 L69</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-orchestration-topology-selector &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 8 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 8 ============================ -->
+
+<!-- ============================ SHEET 9 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Panel guardrails</h1>
+      <p class="ws-sub">Block D — read the three failure modes and write your control for each. Complete only where a sanctioned topology uses Panel.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-17-orchestration-topology-selector</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>6</b> &middot; type <b>decision</b><br>
+      audience <b>architect</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>Multi-Agent Orchestration</b>, <i>Agent Specialization Patterns</i> &middot;
+    <code>handbook/ch17-multi-agent-orchestration.qmd</code> L50-154 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch17-multi-agent-orchestration.html#sec-multi-agent-specialization">#sec-multi-agent-specialization</a>
+  </div>
+
+  <div class="ws-instruction">
+    If a sanctioned topology uses Panel, write one control against each printed anti-pattern and name the human synthesizer or arbiter agent that reconciles the findings into one decision. Otherwise leave this conditional block blank.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block D — Panel guardrails
+      <span class="ws-block-note">complete only where a sanctioned topology is Panel</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:22%"><col style="width:36%"><col style="width:36%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">21</span></td>
+          <td><b>Anti-pattern</b></td>
+          <td class="prior">PANEL-WITHOUT-SYNTHESIS / PANEL-IN-ONE-CONTEXT / IMBALANCED PANEL<span class="prior-src">ch17 L475</span></td>
+          <td class="locked">Printed reference. Read all three; do not fill.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">22</span></td>
+          <td><b>What it looks like</b></td>
+          <td class="prior"><b>PANEL-WITHOUT-SYNTHESIS</b> — N lenses then a concatenation; the user reads N reports instead of one decision.<br><br>
+            <b>PANEL-IN-ONE-CONTEXT</b> — the dominant senior-engineer failure: all N lenses played sequentially in a single window, each contaminating the next.<br><br>
+            <b>IMBALANCED PANEL</b> — the dissenting lens is the highest-information signal; the synthesis ignores it.<span class="prior-src">ch17 L475</span></td>
+          <td class="locked">Printed reference. Read all three; do not fill.</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">23</span></td>
+          <td><b>Our control against it</b></td>
+          <td class="prior">—<span class="prior-src">ch17 L475</span></td>
+          <td class="fill">
+            <b>PANEL-WITHOUT-SYNTHESIS</b><span class="f-box"></span>
+            <b>PANEL-IN-ONE-CONTEXT</b><span class="f-box"></span>
+            <b>IMBALANCED PANEL</b><span class="f-box"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">24</span></td>
+          <td><b>Named synthesiser</b></td>
+          <td class="prior">Reference: a synthesiser — human or named arbiter agent — reconciles the findings into one decision.<span class="prior-src">ch09 L73</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-17-orchestration-topology-selector &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 9 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:30mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:20mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+<!-- ========================== END SHEET 9 ============================ -->
+```

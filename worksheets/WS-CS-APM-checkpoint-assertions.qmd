@@ -1,0 +1,279 @@
+---
+title: "Definition of Done: Behavioural Checkpoint Assertions"
+pagetitle: "WS-CS-APM-checkpoint-assertions"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 210mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A4 portrait; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-CS-APM-checkpoint-assertions</b> &middot; review copy &middot; declared format <b>A4 portrait</b> &middot;
+  3 sheet(s) per checkpoint. Each white page below is one physical sheet at true size.
+  Anything spilling past a page edge onto this grey background is a layout defect.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Definition of Done: Behavioural Checkpoint Assertions</h1>
+      <p class="ws-sub">A definition-of-done checklist that makes "green build" insufficient on its own.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-CS-APM-checkpoint-assertions</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>22</b> &middot; type <b>checklist</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The APM Auth + Logging Overhaul</b>, <i>5. Verbose Logging Silent NameError</i> &middot;
+    <code>case-study-apm-overhaul.qmd</code> L183-212 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/case-study-apm-overhaul.html#sec-cs-apm-silent-error">#sec-cs-apm-silent-error</a>
+  </div>
+
+  <div class="ws-instruction">
+    Use one set of these three pages per checkpoint (one wave boundary from <b>WS-18-wave-decomposition-plan</b>), and one copy of the field list per assertion. For each assertion, write the behavior this change is supposed to make observable, the command that observes it, and the output you expect. Do not write "tests pass". Fields 6, 7 and 12 are filled at the checkpoint, not in the planning session. The signer is not the author of the change. Keep each checkpoint's pages unbound: they are signed at the checkpoint itself.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A &mdash; The assertion
+      <span class="ws-block-note">one copy per assertion; fields 6 and 7 are filled at the checkpoint</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:20%"><col style="width:36%"><col style="width:38%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">1</span></td>
+          <td><b>Checkpoint / wave</b></td>
+          <td class="prior">Populated from the wave names in WS-18-wave-decomposition-plan.<span class="prior-src">ch18 L142; cs-apm L105-111</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">W1</span><span class="opt">W2</span><span class="opt">W3</span><span class="opt">W4</span><span class="opt">W5</span></div>
+            <span class="f-text sm"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">2</span></td>
+          <td><b>Assertion ID</b></td>
+          <td class="prior">Shape only: W2-A1, W2-A2, &hellip;<span class="prior-src">derived</span></td>
+          <td class="fill"><span class="f-text sm"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">3</span></td>
+          <td><b>Observable behaviour this change is supposed to produce</b></td>
+          <td class="prior">Worked instance: "<code>--verbose</code> produces informational output to the user"<span class="prior-src">cs-apm L183-186</span></td>
+          <td class="fill taller"><span class="f-box"></span>
+            <span class="ours-label">State it as something a user or an operator can see.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">4</span></td>
+          <td><b>Command that observes it</b></td>
+          <td class="prior">Worked instances: <code>apm install pkg --verbose</code>; <code>git diff --stat</code>; a recursive grep for the glyphs the change was supposed to remove &mdash; printed verbatim on sheet 3.<span class="prior-src">cs-apm L199, L218-220</span></td>
+          <td class="fill taller"><span class="f-box"></span>
+            <span class="ours-label">The actual command, with its arguments, runnable by someone who was not in the room.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">5</span></td>
+          <td><b>Expected output</b></td>
+          <td class="prior">Worked instance: at least one line matching <code>Resolving</code> on stdout.<span class="prior-src">cs-apm L200-204</span></td>
+          <td class="fill taller"><span class="f-box"></span>
+            <span class="ours-label">A concrete string, or a concrete checkable property of the output.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">6</span></td>
+          <td><b>Observed output</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill taller"><span class="f-box"></span>
+            <span class="ours-label">Filled at the checkpoint, not in the planning session.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">7</span></td>
+          <td><b>Verdict</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-computed" data-formula="field 5 against field 6: pass / fail"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-CS-APM-checkpoint-assertions &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 1 ============================ -->
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Definition of Done: Behavioural Checkpoint Assertions</h1>
+      <p class="ws-sub">Classify the assertion and name the failure it would catch.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-CS-APM-checkpoint-assertions</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>22</b> &middot; type <b>checklist</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B &mdash; What kind of assertion, and what it would catch
+      <span class="ws-block-note">one copy per assertion</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:20%"><col style="width:36%"><col style="width:38%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">8</span></td>
+          <td><b>Assertion class</b></td>
+          <td class="prior">Rule: a checkpoint may not consist of <code>test-suite</code> assertions alone.<span class="prior-src">cs-apm L207-210</span></td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">behavioural</span><span class="opt">filesystem</span><span class="opt">test-suite</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">9</span></td>
+          <td><b>Failure mode this assertion would have caught</b></td>
+          <td class="prior">Worked instance: a helper never imported, the resulting <code>NameError</code> swallowed by an outer <code>try/except</code>, the feature silently doing nothing.<span class="prior-src">cs-apm L183-186</span></td>
+          <td class="fill taller"><span class="f-box"></span>
+            <span class="ours-label">Name the specific failure.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">10</span></td>
+          <td><b>Already covered by an existing test?</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">yes</span><span class="opt">partially</span><span class="opt">no</span></div>
+            <span class="ours-label">"no" is not a defect in the sheet &mdash; it is the test to write.</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">11</span></td>
+          <td><b>Silent-failure check: does any path between command and output swallow exceptions?</b></td>
+          <td class="prior">The reference bug was invisible because an outer <code>try/except</code> caught it.<span class="prior-src">cs-apm L184-185, L202-204</span></td>
+          <td class="fill taller">
+            <span class="f-checkline"><span class="f-check"></span>checked: yes / no (circle one)</span>
+            <span class="f-box"></span>
+            <span class="ours-label">The answer, and where the swallowing happens.</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-CS-APM-checkpoint-assertions &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 2 ============================ -->
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Definition of Done: Behavioural Checkpoint Assertions</h1>
+      <p class="ws-sub">The reverse: filesystem verification and sign-off, completed at the checkpoint.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-CS-APM-checkpoint-assertions</b><br>
+      Pack Z - Second wave: the practitioner kit<br>
+      fill order <b>22</b> &middot; type <b>checklist</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block C &mdash; Filesystem verification, then sign-off
+      <span class="ws-block-note">one per checkpoint page; completed at the checkpoint</span></h2>
+
+    <div class="prior" style="margin-bottom:2mm">
+      <b>The worked verification pair.</b> Run both, not one.
+      <pre style="font-style:normal;margin:1.5mm 0;font-size:8.5pt;background:none;border:0;padding:0"># After agent claims "all unicode replacements complete":
+git diff --stat           # Did any files actually change?
+grep -rn "✓\|✗\|⚠" src/  # Are the old characters still there?</pre>
+      <span class="prior-src">cs-apm L214-226</span>
+    </div>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:6%"><col style="width:20%"><col style="width:36%"><col style="width:38%">
+      </colgroup>
+      <thead>
+        <tr><th></th><th>Field</th><th>What the book says</th><th>Your answer</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">12</span></td>
+          <td><b>Filesystem verification performed</b></td>
+          <td class="prior">"Agent success messages are probabilistic output. The <code>diff</code> command is deterministic." Commands: <code>git diff --stat</code>, then a grep for the strings the change was supposed to remove.<span class="prior-src">cs-apm L214-226</span></td>
+          <td class="fill xl">
+            <span class="f-checkline"><span class="f-check"></span>both commands run</span>
+            <span class="f-box lg"></span>
+            <span class="ours-label">The diff and grep output actually seen.</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td>
+          <td><b>Signer</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-owner"></span>
+            <span class="ours-label">Must not be the author of the change under test.</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td>
+          <td><b>Signature + date</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill tall"><span class="f-sign"></span>
+            <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">&mdash;</span></td>
+          <td><b>Checkpoint verdict</b></td>
+          <td class="prior">&mdash;</td>
+          <td class="fill"><span class="f-computed" data-formula="pass only when every row's field 7 reads pass AND field 12 is ticked"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot-quote">
+    "The test suite had 2,829 passing tests and none verified that verbose mode actually produced output." (cs-apm L208-210)
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-CS-APM-checkpoint-assertions &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 3</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+<!-- ========================== END SHEET 3 ============================ -->
+```

@@ -1,0 +1,626 @@
+---
+title: "Harness Selection and Portability Matrix: What We Standardise On, and What It Costs Us"
+pagetitle: "WS-APXA-harness-selection-matrix"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+            .b-gap .f-checkline { display: inline-block; width: 19%; vertical-align: top; }
+            .f-docs small { display: none; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-APXA-harness-selection-matrix</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot; 9 sheets.
+  Each white page below is one physical sheet at true size.
+</div>
+
+<!-- ============================ SHEET 1 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Harness Selection and Portability Matrix: What We Standardise On, and What It Costs Us</h1>
+      <p class="ws-sub">A procurement-grade harness decision: one standard, the sanctioned exceptions, primitive gaps, and the qualitative cost of reversing the choice.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-APXA-harness-selection-matrix</b><br>
+      Pack D - Architecture and ownership<br>
+      fill order <b>5</b> &middot; type <b>matrix</b><br>
+      audience <b>mixed</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Cross-Harness Reference</b>, <i>At a glance — the substrate matrix</i> &middot;
+    <code>handbook\appendix-a-cross-harness-reference.qmd</code> L21-44 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/appendix-a-cross-harness-reference.html#sec-harness-substrate-matrix">#sec-harness-substrate-matrix</a>
+  </div>
+  <div class="ws-instruction">
+    Start with the harnesses actually in use, including unsanctioned installs; use the harness row in
+    <b>WS-11-runtime-machine-inventory</b>. Then record what you sanction, depend on, can support natively,
+    and will mitigate. Keep gaps visible. Carry the selected enforcing harness into
+    <b>WS-17-orchestration-topology-selector</b>.
+  </div>
+  <div class="prior" style="margin:2mm 0 3mm;padding:2mm 3mm">
+    <span class="hedge-text">Verified-on date — 2026-04-26. All vendor conventions in this appendix were verified against the documents footnoted below on 2026-04-26. Conventions evolve; harnesses ship breaking changes on quarterly cadences and sometimes faster. Before relying on any cell in any of these tables, open the vendor documentation footnote and confirm the convention is still current. The substrate vocabulary in @sec-runtime-machine is durable; the file names below are not.</span>
+    <span class="hedge-src">handbook\appendix-a-cross-harness-reference.qmd L12-14</span>
+  </div>
+  <div class="ws-block">
+    <h2>Block A — which harnesses are actually in use
+      <span class="ws-block-note">fill this block first; distinguish actual use from policy</span></h2>
+    <p style="margin:1mm 0 2mm">
+      <span class="prior">Appendix snapshot: <b>2026-04-26</b><span class="prior-src">handbook\appendix-a-cross-harness-reference.qmd L12-14</span></span>
+      &nbsp; <span class="ours-label">Re-verified by us on:</span>
+      <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span>
+    </p>
+    <p style="font-size:8pt;margin:1mm 0 2mm">
+      Field 1 lists the fixed candidates; use the five rows below and add a row for any unlisted harness in use.
+      Reversal cost is qualitative and named.
+    </p>
+    <div class="f-select" style="margin:1mm 0 2mm">
+      <span class="opt">GitHub Copilot</span><span class="opt">Claude Code</span><span class="opt">Cursor</span>
+      <span class="opt">Codex CLI</span><span class="opt">OpenCode</span><span class="opt">other harnesses: add rows</span>
+    </div>
+    <table class="ws">
+      <colgroup>
+        <col style="width:18%"><col style="width:10%"><col style="width:14%"><col style="width:14%">
+        <col style="width:16%"><col style="width:28%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span> Harness</th>
+          <th><span class="fno">2</span> In use today</th>
+          <th><span class="fno">3</span> Sanctioned?</th>
+          <th><span class="fno">4</span> Teams using it</th>
+          <th><span class="fno">5</span> Decision</th>
+          <th><span class="fno">6</span> Estimated port cost if we reverse this</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior">GitHub Copilot<span class="prior-src">appx-A L23</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>In use</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">Claude Code<span class="prior-src">appx-A L23</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>In use</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">Cursor<span class="prior-src">appx-A L23</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>In use</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">Codex CLI<span class="prior-src">appx-A L23</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>In use</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">OpenCode<span class="prior-src">appx-A L23</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>In use</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>In use</span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Sanctioned</span><span class="opt">Tolerated</span><span class="opt">Unsanctioned</span><span class="opt">Unknown</span></div></td>
+          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Standardise</span><span class="opt">Support via shim</span><span class="opt">Decline</span></div></td>
+          <td class="fill"><span class="f-text"></span><span class="f-text"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:8pt;margin:1mm 0 0"><b>Field 5 rule:</b> exactly one Standardise unless deliberately running two; if two, give the reason: <span class="f-text" style="display:inline-block;width:60%"></span></p><p class="ws-block-note" style="margin-top:1mm"><b>Field 6:</b> For each harness, name the primitive families that need manual translation and who would do the work. Record the gap between actual use and sanction; do not tidy it away.</p>
+  </div>
+  <div class="ws-foot">
+    <div>WS-APXA-harness-selection-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 2 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>Harness Selection and Portability Matrix</h1>
+      <p class="ws-sub">Block B — primitive-concept dependency and gap register; one row per appendix primitive.</p>
+    </div>
+    <div class="ws-meta"><b>WS-APXA-harness-selection-matrix</b><br>Pack D - Architecture and ownership<br>fill order <b>5</b> &middot; type <b>matrix</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Cross-Harness Reference</b>, <i>At a glance — the substrate matrix</i> &middot;
+    <code>handbook\appendix-a-cross-harness-reference.qmd</code> L21-44 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/appendix-a-cross-harness-reference.html#sec-harness-substrate-matrix">#sec-harness-substrate-matrix</a>
+  </div>
+  <div class="ws-instruction">
+    For the harness chosen in Block A, record each primitive's binding and whether you depend on it.
+    Confirm native support against live documentation. If a depended-on primitive is partial or absent,
+    write the workaround and name its owner. For each gotcha you accept, record the mitigation.
+  </div>
+  <div class="ws-block">
+    <h2>Block B — primitive-concept dependency and gap register
+      <span class="ws-block-note">appendix snapshot: <b>2026-04-26</b> &middot; re-verified by us on <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span></span></h2>
+    <div class="f-select" style="margin:1mm 0 2mm">
+      <span class="opt">Project-wide rules</span><span class="opt">Scope-attached rules</span><span class="opt">User-scope rules</span>
+      <span class="opt">Persona or specialist agent</span><span class="opt">Skill (module entrypoint)</span><span class="opt">Prompt or repeatable workflow</span>
+      <span class="opt">Memory (cross-session)</span><span class="opt">Hooks (event-driven)</span><span class="opt">MCP server config</span><span class="opt">Session compaction or restart</span>
+    </div>
+    <div class="prior" style="padding:2mm 3mm;margin:1mm 0 2mm">
+      <b>Named gotchas from the appendix</b> <span class="prior-src">appx-A L47-99</span>
+      <span style="display:block">Copilot — an over-eager <code>applyTo: "**"</code> matches every path, consumes the eager-preload budget, and can prevent lazy skills from being selected.</span>
+      <span style="display:block">Claude Code — closest-wins shadowing means an always-on rule must live at the root; a large root file pulls into every session and crowds out the skill activation budget.</span>
+      <span style="display:block">Cursor — user-scope rules live in IDE settings, not the filesystem, so they are not version-controlled; this creates hidden per-developer state and a silent-onboarding failure. Skills activation is partial.</span>
+      <span style="display:block">Codex CLI — skills materialise to cross-tool <code>.agents/</code>, not under <code>.codex/</code>; there is no separate prompts primitive.</span>
+      <span style="display:block">OpenCode — no native hooks concept; its convention set is the youngest in the matrix.</span>
+    </div>
+    <div class="prior" style="padding:2mm 3mm;margin:1mm 0 2mm">
+      <b>Field 10 pre-mark: the book's empty cells (—)</b> <span class="prior-src">appx-A L21, L25-34</span>
+      <span style="display:block">User-scope rules — no Codex file convention; Cursor Settings UI, not file-based. Prompt / repeatable workflow — none in Claude Code (slash commands), Cursor (partial via rules) and Codex. Memory — Copilot uses scoped instructions. Skill — Cursor partial. Hooks — OpenCode has no native hooks. Mark Native, Partial or None for your chosen harness, then confirm or correct.</span>
+    </div>
+    <table class="ws b-gap">
+      <colgroup>
+        <col style="width:4%"><col style="width:14%"><col style="width:14%"><col style="width:7%">
+        <col style="width:10%"><col style="width:13%"><col style="width:31%"><col style="width:7%">
+      </colgroup>
+      <thead><tr>
+        <th></th><th><span class="fno">7</span> Primitive concept</th><th><span class="fno">8</span> Our chosen harness's binding</th>
+        <th><span class="fno">9</span> Depend?</th><th><span class="fno">10</span> Native, or a real gap?</th>
+        <th><span class="fno">11</span> Workaround where the cell is empty</th><th><span class="fno">12</span> Named gotcha accepted &amp; mitigation</th>
+        <th><span class="fno">13</span> Workaround owner</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="ws-num">1</td><td class="prior">Project-wide rules<span class="prior-src">appx-A L25</span></td><td class="fill"><span class="f-text"></span><small>Chosen harness path; verify live</small></td><td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Not yet</span><span class="opt">No</span></div></td><td class="fill"><div class="f-select"><span class="opt">Native</span><span class="opt">Partial</span><span class="opt">None</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>Copilot</span><span class="f-checkline"><span class="f-check"></span>Claude</span><span class="f-checkline"><span class="f-check"></span>Cursor</span><span class="f-checkline"><span class="f-check"></span>Codex</span><span class="f-checkline"><span class="f-check"></span>OpenCode</span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">2</td><td class="prior">Scope-attached rules<span class="prior-src">appx-A L26</span></td><td class="fill"><span class="f-text"></span><small>Chosen harness path; verify live</small></td><td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Not yet</span><span class="opt">No</span></div></td><td class="fill"><div class="f-select"><span class="opt">Native</span><span class="opt">Partial</span><span class="opt">None</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>Copilot</span><span class="f-checkline"><span class="f-check"></span>Claude</span><span class="f-checkline"><span class="f-check"></span>Cursor</span><span class="f-checkline"><span class="f-check"></span>Codex</span><span class="f-checkline"><span class="f-check"></span>OpenCode</span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">3</td><td class="prior">User-scope rules<span class="prior-src">appx-A L27</span></td><td class="fill"><span class="f-text"></span><small>Chosen harness path; verify live</small></td><td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Not yet</span><span class="opt">No</span></div></td><td class="fill"><div class="f-select"><span class="opt">Native</span><span class="opt">Partial</span><span class="opt">None</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>Copilot</span><span class="f-checkline"><span class="f-check"></span>Claude</span><span class="f-checkline"><span class="f-check"></span>Cursor</span><span class="f-checkline"><span class="f-check"></span>Codex</span><span class="f-checkline"><span class="f-check"></span>OpenCode</span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">4</td><td class="prior">Persona or specialist agent<span class="prior-src">appx-A L28</span></td><td class="fill"><span class="f-text"></span><small>Chosen harness path; verify live</small></td><td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Not yet</span><span class="opt">No</span></div></td><td class="fill"><div class="f-select"><span class="opt">Native</span><span class="opt">Partial</span><span class="opt">None</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>Copilot</span><span class="f-checkline"><span class="f-check"></span>Claude</span><span class="f-checkline"><span class="f-check"></span>Cursor</span><span class="f-checkline"><span class="f-check"></span>Codex</span><span class="f-checkline"><span class="f-check"></span>OpenCode</span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">5</td><td class="prior">Skill (module entrypoint)<span class="prior-src">appx-A L29</span></td><td class="fill"><span class="f-text"></span><small>Chosen harness path; verify live</small></td><td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Not yet</span><span class="opt">No</span></div></td><td class="fill"><div class="f-select"><span class="opt">Native</span><span class="opt">Partial</span><span class="opt">None</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>Copilot</span><span class="f-checkline"><span class="f-check"></span>Claude</span><span class="f-checkline"><span class="f-check"></span>Cursor</span><span class="f-checkline"><span class="f-check"></span>Codex</span><span class="f-checkline"><span class="f-check"></span>OpenCode</span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:8pt;margin:2mm 0 0">Use column 12's checkboxes to mark gotchas you accept and write each mitigation beside them. If a depended-on gap has no written workaround and named owner, it is not resolved.</p>
+  </div>
+  <div class="ws-foot">
+    <div>WS-APXA-harness-selection-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 3 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Harness Selection and Portability Matrix</h1><p class="ws-sub">Block B — primitive-concept dependency and gap register, continued.</p></div>
+    <div class="ws-meta"><b>WS-APXA-harness-selection-matrix</b><br>Pack D - Architecture and ownership<br>fill order <b>5</b> &middot; type <b>matrix</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Cross-Harness Reference</b>, <i>At a glance — the substrate matrix</i> &middot;
+    <code>handbook\appendix-a-cross-harness-reference.qmd</code> L21-44 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/appendix-a-cross-harness-reference.html#sec-harness-substrate-matrix">#sec-harness-substrate-matrix</a>
+  </div>
+  <div class="ws-instruction">
+    Continue with the remaining primitive concepts. Gotcha labels refer to the register on sheet 2;
+    tick any accepted gotcha and write its mitigation here.
+  </div>
+  <div class="ws-block">
+    <h2>Block B — primitive-concept dependency and gap register <span class="ws-block-note">continued: fields 7-13</span></h2>
+    <table class="ws b-gap">
+      <colgroup>
+        <col style="width:4%"><col style="width:14%"><col style="width:14%"><col style="width:7%">
+        <col style="width:10%"><col style="width:13%"><col style="width:31%"><col style="width:7%">
+      </colgroup>
+      <thead><tr>
+        <th></th><th><span class="fno">7</span> Primitive concept</th><th><span class="fno">8</span> Our chosen harness's binding</th>
+        <th><span class="fno">9</span> Depend?</th><th><span class="fno">10</span> Native, or a real gap?</th>
+        <th><span class="fno">11</span> Workaround where the cell is empty</th><th><span class="fno">12</span> Named gotcha accepted &amp; mitigation</th>
+        <th><span class="fno">13</span> Workaround owner</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="ws-num">6</td><td class="prior">Prompt or repeatable workflow<span class="prior-src">appx-A L30</span></td><td class="fill"><span class="f-text"></span><small>Chosen harness path; verify live</small></td><td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Not yet</span><span class="opt">No</span></div></td><td class="fill"><div class="f-select"><span class="opt">Native</span><span class="opt">Partial</span><span class="opt">None</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>Copilot</span><span class="f-checkline"><span class="f-check"></span>Claude</span><span class="f-checkline"><span class="f-check"></span>Cursor</span><span class="f-checkline"><span class="f-check"></span>Codex</span><span class="f-checkline"><span class="f-check"></span>OpenCode</span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">7</td><td class="prior">Memory (cross-session)<span class="prior-src">appx-A L31</span></td><td class="fill"><span class="f-text"></span><small>Chosen harness path; verify live</small></td><td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Not yet</span><span class="opt">No</span></div></td><td class="fill"><div class="f-select"><span class="opt">Native</span><span class="opt">Partial</span><span class="opt">None</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>Copilot</span><span class="f-checkline"><span class="f-check"></span>Claude</span><span class="f-checkline"><span class="f-check"></span>Cursor</span><span class="f-checkline"><span class="f-check"></span>Codex</span><span class="f-checkline"><span class="f-check"></span>OpenCode</span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">8</td><td class="prior">Hooks (event-driven)<span class="prior-src">appx-A L32</span></td><td class="fill"><span class="f-text"></span><small>Chosen harness path; verify live</small></td><td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Not yet</span><span class="opt">No</span></div></td><td class="fill"><div class="f-select"><span class="opt">Native</span><span class="opt">Partial</span><span class="opt">None</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>Copilot</span><span class="f-checkline"><span class="f-check"></span>Claude</span><span class="f-checkline"><span class="f-check"></span>Cursor</span><span class="f-checkline"><span class="f-check"></span>Codex</span><span class="f-checkline"><span class="f-check"></span>OpenCode</span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">9</td><td class="prior">MCP server config<span class="prior-src">appx-A L33</span></td><td class="fill"><span class="f-text"></span><small>Chosen harness path; verify live</small></td><td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Not yet</span><span class="opt">No</span></div></td><td class="fill"><div class="f-select"><span class="opt">Native</span><span class="opt">Partial</span><span class="opt">None</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>Copilot</span><span class="f-checkline"><span class="f-check"></span>Claude</span><span class="f-checkline"><span class="f-check"></span>Cursor</span><span class="f-checkline"><span class="f-check"></span>Codex</span><span class="f-checkline"><span class="f-check"></span>OpenCode</span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">10</td><td class="prior">Session compaction or restart<span class="prior-src">appx-A L34</span></td><td class="fill"><span class="f-text"></span><small>Chosen harness path; verify live</small></td><td class="fill"><div class="f-select"><span class="opt">Yes</span><span class="opt">Not yet</span><span class="opt">No</span></div></td><td class="fill"><div class="f-select"><span class="opt">Native</span><span class="opt">Partial</span><span class="opt">None</span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-checkline"><span class="f-check"></span>Copilot</span><span class="f-checkline"><span class="f-check"></span>Claude</span><span class="f-checkline"><span class="f-check"></span>Cursor</span><span class="f-checkline"><span class="f-check"></span>Codex</span><span class="f-checkline"><span class="f-check"></span>OpenCode</span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-APXA-harness-selection-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 4 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Harness Selection and Portability Matrix</h1><p class="ws-sub">Block C — binding-surface detail per candidate harness; complete offline with the vendor documents open.</p></div>
+    <div class="ws-meta"><b>WS-APXA-harness-selection-matrix</b><br>Pack D - Architecture and ownership<br>fill order <b>5</b> &middot; type <b>matrix</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Cross-Harness Reference</b>, <i>At a glance — the substrate matrix</i> &middot;
+    <code>handbook\appendix-a-cross-harness-reference.qmd</code> L21-44 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/appendix-a-cross-harness-reference.html#sec-harness-substrate-matrix">#sec-harness-substrate-matrix</a>
+  </div>
+  <div class="ws-instruction">
+    For each candidate harness, compare how it binds and loads the same primitive. Verify the printed
+    Copilot and Claude Code examples, complete the other shortlisted harnesses, and record the exact
+    shim paths you would create for any “Support via shim” decision in Block A.
+  </div>
+  <div class="ws-block">
+    <h2>Block C — binding-surface detail per candidate harness
+      <span class="ws-block-note">appendix snapshot: <b>2026-04-26</b> &middot; re-verified by us on <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span></span></h2>
+    <div class="prior" style="padding:2mm 3mm;margin:1mm 0 2mm">
+      <span class="fno">14</span> Binding surface — fixed comparison rows:
+      <div class="f-select">
+        <span class="opt">File name</span><span class="opt">Folder</span><span class="opt">Scope predicate</span>
+        <span class="opt">Multiple-file resolution</span><span class="opt">External references</span>
+        <span class="opt">User-scope variant</span><span class="opt">Loaded when</span>
+      </div>
+    </div>
+    <table class="ws">
+      <colgroup>
+        <col style="width:5%"><col style="width:17%"><col style="width:15%"><col style="width:15%">
+        <col style="width:15%"><col style="width:15%"><col style="width:18%">
+      </colgroup>
+      <thead><tr>
+        <th></th><th>Binding surface</th><th><span class="fno">15</span> GitHub Copilot</th>
+        <th>Claude Code</th><th>Cursor</th><th>Codex CLI</th><th>OpenCode / other shortlist</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="ws-num">1</td><td class="prior">File name<span class="prior-src">ch11 L99-107</span></td>
+          <td><div class="prior">Any stem ending <code>.instructions.md</code><span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td>
+          <td><div class="prior"><code>CLAUDE.md</code> exact name<span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">2</td><td class="prior">Folder<span class="prior-src">ch11 L99-107</span></td>
+          <td><div class="prior"><code>.github/instructions/</code><span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td>
+          <td><div class="prior">Nested in the subtree<span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">3</td><td class="prior">Scope predicate<span class="prior-src">ch11 L99-107</span></td>
+          <td><div class="prior"><code>applyTo:</code> glob predicate<span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td>
+          <td><div class="prior">Implicit hierarchy predicate<span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">4</td><td class="prior">Multiple-file resolution<span class="prior-src">ch11 L99-107</span></td>
+          <td><div class="prior">Many matching files compose<span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td>
+          <td><div class="prior">One closest file wins<span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">5</td><td class="prior">External references<span class="prior-src">ch11 L99-107</span></td>
+          <td><div class="prior">Plain markdown links<span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td>
+          <td><div class="prior"><code>@path</code> inlining<span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">6</td><td class="prior">User-scope variant<span class="prior-src">ch11 L99-107</span></td>
+          <td><div class="prior">User-home <code>.copilot/instructions/</code><span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td>
+          <td><div class="prior"><code>~/.claude/CLAUDE.md</code><span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+        <tr><td class="ws-num">7</td><td class="prior">Loaded when<span class="prior-src">ch11 L99-107</span></td>
+          <td><div class="prior">Thread touches a matching path<span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td>
+          <td><div class="prior">Thread starts work in that subtree<span class="prior-src">ch11 L99-107</span></div><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-APXA-harness-selection-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 4 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Harness Selection and Portability Matrix</h1><p class="ws-sub">Block C — shim paths for support-via-shim decisions.</p></div>
+    <div class="ws-meta"><b>WS-APXA-harness-selection-matrix</b><br>Pack D - Architecture and ownership<br>fill order <b>5</b> &middot; type <b>matrix</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Cross-Harness Reference</b>, <i>At a glance — the substrate matrix</i> &middot;
+    <code>handbook\appendix-a-cross-harness-reference.qmd</code> L21-44 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/appendix-a-cross-harness-reference.html#sec-harness-substrate-matrix">#sec-harness-substrate-matrix</a>
+  </div>
+  <div class="ws-instruction">
+    For each harness supported via shim in Block A, write the explicit shim file path(s) that re-export
+    your canonical primitives at the path expected by that harness.
+  </div>
+  <div class="ws-block">
+    <h2>Block C — shim we would write
+      <span class="ws-block-note">the port is mechanical, not heroic</span></h2>
+    <div class="prior" style="margin:1mm 0 2mm">A thin shim at the harness's expected path re-exports the canonical primitives. <span class="prior-src">ch11 L145</span></div>
+    <h3><span class="fno">16</span> Shim we would write</h3>
+    <table class="ws">
+      <colgroup><col style="width:18%"><col style="width:82%"></colgroup>
+      <thead><tr><th>Harness</th><th>Shim path(s) this organisation would create</th></tr></thead>
+      <tbody>
+        <tr><td class="prior">GitHub Copilot</td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="prior">Claude Code</td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="prior">Cursor</td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="prior">Codex CLI</td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="prior">OpenCode / other shortlisted</td><td class="fill taller"><span class="f-box"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-APXA-harness-selection-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 5 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 5 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Harness Selection and Portability Matrix</h1><p class="ws-sub">Block D — target-harness support matrix; name translation obligations and accepted gaps.</p></div>
+    <div class="ws-meta"><b>WS-APXA-harness-selection-matrix</b><br>Pack D - Architecture and ownership<br>fill order <b>5</b> &middot; type <b>matrix</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Cross-Harness Reference</b>, <i>At a glance — the substrate matrix</i> &middot;
+    <code>handbook\appendix-a-cross-harness-reference.qmd</code> L21-44 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/appendix-a-cross-harness-reference.html#sec-harness-substrate-matrix">#sec-harness-substrate-matrix</a>
+  </div>
+  <div class="ws-instruction">
+    For every primitive you require, mark the target harnesses, record the materialization status,
+    and name an owner wherever translation is required. State each accepted gap as a sentence and
+    describe the qualitative maintenance burden for every extra layout.
+  </div>
+  <div class="ws-block">
+    <h2>Block D — target-harness support matrix
+      <span class="ws-block-note">appendix snapshot: <b>2026-04-26</b> &middot; re-verified by us on <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span></span></h2>
+    <div class="prior" style="padding:2mm 3mm;margin:1mm 0 2mm">
+      The book's materialization table has a native entry for every cell except these gaps: Skill
+      entrypoint — Cursor "(none — partial via rules)"; Codex/OpenCode "(none — partial via AGENTS.md)".
+      Persona or specialist — Cursor "(none, modes are global)"; Codex/OpenCode "(none — convention varies)".
+      The book assigns no status labels; choose Supported, Translated or Not supported yourself in each
+      cell. Other-harness entries are not in the book table.
+      <span class="prior-src">ch14 L55-59</span>
+    </div>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:17%"><col style="width:15%"><col style="width:16%"><col style="width:16%"><col style="width:16%"><col style="width:16%"></colgroup>
+      <thead><tr>
+        <th></th><th><span class="fno">17</span> Primitive concept</th>
+        <th><span class="fno">18</span> Copilot</th><th>Claude Code</th><th>Cursor</th><th>Codex / OpenCode</th><th>Other harness</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="ws-num">1</td><td class="prior">Project-wide rules<span class="prior-src">ch14 L55-59</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">2</td><td class="prior">Scope-attached rules<span class="prior-src">ch14 L55-59</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">3</td><td class="prior">Skill entrypoint<span class="prior-src">ch14 L55-59</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">4</td><td class="prior">Persona or specialist<span class="prior-src">ch14 L55-59</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num">5</td><td class="prior">User-scope override<span class="prior-src">ch14 L55-59</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Must support</span><div class="f-select"><span class="opt">Supported</span><span class="opt">Translated</span><span class="opt">Not supported</span></div><span class="f-owner"></span></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.5pt;margin:1.5mm 0 2mm"><span class="fno">19</span> Record one status per concept/harness cell. <span class="fno">20</span> Write a named owner in each cell marked Translated; otherwise leave the owner line empty.</p>
+  </div>
+  <div class="ws-foot">
+    <div>WS-APXA-harness-selection-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 6 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 6 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Harness Selection and Portability Matrix</h1><p class="ws-sub">Block D — qualitative maintenance burden and accepted gaps.</p></div>
+    <div class="ws-meta"><b>WS-APXA-harness-selection-matrix</b><br>Pack D - Architecture and ownership<br>fill order <b>5</b> &middot; type <b>matrix</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Cross-Harness Reference</b>, <i>At a glance — the substrate matrix</i> &middot;
+    <code>handbook\appendix-a-cross-harness-reference.qmd</code> L21-44 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/appendix-a-cross-harness-reference.html#sec-harness-substrate-matrix">#sec-harness-substrate-matrix</a>
+  </div>
+  <div class="ws-instruction">
+    State the qualitative maintenance cost of every extra harness layout and write each gap you
+    knowingly accept as a sentence, not an empty cell.
+  </div>
+  <div class="ws-block">
+    <h2>Block D — target-harness support matrix: cost and accepted gaps
+      <span class="ws-block-note">appendix snapshot: <b>2026-04-26</b> &middot; re-verified by us on <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span></span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:18%"><col style="width:39%"><col style="width:39%"></colgroup>
+      <thead><tr><th></th><th>Primitive concept</th><th><span class="fno">21</span> Cost of maintaining this extra layout</th><th><span class="fno">22</span> Gap we accept</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num">1</td><td class="prior">Project-wide rules<span class="prior-src">ch14 L63</span></td><td class="fill taller"><div class="prior">Reference: a monorepo shipping for three harnesses pays the translation cost once, at install time, by emitting three layouts side by side.<span class="prior-src">ch14 L63</span></div><span class="f-box"></span></td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num">2</td><td class="prior">Scope-attached rules<span class="prior-src">ch14 L63</span></td><td class="fill taller"><div class="prior">Reference: a monorepo shipping for three harnesses pays the translation cost once, at install time, by emitting three layouts side by side.<span class="prior-src">ch14 L63</span></div><span class="f-box"></span></td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num">3</td><td class="prior">Skill entrypoint<span class="prior-src">ch14 L63</span></td><td class="fill taller"><div class="prior">Reference: a monorepo shipping for three harnesses pays the translation cost once, at install time, by emitting three layouts side by side.<span class="prior-src">ch14 L63</span></div><span class="f-box"></span></td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num">4</td><td class="prior">Persona or specialist<span class="prior-src">ch14 L63</span></td><td class="fill taller"><div class="prior">Reference: a monorepo shipping for three harnesses pays the translation cost once, at install time, by emitting three layouts side by side.<span class="prior-src">ch14 L63</span></div><span class="f-box"></span></td><td class="fill taller"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num">5</td><td class="prior">User-scope override<span class="prior-src">ch14 L63</span></td><td class="fill taller"><div class="prior">Reference: a monorepo shipping for three harnesses pays the translation cost once, at install time, by emitting three layouts side by side.<span class="prior-src">ch14 L63</span></div><span class="f-box"></span></td><td class="fill taller"><span class="f-box"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ws-foot">
+    <div>WS-APXA-harness-selection-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 7 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 7 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Harness Selection and Portability Matrix</h1><p class="ws-sub">Block E — portability policy for the primitives your organization intends to author.</p></div>
+    <div class="ws-meta"><b>WS-APXA-harness-selection-matrix</b><br>Pack D - Architecture and ownership<br>fill order <b>5</b> &middot; type <b>matrix</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Cross-Harness Reference</b>, <i>At a glance — the substrate matrix</i> &middot;
+    <code>handbook\appendix-a-cross-harness-reference.qmd</code> L21-44 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/appendix-a-cross-harness-reference.html#sec-harness-substrate-matrix">#sec-harness-substrate-matrix</a>
+  </div>
+  <div class="ws-instruction">
+    List each primitive you plan to author. Test whether it activates because its description matches
+    the task or because of where work happens. Express it accordingly, record translation cost for
+    each target harness, and justify every non-portable exception in writing.
+  </div>
+  <div class="ws-block">
+    <h2>Block E — portability policy
+      <span class="ws-block-note">appendix snapshot: <b>2026-04-26</b> &middot; re-verified by us on <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span></span></h2>
+    <div class="prior" style="padding:2mm 3mm;margin:1mm 0 2mm">
+      Activation test — if the primitive activates because its <i>description</i> matches the task, express it as a Skill: <code>SKILL.md</code> is the one file name that ports cleanly across every harness in the matrix. If it activates because of <i>where the work is happening</i>, it must be a scope-attached rule, and the port is manual translation.
+      <span class="prior-src">appx-A L39, L105-109</span>
+    </div>
+    <div class="prior" style="padding:2mm 3mm;margin:1mm 0 2mm">
+      Reference: <code>applyTo: "src/api/**"</code> cannot become a single Claude Code file without choosing a directory to nest it in — the two encodings do not translate losslessly.
+      <span class="prior-src">appx-A L107</span>
+    </div>
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:20%"><col style="width:18%"><col style="width:17%"><col style="width:23%"><col style="width:18%">
+      </colgroup>
+      <thead><tr>
+        <th></th><th><span class="fno">23</span> Primitive we intend to author</th>
+        <th><span class="fno">24</span> Activation test</th><th><span class="fno">25</span> Expressed as</th>
+        <th><span class="fno">26</span> Translation cost per target harness</th><th><span class="fno">27</span> Non-portable exception accepted? Justify</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="ws-num">1</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">DESCRIPTION-deterministic</span><span class="opt">PATH-deterministic</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Skill</span><span class="opt">Scope-attached rule</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td><td class="fill taller"><span class="f-checkline"><span class="f-check"></span>Accepted</span><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num">2</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">DESCRIPTION-deterministic</span><span class="opt">PATH-deterministic</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Skill</span><span class="opt">Scope-attached rule</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td><td class="fill taller"><span class="f-checkline"><span class="f-check"></span>Accepted</span><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num">3</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">DESCRIPTION-deterministic</span><span class="opt">PATH-deterministic</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Skill</span><span class="opt">Scope-attached rule</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td><td class="fill taller"><span class="f-checkline"><span class="f-check"></span>Accepted</span><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num">4</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">DESCRIPTION-deterministic</span><span class="opt">PATH-deterministic</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Skill</span><span class="opt">Scope-attached rule</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td><td class="fill taller"><span class="f-checkline"><span class="f-check"></span>Accepted</span><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num">5</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">DESCRIPTION-deterministic</span><span class="opt">PATH-deterministic</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Skill</span><span class="opt">Scope-attached rule</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td><td class="fill taller"><span class="f-checkline"><span class="f-check"></span>Accepted</span><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num">6</td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">DESCRIPTION-deterministic</span><span class="opt">PATH-deterministic</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">Skill</span><span class="opt">Scope-attached rule</span></div></td>
+          <td class="fill taller"><span class="f-box"></span></td><td class="fill taller"><span class="f-checkline"><span class="f-check"></span>Accepted</span><span class="f-box"></span></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:8pt;margin:0">One row per primitive you intend to author. Continue the table on a copied page if needed. A PATH-deterministic primitive forced into a Skill will be silent.</p>
+  </div>
+  <div class="ws-foot">
+    <div>WS-APXA-harness-selection-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 8 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<!-- ============================ SHEET 8 ============================== -->
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>Harness Selection and Portability Matrix</h1><p class="ws-sub">Block F — convention drift watch; one row per harness in use. Pin this register where it will be seen again.</p></div>
+    <div class="ws-meta"><b>WS-APXA-harness-selection-matrix</b><br>Pack D - Architecture and ownership<br>fill order <b>5</b> &middot; type <b>matrix</b><br>audience <b>mixed</b></div>
+  </div>
+  <div class="ws-source">
+    Source: <b>The Cross-Harness Reference</b>, <i>At a glance — the substrate matrix</i> &middot;
+    <code>handbook\appendix-a-cross-harness-reference.qmd</code> L21-44 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/appendix-a-cross-harness-reference.html#sec-harness-substrate-matrix">#sec-harness-substrate-matrix</a>
+  </div>
+  <div class="ws-block">
+    <h2>Block F — convention drift watch
+      <span class="ws-block-note">appendix snapshot: <b>2026-04-26</b> <span class="prior-src">appx-A L12-14</span></span></h2>
+    <p style="margin:1mm 0 2mm">
+      <span class="ours-label">Re-verified by us on:</span>
+      <span class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></span>
+    </p>
+    <table class="ws f-docs">
+      <colgroup>
+        <col style="width:13%"><col style="width:19%"><col style="width:12%"><col style="width:12%">
+        <col style="width:9%"><col style="width:10%"><col style="width:14%"><col style="width:11%">
+      </colgroup>
+      <thead><tr>
+        <th><span class="fno">28</span> Harness</th><th><span class="fno">29</span> Vendor doc URL (paste in full)</th>
+        <th><span class="fno">30</span> Re-verification owner</th><th><span class="fno">31</span> Review cadence</th>
+        <th><span class="fno">32</span> Book cells verified-on</th><th><span class="fno">33</span> We last verified on</th>
+        <th><span class="fno">34</span> Off-cycle trigger events</th><th><span class="fno">35</span> Rows changed since our last check</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="prior">GitHub Copilot<span class="prior-src">From Block A</span></td>
+          <td class="fill"><div class="prior">Start with the appendix's own per-harness footnote.<span class="prior-src">appx-A L47-99</span></div><span class="f-text"></span><small>Paste full URL</small></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div><span class="f-text"></span></td>
+          <td class="locked">2026-04-26<span class="prior-src">appx-A L12-14</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">Claude Code<span class="prior-src">From Block A</span></td>
+          <td class="fill"><div class="prior">Start with the appendix's own per-harness footnote.<span class="prior-src">appx-A L47-99</span></div><span class="f-text"></span><small>Paste full URL</small></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div><span class="f-text"></span></td>
+          <td class="locked">2026-04-26<span class="prior-src">appx-A L12-14</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">Cursor<span class="prior-src">From Block A</span></td>
+          <td class="fill"><div class="prior">Start with the appendix's own per-harness footnote.<span class="prior-src">appx-A L47-99</span></div><span class="f-text"></span><small>Paste full URL</small></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div><span class="f-text"></span></td>
+          <td class="locked">2026-04-26<span class="prior-src">appx-A L12-14</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">Codex CLI<span class="prior-src">From Block A</span></td>
+          <td class="fill"><div class="prior">Start with the appendix's own per-harness footnote.<span class="prior-src">appx-A L47-99</span></div><span class="f-text"></span><small>Paste full URL</small></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div><span class="f-text"></span></td>
+          <td class="locked">2026-04-26<span class="prior-src">appx-A L12-14</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+        <tr>
+          <td class="prior">OpenCode<span class="prior-src">From Block A</span></td>
+          <td class="fill"><div class="prior">Start with the appendix's own per-harness footnote.<span class="prior-src">appx-A L47-99</span></div><span class="f-text"></span><small>Paste full URL</small></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div><span class="f-text"></span></td>
+          <td class="locked">2026-04-26<span class="prior-src">appx-A L12-14</span></td>
+          <td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="prior">Reference: major release; published breaking-change notice.<span class="prior-src">appx-A L12-14</span></div><span class="f-text"></span></td>
+          <td class="fill"><span class="f-text"></span></td>
+        </tr>
+      <tr><td class="fill"><span class="f-text"></span><small>Unlisted harness from Block A</small></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-select"><span class="opt">Annually</span><span class="opt">On a major release</span><span class="opt">Other</span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td><td class="fill"><span class="f-text"></span></td><td class="fill"><span class="f-text"></span></td></tr></tbody>
+    </table>
+  </div>
+  <div class="ws-foot" style="margin-top:0">
+    <div>WS-APXA-harness-selection-matrix &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 9 of 9</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```

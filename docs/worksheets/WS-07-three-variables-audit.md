@@ -49,7 +49,7 @@ One row per significant agentic workflow already running or planned. Columns: mo
 One row per significant agentic workflow, running or planned. The three lever bands are printed as
 visually separated groups, and **the HARNESS band comes first and widest** — the chapter names it
 the lever with the most reach because it governs the other two, and a sheet that lists the three
-levers as equal columns quietly contradicts its own source. A3 landscape, one page, with a
+levers as equal columns quietly contradicts its own source. A2 landscape, one page, with a
 MEASURED / PROSPECTIVE flag printed across the header.
 
 | # | Column | Input type | Pre-filled from the book | Blank - org supplies | Source |
@@ -121,7 +121,7 @@ None - this worksheet absorbed no other candidate.
 | When in the session | Fill order 9, after `WS-07-cost-variance-baseline`, which it declares a prerequisite and whose circled highest-spread task must appear here as a row. It must precede `WS-07-model-tier-access-policy`, which is built directly from columns 8 and 9 — the audit is what reveals which segments actually need which tier, and a tier policy written without it is a guess dressed as a decision. |
 | Duration | 60–90 minutes for four to six workflow rows. The harness band is fast if one harness is in use and slow if three are. Columns 7, 11 and 14 — *who decided this* — take the longest, because the honest answer is frequently "nobody, it is the vendor default", and the room needs a moment with that before it moves on. |
 | Data needed in advance | A list of the agentic workflows running or planned, each with an owner. Which harness each runs on. The model-selection settings as currently configured, exported rather than remembered. Any token or cost telemetry broken down by workflow. The completed `WS-07-cost-variance-baseline`, with its highest-spread row identified. |
-| Room format | A3 landscape, one page, with the three lever bands visually separated and the HARNESS band printed first and widest. Filled live with the engineers present — this is not a sheet the architect can complete alone, because columns 12 and 13 need somebody who has actually read a trace rather than somebody who has read the configuration. |
+| Room format | A2 landscape, one page (A2 rather than A3 because the sixteen-column grid overflows A3 at legible type, and splitting it would break the one-page band comparison), with the three lever bands visually separated and the HARNESS band printed first and widest. Filled live with the engineers present — this is not a sheet the architect can complete alone, because columns 12 and 13 need somebody who has actually read a trace rather than somebody who has read the configuration. |
 
 **Facilitation note.** Most organisations arriving at a pre-groundbreaking workshop have little or
 no agentic spend to audit yet. Run the sheet **prospectively against planned workflows** in that
