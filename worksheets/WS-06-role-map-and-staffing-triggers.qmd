@@ -7,14 +7,18 @@ format:
     include-in-header:
       - text: |
           <style>
-            html:root { --sheet-w: 594mm; --sheet-h: 420mm; --sheet-margin: 16mm; }
-            @page { size: A2 landscape; margin: 16mm; }
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+            .f-box { height: 8mm !important; background: repeating-linear-gradient(to bottom, transparent 0, transparent 4mm, var(--rule) 4mm, var(--rule) 4.25mm); }
+            td.fill, table.ws td.fill { height: 8mm !important; min-height: 8mm !important; }
+            td.fill.tall { height: 12mm; }
+            table.ws td, table.ws th { line-height: 1.2 !important; font-size: 7.4pt !important; } .ws-instruction, .ws-source { padding-top: 1mm !important; padding-bottom: 1mm !important; margin-bottom: 1.5mm !important; } .ws-block { margin-bottom: 2mm !important; } table.ws td, table.ws th { padding-top: .5mm !important; padding-bottom: .5mm !important; }
           </style>
 ---
 
 ```{=html}
 <div class="screen-only">
-  <b>WS-06-role-map-and-staffing-triggers</b> &middot; review copy &middot; declared format <b>A2 landscape</b> &middot;
+  <b>WS-06-role-map-and-staffing-triggers</b> &middot; review copy &middot; declared format <b>A3 landscape</b> &middot;
   4 sheets. Each white page below is one physical side of the booklet.
 </div>
 
@@ -239,8 +243,8 @@ format:
           <td class="fill"><div class="f-select"><span class="opt">staff now</span><span class="opt">do not staff yet</span></div></td>
         </tr>
         <tr>
-          <td class="ws-num"><span class="fno">21</span></td><td><b>What would have to become true</b></td><td class="prior">Mandatory wherever the staffing verdict is “do not staff yet.”<span class="prior-src">ch06 L180</span></td>
-          <td class="locked">—</td><td class="locked">—</td><td class="fill"><span class="f-box"></span></td>
+          <td class="ws-num"><span class="fno">21</span></td><td><b>What would have to become true</b></td><td class="prior">Mandatory wherever the staffing verdict is “do not staff yet.” If you chose “staff now” with fewer than all three triggers ticked, write the override reason here and sign it; the override is a decision, not enthusiasm.<span class="prior-src">ch06 L180</span></td>
+          <td class="locked">—</td><td class="locked">—</td><td class="fill"><span class="f-box"></span><div style="margin-top:1mm;font-size:7pt">Override signed (only if staffing against unticked triggers) <span class="f-sign" style="display:inline-block;width:45mm"></span></div></td>
         </tr>
       </tbody>
     </table>
