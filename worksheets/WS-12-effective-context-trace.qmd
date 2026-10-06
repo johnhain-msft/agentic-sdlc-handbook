@@ -22,7 +22,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Effective Context Trace</h1>
-      <p class="ws-sub">Trace 1 of 3. One file per sheet; seven fixed rows, empty layers included.</p>
+      <p class="ws-sub">Trace 1 of 3. One file per sheet, chosen unalike (one well-instrumented, one neglected); seven fixed rows.</p>
     </div>
     <div class="ws-meta">
       <b>WS-12-effective-context-trace</b><br>
@@ -36,12 +36,12 @@ format:
     Source: <b>ch12 &mdash; The Instrumented Codebase</b> &middot; <i>How Primitives Compose</i> &middot;
     <code>handbook/ch12-the-instrumented-codebase.qmd</code> L385-414 &middot;
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch12-the-instrumented-codebase.html#sec-codebase-composition">#sec-codebase-composition</a>
-    &middot; needs <b>WS-02-shadow-ai-usage-inventory</b> first: its census is the list of primitives that exist.
+    &middot; needs <b>WS-02</b> first.
   </div>
 
   <div class="ws-instruction">
     For this file, walk the cascade and list every primitive that loads. Mark any layer that is empty (a gap) and any two layers that disagree (a design error).
-    Answer column 3 by looking at the repository. Columns 10 and 11 stay open: hand findings forward, do not close them here.
+    Fill column 3 by looking, not from memory. Columns 10 and 11 stay open: hand findings forward, do not close them here.
   </div>
 
   <div class="ws-block">
@@ -59,7 +59,7 @@ format:
         <tr>
           <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text sm"></span></td>
-          <td class="fill"><span class="f-text
+          <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
         </tr>
       </tbody>
@@ -68,17 +68,18 @@ format:
 
   <div class="ws-block">
     <h2>The trace <span class="ws-block-note">each layer adds specificity; none contradicts the layer above (ch12 L410). Owner and date required for every finding other than clean.</span></h2>
+    <div style="font-size:7pt;line-height:1.1;font-style:italic;color:#5b6773;margin:0 0 .5mm">Col 5: if it cannot be written in one line, the layer is over-scoped. Col 3 grey: worked trace. Col 9: <b>gap</b> = the layer is empty and should not be; <b>conflict</b> = two layers disagree; <b>over-scoped</b> = the layer loads and contributes nothing to this task (ch13 L366; ch12 L410).</div>
     <table class="ws">
-      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:7%"><col style="width:6%"><col style="width:9%"><col style="width:10%"><col style="width:16%"><col style="width:14%"></colgroup>
+      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:12%"><col style="width:8%"><col style="width:8%"><col style="width:6%"><col style="width:6%"><col style="width:8%"><col style="width:9%"><col style="width:17%"><col style="width:13%"></colgroup>
       <thead><tr><th><span class="fno">1</span> Layer</th><th><span class="fno">2</span> Anything at this layer</th><th><span class="fno">3</span> File(s) that load</th><th><span class="fno">4</span> Why it loads &mdash; the predicate (default printed)</th><th><span class="fno">5</span> What it contributes to <i>this</i> task</th><th><span class="fno">6</span> Adds specificity</th><th><span class="fno">7</span> Contradicts a layer above</th><th><span class="fno">8</span> Contradiction detail: quote both sides</th><th><span class="fno">9</span> Finding</th><th><span class="fno">10</span> Action</th><th><span class="fno">11</span> Owner and date</th></tr></thead>
       <tbody>
         <tr>
           <td class="prior"><b>Global principles</b><br><code>copilot-instructions.md</code><span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. global principles</span><span class="f-text"></span></td>
           <td class="prior">Always, at session start<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -86,11 +87,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Scoped instructions</b><br><code>*.instructions.md</code>, matched by <code>applyTo</code><span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. <code>applyTo: "src/api/**"</code> file</span><span class="f-text"></span></td>
           <td class="prior">The <code>applyTo</code> glob matches the working path<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -98,11 +99,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Skills</b><br>activated by code patterns<span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. API middleware</span><span class="f-text"></span></td>
           <td class="prior">The description matches the task<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -110,11 +111,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Agent configuration</b><br>persona, model, tool boundaries<span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. backend-dev</span><span class="f-text"></span></td>
           <td class="prior">A parent thread spawns and names it<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -126,7 +127,7 @@ format:
           <td class="prior">The request itself<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -134,11 +135,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Memory</b><br>accumulated project context<span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. memory file</span><span class="f-text"></span></td>
           <td class="prior">Session start, persistent<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -150,7 +151,7 @@ format:
           <td class="prior">An event fires<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -164,7 +165,7 @@ format:
     <table class="ws">
       <colgroup><col style="width:70%"><col style="width:30%"></colgroup>
       <tbody><tr>
-        <td class="prior"><b>Trace verdict.</b> &ldquo;Each layer adds specificity; none contradicts the layer above. A conflict indicates a design error in the instrumentation, not a resolution the agent should attempt.&rdquo; Pass only if no row ticks column 8.<span class="prior-src">ch12 L410</span></td>
+        <td class="prior"><b>Trace verdict.</b> &ldquo;Each layer adds specificity; none contradicts the layer above. A conflict indicates a design error in the instrumentation, not a resolution the agent should attempt.&rdquo; Pass only if no row ticks column 7.<span class="prior-src">ch12 L410</span></td>
         <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
       </tr></tbody>
     </table>
@@ -181,7 +182,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Effective Context Trace</h1>
-      <p class="ws-sub">Trace 2 of 3. One file per sheet; seven fixed rows, empty layers included.</p>
+      <p class="ws-sub">Trace 2 of 3. One file per sheet, chosen unalike (one well-instrumented, one neglected); seven fixed rows.</p>
     </div>
     <div class="ws-meta">
       <b>WS-12-effective-context-trace</b><br>
@@ -195,12 +196,12 @@ format:
     Source: <b>ch12 &mdash; The Instrumented Codebase</b> &middot; <i>How Primitives Compose</i> &middot;
     <code>handbook/ch12-the-instrumented-codebase.qmd</code> L385-414 &middot;
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch12-the-instrumented-codebase.html#sec-codebase-composition">#sec-codebase-composition</a>
-    &middot; needs <b>WS-02-shadow-ai-usage-inventory</b> first: its census is the list of primitives that exist.
+    &middot; needs <b>WS-02</b> first.
   </div>
 
   <div class="ws-instruction">
     For this file, walk the cascade and list every primitive that loads. Mark any layer that is empty (a gap) and any two layers that disagree (a design error).
-    Answer column 3 by looking at the repository. Columns 10 and 11 stay open: hand findings forward, do not close them here.
+    Fill column 3 by looking, not from memory. Columns 10 and 11 stay open: hand findings forward, do not close them here.
   </div>
 
   <div class="ws-block">
@@ -218,7 +219,7 @@ format:
         <tr>
           <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text sm"></span></td>
-          <td class="fill"><span class="f-text
+          <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
         </tr>
       </tbody>
@@ -227,17 +228,18 @@ format:
 
   <div class="ws-block">
     <h2>The trace <span class="ws-block-note">each layer adds specificity; none contradicts the layer above (ch12 L410). Owner and date required for every finding other than clean.</span></h2>
+    <div style="font-size:7pt;line-height:1.1;font-style:italic;color:#5b6773;margin:0 0 .5mm">Col 5: if it cannot be written in one line, the layer is over-scoped. Col 3 grey: worked trace. Col 9: <b>gap</b> = the layer is empty and should not be; <b>conflict</b> = two layers disagree; <b>over-scoped</b> = the layer loads and contributes nothing to this task (ch13 L366; ch12 L410).</div>
     <table class="ws">
-      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:7%"><col style="width:6%"><col style="width:9%"><col style="width:10%"><col style="width:16%"><col style="width:14%"></colgroup>
+      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:12%"><col style="width:8%"><col style="width:8%"><col style="width:6%"><col style="width:6%"><col style="width:8%"><col style="width:9%"><col style="width:17%"><col style="width:13%"></colgroup>
       <thead><tr><th><span class="fno">1</span> Layer</th><th><span class="fno">2</span> Anything at this layer</th><th><span class="fno">3</span> File(s) that load</th><th><span class="fno">4</span> Why it loads &mdash; the predicate (default printed)</th><th><span class="fno">5</span> What it contributes to <i>this</i> task</th><th><span class="fno">6</span> Adds specificity</th><th><span class="fno">7</span> Contradicts a layer above</th><th><span class="fno">8</span> Contradiction detail: quote both sides</th><th><span class="fno">9</span> Finding</th><th><span class="fno">10</span> Action</th><th><span class="fno">11</span> Owner and date</th></tr></thead>
       <tbody>
         <tr>
           <td class="prior"><b>Global principles</b><br><code>copilot-instructions.md</code><span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. global principles</span><span class="f-text"></span></td>
           <td class="prior">Always, at session start<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -245,11 +247,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Scoped instructions</b><br><code>*.instructions.md</code>, matched by <code>applyTo</code><span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. <code>applyTo: "src/api/**"</code> file</span><span class="f-text"></span></td>
           <td class="prior">The <code>applyTo</code> glob matches the working path<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -257,11 +259,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Skills</b><br>activated by code patterns<span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. API middleware</span><span class="f-text"></span></td>
           <td class="prior">The description matches the task<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -269,11 +271,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Agent configuration</b><br>persona, model, tool boundaries<span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. backend-dev</span><span class="f-text"></span></td>
           <td class="prior">A parent thread spawns and names it<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -285,7 +287,7 @@ format:
           <td class="prior">The request itself<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -293,11 +295,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Memory</b><br>accumulated project context<span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. memory file</span><span class="f-text"></span></td>
           <td class="prior">Session start, persistent<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -309,7 +311,7 @@ format:
           <td class="prior">An event fires<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -323,7 +325,7 @@ format:
     <table class="ws">
       <colgroup><col style="width:70%"><col style="width:30%"></colgroup>
       <tbody><tr>
-        <td class="prior"><b>Trace verdict.</b> &ldquo;Each layer adds specificity; none contradicts the layer above. A conflict indicates a design error in the instrumentation, not a resolution the agent should attempt.&rdquo; Pass only if no row ticks column 8.<span class="prior-src">ch12 L410</span></td>
+        <td class="prior"><b>Trace verdict.</b> &ldquo;Each layer adds specificity; none contradicts the layer above. A conflict indicates a design error in the instrumentation, not a resolution the agent should attempt.&rdquo; Pass only if no row ticks column 7.<span class="prior-src">ch12 L410</span></td>
         <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
       </tr></tbody>
     </table>
@@ -340,7 +342,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Effective Context Trace</h1>
-      <p class="ws-sub">Trace 3 of 3. One file per sheet; seven fixed rows, empty layers included.</p>
+      <p class="ws-sub">Trace 3 of 3. One file per sheet, chosen unalike (one well-instrumented, one neglected); seven fixed rows.</p>
     </div>
     <div class="ws-meta">
       <b>WS-12-effective-context-trace</b><br>
@@ -354,12 +356,12 @@ format:
     Source: <b>ch12 &mdash; The Instrumented Codebase</b> &middot; <i>How Primitives Compose</i> &middot;
     <code>handbook/ch12-the-instrumented-codebase.qmd</code> L385-414 &middot;
     <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch12-the-instrumented-codebase.html#sec-codebase-composition">#sec-codebase-composition</a>
-    &middot; needs <b>WS-02-shadow-ai-usage-inventory</b> first: its census is the list of primitives that exist.
+    &middot; needs <b>WS-02</b> first.
   </div>
 
   <div class="ws-instruction">
     For this file, walk the cascade and list every primitive that loads. Mark any layer that is empty (a gap) and any two layers that disagree (a design error).
-    Answer column 3 by looking at the repository. Columns 10 and 11 stay open: hand findings forward, do not close them here.
+    Fill column 3 by looking, not from memory. Columns 10 and 11 stay open: hand findings forward, do not close them here.
   </div>
 
   <div class="ws-block">
@@ -377,7 +379,7 @@ format:
         <tr>
           <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text sm"></span></td>
-          <td class="fill"><span class="f-text
+          <td class="fill"><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-owner"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
         </tr>
       </tbody>
@@ -386,17 +388,18 @@ format:
 
   <div class="ws-block">
     <h2>The trace <span class="ws-block-note">each layer adds specificity; none contradicts the layer above (ch12 L410). Owner and date required for every finding other than clean.</span></h2>
+    <div style="font-size:7pt;line-height:1.1;font-style:italic;color:#5b6773;margin:0 0 .5mm">Col 5: if it cannot be written in one line, the layer is over-scoped. Col 3 grey: worked trace. Col 9: <b>gap</b> = the layer is empty and should not be; <b>conflict</b> = two layers disagree; <b>over-scoped</b> = the layer loads and contributes nothing to this task (ch13 L366; ch12 L410).</div>
     <table class="ws">
-      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:7%"><col style="width:6%"><col style="width:9%"><col style="width:10%"><col style="width:16%"><col style="width:14%"></colgroup>
+      <colgroup><col style="width:8%"><col style="width:5%"><col style="width:12%"><col style="width:8%"><col style="width:8%"><col style="width:6%"><col style="width:6%"><col style="width:8%"><col style="width:9%"><col style="width:17%"><col style="width:13%"></colgroup>
       <thead><tr><th><span class="fno">1</span> Layer</th><th><span class="fno">2</span> Anything at this layer</th><th><span class="fno">3</span> File(s) that load</th><th><span class="fno">4</span> Why it loads &mdash; the predicate (default printed)</th><th><span class="fno">5</span> What it contributes to <i>this</i> task</th><th><span class="fno">6</span> Adds specificity</th><th><span class="fno">7</span> Contradicts a layer above</th><th><span class="fno">8</span> Contradiction detail: quote both sides</th><th><span class="fno">9</span> Finding</th><th><span class="fno">10</span> Action</th><th><span class="fno">11</span> Owner and date</th></tr></thead>
       <tbody>
         <tr>
           <td class="prior"><b>Global principles</b><br><code>copilot-instructions.md</code><span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. global principles</span><span class="f-text"></span></td>
           <td class="prior">Always, at session start<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -404,11 +407,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Scoped instructions</b><br><code>*.instructions.md</code>, matched by <code>applyTo</code><span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. <code>applyTo: "src/api/**"</code> file</span><span class="f-text"></span></td>
           <td class="prior">The <code>applyTo</code> glob matches the working path<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -416,11 +419,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Skills</b><br>activated by code patterns<span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. API middleware</span><span class="f-text"></span></td>
           <td class="prior">The description matches the task<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -428,11 +431,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Agent configuration</b><br>persona, model, tool boundaries<span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. backend-dev</span><span class="f-text"></span></td>
           <td class="prior">A parent thread spawns and names it<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -444,7 +447,7 @@ format:
           <td class="prior">The request itself<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -452,11 +455,11 @@ format:
         </tr>
         <tr>
           <td class="prior"><b>Memory</b><br>accumulated project context<span class="prior-src">ch12 L390-396</span></td><td class="fill"><div class="f-select"><span class="opt">present</span><span class="opt">empty</span></div></td>
-          <td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span style="display:block;font-style:italic;color:#5b6773;font-size:7pt;line-height:1.1;margin-bottom:0">e.g. memory file</span><span class="f-text"></span></td>
           <td class="prior">Session start, persistent<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -468,7 +471,7 @@ format:
           <td class="prior">An event fires<span class="prior-src">ch12 L390-396; ch14 L79-85</span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span class="f-text sm"></span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>yes</span><span style="display:block;font-size:6.5pt;color:#5b6773">which layer above:</span><span class="f-text sm"></span></td>
           <td class="fill"><span class="f-text"></span></td>
           <td class="fill"><div class="f-select"><span class="opt">clean</span><span class="opt">gap</span><span class="opt">conflict</span><span class="opt">over-scoped</span></div></td>
           <td class="fill"><div class="f-select"><span class="opt">write missing primitive</span><span class="opt">delete duplicate rule</span><span class="opt">rescope glob</span><span class="opt">split file</span><span class="opt">no action</span></div></td>
@@ -482,7 +485,7 @@ format:
     <table class="ws">
       <colgroup><col style="width:70%"><col style="width:30%"></colgroup>
       <tbody><tr>
-        <td class="prior"><b>Trace verdict.</b> &ldquo;Each layer adds specificity; none contradicts the layer above. A conflict indicates a design error in the instrumentation, not a resolution the agent should attempt.&rdquo; Pass only if no row ticks column 8.<span class="prior-src">ch12 L410</span></td>
+        <td class="prior"><b>Trace verdict.</b> &ldquo;Each layer adds specificity; none contradicts the layer above. A conflict indicates a design error in the instrumentation, not a resolution the agent should attempt.&rdquo; Pass only if no row ticks column 7.<span class="prior-src">ch12 L410</span></td>
         <td class="fill"><div class="f-select"><span class="opt">pass</span><span class="opt">fail</span></div></td>
       </tr></tbody>
     </table>
