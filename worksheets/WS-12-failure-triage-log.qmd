@@ -98,7 +98,7 @@ format:
       <span class="ws-block-note">columns 1&ndash;17 in fill order, left to right &middot; col 10 is pre-ticked: house policy</span></h2>
     <table class="ws">
       <colgroup>
-        <col style="width:3%"><col style="width:5%"><col style="width:5%"><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:6%"><col style="width:10%"><col style="width:6%"><col style="width:4%"><col style="width:4%"><col style="width:4%"><col style="width:7%"><col style="width:5%"><col style="width:6%"><col style="width:6%"><col style="width:4%">
+        <col style="width:4%"><col style="width:5%"><col style="width:7%"><col style="width:7%"><col style="width:6%"><col style="width:10%"><col style="width:6%"><col style="width:8%"><col style="width:5%"><col style="width:6%"><col style="width:5%"><col style="width:5%"><col style="width:5%"><col style="width:6%"><col style="width:5%"><col style="width:5%"><col style="width:5%">
       </colgroup>
       <thead>
         <tr>
