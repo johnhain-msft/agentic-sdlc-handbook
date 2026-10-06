@@ -43,14 +43,14 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Use the completed readiness assessments and the risk-register hero-pilot score. Record every candidate team, compare each against your organisation's norm, and select no more than two. For every selected team, explain in writing why the work will transfer even if a rating is somewhat atypical or exceptional; give every unselected team a reason. Bound one workstream and name what is out of scope. Record all four Month 0 measures and their sources before any tooling is provisioned; if a measure cannot be captured, write “not measurable” and name its substitute. Plan the minimum viable context layer inside Phase 1. Complete the phase-entry and checkpoint-readiness annexes, then sign this contract in the room. The selected phase, budget, owner and target date are recorded in Block F on sheet 2 and incorporated into this contract.
+    Use the completed readiness assessments and the risk-register hero-pilot score. Record every candidate team, compare each against your organization's norm, and select no more than two. For every selected team, explain in writing why the work will transfer even if a rating is somewhat atypical or exceptional; give every unselected team a reason. Bound one workstream and name what is out of scope. Record all four Month 0 measures and their sources before any tooling is provisioned; if a measure cannot be captured, write “not measurable” and name its substitute. Plan the minimum viable context layer inside Phase 1. Complete the phase-entry and checkpoint-readiness annexes, then sign this contract in the room. The selected phase, budget, owner and target date are recorded in Block F on sheet 2 and incorporated into this contract.
     <br><b>Prerequisites:</b> WS-06-team-readiness-scorecard and WS-08-pitfall-risk-register.
     <b>Feeds:</b> WS-08-transition-planning-checklist, WS-08-phase-gate-exit-rollback and WS-08-baseline-measurement-plan.
   </div>
 
   <div class="ws-block">
     <h2>B. Candidates
-      <span class="ws-block-note">one column per candidate; compare with your own organisation's norm</span></h2>
+      <span class="ws-block-note">one column per candidate; compare with your own organization's norm</span></h2>
     <p>Tick no more than two teams in field 8. Include rejected candidates and complete field 9 for each one. If you have more candidates than the columns below, attach a continuation roster using the same fields.</p>
 
     <table class="ws">
@@ -134,7 +134,7 @@ format:
         </tr>
         <tr>
           <td class="ws-num"><span class="fno">7</span></td>
-          <td><b>B. Candidates — Written justification against the hero-pilot test</b><br><i>Mandatory for every selected team. What about this team is unlike the rest of our engineering organisation, and why will what we learn still transfer? Address each somewhat atypical or exceptional rating by name.</i></td>
+          <td><b>B. Candidates — Written justification against the hero-pilot test</b><br><i>Mandatory for every selected team. What about this team is unlike the rest of our engineering organization, and why will what we learn still transfer? Address each somewhat atypical or exceptional rating by name.</i></td>
           <td class="prior">—</td>
           <td class="fill taller"><span class="f-box lg"></span></td><td class="fill taller"><span class="f-box lg"></span></td>
           <td class="fill taller"><span class="f-box lg"></span></td><td class="fill taller"><span class="f-box lg"></span></td>
@@ -278,7 +278,7 @@ format:
 
   <div class="ws-block">
     <h2>Phase decision and commitment</h2>
-    <div class="ws-block-note"><span class="fno">33</span> <b>F. Phase entry — Our calibrated timeline</b> &nbsp; Record a range calibrated to documentation maturity and organisation size; this is a planning horizon, not a schedule. <span class="prior-src">ch04 L240, L252</span></div>
+    <div class="ws-block-note"><span class="fno">33</span> <b>F. Phase entry — Our calibrated timeline</b> &nbsp; Record a range calibrated to documentation maturity and organization size; this is a planning horizon, not a schedule. <span class="prior-src">ch04 L240, L252</span></div>
     <span class="f-text"></span>
     <p class="prior"><span class="fno">34</span> <b>F. Phase entry — Chosen phase</b> &nbsp; The chapter advises starting where tooling is mature and payoff is immediate: Code, Review and Test.<span class="prior-src">ch04 L204</span></p>
     <p>Tick exactly one phase.</p>
