@@ -45,7 +45,7 @@ format:
     and covered period, name one individual as budget owner, and record your actual user
     segments, metering tool or report, read-out location, cadence and reopen trigger. Enter
     each period's start date first and end date second. Confirm or override the chapter's
-    gate choices. Reconcile the total to the agentic line in
+        gate choices; if you override one, write the reason in the Gate? cell. Reconcile the total to the agentic line in
     <b>WS-03-tco-calculator</b>, then have the budget-holding executive sign and date.
   </div>
 
@@ -55,9 +55,9 @@ format:
 
     <table class="ws">
       <colgroup>
-        <col style="width:12%"><col style="width:9%"><col style="width:8%"><col style="width:8%">
-        <col style="width:9%"><col style="width:9%"><col style="width:9%"><col style="width:10%">
-        <col style="width:8%"><col style="width:10%"><col style="width:8%">
+        <col style="width:10%"><col style="width:9%"><col style="width:8%"><col style="width:8%">
+                <col style="width:9%"><col style="width:9%"><col style="width:9%"><col style="width:9%">
+                <col style="width:8%"><col style="width:9%"><col style="width:12%">
       </colgroup>
       <thead>
         <tr>
@@ -86,7 +86,7 @@ format:
           <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">&mdash;</div><div class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></div></td>
           <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check">&#10003;</span>Gate applies</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check">&#10003;</span>          Gate applies</span><div class="ws-block-note">If you change the chapter's choice, why:</div><span class="f-text"></span></td>
         </tr>
         <tr>
           <td class="prior">Per-workflow run<span class="prior-src">ch07 L103</span></td>
@@ -99,7 +99,7 @@ format:
           <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">&mdash;</div><div class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></div></td>
           <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check">&#10003;</span>Gate applies</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check">&#10003;</span>          Gate applies</span><div class="ws-block-note">If you change the chapter's choice, why:</div><span class="f-text"></span></td>
         </tr>
         <tr>
           <td class="prior">Everyday prompting<span class="prior-src">ch07 L104</span></td>
@@ -112,7 +112,7 @@ format:
           <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">&mdash;</div><div class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></div></td>
           <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Gate applies</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>          Gate applies</span><div class="ws-block-note">If you change the chapter's choice, why:</div><span class="f-text"></span></td>
         </tr>
         <tr>
           <td class="prior">Local models<span class="prior-src">ch07 L105</span></td>
@@ -125,7 +125,7 @@ format:
           <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
           <td><div class="prior">&mdash;</div><div class="fill"><div class="f-select"><span class="opt">weekly</span><span class="opt">monthly</span><span class="opt">quarterly</span></div></div></td>
           <td><div class="prior">&mdash;</div><div class="fill"><span class="f-text"></span></div></td>
-          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Gate applies</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>          Gate applies</span><div class="ws-block-note">If you change the chapter's choice, why:</div><span class="f-text"></span></td>
         </tr>
       </tbody>
     </table>
