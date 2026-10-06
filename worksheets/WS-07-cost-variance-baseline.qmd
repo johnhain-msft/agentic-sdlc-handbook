@@ -42,7 +42,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Choose up to three recurring, high-frequency engineering tasks. For each task, record your own run count, describe both loops, enter your own costs, and mark each cost basis separately. Record whether outputs are identical, calculate the spread and exposure, and name the individual who would design the designed path. Mark the measurement window. Use only your organisation's figures; do not copy the illustrative run. If every cost basis is estimated, mark the sheet PROSPECTIVE. Circle the highest-spread task and carry it into WS-07-three-variables-audit; carry total annualised exposure into WS-07-spend-pool-budget-model.
+    Choose up to three recurring, high-frequency engineering tasks. For each task, record your own run count, describe both loops, enter your own costs, and mark each cost basis separately. Record whether outputs are identical, calculate the spread and exposure, and name the individual who would own the design of this path. Mark the measurement window. Use only your organization's figures; do not copy the illustrative run. If every cost basis is estimated, mark the sheet PROSPECTIVE. Circle the highest-spread task and carry it into WS-07-three-variables-audit; carry total annualized exposure into WS-07-spend-pool-budget-model.
   </div>
 
   <div style="display:grid;grid-template-columns:72% 26%;gap:2%;align-items:start">
@@ -180,7 +180,7 @@ format:
 
     <div class="ws-block">
       <h2>Book's illustrative run
-        <span class="ws-block-note">reference only; not an organisation figure</span></h2>
+        <span class="ws-block-note">reference only; not an organization figure</span></h2>
       <div class="prior--hedged">
         <span class="hedge-figure">One illustrative run on a nineteen-file refactor cost $41.01 undesigned and $4.81 designed — an 8.5× spread on identical output.</span>
         <span class="hedge-text">The figures in this chapter -- the 8.5x spread, the $4.81 versus $41.01 run, the model-price ranges -- are <b>illustrative single runs and point-in-time prices</b>, not benchmarks. They are real, and they are not universal: the magnitude depends on the task, the models available the week you read this, and the harness. Treat them as existence proofs of <i>variance you can engineer</i>, not as a guaranteed return. The durable claim is the mechanism — model choice, token use, and harness govern the bill, and all three are in your control. The specific multiples will move. The lever will not.</span>
