@@ -7,15 +7,15 @@ format:
     include-in-header:
       - text: |
           <style>
-            html:root { --sheet-w: 1189mm; --sheet-h: 841mm; --sheet-margin: 24mm; }
-            @page { size: A0 landscape; margin: 24mm; }
+            html:root { --sheet-w: 841mm; --sheet-h: 1189mm; --sheet-margin: 24mm; }
+            @page { size: A0 portrait; margin: 24mm; }
           </style>
 ---
 
 ```{=html}
 <div class="screen-only">
   <b>WS-05-board-reporting-scorecard</b> &middot; review copy &middot; declared format
-  <b>A0 landscape</b> &middot; 6 sheets. Each white page below is one physical sheet at true size.
+  <b>A0 portrait</b> &middot; 5 sheets. Each white page below is one physical sheet at true size.
   Anything spilling past a page edge onto this grey background is a layout defect.
 </div>
 
@@ -41,11 +41,11 @@ format:
   </div>
 
   <div class="ws-instruction">
-    For each metric, record its Month 0 baseline, the named system of record, and the person who owns the number. Enter your current figure, dated target and trend with its prior value. Grade every row, name the grade's source, and write the specific observation that would falsify the target. Add the pre-agreed tripwire action and watcher. Before launch, treat every missing baseline or system of record as instrumentation to establish on day one. Complete the decision asks for this quarter. Do not issue a target without its evidence grade and falsifier in the same row.
+    For each metric, record its Month 0 baseline, the named system of record, and the person who owns the number. Enter your current figure, dated target and trend with its prior value. Grade every row, name the grade's source, and write the specific observation that would falsify the target. Add the pre-agreed tripwire action and watcher. Before launch, treat every missing baseline or system of record as instrumentation to establish on day one: write "not instrumented" in that cell, with the owner and the date to fix it. Mark any target graded author estimate or vendor claim with †. Keep Adoption and Value targets no more aggressive than the calibrated triggers in WS-08-phase-gate-exit-rollback. Complete the decision asks for this quarter. Do not issue a target without its evidence grade and falsifier in the same row.
   </div>
 
   <div class="ws-block">
-    <h2>ADOPTION <span class="ws-block-note">one row per metric &middot; all fields required</span></h2>
+    <h2>ADOPTION <span class="ws-block-note">all fields required &middot; targets reconcile with WS-08 phase-gate triggers</span></h2>
     <table class="ws">
       <colgroup>
         <col style="width:3%"><col style="width:6%"><col style="width:11%"><col style="width:7%">
@@ -91,7 +91,7 @@ format:
   </div>
 
   <div class="ws-block">
-    <h2>VALUE <span class="ws-block-note">one row per metric</span></h2>
+    <h2>VALUE <span class="ws-block-note">targets reconcile with WS-08 phase-gate triggers</span></h2>
     <table class="ws">
       <colgroup><col style="width:3%"><col style="width:6%"><col style="width:11%"><col style="width:7%"><col style="width:8%"><col style="width:6%"><col style="width:7%"><col style="width:7%"><col style="width:6%"><col style="width:7%"><col style="width:9%"><col style="width:7%"><col style="width:5%"><col style="width:7%"><col style="width:4%"></colgroup>
       <thead><tr><th></th><th>Section</th><th>Metric</th><th>Month 0 baseline</th><th>System of record</th><th>Owner of the number</th><th>Current</th><th>Target</th><th>Evidence grade</th><th>Grade source</th><th>Falsifier</th><th>Trend, with the prior value</th><th>Our confidence</th><th>Tripwire: what we do when it trips</th><th>Watcher</th></tr></thead>
@@ -129,7 +129,7 @@ format:
   </div>
 
   <div class="ws-block">
-    <h2>RISK <span class="ws-block-note">insurance answer must name the policy document</span></h2>
+    <h2>RISK <span class="ws-block-note">reconcile with WS-05-governance-readiness-assessment &middot; insurance answer must name the policy document</span></h2>
     <table class="ws">
       <colgroup><col style="width:3%"><col style="width:6%"><col style="width:11%"><col style="width:7%"><col style="width:8%"><col style="width:6%"><col style="width:7%"><col style="width:7%"><col style="width:6%"><col style="width:7%"><col style="width:9%"><col style="width:7%"><col style="width:5%"><col style="width:7%"><col style="width:4%"></colgroup>
       <thead><tr><th></th><th>Section</th><th>Metric</th><th>Month 0 baseline</th><th>System of record</th><th>Owner of the number</th><th>Current</th><th>Target</th><th>Evidence grade</th><th>Grade source</th><th>Falsifier</th><th>Trend, with the prior value</th><th>Our confidence</th><th>Tripwire: what we do when it trips</th><th>Watcher</th></tr></thead>
@@ -153,34 +153,24 @@ format:
     </table>
   </div>
 
-  <div class="ws-block-note">† author estimate — not industry-validated. Every target on this page carries its evidence grade and its falsifier.</div>
-
-  <div class="ws-foot">
-    <div>WS-05-board-reporting-scorecard &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 6</div>
-    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
-      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
-  </div>
-</div>
-
-<!-- ============================ SHEET 2 ============================== -->
-<div class="sheet">
-  <div class="ws-head">
-    <div><h1>DECISIONS NEEDED</h1><p class="ws-sub">Board scorecard continuation &middot; record this quarter's actual asks</p></div>
-    <div class="ws-meta"><b>WS-05-board-reporting-scorecard</b><br>Pack G - fill order 7<br>type <b>matrix</b><br>audience <b>exec</b></div>
-  </div>
-  <div class="ws-source">Source: <b>Governance for AI-Assisted Delivery</b>, <i>Board Reporting Template</i> &middot; <code>handbook\ch05-governance-for-ai-assisted-delivery.qmd</code> L241 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch05-governance-for-ai-assisted-delivery.html#sec-governance-board-reporting">#sec-governance-board-reporting</a></div>
-  <div class="ws-instruction">Write this quarter's specific budget, policy and risk-acceptance asks. Name the decision maker and the date needed by. The examples are from the book's template, not your organization's asks.</div>
   <div class="ws-block">
     <h2>DECISIONS NEEDED <span class="ws-block-note">book examples are prompts, not current requests</span></h2>
     <table class="ws">
       <colgroup><col style="width:47%"><col style="width:30%"><col style="width:23%"></colgroup>
       <thead><tr><th><span class="fno">15</span>Decision requested</th><th><span class="fno">16</span>Who must decide</th><th><span class="fno">17</span>Needed by</th></tr></thead>
       <tbody>
-        <tr><td class="fill"><div class="prior--hedged"><span class="hedge-figure">Budget approval for next quarter; data classification policy update requiring board awareness; vendor contract renewal; risk acceptance for identified gaps</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our actual asks this quarter</span><span class="f-box lg"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="fill"><div class="prior--hedged"><span class="hedge-figure">Budget approval for next quarter; data classification policy update requiring board awareness; vendor contract renewal; risk acceptance for identified gaps</span><span class="hedge-text">Use this as a starting point. Adapt the specifics to your organization's risk profile, regulatory environment, and adoption stage.</span><span class="hedge-src">handbook\ch05-governance-for-ai-assisted-delivery.qmd L263</span></div><span class="ours-label">Our actual asks this quarter</span><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
       </tbody>
     </table>
   </div>
-  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Board continuation &middot; sheet 2 of 6</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+
+  <div class="ws-block-note">† author estimate — not industry-validated. Every target on this page carries its evidence grade and its falsifier.</div>
+
+  <div class="ws-foot">
+    <div>WS-05-board-reporting-scorecard &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 5</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
 </div>
 
 <!-- ============================ SHEET 3 ============================== -->
@@ -208,7 +198,7 @@ format:
     </table>
     <div class="ws-block-note">The outcome is a board-ready statement of the organization's bets and how it will know when it was wrong. Add rows on a working copy as required; do not omit the source, grade, confidence or observable falsifier.</div>
   </div>
-  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex A &middot; sheet 3 of 6</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex A &middot; sheet 2 of 5</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
 </div>
 
 <!-- ============================ SHEET 4 ============================== -->
@@ -232,7 +222,7 @@ format:
       </tbody>
     </table>
   </div>
-  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex B &middot; sheet 4 of 6</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex B &middot; sheet 3 of 5</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
 </div>
 
 <!-- ============================ SHEET 5 ============================== -->
@@ -249,15 +239,15 @@ format:
       <colgroup><col style="width:25%"><col style="width:17%"><col style="width:19%"><col style="width:16%"><col style="width:23%"></colgroup>
       <thead><tr><th><span class="fno">29</span>Assumption</th><th><span class="fno">30</span>Does it hold for us</th><th><span class="fno">31</span>Observable signal it broke</th><th><span class="fno">32</span>Who watches, and what we do</th><th><span class="fno">33</span>Quarterly review date</th></tr></thead>
       <tbody>
-        <tr><td class="locked">The pace of capability improvement may outrun governance</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
-        <tr><td class="locked">The emphasis on human-in-the-loop may prove too conservative</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
-        <tr><td class="locked">The human-as-orchestrator model may be transitional rather than enduring</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
-        <tr><td class="locked">The documentation burden may not pay for itself</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
-        <tr><td class="locked">Human judgement as a differentiator may be temporal rather than structural</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="locked">The pace of capability improvement may outrun governance</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="locked">The emphasis on human-in-the-loop may prove too conservative</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="locked">The human-as-orchestrator model may be transitional rather than enduring</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="locked">The documentation burden may not pay for itself</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+        <tr><td class="locked">Human judgement as a differentiator may be temporal rather than structural</td><td class="fill"><div class="f-select"><span class="opt">holds</span><span class="opt">does not hold</span><span class="opt">unknown</span></div></td><td class="fill"><span class="f-text"></span><span class="f-text"></span></td><td class="fill"><span class="f-owner"></span><span class="f-box"></span></td><td class="fill"><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
       </tbody>
     </table>
   </div>
-  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex C &middot; sheet 5 of 6</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex C &middot; sheet 4 of 5</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
 </div>
 
 <!-- ============================ SHEET 6 ============================== -->
@@ -304,6 +294,6 @@ format:
     </table>
     <div class="ws-block-note">Add rows on a working copy as required. Reconcile the budget with WS-07-spend-pool-budget-model and WS-04-intent-build-operate-investment-balance.</div>
   </div>
-  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex D &middot; sheet 6 of 6</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
+  <div class="ws-foot"><div>WS-05-board-reporting-scorecard &middot; Annex D &middot; sheet 5 of 5</div><div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span> &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div></div>
 </div>
 ```
