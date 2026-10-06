@@ -41,7 +41,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Score each mode individually before reconciling. Record likelihood, impact, any cited incident, blast radius, the control you have, the gap to build before the pilot, one committed mitigation, its named owner and landing date. Tick “Seen it already” only with a reference. A Low likelihood needs a named existing control. Record any difference from the book's severity in Blast radius.     A Band 1 row without a mitigation is a go/no-go item. Mark any mitigation that recurs across rows: each one is carried into WS-05-governance-readiness-assessment as a scheduled control, not left as a note.
+    Score each mode individually before reconciling. Record likelihood, impact, any cited incident, blast radius, the control you have, the gap to build before the pilot, one committed mitigation, its named owner and landing date. Tick “Seen it already” only with a reference. A Low likelihood needs a named existing control. Record any difference from the book's severity in Blast radius. A Band 1 row without a mitigation is a go/no-go item. Mark any mitigation that recurs across rows: each one is carried into WS-05-governance-readiness-assessment as a scheduled control, not left as a note.
   </div>
 
   <div class="ws-block" style="margin-bottom:1.5mm">
