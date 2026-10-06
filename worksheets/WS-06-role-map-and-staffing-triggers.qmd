@@ -1,0 +1,428 @@
+---
+title: "The Role Map — Who Holds Each Hat, and When We Staff It"
+pagetitle: "WS-06-role-map-and-staffing-triggers"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 594mm; --sheet-h: 420mm; --sheet-margin: 16mm; }
+            @page { size: A2 landscape; margin: 16mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-06-role-map-and-staffing-triggers</b> &middot; review copy &middot; declared format <b>A2 landscape</b> &middot;
+  4 sheets. Each white page below is one physical side of the booklet.
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div>
+      <h1>The Role Map — Who Holds Each Hat, and When We Staff It</h1>
+      <p class="ws-sub">A staffed role map: roles we have today, hats worn part-time, and roles we will not staff yet—with the written trigger that would change that.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-06-role-map-and-staffing-triggers</b><br>
+      Pack F - People and operating model<br>
+      fill order <b>3</b> &middot; type <b>inventory</b><br>
+      audience <b>eng-leader</b>
+    </div>
+  </div>
+  <div class="ws-source">
+    Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Domain Specialist</i> &middot;
+    <code>handbook\ch06-team-structures.qmd</code> L156-198 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-domain-specialist">#sec-domain-specialist</a><br>
+    Locator: "The <b>Domain Specialist</b> is the role that owns <i>what a Skill encodes</i>."
+  </div>
+  <div class="ws-instruction">
+    Name the real people and teams behind each role. Record what changes and what comes off each person's plate. For each activity, choose now, later, or never. Mark new roles as dedicated, a hat, or a gap; decide whether the work exists before staffing it. Map team coverage, the orchestrator charter, and named owners for WHAT, HOW, and OPERATIONS on each Skill.
+  </div>
+
+  <div class="ws-block">
+    <h2>Block A — lifecycle roles <span class="ws-block-note">five roles; delegate activity by activity</span></h2>
+    <table class="ws">
+      <colgroup>
+        <col style="width:4%"><col style="width:9%"><col style="width:14%"><col style="width:15%">
+        <col style="width:11%"><col style="width:13%"><col style="width:23%"><col style="width:11%">
+      </colgroup>
+      <thead><tr>
+        <th></th>
+        <th><span class="fno">1</span> Human role</th>
+        <th><span class="fno">2</span> What stays human</th>
+        <th><span class="fno">3</span> What agents handle</th>
+        <th><span class="fno">4</span> What shifts</th>
+        <th><span class="fno">5</span> Our real teams and the named people who hold it</th>
+        <th><span class="fno">6</span> Delegation verdict, per activity listed in column 3</th>
+        <th><span class="fno">7</span> Training or role-charter change implied</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="fill"><div class="f-select"><span class="opt">Product Manager</span></div></td>
+          <td class="prior">Strategic prioritization, stakeholder alignment, go/no-go decisions<span class="prior-src">ch04 L169-173</span></td>
+          <td class="prior">Research synthesis; competitive analysis; requirement drafting from rough notes<span class="prior-src">ch04 L169-173</span></td>
+          <td class="prior">More time on judgment, less on information gathering<span class="prior-src">ch04 L169-173</span></td>
+          <td class="fill">Team(s) <span class="f-text sm"></span> People <span class="f-owner"></span></td>
+          <td class="fill">
+            Research synthesis <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+            Competitive analysis <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+            Requirement drafting from rough notes <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+          </td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="fill"><div class="f-select"><span class="opt">Architect</span></div></td>
+          <td class="prior">System design decisions, technology selection, cross-team coordination<span class="prior-src">ch04 L169-173</span></td>
+          <td class="prior">ADR drafting; dependency analysis; pattern detection across codebases<span class="prior-src">ch04 L169-173</span></td>
+          <td class="prior">More time on review, less on documentation<span class="prior-src">ch04 L169-173</span></td>
+          <td class="fill">Team(s) <span class="f-text sm"></span> People <span class="f-owner"></span></td>
+          <td class="fill">
+            ADR drafting <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+            Dependency analysis <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+            Pattern detection across codebases <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+          </td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="fill"><div class="f-select"><span class="opt">Developer</span></div></td>
+          <td class="prior">Code review, architectural compliance, complex problem-solving<span class="prior-src">ch04 L169-173</span></td>
+          <td class="prior">Routine implementation; boilerplate; test generation; refactoring<span class="prior-src">ch04 L169-173</span></td>
+          <td class="prior">More time specifying intent, less time typing code<span class="prior-src">ch04 L169-173</span></td>
+          <td class="fill">Team(s) <span class="f-text sm"></span> People <span class="f-owner"></span></td>
+          <td class="fill">
+            Routine implementation <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+            Boilerplate <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+            Test generation <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+            Refactoring <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+          </td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="fill"><div class="f-select"><span class="opt">QA Engineer</span></div></td>
+          <td class="prior">Test strategy, edge case identification, exploratory testing<span class="prior-src">ch04 L169-173</span></td>
+          <td class="prior">Test generation; coverage analysis; regression detection<span class="prior-src">ch04 L169-173</span></td>
+          <td class="prior">More time on test design, less on test writing<span class="prior-src">ch04 L169-173</span></td>
+          <td class="fill">Team(s) <span class="f-text sm"></span> People <span class="f-owner"></span></td>
+          <td class="fill">
+            Test generation <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+            Coverage analysis <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+            Regression detection <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+          </td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td>
+          <td class="fill"><div class="f-select"><span class="opt">SRE / Ops</span></div></td>
+          <td class="prior">Incident ownership, capacity planning, reliability decisions<span class="prior-src">ch04 L169-173</span></td>
+          <td class="prior">Alert correlation; runbook execution; incident timeline drafting<span class="prior-src">ch04 L169-173</span></td>
+          <td class="prior">More time on system understanding, less on routine response<span class="prior-src">ch04 L169-173</span></td>
+          <td class="fill">Team(s) <span class="f-text sm"></span> People <span class="f-owner"></span></td>
+          <td class="fill">
+            Alert correlation <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+            Runbook execution <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+            Incident timeline drafting <div class="f-select"><span class="opt">now</span><span class="opt">later</span><span class="opt">never</span></div>
+          </td>
+          <td class="fill"><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block B — seniority roles <span class="ws-block-note">name the subtraction; additions alone are overload</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:13%"><col style="width:27%"><col style="width:18%"><col style="width:14%"><col style="width:24%"></colgroup>
+      <thead><tr>
+        <th></th><th><span class="fno">8</span> Role</th><th><span class="fno">9</span> What shifts in emphasis</th>
+        <th><span class="fno">10</span> What comes off the plate to make room</th>
+        <th><span class="fno">11</span> Named people</th><th><span class="fno">12</span> The bottleneck risk, named</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"></td><td class="fill"><div class="f-select"><span class="opt">Senior engineer</span></div></td>
+          <td class="prior">Architecture and design; context engineering; review and escalation; mentoring<span class="prior-src">ch06 L86-95</span></td>
+          <td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="fill"><span class="prior">Seniors who resist the shift and insist on writing everything themselves become the bottleneck.<span class="prior-src">ch06 L95</span></span><span class="f-box"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td class="fill"><div class="f-select"><span class="opt">Junior engineer</span></div></td>
+          <td class="prior">Reviewing agent output; writing specifications for agent tasks; diagnosing agent failures; building and maintaining context artefacts<span class="prior-src">ch06 L97-108</span></td>
+          <td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="prior">—</td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td class="fill"><div class="f-select"><span class="opt">Tech lead</span></div></td>
+          <td class="prior">Orchestrating work across humans and agents; deciding which tasks suit agent execution; owning the feedback loop on context gaps<span class="prior-src">ch06 L110-114</span></td>
+          <td class="fill"><span class="f-box"></span></td><td class="fill"><span class="f-owner"></span></td>
+          <td class="prior">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-role-map-and-staffing-triggers &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>The Role Map — Who Holds Each Hat, and When We Staff It</h1>
+      <p class="ws-sub">Name each emerging role; distinguish a hat from a hire. Staff Agent Operations only when its work exists.</p></div>
+    <div class="ws-meta"><b>WS-06-role-map-and-staffing-triggers</b><br>Pack F - People and operating model<br>fill order <b>3</b> &middot; type <b>inventory</b></div>
+  </div>
+  <div class="ws-source">Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Domain Specialist</i> &middot; <code>handbook\ch06-team-structures.qmd</code> L156-198 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-domain-specialist">#sec-domain-specialist</a></div>
+  <div class="ws-instruction">Use the completed WS-04-five-layer-supply-chain-canvas first. For each role, name its holder and mark dedicated, hat, or gap. If there is a gap, record hire, promote, or contract and a date. Tick only Agent Operations triggers that are true today; decide whether to staff it, and write the condition that would change a “do not staff yet” verdict. Sign the extend-or-stand-up decision below.</div>
+
+  <div class="ws-block">
+    <h2>Block C — the three new roles <span class="ws-block-note">hat is a first-class answer; do not staff before the work exists</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:18%"><col style="width:25%"><col style="width:17.67%"><col style="width:17.67%"><col style="width:17.66%"></colgroup>
+      <thead><tr>
+        <th></th><th>Field</th><th>What the book says</th>
+        <th>Domain Specialist</th><th>Agentic Workflow Engineer</th><th>Agent Operations Specialist</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"><span class="fno">13</span></td><td><b>Role</b></td>
+          <td class="prior"><div class="f-select"><span class="opt">Domain Specialist (SME / Domain Owner)</span><span class="opt">Agentic Workflow Engineer</span><span class="opt">Agent Operations Specialist</span></div><span class="prior-src">ch06 L156, L166, L176</span></td>
+          <td class="locked">Domain Specialist (SME / Domain Owner)</td><td class="locked">Agentic Workflow Engineer</td><td class="locked">Agent Operations Specialist</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">14</span></td><td><b>What it owns</b></td>
+          <td class="prior">Each role owns its concern; the three separate WHAT, HOW, and OPERATIONS.<span class="prior-src">ch06 L187-189</span></td>
+          <td class="prior">WHAT the Skill encodes<span class="prior-src">ch06 L187</span></td><td class="prior">HOW the Skill composes<span class="prior-src">ch06 L188</span></td><td class="prior">OPERATIONS once the Skill runs<span class="prior-src">ch06 L189</span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">15</span></td><td><b>Who holds it here</b></td><td class="prior">—</td>
+          <td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-owner"></span></td><td class="fill"><span class="f-owner"></span></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">16</span></td><td><b>Dedicated role, hat, or gap</b></td><td class="prior">—</td>
+          <td class="fill"><div class="f-select"><span class="opt">dedicated role</span><span class="opt">hat worn by an existing engineer</span><span class="opt">gap</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">dedicated role</span><span class="opt">hat worn by an existing engineer</span><span class="opt">gap</span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">dedicated role</span><span class="opt">hat worn by an existing engineer</span><span class="opt">gap</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">17</span></td><td><b>If `gap`: hire, promote or contract, and by when</b></td><td class="prior">—</td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">promote</span><span class="opt">contract</span></div><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">promote</span><span class="opt">contract</span></div><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+          <td class="fill"><div class="f-select"><span class="opt">hire</span><span class="opt">promote</span><span class="opt">contract</span></div><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">18</span></td><td><b>Not always an engineer</b></td>
+          <td class="prior">Where the procedure encodes domain judgement the engineer does not hold—regulatory review, M&amp;A diligence, clinical decision support—the Domain Specialist is the domain expert and the Agentic Workflow Engineer pairs with them.<span class="prior-src">ch06 L162</span></td>
+          <td class="fill"><span class="f-checkline"><span class="f-check"></span>Applies</span>Who / function <span class="f-text"></span></td><td class="locked">—</td><td class="locked">—</td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">19</span></td><td><b>Emergence triggers</b></td>
+          <td class="prior">Work exists when (a) more than one Skill is in production, (b) cost or eval drift has begun to require dedicated attention, and (c) composition across Skills is no longer something a stream-aligned team can manage out of its own backlog.<span class="prior-src">ch06 L180</span></td>
+          <td class="locked">—</td><td class="locked">—</td>
+          <td class="fill">
+            <span class="f-checkline"><span class="f-check"></span>More than one Skill in production</span>
+            <span class="f-checkline"><span class="f-check"></span>Cost or eval drift requires dedicated attention</span>
+            <span class="f-checkline"><span class="f-check"></span>Cross-Skill composition exceeds a stream-aligned team backlog</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">20</span></td><td><b>Staffing verdict</b></td>
+          <td class="prior"><b>Do not staff the role before the work exists.</b> With fewer than all three triggers ticked, choose “do not staff yet.” Most organisations will not need it until Phase 4 maturity.<span class="prior-src">ch06 L180</span></td>
+          <td class="locked">—</td><td class="locked">—</td>
+          <td class="fill"><div class="f-select"><span class="opt">staff now</span><span class="opt">do not staff yet</span></div></td>
+        </tr>
+        <tr>
+          <td class="ws-num"><span class="fno">21</span></td><td><b>What would have to become true</b></td><td class="prior">Mandatory wherever the staffing verdict is “do not staff yet.”<span class="prior-src">ch06 L180</span></td>
+          <td class="locked">—</td><td class="locked">—</td><td class="fill"><span class="f-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block D — extend or stand up <span class="ws-block-note">answer, rationalise, name the accountable leader, sign</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:24%"><col style="width:36%"><col style="width:35%"></colgroup>
+      <thead><tr><th></th><th>Field</th><th>What the book says</th><th>Your decision</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">22</span></td><td><b>The decision</b></td><td class="prior">—</td><td class="fill"><div class="f-select"><span class="opt">extend the existing platform team</span><span class="opt">stand up a new function</span></div></td></tr>
+        <tr><td class="ws-num"><span class="fno">23</span></td><td><b>Rationale</b></td><td class="prior">The defensible default for most organisations is <b>extend</b>: layers one, three and most of four describe work the platform team is already qualified for, and layer two is where net-new authoring talent joins.<span class="prior-src">ch04 L181</span></td><td class="fill"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">24</span></td><td><b>Named accountable leader</b></td><td class="prior">—</td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">25</span></td><td><b>Signed</b></td><td class="prior">—</td><td class="fill tall"><span class="f-sign"></span><div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-role-map-and-staffing-triggers &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 2 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>The Role Map — Who Holds Each Hat, and When We Staff It</h1>
+      <p class="ws-sub">Per-team coverage and a human-orchestrator charter, including the subtraction that makes the role workable.</p></div>
+    <div class="ws-meta"><b>WS-06-role-map-and-staffing-triggers</b><br>Pack F - People and operating model<br>fill order <b>3</b> &middot; type <b>inventory</b></div>
+  </div>
+  <div class="ws-source">Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Domain Specialist</i> &middot; <code>handbook\ch06-team-structures.qmd</code> L156-198 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-domain-specialist">#sec-domain-specialist</a></div>
+  <div class="ws-instruction">For each in-scope team, name its Architect, Reviewer, and reachable escalation handler; record today's and target split and the real response time. Then name the orchestrator, what they stop doing, the skills gap, and your rule for review depth. Match the escalation person to the one named in WS-17-escalation-autonomy-ladder at L3.</div>
+
+  <div class="ws-block">
+    <h2>Block E — the three-role coverage map <span class="ws-block-note">one row per team or service; distribute and reconcile centrally</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:13%"><col style="width:14%"><col style="width:14%"><col style="width:14%"><col style="width:13%"><col style="width:13%"><col style="width:15%"></colgroup>
+      <thead><tr>
+        <th></th><th><span class="fno">26</span> Team or service</th>
+        <th><span class="fno">27</span> Architect</th><th><span class="fno">28</span> Reviewer</th>
+        <th><span class="fno">29</span> Escalation handler</th><th><span class="fno">30</span> Today's split of engineer time across the three</th>
+        <th><span class="fno">31</span> Target split</th><th><span class="fno">32</span> Escalation path — who is reachable, within what response time</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="ws-num"></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Decomposes the work, sequences dependencies, defines constraints and granularity<span class="prior-src">ch10 L62-66</span></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="prior">Evaluates whether the agent stayed inside the constraints, and whether the constraints were right<span class="prior-src">ch10 L68-72</span></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="prior">Resolves ambiguity the specification did not settle, and the calls that are genuinely the human's<span class="prior-src">ch10 L74-76</span></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="prior">As specifications and decomposition improve, review burden decreases and the architect role dominates; escalation handler stays roughly constant.<span class="prior-src">ch10 L78</span></span><span class="f-text sm"></span></td>
+          <td class="fill">Person <span class="f-owner"></span> Response time <span class="f-text sm"></span></td>
+        </tr>
+        <tr><td class="ws-num"></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Decomposes the work, sequences dependencies, defines constraints and granularity<span class="prior-src">ch10 L62-66</span></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="prior">Evaluates whether the agent stayed inside the constraints, and whether the constraints were right<span class="prior-src">ch10 L68-72</span></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="prior">Resolves ambiguity the specification did not settle, and the calls that are genuinely the human's<span class="prior-src">ch10 L74-76</span></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="prior">As specifications and decomposition improve, review burden decreases and the architect role dominates; escalation handler stays roughly constant.<span class="prior-src">ch10 L78</span></span><span class="f-text sm"></span></td>
+          <td class="fill">Person <span class="f-owner"></span> Response time <span class="f-text sm"></span></td>
+        </tr>
+        <tr><td class="ws-num"></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="prior">Decomposes the work, sequences dependencies, defines constraints and granularity<span class="prior-src">ch10 L62-66</span></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="prior">Evaluates whether the agent stayed inside the constraints, and whether the constraints were right<span class="prior-src">ch10 L68-72</span></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="prior">Resolves ambiguity the specification did not settle, and the calls that are genuinely the human's<span class="prior-src">ch10 L74-76</span></span><span class="f-owner"></span></td>
+          <td class="fill"><span class="f-text sm"></span></td><td class="fill"><span class="prior">As specifications and decomposition improve, review burden decreases and the architect role dominates; escalation handler stays roughly constant.<span class="prior-src">ch10 L78</span></span><span class="f-text sm"></span></td>
+          <td class="fill">Person <span class="f-owner"></span> Response time <span class="f-text sm"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Block F — the orchestrator charter <span class="ws-block-note">what the human decides across the execution</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:16%"><col style="width:41%"><col style="width:38%"></colgroup>
+      <thead><tr><th></th><th><span class="fno">33</span> Phase</th><th><span class="fno">34</span> What the orchestrator decides</th><th>Notes for this charter</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"></td><td class="fill"><div class="f-select"><span class="opt">Before execution</span></div></td>
+          <td class="prior">The plan: which concerns to address, which to defer, how to partition work across agents and waves, and what principles govern trade-offs.<span class="prior-src">ch17 L334-338</span></td><td class="locked">—</td></tr>
+        <tr><td class="ws-num"></td><td class="fill"><div class="f-select"><span class="opt">During execution</span></div></td>
+          <td class="prior">Monitors progress and handles escalations; diagnoses whether a stall is a prompt, scope, or tooling problem; resolves conflicting output by the plan's principles or an explicit design decision.<span class="prior-src">ch17 L334-338</span></td><td class="locked">—</td></tr>
+        <tr><td class="ws-num"></td><td class="fill"><div class="f-select"><span class="opt">After execution</span></div></td>
+          <td class="prior">Spot-checks critical changes, verifies test results, and decides whether output meets the acceptance criteria.<span class="prior-src">ch17 L334-338</span></td><td class="locked">—</td></tr>
+      </tbody>
+    </table>
+    <table class="ws">
+      <colgroup><col style="width:5%"><col style="width:23%"><col style="width:34%"><col style="width:38%"></colgroup>
+      <thead><tr><th></th><th>Charter field</th><th>What the book says</th><th>Your answer</th></tr></thead>
+      <tbody>
+        <tr><td class="ws-num"><span class="fno">35</span></td><td><b>Who holds it here</b></td><td class="prior">Name the holder, or name the level where it is a whole cohort.<span class="prior-src">ch17 L328</span></td><td class="fill"><span class="f-owner"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">36</span></td><td><b>What they stop doing to make room</b></td><td class="prior">—</td><td class="fill"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">37</span></td><td><b>Skills they need and do not have today</b></td><td class="prior">Resolves into the gap map of WS-06-skill-gap-and-hiring-bar rather than being re-derived here.<span class="prior-src">derived</span></td><td class="fill"><span class="f-box"></span></td></tr>
+        <tr><td class="ws-num"><span class="fno">38</span></td><td><b>Review depth proportional to risk, not diff volume</b></td><td class="prior">A 2,000-line diff of which 1,800 lines are mechanical migration does not require reading 2,000 lines — it requires verifying the migration pattern, the 200 non-mechanical lines, and the test coverage.<span class="prior-src">ch17 L338</span></td><td class="fill"><span class="f-box"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-06-role-map-and-staffing-triggers &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 3 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="ws-head">
+    <div><h1>The Role Map — Who Holds Each Hat, and When We Staff It</h1>
+      <p class="ws-sub">Map each Skill's named human owners for WHAT, HOW, and OPERATIONS; make the role, hat, or gap explicit.</p></div>
+    <div class="ws-meta"><b>WS-06-role-map-and-staffing-triggers</b><br>Pack F - People and operating model<br>fill order <b>3</b> &middot; type <b>inventory</b></div>
+  </div>
+  <div class="ws-source">Source: <b>Team Structures for AI-Augmented Delivery</b>, <i>Domain Specialist</i> &middot; <code>handbook\ch06-team-structures.qmd</code> L156-198 &middot; <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch06-team-structures.html#sec-domain-specialist">#sec-domain-specialist</a></div>
+  <div class="ws-instruction">Complete one row for each Skill or candidate Skill, naming the human behind each concern. Use the role / hat / gap verdict for each concern. If you have no Skills yet, fill a candidate Skill as a rehearsal and mark it as such.</div>
+
+  <div class="ws-block">
+    <h2>Block G — the Skill-authoring triplet <span class="ws-block-note">one row per Skill or candidate Skill; copy this side for additional Skills</span></h2>
+    <table class="ws">
+      <colgroup><col style="width:4%"><col style="width:10%"><col style="width:11%"><col style="width:14%"><col style="width:11%"><col style="width:14%"><col style="width:11%"><col style="width:14%"><col style="width:11%"></colgroup>
+      <thead><tr>
+        <th></th><th><span class="fno">39</span> Skill or candidate Skill</th>
+        <th><span class="fno">40</span> WHAT — Domain Specialist</th><th><span class="fno">41</span> WHAT artefacts</th>
+        <th><span class="fno">42</span> HOW — Agentic Workflow Engineer</th><th><span class="fno">43</span> HOW artefacts</th>
+        <th><span class="fno">44</span> OPERATIONS — Agent Operations Specialist</th><th><span class="fno">45</span> OPERATIONS artefacts</th>
+        <th><span class="fno">46</span> Per concern: real role today, hat already worn, or gap to hire</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="ws-num"></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="prior">The procedure; success criteria; ground-truth references the Skill cites; the eval set.<span class="prior-src">ch21 L177</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="prior">The `.skill.md` body; PROSE-level composition; dispatched Personas; recursion bound; plan-persistence discipline.<span class="prior-src">ch21 L178</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="prior">Cost ceiling; trace expectations; eval-drift threshold; rate-limit policy; rollback procedure.<span class="prior-src">ch21 L179</span></td>
+          <td class="fill">
+            WHAT <div class="f-select"><span class="opt">real role</span><span class="opt">hat</span><span class="opt">gap</span></div>
+            HOW <div class="f-select"><span class="opt">real role</span><span class="opt">hat</span><span class="opt">gap</span></div>
+            OPERATIONS <div class="f-select"><span class="opt">real role</span><span class="opt">hat</span><span class="opt">gap</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="prior">The procedure; success criteria; ground-truth references the Skill cites; the eval set.<span class="prior-src">ch21 L177</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="prior">The `.skill.md` body; PROSE-level composition; dispatched Personas; recursion bound; plan-persistence discipline.<span class="prior-src">ch21 L178</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="prior">Cost ceiling; trace expectations; eval-drift threshold; rate-limit policy; rollback procedure.<span class="prior-src">ch21 L179</span></td>
+          <td class="fill">
+            WHAT <div class="f-select"><span class="opt">real role</span><span class="opt">hat</span><span class="opt">gap</span></div>
+            HOW <div class="f-select"><span class="opt">real role</span><span class="opt">hat</span><span class="opt">gap</span></div>
+            OPERATIONS <div class="f-select"><span class="opt">real role</span><span class="opt">hat</span><span class="opt">gap</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="ws-num"></td><td class="fill"><span class="f-text"></span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="prior">The procedure; success criteria; ground-truth references the Skill cites; the eval set.<span class="prior-src">ch21 L177</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="prior">The `.skill.md` body; PROSE-level composition; dispatched Personas; recursion bound; plan-persistence discipline.<span class="prior-src">ch21 L178</span></td>
+          <td class="fill"><span class="f-owner"></span></td>
+          <td class="prior">Cost ceiling; trace expectations; eval-drift threshold; rate-limit policy; rollback procedure.<span class="prior-src">ch21 L179</span></td>
+          <td class="fill">
+            WHAT <div class="f-select"><span class="opt">real role</span><span class="opt">hat</span><span class="opt">gap</span></div>
+            HOW <div class="f-select"><span class="opt">real role</span><span class="opt">hat</span><span class="opt">gap</span></div>
+            OPERATIONS <div class="f-select"><span class="opt">real role</span><span class="opt">hat</span><span class="opt">gap</span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>How the three concerns relate <span class="ws-block-note">a role is a concern, not necessarily headcount</span></h2>
+    <div class="prior">
+      In a small team, one engineer may wear all three hats. Domain Specialist owns WHAT; Agentic Workflow Engineer owns HOW; Agent Operations Specialist owns OPERATIONS.
+      <span class="prior-src">ch06 L187-189; ch21 L183</span>
+    </div>
+  </div>
+  <div class="ws-foot">
+    <div>WS-06-role-map-and-staffing-triggers &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 4 of 4</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+</div>
+```
