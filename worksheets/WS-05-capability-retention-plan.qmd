@@ -23,7 +23,7 @@ format:
   <div class="ws-head">
     <div>
       <h1>Capability Retention and Fallback Plan</h1>
-      <p class="ws-sub">A named deliberate-practice programme and a dated 48-hour agent-unavailability drill, with owners and a cadence: the mitigation the chapter says must be designed in rather than avoided.</p>
+      <p class="ws-sub">A named deliberate-practice program and a dated 48-hour agent-unavailability drill, with owners and a cadence: the mitigation the chapter says must be designed in rather than avoided.</p>
     </div>
     <div class="ws-meta">
       <b>WS-05-capability-retention-plan</b><br>
@@ -41,7 +41,7 @@ format:
   </div>
 
   <div class="ws-instruction">
-    Fill block A first, one row per atrophy risk, then turn the sheet over for block B. Use the
+    Fill block A first, one row per atrophy risk, then turn the sheet over for block B. Fill it in with the
     line managers who control sprint capacity: column 8 is the one that decides whether any of
     this happens. Name people, give every cadence a period, and book the first session. If the honest
     answer to column 4 is "we would not detect it", write that. Complete
