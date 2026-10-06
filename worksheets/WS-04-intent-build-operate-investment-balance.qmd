@@ -1,0 +1,213 @@
+---
+title: "Intent / Build / Operate Investment Balance Sheet"
+pagetitle: "WS-04-intent-build-operate-investment-balance"
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            html:root { --sheet-w: 420mm; --sheet-h: 297mm; --sheet-margin: 12mm; }
+            @page { size: A3 landscape; margin: 12mm; }
+          </style>
+---
+
+```{=html}
+<div class="screen-only">
+  <b>WS-04-intent-build-operate-investment-balance</b> &middot; review copy &middot;
+  declared format <b>A3 landscape</b> &middot; 1 sheet. The white page below is one
+  physical sheet at true size. Anything spilling past its edge onto this grey
+  background is a layout defect.
+</div>
+
+<div class="sheet">
+
+  <div class="ws-head">
+    <div>
+      <h1>Intent / Build / Operate Investment Balance Sheet</h1>
+      <p class="ws-sub">A one-page budget and accountability allocation across the three executive buckets, with an explicit re-balancing ask.</p>
+    </div>
+    <div class="ws-meta">
+      <b>WS-04-intent-build-operate-investment-balance</b><br>
+      Pack C - The case and the money<br>
+      fill order <b>7</b> &middot; type <b>calculator</b><br>
+      audience <b>exec</b>
+    </div>
+  </div>
+
+  <div class="ws-source">
+    Source: <b>The Agentic SDLC Reference Architecture</b>,
+    <i>Mapping the Layers Across the Lifecycle</i> &middot;
+    <code>handbook\ch04-the-reference-architecture.qmd</code> L91-99 &middot;
+    <a href="https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch04-the-reference-architecture.html#sec-ref-arch-lifecycle-mapping">#sec-ref-arch-lifecycle-mapping</a>
+  </div>
+
+  <div class="ws-instruction">
+    Fill all three buckets with your current annual spend, allocated people and active teams, accountable executive, planning cadence and forum, and budget line. Use the same reporting currency across all three spend entries. Compute each current share from the total, then write your own argued target share for the next twelve months and the specific re-balancing ask wherever it differs. Complete columns 6 and 7 from the prerequisite <b>WS-04-lifecycle-layer-coverage-canvas</b>. Reconcile the total to the tooling and model-consumption lines of <b>WS-03-tco-calculator</b>.
+  </div>
+
+  <div class="ws-block">
+    <h2>Allocation by executive bucket
+      <span class="ws-block-note">Three fixed rows &middot; complete across each column</span></h2>
+
+    <table class="ws">
+      <colgroup>
+        <col style="width:7%"><col style="width:9%"><col style="width:10%"><col style="width:18%">
+        <col style="width:7%"><col style="width:5%"><col style="width:5%"><col style="width:7%">
+        <col style="width:7%"><col style="width:7%"><col style="width:5%"><col style="width:5%">
+        <col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th><span class="fno">1</span> Bucket</th>
+          <th><span class="fno">2</span> Lifecycle phases it covers</th>
+          <th><span class="fno">3</span> Question it answers</th>
+          <th><span class="fno">4</span> Agent maturity, per the chapter</th>
+          <th><span class="fno">5</span> Current annual spend — tools and model consumption</th>
+          <th><span class="fno">6</span> FTE or headcount allocated</th>
+          <th><span class="fno">7</span> Teams active in this bucket</th>
+          <th><span class="fno">8</span> Accountable executive</th>
+          <th><span class="fno">9</span> Planning cadence it sits on</th>
+          <th><span class="fno">10</span> Budget line it is drawn from</th>
+          <th><span class="fno">11</span> Current share of total</th>
+          <th><span class="fno">12</span> Target share, next twelve months</th>
+          <th><span class="fno">13</span> Re-balancing ask</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prior"><b>Intent</b><span class="prior-src">ch04 L93</span></td>
+          <td class="prior">Ideate + Plan<span class="prior-src">ch04 L93</span></td>
+          <td class="prior">“What are we building and why?”<span class="prior-src">ch04 L93</span></td>
+          <td class="prior">Mostly emerging. Research and planning agents exist in early forms; no tool reliably automates the judgment calls that make planning valuable.<span class="prior-src">ch04 L93</span></td>
+          <td class="fill"><span class="f-currency" data-symbol=""></span></td>
+          <td class="fill"><span class="f-text sm"></span><small>From WS-04-lifecycle-layer-coverage-canvas</small></td>
+          <td class="fill"><span class="f-text sm"></span><small>From WS-04-lifecycle-layer-coverage-canvas</small></td>
+          <td class="fill"><span class="f-owner"></span><small>One named individual, not a function or committee</small></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">annual</span><span class="opt">quarterly</span><span class="opt">monthly</span>
+              <span class="opt">sprint</span><span class="opt">none</span>
+            </div>
+            <small>Name the forum:</small><span class="f-text sm"></span>
+          </td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">To be determined (no money)</span></div>
+            <small>Actual cost centre or budget line:</small><span class="f-text sm"></span>
+          </td>
+          <td class="fill"><span class="f-computed" data-formula="column 5 &divide; footer total"></span></td>
+          <td class="fill"><span class="f-text"></span><small>Our argued target</small></td>
+          <td class="fill"><span class="f-box"></span><small>Money or headcount move; named approver</small></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Build</b><span class="prior-src">ch04 L95</span></td>
+          <td class="prior">Code + Build + Test + Review<span class="prior-src">ch04 L95</span></td>
+          <td class="prior">“How do we turn intent into verified software?”<span class="prior-src">ch04 L95</span></td>
+          <td class="prior">Most mature. Code generation, build diagnostics, test generation and automated review have production-ready implementations across multiple vendors.<span class="prior-src">ch04 L95</span></td>
+          <td class="fill"><span class="f-currency" data-symbol=""></span></td>
+          <td class="fill"><span class="f-text sm"></span><small>From WS-04-lifecycle-layer-coverage-canvas</small></td>
+          <td class="fill"><span class="f-text sm"></span><small>From WS-04-lifecycle-layer-coverage-canvas</small></td>
+          <td class="fill"><span class="f-owner"></span><small>One named individual, not a function or committee</small></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">annual</span><span class="opt">quarterly</span><span class="opt">monthly</span>
+              <span class="opt">sprint</span><span class="opt">none</span>
+            </div>
+            <small>Name the forum:</small><span class="f-text sm"></span>
+          </td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">To be determined (no money)</span></div>
+            <small>Actual cost centre or budget line:</small><span class="f-text sm"></span>
+          </td>
+          <td class="fill"><span class="f-computed" data-formula="column 5 &divide; footer total"></span></td>
+          <td class="fill"><span class="f-text"></span><small>Our argued target</small></td>
+          <td class="fill"><span class="f-box"></span><small>Money or headcount move; named approver</small></td>
+        </tr>
+        <tr>
+          <td class="prior"><b>Operate</b><span class="prior-src">ch04 L97</span></td>
+          <td class="prior">Release + Operate<span class="prior-src">ch04 L97</span></td>
+          <td class="prior">“How do we get software to users and keep it running?”<span class="prior-src">ch04 L97</span></td>
+          <td class="prior">Release management is emerging; incident response is directional. Point solutions exist, but not in workflows integrated end-to-end with the development lifecycle.<span class="prior-src">ch04 L97</span></td>
+          <td class="fill"><span class="f-currency" data-symbol=""></span></td>
+          <td class="fill"><span class="f-text sm"></span><small>From WS-04-lifecycle-layer-coverage-canvas</small></td>
+          <td class="fill"><span class="f-text sm"></span><small>From WS-04-lifecycle-layer-coverage-canvas</small></td>
+          <td class="fill"><span class="f-owner"></span><small>One named individual, not a function or committee</small></td>
+          <td class="fill">
+            <div class="f-select">
+              <span class="opt">annual</span><span class="opt">quarterly</span><span class="opt">monthly</span>
+              <span class="opt">sprint</span><span class="opt">none</span>
+            </div>
+            <small>Name the forum:</small><span class="f-text sm"></span>
+          </td>
+          <td class="fill">
+            <div class="f-select"><span class="opt">To be determined (no money)</span></div>
+            <small>Actual cost centre or budget line:</small><span class="f-text sm"></span>
+          </td>
+          <td class="fill"><span class="f-computed" data-formula="column 5 &divide; footer total"></span></td>
+          <td class="fill"><span class="f-text"></span><small>Our argued target</small></td>
+          <td class="fill"><span class="f-box"></span><small>Money or headcount move; named approver</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ws-block">
+    <h2>Reconcile, compare and approve
+      <span class="ws-block-note">Shaded text is the chapter prior; write in ruled or boxed spaces. No recommended split.</span></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3mm;align-items:start">
+      <div class="ws-block" style="margin:0;min-width:0">
+        <table class="ws">
+          <colgroup><col style="width:7%"><col style="width:22%"><col style="width:36%"><col style="width:35%"></colgroup>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">14</span></td>
+              <td><b>Total across the three buckets</b></td>
+              <td class="prior">—</td>
+              <td class="fill">
+                <span class="f-computed" data-formula="column 5 Intent + column 5 Build + column 5 Operate"></span>
+                <small>Reconcile to WS-03-tco-calculator tooling and model-consumption lines.</small>
+              </td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">15</span></td>
+              <td><b>Concentration check</b></td>
+              <td class="prior">The chapter observes that, based on vendor maturity and published adoption patterns, most organisations <i>appear</i> to have concentrated investment in Build, with minimal coverage in Intent and almost none in Operate — a directional observation, not a measured distribution. This is not a failure. It reflects where the technology is mature.<span class="prior-src">ch04 L99</span></td>
+              <td class="fill">Compare your three computed shares above and state in one sentence whether you match the pattern.<span class="f-text"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ws-block" style="margin:0;min-width:0">
+        <table class="ws">
+          <colgroup><col style="width:7%"><col style="width:22%"><col style="width:36%"><col style="width:35%"></colgroup>
+          <tbody>
+            <tr>
+              <td class="ws-num"><span class="fno">16</span></td>
+              <td><b>Next high-value investment, per the chapter</b></td>
+              <td class="prior">Plan, Test and Review — where the work is expensive, the feedback loops are slow, and structured context makes the difference between useful automation and expensive noise.<span class="prior-src">ch04 L99</span></td>
+              <td class="fill">Rank your next investment; give a reason if it differs.<span class="f-box"></span></td>
+            </tr>
+            <tr>
+              <td class="ws-num"><span class="fno">17</span></td>
+              <td><b>Sponsor signature + date</b></td>
+              <td class="prior">—</td>
+              <td class="fill tall">
+                <span class="f-sign"></span>
+                <small>Date:</small>
+                <div class="f-date"><span class="seg d"></span>/<span class="seg m"></span>/<span class="seg y"></span></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="ws-foot">
+    <div>WS-04-intent-build-operate-investment-balance &middot; The Agentic SDLC Handbook worksheet kit &middot; sheet 1 of 1</div>
+    <div>Filled by <span style="display:inline-block;width:40mm;border-bottom:.25mm solid #93a0ad"></span>
+      &nbsp; Date <span style="display:inline-block;width:24mm;border-bottom:.25mm solid #93a0ad"></span></div>
+  </div>
+
+</div>
+```
